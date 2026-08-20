@@ -344,39 +344,78 @@
       (note ? "<br>" + esc(note) : "");
   }
 
-  // The reload path needs a server-side proxy: browsers block direct calls to
-  // Google Finance, Yahoo and friends from a page (no CORS headers), so
-  // quotes.py fetches upstream and hands the page JSON on the same origin.
+  // CNBC's quote service sends "access-control-allow-origin: *", so the page
+  // can call it straight from the browser -- no server needed. If that call is
+  // blocked (a hosted page with a strict CSP, or an offline machine) we fall
+  // back to the local quotes.py proxy, and failing that we say so plainly.
+  function fromCnbc(syms) {
+    var url = "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol" +
+              "?symbols=" + syms.join("|") +
+              "&requestMethod=itv&exthrs=1&fund=1&output=json";
+
+    return fetch(url, { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("cnbc answered " + r.status);
+        return r.json();
+      })
+      .then(function (doc) {
+        var list = ((doc || {}).FormattedQuoteResult || {}).FormattedQuote || [];
+        var out = {};
+        list.forEach(function (q) {
+          var last = parseFloat(String(q.last).replace(/,/g, ""));
+          var prev = parseFloat(String(q.previous_day_closing).replace(/,/g, ""));
+          if (q.symbol && isFinite(last) && isFinite(prev) && prev) {
+            out[String(q.symbol).toUpperCase()] = {
+              price: Math.round(last * 100) / 100,
+              pct: Math.round((last - prev) / prev * 10000) / 100
+            };
+          }
+        });
+        if (!Object.keys(out).length) throw new Error("cnbc returned nothing");
+        return { got: out, source: "cnbc, direct" };
+      });
+  }
+
+  function fromProxy(syms) {
+    return fetch("api/quotes?symbols=" + encodeURIComponent(syms.join(",")), { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("proxy answered " + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        var out = {};
+        (data.quotes || []).forEach(function (q) {
+          if (!q.error) out[q.symbol] = { price: q.price, pct: q.pct };
+        });
+        return { got: out, source: data.source || "proxy" };
+      });
+  }
+
   function reload() {
-    var syms = quotes.map(function (q) { return q.t; }).join(",");
+    var syms = quotes.map(function (q) { return q.t; });
     reloadBtn.disabled = true;
     note = "fetching...";
     bad = false;
     render();
 
-    fetch("api/quotes?symbols=" + encodeURIComponent(syms), { cache: "no-store" })
+    fromCnbc(syms)
+      .catch(function () { return fromProxy(syms); })
       .then(function (res) {
-        if (!res.ok) throw new Error("proxy answered " + res.status);
-        return res.json();
-      })
-      .then(function (data) {
-        var got = {};
-        (data.quotes || []).forEach(function (q) { got[q.symbol] = q; });
-
+        var hits = 0;
         quotes = quotes.map(function (q) {
-          var fresh = got[q.t];
+          var fresh = res.got[q.t];
           if (!fresh) return { t: q.t, tags: q.tags, price: q.price, pct: q.pct, err: "no quote" };
-          if (fresh.error) return { t: q.t, tags: q.tags, price: q.price, pct: q.pct, err: fresh.error };
+          hits++;
           return { t: q.t, tags: q.tags, price: fresh.price, pct: fresh.pct };
         });
 
-        asOf = data.asOf || new Date().toLocaleString();
-        note = "source: " + (data.source || "proxy");
+        asOf = new Date().toLocaleString();
+        note = "source: " + res.source + " -- " + hits + " of " + quotes.length + " priced";
         bad = false;
       })
       .catch(function (e) {
         bad = true;
-        note = e.message + " -- start the fetcher with: python3 quotes.py";
+        note = "could not reach a quote service (" + e.message + ")";
       })
       .then(function () {
         reloadBtn.disabled = false;
@@ -384,6 +423,7 @@
       });
   }
 
+  reloadBtn.addEventListener("click", reload);
   chipsEl.addEventListener("click", function (e) {
     var chip = e.target.closest(".chip");
     if (!chip) return;
@@ -399,7 +439,6 @@
     render();
   });
 
-  reloadBtn.addEventListener("click", reload);
   sortEl.addEventListener("change", render);
 
   note = "showing the saved snapshot -- press Reload for live prices";
