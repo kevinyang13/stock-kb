@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Call Sheet</title>
+<style>
+  :root{
+    --teal-deep:#073933;
+    --teal:#0a4640;
+    --teal-head:#326b64;
+    --teal-line:#14574f;
+    --gold:#d3a24d;
+    --gold-dark:#b8873a;
+    --gold-band:#cf9f4e;
+    --cream:#eae5df;
+    --cream-dim:#c8c2ba;
+    --ink:#12312c;
+    --green:#5fb08a;
+    --red:#d4735f;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--teal);
+    color:var(--cream);
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- masthead ---------- */
+  header.mast{
+    background:var(--teal-head);
+    padding:34px 24px 40px;
+    text-align:center;
+    border-bottom:6px solid var(--gold);
+  }
+  .mast h1{
+    margin:0;
+    font-size:clamp(42px,9vw,104px);
+    line-height:.95;
+    letter-spacing:.02em;
+    color:var(--gold);
+    font-weight:400;
+  }
+  .mast p{
+    margin:14px auto 0;
+    max-width:34ch;
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:14px;
+    line-height:1.5;
+    color:var(--cream);
+  }
+
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+  /* ---------- stat band ---------- */
+  .band{background:var(--gold-band);color:var(--ink);padding:26px 0;margin-top:0}
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:18px;
+    text-align:center;
+  }
+  .stat .num{font-size:34px;line-height:1;font-weight:400}
+  .stat .lbl{
+    font-family:var(--sans);
+    font-size:10px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-top:8px;
+    opacity:.75;
+  }
+
+  /* ---------- section heads ---------- */
+  .sec{padding:44px 0 10px}
+  .sec h2{
+    display:inline-block;
+    margin:0 0 6px;
+    font-size:30px;
+    font-weight:400;
+    letter-spacing:.04em;
+    color:var(--cream);
+    border-bottom:3px solid var(--gold);
+    padding-bottom:6px;
+  }
+  .sec .note{
+    font-family:var(--sans);
+    font-size:13px;
+    color:var(--cream-dim);
+    margin:10px 0 0;
+    max-width:64ch;
+    line-height:1.6;
+  }
+
+  /* ---------- controls ---------- */
+  label{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  input,select{
+    width:100%;
+    padding:9px 10px;
+    background:var(--teal);
+    border:1px solid var(--teal-line);
+    color:var(--cream);
+    font-family:var(--sans);
+    font-size:14px;
+    border-radius:2px;
+  }
+  input:focus,select:focus{outline:2px solid var(--gold);outline-offset:0}
+
+  button{
+    font-family:var(--sans);
+    font-size:10px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    padding:11px 20px;
+    border-radius:999px;
+    border:1px solid var(--gold);
+    background:var(--gold);
+    color:var(--ink);
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  button:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
+  button.ghost{background:transparent;color:var(--gold)}
+  button.ghost:hover{background:rgba(211,162,77,.14);color:var(--gold)}
+
+  /* ---------- toolbar ---------- */
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:26px 0 12px}
+  .toolbar .spacer{flex:1}
+  .toolbar select,.toolbar input{width:auto;min-width:120px}
+
+  /* ---------- table ---------- */
+  .table-scroll{overflow-x:auto;border:1px solid var(--teal-line);background:var(--teal-deep)}
+  table{width:100%;border-collapse:collapse;min-width:1040px}
+  th{
+    font-family:var(--sans);
+    font-size:10px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    text-align:left;
+    padding:14px 12px;
+    border-bottom:2px solid var(--gold);
+    cursor:pointer;
+    user-select:none;
+    white-space:nowrap;
+  }
+  th .arrow{opacity:.5;font-size:9px}
+  td{
+    padding:13px 12px;
+    border-bottom:1px solid var(--teal-line);
+    font-family:var(--sans);
+    font-size:14px;
+    color:var(--cream);
+    white-space:nowrap;
+  }
+  tbody tr:hover{background:rgba(211,162,77,.07)}
+  td.ticker{font-family:var(--serif);font-size:19px;letter-spacing:.06em;color:var(--gold)}
+  td.by{color:var(--cream-dim)}
+  table.board{min-width:560px}
+  table.matrix{min-width:560px}
+  table.matrix th{cursor:default}
+  table.matrix td{text-align:center}
+  table.matrix td.tk{
+    text-align:left;
+    font-family:var(--serif);
+    font-size:19px;
+    letter-spacing:.06em;
+    color:var(--gold);
+  }
+  table.matrix td.none{color:var(--teal-line)}
+  table.matrix .cell{
+    display:inline-block;
+    min-width:74px;
+    padding:4px 0;
+    font-family:var(--sans);
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    border-radius:999px;
+    border:1px solid currentColor;
+  }
+  table.matrix .cell.up{color:var(--green)}
+  table.matrix .cell.down{color:var(--red)}
+  table.matrix .cell.flat{color:var(--cream-dim)}
+  table.board td.who{font-family:var(--serif);font-size:18px;color:var(--cream)}
+  table.board td.rate{color:var(--gold);font-weight:700}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .delta.up{color:var(--green)}
+  .delta.down{color:var(--red)}
+  .call{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream-dim)}
+  .call.up{color:var(--green)}
+  .call.down{color:var(--red)}
+
+  .badge{
+    display:inline-block;
+    font-family:var(--sans);
+    font-size:10px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:999px;
+    border:1px solid currentColor;
+  }
+  .badge.correct{color:var(--green)}
+  .badge.incorrect{color:var(--red)}
+  .badge.pending{color:var(--cream-dim)}
+
+  .empty{padding:44px 20px;text-align:center;color:var(--cream-dim);font-family:var(--sans);font-size:14px}
+
+  footer{
+    background:var(--gold-band);
+    color:var(--ink);
+    text-align:center;
+    padding:22px 20px;
+    margin-top:56px;
+    font-family:var(--sans);
+    font-size:10px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <h1>CALL SHEET</h1>
+  <p>Stock predictions, target dates, and how they actually landed</p>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="num" id="s-total">0</div><div class="lbl">Calls Made</div></div>
+      <div class="stat"><div class="num" id="s-correct">0</div><div class="lbl">Correct</div></div>
+      <div class="stat"><div class="num" id="s-incorrect">0</div><div class="lbl">Incorrect</div></div>
+      <div class="stat"><div class="num" id="s-pending">0</div><div class="lbl">Pending</div></div>
+      <div class="stat"><div class="num" id="s-acc">&mdash;</div><div class="lbl">Hit Rate</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="sec" id="matrix-sec">
+    <h2>Head to head</h2>
+    <p class="note">Every ticker against every forecaster &mdash; which way each one called it. Hover a cell for the target price behind the call. A blank means no call on that name.</p>
+
+    <div class="table-scroll">
+      <table class="matrix">
+        <thead><tr id="matrix-head"></tr></thead>
+        <tbody id="matrix"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>The record</h2>
+    <p class="note">Calls are stored in the record block at the bottom of this file &mdash; edit that JSON to add, change, or remove one. Result scores automatically once an actual price is filled in. <strong>Tolerance</strong> mode counts a call correct when the actual lands within the band around the target. <strong>Direction</strong> mode ignores the band and only asks whether the stock moved the way the call pointed, measured from the price on the prediction day.</p>
+
+    <div class="toolbar">
+      <select id="filter" aria-label="Filter by result">
+        <option value="all">All results</option>
+        <option value="correct">Correct only</option>
+        <option value="incorrect">Incorrect only</option>
+        <option value="pending">Pending only</option>
+      </select>
+      <select id="who" aria-label="Filter by predictor">
+        <option value="all">Everyone</option>
+      </select>
+      <input id="search" type="search" placeholder="Search ticker" aria-label="Search ticker">
+      <label for="mode" style="margin:0 0 0 6px">Scoring</label>
+      <select id="mode" aria-label="Scoring mode">
+        <option value="tolerance" selected>Tolerance</option>
+        <option value="direction">Direction</option>
+      </select>
+      <label for="tol" style="margin:0 0 0 6px">Band</label>
+      <select id="tol" aria-label="Tolerance band">
+        <option value="0.01">&plusmn;1%</option>
+        <option value="0.03" selected>&plusmn;3%</option>
+        <option value="0.05">&plusmn;5%</option>
+        <option value="0.10">&plusmn;10%</option>
+      </select>
+      <span class="spacer"></span>
+      <button type="button" class="ghost" id="export-btn">Export CSV</button>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="ticker">Ticker <span class="arrow"></span></th>
+            <th data-sort="by">Called by <span class="arrow"></span></th>
+            <th data-sort="predDate">Predicted <span class="arrow"></span></th>
+            <th data-sort="targetDate">Target date <span class="arrow"></span></th>
+            <th data-sort="entryPrice" class="num">Price then <span class="arrow"></span></th>
+            <th data-sort="targetPrice" class="num">Target <span class="arrow"></span></th>
+            <th>Call</th>
+            <th data-sort="actualPrice" class="num">Actual <span class="arrow"></span></th>
+            <th class="num">vs Target</th>
+            <th class="num">Move</th>
+            <th data-sort="result">Result <span class="arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty" hidden>No calls logged yet.</div>
+  </section>
+
+  <section class="sec" id="board-sec">
+    <h2>Who called it</h2>
+    <p class="note">Every forecaster in the record, ranked by hit rate. Pending calls don't count toward the rate until an actual price lands.</p>
+
+    <div class="table-scroll board-scroll">
+      <table class="board">
+        <thead>
+          <tr>
+            <th>Forecaster</th>
+            <th class="num">Calls</th>
+            <th class="num">Correct</th>
+            <th class="num">Incorrect</th>
+            <th class="num">Pending</th>
+            <th class="num">Hit rate</th>
+          </tr>
+        </thead>
+        <tbody id="board"></tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<footer>All records live inside this file &middot; nothing leaves the page</footer>
+
+<!-- ==========================================================
+     THE RECORD. This block is the stored data. Add, change, or
+     remove a call by editing the JSON below -- it is the only
+     place calls are kept, and the page reads it on every load.
+
+     Fields: ticker, by (who called it -- a person like Kevin or Ivy,
+     or a model like Claude, Gemini, ChatGPT), predDate, targetDate,
+     entryPrice (price on the prediction day), targetPrice,
+     actualPrice (null until the target date), override ("correct",
+     "incorrect", or "" to let the page score it).
+     ========================================================== -->
+<script type="application/json" id="records">
+{
+  "schema": "call-sheet/v3",
+  "updated": "2026-08-15",
+  "calls": [
+    { "ticker": "NOW", "by": "Kevin", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 124.00, "targetPrice": 100.00, "actualPrice": null, "override": "" },
+    { "ticker": "MSFT", "by": "Kevin", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 495.40, "targetPrice": 440.00, "actualPrice": null, "override": "" },
+    { "ticker": "MU", "by": "Kevin", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 971.66, "targetPrice": 971.00, "actualPrice": null, "override": "" },
+    { "ticker": "MU", "by": "ChatGPT", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 971.66, "targetPrice": 1020.00, "actualPrice": null, "override": "" },
+    { "ticker": "MSFT", "by": "ChatGPT", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 495.40, "targetPrice": 505.00, "actualPrice": null, "override": "" },
+    { "ticker": "NOW", "by": "ChatGPT", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 124.00, "targetPrice": 108.00, "actualPrice": null, "override": "" },
+    { "ticker": "MU", "by": "Claude", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 971.66, "targetPrice": 985.00, "actualPrice": null, "override": "" },
+    { "ticker": "MSFT", "by": "Claude", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 495.40, "targetPrice": 499.00, "actualPrice": null, "override": "" },
+    { "ticker": "NOW", "by": "Claude", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 124.00, "targetPrice": 122.00, "actualPrice": null, "override": "" },
+    { "ticker": "MU", "by": "Gemini", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 971.66, "targetPrice": 960.00, "actualPrice": null, "override": "" },
+    { "ticker": "MSFT", "by": "Gemini", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 495.40, "targetPrice": 497.50, "actualPrice": null, "override": "" },
+    { "ticker": "NOW", "by": "Gemini", "predDate": "2026-08-15", "targetDate": "2026-08-21", "entryPrice": 124.00, "targetPrice": 125.00, "actualPrice": null, "override": "" }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var sortKey = "targetDate";
+  var sortDir = -1;
+
+  var tbody = document.getElementById("tbody");
+  var empty = document.getElementById("empty");
+  var filterEl = document.getElementById("filter");
+  var whoEl = document.getElementById("who");
+  var searchEl = document.getElementById("search");
+  var tolEl = document.getElementById("tol");
+  var modeEl = document.getElementById("mode");
+
+  // The record baked into this file -- the thing that survives a copy,
+  // an email, or a different machine.
+  function embedded() {
+    try {
+      var doc = JSON.parse(document.getElementById("records").textContent);
+      return Array.isArray(doc.calls) ? doc.calls.map(normalize) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  var rows = embedded();
+
+  // Fill in anything a hand-edited record leaves out.
+  function normalize(r) {
+    return {
+      id: r.id || uid(),
+      ticker: String(r.ticker || "").toUpperCase(),
+      by: String(r.by || "Unattributed").trim(),
+      predDate: r.predDate || "",
+      targetDate: r.targetDate || "",
+      entryPrice: num(r.entryPrice),
+      targetPrice: num(r.targetPrice),
+      actualPrice: num(r.actualPrice),
+      override: r.override === "correct" || r.override === "incorrect" ? r.override : ""
+    };
+  }
+
+  function num(v) {
+    if (v === null || v === undefined || v === "") return null;
+    var n = Number(v);
+    return isNaN(n) ? null : n;
+  }
+
+  function download(text, filename, type) {
+    var blob = new Blob([text], { type: type });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  function uid() {
+    return Math.random().toString(36).slice(2, 10);
+  }
+
+  function tol() { return parseFloat(tolEl.value); }
+
+  function has(v) { return v !== null && v !== undefined && v !== ""; }
+
+  // Which way the call pointed: target vs the price on the prediction day.
+  function callDir(r) {
+    if (!has(r.entryPrice) || !has(r.targetPrice)) return "flat";
+    if (r.targetPrice > r.entryPrice) return "up";
+    if (r.targetPrice < r.entryPrice) return "down";
+    return "flat";
+  }
+
+  // Result: manual override wins; else pending until an actual exists.
+  // Tolerance mode -- correct when |actual - target| / target is inside the band.
+  // Direction mode  -- correct when the stock moved the way the call pointed,
+  //                    measured from the prediction-day price. Flat calls and
+  //                    rows with no prediction-day price fall back to tolerance.
+  function resultOf(r) {
+    if (r.override) return r.override;
+    if (!has(r.actualPrice) || !r.targetPrice) return "pending";
+
+    if (modeEl.value === "direction") {
+      var dir = callDir(r);
+      if (dir === "up") return r.actualPrice > r.entryPrice ? "correct" : "incorrect";
+      if (dir === "down") return r.actualPrice < r.entryPrice ? "correct" : "incorrect";
+    }
+
+    var miss = Math.abs(r.actualPrice - r.targetPrice) / r.targetPrice;
+    return miss <= tol() ? "correct" : "incorrect";
+  }
+
+  function money(n) {
+    return has(n) ? "$" + Number(n).toFixed(2) : "&mdash;";
+  }
+
+  function pct(d) {
+    return '<span class="delta ' + (d >= 0 ? "up" : "down") + '">' +
+           (d >= 0 ? "+" : "") + d.toFixed(1) + "%</span>";
+  }
+
+  function fmtDate(s) {
+    if (!s) return "&mdash;";
+    var p = s.split("-");
+    return p[1] + "/" + p[2] + "/" + p[0].slice(2);
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function visible() {
+    var f = filterEl.value;
+    var w = whoEl.value;
+    var q = searchEl.value.trim().toUpperCase();
+    return rows.filter(function (r) {
+      if (f !== "all" && resultOf(r) !== f) return false;
+      if (w !== "all" && r.by !== w) return false;
+      if (q && r.ticker.indexOf(q) === -1) return false;
+      return true;
+    }).sort(function (a, b) {
+      var x = sortKey === "result" ? resultOf(a) : a[sortKey];
+      var y = sortKey === "result" ? resultOf(b) : b[sortKey];
+      if (x === null || x === undefined || x === "") x = sortDir === 1 ? "￿" : "";
+      if (y === null || y === undefined || y === "") y = sortDir === 1 ? "￿" : "";
+      if (x < y) return -1 * sortDir;
+      if (x > y) return 1 * sortDir;
+      return 0;
+    });
+  }
+
+  function render() {
+    var list = visible();
+
+    tbody.innerHTML = list.map(function (r) {
+      var res = resultOf(r);
+      var dir = callDir(r);
+
+      var vsTarget = "&mdash;";
+      if (has(r.actualPrice) && r.targetPrice) {
+        vsTarget = pct(((r.actualPrice - r.targetPrice) / r.targetPrice) * 100);
+      }
+
+      var move = "&mdash;";
+      if (has(r.actualPrice) && has(r.entryPrice) && r.entryPrice) {
+        move = pct(((r.actualPrice - r.entryPrice) / r.entryPrice) * 100);
+      }
+
+      var call = dir === "flat"
+        ? '<span class="call">&mdash;</span>'
+        : '<span class="call ' + dir + '">' + (dir === "up" ? "▲ Up" : "▼ Down") + "</span>";
+
+      return '<tr data-id="' + r.id + '">' +
+        '<td class="ticker">' + esc(r.ticker) + "</td>" +
+        '<td class="by">' + esc(r.by) + "</td>" +
+        "<td>" + fmtDate(r.predDate) + "</td>" +
+        "<td>" + fmtDate(r.targetDate) + "</td>" +
+        '<td class="num">' + money(r.entryPrice) + "</td>" +
+        '<td class="num">' + money(r.targetPrice) + "</td>" +
+        "<td>" + call + "</td>" +
+        '<td class="num">' + money(r.actualPrice) + "</td>" +
+        '<td class="num">' + vsTarget + "</td>" +
+        '<td class="num">' + move + "</td>" +
+        '<td><span class="badge ' + res + '">' + res + "</span></td>" +
+      "</tr>";
+    }).join("");
+
+    empty.hidden = list.length !== 0;
+    empty.textContent = rows.length === 0
+      ? "No calls in the record block."
+      : "No calls match this filter.";
+
+    var total = rows.length;
+    var c = 0, i = 0, p = 0;
+    rows.forEach(function (r) {
+      var res = resultOf(r);
+      if (res === "correct") c++;
+      else if (res === "incorrect") i++;
+      else p++;
+    });
+    document.getElementById("s-total").textContent = total;
+    document.getElementById("s-correct").textContent = c;
+    document.getElementById("s-incorrect").textContent = i;
+    document.getElementById("s-pending").textContent = p;
+    document.getElementById("s-acc").innerHTML =
+      (c + i) ? Math.round((c / (c + i)) * 100) + "%" : "&mdash;";
+
+    renderBoard();
+    renderMatrix();
+    syncWho();
+  }
+
+  // Ticker down the side, forecaster across the top, direction in the cell.
+  // Covers the whole record, not the filtered table above.
+  function renderMatrix() {
+    var names = [];
+    var tickers = [];
+    var cell = {};
+
+    rows.forEach(function (r) {
+      if (names.indexOf(r.by) === -1) names.push(r.by);
+      if (tickers.indexOf(r.ticker) === -1) tickers.push(r.ticker);
+      var k = r.ticker + " " + r.by;
+      // More than one call on the same name: the latest prediction stands.
+      if (!cell[k] || r.predDate >= cell[k].predDate) cell[k] = r;
+    });
+    names.sort();
+    tickers.sort();
+
+    document.getElementById("matrix-head").innerHTML =
+      "<th>Ticker</th>" + names.map(function (n) {
+        return "<th>" + esc(n) + "</th>";
+      }).join("");
+
+    document.getElementById("matrix").innerHTML = tickers.map(function (t) {
+      return "<tr>" +
+        '<td class="tk">' + esc(t) + "</td>" +
+        names.map(function (n) {
+          var r = cell[t + " " + n];
+          if (!r) return '<td class="none">&mdash;</td>';
+
+          var dir = callDir(r);
+          var label = dir === "up" ? "▲ Up" : dir === "down" ? "▼ Down" : "&mdash;";
+          var hint = esc(n) + " on " + esc(t) + ": target " +
+                     (has(r.targetPrice) ? "$" + r.targetPrice.toFixed(2) : "none") +
+                     " for " + r.targetDate;
+
+          return '<td><span class="cell ' + dir + '" title="' + hint + '">' +
+                 label + "</span></td>";
+        }).join("") +
+      "</tr>";
+    }).join("");
+
+    document.getElementById("matrix-sec").hidden = rows.length === 0;
+  }
+
+  // Per-forecaster tally, best hit rate first. Anyone with nothing settled
+  // yet sorts last -- an empty rate is not a perfect one.
+  function renderBoard() {
+    var byWho = {};
+    rows.forEach(function (r) {
+      var b = byWho[r.by] || (byWho[r.by] = { who: r.by, n: 0, c: 0, i: 0, p: 0 });
+      b.n++;
+      var res = resultOf(r);
+      if (res === "correct") b.c++;
+      else if (res === "incorrect") b.i++;
+      else b.p++;
+    });
+
+    var list = Object.keys(byWho).map(function (k) { return byWho[k]; });
+    list.forEach(function (b) {
+      b.settled = b.c + b.i;
+      b.rate = b.settled ? b.c / b.settled : -1;
+    });
+    list.sort(function (a, b) {
+      return b.rate - a.rate || b.n - a.n || a.who.localeCompare(b.who);
+    });
+
+    document.getElementById("board").innerHTML = list.map(function (b) {
+      return "<tr>" +
+        '<td class="who">' + esc(b.who) + "</td>" +
+        '<td class="num">' + b.n + "</td>" +
+        '<td class="num">' + b.c + "</td>" +
+        '<td class="num">' + b.i + "</td>" +
+        '<td class="num">' + b.p + "</td>" +
+        '<td class="num rate">' + (b.settled ? Math.round(b.rate * 100) + "%" : "&mdash;") + "</td>" +
+      "</tr>";
+    }).join("");
+
+    document.getElementById("board-sec").hidden = rows.length === 0;
+  }
+
+  // Keep the predictor filter in step with whoever appears in the record.
+  function syncWho() {
+    var names = [];
+    rows.forEach(function (r) {
+      if (names.indexOf(r.by) === -1) names.push(r.by);
+    });
+    names.sort();
+
+    var wanted = "all|" + names.join("|");
+    if (whoEl.dataset.built === wanted) return;
+
+    var keep = whoEl.value;
+    whoEl.innerHTML = '<option value="all">Everyone</option>' +
+      names.map(function (n) {
+        return '<option value="' + esc(n) + '">' + esc(n) + "</option>";
+      }).join("");
+    whoEl.value = names.indexOf(keep) === -1 ? "all" : keep;
+    whoEl.dataset.built = wanted;
+  }
+
+  document.querySelectorAll("th[data-sort]").forEach(function (th) {
+    th.addEventListener("click", function () {
+      var k = th.dataset.sort;
+      if (sortKey === k) sortDir *= -1;
+      else { sortKey = k; sortDir = 1; }
+      document.querySelectorAll("th .arrow").forEach(function (a) { a.textContent = ""; });
+      th.querySelector(".arrow").textContent = sortDir === 1 ? "▲" : "▼";
+      render();
+    });
+  });
+
+  filterEl.addEventListener("change", render);
+  whoEl.addEventListener("change", render);
+  tolEl.addEventListener("change", render);
+  modeEl.addEventListener("change", render);
+  searchEl.addEventListener("input", render);
+
+  document.getElementById("export-btn").addEventListener("click", function () {
+    var head = ["ticker", "called_by", "prediction_date", "target_date",
+                "price_on_prediction_day", "target_price", "call",
+                "actual_price", "result"];
+    var lines = [head.join(",")].concat(rows.map(function (r) {
+      return [
+        r.ticker,
+        '"' + r.by.replace(/"/g, '""') + '"',
+        r.predDate,
+        r.targetDate,
+        has(r.entryPrice) ? r.entryPrice : "",
+        r.targetPrice,
+        callDir(r),
+        has(r.actualPrice) ? r.actualPrice : "",
+        resultOf(r)
+      ].join(",");
+    }));
+    download(lines.join("\n"), "call-sheet.csv", "text/csv");
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

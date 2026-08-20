@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watchlist Heatmap</title>
+<style>
+  :root{
+    --teal-deep:#073933;
+    --teal:#0a4640;
+    --teal-head:#326b64;
+    --teal-line:#14574f;
+    --gold:#d3a24d;
+    --cream:#eae5df;
+    --cream-dim:#c8c2ba;
+    --ink:#12312c;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--teal);color:var(--cream);font-family:var(--serif)}
+
+  header.mast{
+    background:var(--teal-head);border-bottom:2px solid var(--gold);
+    padding:9px 14px;display:flex;align-items:baseline;gap:12px;
+  }
+  .mast h1{
+    margin:0;font-size:20px;line-height:1;color:var(--gold);
+    font-weight:400;letter-spacing:.14em;
+  }
+  .mast p{margin:0;font-family:var(--sans);font-size:11px;color:var(--cream-dim)}
+
+  .wrap{max-width:none;margin:0;padding:0 8px}
+
+  .bar{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    padding:10px 0 8px;
+  }
+  .bar .spacer{flex:1}
+  .status{font-family:var(--sans);font-size:12px;color:var(--cream-dim);line-height:1.5}
+  .status b{color:var(--gold);font-weight:700}
+  .status.bad b{color:#e8836d}
+
+  button,select{
+    font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    padding:11px 20px;border-radius:999px;border:1px solid var(--gold);
+    background:var(--gold);color:var(--ink);cursor:pointer;white-space:nowrap;
+  }
+  button.ghost,select{background:transparent;color:var(--gold)}
+  button:hover{opacity:.85}
+  button[disabled]{opacity:.5;cursor:progress}
+  select{padding:10px 14px;border-radius:999px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:5px;padding-bottom:10px}
+  .chip{
+    font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    padding:7px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;
+    background:transparent;border:1px solid var(--teal-line);color:var(--cream-dim);
+  }
+  .chip:hover{border-color:var(--gold);color:var(--cream)}
+  .chip.on{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:700}
+  .chip .n{opacity:.6;margin-left:6px}
+  .chip.on .n{opacity:.75}
+  .none{
+    padding:40px 20px;text-align:center;color:var(--cream-dim);
+    font-family:var(--sans);font-size:14px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(104px,1fr));
+    gap:2px;
+    padding-bottom:8px;
+  }
+  .tile{
+    padding:11px 6px 12px;
+    text-align:center;
+    font-family:var(--sans);
+    color:#fff;
+    border-radius:2px;
+    min-height:82px;
+    display:flex;flex-direction:column;justify-content:center;gap:3px;
+  }
+  .tile .t{font-size:14px;font-weight:700;letter-spacing:.03em}
+  .tile .p{font-size:13px;font-variant-numeric:tabular-nums}
+  .tile .c{font-size:12px;font-variant-numeric:tabular-nums;opacity:.95}
+  .tile{text-decoration:none;transition:transform .08s ease,box-shadow .08s ease}
+  .tile:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.45);z-index:1}
+  .tile:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .tile.stale{opacity:.45}
+  .tile .t small{display:block;font-size:9px;letter-spacing:.14em;opacity:.7;margin-top:3px;font-weight:400}
+
+  footer{
+    background:var(--gold);color:var(--ink);text-align:center;
+    padding:10px 16px;margin-top:14px;
+    font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <h1>HEATMAP</h1>
+  <p>colored by the day's move</p>
+</header>
+
+<div class="wrap">
+  <div class="bar">
+    <button type="button" id="reload">Reload prices</button>
+    <select id="sort" aria-label="Tile order">
+      <option value="list">Watchlist order</option>
+      <option value="best">Best first</option>
+      <option value="worst">Worst first</option>
+    </select>
+    <span class="spacer"></span>
+    <div class="status" id="status"></div>
+  </div>
+
+  <div class="chips" id="chips"></div>
+
+  <div class="grid" id="grid"></div>
+  <div class="none" id="none" hidden>Nothing in that combination.</div>
+</div>
+
+<footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
+
+<!-- ==========================================================
+     THE WATCHLIST. Symbols and the last known snapshot live
+     here. Add or remove a ticker by editing this JSON; the
+     Reload button overwrites price/pct from the quote proxy.
+     ========================================================== -->
+<script type="application/json" id="watchlist">
+{
+  "name": "2025",
+  "asOf": "Aug 19, 2026 at 7:03 PM",
+  "symbols": [
+    { "t": "VFTNX", "price": 52.87,     "pct": 0.36,   "tags": ["Fund", "Broad Market"] },
+    { "t": "SPY",   "price": 769.06,    "pct": 0.21,   "tags": ["ETF", "Broad Market"] },
+    { "t": "TQQQ",  "price": 72.06,     "pct": -0.65,  "tags": ["ETF", "Leveraged", "Broad Market"] },
+    { "t": "UFO",   "price": 46.67,     "pct": -1.04,  "tags": ["ETF", "Space"] },
+    { "t": "GE",    "price": 356.23,    "pct": -5.03,  "tags": ["Aerospace", "Industrials"] },
+    { "t": "WQTM",  "price": 33.22,     "pct": -1.75,  "tags": ["ETF", "Quantum"] },
+    { "t": "QTUM",  "price": 150.20,    "pct": -1.29,  "tags": ["ETF", "Quantum", "AI"] },
+    { "t": "IBM",   "price": 237.16,    "pct": 1.93,   "tags": ["Software", "AI", "Quantum"] },
+    { "t": "ARTY",  "price": 73.58,     "pct": 0.04,   "tags": ["ETF", "AI"] },
+    { "t": "DRAM",  "price": 55.14,     "pct": 0.07,   "tags": ["ETF", "AI Memory", "Semiconductor"] },
+    { "t": "MU",    "price": 937.11,    "pct": -0.39,  "tags": ["Semiconductor", "AI Memory", "AI Infrastructure"] },
+    { "t": "SNDK",  "price": 1568.87,   "pct": -3.5,   "tags": ["AI Memory", "Semiconductor"] },
+    { "t": "SMH",   "price": 560.92,    "pct": -1.55,  "tags": ["ETF", "Semiconductor"] },
+    { "t": "NVDA",  "price": 217.56,    "pct": -0.99,  "tags": ["Semiconductor", "AI", "AI Infrastructure", "Physical AI"] },
+    { "t": "TSM",   "price": 412.09,    "pct": -0.32,  "tags": ["Semiconductor", "AI Infrastructure"] },
+    { "t": "AMD",   "price": 466.42,    "pct": -3.71,  "tags": ["Semiconductor", "AI", "AI Infrastructure"] },
+    { "t": "INTC",  "price": 92.80,     "pct": -4.02,  "tags": ["Semiconductor", "AI Infrastructure"] },
+    { "t": "AVGO",  "price": 362.48,    "pct": -4.61,  "tags": ["Semiconductor", "AI Infrastructure", "Networking"] },
+    { "t": "DELL",  "price": 437.55,    "pct": -6.64,  "tags": ["AI Infrastructure", "Hardware"] },
+    { "t": "HPE",   "price": 53.13,     "pct": -4.6,   "tags": ["AI Infrastructure", "Hardware", "Networking"] },
+    { "t": "CRWV",  "price": 90.87,     "pct": -2.47,  "tags": ["AI Infrastructure", "Data Center", "Cloud", "AI"] },
+    { "t": "ORCL",  "price": 143.81,    "pct": 0.71,   "tags": ["Software", "Cloud", "AI Infrastructure"] },
+    { "t": "TSLA",  "price": 351.12,    "pct": 4.23,   "tags": ["Physical AI", "Robotics", "Auto"] },
+    { "t": "SPCX",  "price": 139.65,    "pct": -2.57,  "tags": ["Space"] },
+    { "t": "SMCI",  "price": 36.58,     "pct": -2.22,  "tags": ["AI Infrastructure", "Hardware", "Data Center"] },
+    { "t": "QCOM",  "price": 161.91,    "pct": 1.07,   "tags": ["Semiconductor", "AI"] },
+    { "t": "COIN",  "price": 160.20,    "pct": 9.55,   "tags": ["Crypto", "Fintech"] },
+    { "t": "AAPL",  "price": 316.83,    "pct": 2.19,   "tags": ["Consumer Tech", "Hardware", "AI"] },
+    { "t": "GOOG",  "price": 341.70,    "pct": 0.12,   "tags": ["AI", "Software", "Cloud", "AI Infrastructure"] },
+    { "t": "META",  "price": 546.03,    "pct": 0.43,   "tags": ["AI", "Software", "Consumer Tech"] },
+    { "t": "AMZN",  "price": 265.84,    "pct": 2.46,   "tags": ["Cloud", "AI Infrastructure", "Consumer Tech", "Software"] },
+    { "t": "IGV",   "price": 102.81,    "pct": 0.83,   "tags": ["ETF", "Software"] },
+    { "t": "MSFT",  "price": 484.31,    "pct": 0.56,   "tags": ["Software", "Cloud", "AI", "AI Infrastructure"] },
+    { "t": "SNOW",  "price": 325.01,    "pct": -0.1,   "tags": ["Software", "Cloud", "AI"] },
+    { "t": "INTU",  "price": 362.47,    "pct": 3.44,   "tags": ["Software", "AI"] },
+    { "t": "PLTR",  "price": 175.19,    "pct": 2.13,   "tags": ["Software", "AI", "Defense"] },
+    { "t": "NOW",   "price": 127.20,    "pct": 6.45,   "tags": ["Software", "AI"] },
+    { "t": "HD",    "price": 344.30,    "pct": 2.02,   "tags": ["Retail", "Consumer Tech"] },
+    { "t": "CRM",   "price": 206.09,    "pct": 5.07,   "tags": ["Software", "Cloud", "AI"] },
+    { "t": "ADBE",  "price": 272.47,    "pct": 3.55,   "tags": ["Software", "AI"] },
+    { "t": "CLBR",  "price": 10.25,     "pct": -0.1,   "tags": ["SPAC"] },
+    { "t": "T",     "price": 25.12,     "pct": 0.88,   "tags": ["Telecom"] },
+    { "t": "VZ",    "price": 49.36,     "pct": 1.69,   "tags": ["Telecom"] },
+    { "t": "MRVL",  "price": 237.27,    "pct": 9.85,   "tags": ["Semiconductor", "AI Infrastructure", "Networking"] },
+    { "t": "MSTR",  "price": 104.25,    "pct": 12.68,  "tags": ["Crypto", "Software"] },
+    { "t": "XLE",   "price": 63.58,     "pct": -0.16,  "tags": ["ETF", "Energy"] },
+    { "t": "IONQ",  "price": 43.36,     "pct": -1.72,  "tags": ["Quantum", "AI"] },
+    { "t": "PHM",   "price": 130.68,    "pct": 3.67,   "tags": ["Homebuilder"] },
+    { "t": "HUMN",  "price": 31.95,     "pct": -2.47,  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
+    { "t": "ROBO",  "price": 81.72,     "pct": -0.12,  "tags": ["ETF", "Robotics", "Physical AI"] },
+    { "t": "BOTZ",  "price": 36.38,     "pct": -0.47,  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
+    { "t": "ARKQ",  "price": 125.93,    "pct": -0.69,  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
+    { "t": "AIQ",   "price": 62.99,     "pct": 0.74,   "tags": ["ETF", "AI"] },
+    { "t": "DXYZ",  "price": 33.43,     "pct": 0.84,   "tags": ["Fund", "Private Tech"] },
+    { "t": "RKLB",  "price": 75.84,     "pct": -4.19,  "tags": ["Space", "Defense"] },
+    { "t": "URA",   "price": 45.01,     "pct": 3.19,   "tags": ["ETF", "Nuclear", "Energy"] },
+    { "t": "ASTS",  "price": 66.43,     "pct": -0.95,  "tags": ["Space", "Telecom"] },
+    { "t": "SOXL",  "price": 120.74,    "pct": -6.48,  "tags": ["ETF", "Leveraged", "Semiconductor"] },
+    { "t": "ASML",  "price": 1751.73,   "pct": -2.84,  "tags": ["Semiconductor", "AI Infrastructure"] },
+    { "t": "NFLX",  "price": 80.22,     "pct": 3.15,   "tags": ["Media", "Consumer Tech"] },
+    { "t": "CCXI",  "price": 14.60,     "pct": -6.71,  "tags": ["SPAC"] },
+    { "t": "CSCO",  "price": 110.55,    "pct": -0.95,  "tags": ["Networking", "AI Infrastructure", "Hardware"] },
+    { "t": "OUST",  "price": 40.06,     "pct": -6.82,  "tags": ["Physical AI", "Robotics", "Hardware"] },
+    { "t": "ARQQ",  "price": 21.53,     "pct": -2.05,  "tags": ["Quantum", "Software"] },
+    { "t": "INFQ",  "price": 12.50,     "pct": -3.18,  "tags": ["Quantum", "AI"] },
+    { "t": "RGTI",  "price": 17.00,     "pct": -4.01,  "tags": ["Quantum"] },
+    { "t": "QBTS",  "price": 19.32,     "pct": -1.08,  "tags": ["Quantum"] },
+    { "t": "XNDU",  "price": 10.37,     "pct": -0.86,  "tags": ["Quantum"] },
+    { "t": "HQ",    "price": 16.82,     "pct": 0.3,    "tags": ["Quantum"] },
+    { "t": "QUBT",  "price": 8.42,      "pct": -1.17,  "tags": ["Quantum"] },
+    { "t": "NASA",  "price": 24.99,     "pct": -2.69,  "tags": ["ETF", "Space"] },
+    { "t": "BA",    "price": 222.20,    "pct": -0.39,  "tags": ["Aerospace", "Defense"] },
+    { "t": "SPCE",  "price": 3.21,      "pct": 0.63,   "tags": ["Space"] },
+    { "t": "RDW",   "price": 12.40,     "pct": -4.17,  "tags": ["Space", "Defense"] },
+    { "t": "MDA",   "price": 32.43,     "pct": -4.65,  "tags": ["Space", "Robotics"] },
+    { "t": "VOYG",  "price": 38.85,     "pct": -8.03,  "tags": ["Space", "Defense"] },
+    { "t": "BKSY",  "price": 27.90,     "pct": -3.59,  "tags": ["Space", "Defense"] },
+    { "t": "FLY",   "price": 25.30,     "pct": -3.21,  "tags": ["Space"] },
+    { "t": "LUNR",  "price": 18.52,     "pct": -4.09,  "tags": ["Space"] },
+    { "t": "PL",    "price": 22.62,     "pct": -3.17,  "tags": ["Space"] },
+    { "t": "IBIT",  "price": 38.78,     "pct": 5.96,   "tags": ["Crypto", "ETF"] },
+    { "t": "GBTC",  "price": 53.00,     "pct": 6.0,    "tags": ["Crypto", "Fund"] },
+    { "t": "MARA",  "price": 9.65,      "pct": 7.7,    "tags": ["Crypto", "Mining"] },
+    { "t": "RIOT",  "price": 19.38,     "pct": 2.49,   "tags": ["Crypto", "Mining"] },
+    { "t": "BITF",  "price": null,      "pct": null,   "tags": ["Crypto", "Mining"] },
+    { "t": "HUT",   "price": 82.08,     "pct": 1.6,    "tags": ["Crypto", "Mining", "Data Center"] },
+    { "t": "HIVE",  "price": 2.82,      "pct": 1.44,   "tags": ["Crypto", "Mining"] },
+    { "t": "BITO",  "price": 9.25,      "pct": 5.96,   "tags": ["Crypto", "ETF"] },
+    { "t": "BITW",  "price": 44.29,     "pct": 6.54,   "tags": ["Crypto", "Fund"] },
+    { "t": "BLOK",  "price": 60.34,     "pct": 1.91,   "tags": ["Crypto", "ETF"] },
+    { "t": "BCII",  "price": 0.01,      "pct": -4.27,  "tags": ["Crypto"] },
+    { "t": "CAN",   "price": 0.24,      "pct": 10.14,  "tags": ["Crypto", "Mining", "Semiconductor"] },
+    { "t": "CLSK",  "price": 11.67,     "pct": -0.51,  "tags": ["Crypto", "Mining"] },
+    { "t": "MFH",   "price": null,      "pct": null,   "tags": ["Crypto", "Fintech"] },
+    { "t": "XNET",  "price": 5.00,      "pct": 2.25,   "tags": ["Crypto", "Software"] },
+    { "t": "SKHY",  "price": 156.16,    "pct": 0.35,   "tags": ["Semiconductor", "AI Memory", "AI Infrastructure"] }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var doc = JSON.parse(document.getElementById("watchlist").textContent);
+  var quotes = doc.symbols.slice();
+  var asOf = doc.asOf || "snapshot";
+  var note = "";
+  var bad = false;
+
+  var picked = [];   // categories currently switched on; empty means everything
+
+  var grid = document.getElementById("grid");
+  var chipsEl = document.getElementById("chips");
+  var noneEl = document.getElementById("none");
+  var statusEl = document.getElementById("status");
+  var sortEl = document.getElementById("sort");
+  var reloadBtn = document.getElementById("reload");
+
+  // Tile color: hue by direction, intensity by size of the move.
+  // Anything at or past 4% is painted at full strength.
+  function shade(pct) {
+    if (pct === null || pct === undefined || isNaN(pct)) return "#123c37";
+    var mag = Math.min(Math.abs(pct), 4) / 4;
+    var light = 11 + mag * 27;
+    var sat = 45 + mag * 40;
+    return "hsl(" + (pct >= 0 ? 141 : 2) + "," + sat.toFixed(0) + "%," + light.toFixed(0) + "%)";
+  }
+
+  function money(n) {
+    if (n === null || n === undefined || isNaN(n)) return "--";
+    return "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function pctText(p) {
+    if (p === null || p === undefined || isNaN(p)) return "no data";
+    return (p >= 0 ? "+" : "") + Number(p).toFixed(2) + "%";
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  // A ticker shows when it carries ANY switched-on category, so picking
+  // "AI" plus "Semiconductor" widens the view rather than narrowing it.
+  function matches(q) {
+    if (!picked.length) return true;
+    var tags = q.tags || [];
+    for (var i = 0; i < picked.length; i++) {
+      if (tags.indexOf(picked[i]) !== -1) return true;
+    }
+    return false;
+  }
+
+  function renderChips() {
+    var count = {};
+    quotes.forEach(function (q) {
+      (q.tags || []).forEach(function (t) { count[t] = (count[t] || 0) + 1; });
+    });
+
+    var tags = Object.keys(count).sort(function (a, b) {
+      return count[b] - count[a] || a.localeCompare(b);
+    });
+
+    chipsEl.innerHTML =
+      '<button class="chip' + (picked.length ? "" : " on") + '" data-tag="">' +
+        'All<span class="n">' + quotes.length + "</span></button>" +
+      tags.map(function (t) {
+        return '<button class="chip' + (picked.indexOf(t) !== -1 ? " on" : "") +
+               '" data-tag="' + esc(t) + '">' + esc(t) +
+               '<span class="n">' + count[t] + "</span></button>";
+      }).join("");
+  }
+
+  function ordered() {
+    var list = quotes.filter(matches);
+    if (sortEl.value === "best") {
+      list.sort(function (a, b) { return (b.pct === null ? -99 : b.pct) - (a.pct === null ? -99 : a.pct); });
+    } else if (sortEl.value === "worst") {
+      list.sort(function (a, b) { return (a.pct === null ? 99 : a.pct) - (b.pct === null ? 99 : b.pct); });
+    }
+    return list;
+  }
+
+  function render() {
+    var shown = ordered();
+    noneEl.hidden = shown.length !== 0;
+
+    renderChips();
+
+    grid.innerHTML = shown.map(function (q) {
+      var dead = q.pct === null || q.pct === undefined;
+      return '<a class="tile' + (dead ? " stale" : "") + '" style="background:' + shade(q.pct) + '"' +
+        ' href="https://www.tradingview.com/symbols/' + encodeURIComponent(q.t) + '/"' +
+        ' target="_blank" rel="noopener noreferrer"' +
+        ' title="Open ' + esc(q.t) + ' on TradingView">' +
+        '<div class="t">' + esc(q.t) + (q.err ? "<small>" + esc(q.err) + "</small>" : "") + "</div>" +
+        '<div class="p">' + money(q.price) + "</div>" +
+        '<div class="c">' + pctText(q.pct) + "</div>" +
+      "</a>";
+    }).join("");
+
+    statusEl.className = "status" + (bad ? " bad" : "");
+    statusEl.innerHTML = "<b>" + esc(asOf) + "</b>" +
+      (picked.length ? " &middot; showing " + shown.length + " of " + quotes.length : "") +
+      (note ? "<br>" + esc(note) : "");
+  }
+
+  // The reload path needs a server-side proxy: browsers block direct calls to
+  // Google Finance, Yahoo and friends from a page (no CORS headers), so
+  // quotes.py fetches upstream and hands the page JSON on the same origin.
+  function reload() {
+    var syms = quotes.map(function (q) { return q.t; }).join(",");
+    reloadBtn.disabled = true;
+    note = "fetching...";
+    bad = false;
+    render();
+
+    fetch("api/quotes?symbols=" + encodeURIComponent(syms), { cache: "no-store" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("proxy answered " + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        var got = {};
+        (data.quotes || []).forEach(function (q) { got[q.symbol] = q; });
+
+        quotes = quotes.map(function (q) {
+          var fresh = got[q.t];
+          if (!fresh) return { t: q.t, tags: q.tags, price: q.price, pct: q.pct, err: "no quote" };
+          if (fresh.error) return { t: q.t, tags: q.tags, price: q.price, pct: q.pct, err: fresh.error };
+          return { t: q.t, tags: q.tags, price: fresh.price, pct: fresh.pct };
+        });
+
+        asOf = data.asOf || new Date().toLocaleString();
+        note = "source: " + (data.source || "proxy");
+        bad = false;
+      })
+      .catch(function (e) {
+        bad = true;
+        note = e.message + " -- start the fetcher with: python3 quotes.py";
+      })
+      .then(function () {
+        reloadBtn.disabled = false;
+        render();
+      });
+  }
+
+  chipsEl.addEventListener("click", function (e) {
+    var chip = e.target.closest(".chip");
+    if (!chip) return;
+
+    var tag = chip.dataset.tag;
+    if (!tag) {
+      picked = [];                       // "All" clears the selection
+    } else {
+      var at = picked.indexOf(tag);
+      if (at === -1) picked.push(tag);
+      else picked.splice(at, 1);
+    }
+    render();
+  });
+
+  reloadBtn.addEventListener("click", reload);
+  sortEl.addEventListener("change", render);
+
+  note = "showing the saved snapshot -- press Reload for live prices";
+  render();
+})();
+</script>
+</body>
+</html>
