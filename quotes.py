@@ -9,6 +9,7 @@ itself, which sidesteps the problem entirely.
     python3 quotes.py            # then open http://localhost:8090
     python3 quotes.py --pe       # fill in missing forward P/E (resumable)
     python3 quotes.py --pe --all # refetch every forward P/E
+    python3 quotes.py --pe RKLB MU  # refetch just these
 
 Sources are tried in order until one answers. Add your own by writing a
 function that takes a list of symbols and returns {symbol: (price, pct)}.
@@ -35,13 +36,27 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 
 
+class Throttled(Exception):
+    """The site is refusing us, as opposed to the symbol having no data."""
+
+
 def get(url):
     req = urllib.request.Request(url, headers={
         "User-Agent": UA,
         "Accept": "application/json,text/plain,*/*",
     })
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-        return r.read().decode("utf-8", "replace")
+    try:
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            body = r.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        if e.code in (403, 429):
+            raise Throttled(f"HTTP {e.code}")
+        raise
+
+    # Cloudflare answers 200 with an interstitial as often as it answers 429.
+    if "Just a moment" in body[:600] or "challenge-platform" in body[:2000]:
+        raise Throttled("challenge page")
+    return body
 
 
 def from_cnbc(symbols):
@@ -179,23 +194,38 @@ def forward_pe(symbols, pause=2.0):
     out = {}
 
     for i, sym in enumerate(symbols, 1):
+        found = False
+
+        # The quote page carries the metric table; the statistics page omits
+        # Forward PE for plenty of symbols that do publish one.
         for path in ("stocks", "etf"):
             try:
-                html = get(f"https://stockanalysis.com/{path}/{sym.lower()}/statistics/")
-            except Exception:
-                continue
-
-            if "Just a moment" in html[:400] or len(html) < 8000:
-                print(f"  [{i}/{len(symbols)}] {sym}: rate limited -- stopping here")
+                html = get(f"https://stockanalysis.com/{path}/{sym.lower()}/")
+            except Throttled as e:
+                print(f"  [{i}/{len(symbols)}] {sym}: blocked ({e}) -- stopping")
                 return out, True
+            except Exception:
+                continue          # this path does not exist for this symbol
 
-            m = re.search(r"Forward PE.{0,400}?>([\d.]+)<", html, re.S)
-            if m:
-                out[sym] = float(m.group(1))
-                print(f"  [{i}/{len(symbols)}] {sym}: {out[sym]}")
+            m = re.search(r"Forward PE.*?</td>\s*<td[^>]*>(.*?)</td>", html, re.S)
+            if not m:
+                # ETFs list a trailing, portfolio-weighted PE and no forward one.
+                print(f"  [{i}/{len(symbols)}] {sym}: no forward PE on page")
+                found = True
                 break
-        else:
-            print(f"  [{i}/{len(symbols)}] {sym}: none published")
+
+            raw = re.sub(r"<[^>]+>", "", m.group(1)).strip().replace(",", "")
+            try:
+                out[sym] = float(raw)
+                print(f"  [{i}/{len(symbols)}] {sym}: {out[sym]}")
+            except ValueError:
+                # "n/a" -- no positive forward estimate to divide by
+                print(f"  [{i}/{len(symbols)}] {sym}: {raw or 'n/a'}")
+            found = True
+            break
+
+        if not found:
+            print(f"  [{i}/{len(symbols)}] {sym}: no page")
 
         time.sleep(pause)
 
@@ -211,7 +241,12 @@ def refresh_pe():
     # Resumable: only ask for symbols we do not already have, unless told
     # to refetch everything. A stopped run can simply be run again.
     everything = "--all" in sys.argv
-    todo = [q["t"] for q in doc["symbols"] if everything or "pe" not in q]
+    named = [a.upper() for a in sys.argv[1:] if not a.startswith("-")]
+
+    if named:
+        todo = [q["t"] for q in doc["symbols"] if q["t"] in named]
+    else:
+        todo = [q["t"] for q in doc["symbols"] if everything or "pe" not in q]
     if not todo:
         print("every symbol already has a P/E -- use --pe --all to refetch")
         return
