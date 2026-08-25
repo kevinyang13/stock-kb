@@ -7,14 +7,18 @@ This server sits on the same origin as the page and does the fetching
 itself, which sidesteps the problem entirely.
 
     python3 quotes.py            # then open http://localhost:8090
+    python3 quotes.py --pe       # fill in missing forward P/E (resumable)
+    python3 quotes.py --pe --all # refetch every forward P/E
 
 Sources are tried in order until one answers. Add your own by writing a
 function that takes a list of symbols and returns {symbol: (price, pct)}.
 """
 
 import json
+import re
 import sys
 import threading
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime
@@ -155,6 +159,89 @@ def collect(symbols):
     return quotes, ", ".join(used) or "no source answered", missing
 
 
+# ---------------------------------------------------------------- forward P/E
+
+PAGE_FILE = HERE / "heatmap.html"
+
+
+def forward_pe(symbols, pause=2.0):
+    """Read forward P/E off stockanalysis.com's statistics page. There is no
+    API for it, and the page is same-origin-only for a browser, so this runs
+    here.
+
+    Deliberately slow: one request at a time with a pause between. Fetching
+    these in parallel trips Cloudflare, which then rate-limits the whole
+    domain for a while -- including the quote API the heatmap needs. Values
+    move on earnings and estimate revisions, so a slow refresh is fine.
+
+    ETFs, funds and companies with no positive forward estimate legitimately
+    have no value; those come back missing rather than wrong."""
+    out = {}
+
+    for i, sym in enumerate(symbols, 1):
+        for path in ("stocks", "etf"):
+            try:
+                html = get(f"https://stockanalysis.com/{path}/{sym.lower()}/statistics/")
+            except Exception:
+                continue
+
+            if "Just a moment" in html[:400] or len(html) < 8000:
+                print(f"  [{i}/{len(symbols)}] {sym}: rate limited -- stopping here")
+                return out, True
+
+            m = re.search(r"Forward PE.{0,400}?>([\d.]+)<", html, re.S)
+            if m:
+                out[sym] = float(m.group(1))
+                print(f"  [{i}/{len(symbols)}] {sym}: {out[sym]}")
+                break
+        else:
+            print(f"  [{i}/{len(symbols)}] {sym}: none published")
+
+        time.sleep(pause)
+
+    return out, False
+
+
+def refresh_pe():
+    """Rewrite the watchlist block in heatmap.html with fresh P/E values."""
+    src = PAGE_FILE.read_text()
+    block = re.search(r'(id="watchlist">)(.*?)(</script>)', src, re.S)
+    doc = json.loads(block.group(2))
+
+    # Resumable: only ask for symbols we do not already have, unless told
+    # to refetch everything. A stopped run can simply be run again.
+    everything = "--all" in sys.argv
+    todo = [q["t"] for q in doc["symbols"] if everything or "pe" not in q]
+    if not todo:
+        print("every symbol already has a P/E -- use --pe --all to refetch")
+        return
+
+    print(f"reading forward P/E for {len(todo)} symbols (slow by design)...")
+    pe, throttled = forward_pe(todo)
+
+    for q in doc["symbols"]:
+        if q["t"] in pe:
+            q["pe"] = pe[q["t"]]
+
+    lines = []
+    for q in doc["symbols"]:
+        pe_part = ' "pe": %s,' % q["pe"] if "pe" in q else ""
+        lines.append('    { "t": %-8s%s "tags": %s }' % (
+            '"%s",' % q["t"], pe_part, json.dumps(q["tags"])))
+
+    body = '\n{\n  "name": %s,\n  "peAsOf": %s,\n  "symbols": [\n%s\n  ]\n}\n' % (
+        json.dumps(doc["name"]),
+        json.dumps(datetime.now().strftime("%b %d, %Y")),
+        ",\n".join(lines))
+
+    PAGE_FILE.write_text(src[:block.start(2)] + body + src[block.end(2):])
+
+    total = sum(1 for q in doc["symbols"] if "pe" in q)
+    print(f"\nadded {len(pe)}; file now has P/E for {total} of {len(doc['symbols'])}")
+    if throttled:
+        print("stopped early on rate limiting -- wait a few minutes, run again to resume")
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):
         sys.stderr.write("  %s\n" % (fmt % args))
@@ -197,6 +284,10 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
+    if "--pe" in sys.argv:
+        refresh_pe()
+        sys.exit(0)
+
     print(f"heatmap:  http://localhost:{PORT}")
     print(f"quotes:   http://localhost:{PORT}/api/quotes?symbols=AAPL,MSFT")
     print("ctrl-c to stop\n")

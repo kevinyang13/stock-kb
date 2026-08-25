@@ -108,10 +108,16 @@
 <div class="wrap">
   <div class="bar">
     <button type="button" id="reload">Reload prices</button>
+    <select id="view" aria-label="What the colors mean">
+      <option value="move">Color: day move</option>
+      <option value="pe">Color: forward P/E</option>
+    </select>
     <select id="sort" aria-label="Tile order">
       <option value="list">Watchlist order</option>
       <option value="best">Best first</option>
       <option value="worst">Worst first</option>
+      <option value="cheap">Cheapest P/E</option>
+      <option value="rich">Priciest P/E</option>
     </select>
     <span class="spacer"></span>
     <div class="status" id="status"></div>
@@ -133,55 +139,56 @@
 <script type="application/json" id="watchlist">
 {
   "name": "2025",
+  "peAsOf": "Aug 24, 2026",
   "symbols": [
     { "t": "VFTNX", "tags": ["Fund", "Broad Market"] },
     { "t": "SPY",   "tags": ["ETF", "Broad Market"] },
     { "t": "TQQQ",  "tags": ["ETF", "Leveraged", "Broad Market"] },
     { "t": "UFO",   "tags": ["ETF", "Space"] },
-    { "t": "GE",    "tags": ["Aerospace", "Industrials"] },
+    { "t": "GE",    "pe": 40.72, "tags": ["Aerospace", "Industrials"] },
     { "t": "WQTM",  "tags": ["ETF", "Quantum"] },
     { "t": "QTUM",  "tags": ["ETF", "Quantum", "AI"] },
-    { "t": "IBM",   "tags": ["Software", "AI", "Quantum"] },
+    { "t": "IBM",   "pe": 18.05, "tags": ["Software", "AI", "Quantum"] },
     { "t": "ARTY",  "tags": ["ETF", "AI"] },
     { "t": "DRAM",  "tags": ["ETF", "AI Memory", "Semiconductor"] },
-    { "t": "MU",    "tags": ["Semiconductor", "AI Memory", "AI Infrastructure"] },
-    { "t": "SNDK",  "tags": ["AI Memory", "Semiconductor"] },
+    { "t": "MU",    "pe": 6.33, "tags": ["Semiconductor", "AI Memory", "AI Infrastructure"] },
+    { "t": "SNDK",  "pe": 6.97, "tags": ["AI Memory", "Semiconductor"] },
     { "t": "SMH",   "tags": ["ETF", "Semiconductor"] },
-    { "t": "NVDA",  "tags": ["Semiconductor", "AI", "AI Infrastructure", "Physical AI"] },
-    { "t": "TSM",   "tags": ["Semiconductor", "AI Infrastructure"] },
-    { "t": "AMD",   "tags": ["Semiconductor", "AI", "AI Infrastructure"] },
-    { "t": "INTC",  "tags": ["Semiconductor", "AI Infrastructure"] },
-    { "t": "AVGO",  "tags": ["Semiconductor", "AI Infrastructure", "Networking"] },
-    { "t": "DELL",  "tags": ["AI Infrastructure", "Hardware"] },
-    { "t": "HPE",   "tags": ["AI Infrastructure", "Hardware", "Networking"] },
+    { "t": "NVDA",  "pe": 20.77, "tags": ["Semiconductor", "AI", "AI Infrastructure", "Physical AI"] },
+    { "t": "TSM",   "pe": 19.06, "tags": ["Semiconductor", "AI Infrastructure"] },
+    { "t": "AMD",   "pe": 41.12, "tags": ["Semiconductor", "AI", "AI Infrastructure"] },
+    { "t": "INTC",  "pe": 52.52, "tags": ["Semiconductor", "AI Infrastructure"] },
+    { "t": "AVGO",  "pe": 22.73, "tags": ["Semiconductor", "AI Infrastructure", "Networking"] },
+    { "t": "DELL",  "pe": 22.68, "tags": ["AI Infrastructure", "Hardware"] },
+    { "t": "HPE",   "pe": 13.43, "tags": ["AI Infrastructure", "Hardware", "Networking"] },
     { "t": "CRWV",  "tags": ["AI Infrastructure", "Data Center", "Cloud", "AI"] },
-    { "t": "ORCL",  "tags": ["Software", "Cloud", "AI Infrastructure"] },
-    { "t": "TSLA",  "tags": ["Physical AI", "Robotics", "Auto"] },
-    { "t": "SPCX",  "tags": ["Space"] },
-    { "t": "SMCI",  "tags": ["AI Infrastructure", "Hardware", "Data Center"] },
-    { "t": "QCOM",  "tags": ["Semiconductor", "AI"] },
-    { "t": "COIN",  "tags": ["Crypto", "Fintech"] },
-    { "t": "AAPL",  "tags": ["Consumer Tech", "Hardware", "AI"] },
-    { "t": "GOOG",  "tags": ["AI", "Software", "Cloud", "AI Infrastructure"] },
-    { "t": "META",  "tags": ["AI", "Software", "Consumer Tech"] },
-    { "t": "AMZN",  "tags": ["Cloud", "AI Infrastructure", "Consumer Tech", "Software"] },
+    { "t": "ORCL",  "pe": 17.69, "tags": ["Software", "Cloud", "AI Infrastructure"] },
+    { "t": "TSLA",  "pe": 183.31, "tags": ["Physical AI", "Robotics", "Auto"] },
+    { "t": "SPCX",  "pe": 104.05, "tags": ["Space"] },
+    { "t": "SMCI",  "pe": 8.11, "tags": ["AI Infrastructure", "Hardware", "Data Center"] },
+    { "t": "QCOM",  "pe": 17.1, "tags": ["Semiconductor", "AI"] },
+    { "t": "COIN",  "pe": 156.0, "tags": ["Crypto", "Fintech"] },
+    { "t": "AAPL",  "pe": 33.89, "tags": ["Consumer Tech", "Hardware", "AI"] },
+    { "t": "GOOG",  "pe": 25.61, "tags": ["AI", "Software", "Cloud", "AI Infrastructure"] },
+    { "t": "META",  "pe": 17.46, "tags": ["AI", "Software", "Consumer Tech"] },
+    { "t": "AMZN",  "pe": 28.29, "tags": ["Cloud", "AI Infrastructure", "Consumer Tech", "Software"] },
     { "t": "IGV",   "tags": ["ETF", "Software"] },
-    { "t": "MSFT",  "tags": ["Software", "Cloud", "AI", "AI Infrastructure"] },
-    { "t": "SNOW",  "tags": ["Software", "Cloud", "AI"] },
-    { "t": "INTU",  "tags": ["Software", "AI"] },
-    { "t": "PLTR",  "tags": ["Software", "AI", "Defense"] },
-    { "t": "NOW",   "tags": ["Software", "AI"] },
-    { "t": "HD",    "tags": ["Retail", "Consumer Tech"] },
-    { "t": "CRM",   "tags": ["Software", "Cloud", "AI"] },
-    { "t": "ADBE",  "tags": ["Software", "AI"] },
+    { "t": "MSFT",  "pe": 24.67, "tags": ["Software", "Cloud", "AI", "AI Infrastructure"] },
+    { "t": "SNOW",  "pe": 152.21, "tags": ["Software", "Cloud", "AI"] },
+    { "t": "INTU",  "pe": 13.84, "tags": ["Software", "AI"] },
+    { "t": "PLTR",  "pe": 92.41, "tags": ["Software", "AI", "Defense"] },
+    { "t": "NOW",   "pe": 28.26, "tags": ["Software", "AI"] },
+    { "t": "HD",    "pe": 21.88, "tags": ["Retail", "Consumer Tech"] },
+    { "t": "CRM",   "pe": 15.0, "tags": ["Software", "Cloud", "AI"] },
+    { "t": "ADBE",  "pe": 10.65, "tags": ["Software", "AI"] },
     { "t": "CLBR",  "tags": ["SPAC"] },
-    { "t": "T",     "tags": ["Telecom"] },
-    { "t": "VZ",    "tags": ["Telecom"] },
-    { "t": "MRVL",  "tags": ["Semiconductor", "AI Infrastructure", "Networking"] },
-    { "t": "MSTR",  "tags": ["Crypto", "Software"] },
+    { "t": "T",     "pe": 10.68, "tags": ["Telecom"] },
+    { "t": "VZ",    "pe": 9.89, "tags": ["Telecom"] },
+    { "t": "MRVL",  "pe": 50.24, "tags": ["Semiconductor", "AI Infrastructure", "Networking"] },
+    { "t": "MSTR",  "pe": 4.0, "tags": ["Crypto", "Software"] },
     { "t": "XLE",   "tags": ["ETF", "Energy"] },
     { "t": "IONQ",  "tags": ["Quantum", "AI"] },
-    { "t": "PHM",   "tags": ["Homebuilder"] },
+    { "t": "PHM",   "pe": 12.11, "tags": ["Homebuilder"] },
     { "t": "HUMN",  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
     { "t": "ROBO",  "tags": ["ETF", "Robotics", "Physical AI"] },
     { "t": "BOTZ",  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
@@ -192,10 +199,10 @@
     { "t": "URA",   "tags": ["ETF", "Nuclear", "Energy"] },
     { "t": "ASTS",  "tags": ["Space", "Telecom"] },
     { "t": "SOXL",  "tags": ["ETF", "Leveraged", "Semiconductor"] },
-    { "t": "ASML",  "tags": ["Semiconductor", "AI Infrastructure"] },
-    { "t": "NFLX",  "tags": ["Media", "Consumer Tech"] },
+    { "t": "ASML",  "pe": 30.5, "tags": ["Semiconductor", "AI Infrastructure"] },
+    { "t": "NFLX",  "pe": 23.09, "tags": ["Media", "Consumer Tech"] },
     { "t": "CCXI",  "tags": ["SPAC"] },
-    { "t": "CSCO",  "tags": ["Networking", "AI Infrastructure", "Hardware"] },
+    { "t": "CSCO",  "pe": 21.5, "tags": ["Networking", "AI Infrastructure", "Hardware"] },
     { "t": "OUST",  "tags": ["Physical AI", "Robotics", "Hardware"] },
     { "t": "ARQQ",  "tags": ["Quantum", "Software"] },
     { "t": "INFQ",  "tags": ["Quantum", "AI"] },
@@ -205,10 +212,10 @@
     { "t": "HQ",    "tags": ["Quantum"] },
     { "t": "QUBT",  "tags": ["Quantum"] },
     { "t": "NASA",  "tags": ["ETF", "Space"] },
-    { "t": "BA",    "tags": ["Aerospace", "Defense"] },
+    { "t": "BA",    "pe": 173.65, "tags": ["Aerospace", "Defense"] },
     { "t": "SPCE",  "tags": ["Space"] },
     { "t": "RDW",   "tags": ["Space", "Defense"] },
-    { "t": "MDA",   "tags": ["Space", "Robotics"] },
+    { "t": "MDA",   "pe": 23.55, "tags": ["Space", "Robotics"] },
     { "t": "VOYG",  "tags": ["Space", "Defense"] },
     { "t": "BKSY",  "tags": ["Space", "Defense"] },
     { "t": "FLY",   "tags": ["Space"] },
@@ -216,7 +223,7 @@
     { "t": "PL",    "tags": ["Space"] },
     { "t": "IBIT",  "tags": ["Crypto", "ETF"] },
     { "t": "GBTC",  "tags": ["Crypto", "Fund"] },
-    { "t": "MARA",  "tags": ["Crypto", "Mining"] },
+    { "t": "MARA",  "pe": 6.3, "tags": ["Crypto", "Mining"] },
     { "t": "RIOT",  "tags": ["Crypto", "Mining"] },
     { "t": "BITF",  "tags": ["Crypto", "Mining"] },
     { "t": "HUT",   "tags": ["Crypto", "Mining", "Data Center"] },
@@ -240,7 +247,8 @@
 
   var doc = JSON.parse(document.getElementById("watchlist").textContent);
   var quotes = doc.symbols.map(function (q) {
-    return { t: q.t, tags: q.tags, price: null, pct: null };
+    return { t: q.t, tags: q.tags, pe: q.pe === undefined ? null : q.pe,
+             price: null, pct: null };
   });
   var asOf = "loading";
   var note = "";
@@ -253,10 +261,22 @@
   var noneEl = document.getElementById("none");
   var statusEl = document.getElementById("status");
   var sortEl = document.getElementById("sort");
+  var viewEl = document.getElementById("view");
   var reloadBtn = document.getElementById("reload");
 
   // Tile color: hue by direction, intensity by size of the move.
   // Anything at or past 4% is painted at full strength.
+  // Forward P/E on a single ramp, deep teal (cheap) to gold (expensive).
+  // Deliberately not red/green -- a high multiple is not a down day, and
+  // reusing the move palette would say something the number does not.
+  function shadePe(pe) {
+    if (pe === null || pe === undefined || isNaN(pe)) return "#0e2f2b";
+    var t = Math.max(0, Math.min(1, (pe - 8) / 42));   // 8x floor, 50x ceiling
+    var hue = 172 - t * 132;                           // teal -> gold
+    return "hsl(" + hue.toFixed(0) + "," + (34 + t * 30).toFixed(0) + "%," +
+           (13 + t * 24).toFixed(0) + "%)";
+  }
+
   function shade(pct) {
     if (pct === null || pct === undefined || isNaN(pct)) return "#123c37";
     var mag = Math.min(Math.abs(pct), 4) / 4;
@@ -268,6 +288,10 @@
   function money(n) {
     if (n === null || n === undefined || isNaN(n)) return "--";
     return "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function peText(pe) {
+    return pe === null ? "no P/E" : pe.toFixed(1) + "x fwd";
   }
 
   function pctText(p) {
@@ -312,12 +336,23 @@
       }).join("");
   }
 
+  function peOf(q) { return q.pe === null || q.pe === undefined ? null : q.pe; }
+
   function ordered() {
     var list = quotes.filter(matches);
     if (sortEl.value === "best") {
       list.sort(function (a, b) { return (b.pct === null ? -99 : b.pct) - (a.pct === null ? -99 : a.pct); });
     } else if (sortEl.value === "worst") {
       list.sort(function (a, b) { return (a.pct === null ? 99 : a.pct) - (b.pct === null ? 99 : b.pct); });
+    } else if (sortEl.value === "cheap" || sortEl.value === "rich") {
+      var dir = sortEl.value === "cheap" ? 1 : -1;
+      list.sort(function (a, b) {
+        var x = peOf(a), y = peOf(b);
+        if (x === null && y === null) return 0;
+        if (x === null) return 1;            // no P/E always sorts last
+        if (y === null) return -1;
+        return (x - y) * dir;
+      });
     }
     return list;
   }
@@ -329,20 +364,26 @@
     renderChips();
 
     grid.innerHTML = shown.map(function (q) {
-      var dead = q.pct === null || q.pct === undefined;
-      var waiting = dead && !q.err;
-      return '<a class="tile' + (dead ? " stale" : "") + (waiting ? " waiting" : "") + '" style="background:' + shade(q.pct) + '"' +
+      var peView = viewEl.value === "pe";
+      var dead = peView ? peOf(q) === null : (q.pct === null || q.pct === undefined);
+      var waiting = dead && !q.err && !peView;
+      return '<a class="tile' + (dead ? " stale" : "") + (waiting ? " waiting" : "") + '" style="background:' + (peView ? shadePe(peOf(q)) : shade(q.pct)) + '"' +
         ' href="https://www.tradingview.com/symbols/' + encodeURIComponent(q.t) + '/"' +
         ' target="_blank" rel="noopener noreferrer"' +
         ' title="Open ' + esc(q.t) + ' on TradingView">' +
         '<div class="t">' + esc(q.t) + (q.err ? "<small>" + esc(q.err) + "</small>" : "") + "</div>" +
         '<div class="p">' + money(q.price) + "</div>" +
-        '<div class="c">' + pctText(q.pct) + "</div>" +
+        '<div class="c">' + (peView ? peText(peOf(q)) : pctText(q.pct)) + "</div>" +
       "</a>";
     }).join("");
 
     statusEl.className = "status" + (bad ? " bad" : "");
+    var peCount = quotes.filter(function (q) { return peOf(q) !== null; }).length;
     statusEl.innerHTML = "<b>" + esc(asOf) + "</b>" +
+      (viewEl.value === "pe"
+        ? " &middot; forward P/E for " + peCount + " of " + quotes.length +
+          (doc.peAsOf ? ", read " + esc(doc.peAsOf) : "")
+        : "") +
       (picked.length ? " &middot; showing " + shown.length + " of " + quotes.length : "") +
       (note ? "<br>" + esc(note) : "");
   }
@@ -466,6 +507,7 @@
   });
 
   sortEl.addEventListener("change", render);
+  viewEl.addEventListener("change", render);
 
   render();
   reload();   // prices are never stored in this file -- fetch them on every open
