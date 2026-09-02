@@ -78,7 +78,7 @@
     font-family:var(--sans);
     color:#fff;
     border-radius:2px;
-    min-height:82px;
+    min-height:90px;
     display:flex;flex-direction:column;justify-content:center;gap:3px;
   }
   .tile .t{font-size:14px;font-weight:700;letter-spacing:.03em}
@@ -89,7 +89,8 @@
   .tile:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .tile.stale{opacity:.45}
   .tile.waiting .p,.tile.waiting .c{opacity:.35}
-  .tile .t small{display:block;font-size:9px;letter-spacing:.14em;opacity:.7;margin-top:3px;font-weight:400}
+  .tile .t small{display:block;font-size:9px;letter-spacing:.12em;opacity:.72;margin-top:3px;font-weight:400;text-transform:uppercase}
+  .tile .t small.warn{opacity:.55;text-transform:none;letter-spacing:.06em}
 
   footer{
     background:var(--gold);color:var(--ink);text-align:center;
@@ -369,6 +370,27 @@
     return best;
   }
 
+  // The label under a ticker. With categories switched on it names the one
+  // that put the tile on screen, so the board explains its own filtering;
+  // otherwise it names the ticker's primary sector.
+  function sectorLabel(q) {
+    var tags = q.tags || [];
+    var pool = tags;
+
+    if (picked.length) {
+      var hit = tags.filter(function (t) { return picked.indexOf(t) !== -1; });
+      if (hit.length) pool = hit;
+    }
+
+    var best = null, bestAt = SECTORS.length + 1;
+    pool.forEach(function (t) {
+      var at = SECTORS.indexOf(t);
+      if (at === -1) at = SECTORS.length;      // unranked tags still label
+      if (at < bestAt) { bestAt = at; best = t; }
+    });
+    return best;
+  }
+
   function ordered() {
     var list = quotes.filter(matches);
     if (sortEl.value === "best") {
@@ -416,13 +438,15 @@
       return '<a class="tile' + (dead ? " stale" : "") + (waiting ? " waiting" : "") + '" style="background:' + (peView ? shadePe(peOf(q)) : shade(q.pct)) + '"' +
         ' href="https://www.tradingview.com/symbols/' + encodeURIComponent(q.t) + '/"' +
         ' target="_blank" rel="noopener noreferrer"' +
-        ' title="Open ' + esc(q.t) + ' on TradingView">' +
+        ' title="' + esc(q.t) + (q.tags && q.tags.length ? " -- " + esc(q.tags.join(", ")) : "") +
+        (q.err ? " -- " + esc(q.err) : "") + '">' +
         '<div class="t">' + esc(q.t) +
-          (sortEl.value === "sector" && sectorRank(q) < SECTORS.length
-            ? "<small>" + esc(SECTORS[sectorRank(q)]) + "</small>"
-            : (q.err ? "<small>" + esc(q.err) + "</small>" : "")) + "</div>" +
+          (sectorLabel(q) ? "<small>" + esc(sectorLabel(q)) + "</small>" : "") +
+        "</div>" +
         '<div class="p">' + money(q.price) + "</div>" +
-        '<div class="c">' + (peView ? peText(peOf(q)) : pctText(q.pct)) + "</div>" +
+        '<div class="c">' +
+          (q.err && !peView ? esc(q.err) : (peView ? peText(peOf(q)) : pctText(q.pct))) +
+        "</div>" +
       "</a>";
     }).join("");
 
