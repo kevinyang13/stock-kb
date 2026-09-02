@@ -161,7 +161,7 @@
     { "t": "IBM",   "pe": 18.05, "tags": ["Software", "AI", "Quantum"] },
     { "t": "ARTY",  "tags": ["ETF", "AI"] },
     { "t": "DRAM",  "tags": ["ETF", "AI Memory", "Semiconductor"] },
-    { "t": "MU",    "fav": true, "pe": 6.33, "tags": ["Semiconductor", "AI Memory", "AI Infra"] },
+    { "t": "MU",    "fav": true, "sector": "AI Memory", "pe": 6.33, "tags": ["Semiconductor", "AI Memory", "AI Infra"] },
     { "t": "SNDK",  "fav": true, "pe": 6.97, "tags": ["AI Memory", "Semiconductor"] },
     { "t": "SMH",   "fav": true, "tags": ["ETF", "Semiconductor"] },
     { "t": "NVDA",  "fav": true, "pe": 20.77, "tags": ["Semiconductor", "AI", "AI Infra", "Physical AI"] },
@@ -197,7 +197,7 @@
     { "t": "MRVL",  "pe": 50.24, "tags": ["Semiconductor", "AI Infra", "Networking"] },
     { "t": "MSTR",  "pe": 4.0, "tags": ["Crypto", "Software"] },
     { "t": "XLE",   "tags": ["ETF", "Energy"] },
-    { "t": "IONQ",  "fav": true, "tags": ["Quantum", "AI"] },
+    { "t": "IONQ",  "fav": true, "sector": "Quantum", "tags": ["Quantum", "AI"] },
     { "t": "PHM",   "pe": 12.11, "tags": ["Homebuilder"] },
     { "t": "HUMN",  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
     { "t": "ROBO",  "tags": ["ETF", "Robotics", "Physical AI"] },
@@ -246,7 +246,7 @@
     { "t": "CLSK",  "tags": ["Crypto", "Mining"] },
     { "t": "MFH",   "tags": ["Crypto", "Fintech"] },
     { "t": "XNET",  "tags": ["Crypto", "Software"] },
-    { "t": "SKHY",  "pe": 4.05, "tags": ["Semiconductor", "AI Memory", "AI Infra"] },
+    { "t": "SKHY",  "sector": "AI Memory", "pe": 4.05, "tags": ["Semiconductor", "AI Memory", "AI Infra"] },
     { "t": "COHR",  "pe": 28.89, "tags": ["Semiconductor", "AI Infra", "Networking", "Hardware"] },
     { "t": "NET",   "pe": 193.19, "tags": ["Cloud", "Software", "Networking", "AI Infra"] },
     { "t": "DDOG",  "pe": 84.56, "tags": ["Software", "Cloud", "AI"] },
@@ -261,7 +261,7 @@
 
   var doc = JSON.parse(document.getElementById("watchlist").textContent);
   var quotes = doc.symbols.map(function (q) {
-    return { t: q.t, tags: q.tags, fav: !!q.fav,
+    return { t: q.t, tags: q.tags, fav: !!q.fav, sector: q.sector || null,
              pe: q.pe === undefined ? null : q.pe,
              price: null, pct: null };
   });
@@ -371,6 +371,10 @@
   ];
 
   function sectorRank(q) {
+    if (q.sector) {                      // an explicit sector wins outright
+      var at = SECTORS.indexOf(q.sector);
+      if (at !== -1) return at;
+    }
     var best = SECTORS.length;
     (q.tags || []).forEach(function (t) {
       var at = SECTORS.indexOf(t);
@@ -385,6 +389,11 @@
   function sectorLabel(q) {
     var tags = q.tags || [];
     var pool = tags;
+
+    // A ticker can name its own sector when the ranking would pick a tag
+    // that is true but not what the company is -- MU carries AI Infra, but
+    // it is a memory maker.
+    if (q.sector && !picked.length) return q.sector;
 
     if (picked.length) {
       var hit = tags.filter(function (t) { return picked.indexOf(t) !== -1; });
