@@ -84,8 +84,18 @@
   .tile .t{font-size:14px;font-weight:700;letter-spacing:.03em}
   .tile .p{font-size:13px;font-variant-numeric:tabular-nums}
   .tile .c{font-size:12px;font-variant-numeric:tabular-nums;opacity:.95}
-  .tile{text-decoration:none;transition:transform .08s ease,box-shadow .08s ease}
+  .tile{position:relative;text-decoration:none;transition:transform .08s ease,box-shadow .08s ease}
   .tile:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.45);z-index:1}
+
+  /* Favorites: the day's move already owns colour, so a favorite is marked
+     with a gold edge and a star instead of a hue of its own. */
+  .tile.fav{box-shadow:inset 0 0 0 2px var(--gold)}
+  .tile.fav:hover{box-shadow:inset 0 0 0 2px var(--gold),0 6px 16px rgba(0,0,0,.45)}
+  .tile .star{
+    position:absolute;top:4px;right:6px;
+    font-size:11px;line-height:1;color:var(--gold);
+    text-shadow:0 1px 2px rgba(0,0,0,.55);
+  }
   .tile:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .tile.stale{opacity:.45}
   .tile.waiting .p,.tile.waiting .c{opacity:.35}
@@ -153,11 +163,11 @@
     { "t": "IBM",   "pe": 18.05, "tags": ["Software", "AI", "Quantum"] },
     { "t": "ARTY",  "tags": ["ETF", "AI"] },
     { "t": "DRAM",  "tags": ["ETF", "AI Memory", "Semiconductor"] },
-    { "t": "MU",    "pe": 6.33, "tags": ["Semiconductor", "AI Memory", "AI Infra"] },
-    { "t": "SNDK",  "pe": 6.97, "tags": ["AI Memory", "Semiconductor"] },
-    { "t": "SMH",   "tags": ["ETF", "Semiconductor"] },
-    { "t": "NVDA",  "pe": 20.77, "tags": ["Semiconductor", "AI", "AI Infra", "Physical AI"] },
-    { "t": "TSM",   "pe": 19.06, "tags": ["Semiconductor", "AI Infra"] },
+    { "t": "MU",    "fav": true, "pe": 6.33, "tags": ["Semiconductor", "AI Memory", "AI Infra"] },
+    { "t": "SNDK",  "fav": true, "pe": 6.97, "tags": ["AI Memory", "Semiconductor"] },
+    { "t": "SMH",   "fav": true, "tags": ["ETF", "Semiconductor"] },
+    { "t": "NVDA",  "fav": true, "pe": 20.77, "tags": ["Semiconductor", "AI", "AI Infra", "Physical AI"] },
+    { "t": "TSM",   "fav": true, "pe": 19.06, "tags": ["Semiconductor", "AI Infra"] },
     { "t": "AMD",   "pe": 41.12, "tags": ["Semiconductor", "AI", "AI Infra"] },
     { "t": "INTC",  "pe": 52.52, "tags": ["Semiconductor", "AI Infra"] },
     { "t": "AVGO",  "pe": 22.73, "tags": ["Semiconductor", "AI Infra", "Networking"] },
@@ -165,19 +175,19 @@
     { "t": "HPE",   "pe": 13.43, "tags": ["AI Infra", "Hardware", "Networking"] },
     { "t": "CRWV",  "tags": ["AI Infra", "Data Center", "Cloud", "AI"] },
     { "t": "ORCL",  "pe": 17.69, "tags": ["Software", "Cloud", "AI Infra"] },
-    { "t": "TSLA",  "pe": 183.31, "tags": ["Physical AI", "Robotics", "Auto"] },
+    { "t": "TSLA",  "fav": true, "pe": 183.31, "tags": ["Physical AI", "Robotics", "Auto"] },
     { "t": "SPCX",  "pe": 104.05, "tags": ["Space"] },
-    { "t": "SMCI",  "pe": 8.11, "tags": ["AI Infra", "Hardware", "Data Center"] },
-    { "t": "QCOM",  "pe": 17.1, "tags": ["Semiconductor", "AI"] },
+    { "t": "SMCI",  "fav": true, "pe": 8.11, "tags": ["AI Infra", "Hardware", "Data Center"] },
+    { "t": "QCOM",  "fav": true, "pe": 17.1, "tags": ["Semiconductor", "AI"] },
     { "t": "COIN",  "pe": 156.0, "tags": ["Crypto", "Fintech"] },
     { "t": "AAPL",  "pe": 33.89, "tags": ["Consumer Tech", "Hardware", "AI"] },
-    { "t": "GOOG",  "pe": 25.61, "tags": ["AI", "Software", "Cloud", "AI Infra"] },
+    { "t": "GOOG",  "fav": true, "pe": 25.61, "tags": ["AI", "Software", "Cloud", "AI Infra"] },
     { "t": "META",  "pe": 17.46, "tags": ["AI", "Software", "Consumer Tech"] },
     { "t": "AMZN",  "pe": 28.29, "tags": ["Cloud", "AI Infra", "Consumer Tech", "Software"] },
     { "t": "IGV",   "tags": ["ETF", "Software"] },
-    { "t": "MSFT",  "pe": 24.67, "tags": ["Software", "Cloud", "AI", "AI Infra"] },
+    { "t": "MSFT",  "fav": true, "pe": 24.67, "tags": ["Software", "Cloud", "AI", "AI Infra"] },
     { "t": "SNOW",  "pe": 152.21, "tags": ["Software", "Cloud", "AI"] },
-    { "t": "INTU",  "pe": 13.84, "tags": ["Software", "AI"] },
+    { "t": "INTU",  "fav": true, "pe": 13.84, "tags": ["Software", "AI"] },
     { "t": "PLTR",  "pe": 92.41, "tags": ["Software", "AI", "Defense"] },
     { "t": "NOW",   "pe": 28.26, "tags": ["Software", "AI"] },
     { "t": "HD",    "pe": 21.88, "tags": ["Retail", "Consumer Tech"] },
@@ -189,7 +199,7 @@
     { "t": "MRVL",  "pe": 50.24, "tags": ["Semiconductor", "AI Infra", "Networking"] },
     { "t": "MSTR",  "pe": 4.0, "tags": ["Crypto", "Software"] },
     { "t": "XLE",   "tags": ["ETF", "Energy"] },
-    { "t": "IONQ",  "tags": ["Quantum", "AI"] },
+    { "t": "IONQ",  "fav": true, "tags": ["Quantum", "AI"] },
     { "t": "PHM",   "pe": 12.11, "tags": ["Homebuilder"] },
     { "t": "HUMN",  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
     { "t": "ROBO",  "tags": ["ETF", "Robotics", "Physical AI"] },
@@ -253,7 +263,8 @@
 
   var doc = JSON.parse(document.getElementById("watchlist").textContent);
   var quotes = doc.symbols.map(function (q) {
-    return { t: q.t, tags: q.tags, pe: q.pe === undefined ? null : q.pe,
+    return { t: q.t, tags: q.tags, fav: !!q.fav,
+             pe: q.pe === undefined ? null : q.pe,
              price: null, pct: null };
   });
   var asOf = "loading";
@@ -435,11 +446,14 @@
       var peView = viewEl.value === "pe";
       var dead = peView ? peOf(q) === null : (q.pct === null || q.pct === undefined);
       var waiting = dead && !q.err && !peView;
-      return '<a class="tile' + (dead ? " stale" : "") + (waiting ? " waiting" : "") + '" style="background:' + (peView ? shadePe(peOf(q)) : shade(q.pct)) + '"' +
+      return '<a class="tile' + (dead ? " stale" : "") + (waiting ? " waiting" : "") +
+        (q.fav ? " fav" : "") + '" style="background:' + (peView ? shadePe(peOf(q)) : shade(q.pct)) + '"' +
         ' href="https://www.tradingview.com/symbols/' + encodeURIComponent(q.t) + '/"' +
         ' target="_blank" rel="noopener noreferrer"' +
-        ' title="' + esc(q.t) + (q.tags && q.tags.length ? " -- " + esc(q.tags.join(", ")) : "") +
+        ' title="' + esc(q.t) + (q.fav ? " (favorite)" : "") +
+        (q.tags && q.tags.length ? " -- " + esc(q.tags.join(", ")) : "") +
         (q.err ? " -- " + esc(q.err) : "") + '">' +
+        (q.fav ? '<span class="star" aria-hidden="true">\u2605</span>' : "") +
         '<div class="t">' + esc(q.t) +
           (sectorLabel(q) ? "<small>" + esc(sectorLabel(q)) + "</small>" : "") +
         "</div>" +
