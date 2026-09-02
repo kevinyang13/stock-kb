@@ -466,10 +466,12 @@
   // header for a real cross-origin page request. stockanalysis.com does
   // not, so it is the primary. It has no batch endpoint, hence one small
   // request per symbol, eight in flight at a time.
-  var LANES = 8;
+  var LANES = 6;
 
-  function fromStockAnalysis(syms, onQuote) {
-    var next = 0, hits = 0;
+  // One pass over a list of symbols. Anything that does not come back with a
+  // price is returned as a miss rather than written off, so it can be retried.
+  function quotePass(syms, lanes, onQuote) {
+    var next = 0, missed = [];
 
     function pump() {
       if (next >= syms.length) return Promise.resolve();
@@ -481,17 +483,40 @@
         .then(function (j) {
           var d = j && j.status === 200 ? j.data : null;
           if (d && isFinite(d.p)) {
-            hits++;
             onQuote(sym, Number(d.p), isFinite(d.cp) ? Number(d.cp) : null);
+          } else {
+            missed.push(sym);
           }
         })
-        .catch(function () {})
+        .catch(function () { missed.push(sym); })
         .then(pump);
     }
 
-    var lanes = [];
-    for (var i = 0; i < LANES; i++) lanes.push(pump());
-    return Promise.all(lanes).then(function () { return hits; });
+    var running = [];
+    for (var i = 0; i < lanes; i++) running.push(pump());
+    return Promise.all(running).then(function () { return missed; });
+  }
+
+  function wait(ms) {
+    return new Promise(function (r) { setTimeout(r, ms); });
+  }
+
+  // A hundred symbols in quick succession can get the whole run rate-limited,
+  // and a limited request looks exactly like a symbol with no data. So retry
+  // the misses twice, slower and narrower each time, before calling them dry.
+  function fromStockAnalysis(syms, onQuote, onProgress) {
+    return quotePass(syms, LANES, onQuote)
+      .then(function (missed) {
+        if (!missed.length) return [];
+        onProgress(syms.length - missed.length, syms.length, "retrying " + missed.length);
+        return wait(1500).then(function () { return quotePass(missed, 3, onQuote); });
+      })
+      .then(function (missed) {
+        if (!missed.length) return [];
+        onProgress(syms.length - missed.length, syms.length, "retrying " + missed.length);
+        return wait(4000).then(function () { return quotePass(missed, 2, onQuote); });
+      })
+      .then(function (missed) { return syms.length - missed.length; });
   }
 
   // Local fallback: quotes.py fetches server-side, where CORS never applies,
@@ -538,7 +563,10 @@
     note = "fetching " + syms.length + " symbols...";
     render();
 
-    fromStockAnalysis(syms, apply)
+    fromStockAnalysis(syms, apply, function (done, total, what) {
+      note = done + " of " + total + " priced, " + what + "...";
+      render();
+    })
       .then(function (hits) {
         if (hits) return { hits: hits, source: "stockanalysis.com" };
         return fromProxy(syms, apply).then(function (n) {
