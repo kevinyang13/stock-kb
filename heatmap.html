@@ -116,6 +116,7 @@
       <option value="list">Watchlist order</option>
       <option value="best">Best first</option>
       <option value="worst">Worst first</option>
+      <option value="sector">Sector order</option>
       <option value="cheap">Cheapest P/E</option>
       <option value="rich">Priciest P/E</option>
     </select>
@@ -342,12 +343,53 @@
 
   function peOf(q) { return q.pe === null || q.pe === undefined ? null : q.pe; }
 
+  // Sector reading order: the AI and silicon complex first, then the
+  // machines, then what they are launched and pointed at, then the rest of
+  // the book. A ticker carries several tags, so its sector is simply the
+  // highest-ranked tag it holds -- NVDA reads as AI, not as Physical AI.
+  var SECTORS = [
+    "AI", "AI Infrastructure", "AI Memory", "Semiconductor",
+    "Robotics", "Physical AI",
+    "Space", "Defense", "Aerospace",
+    "Quantum",
+    "Software", "Cloud", "Data Center", "Networking", "Hardware",
+    "Crypto", "Mining", "Fintech",
+    "Consumer Tech", "Media", "Retail",
+    "Telecom", "Energy", "Nuclear", "Industrials", "Auto", "Homebuilder",
+    "ETF", "Fund", "Broad Market", "Leveraged", "Private Tech", "SPAC",
+    "Unclassified"
+  ];
+
+  function sectorRank(q) {
+    var best = SECTORS.length;
+    (q.tags || []).forEach(function (t) {
+      var at = SECTORS.indexOf(t);
+      if (at !== -1 && at < best) best = at;
+    });
+    return best;
+  }
+
   function ordered() {
     var list = quotes.filter(matches);
     if (sortEl.value === "best") {
       list.sort(function (a, b) { return (b.pct === null ? -99 : b.pct) - (a.pct === null ? -99 : a.pct); });
     } else if (sortEl.value === "worst") {
       list.sort(function (a, b) { return (a.pct === null ? 99 : a.pct) - (b.pct === null ? 99 : b.pct); });
+    } else if (sortEl.value === "sector") {
+      var byPe = viewEl.value === "pe";
+      list.sort(function (a, b) {
+        var d = sectorRank(a) - sectorRank(b);
+        if (d) return d;
+        if (byPe) {                       // inside a sector: cheapest first
+          var x = peOf(a), y = peOf(b);
+          if (x === null && y === null) return a.t.localeCompare(b.t);
+          if (x === null) return 1;
+          if (y === null) return -1;
+          return x - y;
+        }
+        var m = (b.pct === null ? -99 : b.pct) - (a.pct === null ? -99 : a.pct);
+        return m || a.t.localeCompare(b.t);
+      });
     } else if (sortEl.value === "cheap" || sortEl.value === "rich") {
       var dir = sortEl.value === "cheap" ? 1 : -1;
       list.sort(function (a, b) {
@@ -375,7 +417,10 @@
         ' href="https://www.tradingview.com/symbols/' + encodeURIComponent(q.t) + '/"' +
         ' target="_blank" rel="noopener noreferrer"' +
         ' title="Open ' + esc(q.t) + ' on TradingView">' +
-        '<div class="t">' + esc(q.t) + (q.err ? "<small>" + esc(q.err) + "</small>" : "") + "</div>" +
+        '<div class="t">' + esc(q.t) +
+          (sortEl.value === "sector" && sectorRank(q) < SECTORS.length
+            ? "<small>" + esc(SECTORS[sectorRank(q)]) + "</small>"
+            : (q.err ? "<small>" + esc(q.err) + "</small>" : "")) + "</div>" +
         '<div class="p">' + money(q.price) + "</div>" +
         '<div class="c">' + (peView ? peText(peOf(q)) : pctText(q.pct)) + "</div>" +
       "</a>";
