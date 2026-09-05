@@ -128,6 +128,50 @@
 
   .up{color:var(--green)} .down{color:var(--red)}
 
+  /* ---------- events ---------- */
+  .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;margin-top:6px;font-family:var(--sans)}
+  .cal .dow{
+    font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
+    padding:6px 8px;text-align:left;
+  }
+  .cal .day{
+    background:var(--teal-deep);min-height:96px;padding:7px 8px;
+    display:flex;flex-direction:column;gap:4px;
+  }
+  .cal .day.out{background:rgba(7,57,51,.35)}
+  .cal .day.today{outline:1px solid var(--gold);outline-offset:-1px}
+  .cal .day .d{font-size:11px;color:var(--cream-dim);font-variant-numeric:tabular-nums}
+  .cal .day.today .d{color:var(--gold);font-weight:700}
+
+  .ev{
+    font-size:10.5px;line-height:1.35;padding:3px 5px;border-radius:2px;
+    border-left:2px solid var(--gold);background:rgba(211,162,77,.10);color:var(--cream);
+  }
+  .ev.earnings{border-left-color:#e0b25c;background:rgba(224,178,92,.14)}
+  .ev.exdiv{border-left-color:var(--green);background:rgba(95,176,138,.13)}
+  .ev.fed{border-left-color:#8fb8ff;background:rgba(143,184,255,.14)}
+  .ev.macro{border-left-color:#c9a0ff;background:rgba(201,160,255,.13)}
+  .ev .s{color:var(--gold);font-weight:700}
+  .ev.fav .s:after{content:" \2605"}
+
+  .weeklist{display:flex;flex-direction:column;gap:1px;margin-top:6px;font-family:var(--sans)}
+  .weeklist .wday{background:var(--teal-deep);padding:11px 14px;display:grid;
+    grid-template-columns:132px 1fr;gap:14px;align-items:baseline}
+  .weeklist .wday.today{outline:1px solid var(--gold);outline-offset:-1px}
+  .weeklist .wday .lab{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-dim)}
+  .weeklist .wday.today .lab{color:var(--gold)}
+  .weeklist .wday .items{display:flex;flex-wrap:wrap;gap:5px}
+  .weeklist .wday .none{color:var(--teal-line);font-size:12px}
+
+  .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-family:var(--sans);
+    font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream-dim)}
+  .legend span:before{content:"";display:inline-block;width:9px;height:9px;margin-right:5px;
+    vertical-align:baseline;border-radius:1px}
+  .legend .e:before{background:#e0b25c}
+  .legend .d:before{background:var(--green)}
+  .legend .f:before{background:#8fb8ff}
+  .legend .m:before{background:#c9a0ff}
+
   .bar{
     display:flex;flex-wrap:wrap;gap:10px;align-items:center;
     padding:10px 0 8px;
@@ -212,6 +256,7 @@
     <button type="button" class="tab on" data-panel="board">Heatmap</button>
     <button type="button" class="tab" data-panel="news">Catalysts</button>
     <button type="button" class="tab" data-panel="brief">Morning Brief</button>
+    <button type="button" class="tab" data-panel="events">Events</button>
   </nav>
 </header>
 
@@ -238,6 +283,25 @@
 
   <div class="grid" id="grid"></div>
   <div class="none" id="none" hidden>Nothing in that combination.</div>
+</div>
+
+<div class="wrap" id="events" hidden>
+  <div class="bar">
+    <select id="ev-range" aria-label="Calendar range">
+      <option value="week">This week</option>
+      <option value="month" selected>This month</option>
+    </select>
+    <select id="ev-kind" aria-label="Event type">
+      <option value="all">All events</option>
+      <option value="earnings">Earnings</option>
+      <option value="exdiv">Dividends</option>
+      <option value="macro">Macro + Fed</option>
+      <option value="fav">Favorites only</option>
+    </select>
+    <span class="spacer"></span>
+    <div class="status" id="ev-status"></div>
+  </div>
+  <div id="ev-body"></div>
 </div>
 
 <div class="wrap" id="brief" hidden>
@@ -906,6 +970,142 @@
       });
   }
 
+  // ---------------------------------------------------------------- events
+
+  var evData = null, evLoaded = false;
+  var DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  function ymd(d) {
+    return d.getFullYear() + "-" +
+           ("0" + (d.getMonth() + 1)).slice(-2) + "-" +
+           ("0" + d.getDate()).slice(-2);
+  }
+
+  // Dates in the file are plain calendar days. Parsing them by hand keeps
+  // them off the UTC timeline, where an evening viewer would see them
+  // land a day early.
+  function parseDay(iso) {
+    var p = String(iso).split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+
+  function evKind(e) {
+    var want = document.getElementById("ev-kind").value;
+    if (want === "all") return true;
+    if (want === "fav") return !!e.fav;
+    if (want === "macro") return e.type === "macro" || e.type === "fed";
+    return e.type === want;
+  }
+
+  function evChip(e) {
+    var label = e.ticker
+      ? '<span class="s">' + esc(e.ticker) + "</span> " +
+        (e.type === "earnings" ? "earnings" : "ex-div")
+      : esc(e.title);
+    return '<div class="ev ' + esc(e.type) + (e.fav ? " fav" : "") + '" title="' +
+           esc(e.title) + '">' + label + "</div>";
+  }
+
+  function renderMonth(events, today) {
+    var first = new Date(today.getFullYear(), today.getMonth(), 1);
+    var start = new Date(first);
+    start.setDate(1 - first.getDay());              // back up to Sunday
+
+    var byDay = {};
+    events.forEach(function (e) {
+      (byDay[e.date] = byDay[e.date] || []).push(e);
+    });
+
+    var html = '<div class="cal">' +
+      DOW.map(function (d) { return '<div class="dow">' + d + "</div>"; }).join("");
+
+    for (var i = 0; i < 42; i++) {
+      var day = new Date(start);
+      day.setDate(start.getDate() + i);
+      var key = ymd(day);
+      var out = day.getMonth() !== today.getMonth();
+      var isToday = key === ymd(today);
+
+      html += '<div class="day' + (out ? " out" : "") + (isToday ? " today" : "") + '">' +
+        '<span class="d">' + day.getDate() + "</span>" +
+        (byDay[key] || []).map(evChip).join("") +
+      "</div>";
+    }
+    return html + "</div>";
+  }
+
+  function renderWeek(events, today) {
+    var start = new Date(today);
+    start.setDate(today.getDate() - today.getDay());
+
+    var byDay = {};
+    events.forEach(function (e) {
+      (byDay[e.date] = byDay[e.date] || []).push(e);
+    });
+
+    var html = '<div class="weeklist">';
+    for (var i = 0; i < 7; i++) {
+      var day = new Date(start);
+      day.setDate(start.getDate() + i);
+      var key = ymd(day);
+      var items = byDay[key] || [];
+
+      html += '<div class="wday' + (key === ymd(today) ? " today" : "") + '">' +
+        '<span class="lab">' + DOW[day.getDay()] + " " +
+          (day.getMonth() + 1) + "/" + day.getDate() + "</span>" +
+        '<span class="items">' +
+          (items.length ? items.map(evChip).join("") : '<span class="none">-</span>') +
+        "</span></div>";
+    }
+    return html + "</div>";
+  }
+
+  function drawEvents() {
+    if (!evData) return;
+
+    var today = new Date();
+    var shown = (evData.events || []).filter(evKind);
+    var range = document.getElementById("ev-range").value;
+
+    document.getElementById("ev-body").innerHTML =
+      (range === "week" ? renderWeek(shown, today) : renderMonth(shown, today)) +
+      '<div class="legend">' +
+        '<span class="e">Earnings</span><span class="d">Ex-dividend</span>' +
+        '<span class="f">Fed</span><span class="m">Macro</span>' +
+      "</div>";
+
+    var counts = { earnings: 0, exdiv: 0, fed: 0, macro: 0 };
+    (evData.events || []).forEach(function (e) {
+      if (counts[e.type] !== undefined) counts[e.type]++;
+    });
+    document.getElementById("ev-status").innerHTML =
+      "<b>" + esc(evData.generatedLabel || "") + "</b><br>" +
+      counts.earnings + " earnings &middot; " + counts.exdiv + " ex-dividend &middot; " +
+      (counts.fed + counts.macro) + " macro/Fed";
+  }
+
+  function loadEvents() {
+    if (evLoaded) { drawEvents(); return; }
+    evLoaded = true;
+
+    fetch("events.json", { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("events.json " + r.status);
+        return r.json();
+      })
+      .then(function (doc) { evData = doc; drawEvents(); })
+      .catch(function (e) {
+        evLoaded = false;
+        var st = document.getElementById("ev-status");
+        st.className = "status bad";
+        st.innerHTML = "<b>could not load events.json</b><br>" + esc(e.message) +
+          " -- this tab needs the page served over http, not opened from disk";
+      });
+  }
+
+  document.getElementById("ev-range").addEventListener("change", drawEvents);
+  document.getElementById("ev-kind").addEventListener("change", drawEvents);
+
   document.getElementById("tabs").addEventListener("click", function (e) {
     var tab = e.target.closest(".tab");
     if (!tab) return;
@@ -917,9 +1117,11 @@
     document.getElementById("board").hidden = panel !== "board";
     document.getElementById("news").hidden = panel !== "news";
     document.getElementById("brief").hidden = panel !== "brief";
+    document.getElementById("events").hidden = panel !== "events";
 
     if (panel === "news") loadNews();
     if (panel === "brief") loadBrief();
+    if (panel === "events") loadEvents();
   });
 
   render();

@@ -10,6 +10,7 @@ itself, which sidesteps the problem entirely.
     python3 quotes.py --pe       # fill in missing forward P/E (resumable)
     python3 quotes.py --pe --all # refetch every forward P/E
     python3 quotes.py --pe RKLB MU  # refetch just these
+    python3 quotes.py --events   # refresh earnings/ex-dividend dates
 
 Sources are tried in order until one answers. Add your own by writing a
 function that takes a list of symbols and returns {symbol: (price, pct)}.
@@ -277,6 +278,118 @@ def refresh_pe():
         print("stopped early on rate limiting -- wait a few minutes, run again to resume")
 
 
+# ------------------------------------------------------------------- events
+
+EVENTS_FILE = HERE / "events.json"
+
+
+def cell(html, label):
+    """Pull the value cell that follows a labelled metric on a quote page."""
+    m = re.search(re.escape(label) + r".*?</td>\s*<td[^>]*>(.*?)</td>", html, re.S)
+    if not m:
+        return None
+    val = re.sub(r"<[^>]+>", "", m.group(1)).strip()
+    return val or None
+
+
+def ticker_events(symbols, pause=2.0):
+    """Earnings and ex-dividend dates from each quote page.
+
+    The site publishes one date per field and it is the NEXT one when a date
+    is confirmed, otherwise the LAST one. There is no flag saying which, so
+    the caller keeps only dates in the future and treats the rest as history
+    rather than guessing at a schedule."""
+    out, throttled = {}, False
+
+    for i, sym in enumerate(symbols, 1):
+        got = None
+        for path in ("stocks", "etf"):
+            try:
+                html = get(f"https://stockanalysis.com/{path}/{sym.lower()}/")
+            except Throttled as e:
+                print(f"  [{i}/{len(symbols)}] {sym}: blocked ({e}) -- stopping")
+                return out, True
+            except Exception:
+                continue
+
+            got = {"earnings": cell(html, "Earnings Date"),
+                   "exdiv": cell(html, "Ex-Dividend Date")}
+            break
+
+        if got:
+            out[sym] = got
+            print(f"  [{i}/{len(symbols)}] {sym}: earnings={got['earnings']} exdiv={got['exdiv']}")
+        else:
+            print(f"  [{i}/{len(symbols)}] {sym}: no page")
+
+        time.sleep(pause)
+
+    return out, throttled
+
+
+def refresh_events():
+    """Rewrite events.json with every future-dated ticker event we can see.
+    Macro and Fed entries already in the file are preserved."""
+    src = PAGE_FILE.read_text()
+    block = re.search(r'(id="watchlist">)(.*?)(</script>)', src, re.S)
+    doc = json.loads(block.group(2))
+
+    named = [a.upper() for a in sys.argv[1:] if not a.startswith("-")]
+    symbols = [q["t"] for q in doc["symbols"] if not named or q["t"] in named]
+    favs = {q["t"] for q in doc["symbols"] if q.get("fav")}
+
+    print(f"reading event dates for {len(symbols)} symbols (slow by design)...")
+    found, throttled = ticker_events(symbols)
+
+    today = datetime.now().date()
+    events = []
+    stale = 0
+
+    for sym, rec in found.items():
+        for kind, label in (("earnings", "Earnings"), ("exdiv", "Ex-dividend")):
+            raw = rec.get(kind)
+            if not raw or raw.lower() in ("n/a", "-"):
+                continue
+            try:
+                when = datetime.strptime(raw, "%b %d, %Y").date()
+            except ValueError:
+                continue
+            if when < today:
+                stale += 1
+                continue
+            events.append({
+                "date": when.isoformat(),
+                "type": kind,
+                "ticker": sym,
+                "title": f"{sym} {label.lower()}",
+                "fav": sym in favs,
+            })
+
+    keep = []
+    if EVENTS_FILE.exists():
+        old = json.loads(EVENTS_FILE.read_text())
+        keep = [e for e in old.get("events", []) if e["type"] in ("fed", "macro")]
+
+    events.extend(keep)
+    events.sort(key=lambda e: (e["date"], e.get("ticker") or ""))
+
+    EVENTS_FILE.write_text(json.dumps({
+        "generated": datetime.now().isoformat(timespec="seconds"),
+        "generatedLabel": datetime.now().strftime("%b %d, %Y"),
+        "note": ("Ticker dates are the next confirmed date published by the source. "
+                 "Symbols whose published date has already passed have no confirmed "
+                 "next date and are omitted rather than estimated."),
+        "events": events,
+    }, indent=2) + "\n")
+
+    ticker_events_kept = len([e for e in events if e["type"] in ("earnings", "exdiv")])
+    print(f"\nwrote {ticker_events_kept} upcoming ticker events "
+          f"({stale} published dates already past, omitted); "
+          f"kept {len(keep)} macro/fed entries")
+    if throttled:
+        print("stopped early on rate limiting -- run again to resume")
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):
         sys.stderr.write("  %s\n" % (fmt % args))
@@ -321,6 +434,10 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     if "--pe" in sys.argv:
         refresh_pe()
+        sys.exit(0)
+
+    if "--events" in sys.argv:
+        refresh_events()
         sys.exit(0)
 
     print(f"heatmap:  http://localhost:{PORT}")
