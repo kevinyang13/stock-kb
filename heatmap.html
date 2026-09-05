@@ -32,6 +32,51 @@
 
   .wrap{max-width:none;margin:0;padding:0 8px}
 
+  .tabs{display:flex;gap:4px;margin-left:auto}
+  .tab{
+    font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    padding:7px 16px;border-radius:999px;cursor:pointer;
+    background:transparent;border:1px solid var(--teal-line);color:var(--cream-dim);
+  }
+  .tab:hover{border-color:var(--gold);color:var(--cream)}
+  .tab.on{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:700}
+
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+    gap:8px;
+    padding-bottom:12px;
+    max-width:1500px;
+  }
+  .card{
+    background:var(--teal-deep);
+    border:1px solid var(--teal-line);
+    border-left:3px solid var(--gold);
+    padding:14px 16px 16px;
+  }
+  .card h3{
+    margin:0 0 2px;font-size:22px;font-weight:400;letter-spacing:.05em;
+    display:flex;align-items:baseline;gap:8px;
+  }
+  .card h3 a{color:var(--gold);text-decoration:none}
+  .card h3 a:hover{text-decoration:underline}
+  .card h3 .move{font-family:var(--sans);font-size:13px;font-variant-numeric:tabular-nums}
+  .card h3 .move.up{color:var(--green)}
+  .card h3 .move.down{color:var(--red)}
+  .card .sector{
+    font-family:var(--sans);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--cream-dim);margin-bottom:9px;
+  }
+  .card p{
+    margin:0 0 10px;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--cream);
+  }
+  .card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+  .card li{
+    font-family:var(--sans);font-size:12px;line-height:1.5;color:var(--cream-dim);
+    padding-left:13px;position:relative;
+  }
+  .card li:before{content:"\203A";position:absolute;left:0;color:var(--gold)}
+
   .bar{
     display:flex;flex-wrap:wrap;gap:10px;align-items:center;
     padding:10px 0 8px;
@@ -112,9 +157,13 @@
 <header class="mast">
   <h1>HEATMAP</h1>
   <p>colored by the day's move</p>
+  <nav class="tabs" id="tabs">
+    <button type="button" class="tab on" data-panel="board">Heatmap</button>
+    <button type="button" class="tab" data-panel="news">Catalysts</button>
+  </nav>
 </header>
 
-<div class="wrap">
+<div class="wrap" id="board">
   <div class="bar">
     <button type="button" id="reload">Reload prices</button>
     <select id="view" aria-label="What the colors mean">
@@ -137,6 +186,13 @@
 
   <div class="grid" id="grid"></div>
   <div class="none" id="none" hidden>Nothing in that combination.</div>
+</div>
+
+<div class="wrap" id="news" hidden>
+  <div class="bar">
+    <div class="status" id="news-status"></div>
+  </div>
+  <div class="cards" id="cards"></div>
 </div>
 
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
@@ -630,6 +686,81 @@
 
   sortEl.addEventListener("change", render);
   viewEl.addEventListener("change", render);
+
+  // ---------------------------------------------------------------- catalysts
+
+  // news.json is written by the weekday routine, which asks each favorite's
+  // page what is driving it and keeps only the ones with an answer. Loaded
+  // over http; opening this file straight from disk cannot read it.
+  var newsLoaded = false;
+
+  function loadNews() {
+    if (newsLoaded) return;
+    newsLoaded = true;
+
+    var statusEl = document.getElementById("news-status");
+    var cards = document.getElementById("cards");
+    statusEl.textContent = "loading catalysts...";
+
+    fetch("news.json", { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("news.json " + r.status);
+        return r.json();
+      })
+      .then(function (doc) {
+        var items = doc.items || [];
+        if (!items.length) {
+          statusEl.innerHTML = "<b>No catalysts</b><br>nothing moved on news in the last run";
+          return;
+        }
+
+        statusEl.innerHTML = "<b>" + esc(doc.generatedLabel || doc.generated || "") + "</b>" +
+          "<br>" + items.length + " with a catalyst &middot; source: " + esc(doc.source || "");
+
+        cards.innerHTML = items.map(function (n) {
+          var q = quotes.filter(function (x) { return x.t === n.t; })[0];
+          var move = q && q.pct !== null && q.pct !== undefined
+            ? '<span class="move ' + (q.pct >= 0 ? "up" : "down") + '">' +
+              (q.pct >= 0 ? "+" : "") + q.pct.toFixed(2) + "%</span>"
+            : "";
+
+          return '<article class="card">' +
+            "<h3>" +
+              '<a href="https://www.tradingview.com/symbols/' + encodeURIComponent(n.t) +
+              '/" target="_blank" rel="noopener noreferrer">' + esc(n.t) + "</a>" +
+              move +
+            "</h3>" +
+            '<div class="sector">' + esc(q && sectorLabel(q) ? sectorLabel(q) : "") + "</div>" +
+            "<p>" + esc(n.summary || "") + "</p>" +
+            (n.headlines && n.headlines.length
+              ? "<ul>" + n.headlines.map(function (h) {
+                  return "<li>" + esc(h) + "</li>";
+                }).join("") + "</ul>"
+              : "") +
+          "</article>";
+        }).join("");
+      })
+      .catch(function (e) {
+        newsLoaded = false;      // let a later tab click try again
+        statusEl.className = "status bad";
+        statusEl.innerHTML = "<b>could not load news.json</b><br>" + esc(e.message) +
+          " -- this tab needs the page served over http, not opened from disk";
+      });
+  }
+
+  document.getElementById("tabs").addEventListener("click", function (e) {
+    var tab = e.target.closest(".tab");
+    if (!tab) return;
+
+    var panel = tab.dataset.panel;
+    [].forEach.call(document.querySelectorAll(".tab"), function (t) {
+      t.classList.toggle("on", t === tab);
+    });
+    document.getElementById("board").hidden = panel !== "board";
+    document.getElementById("news").hidden = panel !== "news";
+
+    if (panel === "news") loadNews();
+  });
 
   render();
   reload();   // prices are never stored in this file -- fetch them on every open

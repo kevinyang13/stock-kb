@@ -1,0 +1,104 @@
+{
+  "generated": "2026-09-01T18:50:00-07:00",
+  "generatedLabel": "Sep 1, 2026, 6:50 PM PT",
+  "source": "stockanalysis.com",
+  "note": "Only tickers with an identifiable catalyst are listed.",
+  "items": [
+    {
+      "t": "NVDA",
+      "summary": "NVIDIA announced a $12.9 billion acquisition of Hugging Face, an AI development platform, driving positive analyst sentiment around the deal.",
+      "headlines": [
+        "NVDA Strengthens AI Dominance with Hugging Face Acquisition \u2014 Schwab Network",
+        "Why Nvidia's 'defensive move' to acquire Hugging Face is about much more than chips \u2014 CNBC"
+      ]
+    },
+    {
+      "t": "MSFT",
+      "summary": "Microsoft announced organizational restructuring and Azure revenue transparency changes amid ongoing AI investments and product launches.",
+      "headlines": [
+        "Microsoft to Change Reporting Structure to Reflect Effects of AI \u2014 WSJ",
+        "Microsoft to start disclosing Azure quarterly revenue as company consolidates business units \u2014 CNBC"
+      ]
+    },
+    {
+      "t": "MU",
+      "summary": "Memory stocks, including Micron, are rebounding as investors rotate back into the sector amid lower bond yields and positive momentum in AI-related memory demand.",
+      "headlines": [
+        "Micron (MU), SanDisk (SNDK), and SK Hynix (SKHY) Stocks Soar as Memory Trade Rebounds",
+        "Micron is doubling down on AI memory chips. That could pay off big time for investors."
+      ]
+    },
+    {
+      "t": "SNDK",
+      "summary": "Memory stocks are rallying as AI-related semiconductor demand remains strong and treasury yields retreat.",
+      "headlines": [
+        "Dell, Palo Alto, Arista, SanDisk to be added to S&P 100 at open on 9/21 \u2014 TheFly",
+        "Memory, Other AI-Related Stocks Lead the Market's Top Performers Friday \u2014 Investopedia"
+      ]
+    },
+    {
+      "t": "TSM",
+      "summary": "TSMC is benefiting from increased capital expenditure plans by major AI companies and expanding its semiconductor production capabilities to meet AI chip demand.",
+      "headlines": [
+        "TSMC Jumps as a Three-Hectare Lab Attacks Its Packaging Bottleneck",
+        "TSMC increases estimates of its quarterly chipmaking tool needs \u2014 Bloomberg"
+      ]
+    },
+    {
+      "t": "TSLA",
+      "summary": "Tesla's Cybercab robotaxi launch disappointed investors and triggered a federal safety probe, causing the stock to fall.",
+      "headlines": [
+        "Tesla's Cybercab launch catches the eye of US auto safety regulator \u2014 Business Insider",
+        "Tesla stock falls 6% as cybercab launch faces analyst, regulatory concerns \u2014 Invezz"
+      ]
+    },
+    {
+      "t": "SMCI",
+      "summary": "Super Micro is rising following a Cisco partnership expansion for AI hardware and completion of an internal investigation into alleged employee misconduct.",
+      "headlines": [
+        "Cisco adds rack-scale AI computing solutions in partnership with Supermicro \u2014 TheFly",
+        "Supermicro Announces Completion of Independent Investigation and Continued Enhancement of Export Compliance Program \u2014 Business Wire"
+      ]
+    },
+    {
+      "t": "IONQ",
+      "summary": "Record Q2 2026 revenue of $80.1M (287% YoY growth) and strategic acquisitions are driving momentum.",
+      "headlines": [
+        "QC Ware and IonQ Demonstrate High-Precision Hybrid Quantum Workflow for Drug Discovery",
+        "IonQ Announces Record Second Quarter 2026 Revenues, Growing 287% YoY"
+      ]
+    },
+    {
+      "t": "QCOM",
+      "summary": "Qualcomm is hosting a virtual meeting with Benchmark on September 10, and continues positioning itself in AI and automotive growth markets.",
+      "headlines": [
+        "Qualcomm management to meet virtually with Benchmark",
+        "Qualcomm backs Ultrahuman in $70M round on bet to turn smart rings into computers"
+      ]
+    },
+    {
+      "t": "GOOG",
+      "summary": "Google is launching new AI features across its Workspace products and releasing advanced AI models, helping the stock recover after a recent losing streak.",
+      "headlines": [
+        "Google launches AI voice features in Gmail, Docs and Keep \u2014 TechCrunch",
+        "Google's New AI Weather Model Could Help Energy Companies React Faster to Changing Conditions \u2014 TipRanks"
+      ]
+    },
+    {
+      "t": "INTU",
+      "summary": "Intuit's stock declined following weaker-than-expected fiscal 2027 guidance despite beating Q4 earnings expectations.",
+      "headlines": [
+        "Intuit stock plunges after weak 2027 revenue outlook: Is it a buy? \u2014 Invezz",
+        "Intuit downgraded to Peer Perform from Outperform at Wolfe Research \u2014 TheFly"
+      ]
+    },
+    {
+      "t": "SMH",
+      "summary": "The semiconductor sector is experiencing volatility driven by AI spending concerns and potential U.S. tariff policies.",
+      "headlines": [
+        "South Korea says chip investments under discussion with US amid tariff concerns \u2014 Reuters",
+        "3 'Outperform' ETFs with 10%+ Upside Potential, According to the AI Analyst \u2014 TipRanks"
+      ]
+    }
+  ]
+}
