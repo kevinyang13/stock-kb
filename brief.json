@@ -1,0 +1,307 @@
+{
+  "generated": "2026-09-04T17:45:00-07:00",
+  "subject": "\ud83d\udcca Morning Brief \u2014 Friday, September 4, 2026",
+  "generatedLabel": "Fri, Sep 4, 2026",
+  "sources": [
+    "finance.yahoo.com",
+    "stockanalysis.com"
+  ],
+  "indexes": [
+    {
+      "name": "S&P 500",
+      "level": "7,718.60",
+      "pct": -0.38
+    },
+    {
+      "name": "Dow Jones",
+      "level": "53,414.25",
+      "pct": -0.51
+    },
+    {
+      "name": "Nasdaq Composite",
+      "level": "26,506.99",
+      "pct": -0.29
+    },
+    {
+      "name": "Russell 2000",
+      "level": "2,975.65",
+      "pct": 0.25
+    },
+    {
+      "name": "VIX",
+      "level": "14.53",
+      "pct": 1.47
+    }
+  ],
+  "oil": [
+    {
+      "name": "WTI",
+      "level": "$91.22",
+      "pct": -0.09,
+      "driver": "Holding three-day gains; Trump signalled renewed Iran strikes would be brief, trimming supply risk."
+    },
+    {
+      "name": "Brent",
+      "level": "$95.83",
+      "pct": 0.32,
+      "driver": "Same geopolitical bid, firmer on the front spread."
+    }
+  ],
+  "sectors": [
+    {
+      "name": "AI Memory",
+      "avg": 8.19,
+      "n": 4,
+      "note": "The week's trade. SNDK +11.9%, SKHY +8.1%, DRAM +6.6%, MU +6.1% as the memory rotation resumed on AI demand and retreating yields. SanDisk joins the S&P 100 at the 9/21 open. This is the cheapest cluster on your board \u2014 MU 6.3x forward, SNDK 7.0x \u2014 which is why the tape moves this violently on demand headlines."
+    },
+    {
+      "name": "AI Infra",
+      "avg": 2.19,
+      "n": 13,
+      "note": "Interconnect and boxes led: MRVL +7.0%, COHR +6.6%, SMCI +4.5% on the Cisco rack-scale partnership. Laggards were the networking-adjacent names \u2014 NET -2.0%, HPE -4.5%. Capex commentary from TSMC (raising tool estimates to 1.9x December projections) is the sector's tell."
+    },
+    {
+      "name": "AI",
+      "avg": -0.5,
+      "n": 23,
+      "note": "Split tape, not a selloff. NVDA +0.8% held after the $12.9B Hugging Face acquisition; CRWV +5.7% and AMD +4.7% led. The software end paid for it \u2014 SNOW -5.4%, ADBE -6.7%. Money is rotating from AI-adjacent SaaS multiples into silicon."
+    },
+    {
+      "name": "Semiconductor",
+      "avg": 1.34,
+      "n": 3,
+      "note": "SMH +2.6%, SOXL +9.9% on the leveraged read. Overhang is policy: South Korea chip investment talks with the US are live amid tariff concerns."
+    },
+    {
+      "name": "Space",
+      "avg": 0.94,
+      "n": 12,
+      "note": "Broadly firm and idiosyncratic \u2014 VOYG +3.9%, FLY +2.9%, SPCE +2.7%, with SPCX and PL each about -1.2%. No sector-level catalyst; these are still single-name stories."
+    },
+    {
+      "name": "Quantum",
+      "avg": 0.08,
+      "n": 8,
+      "note": "Flat as a group. ARQQ +3.6% and IONQ +1.3% against XNDU -3.0%. IONQ's record Q2 (revenue $80.1M, +287% YoY) is the only hard fundamental print in the group."
+    },
+    {
+      "name": "Crypto",
+      "avg": -0.4,
+      "n": 11,
+      "note": "Miners diverged from the coin complex: HUT +6.2%, RIOT +3.1% while COIN -4.2% and MARA -2.5%. Nothing sector-wide; watch the miners' power and hosting deals rather than the tape."
+    },
+    {
+      "name": "Robotics / Physical AI",
+      "avg": -0.42,
+      "n": 4,
+      "note": "Dragged entirely by TSLA -5.9%. OUST +1.7% and MDA +1.6% were fine. The Cybercab regulatory probe is a Tesla problem, not a robotics problem, so far."
+    },
+    {
+      "name": "Software",
+      "avg": -1.34,
+      "n": 3,
+      "note": "IGV -2.2%. High-multiple software is where the week's damage concentrated \u2014 NET at 193x forward and DDOG at 85x both took mid-single-digit hits."
+    }
+  ],
+  "winners": [
+    {
+      "t": "SNDK",
+      "pct": 11.9,
+      "catalyst": "Added to S&P 100 at the 9/21 open; memory demand rotation."
+    },
+    {
+      "t": "SOXL",
+      "pct": 9.87,
+      "catalyst": "3x leveraged read on the semiconductor bounce."
+    },
+    {
+      "t": "SKHY",
+      "pct": 8.14,
+      "catalyst": "Memory trade \u2014 moved with MU and SNDK on AI memory demand."
+    },
+    {
+      "t": "MRVL",
+      "pct": 7.05,
+      "catalyst": "AI interconnect demand; custom silicon pull-through."
+    },
+    {
+      "t": "DRAM",
+      "pct": 6.61,
+      "catalyst": "Memory ETF tracking the SNDK/MU/SKHY move."
+    },
+    {
+      "t": "COHR",
+      "pct": 6.6,
+      "catalyst": "Datacenter optics bid alongside the interconnect complex."
+    }
+  ],
+  "losers": [
+    {
+      "t": "CAN",
+      "pct": -8.47,
+      "catalyst": "Mining-rig maker; no company news \u2014 moved against the miners' strength."
+    },
+    {
+      "t": "ADBE",
+      "pct": -6.73,
+      "catalyst": "High-multiple software de-rating."
+    },
+    {
+      "t": "TSLA",
+      "pct": -5.92,
+      "catalyst": "Cybercab launch drew a federal auto-safety probe and analyst pushback."
+    },
+    {
+      "t": "SNOW",
+      "pct": -5.41,
+      "catalyst": "Same multiple compression \u2014 152x forward."
+    },
+    {
+      "t": "NFLX",
+      "pct": -5.35,
+      "catalyst": "No fresh company catalyst identified."
+    },
+    {
+      "t": "PLTR",
+      "pct": -4.49,
+      "catalyst": "92x forward; sold with the rest of expensive software."
+    }
+  ],
+  "macro": [
+    {
+      "h": "August payrolls beat: 162K vs prior -23K, unemployment steady at 4.1%",
+      "d": "Sep 4"
+    },
+    {
+      "h": "Fed's Waller signals support for holding rates if inflation data cooperates",
+      "d": "Sep 3"
+    },
+    {
+      "h": "Treasury yields stabilize after their climb as markets digest mixed Fed messaging",
+      "d": "Sep 2-3"
+    },
+    {
+      "h": "Dollar weakens as Fed communication shifts toward holds rather than hikes",
+      "d": "Sep 2"
+    },
+    {
+      "h": "Japan bond rout: benchmark yields break 30-year barriers, prompting capital repatriation",
+      "d": "Sep 2"
+    },
+    {
+      "h": "Oil steadies after Trump indicates renewed Iran strikes would be brief",
+      "d": "Sep 2"
+    }
+  ],
+  "holdings": [
+    {
+      "t": "INTU",
+      "price": "$332.70",
+      "pct": -3.37,
+      "label": "employer \u2014 RSU/option exposure",
+      "headline": "Stock fell on weak FY2027 revenue guidance despite a Q4 beat; Wolfe Research cut it to Peer Perform from Outperform.",
+      "flag": "guidance cut + downgrade"
+    },
+    {
+      "t": "MSFT",
+      "price": "$499.70",
+      "pct": -2.04,
+      "label": "core holding",
+      "headline": "Restructuring its reporting to reflect AI, and will begin disclosing Azure quarterly revenue as it consolidates business units.",
+      "flag": "disclosure change"
+    },
+    {
+      "t": "MC",
+      "price": "$69.02",
+      "pct": -0.17,
+      "label": "core holding",
+      "headline": "Q2 2026 beat on record revenue from M&A and capital-markets activity; targets range $60-$85 (Deutsche to $75, Morgan Stanley to $85).",
+      "flag": "none"
+    }
+  ],
+  "favorites": [
+    {
+      "t": "SNDK",
+      "price": "$1,740.00",
+      "pct": 11.9,
+      "headline": "Joins S&P 100 at the 9/21 open; memory names led the market Friday."
+    },
+    {
+      "t": "MU",
+      "price": "$1,016.59",
+      "pct": 6.1,
+      "headline": "Memory trade rebounded on lower yields and AI memory demand."
+    },
+    {
+      "t": "SMCI",
+      "price": "$39.59",
+      "pct": 4.54,
+      "headline": "Cisco expanded its rack-scale AI partnership; internal investigation closed."
+    },
+    {
+      "t": "TSM",
+      "price": "$428.91",
+      "pct": 2.85,
+      "headline": "Raised quarterly chipmaking tool estimates to 1.9x December projections."
+    },
+    {
+      "t": "SMH",
+      "price": "$567.01",
+      "pct": 2.61,
+      "headline": "Sector volatile on AI spending concerns and US tariff policy."
+    },
+    {
+      "t": "IONQ",
+      "price": "$39.52",
+      "pct": 1.28,
+      "headline": "Record Q2 revenue $80.1M, +287% YoY."
+    },
+    {
+      "t": "NVDA",
+      "price": "$230.36",
+      "pct": 0.84,
+      "headline": "Announced $12.9B acquisition of Hugging Face."
+    },
+    {
+      "t": "QCOM",
+      "price": "$168.74",
+      "pct": 0.1,
+      "headline": "Management meets virtually with Benchmark Sep 10."
+    },
+    {
+      "t": "GOOG",
+      "price": "$335.31",
+      "pct": -1.05,
+      "headline": "Launched AI voice features across Gmail, Docs and Keep."
+    },
+    {
+      "t": "MSFT",
+      "price": "$499.70",
+      "pct": -2.04,
+      "headline": "Will disclose Azure quarterly revenue; reporting structure changes for AI."
+    },
+    {
+      "t": "INTU",
+      "price": "$332.70",
+      "pct": -3.37,
+      "headline": "Weak FY2027 outlook; downgraded to Peer Perform at Wolfe."
+    },
+    {
+      "t": "TSLA",
+      "price": "$354.08",
+      "pct": -5.92,
+      "headline": "Cybercab launch drew a federal safety probe."
+    }
+  ],
+  "volatility": {
+    "declined": true,
+    "note": "This section does not carry trade recommendations \u2014 see the note on the site.",
+    "context": [
+      "VIX 14.53 (+1.47%) \u2014 low absolute level. Index options are not pricing stress despite single-name moves of 6-12% on your board.",
+      "Realized dispersion is the story: AI Memory +8.2% average against Software -1.3% on the same day. Index vol understates what individual names are doing.",
+      "Known dated events: SNDK enters the S&P 100 at the 9/21 open (index-add flow). QCOM management meets with Benchmark Sep 10.",
+      "Open regulatory item: the federal safety probe into Tesla's Cybercab is unresolved and is the live headline risk in that name.",
+      "Concentration note: INTU is both your employer exposure (RSUs/options) and a position that just took a guidance cut plus a downgrade, -3.37% today."
+    ]
+  }
+}

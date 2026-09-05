@@ -77,6 +77,57 @@
   }
   .card li:before{content:"\203A";position:absolute;left:0;color:var(--gold)}
 
+  /* ---------- morning brief ---------- */
+  .brief-body{max-width:1180px;padding-bottom:20px;font-family:var(--sans)}
+  .brief-body h2{
+    font-family:var(--serif);font-weight:400;font-size:23px;letter-spacing:.03em;
+    color:var(--cream);margin:26px 0 3px;padding-bottom:5px;
+    border-bottom:1px solid var(--teal-line);
+  }
+  .brief-body h2 .num{color:var(--gold);font-size:15px;margin-right:9px;letter-spacing:.1em}
+  .brief-body h2:first-child{margin-top:6px}
+
+  .quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px;margin-top:10px}
+  .quotes div{background:var(--teal-deep);padding:11px 12px}
+  .quotes .n{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cream-dim)}
+  .quotes .v{font-size:19px;font-variant-numeric:tabular-nums;margin-top:3px}
+  .quotes .c{font-size:12px;font-variant-numeric:tabular-nums;margin-top:1px}
+
+  .rows{display:flex;flex-direction:column;gap:1px;margin-top:10px}
+  .row{
+    display:grid;grid-template-columns:78px 74px 1fr;gap:12px;align-items:baseline;
+    background:var(--teal-deep);padding:10px 12px;font-size:13px;line-height:1.5;
+  }
+  .row .tk{font-family:var(--serif);font-size:17px;color:var(--gold);letter-spacing:.05em}
+  .row .pc{font-variant-numeric:tabular-nums;font-size:13px}
+  .row .tx{color:var(--cream-dim)}
+  .row .tx b{color:var(--cream);font-weight:700}
+
+  .sect{margin-top:10px;display:flex;flex-direction:column;gap:1px}
+  .sect .s{background:var(--teal-deep);padding:12px 14px}
+  .sect .s h4{
+    margin:0 0 5px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
+    display:flex;gap:10px;align-items:baseline;
+  }
+  .sect .s h4 .avg{font-variant-numeric:tabular-nums;letter-spacing:0}
+  .sect .s p{margin:0;font-size:13px;line-height:1.6;color:var(--cream)}
+
+  .bullets{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:1px}
+  .bullets li{
+    background:var(--teal-deep);padding:10px 12px 10px 26px;position:relative;
+    font-size:13px;line-height:1.55;color:var(--cream);
+  }
+  .bullets li:before{content:"\203A";position:absolute;left:12px;color:var(--gold)}
+  .bullets li .when{color:var(--cream-dim);font-size:11px;letter-spacing:.06em}
+
+  .declined{
+    border:1px solid var(--gold);border-left-width:3px;background:rgba(211,162,77,.10);
+    padding:14px 16px;margin-top:10px;font-size:13px;line-height:1.6;color:var(--cream);
+  }
+  .declined b{color:var(--gold)}
+
+  .up{color:var(--green)} .down{color:var(--red)}
+
   .bar{
     display:flex;flex-wrap:wrap;gap:10px;align-items:center;
     padding:10px 0 8px;
@@ -160,6 +211,7 @@
   <nav class="tabs" id="tabs">
     <button type="button" class="tab on" data-panel="board">Heatmap</button>
     <button type="button" class="tab" data-panel="news">Catalysts</button>
+    <button type="button" class="tab" data-panel="brief">Morning Brief</button>
   </nav>
 </header>
 
@@ -186,6 +238,11 @@
 
   <div class="grid" id="grid"></div>
   <div class="none" id="none" hidden>Nothing in that combination.</div>
+</div>
+
+<div class="wrap" id="brief" hidden>
+  <div class="bar"><div class="status" id="brief-status"></div></div>
+  <div class="brief-body" id="brief-body"></div>
 </div>
 
 <div class="wrap" id="news" hidden>
@@ -748,6 +805,107 @@
       });
   }
 
+  // ---------------------------------------------------------------- brief
+
+  var briefLoaded = false;
+
+  function pc(n) {
+    if (n === null || n === undefined || isNaN(n)) return "";
+    return '<span class="' + (n >= 0 ? "up" : "down") + '">' +
+           (n >= 0 ? "+" : "") + Number(n).toFixed(2) + "%</span>";
+  }
+
+  function loadBrief() {
+    if (briefLoaded) return;
+    briefLoaded = true;
+
+    var statusEl = document.getElementById("brief-status");
+    var body = document.getElementById("brief-body");
+    statusEl.textContent = "loading brief...";
+
+    fetch("brief.json", { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("brief.json " + r.status);
+        return r.json();
+      })
+      .then(function (b) {
+        statusEl.innerHTML = "<b>" + esc(b.subject || "") + "</b><br>" +
+          "sources: " + esc((b.sources || []).join(", "));
+
+        var html = "";
+
+        html += '<h2><span class="num">01</span>Major indexes + oil</h2><div class="quotes">' +
+          (b.indexes || []).map(function (x) {
+            return '<div><div class="n">' + esc(x.name) + "</div>" +
+                   '<div class="v">' + esc(x.level) + "</div>" +
+                   '<div class="c">' + pc(x.pct) + "</div></div>";
+          }).join("") + "</div>";
+
+        html += '<div class="rows">' + (b.oil || []).map(function (x) {
+          return '<div class="row"><span class="tk">' + esc(x.name) + "</span>" +
+                 '<span class="pc">' + esc(x.level) + " " + pc(x.pct) + "</span>" +
+                 '<span class="tx">' + esc(x.driver || "") + "</span></div>";
+        }).join("") + "</div>";
+
+        html += '<h2><span class="num">02</span>Sector focus, this week</h2><div class="sect">' +
+          (b.sectors || []).map(function (x) {
+            return '<div class="s"><h4>' + esc(x.name) +
+                   '<span class="avg">' + pc(x.avg) + " avg &middot; " + x.n + " names</span></h4>" +
+                   "<p>" + esc(x.note) + "</p></div>";
+          }).join("") + "</div>";
+
+        function movers(list) {
+          return '<div class="rows">' + (list || []).map(function (x) {
+            return '<div class="row"><span class="tk">' + esc(x.t) + "</span>" +
+                   '<span class="pc">' + pc(x.pct) + "</span>" +
+                   '<span class="tx">' + esc(x.catalyst) + "</span></div>";
+          }).join("") + "</div>";
+        }
+        html += '<h2><span class="num">03</span>Winners today</h2>' + movers(b.winners);
+        html += '<h2><span class="num">03</span>Losers today</h2>' + movers(b.losers);
+
+        html += '<h2><span class="num">04</span>Macro</h2><ul class="bullets">' +
+          (b.macro || []).map(function (m) {
+            return "<li>" + esc(m.h) + ' <span class="when">' + esc(m.d) + "</span></li>";
+          }).join("") + "</ul>";
+
+        html += '<h2><span class="num">05</span>Your positions</h2><div class="rows">' +
+          (b.holdings || []).map(function (x) {
+            return '<div class="row"><span class="tk">' + esc(x.t) + "</span>" +
+                   '<span class="pc">' + esc(x.price) + "<br>" + pc(x.pct) + "</span>" +
+                   '<span class="tx"><b>' + esc(x.label) + "</b> &mdash; " + esc(x.headline) + "</span></div>";
+          }).join("") + "</div>";
+
+        html += '<h2><span class="num">05</span>Watchlist favorites</h2><div class="rows">' +
+          (b.favorites || []).map(function (x) {
+            return '<div class="row"><span class="tk">' + esc(x.t) + "</span>" +
+                   '<span class="pc">' + esc(x.price) + "<br>" + pc(x.pct) + "</span>" +
+                   '<span class="tx">' + esc(x.headline) + "</span></div>";
+          }).join("") + "</div>";
+
+        var v = b.volatility || {};
+        html += '<h2><span class="num">06</span>Volatility &amp; catalyst context</h2>';
+        if (v.declined) {
+          html += '<div class="declined"><b>No trade recommendations here.</b> ' +
+            "Specific option structures and strikes sized to your situation are personalized " +
+            "investment advice, which Claude does not give &mdash; it is not a licensed advisor. " +
+            "What follows is the factual volatility and event picture the ideas would have " +
+            "been built from.</div>";
+        }
+        html += '<ul class="bullets">' + (v.context || []).map(function (c) {
+          return "<li>" + esc(c) + "</li>";
+        }).join("") + "</ul>";
+
+        body.innerHTML = html;
+      })
+      .catch(function (e) {
+        briefLoaded = false;
+        statusEl.className = "status bad";
+        statusEl.innerHTML = "<b>could not load brief.json</b><br>" + esc(e.message) +
+          " -- this tab needs the page served over http, not opened from disk";
+      });
+  }
+
   document.getElementById("tabs").addEventListener("click", function (e) {
     var tab = e.target.closest(".tab");
     if (!tab) return;
@@ -758,8 +916,10 @@
     });
     document.getElementById("board").hidden = panel !== "board";
     document.getElementById("news").hidden = panel !== "news";
+    document.getElementById("brief").hidden = panel !== "brief";
 
     if (panel === "news") loadNews();
+    if (panel === "brief") loadBrief();
   });
 
   render();
