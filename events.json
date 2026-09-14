@@ -1,43 +1,8 @@
 {
-  "generated": "2026-09-04T18:00:06",
-  "generatedLabel": "Sep 04, 2026",
+  "generated": "2026-09-14T16:41:50",
+  "generatedLabel": "Sep 14, 2026",
   "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no confirmed next date and are omitted rather than estimated.",
   "events": [
-    {
-      "date": "2026-09-04",
-      "type": "exdiv",
-      "ticker": "GOOG",
-      "title": "GOOG ex-dividend",
-      "fav": true
-    },
-    {
-      "date": "2026-09-08",
-      "type": "earnings",
-      "ticker": "CAN",
-      "title": "CAN earnings",
-      "fav": false
-    },
-    {
-      "date": "2026-09-10",
-      "type": "earnings",
-      "ticker": "ADBE",
-      "title": "ADBE earnings",
-      "fav": false
-    },
-    {
-      "date": "2026-09-10",
-      "type": "earnings",
-      "ticker": "ORCL",
-      "title": "ORCL earnings",
-      "fav": false
-    },
-    {
-      "date": "2026-09-10",
-      "type": "exdiv",
-      "ticker": "NVDA",
-      "title": "NVDA ex-dividend",
-      "fav": true
-    },
     {
       "date": "2026-09-10",
       "type": "macro",
@@ -64,17 +29,17 @@
     },
     {
       "date": "2026-09-15",
-      "type": "exdiv",
-      "ticker": "PHM",
-      "title": "PHM ex-dividend",
-      "fav": false
-    },
-    {
-      "date": "2026-09-15",
       "type": "fed",
       "ticker": null,
       "title": "FOMC meeting, day 1",
       "note": "Sep 15-16 meeting",
+      "fav": false
+    },
+    {
+      "date": "2026-09-15",
+      "type": "exdiv",
+      "ticker": "PHM",
+      "title": "PHM ex-dividend",
       "fav": false
     },
     {
@@ -83,6 +48,20 @@
       "ticker": null,
       "title": "FOMC decision + SEP",
       "note": "Rate decision with Summary of Economic Projections",
+      "fav": false
+    },
+    {
+      "date": "2026-09-16",
+      "type": "exdiv",
+      "ticker": "TSM",
+      "title": "TSM ex-dividend",
+      "fav": true
+    },
+    {
+      "date": "2026-09-17",
+      "type": "exdiv",
+      "ticker": "CRM",
+      "title": "CRM ex-dividend",
       "fav": false
     },
     {
@@ -100,18 +79,18 @@
       "fav": false
     },
     {
+      "date": "2026-09-21",
+      "type": "exdiv",
+      "ticker": "META",
+      "title": "META ex-dividend",
+      "fav": false
+    },
+    {
       "date": "2026-09-30",
       "type": "earnings",
       "ticker": "MU",
       "title": "MU earnings",
       "fav": true
-    },
-    {
-      "date": "2026-10-02",
-      "type": "exdiv",
-      "ticker": "CSCO",
-      "title": "CSCO ex-dividend",
-      "fav": false
     },
     {
       "date": "2026-10-02",
@@ -122,6 +101,13 @@
       "fav": false
     },
     {
+      "date": "2026-10-02",
+      "type": "exdiv",
+      "ticker": "CSCO",
+      "title": "CSCO ex-dividend",
+      "fav": false
+    },
+    {
       "date": "2026-10-08",
       "type": "exdiv",
       "ticker": "INTU",
@@ -129,10 +115,17 @@
       "fav": true
     },
     {
-      "date": "2026-10-14",
-      "type": "earnings",
-      "ticker": "ASML",
-      "title": "ASML earnings",
+      "date": "2026-10-09",
+      "type": "exdiv",
+      "ticker": "ORCL",
+      "title": "ORCL ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-10-09",
+      "type": "exdiv",
+      "ticker": "VZ",
+      "title": "VZ ex-dividend",
       "fav": false
     },
     {
@@ -144,11 +137,11 @@
       "fav": false
     },
     {
-      "date": "2026-10-15",
+      "date": "2026-10-14",
       "type": "earnings",
-      "ticker": "TSM",
-      "title": "TSM earnings",
-      "fav": true
+      "ticker": "ASML",
+      "title": "ASML earnings",
+      "fav": false
     },
     {
       "date": "2026-10-15",
@@ -156,6 +149,20 @@
       "ticker": null,
       "title": "PPI (September)",
       "note": "Producer prices, 8:30am ET",
+      "fav": false
+    },
+    {
+      "date": "2026-10-15",
+      "type": "earnings",
+      "ticker": "TSM",
+      "title": "TSM earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-10-20",
+      "type": "exdiv",
+      "ticker": "DELL",
+      "title": "DELL ex-dividend",
       "fav": false
     },
     {
@@ -174,9 +181,9 @@
     },
     {
       "date": "2026-10-20",
-      "type": "exdiv",
-      "ticker": "DELL",
-      "title": "DELL ex-dividend",
+      "type": "earnings",
+      "ticker": "VZ",
+      "title": "VZ earnings",
       "fav": false
     },
     {
@@ -231,6 +238,153 @@
       "fav": false
     },
     {
+      "date": "2026-10-28",
+      "type": "earnings",
+      "ticker": "BA",
+      "title": "BA earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-10-28",
+      "type": "earnings",
+      "ticker": "GOOG",
+      "title": "GOOG earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-10-28",
+      "type": "earnings",
+      "ticker": "META",
+      "title": "META earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-10-28",
+      "type": "earnings",
+      "ticker": "MSFT",
+      "title": "MSFT earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-10-28",
+      "type": "earnings",
+      "ticker": "NOW",
+      "title": "NOW earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-10-29",
+      "type": "earnings",
+      "ticker": "AAPL",
+      "title": "AAPL earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-10-29",
+      "type": "earnings",
+      "ticker": "AMZN",
+      "title": "AMZN earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-10-29",
+      "type": "earnings",
+      "ticker": "COIN",
+      "title": "COIN earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-10-29",
+      "type": "earnings",
+      "ticker": "MSTR",
+      "title": "MSTR earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-10-29",
+      "type": "earnings",
+      "ticker": "NET",
+      "title": "NET earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-10-29",
+      "type": "earnings",
+      "ticker": "RIOT",
+      "title": "RIOT earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-02",
+      "type": "earnings",
+      "ticker": "PLTR",
+      "title": "PLTR earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-02",
+      "type": "earnings",
+      "ticker": "VOYG",
+      "title": "VOYG earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-03",
+      "type": "earnings",
+      "ticker": "HUT",
+      "title": "HUT earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-03",
+      "type": "earnings",
+      "ticker": "MARA",
+      "title": "MARA earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-03",
+      "type": "earnings",
+      "ticker": "OUST",
+      "title": "OUST earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-03",
+      "type": "earnings",
+      "ticker": "SMCI",
+      "title": "SMCI earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "HQ",
+      "title": "HQ earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-05",
+      "type": "earnings",
+      "ticker": "XNDU",
+      "title": "XNDU earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-12",
+      "type": "earnings",
+      "ticker": "INFQ",
+      "title": "INFQ earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-13",
+      "type": "earnings",
+      "ticker": "MDA",
+      "title": "MDA earnings",
+      "fav": false
+    },
+    {
       "date": "2026-12-08",
       "type": "fed",
       "ticker": null,
@@ -245,18 +399,6 @@
       "title": "FOMC decision + SEP",
       "note": "Rate decision with Summary of Economic Projections",
       "fav": false
-    },
-    {
-      "date": "2026-12-10",
-      "type": "exdiv",
-      "ticker": "TSM",
-      "title": "TSM ex-dividend",
-      "fav": true
     }
-  ],
-  "sources": [
-    "stockanalysis.com",
-    "federalreserve.gov",
-    "bls.gov"
   ]
 }
