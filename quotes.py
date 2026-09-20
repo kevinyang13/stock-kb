@@ -368,7 +368,7 @@ def refresh_events():
     keep = []
     if EVENTS_FILE.exists():
         old = json.loads(EVENTS_FILE.read_text())
-        keep = [e for e in old.get("events", []) if e["type"] in ("fed", "macro")]
+        keep = [e for e in old.get("events", []) if e["type"] in ("fed", "macro", "corporate")]
 
     events.extend(keep)
     events.sort(key=lambda e: (e["date"], e.get("ticker") or ""))

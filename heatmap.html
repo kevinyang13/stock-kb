@@ -151,6 +151,7 @@
   .ev.exdiv{border-left-color:var(--green);background:rgba(95,176,138,.13)}
   .ev.fed{border-left-color:#8fb8ff;background:rgba(143,184,255,.14)}
   .ev.macro{border-left-color:#c9a0ff;background:rgba(201,160,255,.13)}
+  .ev.corporate{border-left-color:var(--cream);background:rgba(234,229,223,.10)}
   .ev .s{color:var(--gold);font-weight:700}
   .ev.fav .s:after{content:" \2605"}
 
@@ -1000,7 +1001,9 @@
   function evChip(e) {
     var label = e.ticker
       ? '<span class="s">' + esc(e.ticker) + "</span> " +
-        (e.type === "earnings" ? "earnings" : "ex-div")
+        (e.type === "earnings" ? "earnings" :
+         e.type === "exdiv" ? "ex-div" :
+         esc(e.title.replace(e.ticker, "").trim()))     // corporate: say what it is
       : esc(e.title);
     return '<div class="ev ' + esc(e.type) + (e.fav ? " fav" : "") + '" title="' +
            esc(e.title) + '">' + label + "</div>";
