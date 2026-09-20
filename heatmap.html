@@ -20,9 +20,11 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--teal);color:var(--cream);font-family:var(--serif)}
 
+  html,body{max-width:100%;overflow-x:hidden}
+
   header.mast{
     background:var(--teal-head);border-bottom:2px solid var(--gold);
-    padding:9px 14px;display:flex;align-items:baseline;gap:12px;
+    padding:9px 14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;
   }
   .mast h1{
     margin:0;font-size:20px;line-height:1;color:var(--gold);
@@ -32,7 +34,12 @@
 
   .wrap{max-width:none;margin:0;padding:0 8px}
 
-  .tabs{display:flex;gap:4px;margin-left:auto}
+  .tabs{display:flex;flex-wrap:wrap;gap:4px;margin-left:auto}
+  @media (max-width:640px){
+    .mast p{display:none}                 /* the strapline has no room on a phone */
+    .tabs{margin-left:0;width:100%}
+    .tab{padding:7px 12px;font-size:9.5px;letter-spacing:.12em}
+  }
   .tab{
     font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
     padding:7px 16px;border-radius:999px;cursor:pointer;
@@ -129,7 +136,8 @@
   .up{color:var(--green)} .down{color:var(--red)}
 
   /* ---------- events ---------- */
-  .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;margin-top:6px;font-family:var(--sans)}
+  .cal-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .cal{display:grid;grid-template-columns:repeat(7,minmax(96px,1fr));gap:1px;margin-top:6px;font-family:var(--sans);min-width:680px}
   .cal .dow{
     font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
     padding:6px 8px;text-align:left;
@@ -176,6 +184,17 @@
   .bar{
     display:flex;flex-wrap:wrap;gap:10px;align-items:center;
     padding:10px 0 8px;
+  }
+  .bar .status{min-width:0;flex:1 1 220px}
+  @media (max-width:640px){
+    .bar{gap:8px}
+    button,select{padding:9px 14px}
+    .grid{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}
+    .tile{min-height:78px;padding:9px 4px 10px}
+    .tile .t{font-size:13px}
+    .tile .p{font-size:12px}
+    .tile .c{font-size:11px}
+    .brief-body .row{grid-template-columns:64px 66px 1fr;gap:8px}
   }
   .bar .spacer{flex:1}
   .status{font-family:var(--sans);font-size:12px;color:var(--cream-dim);line-height:1.5}
@@ -1019,7 +1038,7 @@
       (byDay[e.date] = byDay[e.date] || []).push(e);
     });
 
-    var html = '<div class="cal">' +
+    var html = '<div class="cal-scroll"><div class="cal">' +
       DOW.map(function (d) { return '<div class="dow">' + d + "</div>"; }).join("");
 
     for (var i = 0; i < 42; i++) {
@@ -1034,7 +1053,7 @@
         (byDay[key] || []).map(evChip).join("") +
       "</div>";
     }
-    return html + "</div>";
+    return html + "</div></div>";
   }
 
   function renderWeek(events, today) {
