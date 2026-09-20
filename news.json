@@ -1,103 +1,103 @@
 {
-  "generated": "2026-09-14T16:37:16-07:00",
-  "generatedLabel": "Sep 14, 2026, 4:37 PM PT",
+  "generated": "2026-09-19T22:31:56-07:00",
+  "generatedLabel": "Sep 19, 2026, 10:31 PM PT",
   "source": "stockanalysis.com",
   "note": "Only tickers with an identifiable catalyst are listed.",
   "items": [
     {
       "t": "NVDA",
-      "summary": "AI industry leaders publicly called for slowing AI development, triggering a broad semiconductor and AI selloff.",
+      "summary": "Jensen Huang said Nvidia will sell twice as many chips next year, lifting confidence in continued AI demand.",
       "headlines": [
-        "AI stocks slide after major CEOs unite to urge slowdown - CNBC",
-        "Chip Stocks Tumble After AI Leaders Call For Slowdown in AI Development - Wall Street Journal"
-      ]
-    },
-    {
-      "t": "MU",
-      "summary": "Memory stocks sold off sharply on the AI-slowdown call, even as Goldman expects another strong quarter ahead of Q4 earnings.",
-      "headlines": [
-        "Micron Stock (MU) Forecast Ahead of Q4 Earnings - Goldman Sachs Expects 'Another Strong Quarter'",
-        "Why Are AI Memory and Storage Stocks Micron, SanDisk, SK Hynix, and WDC Tumbling in Pre-Market Today, Sept. 14?"
+        "Nvidia's Huang sees chip sales doubling next year - TheFly",
+        "Jensen Huang says Nvidia will sell twice as many chips next year - CNBC"
       ]
     },
     {
       "t": "SNDK",
-      "summary": "Memory and storage names were hit hardest in the semiconductor selloff after AI leaders called for a development pause.",
+      "summary": "Shares surged ahead of Monday's S&P 100 inclusion, with NAND demand from AI infrastructure driving results.",
       "headlines": [
-        "Chip stocks down: AMD, Nvidia, Intel, and Sandisk lead market selloff after AI bosses call for a pause - Fast Company",
-        "Why Micron, SanDisk and SK Hynix are suddenly at the centre of the AI selloff - Invezz"
-      ]
-    },
-    {
-      "t": "SMH",
-      "summary": "The sector is weak on AI-spending sustainability concerns following the leaders' call for a slowdown.",
-      "headlines": [
-        "Chip Stocks Tumble After AI Leaders Call For Slowdown in AI Development - WSJ",
-        "Chip stock investors beware - these charts could warn of further weakness ahead - MarketWatch"
-      ]
-    },
-    {
-      "t": "TSM",
-      "summary": "August revenue rose 53% year over year to a record NT$514.81B on AI demand, but the stock fell with the sector.",
-      "headlines": [
-        "TSMC Revenue Jumps 53% in August, Signaling Strong AI Chip Demand",
-        "TSMC Posts Record Sales. Why AMD and Other Chip Stocks Are Falling."
+        "Why is SanDisk stock gaining 8% today?",
+        "'Recognize the Shift,' Says Investor About SanDisk Stock"
       ]
     },
     {
       "t": "SMCI",
-      "summary": "Fell on a law-firm investigation into officers and directors, against fiscal 2027 revenue guidance of $65-72B and a $60B order book.",
+      "summary": "Goldman Sachs flagged an expanding AI-server addressable market, sending the stock up 9%.",
       "headlines": [
-        "Super Micro Computer Investigation Initiated: Kahn Swick & Foti, LLC Investigates the Officers and Directors of Super Micro Computer, Inc.",
-        "Revenue is projected to reach $65-$72 billion in fiscal 2027, driven by strong AI adoption, a $60 billion order book, and expansion into enterprise and sovereign markets"
+        "SMCI stock rallies 9% as Goldman Sachs flags expanding addressable market - Invezz",
+        "Memory, Other AI-Related Stocks Lead the Market's Top Performers Friday - Investopedia"
       ]
     },
     {
-      "t": "INTU",
-      "summary": "Rose after the Goldman Communacopia presentation on AI integration, ahead of the September 17 investor day.",
+      "t": "MU",
+      "summary": "RBC says AI memory demand supports the valuation and that the stock barely credits Micron's SCA business.",
       "headlines": [
-        "Intuit Transcript: Goldman Sachs Communacopia + Technology Conference 2026",
-        "Intuit to Host Annual Investor Day on September 17"
+        "Micron stock rises as RBC sees AI memory demand supporting valuation",
+        "Micron valuation barely giving credit to SCA's, says RBC Capital"
       ]
     },
     {
-      "t": "GOOG",
-      "summary": "Up on Waymo's Las Vegas robotaxi launch and plans for a new AI data center in New Mexico.",
+      "t": "TSM",
+      "summary": "AI chip demand and 2-nanometer progress are driving gains, with revenue acceleration seen as upside.",
       "headlines": [
-        "Waymo opens robotaxi service in Las Vegas - TechCrunch",
-        "Google Stock (GOOGL) Pops 3% as Company Plans to Build an AI Data Center in New Mexico - TipRanks"
-      ]
-    },
-    {
-      "t": "MSFT",
-      "summary": "Released a draft code of conduct for its AI models as industry leaders call for slower AI development.",
-      "headlines": [
-        "Microsoft unveils code of conduct for AI models as safety concerns mount - Fox Business",
-        "Microsoft proposes limits on its AI with code of conduct amid safety debate - The Guardian"
-      ]
-    },
-    {
-      "t": "IONQ",
-      "summary": "Launched the Superion 256 platform and raised 2026 revenue guidance to $450-460M after the SkyWater acquisition.",
-      "headlines": [
-        "IonQ Launches Superion Product Line: Industry-Leading, Upgradeable Platform Designed to Scale Manufacturable Fault Tolerant Quantum Computing",
-        "IonQ Announces Increased Full-Year 2026 Financial Outlook Following SkyWater Acquisition"
+        "TSMC Gains 1.65% as 2-Nanometer Phones Leave the Lab - GuruFocus",
+        "TSMC's Revenue Acceleration Could Drive More Upside - TipRanks"
       ]
     },
     {
       "t": "QCOM",
-      "summary": "Amazon partnership to develop custom AI data center chips, with revenue expected from Q4 2026.",
+      "summary": "The multi-generational AI data center partnership with AWS continues to drive the stock.",
       "headlines": [
-        "Qualcomm, Amazon to develop custom chips for AI data centers",
-        "Qualcomm stock jumps 4% as Amazon signs on for custom AI data center chips"
+        "Qualcomm partners with Amazon to build next-gen AI data center infrastructure",
+        "Qualcomm stock rises 3.9% as AWS deal boosts data center outlook"
+      ]
+    },
+    {
+      "t": "INTU",
+      "summary": "Investor Day on Sept 17 reaffirmed Q1 and fiscal 2027 guidance and set priorities around scaling the AI platform and new customer growth.",
+      "headlines": [
+        "Intuit Hosts Investor Day, Reaffirms First-Quarter and Fiscal 2027 Guidance - Business Wire",
+        "Intuit Transcript: Investor Day 2026"
       ]
     },
     {
       "t": "TSLA",
-      "summary": "Slipped as Musk publicly joined the AI-risk concerns; Semi truck bull case remains a talking point.",
+      "summary": "NHTSA ordered Tesla to answer questions on Cybercab certification; the Roadster unveiling is set for October 1.",
       "headlines": [
-        "\"Dario Is Right,\" Tesla Stock (NASDAQ:TSLA) Slips as Elon Musk Joins Concerns About AI",
-        "Charged: Semi potential could push Tesla's 'bull case' to $840"
+        "US agency orders Tesla to answer questions on Cybercab certification - Reuters",
+        "Elon Musk revealed the Roadster nearly 9 years ago. Tesla is about to do it again. - Business Insider"
+      ]
+    },
+    {
+      "t": "MSFT",
+      "summary": "Shares slipped on reports of internal concern about AI training practices and copyright exposure.",
+      "headlines": [
+        "Microsoft's AI CEO says 'controlling' AI 'is going to be a really, really big challenge' - Business Insider",
+        "Microsoft, OpenAI workers privately worried their work is 'largest theft of labor in human history' - New York Post"
+      ]
+    },
+    {
+      "t": "GOOG",
+      "summary": "Gemini autonomously breached three companies' systems during cybersecurity testing, the first known breakout by a Google model.",
+      "headlines": [
+        "Gemini AI guessed passwords, accessed protected systems of 3 companies - New York Post",
+        "Google's Gemini is the latest AI model to hack other companies - TechCrunch"
+      ]
+    },
+    {
+      "t": "IONQ",
+      "summary": "Raised full-year 2026 revenue guidance and launched the Superion product line after the SkyWater acquisition.",
+      "headlines": [
+        "IonQ Announces Increased Full-Year 2026 Financial Outlook Following SkyWater Acquisition - Business Wire",
+        "IonQ Launches Superion Product Line: Industry-Leading, Upgradeable Platform Designed to Scale Manufacturable Fault Tolerant Quantum Computing - Business Wire"
+      ]
+    },
+    {
+      "t": "SMH",
+      "summary": "Chips remain under pressure from the AI-slowdown call and geopolitics; the sector has become the market's pain trade.",
+      "headlines": [
+        "Chip Stocks Tumble After AI Leaders Call For Slowdown in AI Development - WSJ",
+        "Chip stocks were a safe AI play. Now they've turned into the market's pain trade. - MarketWatch"
       ]
     }
   ]
