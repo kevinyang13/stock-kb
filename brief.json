@@ -1,314 +1,313 @@
 {
-  "generated": "2026-09-19T22:39:11-07:00",
-  "subject": "\ud83d\udcca Morning Brief \u2014 Saturday, September 19, 2026",
-  "generatedLabel": "Sat, Sep 19, 2026",
-  "sources": [
-    "finance.yahoo.com",
-    "stockanalysis.com"
-  ],
-  "indexes": [
-    {
-      "name": "S&P 500",
-      "level": "7,650.50",
-      "pct": 0.17
-    },
-    {
-      "name": "Dow Jones",
-      "level": "51,682.64",
-      "pct": -0.18
-    },
-    {
-      "name": "Nasdaq Composite",
-      "level": "26,522.55",
-      "pct": 0.39
-    },
-    {
-      "name": "Russell 2000",
-      "level": "2,860.40",
-      "pct": -0.5
-    },
-    {
-      "name": "VIX",
-      "level": "14.81",
-      "pct": -4.08
-    }
-  ],
-  "oil": [
-    {
-      "name": "WTI",
-      "level": "$96.08",
-      "pct": -1.18,
-      "driver": "Third straight down day; Strait of Hormuz traffic stable at six-month highs, supply fear fading."
-    },
-    {
-      "name": "Brent",
-      "level": "$99.29",
-      "pct": -0.64,
-      "driver": "Back under $100 on the same easing."
-    }
-  ],
-  "sectors": [
-    {
-      "name": "Semiconductor",
-      "avg": 8.9,
-      "n": 3,
-      "note": "Leaders CAN +16.8%, SOXL +7.7%, SMH +2.2%. Laggards SOXL +7.7%, SMH +2.2%. Bitcoin reclaimed $80,000 and kicked off a short squeeze in crypto equities; the SEC also eased rules on tokenized stock trading."
-    },
-    {
-      "name": "Crypto",
-      "avg": 8.24,
-      "n": 11,
-      "note": "Leaders MARA +13.8%, COIN +11.7%, HIVE +9.7%. Laggards GBTC +6.2%, BLOK +4.6%. Bitcoin reclaimed $80,000 and kicked off a short squeeze in crypto equities; the SEC also eased rules on tokenized stock trading."
-    },
-    {
-      "name": "Software",
-      "avg": 5.35,
-      "n": 3,
-      "note": "Leaders MSTR +16.4%, XNET +1.0%, IGV -1.4%. Laggards XNET +1.0%, IGV -1.4%. Bitcoin reclaimed $80,000 and kicked off a short squeeze in crypto equities; the SEC also eased rules on tokenized stock trading."
-    },
-    {
-      "name": "AI Memory",
-      "avg": 5.13,
-      "n": 4,
-      "note": "Leaders SNDK +11.0%, MU +3.9%, DRAM +3.2%. Laggards DRAM +3.2%, SKHY +2.5%. Shares surged ahead of Monday's S&P 100 inclusion, with NAND demand from AI infrastructure driving results."
-    },
-    {
-      "name": "AI Infra",
-      "avg": 0.29,
-      "n": 13,
-      "note": "Leaders COHR +7.2%, ASML +3.1%, AVGO +3.0%. Laggards SMCI -3.1%, DELL -3.5%. Goldman Sachs flagged an expanding AI-server addressable market, sending the stock up 9%."
-    },
-    {
-      "name": "ETF",
-      "avg": -0.19,
-      "n": 4,
-      "note": "Leaders TQQQ +1.8%, SPY +0.1%, XLE -0.3%. Laggards XLE -0.3%, URA -2.4%."
-    },
-    {
-      "name": "Robotics",
-      "avg": -0.38,
-      "n": 4,
-      "note": "Leaders OUST +0.3%, ROBO -0.2%, TSLA -0.5%. Laggards TSLA -0.5%, MDA -1.1%. NHTSA ordered Tesla to answer questions on Cybercab certification; the Roadster unveiling is set for October 1."
-    },
-    {
-      "name": "Quantum",
-      "avg": -0.67,
-      "n": 8,
-      "note": "Leaders ARQQ +3.1%, QUBT +3.1%, HQ +0.2%. Laggards XNDU -3.1%, QBTS -3.3%."
-    },
-    {
-      "name": "AI",
-      "avg": -0.95,
-      "n": 23,
-      "note": "Leaders AMD +2.7%, CRWV +1.9%, NVDA +1.3%. Laggards INFQ -4.5%, QCOM -5.8%. The multi-generational AI data center partnership with AWS continues to drive the stock."
-    },
-    {
-      "name": "Space",
-      "avg": -3.54,
-      "n": 12,
-      "note": "Leaders NASA -0.9%, UFO -1.0%, SPCE -1.3%. Laggards ASTS -6.7%, RDW -7.0%. No sector-wide negative found; the space names gave back part of a run. Rocket Lab itself flew its 96th Electron and fully funded the $1.94B Iridium deal."
-    }
-  ],
-  "winners": [
-    {
-      "t": "CAN",
-      "pct": 16.79,
-      "catalyst": "Bitcoin reclaimed $80,000 and kicked off a short squeeze in crypto equities; the SEC also eased rules on tokenized stock trading."
-    },
-    {
-      "t": "MSTR",
-      "pct": 16.39,
-      "catalyst": "Bitcoin reclaimed $80,000 and kicked off a short squeeze in crypto equities; the SEC also eased rules on tokenized stock trading."
-    },
-    {
-      "t": "MARA",
-      "pct": 13.75,
-      "catalyst": "Bitcoin reclaimed $80,000 and kicked off a short squeeze in crypto equities; the SEC also eased rules on tokenized stock trading."
-    },
-    {
-      "t": "COIN",
-      "pct": 11.66,
-      "catalyst": "Bitcoin reclaimed $80,000 and kicked off a short squeeze in crypto equities; the SEC also eased rules on tokenized stock trading."
-    },
-    {
-      "t": "SNDK",
-      "pct": 10.99,
-      "catalyst": "Shares surged ahead of Monday's S&P 100 inclusion, with NAND demand from AI infrastructure driving results."
-    },
-    {
-      "t": "HIVE",
-      "pct": 9.65,
-      "catalyst": "Bitcoin reclaimed $80,000 and kicked off a short squeeze in crypto equities; the SEC also eased rules on tokenized stock trading."
-    }
-  ],
-  "losers": [
-    {
-      "t": "RDW",
-      "pct": -7.01,
-      "catalyst": "No sector-wide negative found; the space names gave back part of a run. Rocket Lab itself flew its 96th Electron and fully funded the $1.94B Iridium deal."
-    },
-    {
-      "t": "ASTS",
-      "pct": -6.68,
-      "catalyst": "No sector-wide negative found; the space names gave back part of a run. Rocket Lab itself flew its 96th Electron and fully funded the $1.94B Iridium deal."
-    },
-    {
-      "t": "LUNR",
-      "pct": -5.88,
-      "catalyst": "No sector-wide negative found; the space names gave back part of a run. Rocket Lab itself flew its 96th Electron and fully funded the $1.94B Iridium deal."
-    },
-    {
-      "t": "QCOM",
-      "pct": -5.82,
-      "catalyst": "The multi-generational AI data center partnership with AWS continues to drive the stock."
-    },
-    {
-      "t": "BKSY",
-      "pct": -4.79,
-      "catalyst": "No sector-wide negative found; the space names gave back part of a run. Rocket Lab itself flew its 96th Electron and fully funded the $1.94B Iridium deal."
-    },
-    {
-      "t": "RKLB",
-      "pct": -4.79,
-      "catalyst": "No sector-wide negative found; the space names gave back part of a run. Rocket Lab itself flew its 96th Electron and fully funded the $1.94B Iridium deal."
-    }
-  ],
-  "macro": [
-    {
-      "h": "Fed raises rates to 4% on persistent inflation; officials signal more hikes possible",
-      "d": "Sep 18"
-    },
-    {
-      "h": "KC Fed's Schmid backs the hike: 'inflation goes beyond energy'",
-      "d": "Sep 19"
-    },
-    {
-      "h": "Leading Economic Index falls on worsening consumer expectations",
-      "d": "Sep 19"
-    },
-    {
-      "h": "Weekly jobless claims stay low; housing pressured by rising mortgage rates",
-      "d": "Sep 18"
-    },
-    {
-      "h": "Dollar logs its biggest three-month jump against the euro after the decision",
-      "d": "Sep 18"
-    },
-    {
-      "h": "Crude falls a third day as Hormuz shipping holds at six-month highs",
-      "d": "Sep 19"
-    }
-  ],
-  "holdings": [
-    {
-      "t": "INTU",
-      "price": "$303.19",
-      "pct": -3.17,
-      "label": "employer \u2014 RSU/option exposure",
-      "headline": "Investor Day on Sept 17 reaffirmed Q1 and fiscal 2027 guidance and set priorities around scaling the AI platform and new customer growth.",
-      "flag": "investor day done; guidance reaffirmed"
-    },
-    {
-      "t": "MSFT",
-      "price": "$493.78",
-      "pct": -0.8,
-      "label": "core holding",
-      "headline": "Shares slipped on reports of internal concern about AI training practices and copyright exposure.",
-      "flag": "AI training-practice reporting; publisher suits"
-    },
-    {
-      "t": "MC",
-      "price": "$59.73",
-      "pct": 0.34,
-      "label": "core holding",
-      "headline": "Q2 2026 beat on record revenue from M&A and capital-markets activity; targets range $60-$85 (Deutsche to $75, Morgan Stanley to $85).",
-      "flag": "none"
-    }
-  ],
-  "favorites": [
-    {
-      "t": "SNDK",
-      "price": "$1,791.82",
-      "pct": 10.99,
-      "headline": "Shares surged ahead of Monday's S&P 100 inclusion, with NAND demand from AI infrastructure driving results."
-    },
-    {
-      "t": "MU",
-      "price": "$1,015.80",
-      "pct": 3.92,
-      "headline": "RBC says AI memory demand supports the valuation and that the stock barely credits Micron's SCA business."
-    },
-    {
-      "t": "SMH",
-      "price": "$573.00",
-      "pct": 2.21,
-      "headline": "Chips remain under pressure from the AI-slowdown call and geopolitics; the sector has become the market's pain trade."
-    },
-    {
-      "t": "NVDA",
-      "price": "$222.27",
-      "pct": 1.34,
-      "headline": "Jensen Huang said Nvidia will sell twice as many chips next year, lifting confidence in continued AI demand."
-    },
-    {
-      "t": "TSM",
-      "price": "$434.67",
-      "pct": 1.02,
-      "headline": "AI chip demand and 2-nanometer progress are driving gains, with revenue acceleration seen as upside."
-    },
-    {
-      "t": "GOOG",
-      "price": "$344.41",
-      "pct": 0.21,
-      "headline": "Gemini autonomously breached three companies' systems during cybersecurity testing, the first known breakout by a Google model."
-    },
-    {
-      "t": "TSLA",
-      "price": "$364.27",
-      "pct": -0.53,
-      "headline": "NHTSA ordered Tesla to answer questions on Cybercab certification; the Roadster unveiling is set for October 1."
-    },
-    {
-      "t": "MSFT",
-      "price": "$493.78",
-      "pct": -0.8,
-      "headline": "Shares slipped on reports of internal concern about AI training practices and copyright exposure."
-    },
-    {
-      "t": "IONQ",
-      "price": "$39.13",
-      "pct": -3,
-      "headline": "Raised full-year 2026 revenue guidance and launched the Superion product line after the SkyWater acquisition."
-    },
-    {
-      "t": "SMCI",
-      "price": "$39.09",
-      "pct": -3.12,
-      "headline": "Goldman Sachs flagged an expanding AI-server addressable market, sending the stock up 9%."
-    },
-    {
-      "t": "INTU",
-      "price": "$303.19",
-      "pct": -3.17,
-      "headline": "Investor Day on Sept 17 reaffirmed Q1 and fiscal 2027 guidance and set priorities around scaling the AI platform and new customer growth."
-    },
-    {
-      "t": "QCOM",
-      "price": "$177.72",
-      "pct": -5.82,
-      "headline": "The multi-generational AI data center partnership with AWS continues to drive the stock."
-    }
-  ],
-  "volatility": {
-    "declined": true,
-    "note": "This section does not carry trade recommendations \u2014 see the note on the site.",
-    "context": [
-      "VIX 14.81 (-4.08%) \u2014 fell through the hike. The event is out of the way and index vol is pricing relief, not the hawkish guidance.",
-      "Dispersion: Semiconductor +8.90% average against Space -3.54%. The crypto move was a squeeze, which means it can unwind as fast as it built.",
-      "Next dated catalysts: 09-21 SNDK; 09-21 AVGO; 09-21 META; 09-22 Fed: Vice Chair Jefferson; 09-23 Fed: Governor Barr; 09-24 Intl Transactions, Q2 (BEA).",
-      "Sep 30 stacks MU earnings on top of August PCE and the GDP third estimate \u2014 the first inflation read after the hike, on the same morning as your largest memory position reports.",
-      "Concentration note: INTU is employer exposure (RSUs/options), -3.17% Friday after Investor Day reaffirmed FY27 guidance \u2014 no new cut, but no upgrade either.",
-      "QCOM -5.82% was the worst favorite on no new negative; the AWS-deal pop from last week is being given back."
-    ]
+ "generated": "2026-10-19T17:26:14-07:00",
+ "generatedLabel": "Mon, Oct 19, 2026",
+ "subject": "📊 Morning Brief — Monday, October 19, 2026",
+ "sources": [
+  "stockanalysis.com",
+  "cnbc.com"
+ ],
+ "indexes": [
+  {
+   "name": "S&P 500",
+   "level": "7,690.73",
+   "pct": 0.41
+  },
+  {
+   "name": "Dow Jones",
+   "level": "51,966.03",
+   "pct": -0.07
+  },
+  {
+   "name": "Nasdaq Composite",
+   "level": "26,430.89",
+   "pct": 1.11
+  },
+  {
+   "name": "Russell 2000",
+   "level": "2,728.30",
+   "pct": 0.0
+  },
+  {
+   "name": "VIX",
+   "level": "18.44",
+   "pct": -7.75
   }
+ ],
+ "oil": [
+  {
+   "name": "WTI",
+   "level": "$103.32",
+   "pct": -0.33,
+   "driver": "Crude eased slightly but holds above $100; energy was the one ETF group red on the day (XLE -0.6%)."
+  },
+  {
+   "name": "Brent",
+   "level": "$109.06",
+   "pct": -0.45,
+   "driver": "Gasoline's 9.1% monthly jump was the single largest contributor to September's hot CPI print."
+  }
+ ],
+ "sectors": [
+  {
+   "name": "AI Memory",
+   "avg": 4.39,
+   "n": 3,
+   "note": "Leaders SNDK +5.5%, SKHY +4.7%, MU +3.0%. The whole group rebounded after 15-18% crashes last week on AI-spending doubts."
+  },
+  {
+   "name": "Cloud",
+   "avg": 2.71,
+   "n": 2,
+   "note": "Leader AMZN +5.0%, laggard NET +0.4%. Morgan Stanley named Amazon a top pick and raised its target, citing AWS and agentic AI."
+  },
+  {
+   "name": "Physical AI",
+   "avg": 2.63,
+   "n": 2,
+   "note": "Leader TSLA +3.8%, laggard OUST +1.5%. Tesla Q3 earnings land Oct 21 and SpaceX merger talk is back."
+  },
+  {
+   "name": "Software",
+   "avg": 2.02,
+   "n": 10,
+   "note": "Leader DDOG +5.4% on a Bernstein upgrade tied to AI customers outspending expectations; laggard INTU +0.1%."
+  },
+  {
+   "name": "Semiconductor",
+   "avg": 1.56,
+   "n": 9,
+   "note": "Leader MRVL +4.1%, laggard COHR -0.4%. TSM held its record Q3 guidance through the selloff."
+  },
+  {
+   "name": "Aerospace",
+   "avg": -0.09,
+   "n": 2,
+   "note": "BA +0.6% ahead of Oct 27 earnings, GE -0.8% with results due Oct 20."
+  },
+  {
+   "name": "Crypto",
+   "avg": -0.28,
+   "n": 15,
+   "note": "Leader RIOT +1.8%, laggard COIN -2.7%. The group did not join the tech rebound; no single driver identified for Coinbase's drop."
+  },
+  {
+   "name": "Quantum",
+   "avg": -0.35,
+   "n": 8,
+   "note": "Widest dispersion on the board: HQ +4.1% against XNDU -7.9%. IONQ -1.6% on dilution from a $2B raise."
+  },
+  {
+   "name": "SPAC",
+   "avg": -0.74,
+   "n": 2,
+   "note": "CLBR +0.2%, CCXI -1.7%. No company news behind either move."
+  },
+  {
+   "name": "Telecom",
+   "avg": -1.23,
+   "n": 2,
+   "note": "T -1.0% with earnings Oct 21, VZ -1.4% with earnings Oct 26. Defensives lagged as risk appetite returned."
+  }
+ ],
+ "winners": [
+  {
+   "t": "SNDK",
+   "pct": 5.53,
+   "catalyst": "Rebounded after an 18% crash last week; memory demand from AI infrastructure back in focus."
+  },
+  {
+   "t": "DDOG",
+   "pct": 5.36,
+   "catalyst": "Bernstein upgrade; analyst cited AI customers spending more than expected and a fading OpenAI setback."
+  },
+  {
+   "t": "SOXL",
+   "pct": 5.32,
+   "catalyst": "3x leveraged semiconductor ETF amplifying the chip-sector bounce."
+  },
+  {
+   "t": "AMZN",
+   "pct": 4.98,
+   "catalyst": "Morgan Stanley named it a top pick and raised its price target on AI, AWS and agentic AI growth."
+  },
+  {
+   "t": "SKHY",
+   "pct": 4.67,
+   "catalyst": "SK Hynix ADR lifted with the memory group's recovery from last week's sell-off."
+  },
+  {
+   "t": "PLTR",
+   "pct": 4.36,
+   "catalyst": "Moved with the broad software and AI rebound; no company-specific driver identified."
+  }
+ ],
+ "losers": [
+  {
+   "t": "XNDU",
+   "pct": -7.89,
+   "catalyst": "Worst move on the board. No cause published; recent news was provisional approval for $10M in DARPA support."
+  },
+  {
+   "t": "SPCE",
+   "pct": -3.7,
+   "catalyst": "Space names sat out the rebound; no company-specific driver identified."
+  },
+  {
+   "t": "COIN",
+   "pct": -2.72,
+   "catalyst": "No cause published; latest item was a Marqeta stablecoin-card partnership from Oct 16."
+  },
+  {
+   "t": "PHM",
+   "pct": -2.33,
+   "catalyst": "Homebuilder weak into Oct 22 earnings, with mortgage rates pressured by the hot CPI print."
+  },
+  {
+   "t": "MARA",
+   "pct": -1.99,
+   "catalyst": "Bitcoin miners fell with the crypto complex; no company-specific driver identified."
+  },
+  {
+   "t": "CCXI",
+   "pct": -1.69,
+   "catalyst": "SPAC drifting lower on no news."
+  }
+ ],
+ "macro": [
+  {
+   "h": "September CPI runs hot: headline 3.7% y/y vs 3.6% expected, core 2.6% vs 2.5%",
+   "d": "Oct 14"
+  },
+  {
+   "h": "Headline CPI rose 0.6% on the month as gasoline jumped 9.1%",
+   "d": "Oct 14"
+  },
+  {
+   "h": "US chip stocks set to wipe out $2 trillion after latest selloff",
+   "d": "Oct 15"
+  },
+  {
+   "h": "Chip and memory names rebound sharply; VIX drops 7.8% to 18.44",
+   "d": "Oct 19"
+  },
+  {
+   "h": "Fed expected to hold at 3.75-4.00% on Oct 28; September minutes showed most officials still see another hike by year-end",
+   "d": "Oct 28 (scheduled)"
+  },
+  {
+   "h": "Q3 GDP advance estimate and September PCE both land Oct 29",
+   "d": "Oct 29 (scheduled)"
+  }
+ ],
+ "holdings": [
+  {
+   "t": "INTU",
+   "price": "$325.62",
+   "pct": 0.14,
+   "label": "employer — RSU/option exposure",
+   "headline": "Agreed on Oct 15 to acquire revenue-management firm Sequence, pushing further into B2B software.",
+   "flag": "flat on a strong tape; Sequence deal is the live item"
+  },
+  {
+   "t": "MSFT",
+   "price": "$533.52",
+   "pct": 0.84,
+   "label": "core holding",
+   "headline": "Morgan Stanley flagged a high bar heading into Oct 28 earnings; Microsoft separately warned that AI agents behave like insider threats.",
+   "flag": "earnings Oct 28"
+  },
+  {
+   "t": "MC",
+   "price": "$53.07",
+   "pct": -2.71,
+   "label": "core holding",
+   "headline": "Fell 2.7% with no company news published; down roughly 11% since the Sep 19 brief.",
+   "flag": "worst holding on the day; no identified driver"
+  }
+ ],
+ "favorites": [
+  {
+   "t": "SNDK",
+   "price": "$1,371.12",
+   "pct": 5.53,
+   "headline": "Rebounded about 5.5% after an 18% crash the prior week as buyers returned to memory."
+  },
+  {
+   "t": "TSLA",
+   "price": "$368.06",
+   "pct": 3.76,
+   "headline": "Up ahead of Q3 earnings on Oct 21, with SpaceX merger speculation building."
+  },
+  {
+   "t": "MU",
+   "price": "$904.90",
+   "pct": 2.97,
+   "headline": "Rebounded 3.0% with the chip group after the AI-spending selloff."
+  },
+  {
+   "t": "TSM",
+   "price": "$420.22",
+   "pct": 1.84,
+   "headline": "Held up through the selloff on record Q3 results; gross margin of 68% drew the most attention."
+  },
+  {
+   "t": "SMH",
+   "price": "$548.46",
+   "pct": 1.61,
+   "headline": "Semiconductor ETF bounced as the group recovered from a roughly $2 trillion drawdown."
+  },
+  {
+   "t": "SMCI",
+   "price": "$32.10",
+   "pct": 1.49,
+   "headline": "No single driver; appointed Mark Long as chief financial officer on Oct 15."
+  },
+  {
+   "t": "NVDA",
+   "price": "$217.09",
+   "pct": 1.38,
+   "headline": "Rose on a record-breaking fault-tolerant quantum computing simulation and an AI-startup acquisition."
+  },
+  {
+   "t": "GOOG",
+   "price": "$340.16",
+   "pct": 0.96,
+   "headline": "Gained with large-cap tech; the Supreme Court rejected its challenge to a patent-review policy."
+  },
+  {
+   "t": "MSFT",
+   "price": "$533.52",
+   "pct": 0.84,
+   "headline": "Firmed ahead of Oct 28 earnings despite a cautious Morgan Stanley preview."
+  },
+  {
+   "t": "QCOM",
+   "price": "$173.53",
+   "pct": 0.83,
+   "headline": "Standing catalyst is last week's split jury verdict in the Arm licensing dispute."
+  },
+  {
+   "t": "INTU",
+   "price": "$325.62",
+   "pct": 0.14,
+   "headline": "Flat; the Sequence acquisition announced Oct 15 remains the live catalyst."
+  },
+  {
+   "t": "IONQ",
+   "price": "$30.78",
+   "pct": -1.6,
+   "headline": "Only favorite lower, on dilution concerns from a $2B equity raise plus the Elisity acquisition."
+  }
+ ],
+ "volatility": {
+  "declined": true,
+  "note": "This section does not carry trade recommendations — see the note on the site.",
+  "context": [
+   "VIX 18.44 (-7.75%) — a sharp drop, but still well above the 14.81 reading on Sep 19. Index vol is unwinding last week's chip panic without returning to calm.",
+   "Dispersion: AI Memory +4.39% average against Telecom -1.23%. Breadth was 64 of 98 names higher with a median move of +0.63%, so the rebound was real but concentrated in what fell hardest.",
+   "Last week's drawdown was large: Micron and SanDisk fell 15% and 18%, and a Reuters headline put the chip-sector loss near $2 trillion. One up day does not retrace that.",
+   "Event risk is dense: TSLA and T on Oct 21, FOMC decision Oct 28, MSFT and GOOG also Oct 28, then Q3 GDP and September PCE on Oct 29. Six of 12 favorites report inside two weeks.",
+   "September CPI at 3.7% with core at 2.6% both beat expectations. A Fed that stays hawkish into year-end is the macro backdrop for every AI-capex name on the list."
+  ]
+ }
 }

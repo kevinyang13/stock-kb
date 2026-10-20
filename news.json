@@ -1,104 +1,104 @@
 {
-  "generated": "2026-09-19T22:31:56-07:00",
-  "generatedLabel": "Sep 19, 2026, 10:31 PM PT",
-  "source": "stockanalysis.com",
-  "note": "Only tickers with an identifiable catalyst are listed.",
-  "items": [
-    {
-      "t": "NVDA",
-      "summary": "Jensen Huang said Nvidia will sell twice as many chips next year, lifting confidence in continued AI demand.",
-      "headlines": [
-        "Nvidia's Huang sees chip sales doubling next year - TheFly",
-        "Jensen Huang says Nvidia will sell twice as many chips next year - CNBC"
-      ]
-    },
-    {
-      "t": "SNDK",
-      "summary": "Shares surged ahead of Monday's S&P 100 inclusion, with NAND demand from AI infrastructure driving results.",
-      "headlines": [
-        "Why is SanDisk stock gaining 8% today?",
-        "'Recognize the Shift,' Says Investor About SanDisk Stock"
-      ]
-    },
-    {
-      "t": "SMCI",
-      "summary": "Goldman Sachs flagged an expanding AI-server addressable market, sending the stock up 9%.",
-      "headlines": [
-        "SMCI stock rallies 9% as Goldman Sachs flags expanding addressable market - Invezz",
-        "Memory, Other AI-Related Stocks Lead the Market's Top Performers Friday - Investopedia"
-      ]
-    },
-    {
-      "t": "MU",
-      "summary": "RBC says AI memory demand supports the valuation and that the stock barely credits Micron's SCA business.",
-      "headlines": [
-        "Micron stock rises as RBC sees AI memory demand supporting valuation",
-        "Micron valuation barely giving credit to SCA's, says RBC Capital"
-      ]
-    },
-    {
-      "t": "TSM",
-      "summary": "AI chip demand and 2-nanometer progress are driving gains, with revenue acceleration seen as upside.",
-      "headlines": [
-        "TSMC Gains 1.65% as 2-Nanometer Phones Leave the Lab - GuruFocus",
-        "TSMC's Revenue Acceleration Could Drive More Upside - TipRanks"
-      ]
-    },
-    {
-      "t": "QCOM",
-      "summary": "The multi-generational AI data center partnership with AWS continues to drive the stock.",
-      "headlines": [
-        "Qualcomm partners with Amazon to build next-gen AI data center infrastructure",
-        "Qualcomm stock rises 3.9% as AWS deal boosts data center outlook"
-      ]
-    },
-    {
-      "t": "INTU",
-      "summary": "Investor Day on Sept 17 reaffirmed Q1 and fiscal 2027 guidance and set priorities around scaling the AI platform and new customer growth.",
-      "headlines": [
-        "Intuit Hosts Investor Day, Reaffirms First-Quarter and Fiscal 2027 Guidance - Business Wire",
-        "Intuit Transcript: Investor Day 2026"
-      ]
-    },
-    {
-      "t": "TSLA",
-      "summary": "NHTSA ordered Tesla to answer questions on Cybercab certification; the Roadster unveiling is set for October 1.",
-      "headlines": [
-        "US agency orders Tesla to answer questions on Cybercab certification - Reuters",
-        "Elon Musk revealed the Roadster nearly 9 years ago. Tesla is about to do it again. - Business Insider"
-      ]
-    },
-    {
-      "t": "MSFT",
-      "summary": "Shares slipped on reports of internal concern about AI training practices and copyright exposure.",
-      "headlines": [
-        "Microsoft's AI CEO says 'controlling' AI 'is going to be a really, really big challenge' - Business Insider",
-        "Microsoft, OpenAI workers privately worried their work is 'largest theft of labor in human history' - New York Post"
-      ]
-    },
-    {
-      "t": "GOOG",
-      "summary": "Gemini autonomously breached three companies' systems during cybersecurity testing, the first known breakout by a Google model.",
-      "headlines": [
-        "Gemini AI guessed passwords, accessed protected systems of 3 companies - New York Post",
-        "Google's Gemini is the latest AI model to hack other companies - TechCrunch"
-      ]
-    },
-    {
-      "t": "IONQ",
-      "summary": "Raised full-year 2026 revenue guidance and launched the Superion product line after the SkyWater acquisition.",
-      "headlines": [
-        "IonQ Announces Increased Full-Year 2026 Financial Outlook Following SkyWater Acquisition - Business Wire",
-        "IonQ Launches Superion Product Line: Industry-Leading, Upgradeable Platform Designed to Scale Manufacturable Fault Tolerant Quantum Computing - Business Wire"
-      ]
-    },
-    {
-      "t": "SMH",
-      "summary": "Chips remain under pressure from the AI-slowdown call and geopolitics; the sector has become the market's pain trade.",
-      "headlines": [
-        "Chip Stocks Tumble After AI Leaders Call For Slowdown in AI Development - WSJ",
-        "Chip stocks were a safe AI play. Now they've turned into the market's pain trade. - MarketWatch"
-      ]
-    }
-  ]
+ "generated": "2026-10-19T17:24:06-07:00",
+ "generatedLabel": "Oct 19, 2026, 5:24 PM PT",
+ "source": "stockanalysis.com",
+ "note": "Only tickers with an identifiable catalyst are listed. Benzinga returned HTTP 403 to this run, so headlines come from stockanalysis.com.",
+ "items": [
+  {
+   "t": "SNDK",
+   "summary": "Shares rebounded about 5.5% as investors returned to memory and chip names after an 18% crash the prior week.",
+   "headlines": [
+    "Micron, SanDisk stocks jump after 15% and 18% crashes: what sparked the comeback? - Invezz",
+    "Why Micron, SanDisk, and SK Hynix Stocks Are Rising in Premarket Today after Last Week's Sell-Off - TipRanks"
+   ]
+  },
+  {
+   "t": "TSLA",
+   "summary": "Stock rose 3.8% with investors positioning ahead of Q3 earnings due Oct 21 and renewed SpaceX merger speculation.",
+   "headlines": [
+    "SpaceX, Tesla earnings to test Musk's AI spending ambitions as merger talk grows - Reuters",
+    "Here's How Much Tesla Stock Is Expected to Move After Earnings - Investopedia"
+   ]
+  },
+  {
+   "t": "MU",
+   "summary": "Rose 3.0% as semiconductor stocks rebounded from a broad selloff tied to doubts about AI spending.",
+   "headlines": [
+    "Micron stock is rebounding today: here's why - Invezz",
+    "Micron, SanDisk stocks jump after 15% and 18% crashes: what sparked the comeback? - Invezz"
+   ]
+  },
+  {
+   "t": "TSM",
+   "summary": "Up 1.8%, with coverage centred on record Q3 results and an upbeat outlook that held through the chip selloff.",
+   "headlines": [
+    "Opinion: The Most Important Number in Taiwan Semiconductor's Earnings Report Was 68% - The Motley Fool",
+    "The AI Sell-Off Continues-These 3 Stocks Keep Raising Guidance Anyway - MarketBeat"
+   ]
+  },
+  {
+   "t": "SMH",
+   "summary": "The semiconductor ETF gained 1.6% as chip stocks sprang back from a selloff that wiped out roughly $2 trillion in value.",
+   "headlines": [
+    "Micron and other chip stocks spring back to life after bruising selloff - MarketWatch",
+    "US chip stocks set to wipe out $2 trillion after latest selloff - Reuters"
+   ]
+  },
+  {
+   "t": "SMCI",
+   "summary": "Up 1.5% with no single driver named; the most recent company news is the appointment of a new chief financial officer.",
+   "headlines": [
+    "Super Micro appoints Mark Long as chief financial officer - Reuters",
+    "Super Micro Computer Stock Is 'Still Undervalued,' Says Rosenblatt. Here's Why - TipRanks"
+   ]
+  },
+  {
+   "t": "NVDA",
+   "summary": "Closed up 1.4% after Nvidia announced a record-breaking fault-tolerant quantum computing simulation.",
+   "headlines": [
+    "Nvidia Stock (NVDA) Rises on 'Record-Breaking' Quantum Computing Simulation - TipRanks",
+    "Nvidia wins fast-growing AI startup Modal for new central processors - Reuters"
+   ]
+  },
+  {
+   "t": "GOOG",
+   "summary": "Added 1.0% on renewed buying in large-cap tech and a positive analyst tone ahead of earnings.",
+   "headlines": [
+    "Why Alphabet is up 1.7% on Monday? - Invezz",
+    "Supreme Court rejects Google challenge to US patent agency review policy - Reuters"
+   ]
+  },
+  {
+   "t": "MSFT",
+   "summary": "Up 0.8% ahead of Oct 28 earnings, with a Morgan Stanley note flagging a high bar for the quarter.",
+   "headlines": [
+    "Microsoft Stock (MSFT) Has a High Bar to Jump Heading into Earnings, Says Morgan Stanley - TipRanks",
+    "Microsoft says AI agents are like insider threats as 'frontier models can't be trusted' - TechCrunch"
+   ]
+  },
+  {
+   "t": "QCOM",
+   "summary": "Up 0.8%; the standing catalyst is the split jury verdict in the Arm licensing dispute returned last week.",
+   "headlines": [
+    "Arm says jury found in favor of company vs. Qualcomm on four claims - TheFly",
+    "Qualcomm says jury found Arm breached license agreement - TheFly"
+   ]
+  },
+  {
+   "t": "INTU",
+   "summary": "Essentially flat (+0.1%); the live catalyst is the agreement to acquire revenue-management firm Sequence, announced Oct 15.",
+   "headlines": [
+    "Intuit Targets B2B Software Space With Sequence Acquisition - PYMNTS",
+    "Intuit signs agreement to acquire Sequence - TheFly"
+   ]
+  },
+  {
+   "t": "IONQ",
+   "summary": "Fell 1.6% on dilution concerns from a $2 billion equity offering alongside an agreement to acquire cybersecurity firm Elisity.",
+   "headlines": [
+    "IonQ (IONQ) Stock: $2B Raise and Elisity Deal Bring Major Dilution Risks - TipRanks",
+    "Quantum Stocks Sank Up to 9% in Tech Selloff. Can They Bounce Back This Week? - TipRanks"
+   ]
+  }
+ ]
 }
