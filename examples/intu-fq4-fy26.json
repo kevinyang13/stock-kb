@@ -1,0 +1,42 @@
+{
+ "company": "Intuit",
+ "ticker": "INTU",
+ "period": "FQ4 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 4354,
+ "revenue_yoy": 14,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 4354,
+   "yoy": 14,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 910,
+ "gross_profit": 3444,
+ "opex_total": 2676,
+ "opex_items": [
+  {
+   "name": "Selling & marketing / G&A",
+   "value": 1655
+  },
+  {
+   "name": "R&D",
+   "value": 857
+  },
+  {
+   "name": "Other operating",
+   "value": 164
+  }
+ ],
+ "operating_profit": 768,
+ "other": -228,
+ "tax": 177,
+ "net_profit": 363,
+ "width": 1700,
+ "height": 940
+}

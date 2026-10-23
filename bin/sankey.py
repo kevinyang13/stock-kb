@@ -37,9 +37,10 @@ def pct(v):
     return f"{v:+.0f}%" if v is not None else ""
 
 
-def validate(spec, rev, cor, gross, opex, opex_items, op, tax, other, net, tol=0.15):
+def validate(spec, rev, cor, gross, opex, opex_items, op, tax, other, net, tol=None):
     """Warn when the statement does not foot. Rounded inputs rarely balance
     exactly, so this reports drift rather than refusing to draw."""
+    tol = tol if tol is not None else max(0.15, 0.005 * abs(rev))
     issues = []
     seg_sum = sum(s["value"] for s in spec["segments"])
     checks = [
@@ -58,6 +59,7 @@ def validate(spec, rev, cor, gross, opex, opex_items, op, tax, other, net, tol=0
 
 def build(spec):
     cur, unit = spec.get("currency", "$"), spec.get("unit", "B")
+    dec = spec.get("decimals", 1)
     segs = spec["segments"]
     rev = spec["revenue"]
     cor = spec["cost_of_revenue"]
@@ -107,21 +109,25 @@ def build(spec):
 
     opex_leaf = []
     for i, item in enumerate(opex_items):
-        y = 0.46 + (i + 0.5) * (0.50 / max(len(opex_items), 1))
+        y = 0.52 + (i + 0.5) * (0.46 / max(len(opex_items), 1))
         iid = node(item["name"], COST, X["leaf"], min(y, 0.96))
         link(opex_id, iid, item["value"], COST_LINK)
         opex_leaf.append((iid, item))
 
-    other_node = tax_node = None
+    other_node = tax_node = othercost_node = None
     if other > 0:
         other_node = node("Interest & other", PROFIT, X["op"], 0.04)
         link(other_node, net_id, other, PROFIT_LINK)
     if tax > 0:
-        tax_node = node("Tax", COST, X["leaf"], 0.30)
+        tax_node = node("Tax", COST, X["leaf"], 0.26)
         link(op_id, tax_node, tax, COST_LINK)
-    link(op_id, net_id, op - max(tax, 0.0), PROFIT_LINK)
+    if other < 0:
+        # net interest expense -- a charge taken out of operating profit
+        othercost_node = node("Interest & other, net", COST, X["leaf"], 0.38)
+        link(op_id, othercost_node, -other, COST_LINK)
+    link(op_id, net_id, op - max(tax, 0.0) + min(other, 0.0), PROFIT_LINK)
 
-    DOM_TOP = 0.82          # sankey occupies the lower 82%; labels live above it
+    DOM_TOP = 0.77          # sankey occupies the lower 77%; stage labels live above it
     fig = go.Figure(go.Sankey(
         domain=dict(x=[0, 1], y=[0, DOM_TOP]),
         arrangement="fixed",
@@ -150,36 +156,42 @@ def build(spec):
         """node y (0=top, within domain) -> paper y (0=bottom, whole canvas)"""
         return (1.0 - node_y) * DOM_TOP
 
+    def m(v):
+        return money(v, unit, cur, dec)
+
     def yoy(v, suffix=" Y/Y"):
         return f"{pct(v)}{suffix}" if v is not None else ""
 
     for sid, s_ in zip(seg_ids, segs):
         label(X["segment"] - 0.015, py(ys[sid]), s_["name"],
-              [money(s_["value"], unit, cur), yoy(s_.get("yoy")), s_.get("note", "")],
+              [m(s_["value"]), yoy(s_.get("yoy")), s_.get("note", "")],
               color="#111", xa="right")
 
     label(X["revenue"], 0.895, "Revenue",
-          [money(rev, unit, cur), yoy(spec.get("revenue_yoy"))], color="#111", va="bottom")
+          [m(rev), yoy(spec.get("revenue_yoy"))], color="#111", va="bottom")
     label(X["gross"], 0.895, "Gross profit",
-          [money(gross, unit, cur), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
+          [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     label(X["gross"], py(ys[cor_id]) - 0.13, "Cost of revenue",
-          [f"({money(cor, unit, cur)})"], color=COST)
+          [f"({m(cor)})"], color=COST)
     label(X["op"], 0.895, "Operating profit",
-          [money(op, unit, cur), f"{op / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
-    label(X["op"], py(ys[opex_id]) - 0.12, "Operating expenses",
-          [f"({money(opex, unit, cur)})"], color=COST)
+          [m(op), f"{op / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
+    label(X["op"], 0.045, "Operating expenses",
+          [f"({m(opex)})"], color=COST)
     label(1.015, py(ys[net_id]), "Net profit",
-          [money(net, unit, cur), f"{net / rev * 100:.0f}% margin"], color=PROFIT, xa="left")
+          [m(net), f"{net / rev * 100:.0f}% margin"], color=PROFIT, xa="left")
 
     for item_id, item in opex_leaf:
         label(1.015, py(ys[item_id]), item["name"],
-              [f"({money(item['value'], unit, cur)})",
+              [f"({m(item['value'])})",
                f"{item['value'] / rev * 100:.0f}% of revenue"], color=COST, xa="left")
     if tax > 0:
-        label(1.015, py(ys[tax_node]), "Tax", [f"({money(tax, unit, cur)})"], color=COST, xa="left")
+        label(1.015, py(ys[tax_node]), "Tax", [f"({m(tax)})"], color=COST, xa="left")
+    if other < 0:
+        label(1.015, py(ys[othercost_node]), "Interest & other, net",
+              [f"({m(-other)})", f"{-other / rev * 100:.0f}% of revenue"], color=COST, xa="left")
     if other > 0:
         label(X["op"], 1.015, "Interest & other",
-              [money(other, unit, cur)], color=PROFIT, va="bottom")
+              [m(other)], color=PROFIT, va="bottom")
 
     fig.update_layout(
         title=dict(y=0.995, yanchor='top', text=f"<b>{spec['company']} {spec['period']} Income Statement</b>",
@@ -232,9 +244,11 @@ def build_loss(spec):
         seg_ids.append(node(sg["name"], sg.get("color", NEUTRAL), X["segment"], (i + 0.5) / n))
 
     rev_id = node("Revenue", NEUTRAL, X["revenue"], 0.42)
-    gross_id = node("Gross profit", PROFIT, X["gross"], 0.22)
-    cor_id = node("Cost of revenue", COST, X["gross"], 0.62)
-    loss_id = node("Net loss", COST, X["gross"], 0.93)
+    gross_id = node("Gross profit", PROFIT, X["gross"], 0.18)
+    cor_id = node("Cost of revenue", COST, X["gross"], 0.70)
+    # the loss gets its own column: when it dwarfs revenue it would
+    # otherwise swamp the gross/cost column and bury their labels
+    loss_id = node("Net loss", COST, 0.37, 0.72)
     pool_id = node("Costs & charges", COST, X["op"], 0.42)
 
     links = []
@@ -257,7 +271,7 @@ def build_loss(spec):
         link(pool_id, lid, item["value"], COST_LINK)
         leaf_ids.append((lid, item))
 
-    DOM_TOP = 0.82
+    DOM_TOP = 0.77
     fig = go.Figure(go.Sankey(
         domain=dict(x=[0, 1], y=[0, DOM_TOP]),
         arrangement="fixed",
@@ -296,10 +310,10 @@ def build_loss(spec):
           color="#111", va="bottom")
     label(X["gross"], 0.895, "Gross profit",
           [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
-    label(X["gross"], py(ys[cor_id]) - 0.115, "Cost of revenue", [f"({m(cor)})"], color=COST)
-    label(X["gross"], py(ys[loss_id]) - 0.125, "Net loss",
+    label(X["gross"], py(ys[cor_id]) - 0.135, "Cost of revenue", [f"({m(cor)})"], color=COST)
+    label(0.355, py(ys[loss_id]), "Net loss",
           [f"({m(net_loss)})", f"{net_loss / rev * 100:.0f}% of revenue", "funds the gap"],
-          color=COST)
+          color=COST, xa="right")
     label(X["op"], 0.895, "Costs & charges", [f"({m(spent)})"], color=COST, va="bottom")
 
     for lid, item in leaf_ids:

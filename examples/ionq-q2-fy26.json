@@ -1,0 +1,44 @@
+{
+ "company": "IonQ",
+ "ticker": "IONQ",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 80.1,
+ "revenue_yoy": 287,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 80.1,
+   "yoy": 287,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 59.0,
+ "gross_profit": 21.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 158.1
+  },
+  {
+   "name": "Sales, general & admin",
+   "value": 143.6
+  },
+  {
+   "name": "Other operating",
+   "value": 46.1
+  }
+ ],
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 1542.2
+  }
+ ],
+ "net_loss": 1868.9,
+ "width": 1700,
+ "height": 940
+}

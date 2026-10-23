@@ -1,0 +1,38 @@
+{
+ "company": "Super Micro",
+ "ticker": "SMCI",
+ "period": "FQ4 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 11120,
+ "revenue_yoy": 93,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 11120,
+   "yoy": 93,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 9177,
+ "gross_profit": 1943,
+ "opex_total": 455,
+ "opex_items": [
+  {
+   "name": "SG&A",
+   "value": 253
+  },
+  {
+   "name": "R&D",
+   "value": 202
+  }
+ ],
+ "operating_profit": 1488,
+ "other": -20,
+ "tax": 290,
+ "net_profit": 1178,
+ "width": 1700,
+ "height": 940
+}

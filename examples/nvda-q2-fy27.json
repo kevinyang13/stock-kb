@@ -1,0 +1,38 @@
+{
+ "company": "NVIDIA",
+ "ticker": "NVDA",
+ "period": "Q2 FY27",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 96.2,
+ "revenue_yoy": 106,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 96.2,
+   "yoy": 106,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 24.1,
+ "gross_profit": 72.1,
+ "opex_total": 8.4,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 7.1
+  },
+  {
+   "name": "SG&A",
+   "value": 1.4
+  }
+ ],
+ "operating_profit": 63.7,
+ "other": 7.8,
+ "tax": 11.8,
+ "net_profit": 59.7,
+ "width": 1700,
+ "height": 940
+}

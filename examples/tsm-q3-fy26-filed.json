@@ -1,0 +1,34 @@
+{
+ "company": "TSMC",
+ "ticker": "TSM",
+ "period": "Q3 FY26",
+ "currency": "NT$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 1494.2,
+ "revenue_yoy": 51,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 1494.2,
+   "yoy": 51,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 501.9,
+ "gross_profit": 992.4,
+ "opex_total": 116.0,
+ "opex_items": [
+  {
+   "name": "Operating expenses",
+   "value": 115.9
+  }
+ ],
+ "operating_profit": 876.4,
+ "other": 34.6,
+ "tax": 148.0,
+ "net_profit": 763.1,
+ "width": 1700,
+ "height": 940
+}

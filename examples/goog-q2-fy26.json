@@ -1,0 +1,38 @@
+{
+ "company": "Alphabet",
+ "ticker": "GOOG",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 119.8,
+ "revenue_yoy": 24,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 119.8,
+   "yoy": 24,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 45.9,
+ "gross_profit": 73.9,
+ "opex_total": 33.1,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 18.2
+  },
+  {
+   "name": "SG&A",
+   "value": 14.9
+  }
+ ],
+ "operating_profit": 40.8,
+ "other": 98.0,
+ "tax": 26.6,
+ "net_profit": 112.2,
+ "width": 1700,
+ "height": 940
+}

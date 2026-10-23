@@ -1,0 +1,38 @@
+{
+ "company": "Qualcomm",
+ "ticker": "QCOM",
+ "period": "FQ3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 9947,
+ "revenue_yoy": -4,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 9947,
+   "yoy": -4,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 4670,
+ "gross_profit": 5277,
+ "opex_total": 3434,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 2607
+  },
+  {
+   "name": "SG&A",
+   "value": 827
+  }
+ ],
+ "operating_profit": 1843,
+ "other": 619,
+ "tax": 460,
+ "net_profit": 2002,
+ "width": 1700,
+ "height": 940
+}

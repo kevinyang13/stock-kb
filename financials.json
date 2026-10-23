@@ -1,44 +1,117 @@
 {
- "generated": "2026-10-22T20:03:15-07:00",
+ "generated": "2026-10-22T20:13:47-07:00",
  "generatedLabel": "Oct 22, 2026",
- "note": "Income statement flow charts built from each company's own filed results. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap.",
+ "note": "Most recent reported quarter for each name. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. SMH is an ETF and has no income statement.",
  "items": [
   {
-   "t": "CRWV",
-   "company": "CoreWeave",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "reported Aug 2026",
-   "img": "assets/financials/CRWV-Q2-FY26.png",
-   "source": "CoreWeave Q2 2026 results, investor relations",
-   "sourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/",
+   "t": "NVDA",
+   "company": "NVIDIA",
+   "period": "Q2 FY27",
+   "periodEnd": "quarter ended Jul 26, 2026",
+   "reported": "",
+   "img": "assets/financials/NVDA-Q2-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/nvda/financials/income-statement/?p=quarterly",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$2,575M",
-     "s": "+112% Y/Y"
+     "v": "$96.2B",
+     "s": "+106% Y/Y"
     },
     {
      "k": "Gross margin",
+     "v": "75%",
+     "s": "$72.1B"
+    },
+    {
+     "k": "Operating margin",
      "v": "66%",
-     "s": "$1,696M"
+     "s": "$63.7B"
     },
     {
-     "k": "Operating loss",
-     "v": "($49M)",
-     "s": "(2%) margin"
-    },
-    {
-     "k": "Net loss",
-     "v": "($626M)",
-     "s": "(24%) margin"
+     "k": "Net profit",
+     "v": "$59.7B",
+     "s": "62% margin"
     }
    ],
    "notes": [
-    "Loss-making, so this chart uses the loss layout: revenue plus the net loss fund every cost line. Gross profit $1,696M + net loss $626M = $2,322M of charges, which balances exactly.",
-    "The operating loss is only $49M. The net loss is $626M — the gap is financing. Interest and other netted to $515M (gross interest expense $640M against $125M other income), more than ten times the operating loss.",
-    "Technology & infrastructure alone is $1,507M, 59% of revenue, which is what turns a 66% gross margin into an operating loss.",
-    "Revenue backlog was roughly $104B at June 30, with more than $25B of net new commitments added in early Q3. Full-year 2026 guidance is $12.4-13.2B revenue against $35-39B of capex."
+    "Revenue more than doubled year over year and operating margin is 66%.",
+    "Operating expenses are $8.4B — under 9% of revenue — so almost all gross profit reaches operating profit.",
+    "$7.8B of interest and other income sits above the tax line, on top of the operating result."
+   ]
+  },
+  {
+   "t": "QCOM",
+   "company": "Qualcomm",
+   "period": "FQ3 FY26",
+   "periodEnd": "quarter ended Jun 28, 2026",
+   "reported": "",
+   "img": "assets/financials/QCOM-FQ3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/qcom/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$9,947M",
+     "s": "-4% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "53%",
+     "s": "$5,277M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "19%",
+     "s": "$1,843M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$2,002M",
+     "s": "20% margin"
+    }
+   ],
+   "notes": [
+    "The only favorite with revenue down year over year.",
+    "R&D is $2,607M, 26% of revenue — more than three times SG&A.",
+    "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line."
+   ]
+  },
+  {
+   "t": "GOOG",
+   "company": "Alphabet",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/GOOG-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/goog/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$119.8B",
+     "s": "+24% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "62%",
+     "s": "$73.9B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "34%",
+     "s": "$40.8B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$112.2B",
+     "s": "94% margin"
+    }
+   ],
+   "notes": [
+    "Read the net margin carefully. 94% is not an operating result — a $99.0B gain on sale of investments sits in the interest and other line.",
+    "Operating profit was $40.8B on a 34% margin. That is the number comparable to the other statements here.",
+    "R&D of $18.2B is 15% of revenue."
    ]
   },
   {
@@ -46,7 +119,7 @@
    "company": "Micron Technology",
    "period": "FQ4 FY26",
    "periodEnd": "quarter ended Sep 3, 2026",
-   "reported": "reported Sep 30, 2026",
+   "reported": "",
    "img": "assets/financials/MU-FQ4-FY26.png",
    "source": "Micron Form 8-K, Q4 FY26 press release",
    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm",
@@ -74,45 +147,308 @@
    ],
    "notes": [
     "Core Data Center is the swing factor: $18.0B, up 1,041% Y/Y, now a third of revenue.",
-    "Cost of revenue is only $7.2B of $54.2B — an 87% gross margin, extraordinary for a memory maker and the clearest sign of where pricing sits in this cycle.",
-    "Operating expenses total $3.3B, just 6% of revenue, so almost all gross profit drops to operating profit.",
-    "Full fiscal year 2026: $133.19B revenue and $84.97B net income. Q1 FY27 guidance is ~$61.5B ± $1.5B."
+    "Cost of revenue is only $7.2B of $54.2B — an 87% gross margin, extraordinary for a memory maker.",
+    "The only chart here with a real segment split, taken from the 8-K's business unit table.",
+    "Full fiscal year 2026: $133.19B revenue and $84.97B net income."
+   ]
+  },
+  {
+   "t": "SNDK",
+   "company": "SanDisk",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jul 3, 2026",
+   "reported": "",
+   "img": "assets/financials/SNDK-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/sndk/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$8,965M",
+     "s": "+372% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "85%",
+     "s": "$7,582M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "78%",
+     "s": "$7,035M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$6,903M",
+     "s": "77% margin"
+    }
+   ],
+   "notes": [
+    "The same memory cycle as Micron, in an even more extreme form: cost of revenue is only $1,383M against $8,965M of revenue.",
+    "Operating expenses total $547M — 6% of revenue.",
+    "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one."
    ]
   },
   {
    "t": "TSM",
    "company": "TSMC",
    "period": "Q3 FY26",
-   "periodEnd": "calendar Q3 2026",
-   "reported": "reference example",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
    "img": "assets/financials/TSM-Q3-FY26.png",
-   "source": "Transcribed from the App Economy Insights reference chart",
-   "sourceUrl": "",
+   "source": "stockanalysis.com quarterly income statement (reported in New Taiwan dollars)",
+   "sourceUrl": "https://stockanalysis.com/stocks/tsm/financials/income-statement/?p=quarterly",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$46.7B",
-     "s": "+41% Y/Y"
+     "v": "NT$1,494.2B",
+     "s": "+51% Y/Y"
     },
     {
      "k": "Gross margin",
      "v": "66%",
-     "s": "$31.0B"
+     "s": "NT$992.4B"
     },
     {
      "k": "Operating margin",
      "v": "59%",
-     "s": "$27.4B"
+     "s": "NT$876.4B"
     },
     {
      "k": "Net profit",
-     "v": "$23.9B",
+     "v": "NT$763.1B",
      "s": "51% margin"
     }
    ],
    "notes": [
-    "Included as the worked example used to verify the chart generator against a known-good image.",
-    "Its own published figures do not foot: $27.4B operating + $1.1B other − $4.9B tax = $23.6B, against the $23.9B printed."
+    "Reported in New Taiwan dollars, so the absolute figures are not comparable with the USD statements here. The margins are.",
+    "The source does not break operating expenses into R&D and SG&A, so they appear as a single line.",
+    "This replaces the earlier entry, which was transcribed from the App Economy Insights reference image rather than filed figures."
+   ]
+  },
+  {
+   "t": "TSLA",
+   "company": "Tesla",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/TSLA-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/tsla/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$28,046M",
+     "s": "flat Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "20%",
+     "s": "$5,494M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "2.6%",
+     "s": "$718M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$787M",
+     "s": "2.8% margin"
+    }
+   ],
+   "notes": [
+    "The thinnest margins of any favorite: cost of revenue is $22,552M of $28,046M.",
+    "Revenue was essentially flat year over year (-0.2%).",
+    "Operating profit of $718M is smaller than Micron's quarterly tax bill."
+   ]
+  },
+  {
+   "t": "INTU",
+   "company": "Intuit",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jul 31, 2026",
+   "reported": "",
+   "img": "assets/financials/INTU-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/intu/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$4,354M",
+     "s": "+14% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "79%",
+     "s": "$3,444M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "18%",
+     "s": "$768M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$363M",
+     "s": "8% margin"
+    }
+   ],
+   "notes": [
+    "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M — 61% of revenue.",
+    "Selling, marketing and G&A alone is $1,655M, 38% of revenue.",
+    "Net profit is less than half of operating profit: $228M of net interest and other expense sits below the operating line, then $177M of tax.",
+    "Seasonality matters for Intuit — the fiscal fourth quarter is not its tax-season peak."
+   ]
+  },
+  {
+   "t": "SMCI",
+   "company": "Super Micro",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/SMCI-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/smci/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$11,120M",
+     "s": "+93% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "17%",
+     "s": "$1,943M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "13%",
+     "s": "$1,488M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,178M",
+     "s": "11% margin"
+    }
+   ],
+   "notes": [
+    "The lowest gross margin of any favorite at 17% — this is a systems assembler, not a chip designer.",
+    "Operating expenses are only $455M, 4% of revenue, so most of the thin gross profit survives to operating profit.",
+    "Revenue nearly doubled year over year."
+   ]
+  },
+  {
+   "t": "IONQ",
+   "company": "IonQ",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/IONQ-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/ionq/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$80.1M",
+     "s": "+287% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "26%",
+     "s": "$21.0M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($326.7M)",
+     "s": "(408%) margin"
+    },
+    {
+     "k": "Net loss",
+     "v": "($1,868.9M)",
+     "s": "(2,333%) margin"
+    }
+   ],
+   "notes": [
+    "Uses the loss layout: revenue plus the net loss fund every cost line.",
+    "The net loss is roughly 23 times revenue. R&D alone is $158.1M, 197% of revenue.",
+    "Most of the loss is not operating. The operating loss is $326.7M; the rest comes from a $1.5B non-operating charge, which the source attributes to the other non-operating line.",
+    "The tax line was a small benefit, so it is folded into the non-operating line rather than drawn as a cost."
+   ]
+  },
+  {
+   "t": "MSFT",
+   "company": "Microsoft",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/MSFT-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/msft/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$90.0B",
+     "s": "+18% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "67%",
+     "s": "$60.5B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "45%",
+     "s": "$40.6B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$35.8B",
+     "s": "40% margin"
+    }
+   ],
+   "notes": [
+    "R&D ($10.0B) and SG&A ($9.9B) are almost exactly equal.",
+    "A 45% operating margin at $90B of quarterly revenue.",
+    "The most balanced statement of the group — no single line dominates."
+   ]
+  },
+  {
+   "t": "CRWV",
+   "company": "CoreWeave",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/CRWV-Q2-FY26.png",
+   "source": "CoreWeave Q2 2026 results, investor relations",
+   "sourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$2,575M",
+     "s": "+112% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "66%",
+     "s": "$1,696M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($49M)",
+     "s": "(2%) margin"
+    },
+    {
+     "k": "Net loss",
+     "v": "($626M)",
+     "s": "(24%) margin"
+    }
+   ],
+   "notes": [
+    "Loss layout. Gross profit $1,696M + net loss $626M = $2,322M of charges, which balances exactly.",
+    "The operating loss is only $49M. The net loss is $626M — the gap is financing, with interest and other netting to $515M.",
+    "Technology & infrastructure alone is $1,507M, 59% of revenue.",
+    "Revenue backlog was roughly $104B at June 30; FY26 guidance is $12.4-13.2B revenue against $35-39B of capex."
    ]
   }
  ]

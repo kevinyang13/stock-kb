@@ -1,0 +1,38 @@
+{
+ "company": "SanDisk",
+ "ticker": "SNDK",
+ "period": "FQ4 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 8965,
+ "revenue_yoy": 372,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 8965,
+   "yoy": 372,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 1383,
+ "gross_profit": 7582,
+ "opex_total": 547,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 348
+  },
+  {
+   "name": "SG&A",
+   "value": 197
+  }
+ ],
+ "operating_profit": 7035,
+ "other": 814,
+ "tax": 946,
+ "net_profit": 6903,
+ "width": 1700,
+ "height": 940
+}
