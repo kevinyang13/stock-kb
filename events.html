@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="mast">
+  <h1>HEATMAP</h1>
+  <p>what is scheduled</p>
+  <nav class="tabs">
+    <a class="tab" href="heatmap.html">Heatmap</a>
+    <a class="tab" href="catalysts.html">Catalysts</a>
+    <a class="tab" href="brief.html">Morning Brief</a>
+    <a class="tab" href="events.html">Events</a>
+    <a class="tab" href="financials.html">Financials</a>
+  </nav>
+</header>
+
+<div class="wrap" id="events">
+  <div class="bar">
+    <select id="ev-range" aria-label="Calendar range">
+      <option value="week">This week</option>
+      <option value="month" selected>This month</option>
+    </select>
+    <select id="ev-kind" aria-label="Event type">
+      <option value="all">All events</option>
+      <option value="earnings">Earnings</option>
+      <option value="exdiv">Dividends</option>
+      <option value="macro">Macro + Fed</option>
+      <option value="fav">Favorites only</option>
+    </select>
+    <span class="spacer"></span>
+    <div class="status" id="ev-status"></div>
+  </div>
+  <div id="ev-body"></div>
+</div>
+
+<footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
+
+<script src="assets/site.js"></script>
+<script>
+Site.nav();
+
+(function () {
+  var esc = Site.esc;
+  var evData = null, evLoaded = false;
+  var DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  function ymd(d) {
+    return d.getFullYear() + "-" +
+           ("0" + (d.getMonth() + 1)).slice(-2) + "-" +
+           ("0" + d.getDate()).slice(-2);
+  }
+
+  // Dates in the file are plain calendar days. Parsing them by hand keeps
+  // them off the UTC timeline, where an evening viewer would see them
+  // land a day early.
+  function parseDay(iso) {
+    var p = String(iso).split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+
+  function evKind(e) {
+    var want = document.getElementById("ev-kind").value;
+    if (want === "all") return true;
+    if (want === "fav") return !!e.fav;
+    if (want === "macro") return e.type === "macro" || e.type === "fed";
+    return e.type === want;
+  }
+
+  function evChip(e) {
+    var label = e.ticker
+      ? '<span class="s">' + esc(e.ticker) + "</span> " +
+        (e.type === "earnings" ? "earnings" :
+         e.type === "exdiv" ? "ex-div" :
+         esc(e.title.replace(e.ticker, "").trim()))     // corporate: say what it is
+      : esc(e.title);
+    return '<div class="ev ' + esc(e.type) + (e.fav ? " fav" : "") + '" title="' +
+           esc(e.title) + '">' + label + "</div>";
+  }
+
+  function renderMonth(events, today) {
+    var first = new Date(today.getFullYear(), today.getMonth(), 1);
+    var start = new Date(first);
+    start.setDate(1 - first.getDay());              // back up to Sunday
+
+    var byDay = {};
+    events.forEach(function (e) {
+      (byDay[e.date] = byDay[e.date] || []).push(e);
+    });
+
+    var html = '<div class="cal-scroll"><div class="cal">' +
+      DOW.map(function (d) { return '<div class="dow">' + d + "</div>"; }).join("");
+
+    for (var i = 0; i < 42; i++) {
+      var day = new Date(start);
+      day.setDate(start.getDate() + i);
+      var key = ymd(day);
+      var out = day.getMonth() !== today.getMonth();
+      var isToday = key === ymd(today);
+
+      html += '<div class="day' + (out ? " out" : "") + (isToday ? " today" : "") + '">' +
+        '<span class="d">' + day.getDate() + "</span>" +
+        (byDay[key] || []).map(evChip).join("") +
+      "</div>";
+    }
+    return html + "</div></div>";
+  }
+
+  function renderWeek(events, today) {
+    var start = new Date(today);
+    start.setDate(today.getDate() - today.getDay());
+
+    var byDay = {};
+    events.forEach(function (e) {
+      (byDay[e.date] = byDay[e.date] || []).push(e);
+    });
+
+    var html = '<div class="weeklist">';
+    for (var i = 0; i < 7; i++) {
+      var day = new Date(start);
+      day.setDate(start.getDate() + i);
+      var key = ymd(day);
+      var items = byDay[key] || [];
+
+      html += '<div class="wday' + (key === ymd(today) ? " today" : "") + '">' +
+        '<span class="lab">' + DOW[day.getDay()] + " " +
+          (day.getMonth() + 1) + "/" + day.getDate() + "</span>" +
+        '<span class="items">' +
+          (items.length ? items.map(evChip).join("") : '<span class="none">-</span>') +
+        "</span></div>";
+    }
+    return html + "</div>";
+  }
+
+  function drawEvents() {
+    if (!evData) return;
+
+    var today = new Date();
+    var shown = (evData.events || []).filter(evKind);
+    var range = document.getElementById("ev-range").value;
+
+    document.getElementById("ev-body").innerHTML =
+      (range === "week" ? renderWeek(shown, today) : renderMonth(shown, today)) +
+      '<div class="legend">' +
+        '<span class="e">Earnings</span><span class="d">Ex-dividend</span>' +
+        '<span class="f">Fed</span><span class="m">Macro</span>' +
+      "</div>";
+
+    var counts = { earnings: 0, exdiv: 0, fed: 0, macro: 0 };
+    (evData.events || []).forEach(function (e) {
+      if (counts[e.type] !== undefined) counts[e.type]++;
+    });
+    document.getElementById("ev-status").innerHTML =
+      "<b>" + esc(evData.generatedLabel || "") + "</b><br>" +
+      counts.earnings + " earnings &middot; " + counts.exdiv + " ex-dividend &middot; " +
+      (counts.fed + counts.macro) + " macro/Fed";
+  }
+  function loadEvents() {
+    if (evLoaded) { drawEvents(); return; }
+    evLoaded = true;
+
+    fetch("events.json", { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("events.json " + r.status);
+        return r.json();
+      })
+      .then(function (doc) { evData = doc; drawEvents(); })
+      .catch(function (e) {
+        evLoaded = false;
+        var st = document.getElementById("ev-status");
+        st.className = "status bad";
+        st.innerHTML = "<b>could not load events.json</b><br>" + esc(e.message) +
+          " -- this tab needs the page served over http, not opened from disk";
+      });
+  }
+
+  document.getElementById("ev-range").addEventListener("change", drawEvents);
+  document.getElementById("ev-kind").addEventListener("change", drawEvents);
+
+  loadEvents();
+})();
+</script>
+</body>
+</html>

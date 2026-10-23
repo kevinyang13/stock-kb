@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalysts</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="mast">
+  <h1>HEATMAP</h1>
+  <p>what moved, and why</p>
+  <nav class="tabs">
+    <a class="tab" href="heatmap.html">Heatmap</a>
+    <a class="tab" href="catalysts.html">Catalysts</a>
+    <a class="tab" href="brief.html">Morning Brief</a>
+    <a class="tab" href="events.html">Events</a>
+    <a class="tab" href="financials.html">Financials</a>
+  </nav>
+</header>
+
+<div class="wrap" id="news">
+  <div class="bar">
+    <div class="status" id="news-status"></div>
+  </div>
+  <div class="cards" id="cards"></div>
+</div>
+
+<footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
+
+<script src="assets/site.js"></script>
+<script>
+Site.nav();
+
+(function () {
+  var esc = Site.esc, sectorLabel = Site.sectorLabel;
+  var statusEl = document.getElementById("news-status");
+  var cards = document.getElementById("cards");
+  var meta = {}, doc = null, quotes = {};
+
+  function card(n) {
+    var q = quotes[n.t];
+    var move = q && q.pct !== null && q.pct !== undefined
+      ? '<span class="move ' + (q.pct >= 0 ? "up" : "down") + '">' +
+        (q.pct >= 0 ? "+" : "") + q.pct.toFixed(2) + "%</span>"
+      : "";
+    var m = meta[n.t];
+    return '<article class="card">' +
+      "<h3>" +
+        '<a href="https://www.tradingview.com/symbols/' + encodeURIComponent(n.t) +
+        '/" target="_blank" rel="noopener noreferrer">' + esc(n.t) + "</a>" + move +
+      "</h3>" +
+      '<div class="sector">' + esc(m ? sectorLabel(m) : "") + "</div>" +
+      "<p>" + esc(n.summary || "") + "</p>" +
+      (n.headlines && n.headlines.length
+        ? "<ul>" + n.headlines.map(function (h) { return "<li>" + esc(h) + "</li>"; }).join("") + "</ul>"
+        : "") +
+    "</article>";
+  }
+
+  function render() {
+    cards.innerHTML = (doc.items || []).map(card).join("");
+  }
+
+  statusEl.textContent = "loading catalysts...";
+
+  Promise.all([
+    Site.watchlist(),
+    fetch("news.json", { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("news.json " + r.status);
+      return r.json();
+    }),
+  ]).then(function (both) {
+    both[0].symbols.forEach(function (s) { meta[s.t] = s; });
+    doc = both[1];
+    var items = doc.items || [];
+    if (!items.length) {
+      statusEl.innerHTML = "<b>No catalysts</b><br>nothing moved on news in the last run";
+      return;
+    }
+    statusEl.innerHTML = "<b>" + esc(doc.generatedLabel || doc.generated || "") + "</b>" +
+      "<br>" + items.length + " with a catalyst &middot; source: " + esc(doc.source || "");
+    render();
+
+    // day moves for just these tickers, then redraw
+    var syms = items.map(function (n) { return n.t; });
+    Site.fromStockAnalysis(syms, function (sym, price, pct) {
+      quotes[sym] = { price: price, pct: pct };
+    }, function () {}).then(render);
+  }).catch(function (e) {
+    statusEl.className = "status bad";
+    statusEl.innerHTML = "<b>could not load catalysts</b><br>" + esc(e.message) +
+      " -- this page needs to be served over http, not opened from disk";
+  });
+})();
+</script>
+</body>
+</html>

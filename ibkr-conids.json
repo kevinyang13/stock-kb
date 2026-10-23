@@ -1,0 +1,512 @@
+{
+ "note": "IBKR contract ids (conid) per heatmap ticker. Resolved via IBKR search_contracts, 2026-09-28. Used as contract_id for get_price_snapshot / get_price_history / get_company_connections, and as contract_id_ex (stringified) for watchlists.",
+ "generated": "2026-09-28",
+ "ibkrWatchlist": {
+  "id": "100",
+  "name": "Stock KB Heatmap"
+ },
+ "symbols": {
+  "AAPL": {
+   "conid": 265598,
+   "ex": "NASDAQ",
+   "desc": "APPLE INC"
+  },
+  "ADBE": {
+   "conid": 265768,
+   "ex": "NASDAQ",
+   "desc": "ADOBE INC"
+  },
+  "AIQ": {
+   "conid": 317792273,
+   "ex": "NASDAQ",
+   "desc": "GLOBAL X ART INTEL & TECH"
+  },
+  "AMD": {
+   "conid": 4391,
+   "ex": "NASDAQ",
+   "desc": "ADVANCED MICRO DEVICES"
+  },
+  "AMZN": {
+   "conid": 3691937,
+   "ex": "NASDAQ",
+   "desc": "AMAZON.COM INC"
+  },
+  "ARKQ": {
+   "conid": 168647313,
+   "ex": "BATS",
+   "desc": "ARK AUTONOMOUS TECH & ROBOT"
+  },
+  "ARQQ": {
+   "conid": 731077882,
+   "ex": "NASDAQ",
+   "desc": "ARQIT QUANTUM INC"
+  },
+  "ARTY": {
+   "conid": 324062421,
+   "ex": "ARCA",
+   "desc": "ISHARES FUTURE AI & TECH ETF"
+  },
+  "ASML": {
+   "conid": 117902840,
+   "ex": "NASDAQ",
+   "desc": "ASML HOLDING NV-NY REG SHS"
+  },
+  "ASTS": {
+   "conid": 480745767,
+   "ex": "NASDAQ",
+   "desc": "AST SPACEMOBILE INC"
+  },
+  "AVGO": {
+   "conid": 313130367,
+   "ex": "NASDAQ",
+   "desc": "BROADCOM INC"
+  },
+  "BA": {
+   "conid": 4762,
+   "ex": "NYSE",
+   "desc": "BOEING CO/THE"
+  },
+  "BCII": {
+   "conid": 302197415,
+   "ex": "PINK",
+   "desc": "BCII ENTERPRISES INC",
+   "note": "PINK sheets - verify this is the intended BCII"
+  },
+  "BITF": {
+   "conid": null,
+   "note": "UNRESOLVED - only BITFN on IBKR VALUE pseudo-exchange (non-tradable line), no live US listing returned"
+  },
+  "BITO": {
+   "conid": 521525019,
+   "ex": "ARCA",
+   "desc": "PROSHARES BITCOIN ETF-USD"
+  },
+  "BITW": {
+   "conid": 458553513,
+   "ex": "ARCA",
+   "desc": "BITWISE 10 CRYPTO INDEX ETF"
+  },
+  "BKSY": {
+   "conid": 725797137,
+   "ex": "NYSE",
+   "desc": "BLACKSKY TECHNOLOGY INC"
+  },
+  "BLOK": {
+   "conid": 302902491,
+   "ex": "ARCA",
+   "desc": "AMPLIFY BLOCKCHAIN TECH ETF"
+  },
+  "BOTZ": {
+   "conid": 247691382,
+   "ex": "NASDAQ",
+   "desc": "GLOBAL X ROBOTICS & ARTIFICIAL INTEL"
+  },
+  "CAN": {
+   "conid": 391525016,
+   "ex": "NASDAQ",
+   "desc": "CANAAN INC."
+  },
+  "CCXI": {
+   "conid": 852646546,
+   "ex": "NASDAQ",
+   "desc": "CHURCHILL CAPITAL CORP-CL A"
+  },
+  "CLBR": {
+   "conid": 865766229,
+   "ex": "NYSE",
+   "desc": "COLOMBIER ACQ III-CL A"
+  },
+  "CLSK": {
+   "conid": 395179962,
+   "ex": "NASDAQ",
+   "desc": "CLEANSPARK INC"
+  },
+  "COHR": {
+   "conid": 584127832,
+   "ex": "NYSE",
+   "desc": "COHERENT CORP"
+  },
+  "COIN": {
+   "conid": 481691285,
+   "ex": "NASDAQ",
+   "desc": "COINBASE GLOBAL INC -CLASS A"
+  },
+  "CRM": {
+   "conid": 29624264,
+   "ex": "NYSE",
+   "desc": "SALESFORCE INC"
+  },
+  "CRWV": {
+   "conid": 771759702,
+   "ex": "NASDAQ",
+   "desc": "COREWEAVE INC-CL A"
+  },
+  "CSCO": {
+   "conid": 268084,
+   "ex": "NASDAQ",
+   "desc": "CISCO SYSTEMS INC"
+  },
+  "DDOG": {
+   "conid": 383858515,
+   "ex": "NASDAQ",
+   "desc": "DATADOG INC - CLASS A"
+  },
+  "DELL": {
+   "conid": 346218218,
+   "ex": "NYSE",
+   "desc": "DELL TECHNOLOGIES -C"
+  },
+  "DRAM": {
+   "conid": 870556708,
+   "ex": "BATS",
+   "desc": "ROUNDHILL MEMORY ETF"
+  },
+  "DXYZ": {
+   "conid": 692783792,
+   "ex": "NYSE",
+   "desc": "DESTINY TECH100 INC"
+  },
+  "FLY": {
+   "conid": 804733304,
+   "ex": "NASDAQ",
+   "desc": "FIREFLY AEROSPACE INC"
+  },
+  "GBTC": {
+   "conid": 349966059,
+   "ex": "ARCA",
+   "desc": "GRAYSCALE BITCOIN TRUST ETF"
+  },
+  "GE": {
+   "conid": 498843743,
+   "ex": "NYSE",
+   "desc": "GENERAL ELECTRIC"
+  },
+  "GOOG": {
+   "conid": 208813720,
+   "ex": "NASDAQ",
+   "desc": "ALPHABET INC-CL C"
+  },
+  "HD": {
+   "conid": 7930,
+   "ex": "NYSE",
+   "desc": "HOME DEPOT INC"
+  },
+  "HIVE": {
+   "conid": 641568851,
+   "ex": "NASDAQ",
+   "desc": "HIVE DIGITAL TECHNOLOGIES LT"
+  },
+  "HPE": {
+   "conid": 209411798,
+   "ex": "NYSE",
+   "desc": "HEWLETT PACKARD ENTERPRISE"
+  },
+  "HQ": {
+   "conid": 866512671,
+   "ex": "NASDAQ",
+   "desc": "HORIZON QUANTUM HOLDING-CL A"
+  },
+  "HUMN": {
+   "conid": 794633154,
+   "ex": "BATS",
+   "desc": "ROUNDHILL HUMANOID ROBOTICS"
+  },
+  "HUT": {
+   "conid": 669228291,
+   "ex": "NASDAQ",
+   "desc": "HUT 8 CORP"
+  },
+  "IBIT": {
+   "conid": 677037673,
+   "ex": "NASDAQ",
+   "desc": "ISHARES BITCOIN TRUST ETF"
+  },
+  "IBM": {
+   "conid": 8314,
+   "ex": "NYSE",
+   "desc": "INTL BUSINESS MACHINES CORP"
+  },
+  "IGV": {
+   "conid": 12658199,
+   "ex": "BATS",
+   "desc": "ISHARES EXPANDED TECH-SOFTWARE"
+  },
+  "INFQ": {
+   "conid": 854083840,
+   "ex": "NYSE",
+   "desc": "INFLEQTION INC"
+  },
+  "INTC": {
+   "conid": 270639,
+   "ex": "NASDAQ",
+   "desc": "INTEL CORP"
+  },
+  "INTU": {
+   "conid": 270662,
+   "ex": "NASDAQ",
+   "desc": "INTUIT INC"
+  },
+  "IONQ": {
+   "conid": 517593749,
+   "ex": "NYSE",
+   "desc": "IONQ INC"
+  },
+  "LUNR": {
+   "conid": 613910262,
+   "ex": "NASDAQ",
+   "desc": "INTUITIVE MACHINES INC"
+  },
+  "MARA": {
+   "conid": 474219659,
+   "ex": "NASDAQ",
+   "desc": "MARA HOLDINGS INC"
+  },
+  "MDA": {
+   "conid": 702882678,
+   "ex": "NYSE",
+   "desc": "MDA SPACE LTD (US line)"
+  },
+  "META": {
+   "conid": 107113386,
+   "ex": "NASDAQ",
+   "desc": "META PLATFORMS INC-CLASS A"
+  },
+  "MFH": {
+   "conid": null,
+   "ex": null,
+   "desc": null,
+   "note": "UNRESOLVED - search returned only mutual funds"
+  },
+  "MRVL": {
+   "conid": 483492393,
+   "ex": "NASDAQ",
+   "desc": "MARVELL TECHNOLOGY INC"
+  },
+  "MSFT": {
+   "conid": 272093,
+   "ex": "NASDAQ",
+   "desc": "MICROSOFT CORP"
+  },
+  "MSTR": {
+   "conid": 272110,
+   "ex": "NASDAQ",
+   "desc": "STRATEGY INC (fka MicroStrategy)"
+  },
+  "MU": {
+   "conid": 9939,
+   "ex": "NYSE",
+   "desc": "MICRON TECHNOLOGY INC"
+  },
+  "NASA": {
+   "conid": 869314618,
+   "ex": "ARCA",
+   "desc": "TEMA SPACE INNOVATORS ETF"
+  },
+  "NET": {
+   "conid": 382633646,
+   "ex": "NYSE",
+   "desc": "CLOUDFLARE INC - CLASS A"
+  },
+  "NFLX": {
+   "conid": 15124833,
+   "ex": "NASDAQ",
+   "desc": "NETFLIX INC"
+  },
+  "NOW": {
+   "conid": 109911821,
+   "ex": "NYSE",
+   "desc": "SERVICENOW INC"
+  },
+  "NU": {
+   "conid": 531212348,
+   "ex": "NYSE",
+   "desc": "NU HOLDINGS LTD/CAYMAN ISL-A"
+  },
+  "NVDA": {
+   "conid": 4815747,
+   "ex": "NASDAQ",
+   "desc": "NVIDIA CORP"
+  },
+  "ORCL": {
+   "conid": 272800,
+   "ex": "NYSE",
+   "desc": "ORACLE CORP"
+  },
+  "OUST": {
+   "conid": 625287738,
+   "ex": "NASDAQ",
+   "desc": "OUSTER INC"
+  },
+  "PHM": {
+   "conid": 11109,
+   "ex": "NYSE",
+   "desc": "PULTEGROUP INC"
+  },
+  "PL": {
+   "conid": 530906124,
+   "ex": "NYSE",
+   "desc": "PLANET LABS PBC"
+  },
+  "PLTR": {
+   "conid": 444857009,
+   "ex": "NASDAQ",
+   "desc": "PALANTIR TECHNOLOGIES INC-A"
+  },
+  "QBTS": {
+   "conid": 578031277,
+   "ex": "NASDAQ",
+   "desc": "D-WAVE QUANTUM INC"
+  },
+  "QCOM": {
+   "conid": 273544,
+   "ex": "NASDAQ",
+   "desc": "QUALCOMM INC"
+  },
+  "QTUM": {
+   "conid": 332274918,
+   "ex": "NASDAQ",
+   "desc": "DEFIANCE QUANTUM ETF"
+  },
+  "QUBT": {
+   "conid": 324651164,
+   "ex": "NASDAQ",
+   "desc": "QUANTUM COMPUTING INC"
+  },
+  "RDW": {
+   "conid": 512000171,
+   "ex": "NYSE",
+   "desc": "REDWIRE CORP"
+  },
+  "RGTI": {
+   "conid": 547605251,
+   "ex": "NASDAQ",
+   "desc": "RIGETTI COMPUTING INC"
+  },
+  "RIOT": {
+   "conid": 292830677,
+   "ex": "NASDAQ",
+   "desc": "RIOT PLATFORMS INC"
+  },
+  "RKLB": {
+   "conid": 787273575,
+   "ex": "NASDAQ",
+   "desc": "ROCKET LAB CORP"
+  },
+  "ROBO": {
+   "conid": 137056786,
+   "ex": "ARCA",
+   "desc": "ROBO GLOBAL ROBOTICS AND AUT"
+  },
+  "SKHY": {
+   "conid": 899700992,
+   "ex": "NASDAQ",
+   "desc": "SK HYNIX INC-ADR"
+  },
+  "SMCI": {
+   "conid": 731466419,
+   "ex": "NASDAQ",
+   "desc": "SUPER MICRO COMPUTER INC"
+  },
+  "SMH": {
+   "conid": 229725622,
+   "ex": "NASDAQ",
+   "desc": "VANECK SEMICONDUCTOR ETF"
+  },
+  "SNDK": {
+   "conid": 760250490,
+   "ex": "NASDAQ",
+   "desc": "SANDISK CORP"
+  },
+  "SNOW": {
+   "conid": 444884769,
+   "ex": "NYSE",
+   "desc": "SNOWFLAKE INC"
+  },
+  "SOXL": {
+   "conid": 73340487,
+   "ex": "ARCA",
+   "desc": "DIREXION DAILY SEMI BULL 3X"
+  },
+  "SPCE": {
+   "conid": 709229198,
+   "ex": "NYSE",
+   "desc": "VIRGIN GALACTIC HOLDINGS INC"
+  },
+  "SPCX": {
+   "conid": 890493863,
+   "ex": "NASDAQ",
+   "desc": "SPACE EXPLORATION TECHN-CL A"
+  },
+  "SPY": {
+   "conid": 756733,
+   "ex": "ARCA",
+   "desc": "SPDR S&P 500 ETF TRUST"
+  },
+  "T": {
+   "conid": 37018770,
+   "ex": "NYSE",
+   "desc": "AT&T INC"
+  },
+  "TQQQ": {
+   "conid": 72539702,
+   "ex": "NASDAQ",
+   "desc": "PROSHARES ULTRAPRO QQQ"
+  },
+  "TSLA": {
+   "conid": 76792991,
+   "ex": "NASDAQ",
+   "desc": "TESLA INC"
+  },
+  "TSM": {
+   "conid": 6223250,
+   "ex": "NYSE",
+   "desc": "TAIWAN SEMICONDUCTOR-SP ADR"
+  },
+  "UFO": {
+   "conid": 360505969,
+   "ex": "NASDAQ",
+   "desc": "PROCURE SPACE ETF"
+  },
+  "URA": {
+   "conid": 211651685,
+   "ex": "ARCA",
+   "desc": "GLOBAL X URANIUM ETF"
+  },
+  "VFTNX": {
+   "conid": 48013375,
+   "ex": "FUNDSERV",
+   "desc": "Vanguard FTSE Social Index Fund Instl",
+   "type": "FUND"
+  },
+  "VOYG": {
+   "conid": 790400443,
+   "ex": "NYSE",
+   "desc": "VOYAGER TECHNOLOGIES INC-A"
+  },
+  "VZ": {
+   "conid": 4901,
+   "ex": "NYSE",
+   "desc": "VERIZON COMMUNICATIONS INC"
+  },
+  "WQTM": {
+   "conid": 820909248,
+   "ex": "BATS",
+   "desc": "WISDOMTREE QUANTUM COMP FUND"
+  },
+  "XLE": {
+   "conid": 4215217,
+   "ex": "ARCA",
+   "desc": "ENERGY SELECT SECTOR SPDR"
+  },
+  "XNDU": {
+   "conid": 868969776,
+   "ex": "NASDAQ",
+   "desc": "XANADU QUANTUM TECH-CL B"
+  },
+  "XNET": {
+   "conid": 157874416,
+   "ex": "NASDAQ",
+   "desc": "XUNLEI LTD-ADR"
+  }
+ }
+}
