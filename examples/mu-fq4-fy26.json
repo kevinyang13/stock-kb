@@ -1,0 +1,29 @@
+{
+  "company": "Micron",
+  "ticker": "MU",
+  "period": "FQ4 FY26",
+  "currency": "$",
+  "unit": "B",
+  "revenue": 54.2,
+  "revenue_yoy": 379,
+  "segments": [
+    {"name": "Core Data Center",       "value": 18.0, "yoy": 1041, "note": "33% of revenue", "color": "#e8502a"},
+    {"name": "Cloud Memory",           "value": 16.3, "yoy": 258,  "note": "30% of revenue", "color": "#1b1b7a"},
+    {"name": "Mobile & Client",        "value": 13.1, "yoy": 249,  "note": "24% of revenue", "color": "#c8a020"},
+    {"name": "Automotive & Embedded",  "value": 6.8,  "yoy": 376,  "note": "13% of revenue", "color": "#2f9e6e"}
+  ],
+  "cost_of_revenue": 7.2,
+  "gross_profit": 47.0,
+  "opex_total": 3.3,
+  "opex_items": [
+    {"name": "R&D",             "value": 1.9},
+    {"name": "SG&A",            "value": 0.9},
+    {"name": "Other operating", "value": 0.5}
+  ],
+  "operating_profit": 43.8,
+  "other": 0.5,
+  "tax": 6.6,
+  "net_profit": 37.7,
+  "width": 1700,
+  "height": 940
+}

@@ -121,7 +121,7 @@ def build(spec):
         link(op_id, tax_node, tax, COST_LINK)
     link(op_id, net_id, op - max(tax, 0.0), PROFIT_LINK)
 
-    DOM_TOP = 0.86          # sankey occupies the lower 86%; labels live above it
+    DOM_TOP = 0.82          # sankey occupies the lower 82%; labels live above it
     fig = go.Figure(go.Sankey(
         domain=dict(x=[0, 1], y=[0, DOM_TOP]),
         arrangement="fixed",
@@ -137,12 +137,12 @@ def build(spec):
     # Annotation y uses paper coords, same bottom-up origin as node y above.
     ann = []
 
-    def label(x, y, head, sub=(), color=INK, size=16, xa="center"):
+    def label(x, y, head, sub=(), color=INK, size=16, xa="center", va="middle"):
         txt = f"<b>{head}</b>"
         for line in [l for l in sub if l]:
             txt += f"<br><span style='font-size:12px;color:#555'>{line}</span>"
         ann.append(dict(x=x, y=y, text=txt, showarrow=False, align=xa,
-                        xanchor=xa, yanchor="middle",
+                        xanchor=xa, yanchor=va,
                         font=dict(size=size, color=color),
                         xref="paper", yref="paper"))
 
@@ -158,14 +158,14 @@ def build(spec):
               [money(s_["value"], unit, cur), yoy(s_.get("yoy")), s_.get("note", "")],
               color="#111", xa="right")
 
-    label(X["revenue"], 0.90, "Revenue",
-          [money(rev, unit, cur), yoy(spec.get("revenue_yoy"))], color="#111")
-    label(X["gross"], 0.90, "Gross profit",
-          [money(gross, unit, cur), f"{gross / rev * 100:.0f}% margin"], color=PROFIT)
+    label(X["revenue"], 0.895, "Revenue",
+          [money(rev, unit, cur), yoy(spec.get("revenue_yoy"))], color="#111", va="bottom")
+    label(X["gross"], 0.895, "Gross profit",
+          [money(gross, unit, cur), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     label(X["gross"], py(ys[cor_id]) - 0.13, "Cost of revenue",
           [f"({money(cor, unit, cur)})"], color=COST)
-    label(X["op"], 0.90, "Operating profit",
-          [money(op, unit, cur), f"{op / rev * 100:.0f}% margin"], color=PROFIT)
+    label(X["op"], 0.895, "Operating profit",
+          [money(op, unit, cur), f"{op / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     label(X["op"], py(ys[opex_id]) - 0.12, "Operating expenses",
           [f"({money(opex, unit, cur)})"], color=COST)
     label(1.015, py(ys[net_id]), "Net profit",
@@ -178,16 +178,16 @@ def build(spec):
     if tax > 0:
         label(1.015, py(ys[tax_node]), "Tax", [f"({money(tax, unit, cur)})"], color=COST, xa="left")
     if other > 0:
-        label(X["op"], 1.00, "Interest & other",
-              [money(other, unit, cur)], color=PROFIT)
+        label(X["op"], 1.015, "Interest & other",
+              [money(other, unit, cur)], color=PROFIT, va="bottom")
 
     fig.update_layout(
-        title=dict(y=0.97, yanchor='top', text=f"<b>{spec['company']} {spec['period']} Income Statement</b>",
+        title=dict(y=0.995, yanchor='top', text=f"<b>{spec['company']} {spec['period']} Income Statement</b>",
                    x=0.5, xanchor="center", font=dict(size=40, color=INK)),
         annotations=ann,
         paper_bgcolor=BG, plot_bgcolor=BG,
         width=spec.get("width", 1500), height=spec.get("height", 880),
-        margin=dict(l=300, r=270, t=120, b=70),
+        margin=dict(l=300, r=270, t=185, b=70),
         font=dict(family="Helvetica Neue, Arial, sans-serif"),
     )
     return fig, dict(revenue=rev, gross=gross, op=op, net=net)

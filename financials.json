@@ -1,0 +1,81 @@
+{
+ "generated": "2026-10-22T19:57:04-07:00",
+ "generatedLabel": "Oct 22, 2026",
+ "note": "Income statement flow charts built from each company's own filed results. Figures are rounded to the nearest $0.1B.",
+ "items": [
+  {
+   "t": "MU",
+   "company": "Micron Technology",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Sep 3, 2026",
+   "reported": "reported Sep 30, 2026",
+   "img": "assets/financials/MU-FQ4-FY26.png",
+   "source": "Micron Form 8-K, Q4 FY26 press release",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$54.2B",
+     "s": "+379% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "87%",
+     "s": "$47.0B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "81%",
+     "s": "$43.8B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$37.7B",
+     "s": "70% margin"
+    }
+   ],
+   "notes": [
+    "Core Data Center is the swing factor: $18.0B, up 1,041% Y/Y, now a third of revenue.",
+    "Cost of revenue is only $7.2B of $54.2B — an 87% gross margin, extraordinary for a memory maker and the clearest sign of where pricing sits in this cycle.",
+    "Operating expenses total $3.3B, just 6% of revenue, so almost all gross profit drops to operating profit.",
+    "Full fiscal year 2026: $133.19B revenue and $84.97B net income. Q1 FY27 guidance is ~$61.5B ± $1.5B."
+   ]
+  },
+  {
+   "t": "TSM",
+   "company": "TSMC",
+   "period": "Q3 FY26",
+   "periodEnd": "calendar Q3 2026",
+   "reported": "reference example",
+   "img": "assets/financials/TSM-Q3-FY26.png",
+   "source": "Transcribed from the App Economy Insights reference chart",
+   "sourceUrl": "",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$46.7B",
+     "s": "+41% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "66%",
+     "s": "$31.0B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "59%",
+     "s": "$27.4B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$23.9B",
+     "s": "51% margin"
+    }
+   ],
+   "notes": [
+    "Included as the worked example used to verify the chart generator against a known-good image.",
+    "Its own published figures do not foot: $27.4B operating + $1.1B other − $4.9B tax = $23.6B, against the $23.9B printed."
+   ]
+  }
+ ]
+}
