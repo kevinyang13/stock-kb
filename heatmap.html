@@ -367,6 +367,7 @@
 
 <div class="wrap" id="fin" hidden>
   <div class="bar"><div class="status" id="fin-status"></div></div>
+  <div class="chips" id="fin-chips"></div>
   <div id="fin-body"></div>
 </div>
 
@@ -1141,12 +1142,54 @@
   }
 
   var finLoaded = false;
+  var finItems = [];
+  var finPick = 0;
+
+  function finCard(f) {
+    var kpis = (f.highlights || []).map(function (h) {
+      return '<div class="fin-kpi"><b>' + esc(h.k) + "</b>" +
+        '<span class="v">' + esc(h.v) + "</span>" +
+        (h.s ? '<span class="s">' + esc(h.s) + "</span>" : "") + "</div>";
+    }).join("");
+    var notes = (f.notes || []).map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("");
+    var src = f.sourceUrl
+      ? '<a href="' + esc(f.sourceUrl) + '" target="_blank" rel="noopener">' + esc(f.source) + "</a>"
+      : esc(f.source || "");
+    return '<article class="fin-item">' +
+      '<div class="fin-head">' +
+        '<span class="tkr">' + esc(f.t) + "</span>" +
+        "<h2>" + esc(f.company) + " &middot; " + esc(f.period) + "</h2>" +
+        '<span class="per">' + [f.periodEnd, f.reported].filter(Boolean).map(esc).join(" &middot; ") + "</span>" +
+      "</div>" +
+      '<div class="fin-kpis">' + kpis + "</div>" +
+      '<figure class="fin-fig"><a href="' + esc(f.img) + '" target="_blank" rel="noopener">' +
+        '<img src="' + esc(f.img) + '" alt="' + esc(f.company + " " + f.period + " income statement") + '">' +
+      "</a></figure>" +
+      (notes ? '<ul class="fin-notes">' + notes + "</ul>" : "") +
+      '<p class="fin-src">Source: ' + src + "</p>" +
+      "</article>";
+  }
+
+  function renderFin() {
+    document.getElementById("fin-chips").innerHTML = finItems.map(function (f, i) {
+      return '<button type="button" class="chip' + (i === finPick ? " on" : "") + '" data-i="' + i + '">' +
+        esc(f.t) + '<span class="n">' + esc(f.period) + "</span></button>";
+    }).join("");
+    document.getElementById("fin-body").innerHTML = finItems.length ? finCard(finItems[finPick]) : "";
+  }
+
+  document.getElementById("fin-chips").addEventListener("click", function (e) {
+    var chip = e.target.closest(".chip");
+    if (!chip) return;
+    finPick = +chip.dataset.i;
+    renderFin();
+  });
+
   function loadFinancials() {
     if (finLoaded) return;
     finLoaded = true;
 
     var statusEl = document.getElementById("fin-status");
-    var body = document.getElementById("fin-body");
     statusEl.textContent = "loading financials...";
 
     fetch("financials.json", { cache: "no-store" })
@@ -1155,41 +1198,16 @@
         return r.json();
       })
       .then(function (doc) {
-        var items = doc.items || [];
-        if (!items.length) {
+        finItems = doc.items || [];
+        if (!finItems.length) {
           statusEl.innerHTML = "<b>No statements</b><br>nothing charted yet";
           return;
         }
         statusEl.innerHTML = "<b>" + esc(doc.generatedLabel || "") + "</b><br>" +
-          items.length + " statement" + (items.length === 1 ? "" : "s") +
+          finItems.length + " statement" + (finItems.length === 1 ? "" : "s") +
           (doc.note ? " &middot; " + esc(doc.note) : "");
-
-        body.innerHTML = items.map(function (f) {
-          var kpis = (f.highlights || []).map(function (h) {
-            return '<div class="fin-kpi"><b>' + esc(h.k) + '</b>' +
-              '<span class="v">' + esc(h.v) + "</span>" +
-              (h.s ? '<span class="s">' + esc(h.s) + "</span>" : "") + "</div>";
-          }).join("");
-          var notes = (f.notes || []).map(function (n) {
-            return "<li>" + esc(n) + "</li>";
-          }).join("");
-          var src = f.sourceUrl
-            ? '<a href="' + esc(f.sourceUrl) + '" target="_blank" rel="noopener">' + esc(f.source) + "</a>"
-            : esc(f.source || "");
-          return '<article class="fin-item">' +
-            '<div class="fin-head">' +
-              '<span class="tkr">' + esc(f.t) + "</span>" +
-              "<h2>" + esc(f.company) + " &middot; " + esc(f.period) + "</h2>" +
-              '<span class="per">' + [f.periodEnd, f.reported].filter(Boolean).map(esc).join(" &middot; ") + "</span>" +
-            "</div>" +
-            '<div class="fin-kpis">' + kpis + "</div>" +
-            '<figure class="fin-fig"><a href="' + esc(f.img) + '" target="_blank" rel="noopener">' +
-              '<img src="' + esc(f.img) + '" alt="' + esc(f.company + " " + f.period + " income statement") + '" loading="lazy">' +
-            "</a></figure>" +
-            (notes ? '<ul class="fin-notes">' + notes + "</ul>" : "") +
-            '<p class="fin-src">Source: ' + src + "</p>" +
-            "</article>";
-        }).join("");
+        finPick = 0;
+        renderFin();
       })
       .catch(function (err) {
         statusEl.innerHTML = "<b>Could not load financials</b><br>" + esc(String(err.message || err));
