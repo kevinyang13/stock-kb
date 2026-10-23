@@ -29,8 +29,8 @@ BG = "#f2f2f2"
 X = {"segment": 0.01, "revenue": 0.26, "gross": 0.48, "op": 0.70, "leaf": 0.99}
 
 
-def money(v, unit="B", cur="$"):
-    return f"{cur}{v:,.1f}{unit}"
+def money(v, unit="B", cur="$", dec=1):
+    return f"{cur}{v:,.{dec}f}{unit}"
 
 
 def pct(v):
@@ -193,11 +193,137 @@ def build(spec):
     return fig, dict(revenue=rev, gross=gross, op=op, net=net)
 
 
+def build_loss(spec):
+    """Layout for a loss-making quarter.
+
+    A profitable statement conserves as revenue -> profit + costs. A loss does
+    not: costs exceed revenue, so the shortfall has to come in from somewhere.
+    Here the net loss is drawn as a red source feeding the expense pool, which
+    is what a loss literally is -- spending funded by capital rather than sales.
+
+        gross profit + net loss == operating expenses + below-the-line charges
+    """
+    cur, unit = spec.get("currency", "$"), spec.get("unit", "B")
+    dec = spec.get("decimals", 1)
+    segs = spec["segments"]
+    rev = spec["revenue"]
+    cor = spec["cost_of_revenue"]
+    gross = spec.get("gross_profit", rev - cor)
+    opex_items = spec.get("opex_items", [])
+    below = spec.get("below_line", [])
+    net_loss = spec["net_loss"]
+
+    leaves = opex_items + below
+    funded = gross + net_loss
+    spent = sum(i["value"] for i in leaves)
+    if abs(funded - spent) > 0.15:
+        print(f"  ! loss layout does not balance: gross {gross:,.2f} + net loss {net_loss:,.2f}"
+              f" = {funded:,.2f} vs charges {spent:,.2f}", file=sys.stderr)
+
+    labels, colors, xs, ys = [], [], [], []
+
+    def node(label, color, x, y):
+        labels.append(label); colors.append(color); xs.append(x); ys.append(y)
+        return len(labels) - 1
+
+    seg_ids = []
+    n = max(len(segs), 1)
+    for i, sg in enumerate(segs):
+        seg_ids.append(node(sg["name"], sg.get("color", NEUTRAL), X["segment"], (i + 0.5) / n))
+
+    rev_id = node("Revenue", NEUTRAL, X["revenue"], 0.42)
+    gross_id = node("Gross profit", PROFIT, X["gross"], 0.22)
+    cor_id = node("Cost of revenue", COST, X["gross"], 0.62)
+    loss_id = node("Net loss", COST, X["gross"], 0.93)
+    pool_id = node("Costs & charges", COST, X["op"], 0.42)
+
+    links = []
+
+    def link(a, b, v, c):
+        if v and v > 0:
+            links.append((a, b, v, c))
+
+    for sid, sg in zip(seg_ids, segs):
+        link(sid, rev_id, sg["value"], NEUTRAL_LINK)
+    link(rev_id, gross_id, gross, PROFIT_LINK)
+    link(rev_id, cor_id, cor, COST_LINK)
+    link(gross_id, pool_id, gross, PROFIT_LINK)
+    link(loss_id, pool_id, net_loss, COST_LINK)
+
+    leaf_ids = []
+    for i, item in enumerate(leaves):
+        y = (i + 0.5) / max(len(leaves), 1)
+        lid = node(item["name"], COST, X["leaf"], y)
+        link(pool_id, lid, item["value"], COST_LINK)
+        leaf_ids.append((lid, item))
+
+    DOM_TOP = 0.82
+    fig = go.Figure(go.Sankey(
+        domain=dict(x=[0, 1], y=[0, DOM_TOP]),
+        arrangement="fixed",
+        node=dict(label=["" for _ in labels], color=colors, x=xs, y=ys,
+                  pad=26, thickness=22, line=dict(width=0)),
+        link=dict(source=[l[0] for l in links], target=[l[1] for l in links],
+                  value=[l[2] for l in links], color=[l[3] for l in links]),
+    ))
+
+    ann = []
+
+    def label(x, y, head, sub=(), color=INK, size=16, xa="center", va="middle"):
+        txt = f"<b>{head}</b>"
+        for line in [l for l in sub if l]:
+            txt += f"<br><span style='font-size:12px;color:#555'>{line}</span>"
+        ann.append(dict(x=x, y=y, text=txt, showarrow=False, align=xa,
+                        xanchor=xa, yanchor=va, font=dict(size=size, color=color),
+                        xref="paper", yref="paper"))
+
+    def py(node_y):
+        return (1.0 - node_y) * DOM_TOP
+
+    def m(v):
+        return money(v, unit, cur, dec)
+
+    for sid, sg in zip(seg_ids, segs):
+        sub = [m(sg["value"])]
+        if sg.get("yoy") is not None:
+            sub.append(f"{pct(sg['yoy'])} Y/Y")
+        if sg.get("note"):
+            sub.append(sg["note"])
+        label(X["segment"] - 0.015, py(ys[sid]), sg["name"], sub, color="#111", xa="right")
+
+    label(X["revenue"], 0.895, "Revenue",
+          [m(rev), f"{pct(spec.get('revenue_yoy'))} Y/Y" if spec.get("revenue_yoy") is not None else ""],
+          color="#111", va="bottom")
+    label(X["gross"], 0.895, "Gross profit",
+          [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
+    label(X["gross"], py(ys[cor_id]) - 0.115, "Cost of revenue", [f"({m(cor)})"], color=COST)
+    label(X["gross"], py(ys[loss_id]) - 0.125, "Net loss",
+          [f"({m(net_loss)})", f"{net_loss / rev * 100:.0f}% of revenue", "funds the gap"],
+          color=COST)
+    label(X["op"], 0.895, "Costs & charges", [f"({m(spent)})"], color=COST, va="bottom")
+
+    for lid, item in leaf_ids:
+        label(1.015, py(ys[lid]), item["name"],
+              [f"({m(item['value'])})", f"{item['value'] / rev * 100:.0f}% of revenue"],
+              color=COST, xa="left")
+
+    fig.update_layout(
+        title=dict(y=0.995, yanchor="top",
+                   text=f"<b>{spec['company']} {spec['period']} Income Statement</b>",
+                   x=0.5, xanchor="center", font=dict(size=40, color=INK)),
+        annotations=ann, paper_bgcolor=BG, plot_bgcolor=BG,
+        width=spec.get("width", 1700), height=spec.get("height", 940),
+        margin=dict(l=300, r=270, t=185, b=120),
+        font=dict(family="Helvetica Neue, Arial, sans-serif"),
+    )
+    return fig, dict(revenue=rev, gross=gross, net_loss=net_loss, charges=spent)
+
+
 def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     spec = json.loads(Path(sys.argv[1]).read_text())
-    fig, totals = build(spec)
+    fig, totals = (build_loss(spec) if spec.get("net_loss") is not None else build(spec))
     out = Path("out"); out.mkdir(exist_ok=True)
     stem = f"{spec.get('ticker', spec['company'])}-{spec['period']}".replace(" ", "-")
     html = out / f"{stem}.html"

@@ -1,8 +1,46 @@
 {
- "generated": "2026-10-22T19:57:04-07:00",
+ "generated": "2026-10-22T20:03:15-07:00",
  "generatedLabel": "Oct 22, 2026",
- "note": "Income statement flow charts built from each company's own filed results. Figures are rounded to the nearest $0.1B.",
+ "note": "Income statement flow charts built from each company's own filed results. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap.",
  "items": [
+  {
+   "t": "CRWV",
+   "company": "CoreWeave",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "reported Aug 2026",
+   "img": "assets/financials/CRWV-Q2-FY26.png",
+   "source": "CoreWeave Q2 2026 results, investor relations",
+   "sourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$2,575M",
+     "s": "+112% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "66%",
+     "s": "$1,696M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($49M)",
+     "s": "(2%) margin"
+    },
+    {
+     "k": "Net loss",
+     "v": "($626M)",
+     "s": "(24%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this chart uses the loss layout: revenue plus the net loss fund every cost line. Gross profit $1,696M + net loss $626M = $2,322M of charges, which balances exactly.",
+    "The operating loss is only $49M. The net loss is $626M — the gap is financing. Interest and other netted to $515M (gross interest expense $640M against $125M other income), more than ten times the operating loss.",
+    "Technology & infrastructure alone is $1,507M, 59% of revenue, which is what turns a 66% gross margin into an operating loss.",
+    "Revenue backlog was roughly $104B at June 30, with more than $25B of net new commitments added in early Q3. Full-year 2026 guidance is $12.4-13.2B revenue against $35-39B of capex."
+   ]
+  },
   {
    "t": "MU",
    "company": "Micron Technology",

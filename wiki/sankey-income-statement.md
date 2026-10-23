@@ -111,12 +111,26 @@ Segment nodes in the TSMC reference are individually coloured; in the SpaceX ref
 
 **Extras** in the references that this script does not generate: company logos beside segment names, and the rounded black KPI chips in the lower right (Starlink subscribers, launch count). Add those in an image editor, or extend the script with `layout.images` and `shapes`.
 
+## Loss-making quarters
+
+A profitable statement conserves as revenue → profit + costs. A loss does not: costs exceed revenue, so the shortfall has to come from somewhere. Put `net_loss` in the spec (plus a `below_line` list for interest and tax) and the script switches to a layout where the net loss is drawn as a red source feeding the expense pool — which is what a loss literally is, spending funded by capital rather than sales.
+
+The identity it checks is:
+
+```
+gross profit + net loss == operating expenses + below-the-line charges
+```
+
+`examples/crwv-q2-fy26.json` is a worked example: CoreWeave's $1,696M gross profit plus a $626M net loss funds $2,322M of charges, and it balances exactly. Note that CoreWeave's own "total operating expenses" line includes cost of revenue — read the statement's own subtotals before assuming a layout.
+
+Use `"unit": "M"` with `"decimals": 0` for companies where billions would round the interesting numbers away. CoreWeave's $49M operating loss disappears entirely at one decimal place in billions.
+
 ## Known limitations of `bin/sankey.py`
 
 - `arrangement="fixed"` is required. With `"snap"`, Plotly overrides the `y` positions and the profit and cost branches swap sides.
 - Node `y` is top-down inside the sankey domain; annotation `y` is bottom-up across the whole canvas. The `py()` helper converts between them. Mixing the two silently puts labels in the wrong place.
 - The diagram is confined to the lower 86% of the canvas (`DOM_TOP`) so stage labels have somewhere to sit.
-- A negative line — an operating loss, or a tax benefit rather than a tax expense — is not handled. The SpaceX reference shows a tax *benefit* flowing into net profit; that needs the link reversed, which the script does not do yet.
+- A tax *benefit* rather than a tax expense is still not handled. The SpaceX reference shows one flowing into net profit, which needs the link reversed.
 - Segment label text extends into the left margin. Very long names need `margin.l` raised past 300.
 
 ## Related pages

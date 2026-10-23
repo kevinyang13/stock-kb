@@ -8,6 +8,7 @@ Table of contents for this knowledge base. One line per page.
 
 ## Companies
 
+- [[coreweave-q2-fy26]] — CoreWeave Q2 2026: $2,575M revenue (+112% Y/Y), 66% gross margin, a $49M operating loss and a $626M net loss driven by financing cost.
 - [[micron-fq4-fy26]] — Micron's record fiscal Q4 2026: $54.2B revenue (+379% Y/Y), 87% gross margin, business-unit breakdown and the figures behind the Financials tab chart.
 
 ## Pages referenced but not yet written
