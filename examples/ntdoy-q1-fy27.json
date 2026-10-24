@@ -1,0 +1,26 @@
+{
+ "company": "Nintendo",
+ "ticker": "7974",
+ "period": "Q1 FY27",
+ "currency": "¥",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 517.8,
+ "revenue_yoy": -10,
+ "segments": [
+  {"name": "Dedicated video game platform", "value": 483.0, "yoy": -13, "note": "93% of revenue", "color": "#e8502a"},
+  {"name": "IP related income etc.", "value": 34.8, "yoy": 107, "note": "7% of revenue", "color": "#1b1b7a"}
+ ],
+ "cost_of_revenue": 236.4,
+ "gross_profit": 281.4,
+ "opex_total": 138.8,
+ "opex_items": [
+  {"name": "SG&A (incl. R&D)", "value": 138.8}
+ ],
+ "operating_profit": 142.6,
+ "other": 63.5,
+ "tax": 58.7,
+ "net_profit": 147.4,
+ "width": 1700,
+ "height": 940
+}

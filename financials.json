@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T18:26:22-07:00",
+ "generated": "2026-10-23T18:46:24-07:00",
  "generatedLabel": "Oct 23, 2026",
  "note": "Most recent reported quarter for each name, with revenue broken out by reported segment where the company publishes one. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. SMH is an ETF and has no income statement.",
  "items": [
@@ -536,6 +536,45 @@
     "The operating loss is only $49M. The net loss is $626M — the gap is financing, with interest and other netting to $515M.",
     "Technology & infrastructure alone is $1,507M, 59% of revenue.",
     "Revenue backlog was roughly $104B at June 30; FY26 guidance is $12.4-13.2B revenue against $35-39B of capex."
+   ]
+  },
+  {
+   "t": "7974",
+   "company": "Nintendo",
+   "period": "Q1 FY27",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "reported Aug 6, 2026",
+   "img": "assets/financials/7974-Q1-FY27.png",
+   "source": "stockanalysis.com quarterly income statement (Tokyo 7974); segments from Nintendo's Q1 FY27 results",
+   "sourceUrl": "https://www.nintendo.co.jp/ir/pdf/2026/260806_2e.pdf",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "¥517.8B",
+     "s": "-10% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "54%",
+     "s": "¥281.4B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "28%",
+     "s": "¥142.6B"
+    },
+    {
+     "k": "Net profit",
+     "v": "¥147.4B",
+     "s": "28% margin"
+    }
+   ],
+   "notes": [
+    "Reported in Japanese yen. Margins compare with the other statements here; the absolute figures do not.",
+    "Segments: Dedicated video game platform ¥483.0B (-13% Y/Y, 93% of revenue) and IP related income ¥34.8B (+107%, 7%). The two foot to revenue exactly.",
+    "Revenue fell 10% but operating profit rose about 150%. Switch 2 shipped 3.82M units, down 34% against the launch quarter a year earlier, while the IP business more than doubled on the Super Mario Galaxy film.",
+    "Net profit exceeds operating profit: ¥63.5B of non-operating income sits below the line, which for Nintendo is mostly FX and interest on its cash. Cost of sales also absorbed roughly $300M of IEEPA tariff refunds.",
+    "Nintendo does not break R&D out of SG&A in this statement, so operating expenses appear as a single line."
    ]
   }
  ]

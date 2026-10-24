@@ -149,3 +149,17 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Source conflict noted**: the App Economy Insights reference chart for this same quarter shows operating profit of $2.8B and R&D of $4.6B against the filed $4,019M and $3,574M used here. The segment split agrees between the two. Recorded on the card.
 
 **Verification**: SPCX foots with no validator warning. Re-rendered NVDA, INTU, META, MU and GOOG afterwards with no regression — the tax-benefit branch does not touch the positive-tax path. Fourteen chips render on the tab.
+
+---
+
+## 2026-10-23 — Nintendo added
+
+**Source**: stockanalysis.com quarterly income statement for Tokyo 7974; segment split from Nintendo's own Q1 FY27 results release (nintendo.co.jp, Aug 6 2026).
+
+**What changed**: Added `examples/ntdoy-q1-fy27.json` and `assets/financials/7974-Q1-FY27.png`. Fifteen statements on the Financials tab. Nintendo is the first entry that is not in the watchlist — the tab is manifest-driven, so that works without any page change.
+
+**Figures**: revenue ¥517.8B (-10% Y/Y), gross ¥281.4B (54%), operating ¥142.6B (28%), net ¥147.4B. Segments are Dedicated video game platform ¥483.0B (-13%) and IP related income ¥34.8B (+107%), which foot to revenue exactly.
+
+**Noted**: revenue fell 10% while operating profit rose roughly 150% — the prior-year quarter was the Switch 2 launch. Net profit exceeds operating profit because ¥63.5B of non-operating income (mostly FX and interest on cash) sits below the line. Cost of sales also absorbed about $300M of IEEPA tariff refunds. Nintendo does not split R&D out of SG&A, so operating expenses are one line.
+
+**Verification**: foots with no validator warning; fifteen chips render and the yen figures display correctly.
