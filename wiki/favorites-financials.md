@@ -31,7 +31,11 @@ SMH is the VanEck Semiconductor ETF. A fund holds securities; it does not sell a
 
 ## Caveats that apply to these charts
 
-**Only Micron has a real segment split.** Its business unit table comes from the 8-K. For every other name the left-hand side is a single "Total revenue" bar, because a verified segment breakdown was not pulled. These could be enriched later from each company's own release.
+**Nine of the twelve now carry a reported segment split**: NVDA, MSFT, GOOG, MU, SNDK, TSM, TSLA, QCOM and INTU. Three do not — SMCI (Supermicro's release does not split server/storage systems from subsystems), IONQ and CRWV (both report a single revenue line) — and those show one revenue bar.
+
+Each split was validated against the revenue total before use. Four footed exactly (MSFT, GOOG, QCOM, SNDK); TSLA is out by $44M on $28.0B and TSM by NT$0.1B, both rounding. Two segment values are **derived rather than reported**: TSMC publishes platform mix only as rounded percentages, which the chart applies to revenue, and Intuit's Global Business Solutions is shown as the remainder so its two segments foot.
+
+Note that stockanalysis.com's `revenue-by-segment` page is **not** usable for this — its figures are annual even under `?p=quarterly`, and NVDA's two segments there sum to $303B against $96.2B of quarterly revenue. Segments came from each company's own release instead.
 
 **Quarters are not aligned.** Fiscal calendars differ — NVDA's Q2 FY27 ended in July, MU's FQ4 FY26 in September, TSLA's Q3 in September. Comparing margins across the charts is fair; comparing "the same quarter" is not.
 

@@ -9,11 +9,38 @@
  "revenue_yoy": -4,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 9947,
-   "yoy": -4,
-   "note": "not split by segment",
+   "name": "QCT Handsets",
+   "value": 5086,
+   "yoy": -20,
+   "note": "51% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "QCT IoT",
+   "value": 1830,
+   "yoy": 9,
+   "note": "18% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "QCT Automotive",
+   "value": 1588,
+   "yoy": 61,
+   "note": "16% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "QTL licensing",
+   "value": 1278,
+   "yoy": -3,
+   "note": "13% of revenue",
+   "color": "#f0a030"
+  },
+  {
+   "name": "QSI & other",
+   "value": 165,
+   "note": "residual to total",
+   "color": "#6cb6e8"
   }
  ],
  "cost_of_revenue": 4670,

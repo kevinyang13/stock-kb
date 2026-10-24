@@ -9,11 +9,23 @@
  "revenue_yoy": 372,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 8965,
-   "yoy": 372,
-   "note": "not split by segment",
+   "name": "Edge",
+   "value": 5432,
+   "note": "61% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "Datacenter",
+   "value": 2977,
+   "note": "+103% Q/Q",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Consumer",
+   "value": 556,
+   "yoy": -5,
+   "note": "6% of revenue",
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 1383,

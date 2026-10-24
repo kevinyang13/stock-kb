@@ -9,11 +9,40 @@
  "revenue_yoy": 51,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 1494.2,
-   "yoy": 51,
-   "note": "not split by segment",
+   "name": "High Performance Computing",
+   "value": 1016.1,
+   "note": "68% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "Smartphones",
+   "value": 313.8,
+   "note": "21% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Internet of Things",
+   "value": 59.8,
+   "note": "4% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "Automotive",
+   "value": 59.8,
+   "note": "4% of revenue",
+   "color": "#f0a030"
+  },
+  {
+   "name": "Others",
+   "value": 29.9,
+   "note": "2% of revenue",
+   "color": "#6cb6e8"
+  },
+  {
+   "name": "Digital Consumer Electronics",
+   "value": 14.9,
+   "note": "1% of revenue",
+   "color": "#7cd07c"
   }
  ],
  "cost_of_revenue": 501.9,

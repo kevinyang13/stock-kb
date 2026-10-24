@@ -99,3 +99,15 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Verification**: Each page loaded and checked in the browser — heatmap 100 tiles / 96 priced / 34 chips, catalysts 12 cards with live day moves and sector labels, brief 8 sections, events 49 calendar cells, financials 12 chips with no broken images. Root redirect lands on the heatmap.
 
 **Noted**: `quotes.py` serves only the page and `/api/quotes`, so it cannot serve the new CSS, JS and watchlist files. Use a static server (`python3 -m http.server`) for local viewing.
+
+---
+
+## 2026-10-23 — Revenue broken out by segment
+
+**Source**: each company's own quarterly release. stockanalysis.com's `revenue-by-segment` page was tried first and rejected: its figures are annual even with `?p=quarterly`, and NVDA's two segments there sum to $303B against $96.2B of quarterly revenue.
+
+**What changed**: Nine of the twelve statements now show revenue split by reported segment instead of a single bar — NVDA, MSFT, GOOG, MU, SNDK, TSM, TSLA, QCOM, INTU. SMCI, IONQ and CRWV keep one bar, because no split is published (Supermicro) or only one revenue line exists (the other two).
+
+**Verification**: every split was checked against the revenue total before being used. MSFT, GOOG, QCOM and SNDK foot exactly. TSLA is out by $44M on $28.0B and TSM by NT$0.1B, both rounding and both inside the validator's relative tolerance. All twelve re-rendered with no validator warnings, and all twelve chips were clicked in the browser with no broken images.
+
+**Noted**: two segment sets are derived rather than reported. TSMC publishes platform mix only as rounded percentages, applied here to revenue. Intuit's Global Business Solutions is shown as the remainder so its two segments foot, since the release rounds it to $3.4B. NVIDIA reorganised its segments this quarter — Gaming, Professional Visualization and Automotive are gone, replaced by an Edge Computing line.

@@ -9,11 +9,44 @@
  "revenue_yoy": 24,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 119.8,
-   "yoy": 24,
-   "note": "not split by segment",
+   "name": "Google Search & other",
+   "value": 63.3,
+   "yoy": 17,
+   "note": "53% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "Google Cloud",
+   "value": 24.8,
+   "yoy": 82,
+   "note": "21% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Subscriptions, platforms & devices",
+   "value": 12.9,
+   "note": "11% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "YouTube ads",
+   "value": 11.1,
+   "yoy": 13,
+   "note": "9% of revenue",
+   "color": "#f0a030"
+  },
+  {
+   "name": "Google Network",
+   "value": 7.3,
+   "yoy": -1,
+   "note": "6% of revenue",
+   "color": "#6cb6e8"
+  },
+  {
+   "name": "Other Bets",
+   "value": 0.4,
+   "note": "0% of revenue",
+   "color": "#7cd07c"
   }
  ],
  "cost_of_revenue": 45.9,

@@ -9,11 +9,18 @@
  "revenue_yoy": 14,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 4354,
+   "name": "Global Business Solutions",
+   "value": 3424,
    "yoy": 14,
-   "note": "not split by segment",
+   "note": "derived to foot",
    "color": "#e8502a"
+  },
+  {
+   "name": "Consumer",
+   "value": 930,
+   "yoy": 14,
+   "note": "21% of revenue",
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 910,

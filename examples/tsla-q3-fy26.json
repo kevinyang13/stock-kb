@@ -9,11 +9,25 @@
  "revenue_yoy": 0,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 28046,
-   "yoy": 0,
-   "note": "not split by segment",
+   "name": "Automotive",
+   "value": 20600,
+   "yoy": -3,
+   "note": "73% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "Services & other",
+   "value": 4610,
+   "yoy": 33,
+   "note": "16% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Energy generation & storage",
+   "value": 2880,
+   "yoy": -16,
+   "note": "10% of revenue",
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 22552,

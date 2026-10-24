@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-22T20:13:47-07:00",
- "generatedLabel": "Oct 22, 2026",
- "note": "Most recent reported quarter for each name. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. SMH is an ETF and has no income statement.",
+ "generated": "2026-10-23T17:58:23-07:00",
+ "generatedLabel": "Oct 23, 2026",
+ "note": "Most recent reported quarter for each name, with revenue broken out by reported segment where the company publishes one. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. SMH is an ETF and has no income statement.",
  "items": [
   {
    "t": "NVDA",
@@ -35,6 +35,7 @@
     }
    ],
    "notes": [
+    "Segments: NVIDIA reorganised this quarter — Data Center $89.0B (+117% Y/Y) and a new Edge Computing line at $7.2B that absorbs Gaming. Gaming, Professional Visualization and Automotive are no longer reported separately.",
     "Revenue more than doubled year over year and operating margin is 66%.",
     "Operating expenses are $8.4B — under 9% of revenue — so almost all gross profit reaches operating profit.",
     "$7.8B of interest and other income sits above the tax line, on top of the operating result."
@@ -72,6 +73,7 @@
     }
    ],
    "notes": [
+    "Segments: QCT Handsets $5,086M (-20%), QCT IoT $1,830M (+9%), QCT Automotive $1,588M (+61%), QTL licensing $1,278M (-3%), plus a $165M residual for QSI and other.",
     "The only favorite with revenue down year over year.",
     "R&D is $2,607M, 26% of revenue — more than three times SG&A.",
     "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line."
@@ -109,6 +111,7 @@
     }
    ],
    "notes": [
+    "Segments: Search $63.3B (+17%), Cloud $24.8B (+82%), subscriptions/platforms/devices $12.9B, YouTube ads $11.1B (+13%), Network $7.3B (-1%), Other Bets $0.4B.",
     "Read the net margin carefully. 94% is not an operating result — a $99.0B gain on sale of investments sits in the interest and other line.",
     "Operating profit was $40.8B on a 34% margin. That is the number comparable to the other statements here.",
     "R&D of $18.2B is 15% of revenue."
@@ -184,6 +187,7 @@
     }
    ],
    "notes": [
+    "Segments: Edge $5,432M, Datacenter $2,977M (+103% Q/Q), Consumer $556M (-5%). The three sum to revenue exactly.",
     "The same memory cycle as Micron, in an even more extreme form: cost of revenue is only $1,383M against $8,965M of revenue.",
     "Operating expenses total $547M — 6% of revenue.",
     "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one."
@@ -221,6 +225,7 @@
     }
    ],
    "notes": [
+    "Segments: TSMC publishes platform mix as rounded percentages — HPC 68%, smartphones 21%, IoT 4%, automotive 4%, others 2%, DCE 1%. The chart applies those to revenue, so segment values are derived, not reported.",
     "Reported in New Taiwan dollars, so the absolute figures are not comparable with the USD statements here. The margins are.",
     "The source does not break operating expenses into R&D and SG&A, so they appear as a single line.",
     "This replaces the earlier entry, which was transcribed from the App Economy Insights reference image rather than filed figures."
@@ -258,6 +263,7 @@
     }
    ],
    "notes": [
+    "Segments: Automotive $20.6B (-3%), Services & other $4.61B (+33%), Energy generation & storage $2.88B (-16%). The three sum to $28.09B against $28.05B reported, a rounding gap.",
     "The thinnest margins of any favorite: cost of revenue is $22,552M of $28,046M.",
     "Revenue was essentially flat year over year (-0.2%).",
     "Operating profit of $718M is smaller than Micron's quarterly tax bill."
@@ -295,6 +301,7 @@
     }
    ],
    "notes": [
+    "Segments: Global Business Solutions $3.4B (+14%) and Consumer $930M (+14%). GBS is shown as the remainder so the two foot to revenue; Intuit folded Credit Karma and ProTax into Consumer from August 2025.",
     "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M — 61% of revenue.",
     "Selling, marketing and G&A alone is $1,655M, 38% of revenue.",
     "Net profit is less than half of operating profit: $228M of net interest and other expense sits below the operating line, then $177M of tax.",
@@ -333,6 +340,7 @@
     }
    ],
    "notes": [
+    "No segment split: Supermicro's Q4 release does not break revenue into server/storage systems versus subsystems and accessories, so the chart shows a single revenue bar.",
     "The lowest gross margin of any favorite at 17% — this is a systems assembler, not a chip designer.",
     "Operating expenses are only $455M, 4% of revenue, so most of the thin gross profit survives to operating profit.",
     "Revenue nearly doubled year over year."
@@ -370,6 +378,7 @@
     }
    ],
    "notes": [
+    "No segment split: IonQ reports a single revenue line.",
     "Uses the loss layout: revenue plus the net loss fund every cost line.",
     "The net loss is roughly 23 times revenue. R&D alone is $158.1M, 197% of revenue.",
     "Most of the loss is not operating. The operating loss is $326.7M; the rest comes from a $1.5B non-operating charge, which the source attributes to the other non-operating line.",
@@ -408,6 +417,7 @@
     }
    ],
    "notes": [
+    "Segments: Intelligent Cloud $39.3B (+32%), Productivity & Business Processes $37.8B (+14%), More Personal Computing $12.9B (-4%). The three sum to revenue exactly.",
     "R&D ($10.0B) and SG&A ($9.9B) are almost exactly equal.",
     "A 45% operating margin at $90B of quarterly revenue.",
     "The most balanced statement of the group — no single line dominates."
@@ -445,6 +455,7 @@
     }
    ],
    "notes": [
+    "No segment split: CoreWeave reports a single revenue line.",
     "Loss layout. Gross profit $1,696M + net loss $626M = $2,322M of charges, which balances exactly.",
     "The operating loss is only $49M. The net loss is $626M — the gap is financing, with interest and other netting to $515M.",
     "Technology & infrastructure alone is $1,507M, 59% of revenue.",
