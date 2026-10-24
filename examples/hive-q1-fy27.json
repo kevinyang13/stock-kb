@@ -4,20 +4,20 @@
  "period": "Q1 FY27",
  "currency": "$",
  "unit": "M",
- "decimals": 0,
- "revenue": 79.0,
+ "decimals": 1,
+ "revenue": 79.1,
  "revenue_yoy": 73,
  "segments": [
   {
    "name": "Total revenue",
-   "value": 79.0,
+   "value": 79.1,
    "yoy": 73,
    "note": "not split by segment",
    "color": "#e8502a"
   }
  ],
- "cost_of_revenue": 55.0,
- "gross_profit": 24.0,
+ "cost_of_revenue": 54.9,
+ "gross_profit": 24.2,
  "width": 1700,
  "height": 940,
  "opex_items": [
@@ -27,14 +27,14 @@
   },
   {
    "name": "Depreciation & other",
-   "value": 62.0
+   "value": 61.6
   }
  ],
- "net_loss": 143.0,
+ "net_loss": 142.9,
  "below_line": [
   {
    "name": "Non-operating & tax, net",
-   "value": 96.0
+   "value": 96.5
   }
  ]
 }

@@ -4,7 +4,7 @@
  "period": "Q3 FY26",
  "currency": "$",
  "unit": "M",
- "decimals": 0,
+ "decimals": 1,
  "revenue": 138.0,
  "revenue_yoy": -31,
  "segments": [
@@ -16,25 +16,25 @@
    "color": "#e8502a"
   }
  ],
- "cost_of_revenue": 85.0,
- "gross_profit": 53.0,
+ "cost_of_revenue": 85.5,
+ "gross_profit": 52.5,
  "width": 1700,
  "height": 940,
  "opex_items": [
   {
    "name": "SG&A",
-   "value": 53.0
+   "value": 53.2
   },
   {
    "name": "Impairment & other",
-   "value": 227.0
+   "value": 227.3
   }
  ],
- "net_loss": 240.0,
+ "net_loss": 239.8,
  "below_line": [
   {
    "name": "Non-operating & tax, net",
-   "value": 13.0
+   "value": 11.8
   }
  ]
 }

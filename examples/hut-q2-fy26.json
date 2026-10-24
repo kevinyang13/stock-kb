@@ -4,32 +4,32 @@
  "period": "Q2 FY26",
  "currency": "$",
  "unit": "M",
- "decimals": 0,
- "revenue": 75.0,
+ "decimals": 1,
+ "revenue": 74.9,
  "revenue_yoy": 81,
  "segments": [
   {
    "name": "Total revenue",
-   "value": 75.0,
+   "value": 74.9,
    "yoy": 81,
    "note": "not split by segment",
    "color": "#e8502a"
   }
  ],
- "cost_of_revenue": 27.0,
+ "cost_of_revenue": 26.9,
  "gross_profit": 48.0,
  "width": 1700,
  "height": 940,
  "opex_items": [
   {
    "name": "SG&A",
-   "value": 76.0
+   "value": 76.1
   },
   {
    "name": "Impairment & other",
-   "value": 178.0
+   "value": 178.3
   }
  ],
- "net_loss": 150.0,
- "other_income": 56.0
+ "net_loss": 150.2,
+ "other_income": 56.2
 }

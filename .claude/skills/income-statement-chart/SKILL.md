@@ -86,7 +86,17 @@ python3 bin/sankey.py examples/<ticker>-<period>.json --png
 **The validator must print no warnings.** It checks five identities. A warning means the figures are
 wrong or a line is missing — fix the data, never widen the tolerance.
 
-Then look at the image: no clipped labels, no label sitting on a bar, flow widths proportional.
+**Then look at the image.** The validator proves the numbers conserve; it says nothing about
+readability. Confirm all four:
+
+- no band crosses another
+- no label sits on a bar
+- no text is clipped at an edge
+- flow widths look proportional
+
+If bands cross, the links into a shared node were declared in a different order from their vertical
+positions — plotly stacks by declaration order. If a band runs through a node, that node is parked
+in a corridor between two linked columns; move it into a column or give it one of its own.
 
 ## Step 5 — Publish
 
@@ -110,5 +120,7 @@ the image loads, no horizontal overflow. Then update `wiki/log.md` and commit.
   balance — MSTR.
 - **Non-USD filings** stay in the filed currency unless asked to convert. If converting, record the
   rate, its date and two independent sources, and keep the filed figures in the notes — Nintendo.
+- **Precision on small caps.** Under $1bn of revenue, use millions at one decimal. `$13.5M` rounded
+  to `$14M` turned a 16% gross margin into 14%.
 - **Alphabet-style distortions**: a one-off investment gain can push net margin far above operating
   margin. Say so on the card rather than letting the KPI stand alone.

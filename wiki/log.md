@@ -252,3 +252,35 @@ A first pass at the audit reported the opposite and had to be corrected. It matc
 **Tooling**: added `bin/addsegs.py`, which attaches a verified split to an existing spec, re-renders, and warns if the segments do not sum to revenue. It caught two unit mistakes of mine where I passed billions into a spec denominated in millions.
 
 **Remaining**: 37 still on a single bar — ARQQ ASML ASTS BA BKSY CLSK COHR COIN DDOG FLY GE HD HIVE HUT INFQ LUNR MARA MDA MRVL MSTR NET NOW NU OUST PHM PL PLTR QBTS RDW RGTI RIOT RKLB SKHY SNOW T VOYG XNDU. Many of the micro-caps genuinely report one revenue line; each still needs checking before it can be marked verified-none.
+
+---
+
+## 2026-10-24 — Fixed overlapping flows in the loss layout
+
+**Reported**: the Infleqtion chart showed the green non-operating income band crossing the red
+flows, with labels sitting on top of bars.
+
+**Two causes, both fixed in `bin/sankey.py`**:
+
+1. **Declaration order.** Plotly stacks the links entering a node in the order they are declared,
+   not by the vertical position of their sources. The pool's three sources were declared gross →
+   loss → income while their nodes sat at gross → income → loss, so the bands crossed. They are now
+   declared in the same top-to-bottom order as their positions.
+2. **A node parked in a corridor.** The net-loss and non-operating income nodes were at `x=0.37`,
+   directly in the path of the revenue → cost-of-revenue link, so that band ran straight through
+   them. Both moved into the gross column, and cost of revenue was given a column of its own at
+   `x=0.40` — it is a pure sink off revenue, so nothing crosses it, and the space beneath it holds
+   its label.
+
+**Also fixed**: precision. `bin/mkspec.py` chose 0 decimals for anything under $20bn, so a $13.5M
+company rendered as `$14M` and its gross margin read 14% instead of 16%. Sub-$1bn statements now use
+one decimal. 22 small-cap specs were regenerated.
+
+**Documented**: `wiki/sankey-income-statement.md` gains an "Avoiding overlap" section covering all
+three failure modes (crossing bands, nodes in corridors, labels on bars) and a precision table. The
+skill gains the same four-point visual check, since the validator proves the numbers conserve but
+says nothing about whether the chart can be read.
+
+**Verification**: all 66 specs re-rendered; the only validator warning is the known TSM
+reference-image discrepancy, which is the transcribed example rather than the filed statement. All
+65 published images refreshed.

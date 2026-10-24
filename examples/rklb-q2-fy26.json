@@ -4,32 +4,32 @@
  "period": "Q2 FY26",
  "currency": "$",
  "unit": "M",
- "decimals": 0,
- "revenue": 234.0,
+ "decimals": 1,
+ "revenue": 234.1,
  "revenue_yoy": 62,
  "segments": [
   {
    "name": "Total revenue",
-   "value": 234.0,
+   "value": 234.1,
    "yoy": 62,
    "note": "not split by segment",
    "color": "#e8502a"
   }
  ],
- "cost_of_revenue": 149.0,
- "gross_profit": 85.0,
+ "cost_of_revenue": 149.5,
+ "gross_profit": 84.6,
  "width": 1700,
  "height": 940,
  "opex_items": [
   {
    "name": "R&D",
-   "value": 82.0
+   "value": 82.4
   },
   {
    "name": "SG&A",
-   "value": 60.0
+   "value": 59.7
   }
  ],
- "net_loss": 49.0,
- "other_income": 8.0
+ "net_loss": 49.3,
+ "other_income": 8.2
 }

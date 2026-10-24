@@ -4,20 +4,20 @@
  "period": "Q2 FY26",
  "currency": "$",
  "unit": "M",
- "decimals": 0,
- "revenue": 174.0,
+ "decimals": 1,
+ "revenue": 174.2,
  "revenue_yoy": 14,
  "segments": [
   {
    "name": "Total revenue",
-   "value": 174.0,
+   "value": 174.2,
    "yoy": 14,
    "note": "not split by segment",
    "color": "#e8502a"
   }
  ],
  "cost_of_revenue": 133.0,
- "gross_profit": 41.0,
+ "gross_profit": 41.2,
  "width": 1700,
  "height": 940,
  "opex_items": [
@@ -27,10 +27,10 @@
   },
   {
    "name": "Impairment & other",
-   "value": 172.0
+   "value": 172.4
   }
  ],
- "net_loss": 237.0,
+ "net_loss": 237.2,
  "below_line": [
   {
    "name": "Non-operating & tax, net",

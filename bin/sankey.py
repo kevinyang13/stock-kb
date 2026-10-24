@@ -253,11 +253,11 @@ def build_loss(spec):
         seg_ids.append(node(sg["name"], sg.get("color", NEUTRAL), X["segment"], (i + 0.5) / n))
 
     rev_id = node("Revenue", NEUTRAL, X["revenue"], 0.42)
-    gross_id = node("Gross profit", PROFIT, X["gross"], 0.18)
-    cor_id = node("Cost of revenue", COST, X["gross"], 0.70)
+    gross_id = node("Gross profit", PROFIT, X["gross"], 0.08)
+    cor_id = node("Cost of revenue", COST, 0.40, 0.84)
     # the loss gets its own column: when it dwarfs revenue it would
     # otherwise swamp the gross/cost column and bury their labels
-    loss_id = node("Net loss", COST, 0.37, 0.72)
+    loss_id = node("Net loss", COST, X["gross"], 0.66)
     pool_id = node("Costs & charges", COST, X["op"], 0.42)
 
     links = []
@@ -270,12 +270,12 @@ def build_loss(spec):
         link(sid, rev_id, sg["value"], NEUTRAL_LINK)
     link(rev_id, gross_id, gross, PROFIT_LINK)
     link(rev_id, cor_id, cor, COST_LINK)
+    # declaration order must match top-to-bottom node order or the bands cross
+    inc_id = node("Non-operating income", PROFIT, X["gross"], 0.32) if other_income > 0 else None
     link(gross_id, pool_id, gross, PROFIT_LINK)
-    link(loss_id, pool_id, net_loss, COST_LINK)
-    inc_id = None
-    if other_income > 0:
-        inc_id = node("Non-operating income", PROFIT, 0.37, 0.18)
+    if inc_id is not None:
         link(inc_id, pool_id, other_income, PROFIT_LINK)
+    link(loss_id, pool_id, net_loss, COST_LINK)
 
     leaf_ids = []
     for i, item in enumerate(leaves):
@@ -323,12 +323,12 @@ def build_loss(spec):
           color="#111", va="bottom")
     label(X["gross"], 0.895, "Gross profit",
           [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
-    label(X["gross"], py(ys[cor_id]) - 0.135, "Cost of revenue", [f"({m(cor)})"], color=COST)
-    label(0.355, py(ys[loss_id]), "Net loss",
+    label(0.40, py(ys[cor_id]) - 0.115, "Cost of revenue", [f"({m(cor)})"], color=COST)
+    label(X["gross"] - 0.015, py(ys[loss_id]), "Net loss",
           [f"({m(net_loss)})", f"{net_loss / rev * 100:.0f}% of revenue", "funds the gap"],
           color=COST, xa="right")
     if inc_id is not None:
-        label(0.355, py(ys[inc_id]), "Non-operating income", [m(other_income)],
+        label(X["gross"] - 0.015, py(ys[inc_id]), "Non-operating income", [m(other_income)],
               color=PROFIT, xa="right")
     label(X["op"], 0.895, "Costs & charges", [f"({m(spent)})"], color=COST, va="bottom")
 

@@ -4,19 +4,19 @@
  "period": "Q2 FY26",
  "currency": "$",
  "unit": "M",
- "decimals": 0,
- "revenue": 32.0,
+ "decimals": 1,
+ "revenue": 31.5,
  "revenue_yoy": 2627,
  "segments": [
   {
    "name": "Total revenue",
-   "value": 32.0,
+   "value": 31.5,
    "yoy": 2627,
    "note": "not split by segment",
    "color": "#e8502a"
   }
  ],
- "cost_of_revenue": 24.0,
+ "cost_of_revenue": 23.6,
  "gross_profit": 8.0,
  "width": 1700,
  "height": 940,
@@ -27,18 +27,18 @@
   },
   {
    "name": "SG&A",
-   "value": 64.0
+   "value": 63.9
   },
   {
    "name": "Other operating",
-   "value": 21.0
+   "value": 20.7
   }
  ],
- "net_loss": 231.0,
+ "net_loss": 230.9,
  "below_line": [
   {
    "name": "Non-operating & tax, net",
-   "value": 59.0
+   "value": 59.3
   }
  ]
 }

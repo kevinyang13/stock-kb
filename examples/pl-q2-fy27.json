@@ -4,7 +4,7 @@
  "period": "Q2 FY27",
  "currency": "$",
  "unit": "M",
- "decimals": 0,
+ "decimals": 1,
  "revenue": 116.0,
  "revenue_yoy": 58,
  "segments": [
@@ -16,20 +16,20 @@
    "color": "#e8502a"
   }
  ],
- "cost_of_revenue": 50.0,
- "gross_profit": 66.0,
+ "cost_of_revenue": 50.4,
+ "gross_profit": 65.6,
  "width": 1700,
  "height": 940,
  "opex_items": [
   {
    "name": "R&D",
-   "value": 35.0
+   "value": 35.2
   },
   {
    "name": "SG&A",
-   "value": 44.0
+   "value": 44.4
   }
  ],
- "net_loss": 9.0,
- "other_income": 4.0
+ "net_loss": 9.3,
+ "other_income": 4.7
 }

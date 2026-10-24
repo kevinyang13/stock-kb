@@ -147,6 +147,44 @@ gross profit + net loss == operating expenses + below-the-line charges
 
 Use `"unit": "M"` with `"decimals": 0` for companies where billions would round the interesting numbers away. CoreWeave's $49M operating loss disappears entirely at one decimal place in billions.
 
+## Avoiding overlap
+
+Three failure modes produce a chart that is technically correct and visually unreadable. All three
+have happened.
+
+**Crossing bands.** Plotly stacks the links into a node in *declaration order*, not by the vertical
+position of their sources. If three sources feed one pool, declare their links in the same
+top-to-bottom order as their `y` values. A mismatch makes the bands cross over each other, which
+reads as though value is flowing backwards.
+
+**Nodes parked in a corridor.** A node placed at an `x` between two columns that are linked to each
+other will sit underneath that band. The loss layout originally put the net-loss and non-operating
+income nodes at `x=0.37`, directly in the path of the revenue → cost-of-revenue link. Either put
+such a node in an existing column, or give it a column of its own that nothing traverses.
+
+**Labels on their own bar.** A node whose value is a large share of its column is drawn tall, and a
+label centred on it lands inside it. Options, in order of preference: anchor the label to the left
+of the column (`xa="right"`), give a pure-sink node its own column so there is space beneath it, or
+pin the label to a fixed `y` clear of the diagram. Stage headers live above the diagram entirely —
+that is what `DOM_TOP` is for.
+
+**Check the picture, every time.** The validator proves the numbers conserve. It says nothing about
+whether the chart can be read. Open the PNG before publishing and confirm: no band crosses another,
+no label touches a bar, no text is clipped at an edge.
+
+## Precision
+
+Pick the unit from the size of the statement, and keep one decimal where it matters:
+
+| Revenue | Unit |
+|---|---|
+| ≥ 20,000M | billions, 1dp |
+| 1,000–20,000M | millions, 0dp |
+| < 1,000M | millions, **1dp** |
+
+A $13.5M company rounded to `$14M` showed a 14% gross margin where the real figure was 16%. For
+small caps the decimal is the difference between a right answer and a wrong one.
+
 ## Known limitations of `bin/sankey.py`
 
 - `arrangement="fixed"` is required. With `"snap"`, Plotly overrides the `y` positions and the profit and cost branches swap sides.

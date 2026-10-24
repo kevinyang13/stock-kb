@@ -55,7 +55,13 @@ def make(t, company, period, end, rev, yoy, cor, rd, sga, opex, op, pretax, tax,
     other = net + tax - op
     # money reads better in billions once revenue clears ~$20bn
     if unit is None:
-        unit, dec = ("B", 1) if abs(rev) >= 20000 else ("M", 0)
+        if abs(rev) >= 20000:
+            unit, dec = "B", 1
+        elif abs(rev) >= 1000:
+            unit, dec = "M", 0
+        else:
+            # a $13.5M company rounded to $14M loses the margin entirely
+            unit, dec = "M", 1
     k = 1000.0 if unit == "B" else 1.0
     r = lambda v: round(v / k, dec)
 

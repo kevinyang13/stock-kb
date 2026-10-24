@@ -4,26 +4,26 @@
  "period": "H1 FY26",
  "currency": "$",
  "unit": "M",
- "decimals": 0,
- "revenue": 1.0,
+ "decimals": 1,
+ "revenue": 0.6,
  "revenue_yoy": 830,
  "segments": [
   {
    "name": "Total revenue",
-   "value": 1.0,
+   "value": 0.6,
    "yoy": 830,
    "note": "not split by segment",
    "color": "#e8502a"
   }
  ],
- "cost_of_revenue": 0.0,
- "gross_profit": 0.0,
+ "cost_of_revenue": 0.4,
+ "gross_profit": 0.2,
  "width": 1700,
  "height": 940,
  "opex_items": [
   {
    "name": "SG&A",
-   "value": 30.0
+   "value": 29.9
   },
   {
    "name": "Other operating",
@@ -34,7 +34,7 @@
  "below_line": [
   {
    "name": "Non-operating & tax, net",
-   "value": 2.0
+   "value": 2.3
   }
  ]
 }
