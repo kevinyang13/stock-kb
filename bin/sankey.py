@@ -135,12 +135,23 @@ def build(spec):
     fig = go.Figure(go.Sankey(
         domain=dict(x=[0, 1], y=[0, DOM_TOP]),
         arrangement="fixed",
-        node=dict(label=["" for _ in labels],   # labels drawn as annotations instead
+        # label stays empty -- the annotations draw the visible text, and any
+        # node text plotly draws leaves a glyph beside the bar even transparent.
+        # The names ride along in customdata purely for the hover readout.
+        node=dict(label=["" for _ in labels], customdata=labels,
+                  hovertemplate="<b>%{customdata}</b><br>"
+                                + cur + "%{value:." + str(dec) + "f}" + unit
+                                + "<extra></extra>",
                   color=colors, x=xs, y=ys,
                   pad=26, thickness=22,
                   line=dict(width=0)),
         link=dict(source=[l[0] for l in links], target=[l[1] for l in links],
-                  value=[l[2] for l in links], color=[l[3] for l in links]),
+                  value=[l[2] for l in links], color=[l[3] for l in links],
+                  customdata=[f"{labels[l[0]]} &#8594; {labels[l[1]]}"
+                              for l in links],
+                  hovertemplate="%{customdata}<br><b>" + cur
+                                + "%{value:." + str(dec) + "f}" + unit
+                                + "</b><extra></extra>"),
     ))
 
     # Text is drawn by hand so each node can carry value + margin + Y/Y.
@@ -295,10 +306,22 @@ def build_loss(spec):
     fig = go.Figure(go.Sankey(
         domain=dict(x=[0, 1], y=[0, DOM_TOP]),
         arrangement="fixed",
-        node=dict(label=["" for _ in labels], color=colors, x=xs, y=ys,
+        # label stays empty -- the annotations draw the visible text, and any
+        # node text plotly draws leaves a glyph beside the bar even transparent.
+        # The names ride along in customdata purely for the hover readout.
+        node=dict(label=["" for _ in labels], customdata=labels,
+                  hovertemplate="<b>%{customdata}</b><br>"
+                                + cur + "%{value:." + str(dec) + "f}" + unit
+                                + "<extra></extra>",
+                  color=colors, x=xs, y=ys,
                   pad=26, thickness=22, line=dict(width=0)),
         link=dict(source=[l[0] for l in links], target=[l[1] for l in links],
-                  value=[l[2] for l in links], color=[l[3] for l in links]),
+                  value=[l[2] for l in links], color=[l[3] for l in links],
+                  customdata=[f"{labels[l[0]]} &#8594; {labels[l[1]]}"
+                              for l in links],
+                  hovertemplate="%{customdata}<br><b>" + cur
+                                + "%{value:." + str(dec) + "f}" + unit
+                                + "</b><extra></extra>"),
     ))
 
     ann = []
@@ -373,6 +396,16 @@ def main():
     html = out / f"{stem}.html"
     fig.write_html(html, include_plotlyjs="cdn")
     print(f"wrote {html}")
+    if "--json" in sys.argv:
+        charts = Path("charts"); charts.mkdir(exist_ok=True)
+        j = fig.to_plotly_json()
+        lay = j["layout"]
+        # the browser rescales margins and fonts off these, so hand them over
+        # as data rather than leaving them baked into a fixed-size layout
+        j["design"] = {"width": lay.pop("width"), "height": lay.pop("height")}
+        path = charts / f"{stem}.json"
+        path.write_text(json.dumps(j, separators=(",", ":"), default=str))
+        print(f"wrote {path}")
     if "--png" in sys.argv:
         try:
             fig.write_image(out / f"{stem}.png", scale=2)

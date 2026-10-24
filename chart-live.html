@@ -1,0 +1,66 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cache-control" content="no-cache">
+<title>Stock Signal Desk · Live Chart Prototype</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .proto { max-width: 1180px; margin: 0 auto; padding: 0 18px 60px; }
+  .frame { background: #f2f2f2; border-radius: 10px;
+           display: flex; justify-content: center; }
+  .widths { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0; }
+  .widths button { font: inherit; cursor: pointer; padding: 6px 14px;
+                   border-radius: 999px; border: 1px solid #5b8f8a;
+                   background: transparent; color: inherit; }
+  .widths button[aria-pressed="true"] { background: #e8b54a; color: #123; border-color: #e8b54a; }
+  .note { opacity: .75; font-size: 14px; line-height: 1.6; }
+</style>
+
+<div class="proto">
+  <h1>STOCK SIGNAL DESK</h1>
+  <p class="note">Live chart prototype · NVDA Q2 FY27 rendered in the browser from
+    <code>charts/NVDA-Q2-FY27.json</code> (12KB) instead of a 395KB PNG.
+    Hover any band or bar for its exact value.</p>
+
+  <div class="widths">
+    <button data-w="1180" aria-pressed="true">Desktop 1180</button>
+    <button data-w="900">Laptop 900</button>
+    <button data-w="700">Tablet 700</button>
+    <button data-w="390">Phone 390</button>
+  </div>
+
+  <div class="frame" id="frame"><div id="chart"></div></div>
+
+  <p class="note" id="status">loading…</p>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="assets/sankey.js"></script>
+<script>
+(async () => {
+  const frame = document.getElementById('frame');
+  const chart = document.getElementById('chart');
+  const status = document.getElementById('status');
+  const t0 = performance.now();
+  let fig;
+  try {
+    fig = await Sankey.load('NVDA-Q2-FY27');
+    Sankey.mount(chart, fig);
+    status.textContent =
+      `rendered in ${Math.round(performance.now() - t0)}ms · ` +
+      `${fig.layout.annotations.length} labels · ` +
+      `${fig.data[0].link.value.length} flows`;
+  } catch (e) {
+    status.textContent = 'failed: ' + e.message;
+    return;
+  }
+  for (const b of document.querySelectorAll('.widths button')) {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.widths button')
+        .forEach(x => x.setAttribute('aria-pressed', x === b));
+      frame.style.maxWidth = b.dataset.w + 'px';
+      Sankey.draw(chart, fig);   // the observer also fires, but this is instant
+    });
+  }
+})();
+</script>
