@@ -98,6 +98,8 @@ readability. Confirm all four:
 - flow widths look proportional
 - every money figure reads at 19px in its node's colour — green profit, red cost, black revenue
 - the live chart renders on the Financials page and its hover values are right
+- zoom in one step and confirm the bands still draw (a sankey redrawn with
+  `Plotly.react` keeps its old link geometry — `bin/sankey.py`'s renderer uses `newPlot`)
 
 Labels carry at most two sub-lines: the money figure, then one ratio. A third line grows the block
 until it hits whatever sits below it.

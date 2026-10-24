@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Financials</title>
-<link rel="stylesheet" href="assets/site.css?v=1792819458">
+<link rel="stylesheet" href="assets/site.css?v=1792820266">
 </head>
 <body>
 
@@ -32,8 +32,8 @@
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-<script src="assets/sankey.js?v=1792819458"></script>
-<script src="assets/site.js?v=1792819458"></script>
+<script src="assets/sankey.js?v=1792820266"></script>
+<script src="assets/site.js?v=1792820266"></script>
 <script>
 Site.nav();
 
@@ -63,8 +63,16 @@ Site.nav();
       "</div>" +
       '<div class="fin-kpis">' + kpis + "</div>" +
       '<figure class="fin-fig"><div class="fin-chart" id="fin-chart"></div></figure>' +
-      '<p class="fin-raster">Hover any band for its value &middot; ' +
-        '<a href="' + esc(f.img) + bust + '" target="_blank" rel="noopener">open as an image</a></p>' +
+      '<div class="fin-tools">' +
+        '<div class="zoom" id="fin-zoom">' +
+          '<button type="button" data-z="out" title="Zoom out" aria-label="Zoom out">&minus;</button>' +
+          '<button type="button" data-z="fit" class="fit">Fit</button>' +
+          '<button type="button" data-z="in" title="Zoom in" aria-label="Zoom in">+</button>' +
+        '</div>' +
+        '<p class="fin-raster">Hover for values &middot; ' +
+          '<span class="hint">&#8984;/ctrl + scroll to zoom, drag to pan</span> &middot; ' +
+          '<a href="' + esc(f.img) + bust + '" target="_blank" rel="noopener">open as an image</a></p>' +
+      "</div>" +
       (notes ? '<ul class="fin-notes">' + notes + "</ul>" : "") +
       '<p class="fin-src">Source: ' + src + "</p>" +
       "</article>";
@@ -98,12 +106,34 @@ Site.nav();
     Sankey.load(stem)
       .then(function (fig) {
         if (el !== chartEl) return;        // the ticker changed while fetching
-        Sankey.mount(el, fig);
+        Sankey.mount(el, fig, paintZoom);
+        wireZoomButtons(el);
       })
       .catch(function (err) {
         if (el !== chartEl) return;
         rasterFallback(el, f, String(err.message || err));
       });
+  }
+
+  function paintZoom(z, state) {
+    var bar = document.getElementById("fin-zoom");
+    if (!bar) return;
+    bar.querySelector('[data-z="out"]').disabled = state.atMin;
+    bar.querySelector('[data-z="in"]').disabled = state.atMax;
+    var fit = bar.querySelector(".fit");
+    fit.disabled = state.atFit;
+    fit.textContent = state.atFit ? "Fit" : Math.round(z * 100) + "%";
+  }
+
+  function wireZoomButtons(el) {
+    var bar = document.getElementById("fin-zoom");
+    if (!bar) return;
+    bar.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (!b || el !== chartEl) return;
+      if (b.dataset.z === "fit") Sankey.setZoom(el, Sankey.FIT);
+      else Sankey.step(el, b.dataset.z === "in" ? 1 : -1);
+    });
   }
 
   function rasterFallback(el, f, why) {

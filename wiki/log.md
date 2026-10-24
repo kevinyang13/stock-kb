@@ -345,3 +345,35 @@ is not a regression, but a real phone layout needs a stacked variant.
 **Verification**: all 65 chart JSONs fetched and drawn in the browser with no failures; profit
 layout (NVDA) and loss layout (CRWV) both checked by eye; no console errors; ticker switching
 confirmed to tear down the previous chart.
+
+## 2026-10-23 — zoom and pan on the Financials charts
+
+**Source**: user request — "allow to zoom".
+
+**How it works**: a plotly sankey is not a cartesian plot, so it has no native zoom — `scrollZoom`
+and `dragmode` do nothing. Zoom is a re-render at a larger scale instead: `draw(div, fig, zoom)`
+feeds `container width x zoom` into the same scaling path already used to fit the chart, and
+whatever no longer fits is panned. A CSS transform would have been less code and would have blurred
+the type; re-laying out keeps the text sharp and the hover hit-boxes true.
+
+**Controls**: a `− / Fit / +` pill stepping 0.5, 0.75, 1, 1.5, 2, 2.5, 3; ⌘/ctrl + scroll, which is
+also what a trackpad pinch sends; drag to pan; double-click to refit. The zoom holds whatever is at
+the anchor point under the same point afterwards. A press that never travels 4px stays a click, so
+hover still works with drag-to-pan armed.
+
+**Four bugs found and fixed while building it**, all recorded in
+`wiki/sankey-income-statement.md`:
+
+1. `Plotly.react` moves a sankey's node rectangles but leaves the link paths on their old geometry,
+   so every band vanished at 200%. Switched to `Plotly.newPlot`.
+2. `.fin-chart` was a shrinking flex child, so the zoomed chart was squeezed back to the container
+   width — the chart measured 1382px at every zoom level. Needs `flex: 0 0 auto`.
+3. `align-items` defaults to `stretch`, so once the box had a capped height the chart was squashed
+   vertically to match. `.fin-fig` needs `align-items: flex-start`.
+4. Without a height cap a 3x chart made the page three times taller and scrolled the controls away
+   from the chart. The box takes `max-height: 78vh` while panning.
+
+**Verification**: measured the geometry at each step — 1382x764 at fit, 2764x1528 at 200%,
+4146x2292 at 300%, box held at 1382x739 with both axes panning, and an exact return to 1382x764 on
+Fit. Re-drew all 65 charts and checked each one renders its full link count, none slower than
+500ms. Hover confirmed working at 150%.

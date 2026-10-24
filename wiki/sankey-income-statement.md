@@ -234,6 +234,35 @@ Three things make it work:
 The PNG is still generated, and the page falls back to it if the JSON or plotly itself fails to
 arrive. Keep both.
 
+### Zoom
+
+A plotly sankey is not a cartesian plot, so it has **no native zoom** — `scrollZoom` and `dragmode`
+do nothing. Zoom is therefore a re-render at a larger scale: `draw(div, fig, zoom)` passes
+`container width x zoom` into the same scaling path, and whatever no longer fits is panned. A CSS
+transform would have been less code and would have blurred the type; re-laying out keeps the text
+sharp and the hover hit-boxes true.
+
+Controls on the Financials page: a `− / Fit / +` pill stepping through
+0.5, 0.75, 1, 1.5, 2, 2.5, 3; ⌘/ctrl + scroll (which is also what a trackpad pinch sends);
+drag to pan; double-click to refit. Zooming keeps whatever is at the anchor point — the cursor, or
+the middle of the view — under the same point afterwards.
+
+Four traps, all of which bit:
+
+1. **`Plotly.react` corrupts a resized sankey.** It moves the node rectangles but leaves the link
+   paths on their old geometry, so every band disappears or lands in the wrong place. Use
+   `Plotly.newPlot`. At this size it still redraws in well under 500ms.
+2. **A flex child shrinks.** `.fin-fig` is a flex row, so the zoomed chart was squeezed straight
+   back to the container width. `.fin-chart` needs `flex: 0 0 auto`.
+3. **A flex child stretches.** `align-items` defaults to `stretch`, so once the box had a capped
+   height the chart was squashed vertically to match it. `.fin-fig` needs `align-items: flex-start`.
+4. **The page grows instead of the box.** Without a cap, a 3x chart makes the page three times
+   taller and the zoom controls scroll away from the chart. The box takes `max-height: 78vh` while
+   panning and becomes a window.
+
+A press that never travels more than 4px stays a click, so hover still works while drag-to-pan is
+armed.
+
 ### Cache-stamping the assets
 
 The pages carry no-cache meta tags, but those cover only the HTML. A browser will still serve
