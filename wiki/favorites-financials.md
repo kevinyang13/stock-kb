@@ -1,6 +1,6 @@
 # Favorites Financials
 
-**Summary**: The Financials tab carries an income statement chart for every favorite except SMH, plus CoreWeave — twelve statements, each the company's most recent reported quarter.
+**Summary**: The Financials tab carries an income statement chart for every favorite except SMH, plus CoreWeave and Meta — thirteen statements, each the company's most recent reported quarter.
 
 **Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K and CoreWeave's results release for those two.
 
@@ -23,11 +23,18 @@
 | SMCI | FQ4 FY26 | Jun 30, 2026 | profit |
 | IONQ | Q2 FY26 | Jun 30, 2026 | loss |
 | MSFT | FQ4 FY26 | Jun 30, 2026 | profit |
+| META | Q3 FY26 | Sep 30, 2026 | profit |
 | CRWV | Q2 FY26 | Jun 30, 2026 | loss |
 
 ## SMH has no income statement
 
 SMH is the VanEck Semiconductor ETF. A fund holds securities; it does not sell anything, so there is no revenue, no cost of revenue and no margin to chart. It stays on the heatmap and in the brief, but it cannot appear here.
+
+## Meta's operating income does not match stockanalysis
+
+Meta's Q3 FY26 chart uses the filed figure of **$12,988M**. stockanalysis.com reports operating income of **$22,878M** for the same quarter, because it places a $9,890M operating charge below the operating line. Revenue less cost of revenue less R&D, marketing/G&A and that charge gives $12,988M, which is what the 8-K reports as income from operations. The chart follows the filing.
+
+This is the first case where the two sources disagree on a headline line, not just on rounding. Worth checking the filing rather than the aggregator whenever operating income looks too clean.
 
 ## Caveats that apply to these charts
 

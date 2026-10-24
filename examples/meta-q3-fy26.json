@@ -1,0 +1,29 @@
+{
+ "company": "Meta Platforms",
+ "ticker": "META",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 64601,
+ "revenue_yoy": 26,
+ "segments": [
+  {"name": "Advertising", "value": 63061, "note": "98% of revenue", "color": "#e8502a"},
+  {"name": "Other (Family of Apps)", "value": 1097, "note": "2% of revenue", "color": "#1b1b7a"},
+  {"name": "Reality Labs", "value": 443, "note": "1% of revenue", "color": "#c8a020"}
+ ],
+ "cost_of_revenue": 13369,
+ "gross_profit": 51232,
+ "opex_total": 38244,
+ "opex_items": [
+  {"name": "R&D", "value": 20054},
+  {"name": "Other operating expense", "value": 9890},
+  {"name": "Marketing & G&A", "value": 8300}
+ ],
+ "operating_profit": 12988,
+ "other": 13,
+ "tax": 3141,
+ "net_profit": 9860,
+ "width": 1700,
+ "height": 940
+}

@@ -111,3 +111,17 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Verification**: every split was checked against the revenue total before being used. MSFT, GOOG, QCOM and SNDK foot exactly. TSLA is out by $44M on $28.0B and TSM by NT$0.1B, both rounding and both inside the validator's relative tolerance. All twelve re-rendered with no validator warnings, and all twelve chips were clicked in the browser with no broken images.
 
 **Noted**: two segment sets are derived rather than reported. TSMC publishes platform mix only as rounded percentages, applied here to revenue. Intuit's Global Business Solutions is shown as the remainder so its two segments foot, since the release rounds it to $3.4B. NVIDIA reorganised its segments this quarter — Gaming, Professional Visualization and Automotive are gone, replaced by an Edge Computing line.
+
+---
+
+## 2026-10-23 — Added Meta, and a source conflict worth recording
+
+**Source**: Meta Form 8-K, Q3 2026 results exhibit (quarter ended Sep 30, 2026), with the cost lines from stockanalysis.com.
+
+**What changed**: Added `examples/meta-q3-fy26.json` and `assets/financials/META-Q3-FY26.png`; the Financials tab now carries thirteen statements. Segments are Advertising $63,061M, other Family of Apps $1,097M and Reality Labs $443M, which foot to revenue exactly.
+
+**Conflict found**: stockanalysis.com reports Meta's Q3 operating income as **$22,878M**; the 8-K reports **$12,988M**. The difference is a $9,890M operating charge that the aggregator places below the operating line. The chart follows the filing: revenue less cost of revenue, R&D, marketing/G&A and that charge gives $12,988M, and pretax of $13,001M then follows from $13M of interest and other. This is the first disagreement between the two sources on a headline line rather than on rounding, and it is now noted on `wiki/favorites-financials.md`.
+
+**Also noted**: Reality Labs earned $443M and lost $4,129M at the operating line, against Family of Apps operating income of $17,117M.
+
+**Verification**: the statement foots with no validator warning. Thirteen chips render on the Financials tab with the Meta chart loading correctly.
