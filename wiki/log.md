@@ -125,3 +125,13 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Also noted**: Reality Labs earned $443M and lost $4,129M at the operating line, against Family of Apps operating income of $17,117M.
 
 **Verification**: the statement foots with no validator warning. Thirteen chips render on the Financials tab with the Meta chart loading correctly.
+
+---
+
+## 2026-10-23 — META marked as a favorite
+
+**What changed**: `watchlist.json` now carries `"fav": true` on META, taking the favorites from twelve to thirteen: MU, SNDK, SMH, NVDA, TSM, TSLA, SMCI, QCOM, GOOG, META, MSFT, INTU, IONQ.
+
+**Verification**: the heatmap renders thirteen starred tiles and META is one of them.
+
+**Follow-on**: the favorites list is read at generation time by the Morning Brief and the Events calendar, so META will not appear in the brief's favorites section or carry the `fav` flag on its earnings until those files are next refreshed.

@@ -1,106 +1,797 @@
 {
-  "name": "2025",
-  "peAsOf": "Sep 01, 2026",
-  "symbols": [
-    { "t": "VFTNX", "tags": ["Fund", "Broad Market"] },
-    { "t": "SPY",   "tags": ["ETF", "Broad Market"] },
-    { "t": "TQQQ",  "tags": ["ETF", "Leveraged", "Broad Market"] },
-    { "t": "UFO",   "tags": ["ETF", "Space"] },
-    { "t": "GE",    "pe": 40.72, "tags": ["Aerospace", "Industrials"] },
-    { "t": "WQTM",  "tags": ["ETF", "Quantum"] },
-    { "t": "QTUM",  "tags": ["ETF", "Quantum", "AI"] },
-    { "t": "IBM",   "pe": 18.05, "tags": ["Software", "AI", "Quantum"] },
-    { "t": "ARTY",  "tags": ["ETF", "AI"] },
-    { "t": "DRAM",  "tags": ["ETF", "AI Memory", "Semiconductor"] },
-    { "t": "MU",    "fav": true, "sector": "AI Memory", "pe": 6.33, "tags": ["Semiconductor", "AI Memory", "AI Infra"] },
-    { "t": "SNDK",  "fav": true, "pe": 6.97, "tags": ["AI Memory", "Semiconductor"] },
-    { "t": "SMH",   "fav": true, "tags": ["ETF", "Semiconductor"] },
-    { "t": "NVDA",  "fav": true, "pe": 20.77, "tags": ["Semiconductor", "AI", "AI Infra", "Physical AI"] },
-    { "t": "TSM",   "fav": true, "pe": 19.06, "tags": ["Semiconductor", "AI Infra"] },
-    { "t": "AMD",   "pe": 41.12, "tags": ["Semiconductor", "AI", "AI Infra"] },
-    { "t": "INTC",  "pe": 52.52, "tags": ["Semiconductor", "AI Infra"] },
-    { "t": "AVGO",  "pe": 22.73, "tags": ["Semiconductor", "AI Infra", "Networking"] },
-    { "t": "DELL",  "pe": 22.68, "tags": ["AI Infra", "Hardware"] },
-    { "t": "HPE",   "pe": 13.43, "tags": ["AI Infra", "Hardware", "Networking"] },
-    { "t": "CRWV",  "tags": ["AI Infra", "Data Center", "Cloud", "AI"] },
-    { "t": "ORCL",  "pe": 17.69, "tags": ["Software", "Cloud", "AI Infra"] },
-    { "t": "TSLA",  "fav": true, "pe": 183.31, "tags": ["Physical AI", "Robotics", "Auto"] },
-    { "t": "SPCX",  "pe": 104.05, "tags": ["Space"] },
-    { "t": "SMCI",  "fav": true, "pe": 8.11, "tags": ["AI Infra", "Hardware", "Data Center"] },
-    { "t": "QCOM",  "fav": true, "pe": 17.1, "tags": ["Semiconductor", "AI"] },
-    { "t": "COIN",  "pe": 156.0, "tags": ["Crypto", "Fintech"] },
-    { "t": "AAPL",  "pe": 33.89, "tags": ["Consumer Tech", "Hardware", "AI"] },
-    { "t": "GOOG",  "fav": true, "pe": 25.61, "tags": ["AI", "Software", "Cloud", "AI Infra"] },
-    { "t": "META",  "pe": 17.46, "tags": ["AI", "Software", "Consumer Tech"] },
-    { "t": "AMZN",  "pe": 28.29, "tags": ["Cloud", "AI Infra", "Consumer Tech", "Software"] },
-    { "t": "IGV",   "tags": ["ETF", "Software"] },
-    { "t": "MSFT",  "fav": true, "pe": 24.67, "tags": ["Software", "Cloud", "AI", "AI Infra"] },
-    { "t": "SNOW",  "pe": 152.21, "tags": ["Software", "Cloud", "AI"] },
-    { "t": "INTU",  "fav": true, "pe": 13.84, "tags": ["Software", "AI"] },
-    { "t": "PLTR",  "pe": 92.41, "tags": ["Software", "AI", "Defense"] },
-    { "t": "NOW",   "pe": 28.26, "tags": ["Software", "AI"] },
-    { "t": "HD",    "pe": 21.88, "tags": ["Retail", "Consumer Tech"] },
-    { "t": "CRM",   "pe": 15.0, "tags": ["Software", "Cloud", "AI"] },
-    { "t": "ADBE",  "pe": 10.65, "tags": ["Software", "AI"] },
-    { "t": "CLBR",  "tags": ["SPAC"] },
-    { "t": "T",     "pe": 10.68, "tags": ["Telecom"] },
-    { "t": "VZ",    "pe": 9.89, "tags": ["Telecom"] },
-    { "t": "MRVL",  "pe": 50.24, "tags": ["Semiconductor", "AI Infra", "Networking"] },
-    { "t": "MSTR",  "pe": 4.0, "tags": ["Crypto", "Software"] },
-    { "t": "XLE",   "tags": ["ETF", "Energy"] },
-    { "t": "IONQ",  "fav": true, "sector": "Quantum", "tags": ["Quantum", "AI"] },
-    { "t": "PHM",   "pe": 12.11, "tags": ["Homebuilder"] },
-    { "t": "HUMN",  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
-    { "t": "ROBO",  "tags": ["ETF", "Robotics", "Physical AI"] },
-    { "t": "BOTZ",  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
-    { "t": "ARKQ",  "tags": ["ETF", "Robotics", "Physical AI", "AI"] },
-    { "t": "AIQ",   "tags": ["ETF", "AI"] },
-    { "t": "DXYZ",  "tags": ["Fund", "Private Tech"] },
-    { "t": "RKLB",  "pe": 2707.87, "tags": ["Space", "Defense"] },
-    { "t": "URA",   "tags": ["ETF", "Nuclear", "Energy"] },
-    { "t": "ASTS",  "tags": ["Space", "Telecom"] },
-    { "t": "SOXL",  "tags": ["ETF", "Leveraged", "Semiconductor"] },
-    { "t": "ASML",  "pe": 30.5, "tags": ["Semiconductor", "AI Infra"] },
-    { "t": "NFLX",  "pe": 23.09, "tags": ["Media", "Consumer Tech"] },
-    { "t": "CCXI",  "tags": ["SPAC"] },
-    { "t": "CSCO",  "pe": 21.5, "tags": ["Networking", "AI Infra", "Hardware"] },
-    { "t": "OUST",  "tags": ["Physical AI", "Robotics", "Hardware"] },
-    { "t": "ARQQ",  "tags": ["Quantum", "Software"] },
-    { "t": "INFQ",  "tags": ["Quantum", "AI"] },
-    { "t": "RGTI",  "tags": ["Quantum"] },
-    { "t": "QBTS",  "tags": ["Quantum"] },
-    { "t": "XNDU",  "tags": ["Quantum"] },
-    { "t": "HQ",    "tags": ["Quantum"] },
-    { "t": "QUBT",  "tags": ["Quantum"] },
-    { "t": "NASA",  "tags": ["ETF", "Space"] },
-    { "t": "BA",    "pe": 173.65, "tags": ["Aerospace", "Defense"] },
-    { "t": "SPCE",  "tags": ["Space"] },
-    { "t": "RDW",   "tags": ["Space", "Defense"] },
-    { "t": "MDA",   "pe": 23.55, "tags": ["Space", "Robotics"] },
-    { "t": "VOYG",  "tags": ["Space", "Defense"] },
-    { "t": "BKSY",  "tags": ["Space", "Defense"] },
-    { "t": "FLY",   "tags": ["Space"] },
-    { "t": "LUNR",  "tags": ["Space"] },
-    { "t": "PL",    "tags": ["Space"] },
-    { "t": "IBIT",  "tags": ["Crypto", "ETF"] },
-    { "t": "GBTC",  "tags": ["Crypto", "Fund"] },
-    { "t": "MARA",  "pe": 6.3, "tags": ["Crypto", "Mining"] },
-    { "t": "RIOT",  "tags": ["Crypto", "Mining"] },
-    { "t": "BITF",  "tags": ["Crypto", "Mining"] },
-    { "t": "HUT",   "tags": ["Crypto", "Mining", "Data Center"] },
-    { "t": "HIVE",  "tags": ["Crypto", "Mining"] },
-    { "t": "BITO",  "tags": ["Crypto", "ETF"] },
-    { "t": "BITW",  "tags": ["Crypto", "Fund"] },
-    { "t": "BLOK",  "tags": ["Crypto", "ETF"] },
-    { "t": "BCII",  "tags": ["Crypto"] },
-    { "t": "CAN",   "tags": ["Crypto", "Mining", "Semiconductor"] },
-    { "t": "CLSK",  "tags": ["Crypto", "Mining"] },
-    { "t": "MFH",   "tags": ["Crypto", "Fintech"] },
-    { "t": "XNET",  "tags": ["Crypto", "Software"] },
-    { "t": "SKHY",  "sector": "AI Memory", "pe": 4.05, "tags": ["Semiconductor", "AI Memory", "AI Infra"] },
-    { "t": "COHR",  "pe": 28.89, "tags": ["Semiconductor", "AI Infra", "Networking", "Hardware"] },
-    { "t": "NET",   "pe": 193.19, "tags": ["Cloud", "Software", "Networking", "AI Infra"] },
-    { "t": "DDOG",  "pe": 84.56, "tags": ["Software", "Cloud", "AI"] },
-    { "t": "NU",    "pe": 14.93, "tags": ["Fintech"] }
-  ]
+ "name": "2025",
+ "peAsOf": "Sep 01, 2026",
+ "symbols": [
+  {
+   "t": "VFTNX",
+   "tags": [
+    "Fund",
+    "Broad Market"
+   ]
+  },
+  {
+   "t": "SPY",
+   "tags": [
+    "ETF",
+    "Broad Market"
+   ]
+  },
+  {
+   "t": "TQQQ",
+   "tags": [
+    "ETF",
+    "Leveraged",
+    "Broad Market"
+   ]
+  },
+  {
+   "t": "UFO",
+   "tags": [
+    "ETF",
+    "Space"
+   ]
+  },
+  {
+   "t": "GE",
+   "pe": 40.72,
+   "tags": [
+    "Aerospace",
+    "Industrials"
+   ]
+  },
+  {
+   "t": "WQTM",
+   "tags": [
+    "ETF",
+    "Quantum"
+   ]
+  },
+  {
+   "t": "QTUM",
+   "tags": [
+    "ETF",
+    "Quantum",
+    "AI"
+   ]
+  },
+  {
+   "t": "IBM",
+   "pe": 18.05,
+   "tags": [
+    "Software",
+    "AI",
+    "Quantum"
+   ]
+  },
+  {
+   "t": "ARTY",
+   "tags": [
+    "ETF",
+    "AI"
+   ]
+  },
+  {
+   "t": "DRAM",
+   "tags": [
+    "ETF",
+    "AI Memory",
+    "Semiconductor"
+   ]
+  },
+  {
+   "t": "MU",
+   "fav": true,
+   "sector": "AI Memory",
+   "pe": 6.33,
+   "tags": [
+    "Semiconductor",
+    "AI Memory",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "SNDK",
+   "fav": true,
+   "pe": 6.97,
+   "tags": [
+    "AI Memory",
+    "Semiconductor"
+   ]
+  },
+  {
+   "t": "SMH",
+   "fav": true,
+   "tags": [
+    "ETF",
+    "Semiconductor"
+   ]
+  },
+  {
+   "t": "NVDA",
+   "fav": true,
+   "pe": 20.77,
+   "tags": [
+    "Semiconductor",
+    "AI",
+    "AI Infra",
+    "Physical AI"
+   ]
+  },
+  {
+   "t": "TSM",
+   "fav": true,
+   "pe": 19.06,
+   "tags": [
+    "Semiconductor",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "AMD",
+   "pe": 41.12,
+   "tags": [
+    "Semiconductor",
+    "AI",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "INTC",
+   "pe": 52.52,
+   "tags": [
+    "Semiconductor",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "AVGO",
+   "pe": 22.73,
+   "tags": [
+    "Semiconductor",
+    "AI Infra",
+    "Networking"
+   ]
+  },
+  {
+   "t": "DELL",
+   "pe": 22.68,
+   "tags": [
+    "AI Infra",
+    "Hardware"
+   ]
+  },
+  {
+   "t": "HPE",
+   "pe": 13.43,
+   "tags": [
+    "AI Infra",
+    "Hardware",
+    "Networking"
+   ]
+  },
+  {
+   "t": "CRWV",
+   "tags": [
+    "AI Infra",
+    "Data Center",
+    "Cloud",
+    "AI"
+   ]
+  },
+  {
+   "t": "ORCL",
+   "pe": 17.69,
+   "tags": [
+    "Software",
+    "Cloud",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "TSLA",
+   "fav": true,
+   "pe": 183.31,
+   "tags": [
+    "Physical AI",
+    "Robotics",
+    "Auto"
+   ]
+  },
+  {
+   "t": "SPCX",
+   "pe": 104.05,
+   "tags": [
+    "Space"
+   ]
+  },
+  {
+   "t": "SMCI",
+   "fav": true,
+   "pe": 8.11,
+   "tags": [
+    "AI Infra",
+    "Hardware",
+    "Data Center"
+   ]
+  },
+  {
+   "t": "QCOM",
+   "fav": true,
+   "pe": 17.1,
+   "tags": [
+    "Semiconductor",
+    "AI"
+   ]
+  },
+  {
+   "t": "COIN",
+   "pe": 156.0,
+   "tags": [
+    "Crypto",
+    "Fintech"
+   ]
+  },
+  {
+   "t": "AAPL",
+   "pe": 33.89,
+   "tags": [
+    "Consumer Tech",
+    "Hardware",
+    "AI"
+   ]
+  },
+  {
+   "t": "GOOG",
+   "fav": true,
+   "pe": 25.61,
+   "tags": [
+    "AI",
+    "Software",
+    "Cloud",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "META",
+   "pe": 17.46,
+   "tags": [
+    "AI",
+    "Software",
+    "Consumer Tech"
+   ],
+   "fav": true
+  },
+  {
+   "t": "AMZN",
+   "pe": 28.29,
+   "tags": [
+    "Cloud",
+    "AI Infra",
+    "Consumer Tech",
+    "Software"
+   ]
+  },
+  {
+   "t": "IGV",
+   "tags": [
+    "ETF",
+    "Software"
+   ]
+  },
+  {
+   "t": "MSFT",
+   "fav": true,
+   "pe": 24.67,
+   "tags": [
+    "Software",
+    "Cloud",
+    "AI",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "SNOW",
+   "pe": 152.21,
+   "tags": [
+    "Software",
+    "Cloud",
+    "AI"
+   ]
+  },
+  {
+   "t": "INTU",
+   "fav": true,
+   "pe": 13.84,
+   "tags": [
+    "Software",
+    "AI"
+   ]
+  },
+  {
+   "t": "PLTR",
+   "pe": 92.41,
+   "tags": [
+    "Software",
+    "AI",
+    "Defense"
+   ]
+  },
+  {
+   "t": "NOW",
+   "pe": 28.26,
+   "tags": [
+    "Software",
+    "AI"
+   ]
+  },
+  {
+   "t": "HD",
+   "pe": 21.88,
+   "tags": [
+    "Retail",
+    "Consumer Tech"
+   ]
+  },
+  {
+   "t": "CRM",
+   "pe": 15.0,
+   "tags": [
+    "Software",
+    "Cloud",
+    "AI"
+   ]
+  },
+  {
+   "t": "ADBE",
+   "pe": 10.65,
+   "tags": [
+    "Software",
+    "AI"
+   ]
+  },
+  {
+   "t": "CLBR",
+   "tags": [
+    "SPAC"
+   ]
+  },
+  {
+   "t": "T",
+   "pe": 10.68,
+   "tags": [
+    "Telecom"
+   ]
+  },
+  {
+   "t": "VZ",
+   "pe": 9.89,
+   "tags": [
+    "Telecom"
+   ]
+  },
+  {
+   "t": "MRVL",
+   "pe": 50.24,
+   "tags": [
+    "Semiconductor",
+    "AI Infra",
+    "Networking"
+   ]
+  },
+  {
+   "t": "MSTR",
+   "pe": 4.0,
+   "tags": [
+    "Crypto",
+    "Software"
+   ]
+  },
+  {
+   "t": "XLE",
+   "tags": [
+    "ETF",
+    "Energy"
+   ]
+  },
+  {
+   "t": "IONQ",
+   "fav": true,
+   "sector": "Quantum",
+   "tags": [
+    "Quantum",
+    "AI"
+   ]
+  },
+  {
+   "t": "PHM",
+   "pe": 12.11,
+   "tags": [
+    "Homebuilder"
+   ]
+  },
+  {
+   "t": "HUMN",
+   "tags": [
+    "ETF",
+    "Robotics",
+    "Physical AI",
+    "AI"
+   ]
+  },
+  {
+   "t": "ROBO",
+   "tags": [
+    "ETF",
+    "Robotics",
+    "Physical AI"
+   ]
+  },
+  {
+   "t": "BOTZ",
+   "tags": [
+    "ETF",
+    "Robotics",
+    "Physical AI",
+    "AI"
+   ]
+  },
+  {
+   "t": "ARKQ",
+   "tags": [
+    "ETF",
+    "Robotics",
+    "Physical AI",
+    "AI"
+   ]
+  },
+  {
+   "t": "AIQ",
+   "tags": [
+    "ETF",
+    "AI"
+   ]
+  },
+  {
+   "t": "DXYZ",
+   "tags": [
+    "Fund",
+    "Private Tech"
+   ]
+  },
+  {
+   "t": "RKLB",
+   "pe": 2707.87,
+   "tags": [
+    "Space",
+    "Defense"
+   ]
+  },
+  {
+   "t": "URA",
+   "tags": [
+    "ETF",
+    "Nuclear",
+    "Energy"
+   ]
+  },
+  {
+   "t": "ASTS",
+   "tags": [
+    "Space",
+    "Telecom"
+   ]
+  },
+  {
+   "t": "SOXL",
+   "tags": [
+    "ETF",
+    "Leveraged",
+    "Semiconductor"
+   ]
+  },
+  {
+   "t": "ASML",
+   "pe": 30.5,
+   "tags": [
+    "Semiconductor",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "NFLX",
+   "pe": 23.09,
+   "tags": [
+    "Media",
+    "Consumer Tech"
+   ]
+  },
+  {
+   "t": "CCXI",
+   "tags": [
+    "SPAC"
+   ]
+  },
+  {
+   "t": "CSCO",
+   "pe": 21.5,
+   "tags": [
+    "Networking",
+    "AI Infra",
+    "Hardware"
+   ]
+  },
+  {
+   "t": "OUST",
+   "tags": [
+    "Physical AI",
+    "Robotics",
+    "Hardware"
+   ]
+  },
+  {
+   "t": "ARQQ",
+   "tags": [
+    "Quantum",
+    "Software"
+   ]
+  },
+  {
+   "t": "INFQ",
+   "tags": [
+    "Quantum",
+    "AI"
+   ]
+  },
+  {
+   "t": "RGTI",
+   "tags": [
+    "Quantum"
+   ]
+  },
+  {
+   "t": "QBTS",
+   "tags": [
+    "Quantum"
+   ]
+  },
+  {
+   "t": "XNDU",
+   "tags": [
+    "Quantum"
+   ]
+  },
+  {
+   "t": "HQ",
+   "tags": [
+    "Quantum"
+   ]
+  },
+  {
+   "t": "QUBT",
+   "tags": [
+    "Quantum"
+   ]
+  },
+  {
+   "t": "NASA",
+   "tags": [
+    "ETF",
+    "Space"
+   ]
+  },
+  {
+   "t": "BA",
+   "pe": 173.65,
+   "tags": [
+    "Aerospace",
+    "Defense"
+   ]
+  },
+  {
+   "t": "SPCE",
+   "tags": [
+    "Space"
+   ]
+  },
+  {
+   "t": "RDW",
+   "tags": [
+    "Space",
+    "Defense"
+   ]
+  },
+  {
+   "t": "MDA",
+   "pe": 23.55,
+   "tags": [
+    "Space",
+    "Robotics"
+   ]
+  },
+  {
+   "t": "VOYG",
+   "tags": [
+    "Space",
+    "Defense"
+   ]
+  },
+  {
+   "t": "BKSY",
+   "tags": [
+    "Space",
+    "Defense"
+   ]
+  },
+  {
+   "t": "FLY",
+   "tags": [
+    "Space"
+   ]
+  },
+  {
+   "t": "LUNR",
+   "tags": [
+    "Space"
+   ]
+  },
+  {
+   "t": "PL",
+   "tags": [
+    "Space"
+   ]
+  },
+  {
+   "t": "IBIT",
+   "tags": [
+    "Crypto",
+    "ETF"
+   ]
+  },
+  {
+   "t": "GBTC",
+   "tags": [
+    "Crypto",
+    "Fund"
+   ]
+  },
+  {
+   "t": "MARA",
+   "pe": 6.3,
+   "tags": [
+    "Crypto",
+    "Mining"
+   ]
+  },
+  {
+   "t": "RIOT",
+   "tags": [
+    "Crypto",
+    "Mining"
+   ]
+  },
+  {
+   "t": "BITF",
+   "tags": [
+    "Crypto",
+    "Mining"
+   ]
+  },
+  {
+   "t": "HUT",
+   "tags": [
+    "Crypto",
+    "Mining",
+    "Data Center"
+   ]
+  },
+  {
+   "t": "HIVE",
+   "tags": [
+    "Crypto",
+    "Mining"
+   ]
+  },
+  {
+   "t": "BITO",
+   "tags": [
+    "Crypto",
+    "ETF"
+   ]
+  },
+  {
+   "t": "BITW",
+   "tags": [
+    "Crypto",
+    "Fund"
+   ]
+  },
+  {
+   "t": "BLOK",
+   "tags": [
+    "Crypto",
+    "ETF"
+   ]
+  },
+  {
+   "t": "BCII",
+   "tags": [
+    "Crypto"
+   ]
+  },
+  {
+   "t": "CAN",
+   "tags": [
+    "Crypto",
+    "Mining",
+    "Semiconductor"
+   ]
+  },
+  {
+   "t": "CLSK",
+   "tags": [
+    "Crypto",
+    "Mining"
+   ]
+  },
+  {
+   "t": "MFH",
+   "tags": [
+    "Crypto",
+    "Fintech"
+   ]
+  },
+  {
+   "t": "XNET",
+   "tags": [
+    "Crypto",
+    "Software"
+   ]
+  },
+  {
+   "t": "SKHY",
+   "sector": "AI Memory",
+   "pe": 4.05,
+   "tags": [
+    "Semiconductor",
+    "AI Memory",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "COHR",
+   "pe": 28.89,
+   "tags": [
+    "Semiconductor",
+    "AI Infra",
+    "Networking",
+    "Hardware"
+   ]
+  },
+  {
+   "t": "NET",
+   "pe": 193.19,
+   "tags": [
+    "Cloud",
+    "Software",
+    "Networking",
+    "AI Infra"
+   ]
+  },
+  {
+   "t": "DDOG",
+   "pe": 84.56,
+   "tags": [
+    "Software",
+    "Cloud",
+    "AI"
+   ]
+  },
+  {
+   "t": "NU",
+   "pe": 14.93,
+   "tags": [
+    "Fintech"
+   ]
+  }
+ ]
 }
