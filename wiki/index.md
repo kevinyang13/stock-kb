@@ -11,6 +11,10 @@ Table of contents for this knowledge base. One line per page.
 - `.claude/skills/income-statement-chart/SKILL.md` — the skill that turns a bare ticker into a published income statement chart. Encodes the chartable gate, the mandatory segment breakdown, and the source traps.
 - `bin/stamp.py` — versions the shared CSS and JS links in every page, so an edit under `assets/` cannot hide behind a browser's cached copy.
 
+## Strategy
+
+- [[options-wheel-strategy]] — the cash-secured put / covered call wheel on MU, SMH, MSFT, GOOG and TSLA: the rules, what the $3,000-a-week target actually requires, and the six-point entry checklist.
+
 ## Companies
 
 - [[favorites-financials]] — index of the twelve income statement charts on the Financials tab, with the data caveats that apply to them.

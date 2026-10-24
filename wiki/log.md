@@ -377,3 +377,36 @@ hover still works with drag-to-pan armed.
 4146x2292 at 300%, box held at 1382x739 with both axes panning, and an exact return to 1382x764 on
 Fit. Re-drew all 65 charts and checked each one renders its full link count, none slower than
 500ms. Hover confirmed working at 150%.
+
+## 2026-10-24 — options wheel strategy page
+
+**Source**: user described their options strategy and asked for a wiki page capturing it, plus help
+judging good and bad sell-put entries from technicals, catalysts and fundamentals.
+
+**Created**: `wiki/options-wheel-strategy.md`. Records the four stated rules, the arithmetic behind
+the $3,000-a-week target, a six-point entry checklist derived from those rules, and dated readings
+for all five names.
+
+**Data**: daily history for MU, SMH, MSFT, GOOG and TSLA from stockanalysis.com (Yahoo and stooq
+both refused — 429 and a challenge page). MU's close cross-checked against the IBKR connector and
+matched to the cent, $877.55. Live MU Nov-20 put quotes pulled from IBKR for the 800, 760 and 720
+strikes. Earnings dates and P/E from stockanalysis.com. SMH holdings from its ETF page.
+
+**The finding worth keeping**: the income target is not reachable at current volatility under the
+stated rules. $3,000/week on $300,000 is 1.00% of capital per week, or 52% a year. The best-paying
+line available — a MU 800 put, 8.8% out, on the highest-volatility name of the five — pays 0.69% a
+week. Whole account in that one trade gives $1,649/week, 55% of target. "Avoid assignment" and
+"$3,000 a week" pull the same lever in opposite directions, and the page says so rather than
+presenting a strike that appears to square them.
+
+**Correction caught before publishing**: the first pass computed RSI as a plain mean of the last 14
+changes (Cutler's) rather than Wilder's smoothing. It read MU 29, SMH 15, GOOG 24 — against the
+correct 38, 33 and 31. SMH would have been published as "extremely oversold" on a number that was
+five points off the standard. The calculator now uses Wilder's for both RSI and ATR.
+
+**Flagged as needing verification**: GOOG's forward P/E (23.39) sits above its trailing P/E (15.92),
+which implies falling earnings and more likely reflects a one-off gain in the trailing twelve
+months. Not resolved against the filing.
+
+**Not done**: no recommendation of any specific trade, and no order placed or staged. The page
+states plainly that it records the user's rules and factual readings, not advice.
