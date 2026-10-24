@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Call Sheet</title>
+<title>Stock Signal Desk · Call Sheet</title>
 <style>
   :root{
     --teal-deep:#073933;
@@ -222,13 +222,39 @@
     letter-spacing:.18em;
     text-transform:uppercase;
   }
+
+  /* masthead + nav shared with the rest of Stock Signal Desk */
+  header.mast{
+    padding:9px 14px;text-align:left;border-bottom:2px solid var(--gold);
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;
+  }
+  .mast h1{font-size:20px;line-height:1;letter-spacing:.14em}
+  .mast p{margin:0;font-family:var(--sans);font-size:11px;color:var(--cream-dim)}
+  .tabs{display:flex;flex-wrap:wrap;gap:4px;margin-left:auto}
+  .tab{
+    font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    padding:7px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;
+    background:transparent;border:1px solid var(--teal-line);color:var(--cream-dim);
+  }
+  .tab:hover{border-color:var(--gold);color:var(--cream)}
+  .tab.on{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:700}
+  a.tab{text-decoration:none;display:inline-block}
+  @media (max-width:640px){ .tabs{margin-left:0;width:100%} }
 </style>
 </head>
 <body>
 
 <header class="mast">
-  <h1>CALL SHEET</h1>
-  <p>Stock predictions, target dates, and how they actually landed</p>
+  <h1>STOCK SIGNAL DESK</h1>
+  <p>Call Sheet — predictions, and how they landed</p>
+  <nav class="tabs">
+    <a class="tab" href="heatmap.html">Heatmap</a>
+    <a class="tab" href="catalysts.html">Catalysts</a>
+    <a class="tab" href="brief.html">Morning Brief</a>
+    <a class="tab" href="events.html">Events</a>
+    <a class="tab" href="financials.html">Financials</a>
+    <a class="tab on" href="tracker.html">Call Sheet</a>
+  </nav>
 </header>
 
 <div class="band">

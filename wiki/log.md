@@ -177,3 +177,13 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Noted**: every dollar figure on this card is derived, not filed, and moves with the exchange rate. The rate, its date and both sources are recorded on the card so the conversion can be audited or redone. Margins are unaffected by the conversion.
 
 **Verification**: all identities still foot after conversion (gross $1,794M, operating $909M, net $940M) with no validator warning.
+
+---
+
+## 2026-10-23 — Site named Stock Signal Desk
+
+**What changed**: The site had no name of its own — `HEATMAP` was the masthead on every page, so each page branded itself as the heatmap, and `index.html` separately called it "Stock KB". The masthead is now **STOCK SIGNAL DESK** across all pages, with the page's own name in the strapline (`Heatmap — colored by the day's move`, `Financials — where the money goes`, and so on). Titles follow the same pattern: `Stock Signal Desk · Heatmap`.
+
+**Call Sheet wired in**: `tracker.html` was orphaned — reachable only by typing the URL, linked from nothing. It now carries the same masthead and nav as the other pages and appears as the sixth nav item. It keeps its own stylesheet, so the nav styles were copied across and its oversized hero masthead was reduced to match the compact bar the other pages use.
+
+**Verification**: all six pages load with the new masthead, the nav highlights the current page (`Site.nav()` on the five shared-CSS pages, hardcoded on the Call Sheet since it does not load `site.js`), and the heatmap still renders 100 tiles.
