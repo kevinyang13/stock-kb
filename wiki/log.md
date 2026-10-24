@@ -163,3 +163,17 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Noted**: revenue fell 10% while operating profit rose roughly 150% — the prior-year quarter was the Switch 2 launch. Net profit exceeds operating profit because ¥63.5B of non-operating income (mostly FX and interest on cash) sits below the line. Cost of sales also absorbed about $300M of IEEPA tariff refunds. Nintendo does not split R&D out of SG&A, so operating expenses are one line.
 
 **Verification**: foots with no validator warning; fifteen chips render and the yen figures display correctly.
+
+---
+
+## 2026-10-23 — Nintendo converted to USD
+
+**What changed**: The Nintendo chart and card now show US dollars instead of yen, so it is directly comparable with the other fourteen statements. The filed yen figures are kept in the card's notes.
+
+**Rate**: USD/JPY **156.87**, as of Oct 23 2026, confirmed against two independent sources — CNBC quoted 156.86 and IBKR IDEALPRO quoted 156.8675 (bid 156.79 / ask 156.945).
+
+**Converted**: revenue ¥517.8B → $3,301M, gross ¥281.4B → $1,794M, operating ¥142.6B → $909M, net ¥147.4B → $940M. Segments: platform $3,079M, IP related income $222M.
+
+**Noted**: every dollar figure on this card is derived, not filed, and moves with the exchange rate. The rate, its date and both sources are recorded on the card so the conversion can be audited or redone. Margins are unaffected by the conversion.
+
+**Verification**: all identities still foot after conversion (gross $1,794M, operating $909M, net $940M) with no validator warning.
