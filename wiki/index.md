@@ -9,6 +9,7 @@ Table of contents for this knowledge base. One line per page.
 ## Automation
 
 - `.claude/skills/income-statement-chart/SKILL.md` — the skill that turns a bare ticker into a published income statement chart. Encodes the chartable gate, the mandatory segment breakdown, and the source traps.
+- `bin/stamp.py` — versions the shared CSS and JS links in every page, so an edit under `assets/` cannot hide behind a browser's cached copy.
 
 ## Companies
 

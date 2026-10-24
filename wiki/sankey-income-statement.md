@@ -200,6 +200,53 @@ Pick the unit from the size of the statement, and keep one decimal where it matt
 A $13.5M company rounded to `$14M` showed a 14% gross margin where the real figure was 16%. For
 small caps the decimal is the difference between a right answer and a wrong one.
 
+## Rendering live in the browser
+
+The chart is a Plotly figure either way; the PNG is just that figure flattened by kaleido at the
+last step. `--json` skips the flattening and writes the figure itself to `charts/{TICKER}-{PERIOD}.json`,
+which the Financials page renders with plotly.js.
+
+```bash
+python3 bin/sankey.py examples/nvda-q2-fy27.json --json --png
+```
+
+Measured on NVDA Q2 FY27: **12KB of JSON against a 395KB PNG**, about 90ms to render. Across all 65
+statements that is 888KB instead of 22MB, and the page fetches one at a time.
+
+What the live path gains: **hover gives every band and bar its exact value**, in the statement's own
+currency and precision. That matters because the labels are deliberately sparse — two sub-lines
+maximum, and hairline flows carry no label at all.
+
+Three things make it work:
+
+1. **Python keeps the layout.** `assets/sankey.js` does not compute positions. It takes the figure
+   as built and rescales it, because every margin and font size in that JSON is a pixel value
+   against a fixed design width. `--json` pops `width`/`height` into a `design` block for exactly
+   this. A plain `responsive: true` would keep the 300px left and 270px right margins on an 800px
+   page and squeeze five columns into the 230px left over.
+2. **Node names ride in `customdata`, not `node.label`.** A populated `label` makes plotly draw node
+   text, which leaves a visible glyph beside every bar — a transparent `textfont` does not suppress
+   it. The label stays empty and the annotations do all the drawing.
+3. **Below a 0.42 scale the chart stops shrinking and pans instead.** Squeezing a five-column
+   diagram into 390px gives roughly 7px text. It fits and cannot be read. Horizontal scroll is the
+   honest answer until there is a stacked layout for narrow screens.
+
+The PNG is still generated, and the page falls back to it if the JSON or plotly itself fails to
+arrive. Keep both.
+
+### Cache-stamping the assets
+
+The pages carry no-cache meta tags, but those cover only the HTML. A browser will still serve
+`assets/site.css` and `assets/site.js` from its own cache, so a style change can sit invisible
+behind a stale copy — this has now cost two debugging sessions. After editing anything under
+`assets/`, run:
+
+```bash
+python3 bin/stamp.py
+```
+
+It rewrites every page's asset links to `?v=<newest asset mtime>`, which makes each edit a new URL.
+
 ## Known limitations of `bin/sankey.py`
 
 - `arrangement="fixed"` is required. With `"snap"`, Plotly overrides the `y` positions and the profit and cost branches swap sides.

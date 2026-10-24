@@ -47,16 +47,25 @@ const Sankey = (() => {
     });
   }
 
-  // Draws fig into div and keeps it sized to its parent.
+  // Draws fig into div and keeps it sized to its parent. Mounting twice on the
+  // same div replaces the first mount rather than stacking observers on it.
   function mount(div, fig) {
+    unmount(div);
     draw(div, fig);
     let w = div.parentElement.clientWidth;
-    new ResizeObserver(() => {
+    const obs = new ResizeObserver(() => {
       const now = div.parentElement.clientWidth;
       if (Math.abs(now - w) < 8) return;   // ignore the reflow we just caused
       w = now;
       draw(div, fig);
-    }).observe(div.parentElement);
+    });
+    obs.observe(div.parentElement);
+    div._sankeyObs = obs;
+  }
+
+  function unmount(div) {
+    if (div._sankeyObs) { div._sankeyObs.disconnect(); delete div._sankeyObs; }
+    if (div.data) Plotly.purge(div);
   }
 
   const cache = new Map();
@@ -70,5 +79,5 @@ const Sankey = (() => {
     return cache.get(stem);
   }
 
-  return { mount, load, draw };
+  return { mount, unmount, load, draw };
 })();

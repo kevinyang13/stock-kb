@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Financials</title>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=1792819458">
 </head>
 <body>
 
@@ -31,7 +31,9 @@
 
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
-<script src="assets/site.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="assets/sankey.js?v=1792819458"></script>
+<script src="assets/site.js?v=1792819458"></script>
 <script>
 Site.nav();
 
@@ -41,6 +43,7 @@ Site.nav();
   var bust = "";
   var finItems = [];
   var finPick = 0;
+  var chartEl = null;
 
   function finCard(f) {
     var kpis = (f.highlights || []).map(function (h) {
@@ -59,9 +62,9 @@ Site.nav();
         '<span class="per">' + [f.periodEnd, f.reported].filter(Boolean).map(esc).join(" &middot; ") + "</span>" +
       "</div>" +
       '<div class="fin-kpis">' + kpis + "</div>" +
-      '<figure class="fin-fig"><a href="' + esc(f.img) + bust + '" target="_blank" rel="noopener">' +
-        '<img src="' + esc(f.img) + bust + '" alt="' + esc(f.company + " " + f.period + " income statement") + '">' +
-      "</a></figure>" +
+      '<figure class="fin-fig"><div class="fin-chart" id="fin-chart"></div></figure>' +
+      '<p class="fin-raster">Hover any band for its value &middot; ' +
+        '<a href="' + esc(f.img) + bust + '" target="_blank" rel="noopener">open as an image</a></p>' +
       (notes ? '<ul class="fin-notes">' + notes + "</ul>" : "") +
       '<p class="fin-src">Source: ' + src + "</p>" +
       "</article>";
@@ -72,7 +75,43 @@ Site.nav();
       return '<button type="button" class="chip' + (i === finPick ? " on" : "") + '" data-i="' + i + '">' +
         esc(f.t) + '<span class="n">' + esc(f.period) + "</span></button>";
     }).join("");
-    document.getElementById("fin-body").innerHTML = finItems.length ? finCard(finItems[finPick]) : "";
+    var body = document.getElementById("fin-body");
+    if (chartEl) Sankey.unmount(chartEl);   // innerHTML is about to drop it
+    chartEl = null;
+    body.innerHTML = finItems.length ? finCard(finItems[finPick]) : "";
+    if (finItems.length) drawChart(finItems[finPick]);
+  }
+
+  // The chart ships as the figure JSON bin/sankey.py writes with --json, so
+  // hovering a band gives its exact value. The PNG is still generated and
+  // stands in whenever the JSON or plotly itself does not arrive.
+  function drawChart(f) {
+    chartEl = document.getElementById("fin-chart");
+    if (!chartEl) return;
+    var stem = f.chart || f.img.split("/").pop().replace(/\.png$/, "");
+    var el = chartEl;
+
+    if (typeof Plotly === "undefined" || typeof Sankey === "undefined") {
+      rasterFallback(el, f, "plotly did not load");
+      return;
+    }
+    Sankey.load(stem)
+      .then(function (fig) {
+        if (el !== chartEl) return;        // the ticker changed while fetching
+        Sankey.mount(el, fig);
+      })
+      .catch(function (err) {
+        if (el !== chartEl) return;
+        rasterFallback(el, f, String(err.message || err));
+      });
+  }
+
+  function rasterFallback(el, f, why) {
+    el.parentElement.innerHTML =
+      '<img src="' + esc(f.img) + bust + '" alt="' +
+      esc(f.company + " " + f.period + " income statement") + '">';
+    var cap = document.querySelector(".fin-raster");
+    if (cap) cap.innerHTML = "Showing the image instead &mdash; " + esc(why);
   }
 
   document.getElementById("fin-chips").addEventListener("click", function (e) {

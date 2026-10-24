@@ -307,3 +307,41 @@ fifth visual check.
 **Verification**: all 66 specs re-rendered; the only validator warning is the known TSM
 reference-image discrepancy. All 65 published images refreshed and `financials.json` timestamp
 bumped for cache busting.
+
+## 2026-10-23 — Financials charts render live in the browser
+
+**Source**: user request — "instead of images.. can the same diagram be done via web
+html/javascript/etc?", then "lets change all and update financials.html".
+
+**Why it was cheap**: the charts were already Plotly figures. kaleido flattened them to PNG at the
+very last step. Dropping that step needed no rewrite of the layout.
+
+**Changed**:
+
+- `bin/sankey.py` gains `--json`, writing the figure to `charts/{TICKER}-{PERIOD}.json` with the
+  design width and height split into a `design` block for the browser to rescale against.
+- Nodes and links carry `hovertemplate`s, so a hover reads `Data Center → Revenue / $89.0B` in the
+  statement's own currency and precision. Names ride in `customdata` rather than `node.label`: a
+  populated label makes plotly draw node text, and even a transparent `textfont` leaves a glyph
+  beside every bar. That artifact was caught on the first render and fixed.
+- `assets/sankey.js` rescales the figure to its container, caches fetched figures, and replaces a
+  previous mount rather than stacking ResizeObservers on the same element.
+- `financials.html` renders the live chart and keeps the PNG as a fallback plus an "open as an
+  image" link.
+- `chart-live.html` is the prototype harness with width switchers, kept for testing narrow layouts.
+
+**Numbers**: 12KB of JSON against a 395KB PNG per chart; 888KB against 22MB across all 65. All 65
+render in under 400ms. PNG output is unchanged and still generated.
+
+**Bug found while testing**: the pages' no-cache meta tags cover only the HTML, so a stale
+`assets/site.css` hid the new rules completely — the same class of failure as the PNG caching bug
+earlier today. `bin/stamp.py` now rewrites every page's asset links to `?v=<newest asset mtime>`.
+Run it after any edit under `assets/`.
+
+**Known limit, not solved**: below a 0.42 scale the chart stops shrinking and pans horizontally.
+A five-column Sankey at 390px has roughly 7px text. The PNGs never fitted a phone either, so this
+is not a regression, but a real phone layout needs a stacked variant.
+
+**Verification**: all 65 chart JSONs fetched and drawn in the browser with no failures; profit
+layout (NVDA) and loss layout (CRWV) both checked by eye; no console errors; ticker switching
+confirmed to tear down the previous chart.

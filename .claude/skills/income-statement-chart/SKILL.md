@@ -80,8 +80,11 @@ Two lines are always derived so the statement foots:
 ## Step 4 — Render and validate
 
 ```bash
-python3 bin/sankey.py examples/<ticker>-<period>.json --png
+python3 bin/sankey.py examples/<ticker>-<period>.json --json --png
 ```
+
+`--json` writes the live figure the Financials page renders; `--png` writes the raster fallback.
+Always produce both.
 
 **The validator must print no warnings.** It checks five identities. A warning means the figures are
 wrong or a line is missing — fix the data, never widen the tolerance.
@@ -94,6 +97,7 @@ readability. Confirm all four:
 - no text is clipped at an edge
 - flow widths look proportional
 - every money figure reads at 19px in its node's colour — green profit, red cost, black revenue
+- the live chart renders on the Financials page and its hover values are right
 
 Labels carry at most two sub-lines: the money figure, then one ratio. A third line grows the block
 until it hits whatever sits below it.
@@ -104,12 +108,17 @@ in a corridor between two linked columns; move it into a column or give it one o
 
 ## Step 5 — Publish
 
-Copy the PNG to `assets/financials/`, add an entry to `financials.json` with ticker, company,
+Copy the PNG to `assets/financials/`. `charts/{TICKER}-{PERIOD}.json` is written in place and needs
+no copying — the page fetches it from there. Add an entry to `financials.json` with ticker, company,
 period, periodEnd, img, source, sourceUrl, four highlight KPIs and notes. Notes must state the
 segment split, anything derived, and any non-USD currency.
 
+If you changed anything under `assets/`, run `python3 bin/stamp.py` — the pages' no-cache meta tags
+cover only the HTML, and a stale cached stylesheet will hide your change completely.
+
 Verify in the browser (`python3 -m http.server 8099`, then `financials.html`) — the chip appears,
-the image loads, no horizontal overflow. Then update `wiki/log.md` and commit.
+the live chart draws, hover values are right, no horizontal overflow. Then update `wiki/log.md` and
+commit.
 
 ## Traps
 
