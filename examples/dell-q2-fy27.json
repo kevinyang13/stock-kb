@@ -1,0 +1,38 @@
+{
+ "company": "Dell Technologies",
+ "ticker": "DELL",
+ "period": "Q2 FY27",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 47.0,
+ "revenue_yoy": 58,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 47.0,
+   "yoy": 58,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 37.1,
+ "gross_profit": 9.9,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 4.2,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 1.0
+  },
+  {
+   "name": "SG&A",
+   "value": 3.2
+  }
+ ],
+ "operating_profit": 5.6,
+ "other": -0.5,
+ "tax": 1.0,
+ "net_profit": 4.1
+}

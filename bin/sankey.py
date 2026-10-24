@@ -230,9 +230,12 @@ def build_loss(spec):
     opex_items = spec.get("opex_items", [])
     below = spec.get("below_line", [])
     net_loss = spec["net_loss"]
+    # some loss makers have non-operating income offsetting part of the burn,
+    # which makes charges exceed gross profit + net loss. It is a second source.
+    other_income = spec.get("other_income", 0.0)
 
     leaves = opex_items + below
-    funded = gross + net_loss
+    funded = gross + net_loss + other_income
     spent = sum(i["value"] for i in leaves)
     if abs(funded - spent) > 0.15:
         print(f"  ! loss layout does not balance: gross {gross:,.2f} + net loss {net_loss:,.2f}"
@@ -269,6 +272,10 @@ def build_loss(spec):
     link(rev_id, cor_id, cor, COST_LINK)
     link(gross_id, pool_id, gross, PROFIT_LINK)
     link(loss_id, pool_id, net_loss, COST_LINK)
+    inc_id = None
+    if other_income > 0:
+        inc_id = node("Non-operating income", PROFIT, 0.37, 0.18)
+        link(inc_id, pool_id, other_income, PROFIT_LINK)
 
     leaf_ids = []
     for i, item in enumerate(leaves):
@@ -320,6 +327,9 @@ def build_loss(spec):
     label(0.355, py(ys[loss_id]), "Net loss",
           [f"({m(net_loss)})", f"{net_loss / rev * 100:.0f}% of revenue", "funds the gap"],
           color=COST, xa="right")
+    if inc_id is not None:
+        label(0.355, py(ys[inc_id]), "Non-operating income", [m(other_income)],
+              color=PROFIT, xa="right")
     label(X["op"], 0.895, "Costs & charges", [f"({m(spent)})"], color=COST, va="bottom")
 
     for lid, item in leaf_ids:

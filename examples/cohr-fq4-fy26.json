@@ -1,0 +1,38 @@
+{
+ "company": "Coherent",
+ "ticker": "COHR",
+ "period": "FQ4 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 2046.0,
+ "revenue_yoy": 34,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 2046.0,
+   "yoy": 34,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 1259.0,
+ "gross_profit": 787.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 545.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 216.0
+  },
+  {
+   "name": "SG&A",
+   "value": 329.0
+  }
+ ],
+ "operating_profit": 242.0,
+ "other": 41.0,
+ "tax": 42.0,
+ "net_profit": 241.0
+}

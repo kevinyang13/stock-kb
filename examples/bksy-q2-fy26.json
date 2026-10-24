@@ -1,0 +1,44 @@
+{
+ "company": "BlackSky",
+ "ticker": "BKSY",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 33.0,
+ "revenue_yoy": 50,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 33.0,
+   "yoy": 50,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 9.0,
+ "gross_profit": 24.0,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 0.0
+  },
+  {
+   "name": "SG&A",
+   "value": 24.0
+  },
+  {
+   "name": "Other operating",
+   "value": 8.0
+  }
+ ],
+ "net_loss": 21.0,
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 13.0
+  }
+ ]
+}

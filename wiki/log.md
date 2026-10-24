@@ -187,3 +187,19 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Call Sheet wired in**: `tracker.html` was orphaned — reachable only by typing the URL, linked from nothing. It now carries the same masthead and nav as the other pages and appears as the sixth nav item. It keeps its own stylesheet, so the nav styles were copied across and its oversized hero masthead was reduced to match the compact bar the other pages use.
 
 **Verification**: all six pages load with the new masthead, the nav highlights the current page (`Site.nav()` on the five shared-CSS pages, hardcoded on the Call Sheet since it does not load `site.js`), and the heatmap still renders 100 tiles.
+
+---
+
+## 2026-10-23 — Income statements for the whole watchlist
+
+**What changed**: The Financials tab went from 15 statements to **65**. Added 50 charts covering every remaining watchlist name that files an income statement.
+
+**Classification first**: of the 100 watchlist symbols, 25 are ETFs or funds and have no income statement, 6 are shells with no usable filing (CLBR, CCXI, BITF, BCII, MFH, XNET), and 4 more were excluded after fetching — SPCE, QUBT and CAN report **negative gross profit** (cost of revenue exceeds revenue, so there is no flow to draw) and HQ reports no revenue line at all.
+
+**New tool**: `bin/mkspec.py` turns a row of income statement figures into a spec, picking the profit or loss layout automatically. It derives two bridging lines so every statement foots: cost of revenue as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit. This was necessary because sources routinely report a cost of revenue that does not reconcile with their own gross profit — GE was out by $1,020M and IBM by $114M, both caught by the validator.
+
+**Generator**: `build_loss()` gained a non-operating income source. MSTR's charges exceed gross profit plus its net loss, because non-operating income covered part of the burn; without a second source the loss layout could not balance.
+
+**Verification**: every one of the 65 renders with no validator warning. All 65 chips clicked in the browser — no broken images, no horizontal overflow.
+
+**Noted**: all 50 new charts show a single revenue bar. Segment splits were pulled only for the names done earlier by hand. Several statements are in non-USD currencies as filed — SKHY in Korean won, ASML in euro, MDA in Canadian dollars, TSM in New Taiwan dollars — and their cards say so.

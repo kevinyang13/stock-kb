@@ -1,6 +1,6 @@
-# Favorites Financials
+# Watchlist Financials
 
-**Summary**: The Financials tab carries an income statement chart for every favorite except SMH, plus CoreWeave — fourteen statements, each the company's most recent reported quarter.
+**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 65 statements, each the company's most recent reported quarter, plus Nintendo.
 
 **Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K and CoreWeave's results release for those two.
 
@@ -8,7 +8,21 @@
 
 ---
 
-## What is covered
+## Coverage
+
+Of the 100 names on the watchlist:
+
+| | Count | Why |
+|---|---|---|
+| Charted | 64 | files an income statement |
+| ETFs and funds | 25 | a fund holds securities; it has no revenue or margin |
+| Shells / no usable filing | 6 | CLBR, CCXI, BITF, BCII, MFH, XNET |
+| Excluded, negative gross profit | 3 | SPCE, QUBT, CAN — cost of revenue exceeds revenue, so there is no flow to draw |
+| Excluded, pre-revenue | 1 | HQ reports no revenue line at all |
+
+Nintendo is charted too, though it is not on the watchlist.
+
+## The original fourteen
 
 | Ticker | Quarter | Period end | Layout |
 |---|---|---|---|

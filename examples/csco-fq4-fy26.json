@@ -1,0 +1,42 @@
+{
+ "company": "Cisco",
+ "ticker": "CSCO",
+ "period": "FQ4 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 17252.0,
+ "revenue_yoy": 18,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 17252.0,
+   "yoy": 18,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 6189.0,
+ "gross_profit": 11063.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 6281.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 2431.0
+  },
+  {
+   "name": "SG&A",
+   "value": 3624.0
+  },
+  {
+   "name": "Other operating",
+   "value": 226.0
+  }
+ ],
+ "operating_profit": 4782.0,
+ "other": 151.0,
+ "tax": 1074.0,
+ "net_profit": 3859.0
+}

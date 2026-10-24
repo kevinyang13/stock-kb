@@ -1,0 +1,38 @@
+{
+ "company": "Netflix",
+ "ticker": "NFLX",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 12874.0,
+ "revenue_yoy": 12,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 12874.0,
+   "yoy": 12,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 6079.0,
+ "gross_profit": 6795.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 2336.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 1033.0
+  },
+  {
+   "name": "SG&A",
+   "value": 1303.0
+  }
+ ],
+ "operating_profit": 4459.0,
+ "other": -142.0,
+ "tax": 653.0,
+ "net_profit": 3664.0
+}

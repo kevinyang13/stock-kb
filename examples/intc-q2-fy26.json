@@ -1,0 +1,40 @@
+{
+ "company": "Intel",
+ "ticker": "INTC",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 16128.0,
+ "revenue_yoy": 25,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 16128.0,
+   "yoy": 25,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 9619.0,
+ "gross_profit": 6509.0,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 3368.0
+  },
+  {
+   "name": "SG&A",
+   "value": 1175.0
+  }
+ ],
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 12999.0
+  }
+ ],
+ "net_loss": 11033.0
+}

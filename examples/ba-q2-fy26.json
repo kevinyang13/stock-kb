@@ -1,0 +1,40 @@
+{
+ "company": "Boeing",
+ "ticker": "BA",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 24.6,
+ "revenue_yoy": 8,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 24.6,
+   "yoy": 8,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 22.1,
+ "gross_profit": 2.4,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 0.9
+  },
+  {
+   "name": "SG&A",
+   "value": 1.5
+  }
+ ],
+ "net_loss": 0.4,
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 0.4
+  }
+ ]
+}

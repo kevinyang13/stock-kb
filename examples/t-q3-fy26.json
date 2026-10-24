@@ -1,0 +1,38 @@
+{
+ "company": "AT&T",
+ "ticker": "T",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 32.3,
+ "revenue_yoy": 5,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 32.3,
+   "yoy": 5,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 12.4,
+ "gross_profit": 19.9,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 11.9,
+ "opex_items": [
+  {
+   "name": "SG&A",
+   "value": 6.9
+  },
+  {
+   "name": "Other operating",
+   "value": 5.0
+  }
+ ],
+ "operating_profit": 8.0,
+ "other": -5.7,
+ "tax": 1.4,
+ "net_profit": 0.9
+}

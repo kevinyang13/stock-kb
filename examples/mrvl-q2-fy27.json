@@ -1,0 +1,38 @@
+{
+ "company": "Marvell Technology",
+ "ticker": "MRVL",
+ "period": "Q2 FY27",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 2739.0,
+ "revenue_yoy": 37,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 2739.0,
+   "yoy": 37,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 1283.0,
+ "gross_profit": 1456.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 999.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 741.0
+  },
+  {
+   "name": "SG&A",
+   "value": 258.0
+  }
+ ],
+ "operating_profit": 457.0,
+ "other": -79.0,
+ "tax": 70.0,
+ "net_profit": 308.0
+}

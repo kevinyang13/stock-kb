@@ -1,0 +1,42 @@
+{
+ "company": "AMD",
+ "ticker": "AMD",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 11536.0,
+ "revenue_yoy": 50,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 11536.0,
+   "yoy": 50,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 5073.0,
+ "gross_profit": 6463.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 4473.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 2528.0
+  },
+  {
+   "name": "SG&A",
+   "value": 1401.0
+  },
+  {
+   "name": "Other operating",
+   "value": 544.0
+  }
+ ],
+ "operating_profit": 1990.0,
+ "other": 559.0,
+ "tax": 252.0,
+ "net_profit": 2297.0
+}

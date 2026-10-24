@@ -1,0 +1,38 @@
+{
+ "company": "Salesforce",
+ "ticker": "CRM",
+ "period": "Q2 FY27",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 11345.0,
+ "revenue_yoy": 11,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 11345.0,
+   "yoy": 11,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 2649.0,
+ "gross_profit": 8696.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 6271.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 1687.0
+  },
+  {
+   "name": "SG&A",
+   "value": 4584.0
+  }
+ ],
+ "operating_profit": 2425.0,
+ "other": 2127.0,
+ "tax": 1026.0,
+ "net_profit": 3526.0
+}

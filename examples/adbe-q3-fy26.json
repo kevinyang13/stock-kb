@@ -1,0 +1,42 @@
+{
+ "company": "Adobe",
+ "ticker": "ADBE",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 6760.0,
+ "revenue_yoy": 13,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 6760.0,
+   "yoy": 13,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 763.0,
+ "gross_profit": 5997.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 3643.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 1288.0
+  },
+  {
+   "name": "SG&A",
+   "value": 2315.0
+  },
+  {
+   "name": "Other operating",
+   "value": 40.0
+  }
+ ],
+ "operating_profit": 2354.0,
+ "other": 3.0,
+ "tax": 530.0,
+ "net_profit": 1827.0
+}

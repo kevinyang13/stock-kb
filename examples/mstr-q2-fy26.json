@@ -1,0 +1,39 @@
+{
+ "company": "Strategy",
+ "ticker": "MSTR",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 122.0,
+ "revenue_yoy": 7,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 122.0,
+   "yoy": 7,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 41.0,
+ "gross_profit": 82.0,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 23.0
+  },
+  {
+   "name": "SG&A",
+   "value": 74.0
+  },
+  {
+   "name": "Digital asset & other charges",
+   "value": 8315.0
+  }
+ ],
+ "net_loss": 8220.0,
+ "other_income": 110.0
+}

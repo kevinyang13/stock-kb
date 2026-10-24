@@ -1,0 +1,42 @@
+{
+ "company": "Broadcom",
+ "ticker": "AVGO",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 29.6,
+ "revenue_yoy": 86,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 29.6,
+   "yoy": 86,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 7.6,
+ "gross_profit": 22.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 5.9,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 2.9
+  },
+  {
+   "name": "SG&A",
+   "value": 1.0
+  },
+  {
+   "name": "Other operating",
+   "value": 2.0
+  }
+ ],
+ "operating_profit": 16.1,
+ "other": -0.8,
+ "tax": 2.2,
+ "net_profit": 13.1
+}

@@ -1,0 +1,38 @@
+{
+ "company": "Home Depot",
+ "ticker": "HD",
+ "period": "Q2 FY27",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 47.9,
+ "revenue_yoy": 6,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 47.9,
+   "yoy": 6,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 32.4,
+ "gross_profit": 15.4,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 9.3,
+ "opex_items": [
+  {
+   "name": "SG&A",
+   "value": 8.4
+  },
+  {
+   "name": "Other operating",
+   "value": 0.9
+  }
+ ],
+ "operating_profit": 6.2,
+ "other": 0.2,
+ "tax": 1.5,
+ "net_profit": 4.8
+}

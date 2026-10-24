@@ -1,0 +1,38 @@
+{
+ "company": "Amazon",
+ "ticker": "AMZN",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 200.6,
+ "revenue_yoy": 20,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 200.6,
+   "yoy": 20,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 95.8,
+ "gross_profit": 104.8,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 77.4,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 28.3
+  },
+  {
+   "name": "SG&A",
+   "value": 49.0
+  }
+ ],
+ "operating_profit": 27.5,
+ "other": 53.4,
+ "tax": 18.2,
+ "net_profit": 62.6
+}

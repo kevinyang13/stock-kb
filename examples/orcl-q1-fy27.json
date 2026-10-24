@@ -1,0 +1,42 @@
+{
+ "company": "Oracle",
+ "ticker": "ORCL",
+ "period": "Q1 FY27",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 19345.0,
+ "revenue_yoy": 30,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 19345.0,
+   "yoy": 30,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 7733.0,
+ "gross_profit": 11612.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 4719.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 2401.0
+  },
+  {
+   "name": "SG&A",
+   "value": 2187.0
+  },
+  {
+   "name": "Other operating",
+   "value": 131.0
+  }
+ ],
+ "operating_profit": 6893.0,
+ "other": -1286.0,
+ "tax": 847.0,
+ "net_profit": 4760.0
+}

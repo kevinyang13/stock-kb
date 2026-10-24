@@ -1,0 +1,38 @@
+{
+ "company": "Apple",
+ "ticker": "AAPL",
+ "period": "FQ3 FY26",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 109.4,
+ "revenue_yoy": 16,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 109.4,
+   "yoy": 16,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 54.6,
+ "gross_profit": 54.8,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 19.1,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 11.7
+  },
+  {
+   "name": "SG&A",
+   "value": 7.3
+  }
+ ],
+ "operating_profit": 35.7,
+ "other": 0.6,
+ "tax": 6.5,
+ "net_profit": 29.8
+}

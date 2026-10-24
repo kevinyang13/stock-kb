@@ -1,0 +1,38 @@
+{
+ "company": "Palantir",
+ "ticker": "PLTR",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 1935.0,
+ "revenue_yoy": 93,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 1935.0,
+   "yoy": 93,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 296.0,
+ "gross_profit": 1639.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 727.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 193.0
+  },
+  {
+   "name": "SG&A",
+   "value": 534.0
+  }
+ ],
+ "operating_profit": 912.0,
+ "other": 165.0,
+ "tax": 15.0,
+ "net_profit": 1062.0
+}

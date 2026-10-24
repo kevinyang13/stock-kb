@@ -1,0 +1,38 @@
+{
+ "company": "GE Aerospace",
+ "ticker": "GE",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 14118.0,
+ "revenue_yoy": 16,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 14118.0,
+   "yoy": 16,
+   "note": "not split by segment",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 10116.0,
+ "gross_profit": 4002.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 1391.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 458.0
+  },
+  {
+   "name": "SG&A",
+   "value": 933.0
+  }
+ ],
+ "operating_profit": 2611.0,
+ "other": 62.0,
+ "tax": 385.0,
+ "net_profit": 2288.0
+}
