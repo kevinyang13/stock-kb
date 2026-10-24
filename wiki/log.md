@@ -203,3 +203,30 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Verification**: every one of the 65 renders with no validator warning. All 65 chips clicked in the browser — no broken images, no horizontal overflow.
 
 **Noted**: all 50 new charts show a single revenue bar. Segment splits were pulled only for the names done earlier by hand. Several statements are in non-USD currencies as filed — SKHY in Korean won, ASML in euro, MDA in Canadian dollars, TSM in New Taiwan dollars — and their cards say so.
+
+---
+
+## 2026-10-23 — Segment breakdown made mandatory, and a skill to enforce it
+
+**Why**: the bulk watchlist pass produced 50 charts with a single "Total revenue" bar. That was a
+shortcut, and left unwritten it would quietly become the default for every future ticker.
+
+**Wiki**: `wiki/sankey-income-statement.md` gains a new **Step 2 — break revenue out by segment —
+required**, ahead of writing the spec. It states the validation rule (segments must sum to revenue
+within ~0.5%), what to do when a company genuinely publishes no split (say so on the card, never let
+a missing fetch look like a missing disclosure), and repeats the warning about
+`metrics/revenue-by-segment/` being annual data. Later steps renumbered.
+
+**Skill**: added `.claude/skills/income-statement-chart/SKILL.md`, project-scoped so it travels with
+the repo. It covers the whole procedure — the chartable/not-chartable gate including private
+companies, core P&L sourcing, the mandatory segment step, rendering, validation, publishing — plus
+the traps found the hard way: sources that disagree with themselves, aggregators that disagree with
+filings, tax benefits, negative other income, loss makers with non-operating income, and non-USD
+filings.
+
+**Code**: `bin/mkspec.py` now **warns when segments are missing** and requires an explicit
+`no_segment_split=True` to pass silently. When segments are supplied it checks they sum to revenue
+and warns on drift. Enforcement lives in the tool, not only in prose.
+
+**Noted**: the 50 single-bar charts are recorded on `wiki/favorites-financials.md` as a backlog to
+fill in, explicitly not a standard to copy.

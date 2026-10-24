@@ -41,7 +41,29 @@ Collect:
 
 Segments are the part that varies most by company. Alphabet reports Search / YouTube / Network / Play / Cloud; TSMC reports by platform (HPC, Smartphones, IoT, Automotive); SpaceX in the reference is split Space / Connectivity / Super Intelligence. Use whatever the company actually discloses rather than forcing a house taxonomy.
 
-## Step 2 — write the spec
+## Step 2 — break revenue out by segment — required
+
+**Every chart must split total revenue into the company's reported segments.** A single "Total
+revenue" bar is a fallback for companies that publish no split, not a default.
+
+1. Find the segment table in the company's **own** quarterly release. Search
+   `"<Company> <quarter> results segment revenue"` and prefer the 8-K or IR page.
+2. **Validate before using it.** The segments must sum to revenue within about 0.5%. If they do
+   not, you have the wrong period or the wrong line items. `bin/mkspec.py` checks this and warns.
+3. If the company genuinely publishes no split, pass `no_segment_split=True` and say so plainly on
+   the card: *"No segment split: the release does not break revenue out."* Never let a missing
+   fetch look like a missing disclosure.
+4. Never invent segment names or values.
+
+**Do not use `stockanalysis.com/stocks/<ticker>/metrics/revenue-by-segment/`.** Its figures are
+annual even with `?p=quarterly`. NVDA's two segments there sum to $303B against $96.2B of quarterly
+revenue — the error is large and silent.
+
+Segments that have been verified against revenue, as examples of the shapes you will meet: Micron
+by business unit, Alphabet's six lines, Qualcomm's QCT sub-streams plus QTL and a residual, SanDisk
+by end market, TSMC as rounded platform percentages applied to revenue, Nintendo's two.
+
+## Step 3 — write the spec
 
 Create a JSON file. All money values are **positive**, including costs — the renderer decides direction and colour.
 
@@ -57,9 +79,9 @@ Create a JSON file. All money values are **positive**, including costs — the r
 | `other`, `tax`, `net_profit` | number | `other` is interest and other income |
 | `width`, `height` | number | Optional; default 1500 × 880 |
 
-A full worked example is in `examples/tsm-q3-fy26.json`.
+A full worked example is in `examples/tsm-q3-fy26.json`. `bin/mkspec.py` will build the spec for you from a row of figures and pick the profit or loss layout automatically.
 
-## Step 3 — render
+## Step 4 — render
 
 ```bash
 python3 bin/sankey.py examples/tsm-q3-fy26.json --png
@@ -67,7 +89,7 @@ python3 bin/sankey.py examples/tsm-q3-fy26.json --png
 
 Writes `out/{TICKER}-{PERIOD}.html` and, with `--png`, a 2× PNG beside it. Drop `--png` and open the HTML if you want the interactive hover values.
 
-## Step 4 — verify before publishing
+## Step 5 — verify before publishing
 
 The script prints a warning to stderr for every identity that does not foot:
 
@@ -132,6 +154,13 @@ Use `"unit": "M"` with `"decimals": 0` for companies where billions would round 
 - The diagram is confined to the lower 86% of the canvas (`DOM_TOP`) so stage labels have somewhere to sit.
 - A tax *benefit* is handled: a negative `tax` draws a green Tax benefit node flowing into net profit rather than a charge out of operating profit. SPCX Q3 FY26 is the worked example.
 - Segment label text extends into the left margin. Very long names need `margin.l` raised past 300.
+- Negative gross profit cannot be drawn at all — revenue does not cover cost of revenue, so there is
+  no flow. SPCE, QUBT and CAN are excluded for this reason.
+
+## Related automation
+
+`.claude/skills/income-statement-chart/SKILL.md` encodes this whole procedure, including the
+chartable/not-chartable gate and the source traps, so a bare ticker is enough to trigger it.
 
 ## Related pages
 

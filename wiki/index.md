@@ -6,6 +6,10 @@ Table of contents for this knowledge base. One line per page.
 
 - [[sankey-income-statement]] — how to build an App-Economy-Insights-style Sankey income statement chart for a given stock symbol, end to end.
 
+## Automation
+
+- `.claude/skills/income-statement-chart/SKILL.md` — the skill that turns a bare ticker into a published income statement chart. Encodes the chartable gate, the mandatory segment breakdown, and the source traps.
+
 ## Companies
 
 - [[favorites-financials]] — index of the twelve income statement charts on the Financials tab, with the data caveats that apply to them.

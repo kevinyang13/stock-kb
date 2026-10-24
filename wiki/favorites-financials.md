@@ -53,7 +53,11 @@ This is the first case where the two sources disagree on a headline line, not ju
 
 ## Caveats that apply to these charts
 
-**Nine of the twelve now carry a reported segment split**: NVDA, MSFT, GOOG, MU, SNDK, TSM, TSLA, QCOM and INTU. Three do not — SMCI (Supermicro's release does not split server/storage systems from subsystems), IONQ and CRWV (both report a single revenue line) — and those show one revenue bar.
+**Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
+`income-statement-chart` skill. The 50 statements added in the bulk watchlist pass predate that rule
+and still show a single revenue bar; they are a backlog to fill in, not a standard to copy.
+
+**Nine of the original twelve carry a reported segment split**: NVDA, MSFT, GOOG, MU, SNDK, TSM, TSLA, QCOM and INTU. Three do not — SMCI (Supermicro's release does not split server/storage systems from subsystems), IONQ and CRWV (both report a single revenue line) — and those show one revenue bar.
 
 Each split was validated against the revenue total before use. Four footed exactly (MSFT, GOOG, QCOM, SNDK); TSLA is out by $44M on $28.0B and TSM by NT$0.1B, both rounding. Two segment values are **derived rather than reported**: TSMC publishes platform mix only as rounded percentages, which the chart applies to revenue, and Intuit's Global Business Solutions is shown as the remainder so its two segments foot.
 

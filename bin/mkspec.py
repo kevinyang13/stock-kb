@@ -11,8 +11,39 @@ chart needs, so every statement foots:
 import json, sys
 from pathlib import Path
 
+PALETTE = ["#e8502a", "#1b1b7a", "#c8a020", "#f0a030", "#6cb6e8", "#7cd07c"]
+
+
+def _segments(segs, r, rev, yoy, ticker, allowed, dec):
+    """Revenue must be broken out by reported segment. A single bar is a
+    fallback for companies that publish no split, not a default."""
+    if not segs:
+        if not allowed:
+            print(f"  ! {ticker}: NO SEGMENT SPLIT. Pull the segment table from the company's own "
+                  f"release and pass segments=[...]. If the company genuinely publishes none, "
+                  f"pass no_segment_split=True and say so on the card.", file=sys.stderr)
+        return [{"name": "Total revenue", "value": r(rev),
+                 **({"yoy": round(yoy)} if yoy is not None else {}),
+                 "note": "company publishes no segment split" if allowed else "not split by segment",
+                 "color": PALETTE[0]}]
+    out, total = [], 0.0
+    for i, sg in enumerate(segs):
+        v = r(sg["value"])
+        total += v
+        out.append({"name": sg["name"], "value": v,
+                    **({"yoy": round(sg["yoy"])} if sg.get("yoy") is not None else {}),
+                    "note": sg.get("note") or f"{sg['value'] / rev * 100:.0f}% of revenue",
+                    "color": sg.get("color", PALETTE[i % len(PALETTE)])})
+    drift = total - r(rev)
+    if abs(drift) > max(0.15, 0.005 * abs(r(rev))):
+        print(f"  ! {ticker}: segments sum to {total:,.{dec}f} vs revenue {r(rev):,.{dec}f} "
+              f"(drift {drift:+,.{dec}f}) -- wrong period or wrong lines?", file=sys.stderr)
+    return out
+
+
 def make(t, company, period, end, rev, yoy, cor, rd, sga, opex, op, pretax, tax, net,
-         unit=None, dec=None, other_opex_name="Other operating", cur="$", gross=None):
+         unit=None, dec=None, other_opex_name="Other operating", cur="$", gross=None,
+         segments=None, no_segment_split=False):
     # Sources often report a cost of revenue that does not reconcile with their
     # own gross profit -- there are cost lines between the two. Trust the
     # reported subtotals and derive the bridging lines, so the chart always
@@ -41,9 +72,7 @@ def make(t, company, period, end, rev, yoy, cor, rd, sga, opex, op, pretax, tax,
         "company": company, "ticker": t, "period": period,
         "currency": cur, "unit": unit, "decimals": dec,
         "revenue": r(rev), "revenue_yoy": round(yoy) if yoy is not None else None,
-        "segments": [{"name": "Total revenue", "value": r(rev),
-                      **({"yoy": round(yoy)} if yoy is not None else {}),
-                      "note": "not split by segment", "color": "#e8502a"}],
+        "segments": _segments(segments, r, rev, yoy, t, no_segment_split, dec),
         "cost_of_revenue": r(cor), "gross_profit": r(gross),
         "width": 1700, "height": 940,
     }
