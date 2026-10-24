@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
 <title>Financials</title>
 <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -35,6 +37,7 @@ Site.nav();
 (function () {
   var esc = Site.esc;
   var finLoaded = false;
+  var bust = "";
   var finItems = [];
   var finPick = 0;
 
@@ -55,8 +58,8 @@ Site.nav();
         '<span class="per">' + [f.periodEnd, f.reported].filter(Boolean).map(esc).join(" &middot; ") + "</span>" +
       "</div>" +
       '<div class="fin-kpis">' + kpis + "</div>" +
-      '<figure class="fin-fig"><a href="' + esc(f.img) + '" target="_blank" rel="noopener">' +
-        '<img src="' + esc(f.img) + '" alt="' + esc(f.company + " " + f.period + " income statement") + '">' +
+      '<figure class="fin-fig"><a href="' + esc(f.img) + bust + '" target="_blank" rel="noopener">' +
+        '<img src="' + esc(f.img) + bust + '" alt="' + esc(f.company + " " + f.period + " income statement") + '">' +
       "</a></figure>" +
       (notes ? '<ul class="fin-notes">' + notes + "</ul>" : "") +
       '<p class="fin-src">Source: ' + src + "</p>" +
@@ -99,6 +102,7 @@ Site.nav();
         statusEl.innerHTML = "<b>" + esc(doc.generatedLabel || "") + "</b><br>" +
           finItems.length + " statement" + (finItems.length === 1 ? "" : "s") +
           (doc.note ? " &middot; " + esc(doc.note) : "");
+        bust = doc.generated ? "?v=" + encodeURIComponent(doc.generated) : "";
         finPick = 0;
         renderFin();
       })
