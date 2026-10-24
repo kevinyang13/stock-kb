@@ -9,11 +9,32 @@
  "revenue_yoy": 50,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 11536.0,
-   "yoy": 50,
-   "note": "not split by segment",
+   "name": "Data Center",
+   "value": 6700,
+   "yoy": 107,
+   "note": "58% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "Client",
+   "value": 3100,
+   "yoy": 23,
+   "note": "27% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Embedded",
+   "value": 977,
+   "yoy": 19,
+   "note": "8% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "Gaming",
+   "value": 779,
+   "yoy": -31,
+   "note": "7% of revenue",
+   "color": "#f0a030"
   }
  ],
  "cost_of_revenue": 5073.0,

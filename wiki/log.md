@@ -230,3 +230,25 @@ and warns on drift. Enforcement lives in the tool, not only in prose.
 
 **Noted**: the 50 single-bar charts are recorded on `wiki/favorites-financials.md` as a backlog to
 fill in, explicitly not a standard to copy.
+
+---
+
+## 2026-10-24 — Segment audit, and the first 13 gaps closed
+
+**Audit**: of the 65 statements, 12 had a real segment split, 3 were hand-verified as companies that publish none (CRWV, IONQ, SMCI), and **50 had an unverified single revenue bar** — the residue of the bulk watchlist pass.
+
+A first pass at the audit reported the opposite and had to be corrected. It matched the string "no segment split" in the card notes, but those notes read *"no segment split **was pulled** for this name"* — a statement about what had been fetched, not about what the company discloses. The corrected audit keys off the spec's actual segment count and an explicit allow-list of verified-none tickers.
+
+**Closed this pass (13)**: AAPL, AMZN, AVGO, INTC, IBM, ORCL, DELL, CSCO, ADBE, CRM, VZ, NFLX, AMD. Every split was validated against the revenue total before use.
+
+**Judgement calls recorded on the cards**:
+
+- **INTC** segments cannot be summed to revenue — $5.5B of intersegment eliminations, and Intel Foundry's revenue is mostly internal. The chart shows DCAI, CCPG and an external residual.
+- **VZ** Business revenue is derived as the residual; only Consumer ($26.2B) was confirmed from the 10-Q.
+- **NFLX** UCAN came from the 8-K; EMEA, LATAM and APAC from secondary coverage. They sum to within $1M of revenue.
+- **ADBE** does not report Digital Media / Digital Experience in its release — it splits by revenue type, so the chart uses Subscription / Services / Product.
+- **T** segment table for Q3 FY26 was not published in any source reachable this pass. Left pending rather than guessed.
+
+**Tooling**: added `bin/addsegs.py`, which attaches a verified split to an existing spec, re-renders, and warns if the segments do not sum to revenue. It caught two unit mistakes of mine where I passed billions into a spec denominated in millions.
+
+**Remaining**: 37 still on a single bar — ARQQ ASML ASTS BA BKSY CLSK COHR COIN DDOG FLY GE HD HIVE HUT INFQ LUNR MARA MDA MRVL MSTR NET NOW NU OUST PHM PL PLTR QBTS RDW RGTI RIOT RKLB SKHY SNOW T VOYG XNDU. Many of the micro-caps genuinely report one revenue line; each still needs checking before it can be marked verified-none.

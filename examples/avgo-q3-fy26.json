@@ -9,11 +9,18 @@
  "revenue_yoy": 86,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 29.6,
-   "yoy": 86,
-   "note": "not split by segment",
+   "name": "Semiconductor solutions",
+   "value": 20.84,
+   "yoy": 127,
+   "note": "70% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "Infrastructure software",
+   "value": 8.75,
+   "yoy": 29,
+   "note": "30% of revenue",
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 7.6,

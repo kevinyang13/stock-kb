@@ -9,11 +9,32 @@
  "revenue_yoy": 12,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 12874.0,
-   "yoy": 12,
-   "note": "not split by segment",
+   "name": "UCAN",
+   "value": 5628,
+   "yoy": 11,
+   "note": "from the 8-K",
    "color": "#e8502a"
+  },
+  {
+   "name": "EMEA",
+   "value": 4107,
+   "yoy": 11,
+   "note": "32% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "LATAM",
+   "value": 1603,
+   "yoy": 17,
+   "note": "12% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "APAC",
+   "value": 1537,
+   "yoy": 12,
+   "note": "12% of revenue",
+   "color": "#f0a030"
   }
  ],
  "cost_of_revenue": 6079.0,

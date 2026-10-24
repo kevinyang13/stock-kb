@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T20:39:30-07:00",
+ "generated": "2026-10-23T21:09:59-07:00",
  "generatedLabel": "Oct 23, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
@@ -35,7 +35,7 @@
     }
    ],
    "notes": [
-    "Segments: NVIDIA reorganised this quarter — Data Center $89.0B (+117% Y/Y) and a new Edge Computing line at $7.2B that absorbs Gaming. Gaming, Professional Visualization and Automotive are no longer reported separately.",
+    "Segments: Data Center $89.0B, Edge Computing $7.2B",
     "Revenue more than doubled year over year and operating margin is 66%.",
     "Operating expenses are $8.4B — under 9% of revenue — so almost all gross profit reaches operating profit.",
     "$7.8B of interest and other income sits above the tax line, on top of the operating result."
@@ -73,7 +73,7 @@
     }
    ],
    "notes": [
-    "Segments: QCT Handsets $5,086M (-20%), QCT IoT $1,830M (+9%), QCT Automotive $1,588M (+61%), QTL licensing $1,278M (-3%), plus a $165M residual for QSI and other.",
+    "Segments: QCT Handsets $5,086M, QCT IoT $1,830M, QCT Automotive $1,588M, QTL licensing $1,278M, QSI & other $165M",
     "The only favorite with revenue down year over year.",
     "R&D is $2,607M, 26% of revenue — more than three times SG&A.",
     "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line."
@@ -111,7 +111,7 @@
     }
    ],
    "notes": [
-    "Segments: Search $63.3B (+17%), Cloud $24.8B (+82%), subscriptions/platforms/devices $12.9B, YouTube ads $11.1B (+13%), Network $7.3B (-1%), Other Bets $0.4B.",
+    "Segments: Google Search & other $63.3B, Google Cloud $24.8B, Subscriptions, platforms & devices $12.9B, YouTube ads $11.1B, Google Network $7.3B, Other Bets $0.4B",
     "Read the net margin carefully. 94% is not an operating result — a $99.0B gain on sale of investments sits in the interest and other line.",
     "Operating profit was $40.8B on a 34% margin. That is the number comparable to the other statements here.",
     "R&D of $18.2B is 15% of revenue."
@@ -149,6 +149,7 @@
     }
    ],
    "notes": [
+    "Segments: Core Data Center $18.0B, Cloud Memory $16.3B, Mobile & Client $13.1B, Automotive & Embedded $6.8B",
     "Core Data Center is the swing factor: $18.0B, up 1,041% Y/Y, now a third of revenue.",
     "Cost of revenue is only $7.2B of $54.2B — an 87% gross margin, extraordinary for a memory maker.",
     "The only chart here with a real segment split, taken from the 8-K's business unit table.",
@@ -187,7 +188,7 @@
     }
    ],
    "notes": [
-    "Segments: Edge $5,432M, Datacenter $2,977M (+103% Q/Q), Consumer $556M (-5%). The three sum to revenue exactly.",
+    "Segments: Edge $5,432M, Datacenter $2,977M, Consumer $556M",
     "The same memory cycle as Micron, in an even more extreme form: cost of revenue is only $1,383M against $8,965M of revenue.",
     "Operating expenses total $547M — 6% of revenue.",
     "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one."
@@ -225,7 +226,7 @@
     }
    ],
    "notes": [
-    "Segments: TSMC publishes platform mix as rounded percentages — HPC 68%, smartphones 21%, IoT 4%, automotive 4%, others 2%, DCE 1%. The chart applies those to revenue, so segment values are derived, not reported.",
+    "Segments: High Performance Computing $31.8B, Smartphones $9.8B, Internet of Things $1.9B, Automotive $1.9B, Digital Consumer Electronics $0.4B, Others $0.9B",
     "Reported in New Taiwan dollars, so the absolute figures are not comparable with the USD statements here. The margins are.",
     "The source does not break operating expenses into R&D and SG&A, so they appear as a single line.",
     "This replaces the earlier entry, which was transcribed from the App Economy Insights reference image rather than filed figures."
@@ -263,7 +264,7 @@
     }
    ],
    "notes": [
-    "Segments: Automotive $20.6B (-3%), Services & other $4.61B (+33%), Energy generation & storage $2.88B (-16%). The three sum to $28.09B against $28.05B reported, a rounding gap.",
+    "Segments: Automotive $20,600M, Services & other $4,610M, Energy generation & storage $2,880M",
     "The thinnest margins of any favorite: cost of revenue is $22,552M of $28,046M.",
     "Revenue was essentially flat year over year (-0.2%).",
     "Operating profit of $718M is smaller than Micron's quarterly tax bill."
@@ -301,7 +302,7 @@
     }
    ],
    "notes": [
-    "Segments: Global Business Solutions $3.4B (+14%) and Consumer $930M (+14%). GBS is shown as the remainder so the two foot to revenue; Intuit folded Credit Karma and ProTax into Consumer from August 2025.",
+    "Segments: Global Business Solutions $3,424M, Consumer $930M",
     "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M — 61% of revenue.",
     "Selling, marketing and G&A alone is $1,655M, 38% of revenue.",
     "Net profit is less than half of operating profit: $228M of net interest and other expense sits below the operating line, then $177M of tax.",
@@ -417,7 +418,7 @@
     }
    ],
    "notes": [
-    "Segments: Intelligent Cloud $39.3B (+32%), Productivity & Business Processes $37.8B (+14%), More Personal Computing $12.9B (-4%). The three sum to revenue exactly.",
+    "Segments: Intelligent Cloud $39.3B, Productivity & Business Processes $37.8B, More Personal Computing $12.9B",
     "R&D ($10.0B) and SG&A ($9.9B) are almost exactly equal.",
     "A 45% operating margin at $90B of quarterly revenue.",
     "The most balanced statement of the group — no single line dominates."
@@ -455,7 +456,7 @@
     }
    ],
    "notes": [
-    "Segments: Super Intelligence $7,600M (52% of revenue), Connectivity/Starlink $5,250M (+69% Y/Y, 36%), Space $1,770M (12%). Super Intelligence is now the largest line in the company.",
+    "Segments: Super Intelligence $7,600M, Connectivity (Starlink) $5,250M, Space $1,770M",
     "Net profit exceeds pretax income because the tax line is a $390M benefit, not an expense — the only statement here with that shape, and the reason the chart shows a green Tax benefit flowing into net profit.",
     "R&D is $3,574M, 25% of revenue. Capex was roughly $19.6B in the quarter, mostly AI infrastructure — more than revenue, and not visible on an income statement.",
     "The App Economy Insights reference chart for this quarter shows operating profit of $2.8B and R&D of $4.6B. The filed figures used here are $4,019M and $3,574M. The segment split matches between the two."
@@ -493,7 +494,7 @@
     }
    ],
    "notes": [
-    "Segments: Advertising $63,061M (98% of revenue), other Family of Apps revenue $1,097M, Reality Labs $443M. The three foot to revenue exactly.",
+    "Segments: Advertising $63,061M, Other (Family of Apps) $1,097M, Reality Labs $443M",
     "Reality Labs earned $443M and lost $4,129M at the operating line. Family of Apps made $17,117M, so Reality Labs consumes about a quarter of it.",
     "R&D is $20,054M — 31% of revenue, and more than Meta's entire operating profit.",
     "Operating profit here is the filed $12,988M. stockanalysis.com shows $22,878M because it places a $9,890M operating charge below the line; this chart follows the 8-K, where revenue less all costs gives $12,988M."
@@ -570,9 +571,9 @@
     }
    ],
    "notes": [
+    "Segments: Dedicated video game platform $3,079M, IP related income etc. $222M",
     "Converted from yen at USD/JPY 156.87 as of Oct 23, 2026 (CNBC 156.86, IBKR IDEALPRO 156.8675). Nintendo files in yen; every figure here is derived, and the conversion moves with the rate.",
     "In the filed currency: revenue ¥517.8B, gross ¥281.4B, operating ¥142.6B, net ¥147.4B.",
-    "Segments: Dedicated video game platform $3,079M (-13% Y/Y, 93% of revenue) and IP related income $222M (+107%, 7%). The two foot to revenue exactly.",
     "Revenue fell 10% but operating profit rose about 150%. Switch 2 shipped 3.82M units, down 34% against the launch quarter a year earlier, while the IP business more than doubled on the Super Mario Galaxy film.",
     "Net profit exceeds operating profit: $405M of non-operating income sits below the line, which for Nintendo is mostly FX and interest on its cash. Cost of sales also absorbed roughly $300M of IEEPA tariff refunds.",
     "Nintendo does not break R&D out of SG&A, so operating expenses appear as a single line."
@@ -610,7 +611,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: iPhone $54.2B, Services $30.7B, Mac $10.3B, Wearables, Home & Accessories $7.9B, iPad $6.2B",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -646,7 +647,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Subscription $6,582M, Services & other $111M, Product $67M",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -682,7 +683,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Data Center $6,700M, Client $3,100M, Embedded $977M, Gaming $779M",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -718,7 +719,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Online stores $70.4B, Third-party seller services $46.8B, AWS $42.2B, Advertising $19.8B, Subscription services $13.7B, Physical stores & other $7.7B",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -855,7 +856,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Semiconductor solutions $20.8B, Infrastructure software $8.8B",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -1055,7 +1056,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Subscription & support $10,800M, Professional services & other $545M",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -1091,7 +1092,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Networking $9,791M, Services $3,793M, Security $2,226M, Collaboration $1,167M, Observability $275M",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -1163,7 +1164,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Infrastructure Solutions Group $31.8B, Client Solutions Group $15.0B, Other $0.2B",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -1367,7 +1368,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Software $7,800M, Consulting $5,300M, Infrastructure $3,700M, Financing & other $303M",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -1430,8 +1431,8 @@
     }
    ],
    "notes": [
+    "Segments: Client Computing & Physical AI $8,877M, Data Center & AI $6,262M, Foundry (external) & other $989M",
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $6,509M + $11,033M balances against the charges on the right.",
-    "Single revenue bar — no segment split was pulled for this name.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -1668,7 +1669,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: UCAN $5,628M, EMEA $4,107M, LATAM $1,603M, APAC $1,537M",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -1776,7 +1777,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Cloud infrastructure (IaaS) $7,400M, License & support $5,500M, Cloud applications (SaaS) $4,200M, Services $1,400M, Hardware $800M, Other $45M",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },
@@ -2245,7 +2246,7 @@
     }
    ],
    "notes": [
-    "Single revenue bar — no segment split was pulled for this name.",
+    "Segments: Consumer $26.2B, Business & other $8.1B",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
    ]
   },

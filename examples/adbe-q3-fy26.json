@@ -9,11 +9,22 @@
  "revenue_yoy": 13,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 6760.0,
-   "yoy": 13,
-   "note": "not split by segment",
+   "name": "Subscription",
+   "value": 6582,
+   "note": "97% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "Services & other",
+   "value": 111,
+   "note": "2% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Product",
+   "value": 67,
+   "note": "1% of revenue",
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 763.0,

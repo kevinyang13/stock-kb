@@ -9,11 +9,45 @@
  "revenue_yoy": 20,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 200.6,
-   "yoy": 20,
-   "note": "not split by segment",
+   "name": "Online stores",
+   "value": 70.4,
+   "yoy": 15,
+   "note": "35% of revenue",
    "color": "#e8502a"
+  },
+  {
+   "name": "Third-party seller services",
+   "value": 46.8,
+   "yoy": 16,
+   "note": "23% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "AWS",
+   "value": 42.2,
+   "yoy": 37,
+   "note": "21% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "Advertising",
+   "value": 19.8,
+   "yoy": 26,
+   "note": "10% of revenue",
+   "color": "#f0a030"
+  },
+  {
+   "name": "Subscription services",
+   "value": 13.7,
+   "yoy": 12,
+   "note": "7% of revenue",
+   "color": "#6cb6e8"
+  },
+  {
+   "name": "Physical stores & other",
+   "value": 7.7,
+   "note": "incl. a residual to total",
+   "color": "#7cd07c"
   }
  ],
  "cost_of_revenue": 95.8,

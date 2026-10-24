@@ -9,11 +9,17 @@
  "revenue_yoy": -1,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 34.3,
-   "yoy": -1,
-   "note": "not split by segment",
+   "name": "Consumer",
+   "value": 26.2,
+   "yoy": -2,
+   "note": "from the 10-Q",
    "color": "#e8502a"
+  },
+  {
+   "name": "Business & other",
+   "value": 8.1,
+   "note": "derived as the residual to total",
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 13.0,
