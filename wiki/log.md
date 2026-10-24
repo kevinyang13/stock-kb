@@ -135,3 +135,17 @@ Shared code moved out of the page: `assets/site.css` (all styling) and `assets/s
 **Verification**: the heatmap renders thirteen starred tiles and META is one of them.
 
 **Follow-on**: the favorites list is read at generation time by the Morning Brief and the Events calendar, so META will not appear in the brief's favorites section or carry the `fav` flag on its earnings until those files are next refreshed.
+
+---
+
+## 2026-10-23 — SPCX added as a favorite, and tax benefits now draw
+
+**What changed**: SPCX marked `"fav": true` in `watchlist.json`, taking favorites to fourteen. Added `examples/spcx-q3-fy26.json` and `assets/financials/SPCX-Q3-FY26.png`; the Financials tab now carries fourteen statements.
+
+**Generator**: `build()` handles a **negative** tax line. A tax benefit adds to profit, so it is drawn as a green Tax benefit node flowing into net profit rather than a charge out of operating profit. This was the last limitation listed on `wiki/sankey-income-statement.md`, and it was the SpaceX reference image that originally exposed it.
+
+**Figures**: revenue $14,575M (+161% Y/Y), gross $9,103M, operating $4,019M, net $4,404M — net exceeds pretax ($4,014M) because of the $390M tax benefit. Segments are Super Intelligence $7,600M, Connectivity/Starlink $5,250M (+69%), Space $1,770M.
+
+**Source conflict noted**: the App Economy Insights reference chart for this same quarter shows operating profit of $2.8B and R&D of $4.6B against the filed $4,019M and $3,574M used here. The segment split agrees between the two. Recorded on the card.
+
+**Verification**: SPCX foots with no validator warning. Re-rendered NVDA, INTU, META, MU and GOOG afterwards with no regression — the tax-benefit branch does not touch the positive-tax path. Fourteen chips render on the tab.

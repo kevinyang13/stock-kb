@@ -1,6 +1,6 @@
 # Favorites Financials
 
-**Summary**: The Financials tab carries an income statement chart for every favorite except SMH, plus CoreWeave and Meta — thirteen statements, each the company's most recent reported quarter.
+**Summary**: The Financials tab carries an income statement chart for every favorite except SMH, plus CoreWeave — fourteen statements, each the company's most recent reported quarter.
 
 **Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K and CoreWeave's results release for those two.
 
@@ -24,6 +24,7 @@
 | IONQ | Q2 FY26 | Jun 30, 2026 | loss |
 | MSFT | FQ4 FY26 | Jun 30, 2026 | profit |
 | META | Q3 FY26 | Sep 30, 2026 | profit |
+| SPCX | Q3 FY26 | Sep 30, 2026 | profit (tax benefit) |
 | CRWV | Q2 FY26 | Jun 30, 2026 | loss |
 
 ## SMH has no income statement

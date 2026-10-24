@@ -114,7 +114,7 @@ def build(spec):
         link(opex_id, iid, item["value"], COST_LINK)
         opex_leaf.append((iid, item))
 
-    other_node = tax_node = othercost_node = None
+    other_node = tax_node = othercost_node = taxben_node = None
     if other > 0:
         other_node = node("Interest & other", PROFIT, X["op"], 0.04)
         link(other_node, net_id, other, PROFIT_LINK)
@@ -125,6 +125,10 @@ def build(spec):
         # net interest expense -- a charge taken out of operating profit
         othercost_node = node("Interest & other, net", COST, X["leaf"], 0.38)
         link(op_id, othercost_node, -other, COST_LINK)
+    if tax < 0:
+        # a tax benefit adds to profit, so it flows in rather than out
+        taxben_node = node("Tax benefit", PROFIT, X["op"], 0.10)
+        link(taxben_node, net_id, -tax, PROFIT_LINK)
     link(op_id, net_id, op - max(tax, 0.0) + min(other, 0.0), PROFIT_LINK)
 
     DOM_TOP = 0.77          # sankey occupies the lower 77%; stage labels live above it
@@ -189,6 +193,8 @@ def build(spec):
     if other < 0:
         label(1.015, py(ys[othercost_node]), "Interest & other, net",
               [f"({m(-other)})", f"{-other / rev * 100:.0f}% of revenue"], color=COST, xa="left")
+    if tax < 0:
+        label(X["op"], py(ys[taxben_node]) + 0.055, "Tax benefit", [m(-tax)], color=PROFIT, va="bottom")
     if other > 0:
         label(X["op"], 1.015, "Interest & other",
               [m(other)], color=PROFIT, va="bottom")

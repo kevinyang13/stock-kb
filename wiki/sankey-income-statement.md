@@ -130,7 +130,7 @@ Use `"unit": "M"` with `"decimals": 0` for companies where billions would round 
 - `arrangement="fixed"` is required. With `"snap"`, Plotly overrides the `y` positions and the profit and cost branches swap sides.
 - Node `y` is top-down inside the sankey domain; annotation `y` is bottom-up across the whole canvas. The `py()` helper converts between them. Mixing the two silently puts labels in the wrong place.
 - The diagram is confined to the lower 86% of the canvas (`DOM_TOP`) so stage labels have somewhere to sit.
-- A tax *benefit* rather than a tax expense is still not handled. The SpaceX reference shows one flowing into net profit, which needs the link reversed.
+- A tax *benefit* is handled: a negative `tax` draws a green Tax benefit node flowing into net profit rather than a charge out of operating profit. SPCX Q3 FY26 is the worked example.
 - Segment label text extends into the left margin. Very long names need `margin.l` raised past 300.
 
 ## Related pages
