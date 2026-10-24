@@ -4,7 +4,7 @@
 
 **Sources**: Three reference infographics supplied by the user (SpaceX Q3 FY26, TSMC Q3 FY26, Alphabet Q1 FY26, all by App Economy Insights). Rendering details verified by building and running `bin/sankey.py` against the TSMC reference.
 
-**Last updated**: 2026-10-22
+**Last updated**: 2026-10-23
 
 ---
 
@@ -129,7 +129,22 @@ Read off the three reference images:
 
 Segment nodes in the TSMC reference are individually coloured; in the SpaceX reference they are all black. Either reads fine.
 
-**Labels** are drawn as annotations rather than Plotly node labels, because each one needs three lines at two sizes: a bold name, the dollar value, then margin or share and Y/Y in small grey. Plotly's built-in node labels cannot do this.
+**Labels** are drawn as annotations rather than Plotly node labels, because each one needs three lines at three sizes. Plotly's built-in node labels cannot do this.
+
+| Line | Size | Colour |
+|---|---|---|
+| Node name | 15px bold | the node's own colour |
+| Money figure | **19px bold** | the node's own colour |
+| Margin, share, Y/Y | 12px | `#555` grey |
+
+The money figure is the line the eye goes to, so it is the largest thing in the label and it
+carries the colour: green reads as profit, red as cost, black as revenue, before any number is
+read. Costs are written in parentheses — `($7.2B)` — not with a minus sign.
+
+Keep the sub-lines to two. The money figure plus one ratio fits beside a bar; a third line grows
+the block until it collides with whatever is below it. The loss layout used to carry a "funds the
+gap" third line on the net-loss node and it overlapped the cost-of-revenue bar once the money line
+went to 19px.
 
 **Extras** in the references that this script does not generate: company logos beside segment names, and the rounded black KPI chips in the lower right (Starlink subscribers, launch count). Add those in an image editor, or extend the script with `layout.images` and `shapes`.
 

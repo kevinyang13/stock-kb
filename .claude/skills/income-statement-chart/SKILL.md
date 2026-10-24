@@ -93,6 +93,10 @@ readability. Confirm all four:
 - no label sits on a bar
 - no text is clipped at an edge
 - flow widths look proportional
+- every money figure reads at 19px in its node's colour — green profit, red cost, black revenue
+
+Labels carry at most two sub-lines: the money figure, then one ratio. A third line grows the block
+until it hits whatever sits below it.
 
 If bands cross, the links into a shared node were declared in a different order from their vertical
 positions — plotly stacks by declaration order. If a band runs through a node, that node is parked

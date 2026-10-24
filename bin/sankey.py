@@ -148,9 +148,16 @@ def build(spec):
     ann = []
 
     def label(x, y, head, sub=(), color=INK, size=16, xa="center", va="middle"):
+        # the first sub-line is the money figure: show it large and in the
+        # node's own colour, so green reads as profit and red as cost at a glance
+        lines = [l for l in sub if l]
         txt = f"<b>{head}</b>"
-        for line in [l for l in sub if l]:
-            txt += f"<br><span style='font-size:12px;color:#555'>{line}</span>"
+        for i, line in enumerate(lines):
+            if i == 0:
+                txt += (f"<br><span style='font-size:19px;color:{color}'>"
+                        f"<b>{line}</b></span>")
+            else:
+                txt += f"<br><span style='font-size:12px;color:#555'>{line}</span>"
         ann.append(dict(x=x, y=y, text=txt, showarrow=False, align=xa,
                         xanchor=xa, yanchor=va,
                         font=dict(size=size, color=color),
@@ -297,9 +304,16 @@ def build_loss(spec):
     ann = []
 
     def label(x, y, head, sub=(), color=INK, size=16, xa="center", va="middle"):
+        # the first sub-line is the money figure: show it large and in the
+        # node's own colour, so green reads as profit and red as cost at a glance
+        lines = [l for l in sub if l]
         txt = f"<b>{head}</b>"
-        for line in [l for l in sub if l]:
-            txt += f"<br><span style='font-size:12px;color:#555'>{line}</span>"
+        for i, line in enumerate(lines):
+            if i == 0:
+                txt += (f"<br><span style='font-size:19px;color:{color}'>"
+                        f"<b>{line}</b></span>")
+            else:
+                txt += f"<br><span style='font-size:12px;color:#555'>{line}</span>"
         ann.append(dict(x=x, y=y, text=txt, showarrow=False, align=xa,
                         xanchor=xa, yanchor=va, font=dict(size=size, color=color),
                         xref="paper", yref="paper"))
@@ -325,7 +339,7 @@ def build_loss(spec):
           [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     label(0.40, py(ys[cor_id]) - 0.115, "Cost of revenue", [f"({m(cor)})"], color=COST)
     label(X["gross"] - 0.015, py(ys[loss_id]), "Net loss",
-          [f"({m(net_loss)})", f"{net_loss / rev * 100:.0f}% of revenue", "funds the gap"],
+          [f"({m(net_loss)})", f"{net_loss / rev * 100:.0f}% of revenue"],
           color=COST, xa="right")
     if inc_id is not None:
         label(X["gross"] - 0.015, py(ys[inc_id]), "Non-operating income", [m(other_income)],

@@ -284,3 +284,26 @@ says nothing about whether the chart can be read.
 **Verification**: all 66 specs re-rendered; the only validator warning is the known TSM
 reference-image discrepancy, which is the transcribed example rather than the filed statement. All
 65 published images refreshed.
+
+## 2026-10-23 — money figures enlarged and colour-coded
+
+**Source**: user request — "i want the $ amount to be bigger fonts and color green/red".
+
+**Changed**: `bin/sankey.py`. Both `label()` helpers — the one in `build()` and the one in
+`build_loss()` — now render the first sub-line, which is always the money figure, at 19px bold in
+the node's own colour. Remaining sub-lines stay 12px grey. Profit nodes therefore show green
+amounts, cost nodes red, revenue and segment nodes black, so the cost structure reads before any
+number does.
+
+**Side effect fixed**: the taller label block pushed the loss layout's net-loss label into the
+cost-of-revenue bar. The third sub-line ("funds the gap") was dropped — the money figure plus one
+ratio is the most a label can carry without colliding. Verified on INFQ Q2 FY26, which was the
+original overlap report.
+
+**Documented**: `wiki/sankey-income-statement.md` design conventions now carry a label typography
+table and the two-sub-line limit. `.claude/skills/income-statement-chart/SKILL.md` gains both as a
+fifth visual check.
+
+**Verification**: all 66 specs re-rendered; the only validator warning is the known TSM
+reference-image discrepancy. All 65 published images refreshed and `financials.json` timestamp
+bumped for cache busting.
