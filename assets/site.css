@@ -165,14 +165,17 @@
   .weeklist .wday .items{display:flex;flex-wrap:wrap;gap:5px}
   .weeklist .wday .none{color:var(--teal-line);font-size:12px}
 
-  .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-family:var(--sans);
+  /* Scoped to the Events calendar on purpose: plotly draws its own
+     <g class="legend"> inside a chart, and an unscoped .legend rule here
+     uppercased every chart legend on the Financials page. */
+  #ev-body .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-family:var(--sans);
     font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream-dim)}
-  .legend span:before{content:"";display:inline-block;width:9px;height:9px;margin-right:5px;
+  #ev-body .legend span:before{content:"";display:inline-block;width:9px;height:9px;margin-right:5px;
     vertical-align:baseline;border-radius:1px}
-  .legend .e:before{background:#e0b25c}
-  .legend .d:before{background:var(--green)}
-  .legend .f:before{background:#8fb8ff}
-  .legend .m:before{background:#c9a0ff}
+  #ev-body .legend .e:before{background:#e0b25c}
+  #ev-body .legend .d:before{background:var(--green)}
+  #ev-body .legend .f:before{background:#8fb8ff}
+  #ev-body .legend .m:before{background:#c9a0ff}
 
   .bar{
     display:flex;flex-wrap:wrap;gap:10px;align-items:center;
@@ -211,8 +214,13 @@
     display:flex;justify-content:center;align-items:flex-start;min-height:120px}
   .fin-fig img{display:block;width:100%;height:auto}
   .fin-chart{flex:0 0 auto}
-  /* the debt bars sit under the sankey, as a second figure on the same card */
-  .fin-fig-debt{margin-top:14px}
+  /* The two figures share one row. The sankey takes what is left after the
+     debt bars, which are drawn narrow on purpose; min-width:0 lets it shrink
+     below its content, and the flex-basis is the width under which the row
+     wraps and the charts stack instead. */
+  .fin-row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:14px}
+  .fin-row>.fin-fig{flex:1 1 620px;min-width:0}
+  .fin-row>.fin-fig-debt{flex:0 1 330px;min-width:290px}
   .fin-fig.is-panning{cursor:grab}
   .fin-fig.is-dragging{cursor:grabbing}
   .fin-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:8px 0 0}

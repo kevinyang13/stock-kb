@@ -23,7 +23,10 @@ SERIES = [
     ("cash", "Cash &amp; equivalents", "#4a79dc"),
 ]
 INK = "#12312c"
-DESIGN = (1000, 560)
+# Narrow on purpose: this sits beside the sankey in one row, so the design
+# width is roughly the column it lands in and the font sizes below are the
+# sizes it actually renders at.
+DESIGN = (330, 520)
 
 
 def money(m):
@@ -53,7 +56,7 @@ def build(spec):
             # negative bars read better with the figure on the outside, which
             # is what "auto" gets wrong when a bar is tall and the label short
             textposition="outside",
-            textfont=dict(size=13, color=INK),
+            textfont=dict(size=11, color=INK),
             cliponaxis=False,
             customdata=vals,
             hovertemplate="<b>%{x} &middot; " + name + "</b><br>"
@@ -69,32 +72,34 @@ def build(spec):
         # bare "plotly.js error" on one here, though they are fine in trace
         # names and hovertemplates.
         title=dict(
-            text=f"<b>{spec['company']}: debt level and coverage</b>",
+            # the card header already names the company
+            text="<b>Debt level and coverage</b>",
             x=0.5, xanchor="center", y=0.95,
-            font=dict(size=26, color="#0f3b47"),
+            font=dict(size=16, color="#0f3b47"),
         ),
         barmode="group",
-        bargap=0.42,
+        bargap=0.24,
         bargroupgap=0.08,
         xaxis=dict(
-            tickfont=dict(size=17, color=INK),
+            tickfont=dict(size=13, color=INK),
             showgrid=False, showline=False, ticks="",
         ),
         yaxis=dict(
             range=[lo - pad, hi + pad],
-            tickfont=dict(size=15, color="#667"),
+            tickfont=dict(size=11, color="#667"),
             gridcolor="#dcdcdc", zerolinecolor="#9aa", zerolinewidth=2,
             ticksuffix="B",
             showline=False, ticks="",
         ),
         legend=dict(
-            orientation="h", x=0.5, xanchor="center", y=-0.12, yanchor="top",
-            font=dict(size=16, color=INK),
+            orientation="h", x=0.5, xanchor="center", y=-0.14, yanchor="top",
+            font=dict(size=11, color=INK),
             bgcolor="rgba(0,0,0,0)", borderwidth=0,
+            traceorder="normal", itemwidth=30,
         ),
         plot_bgcolor="#f2f2f2",
         paper_bgcolor="#f2f2f2",
-        margin=dict(l=80, r=50, t=100, b=120),
+        margin=dict(l=46, r=16, t=62, b=104),
         width=DESIGN[0], height=DESIGN[1],
     )
     return fig

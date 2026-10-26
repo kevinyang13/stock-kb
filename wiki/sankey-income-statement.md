@@ -312,6 +312,18 @@ name or a hovertemplate. Keep titles plain.
 Free cash flow is usually negative for these names, so the chart has a zero line and bars below it.
 Bar labels switch to millions below $1bn, because a $49.5M bar labelled `$0.0B` says nothing.
 
+**The two charts share one row.** `.fin-row` is a flex row: the sankey takes `flex:1 1 620px`, the
+debt bars `flex:0 1 330px`. Below roughly 950px of card width the row wraps and the two stack, so
+narrow screens are unaffected. The debt chart's design width of 330px is deliberately close to the
+column it lands in, which is why its font sizes are the sizes it actually renders at — a design
+much wider than its column would scale every label down.
+
+**Trap**: plotly draws its own `<g class="legend">` inside the chart SVG, and `assets/site.css` had
+an unscoped `.legend` rule for the Events calendar carrying `text-transform:uppercase`. It reached
+into the chart and uppercased every legend label on the Financials page, while the PNG from kaleido
+looked correct — the collision only exists in the browser. The rule is now scoped to
+`#ev-body .legend`. Worth checking any other generic class name against what plotly emits.
+
 ## Related pages
 
 - [[income-statement-basics]]

@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Financials</title>
-<link rel="stylesheet" href="assets/site.css?v=1793057548">
+<link rel="stylesheet" href="assets/site.css?v=1793058430">
 </head>
 <body>
 
@@ -32,8 +32,8 @@
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-<script src="assets/sankey.js?v=1793057548"></script>
-<script src="assets/site.js?v=1793057548"></script>
+<script src="assets/sankey.js?v=1793058430"></script>
+<script src="assets/site.js?v=1793058430"></script>
 <script>
 Site.nav();
 
@@ -63,7 +63,12 @@ Site.nav();
         '<span class="per">' + [f.periodEnd, f.reported].filter(Boolean).map(esc).join(" &middot; ") + "</span>" +
       "</div>" +
       '<div class="fin-kpis">' + kpis + "</div>" +
-      '<figure class="fin-fig"><div class="fin-chart" id="fin-chart"></div></figure>' +
+      '<div class="fin-row">' +
+        '<figure class="fin-fig"><div class="fin-chart" id="fin-chart"></div></figure>' +
+        (f.debt
+          ? '<figure class="fin-fig fin-fig-debt"><div class="fin-chart" id="fin-debt"></div></figure>'
+          : "") +
+      "</div>" +
       '<div class="fin-tools">' +
         '<div class="zoom" id="fin-zoom">' +
           '<button type="button" data-z="out" title="Zoom out" aria-label="Zoom out">&minus;</button>' +
@@ -74,9 +79,6 @@ Site.nav();
           '<span class="hint">&#8984;/ctrl + scroll to zoom, drag to pan</span> &middot; ' +
           '<a href="' + esc(f.img) + bust + '" target="_blank" rel="noopener">open as an image</a></p>' +
       "</div>" +
-      (f.debt
-        ? '<figure class="fin-fig fin-fig-debt"><div class="fin-chart" id="fin-debt"></div></figure>'
-        : "") +
       (notes ? '<ul class="fin-notes">' + notes + "</ul>" : "") +
       '<p class="fin-src">Source: ' + src + "</p>" +
       "</article>";

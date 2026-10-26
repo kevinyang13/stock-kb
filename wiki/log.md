@@ -554,3 +554,37 @@ regress it.
 **Not done**: no other ticker got a debt chart. The two here are the names where leverage is the
 story the income statement does not tell; adding it everywhere would be noise, and the key is
 opt-in per statement precisely so it stays that way.
+
+---
+
+## 2026-10-26 — Sankey and debt chart side by side on the Financials card
+
+**What changed**:
+
+- `bin/debtbars.py` — design cut from 1000x560 to **330x520** and every font size retuned to the
+  size it renders at in that column (title 16, x ticks 13, y ticks 11, legend 11, bar labels 11).
+  The title dropped the company name, which the card header already carries. The legend no longer
+  fits on one line at that width, so plotly stacks it vertically, which reads fine.
+- `financials.html` — both figures now sit in a `.fin-row`; the zoom controls and hover hint moved
+  below the row rather than between the two charts.
+- `assets/site.css` — `.fin-row` flex rules, and the Events calendar's `.legend` block scoped to
+  `#ev-body .legend`.
+
+**Bug found by looking at the rendered page rather than the PNG**: every legend label in the debt
+chart rendered in uppercase in the browser while the kaleido PNG was correct. `assets/site.css`
+carried an unscoped `.legend` rule for the Events calendar with `text-transform:uppercase`, and
+plotly draws its own `<g class="legend">` inside the chart SVG, so the page's CSS reached into the
+chart. Walked the computed style up the ancestor chain to find where `uppercase` started —
+`g.legend`, with `g.infolayer` above it still `none` — which pinned it to a class collision rather
+than inheritance from the card. Scoping the rule fixed it and left the Events legend intact
+(verified separately: still flex, still uppercase, still the gold swatch).
+
+**Verification** at a 1280px viewport: row 1264px wide, sankey column 920px, debt column 330px,
+same top, no page overflow. Rendered charts 918x508 and 328x517, so the two heights match within
+9px. At 820px the row wraps and the charts stack, still no overflow. Legend labels read "Debt",
+"Free cash flow", "Cash & equivalents" with `text-transform: none`.
+
+**The cost, stated plainly**: the sankey now draws at about 0.54 of its design width instead of
+0.74, so its 12px sub-lines render near 6.5px. That is above the 0.42 floor `assets/sankey.js`
+enforces, but it is small. The zoom controls and the "open as an image" link both still work and
+are the way to read it properly.
