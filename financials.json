@@ -1,2286 +1,2325 @@
 {
-  "generated": "2026-10-23T22:10:44-07:00",
-  "generatedLabel": "Oct 23, 2026",
-  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
-  "items": [
-    {
-      "t": "NVDA",
-      "company": "NVIDIA",
-      "period": "Q2 FY27",
-      "periodEnd": "quarter ended Jul 26, 2026",
-      "reported": "",
-      "img": "assets/financials/NVDA-Q2-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/nvda/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$96.2B",
-          "s": "+106% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "75%",
-          "s": "$72.1B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "66%",
-          "s": "$63.7B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$59.7B",
-          "s": "62% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Data Center $89.0B, Edge Computing $7.2B",
-        "Revenue more than doubled year over year and operating margin is 66%.",
-        "Operating expenses are $8.4B \u2014 under 9% of revenue \u2014 so almost all gross profit reaches operating profit.",
-        "$7.8B of interest and other income sits above the tax line, on top of the operating result."
-      ]
-    },
-    {
-      "t": "QCOM",
-      "company": "Qualcomm",
-      "period": "FQ3 FY26",
-      "periodEnd": "quarter ended Jun 28, 2026",
-      "reported": "",
-      "img": "assets/financials/QCOM-FQ3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/qcom/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$9,947M",
-          "s": "-4% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "53%",
-          "s": "$5,277M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "19%",
-          "s": "$1,843M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$2,002M",
-          "s": "20% margin"
-        }
-      ],
-      "notes": [
-        "Segments: QCT Handsets $5,086M, QCT IoT $1,830M, QCT Automotive $1,588M, QTL licensing $1,278M, QSI & other $165M",
-        "The only favorite with revenue down year over year.",
-        "R&D is $2,607M, 26% of revenue \u2014 more than three times SG&A.",
-        "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line."
-      ]
-    },
-    {
-      "t": "GOOG",
-      "company": "Alphabet",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/GOOG-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/goog/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$119.8B",
-          "s": "+24% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "62%",
-          "s": "$73.9B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "34%",
-          "s": "$40.8B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$112.2B",
-          "s": "94% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Google Search & other $63.3B, Google Cloud $24.8B, Subscriptions, platforms & devices $12.9B, YouTube ads $11.1B, Google Network $7.3B, Other Bets $0.4B",
-        "Read the net margin carefully. 94% is not an operating result \u2014 a $99.0B gain on sale of investments sits in the interest and other line.",
-        "Operating profit was $40.8B on a 34% margin. That is the number comparable to the other statements here.",
-        "R&D of $18.2B is 15% of revenue."
-      ]
-    },
-    {
-      "t": "MU",
-      "company": "Micron Technology",
-      "period": "FQ4 FY26",
-      "periodEnd": "quarter ended Sep 3, 2026",
-      "reported": "",
-      "img": "assets/financials/MU-FQ4-FY26.png",
-      "source": "Micron Form 8-K, Q4 FY26 press release",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$54.2B",
-          "s": "+379% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "87%",
-          "s": "$47.0B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "81%",
-          "s": "$43.8B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$37.7B",
-          "s": "70% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Core Data Center $18.0B, Cloud Memory $16.3B, Mobile & Client $13.1B, Automotive & Embedded $6.8B",
-        "Core Data Center is the swing factor: $18.0B, up 1,041% Y/Y, now a third of revenue.",
-        "Cost of revenue is only $7.2B of $54.2B \u2014 an 87% gross margin, extraordinary for a memory maker.",
-        "The only chart here with a real segment split, taken from the 8-K's business unit table.",
-        "Full fiscal year 2026: $133.19B revenue and $84.97B net income."
-      ]
-    },
-    {
-      "t": "SNDK",
-      "company": "SanDisk",
-      "period": "FQ4 FY26",
-      "periodEnd": "quarter ended Jul 3, 2026",
-      "reported": "",
-      "img": "assets/financials/SNDK-FQ4-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/sndk/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$8,965M",
-          "s": "+372% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "85%",
-          "s": "$7,582M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "78%",
-          "s": "$7,035M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$6,903M",
-          "s": "77% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Edge $5,432M, Datacenter $2,977M, Consumer $556M",
-        "The same memory cycle as Micron, in an even more extreme form: cost of revenue is only $1,383M against $8,965M of revenue.",
-        "Operating expenses total $547M \u2014 6% of revenue.",
-        "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one."
-      ]
-    },
-    {
-      "t": "TSM",
-      "company": "TSMC",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/TSM-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement (reported in New Taiwan dollars)",
-      "sourceUrl": "https://stockanalysis.com/stocks/tsm/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "NT$1,494.2B",
-          "s": "+51% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "66%",
-          "s": "NT$992.4B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "59%",
-          "s": "NT$876.4B"
-        },
-        {
-          "k": "Net profit",
-          "v": "NT$763.1B",
-          "s": "51% margin"
-        }
-      ],
-      "notes": [
-        "Segments: High Performance Computing $31.8B, Smartphones $9.8B, Internet of Things $1.9B, Automotive $1.9B, Digital Consumer Electronics $0.4B, Others $0.9B",
-        "Reported in New Taiwan dollars, so the absolute figures are not comparable with the USD statements here. The margins are.",
-        "The source does not break operating expenses into R&D and SG&A, so they appear as a single line.",
-        "This replaces the earlier entry, which was transcribed from the App Economy Insights reference image rather than filed figures."
-      ]
-    },
-    {
-      "t": "TSLA",
-      "company": "Tesla",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/TSLA-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/tsla/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$28,046M",
-          "s": "flat Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "20%",
-          "s": "$5,494M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "2.6%",
-          "s": "$718M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$787M",
-          "s": "2.8% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Automotive $20,600M, Services & other $4,610M, Energy generation & storage $2,880M",
-        "The thinnest margins of any favorite: cost of revenue is $22,552M of $28,046M.",
-        "Revenue was essentially flat year over year (-0.2%).",
-        "Operating profit of $718M is smaller than Micron's quarterly tax bill."
-      ]
-    },
-    {
-      "t": "INTU",
-      "company": "Intuit",
-      "period": "FQ4 FY26",
-      "periodEnd": "quarter ended Jul 31, 2026",
-      "reported": "",
-      "img": "assets/financials/INTU-FQ4-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/intu/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$4,354M",
-          "s": "+14% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "79%",
-          "s": "$3,444M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "18%",
-          "s": "$768M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$363M",
-          "s": "8% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Global Business Solutions $3,424M, Consumer $930M",
-        "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M \u2014 61% of revenue.",
-        "Selling, marketing and G&A alone is $1,655M, 38% of revenue.",
-        "Net profit is less than half of operating profit: $228M of net interest and other expense sits below the operating line, then $177M of tax.",
-        "Seasonality matters for Intuit \u2014 the fiscal fourth quarter is not its tax-season peak."
-      ]
-    },
-    {
-      "t": "SMCI",
-      "company": "Super Micro",
-      "period": "FQ4 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/SMCI-FQ4-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/smci/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$11,120M",
-          "s": "+93% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "17%",
-          "s": "$1,943M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "13%",
-          "s": "$1,488M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$1,178M",
-          "s": "11% margin"
-        }
-      ],
-      "notes": [
-        "No segment split: Supermicro's Q4 release does not break revenue into server/storage systems versus subsystems and accessories, so the chart shows a single revenue bar.",
-        "The lowest gross margin of any favorite at 17% \u2014 this is a systems assembler, not a chip designer.",
-        "Operating expenses are only $455M, 4% of revenue, so most of the thin gross profit survives to operating profit.",
-        "Revenue nearly doubled year over year."
-      ]
-    },
-    {
-      "t": "IONQ",
-      "company": "IonQ",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/IONQ-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/ionq/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$80.1M",
-          "s": "+287% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "26%",
-          "s": "$21.0M"
-        },
-        {
-          "k": "Operating loss",
-          "v": "($326.7M)",
-          "s": "(408%) margin"
-        },
-        {
-          "k": "Net loss",
-          "v": "($1,868.9M)",
-          "s": "(2,333%) margin"
-        }
-      ],
-      "notes": [
-        "No segment split: IonQ reports a single revenue line.",
-        "Uses the loss layout: revenue plus the net loss fund every cost line.",
-        "The net loss is roughly 23 times revenue. R&D alone is $158.1M, 197% of revenue.",
-        "Most of the loss is not operating. The operating loss is $326.7M; the rest comes from a $1.5B non-operating charge, which the source attributes to the other non-operating line.",
-        "The tax line was a small benefit, so it is folded into the non-operating line rather than drawn as a cost."
-      ]
-    },
-    {
-      "t": "MSFT",
-      "company": "Microsoft",
-      "period": "FQ4 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/MSFT-FQ4-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/msft/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$90.0B",
-          "s": "+18% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "67%",
-          "s": "$60.5B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "45%",
-          "s": "$40.6B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$35.8B",
-          "s": "40% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Intelligent Cloud $39.3B, Productivity & Business Processes $37.8B, More Personal Computing $12.9B",
-        "R&D ($10.0B) and SG&A ($9.9B) are almost exactly equal.",
-        "A 45% operating margin at $90B of quarterly revenue.",
-        "The most balanced statement of the group \u2014 no single line dominates."
-      ]
-    },
-    {
-      "t": "SPCX",
-      "company": "SpaceX",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/SPCX-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement; segments from SpaceX Q3 2026 results coverage",
-      "sourceUrl": "https://stockanalysis.com/stocks/spcx/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$14,575M",
-          "s": "+161% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "62%",
-          "s": "$9,103M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "28%",
-          "s": "$4,019M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$4,404M",
-          "s": "30% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Super Intelligence $7,600M, Connectivity (Starlink) $5,250M, Space $1,770M",
-        "Net profit exceeds pretax income because the tax line is a $390M benefit, not an expense \u2014 the only statement here with that shape, and the reason the chart shows a green Tax benefit flowing into net profit.",
-        "R&D is $3,574M, 25% of revenue. Capex was roughly $19.6B in the quarter, mostly AI infrastructure \u2014 more than revenue, and not visible on an income statement.",
-        "The App Economy Insights reference chart for this quarter shows operating profit of $2.8B and R&D of $4.6B. The filed figures used here are $4,019M and $3,574M. The segment split matches between the two."
-      ]
-    },
-    {
-      "t": "META",
-      "company": "Meta Platforms",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/META-Q3-FY26.png",
-      "source": "Meta Form 8-K, Q3 2026 results exhibit",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066700/meta-09302026xexhibit991.htm",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$64,601M",
-          "s": "+26% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "79%",
-          "s": "$51,232M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "20%",
-          "s": "$12,988M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$9,860M",
-          "s": "15% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Advertising $63,061M, Other (Family of Apps) $1,097M, Reality Labs $443M",
-        "Reality Labs earned $443M and lost $4,129M at the operating line. Family of Apps made $17,117M, so Reality Labs consumes about a quarter of it.",
-        "R&D is $20,054M \u2014 31% of revenue, and more than Meta's entire operating profit.",
-        "Operating profit here is the filed $12,988M. stockanalysis.com shows $22,878M because it places a $9,890M operating charge below the line; this chart follows the 8-K, where revenue less all costs gives $12,988M."
-      ]
-    },
-    {
-      "t": "CRWV",
-      "company": "CoreWeave",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/CRWV-Q2-FY26.png",
-      "source": "CoreWeave Q2 2026 results, investor relations",
-      "sourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$2,575M",
-          "s": "+112% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "66%",
-          "s": "$1,696M"
-        },
-        {
-          "k": "Operating loss",
-          "v": "($49M)",
-          "s": "(2%) margin"
-        },
-        {
-          "k": "Net loss",
-          "v": "($626M)",
-          "s": "(24%) margin"
-        }
-      ],
-      "notes": [
-        "No segment split: CoreWeave reports a single revenue line.",
-        "Loss layout. Gross profit $1,696M + net loss $626M = $2,322M of charges, which balances exactly.",
-        "The operating loss is only $49M. The net loss is $626M \u2014 the gap is financing, with interest and other netting to $515M.",
-        "Technology & infrastructure alone is $1,507M, 59% of revenue.",
-        "Revenue backlog was roughly $104B at June 30; FY26 guidance is $12.4-13.2B revenue against $35-39B of capex."
-      ]
-    },
-    {
-      "t": "7974",
-      "company": "Nintendo",
-      "period": "Q1 FY27",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "reported Aug 6, 2026",
-      "img": "assets/financials/7974-Q1-FY27.png",
-      "source": "stockanalysis.com quarterly income statement (Tokyo 7974), converted to USD; segments from Nintendo's Q1 FY27 results",
-      "sourceUrl": "https://www.nintendo.co.jp/ir/pdf/2026/260806_2e.pdf",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$3,301M",
-          "s": "-10% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "54%",
-          "s": "$1,794M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "28%",
-          "s": "$909M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$940M",
-          "s": "28% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Dedicated video game platform $3,079M, IP related income etc. $222M",
-        "Converted from yen at USD/JPY 156.87 as of Oct 23, 2026 (CNBC 156.86, IBKR IDEALPRO 156.8675). Nintendo files in yen; every figure here is derived, and the conversion moves with the rate.",
-        "In the filed currency: revenue \u00a5517.8B, gross \u00a5281.4B, operating \u00a5142.6B, net \u00a5147.4B.",
-        "Revenue fell 10% but operating profit rose about 150%. Switch 2 shipped 3.82M units, down 34% against the launch quarter a year earlier, while the IP business more than doubled on the Super Mario Galaxy film.",
-        "Net profit exceeds operating profit: $405M of non-operating income sits below the line, which for Nintendo is mostly FX and interest on its cash. Cost of sales also absorbed roughly $300M of IEEPA tariff refunds.",
-        "Nintendo does not break R&D out of SG&A, so operating expenses appear as a single line."
-      ]
-    },
-    {
-      "t": "AAPL",
-      "company": "Apple",
-      "period": "FQ3 FY26",
-      "periodEnd": "quarter ended Jun 27, 2026",
-      "reported": "",
-      "img": "assets/financials/AAPL-FQ3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/aapl/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$109.4B",
-          "s": "+16% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "50%",
-          "s": "$54.8B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "33%",
-          "s": "$35.7B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$29.8B",
-          "s": "27% margin"
-        }
-      ],
-      "notes": [
-        "Segments: iPhone $54.2B, Services $30.7B, Mac $10.3B, Wearables, Home & Accessories $7.9B, iPad $6.2B",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "ADBE",
-      "company": "Adobe",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Aug 28, 2026",
-      "reported": "",
-      "img": "assets/financials/ADBE-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/adbe/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$6,760M",
-          "s": "+13% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "89%",
-          "s": "$5,997M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "35%",
-          "s": "$2,354M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$1,827M",
-          "s": "27% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Subscription $6,582M, Services & other $111M, Product $67M",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "AMD",
-      "company": "AMD",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 27, 2026",
-      "reported": "",
-      "img": "assets/financials/AMD-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/amd/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$11,536M",
-          "s": "+50% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "56%",
-          "s": "$6,463M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "17%",
-          "s": "$1,990M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$2,297M",
-          "s": "20% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Data Center $6,700M, Client $3,100M, Embedded $977M, Gaming $779M",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "AMZN",
-      "company": "Amazon",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/AMZN-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/amzn/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$200.6B",
-          "s": "+20% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "52%",
-          "s": "$104.8B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "14%",
-          "s": "$27.5B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$62.6B",
-          "s": "31% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Online stores $70.4B, Third-party seller services $46.8B, AWS $42.2B, Advertising $19.8B, Subscription services $13.7B, Physical stores & other $7.7B",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "ARQQ",
-      "company": "Arqit Quantum",
-      "period": "H1 FY26",
-      "periodEnd": "half year ended Mar 31, 2026",
-      "reported": "",
-      "img": "assets/financials/ARQQ-H1-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/arqq/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$1M",
-          "s": "+830% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "0%",
-          "s": "$0M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($33M)",
-          "s": "(3300%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $0M + $33M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "ASML",
-      "company": "ASML",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 27, 2026",
-      "reported": "",
-      "img": "assets/financials/ASML-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/asml/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "\u20ac11,662M",
-          "s": "+55% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "57%",
-          "s": "\u20ac6,700M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "44%",
-          "s": "\u20ac5,173M"
-        },
-        {
-          "k": "Net profit",
-          "v": "\u20ac4,960M",
-          "s": "43% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-        "Reported in \u20ac. Margins compare with the other statements here; the absolute figures do not."
-      ]
-    },
-    {
-      "t": "ASTS",
-      "company": "AST SpaceMobile",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/ASTS-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/asts/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$32M",
-          "s": "+2627% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "25%",
-          "s": "$8M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($231M)",
-          "s": "(722%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $8M + $231M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "AVGO",
-      "company": "Broadcom",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Aug 2, 2026",
-      "reported": "",
-      "img": "assets/financials/AVGO-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/avgo/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$29.6B",
-          "s": "+86% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "74%",
-          "s": "$22.0B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "54%",
-          "s": "$16.1B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$13.1B",
-          "s": "44% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Semiconductor solutions $20.8B, Infrastructure software $8.8B",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "BA",
-      "company": "Boeing",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/BA-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/ba/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$24.6B",
-          "s": "+8% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "10%",
-          "s": "$2.4B"
-        },
-        {
-          "k": "Net loss",
-          "v": "($0.4B)",
-          "s": "(2%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2.4B + $0.4B balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "BKSY",
-      "company": "BlackSky",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/BKSY-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/bksy/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$33M",
-          "s": "+50% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "73%",
-          "s": "$24M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($21M)",
-          "s": "(64%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $21M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "CLSK",
-      "company": "CleanSpark",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/CLSK-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/clsk/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$138M",
-          "s": "-31% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "38%",
-          "s": "$53M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($240M)",
-          "s": "(174%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $53M + $240M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "COHR",
-      "company": "Coherent",
-      "period": "FQ4 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/COHR-FQ4-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/cohr/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$2,046M",
-          "s": "+34% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "38%",
-          "s": "$787M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "12%",
-          "s": "$242M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$241M",
-          "s": "12% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "COIN",
-      "company": "Coinbase",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/COIN-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/coin/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$1,154M",
-          "s": "-17% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "84%",
-          "s": "$965M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($359M)",
-          "s": "(31%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $965M + $359M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "CRM",
-      "company": "Salesforce",
-      "period": "Q2 FY27",
-      "periodEnd": "quarter ended Jul 31, 2026",
-      "reported": "",
-      "img": "assets/financials/CRM-Q2-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/crm/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$11,345M",
-          "s": "+11% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "77%",
-          "s": "$8,696M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "21%",
-          "s": "$2,425M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$3,526M",
-          "s": "31% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Subscription & support $10,800M, Professional services & other $545M",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "CSCO",
-      "company": "Cisco",
-      "period": "FQ4 FY26",
-      "periodEnd": "quarter ended Jul 25, 2026",
-      "reported": "",
-      "img": "assets/financials/CSCO-FQ4-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/csco/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$17,252M",
-          "s": "+18% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "64%",
-          "s": "$11,063M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "28%",
-          "s": "$4,782M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$3,859M",
-          "s": "22% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Networking $9,791M, Services $3,793M, Security $2,226M, Collaboration $1,167M, Observability $275M",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "DDOG",
-      "company": "Datadog",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/DDOG-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/ddog/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$1,121M",
-          "s": "+36% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "79%",
-          "s": "$882M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "1%",
-          "s": "$7M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$45M",
-          "s": "4% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "DELL",
-      "company": "Dell Technologies",
-      "period": "Q2 FY27",
-      "periodEnd": "quarter ended Jul 31, 2026",
-      "reported": "",
-      "img": "assets/financials/DELL-Q2-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/dell/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$47.0B",
-          "s": "+58% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "21%",
-          "s": "$9.9B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "12%",
-          "s": "$5.6B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$4.1B",
-          "s": "9% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Infrastructure Solutions Group $31.8B, Client Solutions Group $15.0B, Other $0.2B",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "FLY",
-      "company": "Firefly Aerospace",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/FLY-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/fly/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$118M",
-          "s": "+657% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "20%",
-          "s": "$24M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($92M)",
-          "s": "(78%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $92M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "GE",
-      "company": "GE Aerospace",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/GE-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/ge/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$14,118M",
-          "s": "+16% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "28%",
-          "s": "$4,002M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "18%",
-          "s": "$2,611M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$2,288M",
-          "s": "16% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "HD",
-      "company": "Home Depot",
-      "period": "Q2 FY27",
-      "periodEnd": "quarter ended Aug 2, 2026",
-      "reported": "",
-      "img": "assets/financials/HD-Q2-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/hd/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$47.9B",
-          "s": "+6% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "32%",
-          "s": "$15.4B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "13%",
-          "s": "$6.2B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$4.8B",
-          "s": "10% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "HIVE",
-      "company": "HIVE Digital",
-      "period": "Q1 FY27",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/HIVE-Q1-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/hive/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$79M",
-          "s": "+73% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "30%",
-          "s": "$24M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($143M)",
-          "s": "(181%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $143M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "HUT",
-      "company": "Hut 8",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/HUT-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/hut/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$75M",
-          "s": "+81% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "64%",
-          "s": "$48M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($150M)",
-          "s": "(200%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $48M + $150M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "IBM",
-      "company": "IBM",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/IBM-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/ibm/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$17,103M",
-          "s": "+5% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "57%",
-          "s": "$9,714M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "17%",
-          "s": "$2,902M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$2,190M",
-          "s": "13% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Software $7,800M, Consulting $5,300M, Infrastructure $3,700M, Financing & other $303M",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "INFQ",
-      "company": "Infleqtion",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/INFQ-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/infq/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$14M",
-          "s": "+157% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "14%",
-          "s": "$2M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($25M)",
-          "s": "(179%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $25M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "INTC",
-      "company": "Intel",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 27, 2026",
-      "reported": "",
-      "img": "assets/financials/INTC-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/intc/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$16,128M",
-          "s": "+25% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "40%",
-          "s": "$6,509M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($11,033M)",
-          "s": "(68%) margin"
-        }
-      ],
-      "notes": [
-        "Segments: Client Computing & Physical AI $8,877M, Data Center & AI $6,262M, Foundry (external) & other $989M",
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $6,509M + $11,033M balances against the charges on the right.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "LUNR",
-      "company": "Intuitive Machines",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/LUNR-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/lunr/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$206M",
-          "s": "+310% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "17%",
-          "s": "$36M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($46M)",
-          "s": "(22%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $36M + $46M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "MARA",
-      "company": "MARA Holdings",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/MARA-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/mara/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$175M",
-          "s": "-27% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "33%",
-          "s": "$57M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($610M)",
-          "s": "(349%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $57M + $610M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "MDA",
-      "company": "MDA Space",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/MDA-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/mda/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "C$499M",
-          "s": "+34% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "29%",
-          "s": "C$143M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "6%",
-          "s": "C$31M"
-        },
-        {
-          "k": "Net profit",
-          "v": "C$28M",
-          "s": "6% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-        "Reported in C$. Margins compare with the other statements here; the absolute figures do not."
-      ]
-    },
-    {
-      "t": "MRVL",
-      "company": "Marvell Technology",
-      "period": "Q2 FY27",
-      "periodEnd": "quarter ended Aug 1, 2026",
-      "reported": "",
-      "img": "assets/financials/MRVL-Q2-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/mrvl/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$2,739M",
-          "s": "+37% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "53%",
-          "s": "$1,456M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "17%",
-          "s": "$457M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$308M",
-          "s": "11% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "MSTR",
-      "company": "Strategy",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/MSTR-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/mstr/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$122M",
-          "s": "+7% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "67%",
-          "s": "$82M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($8,220M)",
-          "s": "(6738%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $82M + $8,220M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "NET",
-      "company": "Cloudflare",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/NET-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/net/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$696M",
-          "s": "+36% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "72%",
-          "s": "$500M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($170M)",
-          "s": "(24%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $500M + $170M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "NFLX",
-      "company": "Netflix",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/NFLX-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/nflx/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$12,874M",
-          "s": "+12% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "53%",
-          "s": "$6,795M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "35%",
-          "s": "$4,459M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$3,664M",
-          "s": "28% margin"
-        }
-      ],
-      "notes": [
-        "Segments: UCAN $5,628M, EMEA $4,107M, LATAM $1,603M, APAC $1,537M",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "NOW",
-      "company": "ServiceNow",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/NOW-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/now/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$3,987M",
-          "s": "+24% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "71%",
-          "s": "$2,818M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "4%",
-          "s": "$162M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$298M",
-          "s": "7% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "NU",
-      "company": "Nu Holdings",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/NU-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/nu/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$2,474M",
-          "s": "+52% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "100%",
-          "s": "$2,474M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "50%",
-          "s": "$1,241M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$1,060M",
-          "s": "43% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "ORCL",
-      "company": "Oracle",
-      "period": "Q1 FY27",
-      "periodEnd": "quarter ended Aug 31, 2026",
-      "reported": "",
-      "img": "assets/financials/ORCL-Q1-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/orcl/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$19,345M",
-          "s": "+30% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "60%",
-          "s": "$11,612M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "36%",
-          "s": "$6,893M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$4,760M",
-          "s": "25% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Cloud infrastructure (IaaS) $7,400M, License & support $5,500M, Cloud applications (SaaS) $4,200M, Services $1,400M, Hardware $800M, Other $45M",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "OUST",
-      "company": "Ouster",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/OUST-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/oust/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$55M",
-          "s": "+56% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "38%",
-          "s": "$21M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($18M)",
-          "s": "(33%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $21M + $18M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "PHM",
-      "company": "PulteGroup",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/PHM-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/phm/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$3,974M",
-          "s": "-10% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "25%",
-          "s": "$1,005M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "15%",
-          "s": "$608M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$476M",
-          "s": "12% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "PL",
-      "company": "Planet Labs",
-      "period": "Q2 FY27",
-      "periodEnd": "quarter ended Jul 31, 2026",
-      "reported": "",
-      "img": "assets/financials/PL-Q2-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/pl/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$116M",
-          "s": "+58% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "57%",
-          "s": "$66M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($9M)",
-          "s": "(8%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $66M + $9M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "PLTR",
-      "company": "Palantir",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/PLTR-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/pltr/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$1,935M",
-          "s": "+93% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "85%",
-          "s": "$1,639M"
-        },
-        {
-          "k": "Operating margin",
-          "v": "47%",
-          "s": "$912M"
-        },
-        {
-          "k": "Net profit",
-          "v": "$1,062M",
-          "s": "55% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "QBTS",
-      "company": "D-Wave Quantum",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/QBTS-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/qbts/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$3M",
-          "s": "-1% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "67%",
-          "s": "$2M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($48M)",
-          "s": "(1600%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $48M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "RDW",
-      "company": "Redwire",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/RDW-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/rdw/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$117M",
-          "s": "+90% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "28%",
-          "s": "$33M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($41M)",
-          "s": "(35%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $33M + $41M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "RGTI",
-      "company": "Rigetti Computing",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/RGTI-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/rgti/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$5M",
-          "s": "+185% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "40%",
-          "s": "$2M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($53M)",
-          "s": "(1060%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $53M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "RIOT",
-      "company": "Riot Platforms",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/RIOT-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/riot/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$174M",
-          "s": "+14% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "24%",
-          "s": "$41M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($237M)",
-          "s": "(136%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $41M + $237M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "RKLB",
-      "company": "Rocket Lab",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/RKLB-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/rklb/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$234M",
-          "s": "+62% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "36%",
-          "s": "$85M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($49M)",
-          "s": "(21%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $85M + $49M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "SKHY",
-      "company": "SK Hynix",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/SKHY-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/skhy/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "\u20a979.3T",
-          "s": "+257% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "83%",
-          "s": "\u20a966.0T"
-        },
-        {
-          "k": "Operating margin",
-          "v": "76%",
-          "s": "\u20a960.5T"
-        },
-        {
-          "k": "Net profit",
-          "v": "\u20a993.8T",
-          "s": "118% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-        "Reported in \u20a9. Margins compare with the other statements here; the absolute figures do not."
-      ]
-    },
-    {
-      "t": "SNOW",
-      "company": "Snowflake",
-      "period": "Q2 FY27",
-      "periodEnd": "quarter ended Jul 31, 2026",
-      "reported": "",
-      "img": "assets/financials/SNOW-Q2-FY27.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/snow/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$1,547M",
-          "s": "+35% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "67%",
-          "s": "$1,037M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($192M)",
-          "s": "(12%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $1,037M + $192M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "T",
-      "company": "AT&T",
-      "period": "Q3 FY26",
-      "periodEnd": "quarter ended Sep 30, 2026",
-      "reported": "",
-      "img": "assets/financials/T-Q3-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/t/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$32.3B",
-          "s": "+5% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "62%",
-          "s": "$19.9B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "25%",
-          "s": "$8.0B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$0.9B",
-          "s": "3% margin"
-        }
-      ],
-      "notes": [
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "VOYG",
-      "company": "Voyager Technologies",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/VOYG-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/voyg/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$53M",
-          "s": "+15% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "8%",
-          "s": "$4M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($46M)",
-          "s": "(87%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $4M + $46M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "VZ",
-      "company": "Verizon",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/VZ-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/vz/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$34.3B",
-          "s": "-1% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "62%",
-          "s": "$21.2B"
-        },
-        {
-          "k": "Operating margin",
-          "v": "23%",
-          "s": "$7.9B"
-        },
-        {
-          "k": "Net profit",
-          "v": "$3.8B",
-          "s": "11% margin"
-        }
-      ],
-      "notes": [
-        "Segments: Consumer $26.2B, Business & other $8.1B",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
-    },
-    {
-      "t": "XNDU",
-      "company": "Xanadu Quantum",
-      "period": "Q2 FY26",
-      "periodEnd": "quarter ended Jun 30, 2026",
-      "reported": "",
-      "img": "assets/financials/XNDU-Q2-FY26.png",
-      "source": "stockanalysis.com quarterly income statement",
-      "sourceUrl": "https://stockanalysis.com/stocks/xndu/financials/income-statement/?p=quarterly",
-      "highlights": [
-        {
-          "k": "Revenue",
-          "v": "$2M",
-          "s": "+43% Y/Y"
-        },
-        {
-          "k": "Gross margin",
-          "v": "50%",
-          "s": "$1M"
-        },
-        {
-          "k": "Net loss",
-          "v": "($42M)",
-          "s": "(2100%) margin"
-        }
-      ],
-      "notes": [
-        "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $1M + $42M balances against the charges on the right.",
-        "Single revenue bar \u2014 no segment split was pulled for this name.",
-        "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-      ]
+ "generated": "2026-10-26T16:04:16-07:00",
+ "generatedLabel": "Oct 26, 2026",
+ "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
+ "items": [
+  {
+   "t": "NVDA",
+   "company": "NVIDIA",
+   "period": "Q2 FY27",
+   "periodEnd": "quarter ended Jul 26, 2026",
+   "reported": "",
+   "img": "assets/financials/NVDA-Q2-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/nvda/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$96.2B",
+     "s": "+106% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "75%",
+     "s": "$72.1B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "66%",
+     "s": "$63.7B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$59.7B",
+     "s": "62% margin"
     }
-  ]
+   ],
+   "notes": [
+    "Segments: Data Center $89.0B, Edge Computing $7.2B",
+    "Revenue more than doubled year over year and operating margin is 66%.",
+    "Operating expenses are $8.4B — under 9% of revenue — so almost all gross profit reaches operating profit.",
+    "$7.8B of interest and other income sits above the tax line, on top of the operating result."
+   ]
+  },
+  {
+   "t": "QCOM",
+   "company": "Qualcomm",
+   "period": "FQ3 FY26",
+   "periodEnd": "quarter ended Jun 28, 2026",
+   "reported": "",
+   "img": "assets/financials/QCOM-FQ3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/qcom/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$9,947M",
+     "s": "-4% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "53%",
+     "s": "$5,277M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "19%",
+     "s": "$1,843M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$2,002M",
+     "s": "20% margin"
+    }
+   ],
+   "notes": [
+    "Segments: QCT Handsets $5,086M, QCT IoT $1,830M, QCT Automotive $1,588M, QTL licensing $1,278M, QSI & other $165M",
+    "The only favorite with revenue down year over year.",
+    "R&D is $2,607M, 26% of revenue — more than three times SG&A.",
+    "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line."
+   ]
+  },
+  {
+   "t": "GOOG",
+   "company": "Alphabet",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/GOOG-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/goog/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$119.8B",
+     "s": "+24% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "62%",
+     "s": "$73.9B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "34%",
+     "s": "$40.8B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$112.2B",
+     "s": "94% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Google Search & other $63.3B, Google Cloud $24.8B, Subscriptions, platforms & devices $12.9B, YouTube ads $11.1B, Google Network $7.3B, Other Bets $0.4B",
+    "Read the net margin carefully. 94% is not an operating result — a $99.0B gain on sale of investments sits in the interest and other line.",
+    "Operating profit was $40.8B on a 34% margin. That is the number comparable to the other statements here.",
+    "R&D of $18.2B is 15% of revenue."
+   ]
+  },
+  {
+   "t": "MU",
+   "company": "Micron Technology",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Sep 3, 2026",
+   "reported": "",
+   "img": "assets/financials/MU-FQ4-FY26.png",
+   "source": "Micron Form 8-K, Q4 FY26 press release",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$54.2B",
+     "s": "+379% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "87%",
+     "s": "$47.0B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "81%",
+     "s": "$43.8B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$37.7B",
+     "s": "70% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Core Data Center $18.0B, Cloud Memory $16.3B, Mobile & Client $13.1B, Automotive & Embedded $6.8B",
+    "Core Data Center is the swing factor: $18.0B, up 1,041% Y/Y, now a third of revenue.",
+    "Cost of revenue is only $7.2B of $54.2B — an 87% gross margin, extraordinary for a memory maker.",
+    "The only chart here with a real segment split, taken from the 8-K's business unit table.",
+    "Full fiscal year 2026: $133.19B revenue and $84.97B net income."
+   ]
+  },
+  {
+   "t": "SNDK",
+   "company": "SanDisk",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jul 3, 2026",
+   "reported": "",
+   "img": "assets/financials/SNDK-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/sndk/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$8,965M",
+     "s": "+372% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "85%",
+     "s": "$7,582M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "78%",
+     "s": "$7,035M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$6,903M",
+     "s": "77% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Edge $5,432M, Datacenter $2,977M, Consumer $556M",
+    "The same memory cycle as Micron, in an even more extreme form: cost of revenue is only $1,383M against $8,965M of revenue.",
+    "Operating expenses total $547M — 6% of revenue.",
+    "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one."
+   ]
+  },
+  {
+   "t": "TSM",
+   "company": "TSMC",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/TSM-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement (reported in New Taiwan dollars)",
+   "sourceUrl": "https://stockanalysis.com/stocks/tsm/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "NT$1,494.2B",
+     "s": "+51% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "66%",
+     "s": "NT$992.4B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "59%",
+     "s": "NT$876.4B"
+    },
+    {
+     "k": "Net profit",
+     "v": "NT$763.1B",
+     "s": "51% margin"
+    }
+   ],
+   "notes": [
+    "Segments: High Performance Computing $31.8B, Smartphones $9.8B, Internet of Things $1.9B, Automotive $1.9B, Digital Consumer Electronics $0.4B, Others $0.9B",
+    "Reported in New Taiwan dollars, so the absolute figures are not comparable with the USD statements here. The margins are.",
+    "The source does not break operating expenses into R&D and SG&A, so they appear as a single line.",
+    "This replaces the earlier entry, which was transcribed from the App Economy Insights reference image rather than filed figures."
+   ]
+  },
+  {
+   "t": "TSLA",
+   "company": "Tesla",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/TSLA-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/tsla/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$28,046M",
+     "s": "flat Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "20%",
+     "s": "$5,494M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "2.6%",
+     "s": "$718M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$787M",
+     "s": "2.8% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Automotive $20,600M, Services & other $4,610M, Energy generation & storage $2,880M",
+    "The thinnest margins of any favorite: cost of revenue is $22,552M of $28,046M.",
+    "Revenue was essentially flat year over year (-0.2%).",
+    "Operating profit of $718M is smaller than Micron's quarterly tax bill."
+   ]
+  },
+  {
+   "t": "INTU",
+   "company": "Intuit",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jul 31, 2026",
+   "reported": "",
+   "img": "assets/financials/INTU-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/intu/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$4,354M",
+     "s": "+14% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "79%",
+     "s": "$3,444M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "18%",
+     "s": "$768M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$363M",
+     "s": "8% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Global Business Solutions $3,424M, Consumer $930M",
+    "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M — 61% of revenue.",
+    "Selling, marketing and G&A alone is $1,655M, 38% of revenue.",
+    "Net profit is less than half of operating profit: $228M of net interest and other expense sits below the operating line, then $177M of tax.",
+    "Seasonality matters for Intuit — the fiscal fourth quarter is not its tax-season peak."
+   ]
+  },
+  {
+   "t": "SMCI",
+   "company": "Super Micro",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/SMCI-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/smci/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$11,120M",
+     "s": "+93% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "17%",
+     "s": "$1,943M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "13%",
+     "s": "$1,488M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,178M",
+     "s": "11% margin"
+    }
+   ],
+   "notes": [
+    "No segment split: Supermicro's Q4 release does not break revenue into server/storage systems versus subsystems and accessories, so the chart shows a single revenue bar.",
+    "The lowest gross margin of any favorite at 17% — this is a systems assembler, not a chip designer.",
+    "Operating expenses are only $455M, 4% of revenue, so most of the thin gross profit survives to operating profit.",
+    "Revenue nearly doubled year over year."
+   ]
+  },
+  {
+   "t": "IONQ",
+   "company": "IonQ",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/IONQ-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/ionq/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$80.1M",
+     "s": "+287% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "26%",
+     "s": "$21.0M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($326.7M)",
+     "s": "(408%) margin"
+    },
+    {
+     "k": "Net loss",
+     "v": "($1,868.9M)",
+     "s": "(2,333%) margin"
+    }
+   ],
+   "notes": [
+    "No segment split: IonQ reports a single revenue line.",
+    "Uses the loss layout: revenue plus the net loss fund every cost line.",
+    "The net loss is roughly 23 times revenue. R&D alone is $158.1M, 197% of revenue.",
+    "Most of the loss is not operating. The operating loss is $326.7M; the rest comes from a $1.5B non-operating charge, which the source attributes to the other non-operating line.",
+    "The tax line was a small benefit, so it is folded into the non-operating line rather than drawn as a cost."
+   ]
+  },
+  {
+   "t": "MSFT",
+   "company": "Microsoft",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/MSFT-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/msft/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$90.0B",
+     "s": "+18% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "67%",
+     "s": "$60.5B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "45%",
+     "s": "$40.6B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$35.8B",
+     "s": "40% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Intelligent Cloud $39.3B, Productivity & Business Processes $37.8B, More Personal Computing $12.9B",
+    "R&D ($10.0B) and SG&A ($9.9B) are almost exactly equal.",
+    "A 45% operating margin at $90B of quarterly revenue.",
+    "The most balanced statement of the group — no single line dominates."
+   ]
+  },
+  {
+   "t": "SPCX",
+   "company": "SpaceX",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/SPCX-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement; segments from SpaceX Q3 2026 results coverage",
+   "sourceUrl": "https://stockanalysis.com/stocks/spcx/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$14,575M",
+     "s": "+161% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "62%",
+     "s": "$9,103M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "28%",
+     "s": "$4,019M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$4,404M",
+     "s": "30% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Super Intelligence $7,600M, Connectivity (Starlink) $5,250M, Space $1,770M",
+    "Net profit exceeds pretax income because the tax line is a $390M benefit, not an expense — the only statement here with that shape, and the reason the chart shows a green Tax benefit flowing into net profit.",
+    "R&D is $3,574M, 25% of revenue. Capex was roughly $19.6B in the quarter, mostly AI infrastructure — more than revenue, and not visible on an income statement.",
+    "The App Economy Insights reference chart for this quarter shows operating profit of $2.8B and R&D of $4.6B. The filed figures used here are $4,019M and $3,574M. The segment split matches between the two."
+   ]
+  },
+  {
+   "t": "META",
+   "company": "Meta Platforms",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/META-Q3-FY26.png",
+   "source": "Meta Form 8-K, Q3 2026 results exhibit",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066700/meta-09302026xexhibit991.htm",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$64,601M",
+     "s": "+26% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "79%",
+     "s": "$51,232M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "20%",
+     "s": "$12,988M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$9,860M",
+     "s": "15% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Advertising $63,061M, Other (Family of Apps) $1,097M, Reality Labs $443M",
+    "Reality Labs earned $443M and lost $4,129M at the operating line. Family of Apps made $17,117M, so Reality Labs consumes about a quarter of it.",
+    "R&D is $20,054M — 31% of revenue, and more than Meta's entire operating profit.",
+    "Operating profit here is the filed $12,988M. stockanalysis.com shows $22,878M because it places a $9,890M operating charge below the line; this chart follows the 8-K, where revenue less all costs gives $12,988M."
+   ]
+  },
+  {
+   "t": "CRWV",
+   "company": "CoreWeave",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/CRWV-Q2-FY26.png",
+   "source": "CoreWeave Q2 2026 results, investor relations",
+   "sourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$2,575M",
+     "s": "+112% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "66%",
+     "s": "$1,696M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($49M)",
+     "s": "(2%) margin"
+    },
+    {
+     "k": "Net loss",
+     "v": "($626M)",
+     "s": "(24%) margin"
+    }
+   ],
+   "notes": [
+    "No segment split: CoreWeave reports a single revenue line.",
+    "Loss layout. Gross profit $1,696M + net loss $626M = $2,322M of charges, which balances exactly.",
+    "The operating loss is only $49M. The net loss is $626M — the gap is financing, with interest and other netting to $515M.",
+    "Technology & infrastructure alone is $1,507M, 59% of revenue.",
+    "Revenue backlog was roughly $104B at June 30; FY26 guidance is $12.4-13.2B revenue against $35-39B of capex."
+   ]
+  },
+  {
+   "t": "7974",
+   "company": "Nintendo",
+   "period": "Q1 FY27",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "reported Aug 6, 2026",
+   "img": "assets/financials/7974-Q1-FY27.png",
+   "source": "stockanalysis.com quarterly income statement (Tokyo 7974), converted to USD; segments from Nintendo's Q1 FY27 results",
+   "sourceUrl": "https://www.nintendo.co.jp/ir/pdf/2026/260806_2e.pdf",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$3,301M",
+     "s": "-10% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "54%",
+     "s": "$1,794M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "28%",
+     "s": "$909M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$940M",
+     "s": "28% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Dedicated video game platform $3,079M, IP related income etc. $222M",
+    "Converted from yen at USD/JPY 156.87 as of Oct 23, 2026 (CNBC 156.86, IBKR IDEALPRO 156.8675). Nintendo files in yen; every figure here is derived, and the conversion moves with the rate.",
+    "In the filed currency: revenue ¥517.8B, gross ¥281.4B, operating ¥142.6B, net ¥147.4B.",
+    "Revenue fell 10% but operating profit rose about 150%. Switch 2 shipped 3.82M units, down 34% against the launch quarter a year earlier, while the IP business more than doubled on the Super Mario Galaxy film.",
+    "Net profit exceeds operating profit: $405M of non-operating income sits below the line, which for Nintendo is mostly FX and interest on its cash. Cost of sales also absorbed roughly $300M of IEEPA tariff refunds.",
+    "Nintendo does not break R&D out of SG&A, so operating expenses appear as a single line."
+   ]
+  },
+  {
+   "t": "AAPL",
+   "company": "Apple",
+   "period": "FQ3 FY26",
+   "periodEnd": "quarter ended Jun 27, 2026",
+   "reported": "",
+   "img": "assets/financials/AAPL-FQ3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/aapl/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$109.4B",
+     "s": "+16% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "50%",
+     "s": "$54.8B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "33%",
+     "s": "$35.7B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$29.8B",
+     "s": "27% margin"
+    }
+   ],
+   "notes": [
+    "Segments: iPhone $54.2B, Services $30.7B, Mac $10.3B, Wearables, Home & Accessories $7.9B, iPad $6.2B",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "ADBE",
+   "company": "Adobe",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Aug 28, 2026",
+   "reported": "",
+   "img": "assets/financials/ADBE-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/adbe/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$6,760M",
+     "s": "+13% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "89%",
+     "s": "$5,997M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "35%",
+     "s": "$2,354M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,827M",
+     "s": "27% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Subscription $6,582M, Services & other $111M, Product $67M",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "AMD",
+   "company": "AMD",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 27, 2026",
+   "reported": "",
+   "img": "assets/financials/AMD-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/amd/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$11,536M",
+     "s": "+50% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "56%",
+     "s": "$6,463M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "17%",
+     "s": "$1,990M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$2,297M",
+     "s": "20% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Data Center $6,700M, Client $3,100M, Embedded $977M, Gaming $779M",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "AMZN",
+   "company": "Amazon",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/AMZN-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/amzn/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$200.6B",
+     "s": "+20% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "52%",
+     "s": "$104.8B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "14%",
+     "s": "$27.5B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$62.6B",
+     "s": "31% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Online stores $70.4B, Third-party seller services $46.8B, AWS $42.2B, Advertising $19.8B, Subscription services $13.7B, Physical stores & other $7.7B",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "ARQQ",
+   "company": "Arqit Quantum",
+   "period": "H1 FY26",
+   "periodEnd": "half year ended Mar 31, 2026",
+   "reported": "",
+   "img": "assets/financials/ARQQ-H1-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/arqq/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$1M",
+     "s": "+830% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "0%",
+     "s": "$0M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($33M)",
+     "s": "(3300%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $0M + $33M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "ASML",
+   "company": "ASML",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 27, 2026",
+   "reported": "",
+   "img": "assets/financials/ASML-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/asml/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "€11,662M",
+     "s": "+55% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "57%",
+     "s": "€6,700M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "44%",
+     "s": "€5,173M"
+    },
+    {
+     "k": "Net profit",
+     "v": "€4,960M",
+     "s": "43% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Reported in €. Margins compare with the other statements here; the absolute figures do not."
+   ]
+  },
+  {
+   "t": "ASTS",
+   "company": "AST SpaceMobile",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/ASTS-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/asts/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$32M",
+     "s": "+2627% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "25%",
+     "s": "$8M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($231M)",
+     "s": "(722%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $8M + $231M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "AVGO",
+   "company": "Broadcom",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Aug 2, 2026",
+   "reported": "",
+   "img": "assets/financials/AVGO-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/avgo/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$29.6B",
+     "s": "+86% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "74%",
+     "s": "$22.0B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "54%",
+     "s": "$16.1B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$13.1B",
+     "s": "44% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Semiconductor solutions $20.8B, Infrastructure software $8.8B",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "BA",
+   "company": "Boeing",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/BA-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/ba/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$24.6B",
+     "s": "+8% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "10%",
+     "s": "$2.4B"
+    },
+    {
+     "k": "Net loss",
+     "v": "($0.4B)",
+     "s": "(2%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2.4B + $0.4B balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "BKSY",
+   "company": "BlackSky",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/BKSY-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/bksy/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$33M",
+     "s": "+50% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "73%",
+     "s": "$24M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($21M)",
+     "s": "(64%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $21M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "CLSK",
+   "company": "CleanSpark",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/CLSK-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/clsk/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$138M",
+     "s": "-31% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "38%",
+     "s": "$53M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($240M)",
+     "s": "(174%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $53M + $240M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "COHR",
+   "company": "Coherent",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/COHR-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/cohr/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$2,046M",
+     "s": "+34% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "38%",
+     "s": "$787M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "12%",
+     "s": "$242M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$241M",
+     "s": "12% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "COIN",
+   "company": "Coinbase",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/COIN-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/coin/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$1,154M",
+     "s": "-17% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "84%",
+     "s": "$965M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($359M)",
+     "s": "(31%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $965M + $359M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "CRM",
+   "company": "Salesforce",
+   "period": "Q2 FY27",
+   "periodEnd": "quarter ended Jul 31, 2026",
+   "reported": "",
+   "img": "assets/financials/CRM-Q2-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/crm/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$11,345M",
+     "s": "+11% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "77%",
+     "s": "$8,696M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "21%",
+     "s": "$2,425M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$3,526M",
+     "s": "31% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Subscription & support $10,800M, Professional services & other $545M",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "CSCO",
+   "company": "Cisco",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Jul 25, 2026",
+   "reported": "",
+   "img": "assets/financials/CSCO-FQ4-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/csco/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$17,252M",
+     "s": "+18% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "64%",
+     "s": "$11,063M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "28%",
+     "s": "$4,782M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$3,859M",
+     "s": "22% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Networking $9,791M, Services $3,793M, Security $2,226M, Collaboration $1,167M, Observability $275M",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "DDOG",
+   "company": "Datadog",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/DDOG-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/ddog/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$1,121M",
+     "s": "+36% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "79%",
+     "s": "$882M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "1%",
+     "s": "$7M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$45M",
+     "s": "4% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "DELL",
+   "company": "Dell Technologies",
+   "period": "Q2 FY27",
+   "periodEnd": "quarter ended Jul 31, 2026",
+   "reported": "",
+   "img": "assets/financials/DELL-Q2-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/dell/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$47.0B",
+     "s": "+58% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "21%",
+     "s": "$9.9B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "12%",
+     "s": "$5.6B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$4.1B",
+     "s": "9% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Infrastructure Solutions Group $31.8B, Client Solutions Group $15.0B, Other $0.2B",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "FLY",
+   "company": "Firefly Aerospace",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/FLY-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/fly/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$118M",
+     "s": "+657% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "20%",
+     "s": "$24M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($92M)",
+     "s": "(78%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $92M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "GE",
+   "company": "GE Aerospace",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/GE-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/ge/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$14,118M",
+     "s": "+16% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "28%",
+     "s": "$4,002M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "18%",
+     "s": "$2,611M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$2,288M",
+     "s": "16% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "HD",
+   "company": "Home Depot",
+   "period": "Q2 FY27",
+   "periodEnd": "quarter ended Aug 2, 2026",
+   "reported": "",
+   "img": "assets/financials/HD-Q2-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/hd/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$47.9B",
+     "s": "+6% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "32%",
+     "s": "$15.4B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "13%",
+     "s": "$6.2B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$4.8B",
+     "s": "10% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "HIVE",
+   "company": "HIVE Digital",
+   "period": "Q1 FY27",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/HIVE-Q1-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/hive/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$79M",
+     "s": "+73% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "30%",
+     "s": "$24M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($143M)",
+     "s": "(181%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $143M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "HUT",
+   "company": "Hut 8",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/HUT-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/hut/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$75M",
+     "s": "+81% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "64%",
+     "s": "$48M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($150M)",
+     "s": "(200%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $48M + $150M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "IBM",
+   "company": "IBM",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/IBM-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/ibm/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$17,103M",
+     "s": "+5% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "57%",
+     "s": "$9,714M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "17%",
+     "s": "$2,902M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$2,190M",
+     "s": "13% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Software $7,800M, Consulting $5,300M, Infrastructure $3,700M, Financing & other $303M",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "INFQ",
+   "company": "Infleqtion",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/INFQ-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/infq/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$14M",
+     "s": "+157% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "14%",
+     "s": "$2M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($25M)",
+     "s": "(179%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $25M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "INTC",
+   "company": "Intel",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 27, 2026",
+   "reported": "",
+   "img": "assets/financials/INTC-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/intc/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$16,128M",
+     "s": "+25% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "40%",
+     "s": "$6,509M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($11,033M)",
+     "s": "(68%) margin"
+    }
+   ],
+   "notes": [
+    "Segments: Client Computing & Physical AI $8,877M, Data Center & AI $6,262M, Foundry (external) & other $989M",
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $6,509M + $11,033M balances against the charges on the right.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "LUNR",
+   "company": "Intuitive Machines",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/LUNR-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/lunr/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$206M",
+     "s": "+310% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "17%",
+     "s": "$36M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($46M)",
+     "s": "(22%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $36M + $46M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "MARA",
+   "company": "MARA Holdings",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/MARA-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/mara/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$175M",
+     "s": "-27% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "33%",
+     "s": "$57M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($610M)",
+     "s": "(349%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $57M + $610M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "MDA",
+   "company": "MDA Space",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/MDA-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/mda/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "C$499M",
+     "s": "+34% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "29%",
+     "s": "C$143M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "6%",
+     "s": "C$31M"
+    },
+    {
+     "k": "Net profit",
+     "v": "C$28M",
+     "s": "6% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Reported in C$. Margins compare with the other statements here; the absolute figures do not."
+   ]
+  },
+  {
+   "t": "MRVL",
+   "company": "Marvell Technology",
+   "period": "Q2 FY27",
+   "periodEnd": "quarter ended Aug 1, 2026",
+   "reported": "",
+   "img": "assets/financials/MRVL-Q2-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/mrvl/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$2,739M",
+     "s": "+37% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "53%",
+     "s": "$1,456M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "17%",
+     "s": "$457M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$308M",
+     "s": "11% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "MSTR",
+   "company": "Strategy",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/MSTR-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/mstr/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$122M",
+     "s": "+7% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "67%",
+     "s": "$82M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($8,220M)",
+     "s": "(6738%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $82M + $8,220M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "NET",
+   "company": "Cloudflare",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/NET-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/net/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$696M",
+     "s": "+36% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "72%",
+     "s": "$500M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($170M)",
+     "s": "(24%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $500M + $170M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "NFLX",
+   "company": "Netflix",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/NFLX-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/nflx/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$12,874M",
+     "s": "+12% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "53%",
+     "s": "$6,795M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "35%",
+     "s": "$4,459M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$3,664M",
+     "s": "28% margin"
+    }
+   ],
+   "notes": [
+    "Segments: UCAN $5,628M, EMEA $4,107M, LATAM $1,603M, APAC $1,537M",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "NOW",
+   "company": "ServiceNow",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/NOW-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/now/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$3,987M",
+     "s": "+24% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "71%",
+     "s": "$2,818M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "4%",
+     "s": "$162M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$298M",
+     "s": "7% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "NU",
+   "company": "Nu Holdings",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/NU-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/nu/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$2,474M",
+     "s": "+52% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "100%",
+     "s": "$2,474M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "50%",
+     "s": "$1,241M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,060M",
+     "s": "43% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "ORCL",
+   "company": "Oracle",
+   "period": "Q1 FY27",
+   "periodEnd": "quarter ended Aug 31, 2026",
+   "reported": "",
+   "img": "assets/financials/ORCL-Q1-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/orcl/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$19,345M",
+     "s": "+30% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "60%",
+     "s": "$11,612M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "36%",
+     "s": "$6,893M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$4,760M",
+     "s": "25% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Cloud infrastructure (IaaS) $7,400M, License & support $5,500M, Cloud applications (SaaS) $4,200M, Services $1,400M, Hardware $800M, Other $45M",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "OUST",
+   "company": "Ouster",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/OUST-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/oust/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$55M",
+     "s": "+56% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "38%",
+     "s": "$21M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($18M)",
+     "s": "(33%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $21M + $18M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "PHM",
+   "company": "PulteGroup",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/PHM-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/phm/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$3,974M",
+     "s": "-10% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "25%",
+     "s": "$1,005M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "15%",
+     "s": "$608M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$476M",
+     "s": "12% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "PL",
+   "company": "Planet Labs",
+   "period": "Q2 FY27",
+   "periodEnd": "quarter ended Jul 31, 2026",
+   "reported": "",
+   "img": "assets/financials/PL-Q2-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/pl/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$116M",
+     "s": "+58% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "57%",
+     "s": "$66M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($9M)",
+     "s": "(8%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $66M + $9M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "PLTR",
+   "company": "Palantir",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/PLTR-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/pltr/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$1,935M",
+     "s": "+93% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "85%",
+     "s": "$1,639M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "47%",
+     "s": "$912M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,062M",
+     "s": "55% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "QBTS",
+   "company": "D-Wave Quantum",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/QBTS-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/qbts/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$3M",
+     "s": "-1% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "67%",
+     "s": "$2M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($48M)",
+     "s": "(1600%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $48M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "RDW",
+   "company": "Redwire",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/RDW-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/rdw/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$117M",
+     "s": "+90% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "28%",
+     "s": "$33M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($41M)",
+     "s": "(35%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $33M + $41M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "RGTI",
+   "company": "Rigetti Computing",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/RGTI-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/rgti/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$5M",
+     "s": "+185% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "40%",
+     "s": "$2M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($53M)",
+     "s": "(1060%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $53M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "RIOT",
+   "company": "Riot Platforms",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/RIOT-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/riot/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$174M",
+     "s": "+14% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "24%",
+     "s": "$41M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($237M)",
+     "s": "(136%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $41M + $237M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "RKLB",
+   "company": "Rocket Lab",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/RKLB-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/rklb/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$234M",
+     "s": "+62% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "36%",
+     "s": "$85M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($49M)",
+     "s": "(21%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $85M + $49M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "SKHY",
+   "company": "SK Hynix",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/SKHY-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/skhy/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "₩79.3T",
+     "s": "+257% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "83%",
+     "s": "₩66.0T"
+    },
+    {
+     "k": "Operating margin",
+     "v": "76%",
+     "s": "₩60.5T"
+    },
+    {
+     "k": "Net profit",
+     "v": "₩93.8T",
+     "s": "118% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Reported in ₩. Margins compare with the other statements here; the absolute figures do not."
+   ]
+  },
+  {
+   "t": "SNOW",
+   "company": "Snowflake",
+   "period": "Q2 FY27",
+   "periodEnd": "quarter ended Jul 31, 2026",
+   "reported": "",
+   "img": "assets/financials/SNOW-Q2-FY27.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/snow/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$1,547M",
+     "s": "+35% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "67%",
+     "s": "$1,037M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($192M)",
+     "s": "(12%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $1,037M + $192M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "T",
+   "company": "AT&T",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "",
+   "img": "assets/financials/T-Q3-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/t/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$32.3B",
+     "s": "+5% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "62%",
+     "s": "$19.9B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "25%",
+     "s": "$8.0B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$0.9B",
+     "s": "3% margin"
+    }
+   ],
+   "notes": [
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "VOYG",
+   "company": "Voyager Technologies",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/VOYG-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/voyg/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$53M",
+     "s": "+15% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "8%",
+     "s": "$4M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($46M)",
+     "s": "(87%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $4M + $46M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "VZ",
+   "company": "Verizon",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/VZ-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/vz/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$34.3B",
+     "s": "-1% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "62%",
+     "s": "$21.2B"
+    },
+    {
+     "k": "Operating margin",
+     "v": "23%",
+     "s": "$7.9B"
+    },
+    {
+     "k": "Net profit",
+     "v": "$3.8B",
+     "s": "11% margin"
+    }
+   ],
+   "notes": [
+    "Segments: Consumer $26.2B, Business & other $8.1B",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "XNDU",
+   "company": "Xanadu Quantum",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "",
+   "img": "assets/financials/XNDU-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement",
+   "sourceUrl": "https://stockanalysis.com/stocks/xndu/financials/income-statement/?p=quarterly",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$2M",
+     "s": "+43% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "50%",
+     "s": "$1M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($42M)",
+     "s": "(2100%) margin"
+    }
+   ],
+   "notes": [
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $1M + $42M balances against the charges on the right.",
+    "Single revenue bar — no segment split was pulled for this name.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
+   ]
+  },
+  {
+   "t": "NBIS",
+   "company": "Nebius Group",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "reported Aug 12, 2026",
+   "img": "assets/financials/NBIS-Q2-FY26.png",
+   "source": "Nebius Group 6-K exhibit 99.1, Aug 12, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d1.htm",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$582.3M",
+     "s": "+454% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "77%",
+     "s": "$448.7M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "-30%",
+     "s": "-$175.9M"
+    },
+    {
+     "k": "Net loss",
+     "v": "$190.4M",
+     "s": "33% of revenue"
+    }
+   ],
+   "notes": [
+    "Segments: Nebius AI cloud $574.9M (+514% Y/Y), TripleTen $10.0M (-19%), Avride $1.0M. $3.6M of intersegment eliminations is netted against AI cloud on the chart so the three bars foot to $582.3M of revenue.",
+    "Figures follow the Aug 12, 2026 6-K exhibit. stockanalysis.com shows operating income of -$1.3M for the same quarter because it moves roughly $174.6M out of product development and SG&A; the filing's loss from operations is -$175.9M. The filing is used here.",
+    "Depreciation and amortization of $259.7M is 45% of revenue and the single largest charge - larger than the net loss itself.",
+    "\"Non-operating & tax, net\" of $14.5M is $119.1M of interest expense and $13.7M of tax against $24.1M interest income, $81.5M other income and $12.7M of equity-method income.",
+    "Toloka sits in discontinued operations after the 2025 investment transaction and is not part of this statement."
+   ]
+  }
+ ]
 }

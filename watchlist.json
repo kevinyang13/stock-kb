@@ -179,6 +179,17 @@
    ]
   },
   {
+   "t": "NBIS",
+   "fav": true,
+   "sector": "AI Infra",
+   "tags": [
+    "AI Infra",
+    "AI",
+    "Cloud",
+    "Data Center"
+   ]
+  },
+  {
    "t": "ORCL",
    "pe": 17.69,
    "tags": [

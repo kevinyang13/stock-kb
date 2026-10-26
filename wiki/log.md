@@ -410,3 +410,77 @@ months. Not resolved against the filing.
 
 **Not done**: no recommendation of any specific trade, and no order placed or staged. The page
 states plainly that it records the user's rules and factual readings, not advice.
+
+---
+
+## 2026-10-26 — Added NBIS (Nebius Group) to the watchlist and every page
+
+**Source**: Nebius Group 6-K exhibit 99.1, filed 2026-08-12
+(`sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d1.htm`). Prices,
+52-week range and quotes from stockanalysis.com and the IBKR connector, both 2026-10-26. Headlines
+from stockanalysis.com's NBIS page. Earnings-date estimates from ChartRow and Earnings Whisper.
+
+**What changed**:
+
+- `watchlist.json` — NBIS added after CRWV, `"fav": true`, sector `AI Infra`, tags
+  `AI Infra / AI / Cloud / Data Center`. 100 symbols to 101, favorites 14 to 15. No `pe`: Nebius
+  publishes no forward P/E (trailing is 933 on a near-zero EPS, which says nothing useful).
+- `ibkr-conids.json` — NBIS conid 88819736, NASDAQ, resolved through IBKR `search_contracts`.
+- The IBKR watchlist "Stock KB Heatmap" (id 100) — NBIS inserted after CRWV. That API is
+  full-replace, so all 98 existing instruments were resubmitted with it and the result read back and
+  checked: 99 instruments, every original intact.
+- `financials.json` — NBIS Q2 FY26 entry, 65 statements to 66.
+- `charts/NBIS-Q2-FY26.json` and `assets/financials/NBIS-Q2-FY26.png` — the live figure and raster.
+- `examples/nbis-q2-fy26.json` — the spec.
+- `events.json` — NBIS earnings at 2026-11-10, titled `(est.)`.
+- `news.json` — an NBIS catalyst entry.
+- `brief.json` — NBIS added to watchlist favorites.
+- `wiki/nebius-q2-fy26.md` — new page: the statement, the segment table, where the loss comes from,
+  the source disagreement, what is moving the stock, and the technical reading.
+- `wiki/favorites-financials.md` — counts updated, plus a section on the Nebius source
+  disagreement and its segment split.
+- `wiki/index.md` — the new page listed; the Financials count corrected from twelve to 66.
+
+**The finding worth keeping**: Nebius is a one-segment company wearing three names. AI cloud is
+$574.9M of $585.9M in segment revenue; TripleTen ($10.0M, shrinking 19%) and Avride ($1.0M) are
+rounding. Gross margin is 77%, so nothing is being sold at a loss — the $190.4M net loss is
+depreciation ($259.7M, 45% of revenue, larger than the loss itself) plus $95.0M of net interest.
+Adjusted EBITDA was +$236.2M. The number behind the debt headlines is capex: **$8,130.3M in the
+first half against $981.3M of first-half revenue**, about eight times revenue.
+
+**Second source disagreement on operating income.** stockanalysis.com reports −$1.3M, the filing
+−$175.9M. The aggregator moves roughly $174.6M out of product development and SG&A, almost
+certainly share-based compensation booked as an unusual item. The filing is used. This is the
+second such case after Meta's Q3 FY26, and the same rule applied: when operating income looks too
+clean, read the filing.
+
+**Chart problem found and fixed in the render loop**: the first pass set the AI cloud segment note
+to "$574.9M less $3.6M eliminations". That label block grew wider than the 300px left margin and
+plotly dropped the whole annotation — the largest segment in the chart rendered with **no label at
+all**, and the validator said nothing, because it only checks that the figures conserve. Shortened
+to "net of eliminations" and re-rendered. Worth remembering: a long segment note does not wrap or
+clip, it disappears.
+
+**Eliminations**: $3.6M of intersegment eliminations is netted against the AI cloud bar so the three
+segments foot to $582.3M. The reported figure is $574.9M, and both the card note and the wiki page
+say so.
+
+**Earnings date is not confirmed.** Nebius has not published one; ChartRow says Nov 10 and Earnings
+Whisper says Nov 11. `events.json` carries Nov 10 with `(est.)` in the title and a note on the
+disagreement.
+
+**Verification**: all six pages checked in a local browser at 1280px. Heatmap shows the NBIS tile
+with its favorite star, "AI INFRA" and a live $153.27 / −3.45%. Catalysts renders the card with its
+three headlines. Morning Brief lists it under favorites. Financials shows the chip, the four KPIs,
+the live chart; hover values were read back from the trace and foot in both directions
+(571.3 + 10 + 1 = 582.3; 448.7 + 190.4 = 639.1 = 191 + 173.9 + 259.7 + 14.5), and one zoom step
+redraws all 11 link bands. Events carries the row but does not display it: the month view renders a
+fixed 42-day grid that ends 2026-11-07, so every Nov 10 event is out of view until November. That
+is pre-existing behaviour, not caused by this change.
+
+**Not done**: no entry on the Call Sheet. That page stores predictions, and there is no call on
+NBIS to record — inventing one would corrupt the hit-rate table. `news.json` and `brief.json` are
+otherwise from the Oct 19 run; both now carry a note saying the NBIS entry was added by hand on
+Oct 26 so the stale dates are not read as covering it. NBIS was deliberately **not** added to the
+five-name table in [[options-wheel-strategy]]: rule 4 of that strategy is "only names I am familiar
+with", and adding a sixth would misstate the rules the page records.

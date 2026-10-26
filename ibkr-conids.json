@@ -507,6 +507,11 @@
    "conid": 157874416,
    "ex": "NASDAQ",
    "desc": "XUNLEI LTD-ADR"
+  },
+  "NBIS": {
+   "conid": 88819736,
+   "ex": "NASDAQ",
+   "desc": "NEBIUS GROUP NV"
   }
  }
 }

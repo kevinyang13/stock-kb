@@ -2,8 +2,17 @@
  "generated": "2026-10-19T17:24:06-07:00",
  "generatedLabel": "Oct 19, 2026, 5:24 PM PT",
  "source": "stockanalysis.com",
- "note": "Only tickers with an identifiable catalyst are listed. Benzinga returned HTTP 403 to this run, so headlines come from stockanalysis.com.",
+ "note": "Only tickers with an identifiable catalyst are listed. Benzinga returned HTTP 403 to this run, so headlines come from stockanalysis.com. The NBIS entry was added by hand on Oct 26, 2026 when the ticker joined the watchlist; every other entry is from the Oct 19 run.",
  "items": [
+  {
+   "t": "NBIS",
+   "summary": "Fell 3.5% to $153.27, a third straight down close and 49% below its 52-week high, as Elon Musk's warning that most of the 200-plus AI neoclouds face failure hit the whole group. A $3.5B Citi financing facility announced Oct 22 had already put the sector's debt load in focus.",
+   "headlines": [
+    "Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death' - CNBC",
+    "Musk's warning hits neocloud stocks as debt concerns mount - Reuters",
+    "Nebius gets $3.5 billion Citi facility for data center growth - Reuters"
+   ]
+  },
   {
    "t": "SNDK",
    "summary": "Shares rebounded about 5.5% as investors returned to memory and chip names after an 18% crash the prior week.",

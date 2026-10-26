@@ -1,7 +1,7 @@
 {
  "generated": "2026-10-19T17:24:52-07:00",
  "generatedLabel": "Oct 19, 2026",
- "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no upcoming date yet. Macro and Fed dates are scheduled releases.",
+ "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no upcoming date yet. Macro and Fed dates are scheduled releases. NBIS carries an estimated date: Nebius has not confirmed one, and sources split between Nov 10 and Nov 11, 2026.",
  "events": [
   {
    "date": "2026-10-20",
@@ -296,6 +296,13 @@
    "ticker": "FLY",
    "title": "FLY earnings",
    "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "earnings",
+   "ticker": "NBIS",
+   "title": "NBIS earnings (est.)",
+   "fav": true
   },
   {
    "date": "2026-11-12",

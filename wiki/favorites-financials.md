@@ -1,20 +1,20 @@
 # Watchlist Financials
 
-**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 65 statements, each the company's most recent reported quarter, plus Nintendo.
+**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 66 statements, each the company's most recent reported quarter, plus Nintendo.
 
-**Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K and CoreWeave's results release for those two.
+**Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K, CoreWeave's results release and Nebius's 6-K exhibit 99.1 for those three.
 
-**Last updated**: 2026-10-22
+**Last updated**: 2026-10-26
 
 ---
 
 ## Coverage
 
-Of the 100 names on the watchlist:
+Of the 101 names on the watchlist:
 
 | | Count | Why |
 |---|---|---|
-| Charted | 64 | files an income statement |
+| Charted | 65 | files an income statement |
 | ETFs and funds | 25 | a fund holds securities; it has no revenue or margin |
 | Shells / no usable filing | 6 | CLBR, CCXI, BITF, BCII, MFH, XNET |
 | Excluded, negative gross profit | 3 | SPCE, QUBT, CAN — cost of revenue exceeds revenue, so there is no flow to draw |
@@ -51,6 +51,21 @@ Meta's Q3 FY26 chart uses the filed figure of **$12,988M**. stockanalysis.com re
 
 This is the first case where the two sources disagree on a headline line, not just on rounding. Worth checking the filing rather than the aggregator whenever operating income looks too clean.
 
+## Nebius: the second source disagreement, and a segment split
+
+NBIS joined the watchlist on 2026-10-26 and its Q2 FY26 chart was built from the **6-K exhibit
+99.1**, not the aggregator. stockanalysis.com reports operating income of **−$1.3M**; the filing
+reports a loss from operations of **−$175.9M**. The gap is roughly $174.6M the aggregator moves out
+of product development and SG&A, almost certainly share-based compensation treated as an unusual
+item. Revenue, gross profit, net loss and EPS agree on both sources.
+
+That makes two names where the aggregator's operating income does not match the filing — Meta above
+and Nebius here. Both times the filing was right and the aggregator's number looked too clean.
+
+Nebius does carry a reported segment split, so it is charted with three revenue bars rather than
+one. The $3.6M of intersegment eliminations is netted against the AI cloud bar so the three foot to
+revenue; the reported segment figure is $574.9M. Full detail in [[nebius-q2-fy26]].
+
 ## Caveats that apply to these charts
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
@@ -78,3 +93,4 @@ Note that stockanalysis.com's `revenue-by-segment` page is **not** usable for th
 - [[sankey-income-statement]]
 - [[micron-fq4-fy26]]
 - [[coreweave-q2-fy26]]
+- [[nebius-q2-fy26]]
