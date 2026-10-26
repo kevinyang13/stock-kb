@@ -291,6 +291,27 @@ It rewrites every page's asset links to `?v=<newest asset mtime>`, which makes e
 `.claude/skills/income-statement-chart/SKILL.md` encodes this whole procedure, including the
 chartable/not-chartable gate and the source traps, so a bare ticker is enough to trigger it.
 
+## A second chart on the same pipeline
+
+`bin/debtbars.py` emits the debt/coverage bars that sit under the Sankey on the NBIS and CRWV
+cards — debt, free cash flow and cash for the quarter the card covers, in the style of the
+App-Economy-Insights "Debt level and coverage" panel. It writes the same figure JSON with
+`--json`, carrying the same `design` width and height, so `assets/sankey.js` renders it unchanged.
+
+Two things that had to be added for it:
+
+- `scaled()` now also scales `xaxis`/`yaxis` tick fonts, the legend font and trace `textfont`.
+  A sankey has none of those, so the additions are guarded and change nothing for the Sankey.
+- The chart type is opt-in per statement: a `"debt"` key in the `financials.json` item naming the
+  chart stem. Without it the card renders exactly as before.
+
+**Trap**: kaleido fails the entire PNG render with a bare `plotly.js error` (code 525) if the
+layout **title** contains an HTML entity such as `&middot;`. The same entity is fine in a trace
+name or a hovertemplate. Keep titles plain.
+
+Free cash flow is usually negative for these names, so the chart has a zero line and bars below it.
+Bar labels switch to millions below $1bn, because a $49.5M bar labelled `$0.0B` says nothing.
+
 ## Related pages
 
 - [[income-statement-basics]]

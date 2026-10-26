@@ -34,6 +34,28 @@ Three months ended June 30, 2026, in millions of USD.
 
 Gross margin 65.9%. Operating margin (2)%. Net margin (24)%.
 
+## Debt level and coverage
+
+The second chart on the Financials card, for the same quarter. Debt and cash are the June 30, 2026
+balance sheet; free cash flow is that quarter's flow (source: stockanalysis.com).
+
+| | Q2 FY26 |
+|---|---|
+| Debt | $51,613M |
+| Cash and equivalents | $5,524M |
+| Free cash flow | $(5,743)M |
+| **Net debt** | **$46,089M** |
+
+Cash covers 11% of debt. The quarter's free cash outflow of $5.7B is **larger than the entire cash
+balance**, so the position is funded by continuing to raise, not by the business. Debt was $2.0B at
+the end of FY2023, $10.6B at FY2024, $29.8B at FY2025 and $51.6B here.
+
+The reported total debt of $51,613M includes lease obligations — $591M current and $15,949M
+long-term. Borrowings alone are $7,513M current and $27,560M long-term.
+
+Set against [[nebius-q2-fy26]], the same business model at a different point: Nebius holds $8.0B of
+cash against $10.2B of debt, CoreWeave $5.5B against $51.6B.
+
 ## Where the loss comes from
 
 The operating loss is small — $49M on $2.6B of revenue. The net loss is **thirteen times larger**, and the difference is the capital structure:

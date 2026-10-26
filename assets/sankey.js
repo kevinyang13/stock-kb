@@ -1,5 +1,6 @@
-// Renders an income statement Sankey from the figure JSON that bin/sankey.py
-// emits with --json. Python owns the layout; this file only rescales it to the
+// Renders a figure from the JSON that bin/sankey.py and bin/debtbars.py emit
+// with --json: the income statement Sankey, and the debt/coverage bars that sit
+// under it. Python owns the layout; this file only rescales it to the
 // container, because every margin and font size in that JSON is in pixels
 // against a fixed design width.
 //
@@ -27,7 +28,16 @@ const Sankey = (() => {
       a.text = a.text.replace(/font-size:([\d.]+)px/g,
         (_, n) => `font-size:${(n * s).toFixed(1)}px`);
     }
+    // Cartesian figures from bin/debtbars.py carry axes, a legend and bar
+    // labels instead of annotations. Guarded, so a sankey is untouched.
+    for (const ax of ['xaxis', 'yaxis']) {
+      const a = f.layout[ax];
+      if (a && a.tickfont) a.tickfont.size *= s;
+    }
+    if (f.layout.legend && f.layout.legend.font) f.layout.legend.font.size *= s;
+
     for (const t of f.data) {
+      if (t.textfont) t.textfont.size *= s;
       if (!t.node) continue;
       t.node.pad *= s;
       t.node.thickness *= s;

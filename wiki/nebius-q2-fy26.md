@@ -81,6 +81,27 @@ headlines below are about.
 Adjusted EBITDA by segment shows where it is earned and spent: AI cloud +$285.7M, Avride −$40.1M,
 TripleTen −$9.4M.
 
+## Debt level and coverage
+
+The second chart on the Financials card, for the same quarter. Debt and cash are the June 30, 2026
+balance sheet; free cash flow is that quarter's flow.
+
+| | Q2 FY26 |
+|---|---|
+| Debt | $10,195M |
+| Cash and equivalents | $8,042M |
+| Free cash flow | $(3,411)M |
+| **Net debt** | **$2,153M** |
+
+Cash covers 79% of debt, so the balance sheet itself is not stretched. What the chart shows is that
+the coverage is **shrinking from the inside**: the quarter burned $3.4B of free cash flow, which is
+42% of the cash pile in three months. Debt went from $49.5M at the end of FY2024 to $4,973M at the
+end of FY2025 to $10,195M here — roughly doubling again in half a year — and the $3.5B Citi
+facility announced in October extends that line further.
+
+The quarter's capex of $5,657M reconciles with the 6-K's first-half figure of $8,130.3M, so the
+Q1 figure was about $2,473M. The burn is accelerating, not steady.
+
 ## Sources disagree: operating income
 
 stockanalysis.com reports Q2 FY26 operating income of **−$1.3M**. The filing reports a loss from

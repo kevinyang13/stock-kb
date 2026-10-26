@@ -211,6 +211,8 @@
     display:flex;justify-content:center;align-items:flex-start;min-height:120px}
   .fin-fig img{display:block;width:100%;height:auto}
   .fin-chart{flex:0 0 auto}
+  /* the debt bars sit under the sankey, as a second figure on the same card */
+  .fin-fig-debt{margin-top:14px}
   .fin-fig.is-panning{cursor:grab}
   .fin-fig.is-dragging{cursor:grabbing}
   .fin-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:8px 0 0}

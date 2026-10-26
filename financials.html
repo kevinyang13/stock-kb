@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Financials</title>
-<link rel="stylesheet" href="assets/site.css?v=1792820266">
+<link rel="stylesheet" href="assets/site.css?v=1793057548">
 </head>
 <body>
 
@@ -32,8 +32,8 @@
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-<script src="assets/sankey.js?v=1792820266"></script>
-<script src="assets/site.js?v=1792820266"></script>
+<script src="assets/sankey.js?v=1793057548"></script>
+<script src="assets/site.js?v=1793057548"></script>
 <script>
 Site.nav();
 
@@ -44,6 +44,7 @@ Site.nav();
   var finItems = [];
   var finPick = 0;
   var chartEl = null;
+  var debtEl = null;
 
   function finCard(f) {
     var kpis = (f.highlights || []).map(function (h) {
@@ -73,6 +74,9 @@ Site.nav();
           '<span class="hint">&#8984;/ctrl + scroll to zoom, drag to pan</span> &middot; ' +
           '<a href="' + esc(f.img) + bust + '" target="_blank" rel="noopener">open as an image</a></p>' +
       "</div>" +
+      (f.debt
+        ? '<figure class="fin-fig fin-fig-debt"><div class="fin-chart" id="fin-debt"></div></figure>'
+        : "") +
       (notes ? '<ul class="fin-notes">' + notes + "</ul>" : "") +
       '<p class="fin-src">Source: ' + src + "</p>" +
       "</article>";
@@ -85,9 +89,33 @@ Site.nav();
     }).join("");
     var body = document.getElementById("fin-body");
     if (chartEl) Sankey.unmount(chartEl);   // innerHTML is about to drop it
-    chartEl = null;
+    if (debtEl) Sankey.unmount(debtEl);
+    chartEl = debtEl = null;
     body.innerHTML = finItems.length ? finCard(finItems[finPick]) : "";
-    if (finItems.length) drawChart(finItems[finPick]);
+    if (finItems.length) {
+      drawChart(finItems[finPick]);
+      drawDebt(finItems[finPick]);
+    }
+  }
+
+  // The debt/coverage bars, for the names where the balance sheet is the
+  // story the income statement does not tell. Same figure-JSON pipeline as
+  // the sankey, so it rescales and hovers the same way. No raster fallback:
+  // the card still reads without it.
+  function drawDebt(f) {
+    debtEl = document.getElementById("fin-debt");
+    if (!debtEl || !f.debt) { debtEl = null; return; }
+    if (typeof Plotly === "undefined" || typeof Sankey === "undefined") return;
+
+    var el = debtEl;
+    Sankey.load(f.debt)
+      .then(function (fig) {
+        if (el !== debtEl) return;         // the ticker changed while fetching
+        Sankey.mount(el, fig);
+      })
+      .catch(function () {
+        if (el === debtEl && el.parentElement) el.parentElement.remove();
+      });
   }
 
   // The chart ships as the figure JSON bin/sankey.py writes with --json, so

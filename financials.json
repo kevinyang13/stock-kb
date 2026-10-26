@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T16:04:16-07:00",
+ "generated": "2026-10-26T16:32:38-07:00",
  "generatedLabel": "Oct 26, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
@@ -536,8 +536,10 @@
     "Loss layout. Gross profit $1,696M + net loss $626M = $2,322M of charges, which balances exactly.",
     "The operating loss is only $49M. The net loss is $626M — the gap is financing, with interest and other netting to $515M.",
     "Technology & infrastructure alone is $1,507M, 59% of revenue.",
-    "Revenue backlog was roughly $104B at June 30; FY26 guidance is $12.4-13.2B revenue against $35-39B of capex."
-   ]
+    "Revenue backlog was roughly $104B at June 30; FY26 guidance is $12.4-13.2B revenue against $35-39B of capex.",
+    "Debt and coverage, Q2 FY26: $51.6B of debt against $5.5B of cash and -$5.7B of free cash flow for the quarter. Net debt $46.1B. Debt and cash are the Jun 30, 2026 balance sheet; free cash flow is that quarter's operating cash flow less capex (source: stockanalysis.com). The debt figure is the reported total, which includes $16.5B of lease obligations."
+   ],
+   "debt": "CRWV-debt"
   },
   {
    "t": "7974",
@@ -2318,8 +2320,10 @@
     "Figures follow the Aug 12, 2026 6-K exhibit. stockanalysis.com shows operating income of -$1.3M for the same quarter because it moves roughly $174.6M out of product development and SG&A; the filing's loss from operations is -$175.9M. The filing is used here.",
     "Depreciation and amortization of $259.7M is 45% of revenue and the single largest charge - larger than the net loss itself.",
     "\"Non-operating & tax, net\" of $14.5M is $119.1M of interest expense and $13.7M of tax against $24.1M interest income, $81.5M other income and $12.7M of equity-method income.",
-    "Toloka sits in discontinued operations after the 2025 investment transaction and is not part of this statement."
-   ]
+    "Toloka sits in discontinued operations after the 2025 investment transaction and is not part of this statement.",
+    "Debt and coverage, Q2 FY26: $10.2B of debt against $8.0B of cash and -$3.4B of free cash flow for the quarter. Net debt $2.2B. Debt and cash are the Jun 30, 2026 balance sheet; free cash flow is that quarter's operating cash flow less capex (source: stockanalysis.com). Q2 capex of $5,657M reconciles with the 6-K's $8,130.3M first half."
+   ],
+   "debt": "NBIS-debt"
   }
  ]
 }

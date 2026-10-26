@@ -484,3 +484,73 @@ otherwise from the Oct 19 run; both now carry a note saying the NBIS entry was a
 Oct 26 so the stale dates are not read as covering it. NBIS was deliberately **not** added to the
 five-name table in [[options-wheel-strategy]]: rule 4 of that strategy is "only names I am familiar
 with", and adding a sixth would misstate the rules the page records.
+
+---
+
+## 2026-10-26 — Debt level and coverage chart for NBIS and CRWV
+
+**Source**: Reference panel supplied in chat (an App-Economy-Insights style "Debt level and
+coverage" grouped bar chart). Figures from stockanalysis.com quarterly balance sheet and cash flow
+statements, both read 2026-10-26. Nebius's Q2 capex cross-checked against the 6-K.
+
+**What changed**:
+
+- `bin/debtbars.py` — new generator. Three bars for one quarter: debt, free cash flow, cash and
+  equivalents. Emits the same figure JSON as `bin/sankey.py` (`--json`, with a `design` block) plus
+  a PNG.
+- `examples/nbis-debt.json`, `examples/crwv-debt.json` — the specs.
+- `charts/NBIS-debt.json`, `charts/CRWV-debt.json` — the live figures.
+- `assets/sankey.js` — `scaled()` now also scales axis tick fonts, the legend font and trace
+  `textfont`, all guarded so a sankey is unaffected. Header comment updated: it is no longer a
+  sankey-only renderer.
+- `financials.html` — renders a second figure under the sankey when the item carries a `"debt"`
+  key, and unmounts it on ticker change alongside the first.
+- `assets/site.css` — `.fin-fig-debt{margin-top:14px}`. `bin/stamp.py` run.
+- `financials.json` — `"debt"` keys and a coverage note on the NBIS and CRWV items.
+- `wiki/nebius-q2-fy26.md`, `wiki/coreweave-q2-fy26.md` — a debt and coverage section each.
+- `wiki/sankey-income-statement.md`, `wiki/index.md` — the second chart type documented.
+
+**Scope changed mid-build**: the first pass drew three to four annual periods per ticker, like the
+reference. The multi-year version was discarded on request for the single target quarter — the one
+the Financials card is already about. The annual figures that pass gathered are in this entry
+below, since they were verified and are the reason the window question came up at all.
+
+**The finding worth keeping**: free cash flow is **negative for both**, so unlike the reference
+panel these charts need a zero line and bars below it. For the quarter ended Jun 30, 2026:
+
+| | Debt | Cash | FCF (qtr) | Net debt | Cash / debt |
+|---|---|---|---|---|---|
+| NBIS | $10,195M | $8,042M | $(3,411)M | $2,153M | 79% |
+| CRWV | $51,613M | $5,524M | $(5,743)M | $46,089M | 11% |
+
+Same business model, very different points on it. CoreWeave's quarterly cash outflow is larger
+than its entire cash balance. Nebius still has most of its debt covered by cash, but burned 42% of
+that cash in the quarter, and its debt went $49.5M (FY2024) → $4,973M (FY2025) → $10,195M here.
+
+**Why NBIS has no multi-year series anyway**: FY2021–FY2023 on that ticker are the Yandex N.V.
+entity, before the Russian businesses were sold in July 2024. Total liabilities read $5,461M in
+FY2023 against $294.9M in FY2024 — the divestiture, not a deleveraging. Those years are not Nebius
+and must not be charted as if they were. CRWV's FY2022 is likewise a stub: operating cash flow of
+$0.9M and blank balance sheet lines.
+
+**Trap found**: kaleido fails the whole PNG render with a bare `plotly.js error` (code 525) when
+the layout **title** contains an HTML entity. `&middot;` in the title killed it; the same entity in
+a trace `name` and in a `hovertemplate` rendered fine. Bisected property by property. Titles stay
+plain ASCII.
+
+**Second trap**: the browser served a cached `financials.html` during verification and the new
+figure was absent from the DOM while present in the served file. The no-cache meta covers the HTML
+only in principle; a query string forced the reload. `bin/stamp.py` handles the assets, not the
+page itself.
+
+**Verification**: NBIS and CRWV both draw three bars with the right values, read back off the
+traces (`customdata` in millions against the rendered labels). Fonts scale with the container —
+at a 1262px box against a 1000px design, the 15px tick font measured 18.93px, the 16px legend
+20.19px, the 13px bar text 16.41px. The legend entity decodes to "Cash & equivalents" in the DOM.
+NVDA, which has no `"debt"` key, renders exactly as before with no stray element and no console
+errors; CRWV's sankey still draws all 10 links and 11 nodes, so the `scaled()` change did not
+regress it.
+
+**Not done**: no other ticker got a debt chart. The two here are the names where leverage is the
+story the income statement does not tell; adding it everywhere would be noise, and the key is
+opt-in per statement precisely so it stays that way.

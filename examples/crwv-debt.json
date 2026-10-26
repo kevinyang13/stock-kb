@@ -1,0 +1,10 @@
+{
+ "ticker": "CRWV",
+ "company": "CoreWeave",
+ "unit": "millions USD",
+ "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
+ "source": "Debt and cash from the Jun 30, 2026 balance sheet; free cash flow is the quarter's operating cash flow less capital expenditure (stockanalysis.com quarterly statements).",
+ "periods": [
+  {"label": "Q2 FY26", "debt": 51613, "fcf": -5743, "cash": 5524}
+ ]
+}
