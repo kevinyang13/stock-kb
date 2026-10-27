@@ -66,5 +66,16 @@
  "operating_profit": 4782.0,
  "other": 151.0,
  "tax": 1074.0,
- "net_profit": 3859.0
+ "net_profit": 3859.0,
+ "prior": {
+  "Revenue": 14673.0,
+  "Gross profit": 9261.0,
+  "Cost of revenue": 5412.0,
+  "R&D": 2380.0,
+  "SG&A": 3524.0,
+  "Operating expenses": 6158.0,
+  "Operating profit": 3103.0,
+  "Net profit": 2550.0,
+  "Tax": 449.0
+ }
 }

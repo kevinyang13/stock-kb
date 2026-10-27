@@ -54,5 +54,11 @@
    "name": "Non-operating & tax, net",
    "value": 14.5
   }
- ]
+ ],
+ "prior": {
+  "Revenue": 105.1,
+  "Gross profit": 75.0,
+  "Cost of revenue": 30.1,
+  "Depreciation & amortization": 75.2
+ }
 }

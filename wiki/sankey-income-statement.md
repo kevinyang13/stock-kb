@@ -317,6 +317,27 @@ itself, so that case is suppressed.
 Blocks use `&#160;` padding and a monospace `hoverlabel` font, exactly as the debt chart does, and
 literal characters rather than HTML entities: plotly does not decode entities in hover text.
 
+**Year over year comes from `bin/yoyfetch.py`**, which writes a `prior` block into each spec
+keyed by the node name the chart draws, read from the same stockanalysis data endpoint.
+
+Five charts were built from filings rather than the aggregator, and on those the two sources
+disagree about where some costs sit, so a growth figure from the wrong basis would contradict the
+bar it is attached to. Rather than maintaining a list of exceptions, **each line polices itself**:
+the year-ago figure is kept only when the source's *current* quarter for that line matches what
+the chart already draws, within 1%. Where it does not, the node simply gets no growth row.
+
+That rule caught every known disagreement without being told about any of them — NBIS's R&D, SG&A
+and operating expenses (the share-based compensation reclassification), and Meta's operating
+expenses and operating income (the $9,890M charge). It also catches cases nobody had noticed, such
+as NVDA's SG&A.
+
+A second rule drops a line whose **sign changed**: NBIS's "Net loss" node was a $584.4M net
+*profit* a year earlier, on the Yandex disposal, and a percentage across that flip is meaningless.
+
+Across the 66 charts, 443 nodes carry a year-ago figure. Nintendo gets none: its chart is in USD
+from the ADR, the Tokyo listing's data is in yen, and the ADR publishes no income statement at that
+endpoint — so the basis check refuses all of it, correctly.
+
 **Trap: two specs can write the same chart.** `bin/sankey.py` names its output from the spec's own
 `ticker` and `period`, not from the filename, so `examples/tsm-q3-fy26.json` and
 `examples/tsm-q3-fy26-filed.json` both wrote `charts/TSM-Q3-FY26.json`. A loop over

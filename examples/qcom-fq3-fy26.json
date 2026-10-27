@@ -61,5 +61,16 @@
  "tax": 460,
  "net_profit": 2002,
  "width": 1700,
- "height": 940
+ "height": 940,
+ "prior": {
+  "Revenue": 10365.0,
+  "Gross profit": 5759.0,
+  "Cost of revenue": 4606.0,
+  "R&D": 2226.0,
+  "SG&A": 687.0,
+  "Operating expenses": 2913.0,
+  "Operating profit": 2846.0,
+  "Net profit": 2666.0,
+  "Tax": 286.0
+ }
 }

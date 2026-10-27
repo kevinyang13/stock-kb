@@ -30,5 +30,12 @@
  "operating_profit": 608.0,
  "other": 17.0,
  "tax": 149.0,
- "net_profit": 476.0
+ "net_profit": 476.0,
+ "prior": {
+  "Revenue": 4405.0,
+  "SG&A": 401.0,
+  "Operating expenses": 401.0,
+  "Net profit": 586.0,
+  "Tax": 182.0
+ }
 }

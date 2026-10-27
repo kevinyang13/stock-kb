@@ -1,27 +1,55 @@
 {
-  "company": "CoreWeave",
-  "ticker": "CRWV",
-  "period": "Q2 FY26",
-  "currency": "$",
-  "unit": "M",
-  "decimals": 0,
-  "revenue": 2575,
-  "revenue_yoy": 112,
-  "segments": [
-    {"name": "Cloud compute revenue", "value": 2575, "yoy": 112, "note": "single reported line", "color": "#e8502a"}
-  ],
-  "cost_of_revenue": 879,
-  "gross_profit": 1696,
-  "opex_items": [
-    {"name": "Technology & infrastructure", "value": 1507},
-    {"name": "General & administrative",    "value": 178},
-    {"name": "Sales & marketing",           "value": 60}
-  ],
-  "below_line": [
-    {"name": "Interest & other, net", "value": 515},
-    {"name": "Tax",                   "value": 62}
-  ],
-  "net_loss": 626,
-  "width": 1700,
-  "height": 940
+ "company": "CoreWeave",
+ "ticker": "CRWV",
+ "period": "Q2 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 2575,
+ "revenue_yoy": 112,
+ "segments": [
+  {
+   "name": "Cloud compute revenue",
+   "value": 2575,
+   "yoy": 112,
+   "note": "single reported line",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 879,
+ "gross_profit": 1696,
+ "opex_items": [
+  {
+   "name": "Technology & infrastructure",
+   "value": 1507
+  },
+  {
+   "name": "General & administrative",
+   "value": 178
+  },
+  {
+   "name": "Sales & marketing",
+   "value": 60
+  }
+ ],
+ "below_line": [
+  {
+   "name": "Interest & other, net",
+   "value": 515
+  },
+  {
+   "name": "Tax",
+   "value": 62
+  }
+ ],
+ "net_loss": 626,
+ "width": 1700,
+ "height": 940,
+ "prior": {
+  "Revenue": 1212.0,
+  "Gross profit": 899.0,
+  "Cost of revenue": 313.0,
+  "Operating expenses": 880.0,
+  "Net loss": 290.0
+ }
 }

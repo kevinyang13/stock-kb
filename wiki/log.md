@@ -767,3 +767,53 @@ to use a real pointer over the node rect's measured position.
 **Still to do**: year-over-year per node, which needs the prior-year column fetched per ticker and
 a rule for the five charts built from filings rather than the aggregator, where the two bases
 disagree on opex and operating income.
+
+---
+
+## 2026-10-26 — Year over year on the income statement hovers
+
+**What changed**:
+
+- `bin/sadata.py` — new. The stockanalysis data endpoint and the devalue hydrator, factored out of
+  `bin/debtfetch.py` so both fetchers share one copy.
+- `bin/yoyfetch.py` — new. Writes a `prior` block into each income statement spec, keyed by the
+  node name the chart draws.
+- `bin/sankey.py` — nodes with a prior figure gain `year ago` and `year over year` rows.
+- `examples/*.json`, `charts/*.json` — all 66 updated and re-rendered.
+
+**The design decision worth keeping: each line polices itself.** Five charts were built from
+filings rather than the aggregator, and on those the two sources disagree about where some costs
+sit. A growth figure from the wrong basis would contradict the bar it is attached to. Instead of
+maintaining a list of exceptions, the year-ago figure is kept only when the source's **current**
+quarter for that line matches what the chart already draws, within 1%.
+
+The rule found every known disagreement without being told about any of them — NBIS's R&D, SG&A
+and operating expenses, Meta's operating expenses and operating income — and several nobody had
+noticed, including NVDA's SG&A, DELL's R&D and SG&A, GE's and IBM's cost of revenue, and PHM's
+gross profit, cost of revenue and operating profit. Those are worth a look on their own: they say
+the aggregator and the filing classify those lines differently.
+
+**A second rule drops a line whose sign changed.** NBIS's "Net loss" node was a $584.4M net
+*profit* a year earlier, on the Yandex disposal; a percentage across that flip is meaningless.
+Ten tickers have at least one such line, mostly miners and loss-makers that crossed zero.
+
+Result: 443 of the nodes across 66 charts carry a year-ago figure.
+
+**A bug in my own code, caught by checking a refusal rather than trusting it.** SKHY came back with
+zero usable lines, reported as a basis mismatch. It was not: SK Hynix files in **trillions** of
+won, the spec carries `"unit": "T"`, and my divisor handled only `M` and `B`, defaulting everything
+else to millions. Every SKHY line therefore looked a million times off. Fixed to a
+`{"M": 1e6, "B": 1e9, "T": 1e12}` map, after which SKHY took seven lines.
+
+The lesson is that a self-policing rule hides its own bugs: a silent refusal looks exactly like a
+correct refusal. The two zero-row tickers were the only ones worth investigating, and one of them
+was mine.
+
+**Nintendo is the genuine refusal.** Its chart is in USD, built from the NTDOY ADR; the Tokyo
+listing's data is in yen; and NTDOY publishes no income statement at that endpoint. Nothing on a
+matching basis exists, so it gets no growth rows at all.
+
+**Verification**: 66 charts re-rendered, then checked programmatically — every node carrying a
+`year ago` row also carries a `year over year` row, and the blocks are still padded. Then hovered
+in the browser: `Operating profit · Q2 FY27 / amount $63.7B / year ago $28.4B / year over year
++124% / % of revenue 66.2% / % of gross profit 88.3%`. No console errors.

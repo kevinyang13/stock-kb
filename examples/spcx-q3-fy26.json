@@ -8,21 +8,52 @@
  "revenue": 14575,
  "revenue_yoy": 161,
  "segments": [
-  {"name": "Super Intelligence", "value": 7600, "note": "52% of revenue", "color": "#e8502a"},
-  {"name": "Connectivity (Starlink)", "value": 5250, "yoy": 69, "note": "36% of revenue", "color": "#1b1b7a"},
-  {"name": "Space", "value": 1770, "note": "12% of revenue", "color": "#c8a020"}
+  {
+   "name": "Super Intelligence",
+   "value": 7600,
+   "note": "52% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Connectivity (Starlink)",
+   "value": 5250,
+   "yoy": 69,
+   "note": "36% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Space",
+   "value": 1770,
+   "note": "12% of revenue",
+   "color": "#c8a020"
+  }
  ],
  "cost_of_revenue": 5472,
  "gross_profit": 9103,
  "opex_total": 5084,
  "opex_items": [
-  {"name": "R&D", "value": 3574},
-  {"name": "SG&A", "value": 1510}
+  {
+   "name": "R&D",
+   "value": 3574
+  },
+  {
+   "name": "SG&A",
+   "value": 1510
+  }
  ],
  "operating_profit": 4019,
  "other": -5,
  "tax": -390,
  "net_profit": 4404,
  "width": 1700,
- "height": 940
+ "height": 940,
+ "prior": {
+  "Revenue": 5576.0,
+  "Gross profit": 2871.0,
+  "Cost of revenue": 2705.0,
+  "R&D": 2291.0,
+  "SG&A": 575.0,
+  "Operating expenses": 2866.0,
+  "Operating profit": 5.0
+ }
 }

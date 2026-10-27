@@ -2,7 +2,7 @@
  "company": "SK Hynix",
  "ticker": "SKHY",
  "period": "Q2 FY26",
- "currency": "\u20a9",
+ "currency": "₩",
  "unit": "T",
  "decimals": 1,
  "revenue": 79.3,
@@ -34,5 +34,14 @@
  "operating_profit": 60.5,
  "other": 62.1,
  "tax": 28.8,
- "net_profit": 93.8
+ "net_profit": 93.8,
+ "prior": {
+  "Revenue": 22.2,
+  "Gross profit": 12.0,
+  "Cost of revenue": 10.2,
+  "Operating expenses": 2.8,
+  "Operating profit": 9.2,
+  "Net profit": 7.0,
+  "Tax": 1.7
+ }
 }

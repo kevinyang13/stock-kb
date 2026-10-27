@@ -36,5 +36,14 @@
    "value": -70.0
   }
  ],
- "net_loss": 192.0
+ "net_loss": 192.0,
+ "prior": {
+  "Revenue": 1145.0,
+  "Gross profit": 773.0,
+  "Cost of revenue": 372.0,
+  "R&D": 492.0,
+  "SG&A": 621.0,
+  "Operating expenses": 1113.0,
+  "Net loss": 298.0
+ }
 }

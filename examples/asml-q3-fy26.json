@@ -2,7 +2,7 @@
  "company": "ASML",
  "ticker": "ASML",
  "period": "Q3 FY26",
- "currency": "\u20ac",
+ "currency": "€",
  "unit": "M",
  "decimals": 0,
  "revenue": 11662.0,
@@ -34,5 +34,16 @@
  "operating_profit": 5173.0,
  "other": 712.0,
  "tax": 925.0,
- "net_profit": 4960.0
+ "net_profit": 4960.0,
+ "prior": {
+  "Revenue": 7516.0,
+  "Gross profit": 3880.0,
+  "Cost of revenue": 3636.0,
+  "R&D": 1109.0,
+  "SG&A": 303.0,
+  "Operating expenses": 1412.0,
+  "Operating profit": 2468.0,
+  "Net profit": 2124.0,
+  "Tax": 442.0
+ }
 }

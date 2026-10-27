@@ -40,5 +40,13 @@
  ],
  "net_loss": 1868.9,
  "width": 1700,
- "height": 940
+ "height": 940,
+ "prior": {
+  "Revenue": 20.7,
+  "Gross profit": 12.5,
+  "Cost of revenue": 8.2,
+  "R&D": 102.7,
+  "Operating expenses": 173.1,
+  "Net loss": 176.8
+ }
 }

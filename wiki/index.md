@@ -9,6 +9,8 @@ Table of contents for this knowledge base. One line per page.
 ## Automation
 
 - `.claude/skills/income-statement-chart/SKILL.md` — the skill that turns a bare ticker into a published income statement chart. Encodes the chartable gate, the mandatory segment breakdown, and the source traps.
+- `bin/yoyfetch.py` — adds the year-ago figure for each income statement node, keeping only the lines whose basis matches what the chart draws.
+- `bin/sadata.py` — reads a statement from stockanalysis.com's SvelteKit data endpoint and hydrates devalue's flattened payload. Shared by both fetchers.
 - `bin/debtfetch.py` — builds a debt/coverage spec for every statement on the Financials page, pulling the balance sheet and cash flow column that matches the quarter the card already shows.
 - `bin/debtbars.py` — the debt/coverage grouped bar chart that sits under the Sankey on the Financials card: debt, free cash flow and cash for the quarter the card covers. Same figure-JSON pipeline, same renderer.
 - `bin/stamp.py` — versions the shared CSS and JS links in every page, so an edit under `assets/` cannot hide behind a browser's cached copy.

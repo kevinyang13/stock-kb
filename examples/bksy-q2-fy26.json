@@ -40,5 +40,14 @@
    "name": "Non-operating & tax, net",
    "value": 13.0
   }
- ]
+ ],
+ "prior": {
+  "Revenue": 22.2,
+  "Gross profit": 16.0,
+  "Cost of revenue": 6.2,
+  "R&D": 0.0,
+  "SG&A": 22.3,
+  "Operating expenses": 29.5,
+  "Net loss": 41.2
+ }
 }

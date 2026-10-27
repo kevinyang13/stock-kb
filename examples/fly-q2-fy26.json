@@ -31,5 +31,14 @@
   }
  ],
  "net_loss": 92.3,
- "other_income": 2.8
+ "other_income": 2.8,
+ "prior": {
+  "Revenue": 15.5,
+  "Gross profit": 4.0,
+  "Cost of revenue": 11.6,
+  "R&D": 45.8,
+  "SG&A": 10.8,
+  "Operating expenses": 56.6,
+  "Net loss": 80.3
+ }
 }

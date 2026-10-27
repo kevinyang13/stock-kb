@@ -93,6 +93,7 @@ def node_tips(labels, links, spec, rev, gross, cur, unit, dec):
         outflow[a] = outflow.get(a, 0.0) + v
         inflow[b] = inflow.get(b, 0.0) + v
     seg = {sg["name"]: sg for sg in spec.get("segments", [])}
+    prior = spec.get("prior") or {}
 
     # "% of gross profit" only means something for what gross profit pays for,
     # so it is offered to the nodes gross profit actually flows into. Cost of
@@ -110,9 +111,15 @@ def node_tips(labels, links, spec, rev, gross, cur, unit, dec):
     for i, name in enumerate(labels):
         val = inflow.get(i, outflow.get(i, 0.0))
         rows = [("amount", m(val))]
+        # bin/yoyfetch.py writes these, and only for lines where the source's
+        # own current quarter matches what the chart draws
+        was = prior.get(name)
+        if was:
+            rows.append(("year ago", m(was)))
+            rows.append(("year over year", pct((val / was - 1) * 100)))
         if rev and name != "Revenue":
             rows.append(("% of revenue", f"{val / rev * 100:,.1f}%"))
-        if name == "Revenue" and spec.get("revenue_yoy") is not None:
+        if was is None and name == "Revenue" and spec.get("revenue_yoy") is not None:
             rows.append(("year over year", pct(spec["revenue_yoy"])))
         if name in seg and seg[name].get("yoy") is not None:
             rows.append(("year over year", pct(seg[name]["yoy"])))
