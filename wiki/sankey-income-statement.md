@@ -327,7 +327,7 @@ the year-ago figure is kept only when the source's *current* quarter for that li
 the chart already draws, within 1%. Where it does not, the node simply gets no growth row.
 
 That rule caught every known disagreement without being told about any of them — NBIS's R&D, SG&A
-and operating expenses (the share-based compensation reclassification), and Meta's operating
+and operating expenses (a reclassification of roughly $174.6M, not yet identified), and Meta's operating
 expenses and operating income (the $9,890M charge). It also catches cases nobody had noticed, such
 as NVDA's SG&A.
 
@@ -337,6 +337,16 @@ A second rule drops a line whose **sign changed**: NBIS's "Net loss" node was a 
 Across the 66 charts, 443 nodes carry a year-ago figure. Nintendo gets none: its chart is in USD
 from the ADR, the Tokyo listing's data is in yen, and the ADR publishes no income statement at that
 endpoint — so the basis check refuses all of it, correctly.
+
+**Share-based compensation** rides on the pooled cost node — "Operating expenses" in the profit
+layout, "Costs & charges" in the loss layout — and nowhere else. The cash flow statement reports
+one company-wide figure (`sbcomp`); the income statement spreads it across cost of revenue, R&D
+and SG&A without saying how. Putting it on R&D or SG&A individually would imply an allocation that
+does not exist, so the hover carries it once, with a line saying what it spans. 60 of the 66
+charts have one; the rest report no `sbcomp`.
+
+It is worth looking at against the bar it sits on: NVDA's operating expenses are $8.4B, of which
+**$2.0B is stock comp** — just under a quarter.
 
 **Trap: two specs can write the same chart.** `bin/sankey.py` names its output from the spec's own
 `ticker` and `period`, not from the filename, so `examples/tsm-q3-fy26.json` and

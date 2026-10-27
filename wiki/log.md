@@ -817,3 +817,48 @@ matching basis exists, so it gets no growth rows at all.
 `year ago` row also carries a `year over year` row, and the blocks are still padded. Then hovered
 in the browser: `Operating profit · Q2 FY27 / amount $63.7B / year ago $28.4B / year over year
 +124% / % of revenue 66.2% / % of gross profit 88.3%`. No console errors.
+
+---
+
+## 2026-10-26 — Correction: the NBIS reclassification is not share-based compensation
+
+The entries above, and `wiki/nebius-q2-fy26.md` and `wiki/favorites-financials.md`, said the
+~$174.6M that stockanalysis.com moves out of NBIS's product development and SG&A was "almost
+certainly share-based compensation". That was asserted without checking.
+
+**Share-based compensation was $102.5M** in Q2 FY26 (`sbcomp`, stockanalysis cash flow statement;
+$26.2M in the year-ago quarter). It therefore accounts for at most 59% of the gap and is not the
+explanation on its own. What the rest is has not been established.
+
+Nothing downstream changes: the chart follows the filing either way, and the basis check in
+`bin/yoyfetch.py` excludes those lines from year-over-year on the arithmetic, not on the
+explanation. The three pages have been corrected to say the reclassification is unidentified.
+This log is append-only, so the earlier entries stand as written.
+
+---
+
+## 2026-10-26 — Share-based compensation on the hovers
+
+**What changed**:
+
+- `bin/yoyfetch.py` — also reads `sbcomp` from the cash flow statement for the matching quarter
+  and writes it to each spec as `stock_comp`.
+- `bin/sankey.py` — the pooled cost node ("Operating expenses", or "Costs & charges" in the loss
+  layout) gains a `stock comp` row and a line saying what it spans.
+- `examples/*.json`, `charts/*.json` — all 66 updated and re-rendered. 60 carry a figure; the
+  rest report no `sbcomp`.
+
+**Placed deliberately on one node, not on R&D and SG&A.** The original plan was to put it on both
+of those. That would have been wrong: the cash flow statement reports share-based compensation as
+a single company-wide number, and the income statement spreads it across cost of revenue, R&D and
+SG&A without disclosing the split. A figure on R&D would read as R&D's share of it, which is not
+something this source knows. It sits once, on the pooled node, with the note "stock comp is
+company-wide and spans cost of revenue, R&D and SG&A".
+
+Worth reading against the bar it sits on: NVDA's operating expenses are $8.4B and **$2.0B of that
+is stock comp**, just under a quarter. SPCX reports $2,363M, PLTR $265M on a much smaller base.
+
+**Verification**: all 66 re-rendered and checked programmatically — the stock comp row appears on
+exactly one node per chart, and always on the pooled one. Hovered in the browser on NVDA:
+`Operating expenses · Q2 FY27 / amount $8.4B / year ago $5.4B / year over year +56% / % of revenue
+8.7% / % of gross profit 11.7% / stock comp $2.0B`, then the two notes.

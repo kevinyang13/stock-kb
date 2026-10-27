@@ -107,7 +107,9 @@ Q1 figure was about $2,473M. The burn is accelerating, not steady.
 stockanalysis.com reports Q2 FY26 operating income of **−$1.3M**. The filing reports a loss from
 operations of **−$175.9M**. The difference is roughly $174.6M that the aggregator moves out of
 product development and SG&A — product development reads 75.1 against the filing's 191.0, and SG&A
-115.2 against 173.9 — almost certainly share-based compensation reclassified as an unusual item.
+115.2 against 173.9. **What that $174.6M is has not been established.** Share-based compensation
+was $102.5M that quarter (source: stockanalysis.com cash flow statement), so it accounts for at
+most 59% of the gap and is not the explanation on its own.
 The same site's "EBT excluding unusual items" of −$63.5M against a pretax loss of −$176.7M is the
 other half of the same adjustment.
 

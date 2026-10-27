@@ -126,7 +126,19 @@ def node_tips(labels, links, spec, rev, gross, cur, unit, dec):
         if gross and i in after_gross:
             rows.append(("% of gross profit", f"{val / gross * 100:,.1f}%"))
 
+        # Share-based compensation is reported once, company-wide, and the
+        # income statement spreads it across cost of revenue, R&D and SG&A
+        # without saying how. It therefore sits on the pooled node, never on
+        # an individual expense line, which would imply an allocation that
+        # does not exist.
+        sbc = spec.get("stock_comp")
+        if sbc and name in ("Operating expenses", "Costs & charges"):
+            rows.append(("stock comp", m(sbc)))
+
         notes = []
+        if sbc and name in ("Operating expenses", "Costs & charges"):
+            notes.append("<i>stock comp is company-wide and spans cost of "
+                         "revenue, R&D and SG&A</i>")
         if name in DERIVED:
             notes.append(f"<i>derived: {DERIVED[name]}</i>")
         note = seg[name].get("note") if name in seg else None

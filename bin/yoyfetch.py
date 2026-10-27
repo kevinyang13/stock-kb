@@ -100,6 +100,22 @@ def columns(fd, want):
     raise LookupError(f"no year-ago column for {want}")
 
 
+def stock_comp(sym, want, div, dec):
+    """Share-based compensation for the quarter. It is a company-wide figure:
+    the cash flow statement reports one number, and the income statement
+    spreads it across cost of revenue, R&D and SG&A without saying how. So it
+    is never attached to an individual expense line."""
+    try:
+        cf = financial_data(sym, "cash-flow-statement")
+        i, _ = columns(cf, want)
+    except (urllib.error.URLError, LookupError, ValueError):
+        return None
+    col = cf.get("sbcomp") or []
+    if i >= len(col) or col[i] is None:
+        return None
+    return round(abs(col[i]) / div, dec)
+
+
 def build(spec, want):
     fd = financial_data(spec["ticker"], "income-statement")
     cur, ago = columns(fd, want)
@@ -137,7 +153,9 @@ def build(spec, want):
             flipped.append(name)
             continue
         prior[name] = round(was_s / div, dec)
-    return prior, skipped, flipped
+
+    time.sleep(PAUSE)
+    return prior, skipped, flipped, stock_comp(spec["ticker"], want, div, dec)
 
 
 def main():
@@ -170,7 +188,7 @@ def main():
             continue
         want = datetime.strptime(m.group(1), "%b %d, %Y").date()
         try:
-            prior, skipped, flipped = build(spec, want)
+            prior, skipped, flipped, sbc = build(spec, want)
         except (urllib.error.URLError, LookupError, ValueError, KeyError) as e:
             print(f"  ! {t}: {e}", file=sys.stderr)
             failed += 1
@@ -179,6 +197,10 @@ def main():
                 spec["prior"] = prior
             else:
                 spec.pop("prior", None)
+            if sbc:
+                spec["stock_comp"] = sbc
+            else:
+                spec.pop("stock_comp", None)
             p.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
             ok += 1
             bits = []
@@ -187,7 +209,8 @@ def main():
             if flipped:
                 bits.append(f"changed sign: {', '.join(flipped)}")
             note = f"  (no growth row -- {'; '.join(bits)})" if bits else ""
-            print(f"{t:6} {len(prior)} line(s){note}")
+            sbc_s = f"  sbc {sbc:,.1f}" if sbc else ""
+            print(f"{t:6} {len(prior)} line(s){sbc_s}{note}")
         time.sleep(PAUSE)
     print(f"\nupdated {ok}  failed {failed}")
 

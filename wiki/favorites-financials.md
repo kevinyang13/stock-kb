@@ -56,8 +56,8 @@ This is the first case where the two sources disagree on a headline line, not ju
 NBIS joined the watchlist on 2026-10-26 and its Q2 FY26 chart was built from the **6-K exhibit
 99.1**, not the aggregator. stockanalysis.com reports operating income of **−$1.3M**; the filing
 reports a loss from operations of **−$175.9M**. The gap is roughly $174.6M the aggregator moves out
-of product development and SG&A, almost certainly share-based compensation treated as an unusual
-item. Revenue, gross profit, net loss and EPS agree on both sources.
+of product development and SG&A. What that reclassification consists of has **not** been
+established — share-based compensation was $102.5M that quarter, under 60% of the gap. Revenue, gross profit, net loss and EPS agree on both sources.
 
 That makes two names where the aggregator's operating income does not match the filing — Meta above
 and Nebius here. Both times the filing was right and the aggregator's number looked too clean.
