@@ -1,0 +1,16 @@
+{
+ "ticker": "MSFT",
+ "company": "Microsoft",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: FQ4 FY26, quarter ended Jun 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "FQ4 FY26",
+   "debt": 128813.0,
+   "fcf": 19639.0,
+   "cash": 20935.0
+  }
+ ]
+}

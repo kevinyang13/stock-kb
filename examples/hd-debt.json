@@ -1,0 +1,16 @@
+{
+ "ticker": "HD",
+ "company": "Home Depot",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q2 FY27, quarter ended Aug 2, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-08-02. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q2 FY27",
+   "debt": 63188.0,
+   "fcf": 4510.0,
+   "cash": 2085.0
+  }
+ ]
+}

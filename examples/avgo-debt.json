@@ -1,0 +1,16 @@
+{
+ "ticker": "AVGO",
+ "company": "Broadcom",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Aug 2, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-08-02. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q3 FY26",
+   "debt": 59419.0,
+   "fcf": 13665.0,
+   "cash": 23975.0
+  }
+ ]
+}

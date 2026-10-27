@@ -1,0 +1,16 @@
+{
+ "ticker": "MU",
+ "company": "Micron Technology",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: FQ4 FY26, quarter ended Sep 3, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-03. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "FQ4 FY26",
+   "debt": 5179.0,
+   "fcf": 32863.0,
+   "cash": 38364.0
+  }
+ ]
+}

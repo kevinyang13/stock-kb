@@ -312,6 +312,32 @@ name or a hovertemplate. Keep titles plain.
 Free cash flow is usually negative for these names, so the chart has a zero line and bars below it.
 Bar labels switch to millions below $1bn, because a $49.5M bar labelled `$0.0B` says nothing.
 
+**Every statement carries one.** `bin/debtfetch.py` builds the specs in bulk: for each item in
+`financials.json` it reads the quarterly balance sheet and cash flow statement from
+stockanalysis.com's SvelteKit data endpoint and takes the column whose period end matches the one
+the card already shows, so the bars and the income statement always describe the same quarter.
+
+```bash
+python3 bin/debtfetch.py              # anything without a spec yet
+python3 bin/debtfetch.py --all        # refetch everything
+python3 bin/debtfetch.py NBIS CRWV    # just these
+```
+
+The endpoint is `/<path>/financials/<statement>/__data.json?p=quarterly`, which returns SvelteKit's
+flattened payload — a `data` array where every integer is an index back into the same array, so it
+has to be hydrated before use. The three fields are `debt`, `cashneq` and `fcf`; where `fcf` is
+missing it is derived as `ncfo + capex` (capex is already signed negative).
+
+Nothing is guessed. A ticker whose column cannot be matched within 7 days, or whose lines are
+missing, is reported and skipped. A null total debt is only read as zero when every debt component
+is also null — a missing total with components present is a gap, not a debt-free balance sheet.
+
+**Currency comes from the card's own KPI values**, not from the sankey spec. Reading it from the
+spec picked up a stale USD file for TSM, which has both a NT$ spec and a superseded USD one. The
+chart picks its axis unit from the largest bar — M, B or T — so TSMC reads in NT$ trillions and
+Arqit in single-digit millions, while each bar label still steps down to whatever unit keeps it
+meaningful.
+
 **The two charts share one row.** `.fin-row` is a flex row: the sankey takes `flex:1 1 620px`, the
 debt bars `flex:0 1 330px`. Below roughly 950px of card width the row wraps and the two stack, so
 narrow screens are unaffected. The debt chart's design width of 330px is deliberately close to the

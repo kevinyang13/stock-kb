@@ -1,0 +1,16 @@
+{
+ "ticker": "INTC",
+ "company": "Intel",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 27, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-27. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q2 FY26",
+   "debt": 50537.0,
+   "fcf": 4450.0,
+   "cash": 12874.0
+  }
+ ]
+}

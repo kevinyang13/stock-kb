@@ -1,0 +1,16 @@
+{
+ "ticker": "ASTS",
+ "company": "AST SpaceMobile",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q2 FY26",
+   "debt": 2993.7,
+   "fcf": -694.8,
+   "cash": 2288.3
+  }
+ ]
+}

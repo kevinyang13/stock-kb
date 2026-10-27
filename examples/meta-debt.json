@@ -1,0 +1,16 @@
+{
+ "ticker": "META",
+ "company": "Meta Platforms",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q3 FY26",
+   "debt": 114842.0,
+   "fcf": -1157.0,
+   "cash": 11222.0
+  }
+ ]
+}

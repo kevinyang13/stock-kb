@@ -1,0 +1,16 @@
+{
+ "ticker": "ORCL",
+ "company": "Oracle",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q1 FY27, quarter ended Aug 31, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-08-31. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q1 FY27",
+   "debt": 169143.0,
+   "fcf": -5396.0,
+   "cash": 36369.0
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "ticker": "CLSK",
+ "company": "CleanSpark",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Jun 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q3 FY26",
+   "debt": 1786.9,
+   "fcf": -136.0,
+   "cash": 202.6
+  }
+ ]
+}

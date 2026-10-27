@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T16:32:38-07:00",
+ "generated": "2026-10-26T16:58:15-07:00",
  "generatedLabel": "Oct 26, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
@@ -38,8 +38,10 @@
     "Segments: Data Center $89.0B, Edge Computing $7.2B",
     "Revenue more than doubled year over year and operating margin is 66%.",
     "Operating expenses are $8.4B — under 9% of revenue — so almost all gross profit reaches operating profit.",
-    "$7.8B of interest and other income sits above the tax line, on top of the operating result."
-   ]
+    "$7.8B of interest and other income sits above the tax line, on top of the operating result.",
+    "Debt and coverage, Q2 FY27: $38.9B of debt against $22.4B of cash and $21.4B of free cash flow for the quarter. Net debt $16.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "NVDA-debt"
   },
   {
    "t": "QCOM",
@@ -76,8 +78,10 @@
     "Segments: QCT Handsets $5,086M, QCT IoT $1,830M, QCT Automotive $1,588M, QTL licensing $1,278M, QSI & other $165M",
     "The only favorite with revenue down year over year.",
     "R&D is $2,607M, 26% of revenue — more than three times SG&A.",
-    "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line."
-   ]
+    "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line.",
+    "Debt and coverage, FQ3 FY26: $15.3B of debt against $4.5B of cash and $495.0M of free cash flow for the quarter. Net debt $10.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "QCOM-debt"
   },
   {
    "t": "GOOG",
@@ -114,8 +118,10 @@
     "Segments: Google Search & other $63.3B, Google Cloud $24.8B, Subscriptions, platforms & devices $12.9B, YouTube ads $11.1B, Google Network $7.3B, Other Bets $0.4B",
     "Read the net margin carefully. 94% is not an operating result — a $99.0B gain on sale of investments sits in the interest and other line.",
     "Operating profit was $40.8B on a 34% margin. That is the number comparable to the other statements here.",
-    "R&D of $18.2B is 15% of revenue."
-   ]
+    "R&D of $18.2B is 15% of revenue.",
+    "Debt and coverage, Q2 FY26: $120.8B of debt against $55.9B of cash and -$5.9B of free cash flow for the quarter. Net debt $64.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "GOOG-debt"
   },
   {
    "t": "MU",
@@ -153,8 +159,10 @@
     "Core Data Center is the swing factor: $18.0B, up 1,041% Y/Y, now a third of revenue.",
     "Cost of revenue is only $7.2B of $54.2B — an 87% gross margin, extraordinary for a memory maker.",
     "The only chart here with a real segment split, taken from the 8-K's business unit table.",
-    "Full fiscal year 2026: $133.19B revenue and $84.97B net income."
-   ]
+    "Full fiscal year 2026: $133.19B revenue and $84.97B net income.",
+    "Debt and coverage, FQ4 FY26: $5.2B of debt against $38.4B of cash and $32.9B of free cash flow for the quarter. Net debt -$33.2B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "MU-debt"
   },
   {
    "t": "SNDK",
@@ -191,8 +199,10 @@
     "Segments: Edge $5,432M, Datacenter $2,977M, Consumer $556M",
     "The same memory cycle as Micron, in an even more extreme form: cost of revenue is only $1,383M against $8,965M of revenue.",
     "Operating expenses total $547M — 6% of revenue.",
-    "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one."
-   ]
+    "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one.",
+    "Debt and coverage, FQ4 FY26: $201.0M of debt against $4.8B of cash and $7.1B of free cash flow for the quarter. Net debt -$4.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "SNDK-debt"
   },
   {
    "t": "TSM",
@@ -229,8 +239,10 @@
     "Segments: High Performance Computing $31.8B, Smartphones $9.8B, Internet of Things $1.9B, Automotive $1.9B, Digital Consumer Electronics $0.4B, Others $0.9B",
     "Reported in New Taiwan dollars, so the absolute figures are not comparable with the USD statements here. The margins are.",
     "The source does not break operating expenses into R&D and SG&A, so they appear as a single line.",
-    "This replaces the earlier entry, which was transcribed from the App Economy Insights reference image rather than filed figures."
-   ]
+    "This replaces the earlier entry, which was transcribed from the App Economy Insights reference image rather than filed figures.",
+    "Debt and coverage, Q3 FY26: NT$818.4B of debt against NT$3.6T of cash and NT$476.6B of free cash flow for the quarter. Net debt -NT$2.8T. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "TSM-debt"
   },
   {
    "t": "TSLA",
@@ -267,8 +279,10 @@
     "Segments: Automotive $20,600M, Services & other $4,610M, Energy generation & storage $2,880M",
     "The thinnest margins of any favorite: cost of revenue is $22,552M of $28,046M.",
     "Revenue was essentially flat year over year (-0.2%).",
-    "Operating profit of $718M is smaller than Micron's quarterly tax bill."
-   ]
+    "Operating profit of $718M is smaller than Micron's quarterly tax bill.",
+    "Debt and coverage, Q3 FY26: $16.4B of debt against $17.9B of cash and $1.5B of free cash flow for the quarter. Net debt -$1.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "TSLA-debt"
   },
   {
    "t": "INTU",
@@ -306,8 +320,10 @@
     "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M — 61% of revenue.",
     "Selling, marketing and G&A alone is $1,655M, 38% of revenue.",
     "Net profit is less than half of operating profit: $228M of net interest and other expense sits below the operating line, then $177M of tax.",
-    "Seasonality matters for Intuit — the fiscal fourth quarter is not its tax-season peak."
-   ]
+    "Seasonality matters for Intuit — the fiscal fourth quarter is not its tax-season peak.",
+    "Debt and coverage, FQ4 FY26: $8.4B of debt against $4.7B of cash and $1.3B of free cash flow for the quarter. Net debt $3.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "INTU-debt"
   },
   {
    "t": "SMCI",
@@ -344,8 +360,10 @@
     "No segment split: Supermicro's Q4 release does not break revenue into server/storage systems versus subsystems and accessories, so the chart shows a single revenue bar.",
     "The lowest gross margin of any favorite at 17% — this is a systems assembler, not a chip designer.",
     "Operating expenses are only $455M, 4% of revenue, so most of the thin gross profit survives to operating profit.",
-    "Revenue nearly doubled year over year."
-   ]
+    "Revenue nearly doubled year over year.",
+    "Debt and coverage, FQ4 FY26: $9.3B of debt against $7.5B of cash and $718.7M of free cash flow for the quarter. Net debt $1.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "SMCI-debt"
   },
   {
    "t": "IONQ",
@@ -383,8 +401,10 @@
     "Uses the loss layout: revenue plus the net loss fund every cost line.",
     "The net loss is roughly 23 times revenue. R&D alone is $158.1M, 197% of revenue.",
     "Most of the loss is not operating. The operating loss is $326.7M; the rest comes from a $1.5B non-operating charge, which the source attributes to the other non-operating line.",
-    "The tax line was a small benefit, so it is folded into the non-operating line rather than drawn as a cost."
-   ]
+    "The tax line was a small benefit, so it is folded into the non-operating line rather than drawn as a cost.",
+    "Debt and coverage, Q2 FY26: $54.5M of debt against $1.2B of cash and -$114.0M of free cash flow for the quarter. Net debt -$1.2B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "IONQ-debt"
   },
   {
    "t": "MSFT",
@@ -421,8 +441,10 @@
     "Segments: Intelligent Cloud $39.3B, Productivity & Business Processes $37.8B, More Personal Computing $12.9B",
     "R&D ($10.0B) and SG&A ($9.9B) are almost exactly equal.",
     "A 45% operating margin at $90B of quarterly revenue.",
-    "The most balanced statement of the group — no single line dominates."
-   ]
+    "The most balanced statement of the group — no single line dominates.",
+    "Debt and coverage, FQ4 FY26: $128.8B of debt against $20.9B of cash and $19.6B of free cash flow for the quarter. Net debt $107.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "MSFT-debt"
   },
   {
    "t": "SPCX",
@@ -459,8 +481,10 @@
     "Segments: Super Intelligence $7,600M, Connectivity (Starlink) $5,250M, Space $1,770M",
     "Net profit exceeds pretax income because the tax line is a $390M benefit, not an expense — the only statement here with that shape, and the reason the chart shows a green Tax benefit flowing into net profit.",
     "R&D is $3,574M, 25% of revenue. Capex was roughly $19.6B in the quarter, mostly AI infrastructure — more than revenue, and not visible on an income statement.",
-    "The App Economy Insights reference chart for this quarter shows operating profit of $2.8B and R&D of $4.6B. The filed figures used here are $4,019M and $3,574M. The segment split matches between the two."
-   ]
+    "The App Economy Insights reference chart for this quarter shows operating profit of $2.8B and R&D of $4.6B. The filed figures used here are $4,019M and $3,574M. The segment split matches between the two.",
+    "Debt and coverage, Q3 FY26: $39.2B of debt against $51.3B of cash and -$10.0B of free cash flow for the quarter. Net debt -$12.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "SPCX-debt"
   },
   {
    "t": "META",
@@ -497,8 +521,10 @@
     "Segments: Advertising $63,061M, Other (Family of Apps) $1,097M, Reality Labs $443M",
     "Reality Labs earned $443M and lost $4,129M at the operating line. Family of Apps made $17,117M, so Reality Labs consumes about a quarter of it.",
     "R&D is $20,054M — 31% of revenue, and more than Meta's entire operating profit.",
-    "Operating profit here is the filed $12,988M. stockanalysis.com shows $22,878M because it places a $9,890M operating charge below the line; this chart follows the 8-K, where revenue less all costs gives $12,988M."
-   ]
+    "Operating profit here is the filed $12,988M. stockanalysis.com shows $22,878M because it places a $9,890M operating charge below the line; this chart follows the 8-K, where revenue less all costs gives $12,988M.",
+    "Debt and coverage, Q3 FY26: $114.8B of debt against $11.2B of cash and -$1.2B of free cash flow for the quarter. Net debt $103.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "META-debt"
   },
   {
    "t": "CRWV",
@@ -578,7 +604,8 @@
     "In the filed currency: revenue ¥517.8B, gross ¥281.4B, operating ¥142.6B, net ¥147.4B.",
     "Revenue fell 10% but operating profit rose about 150%. Switch 2 shipped 3.82M units, down 34% against the launch quarter a year earlier, while the IP business more than doubled on the Super Mario Galaxy film.",
     "Net profit exceeds operating profit: $405M of non-operating income sits below the line, which for Nintendo is mostly FX and interest on its cash. Cost of sales also absorbed roughly $300M of IEEPA tariff refunds.",
-    "Nintendo does not break R&D out of SG&A, so operating expenses appear as a single line."
+    "Nintendo does not break R&D out of SG&A, so operating expenses appear as a single line.",
+    "No debt and coverage chart: Nintendo publishes no quarterly cash flow statement, so there is no free cash flow figure for this quarter to set the balance sheet against."
    ]
   },
   {
@@ -614,8 +641,10 @@
    ],
    "notes": [
     "Segments: iPhone $54.2B, Services $30.7B, Mac $10.3B, Wearables, Home & Accessories $7.9B, iPad $6.2B",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, FQ3 FY26: $84.3B of debt against $39.5B of cash and $31.9B of free cash flow for the quarter. Net debt $44.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "AAPL-debt"
   },
   {
    "t": "ADBE",
@@ -650,8 +679,10 @@
    ],
    "notes": [
     "Segments: Subscription $6,582M, Services & other $111M, Product $67M",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q3 FY26: $6.8B of debt against $4.4B of cash and $2.4B of free cash flow for the quarter. Net debt $2.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "ADBE-debt"
   },
   {
    "t": "AMD",
@@ -686,8 +717,10 @@
    ],
    "notes": [
     "Segments: Data Center $6,700M, Client $3,100M, Embedded $977M, Gaming $779M",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $4.3B of debt against $5.1B of cash and $1.6B of free cash flow for the quarter. Net debt -$810.0M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "AMD-debt"
   },
   {
    "t": "AMZN",
@@ -722,8 +755,10 @@
    ],
    "notes": [
     "Segments: Online stores $70.4B, Third-party seller services $46.8B, AWS $42.2B, Advertising $19.8B, Subscription services $13.7B, Physical stores & other $7.7B",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $251.6B of debt against $78.2B of cash and -$8.8B of free cash flow for the quarter. Net debt $173.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "AMZN-debt"
   },
   {
    "t": "ARQQ",
@@ -754,8 +789,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $0M + $33M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, H1 FY26: $2.2M of debt against $28.9M of cash and -$25.7M of free cash flow for the half year. Net debt -$26.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that half year's flow (source: stockanalysis.com)."
+   ],
+   "debt": "ARQQ-debt"
   },
   {
    "t": "ASML",
@@ -791,8 +828,10 @@
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Reported in €. Margins compare with the other statements here; the absolute figures do not."
-   ]
+    "Reported in €. Margins compare with the other statements here; the absolute figures do not.",
+    "Debt and coverage, Q3 FY26: €2.0B of debt against €8.0B of cash and €11.4B of free cash flow for the quarter. Net debt -€6.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "ASML-debt"
   },
   {
    "t": "ASTS",
@@ -823,8 +862,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $8M + $231M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $3.0B of debt against $2.3B of cash and -$694.8M of free cash flow for the quarter. Net debt $705.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "ASTS-debt"
   },
   {
    "t": "AVGO",
@@ -859,8 +900,10 @@
    ],
    "notes": [
     "Segments: Semiconductor solutions $20.8B, Infrastructure software $8.8B",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q3 FY26: $59.4B of debt against $24.0B of cash and $13.7B of free cash flow for the quarter. Net debt $35.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "AVGO-debt"
   },
   {
    "t": "BA",
@@ -891,8 +934,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2.4B + $0.4B balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $48.4B of debt against $7.2B of cash and $631.0M of free cash flow for the quarter. Net debt $41.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "BA-debt"
   },
   {
    "t": "BKSY",
@@ -923,8 +968,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $21M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $221.3M of debt against $36.9M of cash and -$19.0M of free cash flow for the quarter. Net debt $184.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "BKSY-debt"
   },
   {
    "t": "CLSK",
@@ -955,8 +1002,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $53M + $240M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q3 FY26: $1.8B of debt against $202.6M of cash and -$136.0M of free cash flow for the quarter. Net debt $1.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "CLSK-debt"
   },
   {
    "t": "COHR",
@@ -991,8 +1040,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, FQ4 FY26: $3.6B of debt against $1.2B of cash and -$486.2M of free cash flow for the quarter. Net debt $2.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "COHR-debt"
   },
   {
    "t": "COIN",
@@ -1023,8 +1074,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $965M + $359M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $6.7B of debt against $8.6B of cash and $197.3M of free cash flow for the quarter. Net debt -$1.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "COIN-debt"
   },
   {
    "t": "CRM",
@@ -1059,8 +1112,10 @@
    ],
    "notes": [
     "Segments: Subscription & support $10,800M, Professional services & other $545M",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY27: $42.4B of debt against $8.3B of cash and $1.1B of free cash flow for the quarter. Net debt $34.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "CRM-debt"
   },
   {
    "t": "CSCO",
@@ -1095,8 +1150,10 @@
    ],
    "notes": [
     "Segments: Networking $9,791M, Services $3,793M, Security $2,226M, Collaboration $1,167M, Observability $275M",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, FQ4 FY26: $31.2B of debt against $7.2B of cash and $5.0B of free cash flow for the quarter. Net debt $24.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "CSCO-debt"
   },
   {
    "t": "DDOG",
@@ -1131,8 +1188,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $1.3B of debt against $435.0M of cash and $306.0M of free cash flow for the quarter. Net debt $842.8M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "DDOG-debt"
   },
   {
    "t": "DELL",
@@ -1167,8 +1226,10 @@
    ],
    "notes": [
     "Segments: Infrastructure Solutions Group $31.8B, Client Solutions Group $15.0B, Other $0.2B",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY27: $35.3B of debt against $11.6B of cash and $986.0M of free cash flow for the quarter. Net debt $23.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "DELL-debt"
   },
   {
    "t": "FLY",
@@ -1199,8 +1260,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $92M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $53.4M of debt against $459.8M of cash and -$106.3M of free cash flow for the quarter. Net debt -$406.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "FLY-debt"
   },
   {
    "t": "GE",
@@ -1235,8 +1298,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q3 FY26: $20.6B of debt against $8.3B of cash and $1.8B of free cash flow for the quarter. Net debt $12.3B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "GE-debt"
   },
   {
    "t": "HD",
@@ -1271,8 +1336,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY27: $63.2B of debt against $2.1B of cash and $4.5B of free cash flow for the quarter. Net debt $61.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "HD-debt"
   },
   {
    "t": "HIVE",
@@ -1303,8 +1370,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $143M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q1 FY27: $374.3M of debt against $208.0M of cash and -$26.9M of free cash flow for the quarter. Net debt $166.3M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "HIVE-debt"
   },
   {
    "t": "HUT",
@@ -1335,8 +1404,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $48M + $150M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $7.7B of debt against $233.6M of cash and -$585.2M of free cash flow for the quarter. Net debt $7.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "HUT-debt"
   },
   {
    "t": "IBM",
@@ -1371,8 +1442,10 @@
    ],
    "notes": [
     "Segments: Software $7,800M, Consulting $5,300M, Infrastructure $3,700M, Financing & other $303M",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q3 FY26: $67.1B of debt against $9.2B of cash and $3.7B of free cash flow for the quarter. Net debt $57.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "IBM-debt"
   },
   {
    "t": "INFQ",
@@ -1403,8 +1476,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $25M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $14.5M of debt against $59.3M of cash and $11.8M of free cash flow for the quarter. Net debt -$44.8M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "INFQ-debt"
   },
   {
    "t": "INTC",
@@ -1435,8 +1510,10 @@
    "notes": [
     "Segments: Client Computing & Physical AI $8,877M, Data Center & AI $6,262M, Foundry (external) & other $989M",
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $6,509M + $11,033M balances against the charges on the right.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $50.5B of debt against $12.9B of cash and $4.5B of free cash flow for the quarter. Net debt $37.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "INTC-debt"
   },
   {
    "t": "LUNR",
@@ -1467,8 +1544,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $36M + $46M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $481.4M of debt against $367.4M of cash and -$81.2M of free cash flow for the quarter. Net debt $114.0M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "LUNR-debt"
   },
   {
    "t": "MARA",
@@ -1499,8 +1578,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $57M + $610M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $2.5B of debt against $421.3M of cash and -$245.4M of free cash flow for the quarter. Net debt $2.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "MARA-debt"
   },
   {
    "t": "MDA",
@@ -1536,8 +1617,10 @@
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Reported in C$. Margins compare with the other statements here; the absolute figures do not."
-   ]
+    "Reported in C$. Margins compare with the other statements here; the absolute figures do not.",
+    "Debt and coverage, Q2 FY26: C$378.3M of debt against C$397.8M of cash and -C$145.5M of free cash flow for the quarter. Net debt -C$19.5M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "MDA-debt"
   },
   {
    "t": "MRVL",
@@ -1572,8 +1655,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY27: $5.3B of debt against $3.9B of cash and $478.8M of free cash flow for the quarter. Net debt $1.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "MRVL-debt"
   },
   {
    "t": "MSTR",
@@ -1604,8 +1689,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $82M + $8,220M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $6.8B of debt against $1.7B of cash and -$5.9M of free cash flow for the quarter. Net debt $5.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "MSTR-debt"
   },
   {
    "t": "NET",
@@ -1636,8 +1723,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $500M + $170M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $3.5B of debt against $1.7B of cash and $67.6M of free cash flow for the quarter. Net debt $1.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "NET-debt"
   },
   {
    "t": "NFLX",
@@ -1672,8 +1761,10 @@
    ],
    "notes": [
     "Segments: UCAN $5,628M, EMEA $4,107M, LATAM $1,603M, APAC $1,537M",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q3 FY26: $17.5B of debt against $8.2B of cash and $2.9B of free cash flow for the quarter. Net debt $9.3B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "NFLX-debt"
   },
   {
    "t": "NOW",
@@ -1708,8 +1799,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $8.5B of debt against $2.5B of cash and $473.0M of free cash flow for the quarter. Net debt $6.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "NOW-debt"
   },
   {
    "t": "NU",
@@ -1744,8 +1837,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $5.9B of debt against $10.5B of cash and -$2.9B of free cash flow for the quarter. Net debt -$4.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "NU-debt"
   },
   {
    "t": "ORCL",
@@ -1780,8 +1875,10 @@
    ],
    "notes": [
     "Segments: Cloud infrastructure (IaaS) $7,400M, License & support $5,500M, Cloud applications (SaaS) $4,200M, Services $1,400M, Hardware $800M, Other $45M",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q1 FY27: $169.1B of debt against $36.4B of cash and -$5.4B of free cash flow for the quarter. Net debt $132.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "ORCL-debt"
   },
   {
    "t": "OUST",
@@ -1812,8 +1909,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $21M + $18M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $16.4M of debt against $91.8M of cash and -$15.4M of free cash flow for the quarter. Net debt -$75.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "OUST-debt"
   },
   {
    "t": "PHM",
@@ -1848,8 +1947,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q3 FY26: $2.4B of debt against $1.4B of cash and $437.2M of free cash flow for the quarter. Net debt $1.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "PHM-debt"
   },
   {
    "t": "PL",
@@ -1880,8 +1981,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $66M + $9M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY27: $498.6M of debt against $415.1M of cash and $25.6M of free cash flow for the quarter. Net debt $83.5M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "PL-debt"
   },
   {
    "t": "PLTR",
@@ -1916,8 +2019,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $211.4M of debt against $2.0B of cash and $1.2B of free cash flow for the quarter. Net debt -$1.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "PLTR-debt"
   },
   {
    "t": "QBTS",
@@ -1948,8 +2053,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $48M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $48.1M of debt against $296.6M of cash and -$32.9M of free cash flow for the quarter. Net debt -$248.5M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "QBTS-debt"
   },
   {
    "t": "RDW",
@@ -1980,8 +2087,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $33M + $41M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $90.3M of debt against $557.0M of cash and -$33.5M of free cash flow for the quarter. Net debt -$466.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "RDW-debt"
   },
   {
    "t": "RGTI",
@@ -2012,8 +2121,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $53M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $7.7M of debt against $27.8M of cash and -$27.8M of free cash flow for the quarter. Net debt -$20.1M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "RGTI-debt"
   },
   {
    "t": "RIOT",
@@ -2044,8 +2155,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $41M + $237M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $877.8M of debt against $471.4M of cash and -$176.1M of free cash flow for the quarter. Net debt $406.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "RIOT-debt"
   },
   {
    "t": "RKLB",
@@ -2076,8 +2189,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $85M + $49M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $133.7M of debt against $2.1B of cash and -$110.1M of free cash flow for the quarter. Net debt -$2.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "RKLB-debt"
   },
   {
    "t": "SKHY",
@@ -2113,8 +2228,10 @@
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Reported in ₩. Margins compare with the other statements here; the absolute figures do not."
-   ]
+    "Reported in ₩. Margins compare with the other statements here; the absolute figures do not.",
+    "Debt and coverage, Q2 FY26: ₩21.1T of debt against ₩26.8T of cash and ₩54.7T of free cash flow for the quarter. Net debt -₩5.7T. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "SKHY-debt"
   },
   {
    "t": "SNOW",
@@ -2145,8 +2262,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $1,037M + $192M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY27: $2.8B of debt against $1.7B of cash and $83.8M of free cash flow for the quarter. Net debt $1.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "SNOW-debt"
   },
   {
    "t": "T",
@@ -2181,8 +2300,10 @@
    ],
    "notes": [
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q3 FY26: $180.6B of debt against $10.8B of cash and $5.6B of free cash flow for the quarter. Net debt $169.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "T-debt"
   },
   {
    "t": "VOYG",
@@ -2213,8 +2334,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $4M + $46M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $491.1M of debt against $373.4M of cash and -$79.9M of free cash flow for the quarter. Net debt $117.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "VOYG-debt"
   },
   {
    "t": "VZ",
@@ -2249,8 +2372,10 @@
    ],
    "notes": [
     "Segments: Consumer $26.2B, Business & other $8.1B",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $193.6B of debt against $1.8B of cash and $6.4B of free cash flow for the quarter. Net debt $191.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "VZ-debt"
   },
   {
    "t": "XNDU",
@@ -2281,8 +2406,10 @@
    "notes": [
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $1M + $42M balances against the charges on the right.",
     "Single revenue bar — no segment split was pulled for this name.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit."
-   ]
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, Q2 FY26: $59.1M of debt against $312.8M of cash and -$29.7M of free cash flow for the quarter. Net debt -$253.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com)."
+   ],
+   "debt": "XNDU-debt"
   },
   {
    "t": "NBIS",

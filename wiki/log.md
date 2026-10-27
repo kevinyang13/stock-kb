@@ -588,3 +588,72 @@ same top, no page overflow. Rendered charts 918x508 and 328x517, so the two heig
 0.74, so its 12px sub-lines render near 6.5px. That is above the 0.42 floor `assets/sankey.js`
 enforces, but it is small. The zoom controls and the "open as an image" link both still work and
 are the way to read it properly.
+
+---
+
+## 2026-10-26 — Debt and coverage chart on every statement
+
+**Source**: stockanalysis.com quarterly balance sheet and cash flow statements, read 2026-10-26
+through the site's own data endpoint rather than the rendered pages.
+
+**What changed**:
+
+- `bin/debtfetch.py` — new. Builds a debt/coverage spec for every item in `financials.json`,
+  taking the balance sheet and cash flow column whose period end matches the quarter the card
+  already shows.
+- `examples/*-debt.json` and `charts/*-debt.json` — **65 specs and 65 figures**.
+- `financials.json` — a `"debt"` key and a coverage note on all 65.
+- `bin/debtbars.py` — now currency-aware, and picks its axis unit (M / B / T) from the largest bar.
+- `wiki/sankey-income-statement.md`, `wiki/index.md` — the bulk pipeline documented.
+
+**How the data is read**: stockanalysis.com has no financials API — every endpoint shape I tried
+returned `{"status":404}`. The pages are SvelteKit, so the data is at
+`/<path>/financials/<statement>/__data.json?p=quarterly`. That returns devalue's flattened format:
+a `data` array in which every integer is an index back into the same array, so it needs hydrating
+before anything can be read out of it. Once hydrated, `financialData` holds every line as a list
+parallel to `datekey`. The fields used are `debt`, `cashneq` and `fcf`, with `ncfo + capex` as the
+fallback when `fcf` is absent.
+
+This beat fetching 132 rendered pages: it is one request per statement, returns exact unrounded
+figures, and cannot misread a table.
+
+**Verification**: the extractor was checked against figures obtained independently. NBIS and CRWV
+matched the numbers gathered by hand earlier in the day to the dollar. GOOG's Q2 FY26 free cash
+flow (−$5,855M, from $39,069M operating less $44,924M capex) and SNDK's FQ4 FY26 (+$7,083M) were
+re-fetched from the rendered pages and both matched exactly.
+
+Then every card was driven in the browser: all 66 chips clicked, the right card shown each time,
+a debt chart present on exactly the 65 that carry the key, none on the one that does not, and no
+console errors. Currency and unit selection spot-checked across the five currencies —
+`NT$818.4B / NT$476.6B / NT$3.6T` for TSM, `₩21.1T / ₩54.7T / ₩26.8T` for SKHY, `€2.0B / €11.4B /
+€8.0B` for ASML, `C$378M / -C$146M / C$398M` for MDA, and `$2.2M / -$25.7M / $28.9M` for ARQQ.
+
+**One ticker has no chart: Nintendo (7974).** Its quarterly cash flow statement on stockanalysis
+carries three fields — `datekey`, `fiscalYear`, `fiscalQuarter` — and no cash flow lines at all,
+because Japanese filers report cash flow semi-annually rather than quarterly. There is no free cash
+flow figure for the quarter to set the balance sheet against, and using the half-year or annual
+figure would describe a different period from the income statement beside it. The card carries a
+note saying so instead.
+
+**Two verification traps, both mine rather than the page's**:
+
+- The first sweep reported a debt chart on all 66 cards including Nintendo. The chip list is
+  rebuilt by `renderFin()` on every render, so the node references captured at the start went
+  stale after the first click and every later click did nothing — the card sat on META while the
+  loop believed it was advancing. Caught by also recording the ticker the card was actually
+  showing, which is worth doing in any sweep like this. Re-querying the chips each iteration gave
+  the real result.
+- `currency_of` first read the filed currency from the sankey spec, which gave TSM "$". There are
+  two TSM specs — `tsm-q3-fy26.json` in USD and `tsm-q3-fy26-filed.json` in NT$ — and the
+  published chart uses the filed one. It now reads the currency from the card's own KPI values,
+  which cannot go stale relative to what the card displays.
+
+**What the charts show, across the book**: free cash flow is negative for the whole neocloud and
+pre-revenue end — CRWV −$5.7B, NBIS −$3.4B, ASTS −$695M, HUT −$585M — and also, for one quarter,
+for three of the largest names, where capex has overtaken operating cash flow: GOOG −$5.9B, AMZN
+−$8.8B, ORCL −$5.4B, SPCX −$10.0B. Against those, MU generated $32.9B of free cash flow in a single
+quarter and holds $38.4B of cash against $5.2B of debt.
+
+**Not done**: no PNG fallbacks for these. The page renders them live and `drawDebt` has no raster
+path, so the two debt PNGs copied into `assets/financials/` earlier were removed rather than left
+unreferenced.

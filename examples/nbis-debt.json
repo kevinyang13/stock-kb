@@ -1,10 +1,16 @@
 {
  "ticker": "NBIS",
  "company": "Nebius Group",
- "unit": "millions USD",
+ "currency": "$",
+ "unit": "millions",
  "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "Debt and cash from the Jun 30, 2026 balance sheet; free cash flow is the quarter's operating cash flow less capital expenditure (stockanalysis.com quarterly statements). Q2 capex of $5,657M reconciles with the 6-K's first-half figure of $8,130.3M.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
-  {"label": "Q2 FY26", "debt": 10195, "fcf": -3411, "cash": 8042}
+  {
+   "label": "Q2 FY26",
+   "debt": 10195.3,
+   "fcf": -3411.3,
+   "cash": 8042.1
+  }
  ]
 }

@@ -1,0 +1,16 @@
+{
+ "ticker": "ARQQ",
+ "company": "Arqit Quantum",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The half year the Financials card covers: H1 FY26, half year ended Mar 31, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-03-31. Debt and cash are balance sheet stocks at the period end; free cash flow is that half year's flow.",
+ "periods": [
+  {
+   "label": "H1 FY26",
+   "debt": 2.2,
+   "fcf": -25.7,
+   "cash": 28.9
+  }
+ ]
+}

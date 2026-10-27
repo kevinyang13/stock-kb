@@ -1,0 +1,16 @@
+{
+ "ticker": "NVDA",
+ "company": "NVIDIA",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q2 FY27, quarter ended Jul 26, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-07-26. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q2 FY27",
+   "debt": 38860.0,
+   "fcf": 21400.0,
+   "cash": 22443.0
+  }
+ ]
+}

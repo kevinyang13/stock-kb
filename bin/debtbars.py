@@ -29,20 +29,37 @@ INK = "#12312c"
 DESIGN = (330, 520)
 
 
-def money(m):
-    """A bar label, in whatever unit keeps it meaningful."""
+# Spec figures are in millions of the filed currency.
+TIERS = [(1e6, "T"), (1e3, "B"), (0, "M")]
+
+
+def unit_for(vals):
+    """One unit for the axis, taken from the largest bar."""
+    top = max(abs(v) for v in vals) if vals else 0
+    for cut, u in TIERS:
+        if top >= cut:
+            return u, (cut or 1.0)
+    return "M", 1.0
+
+
+def money(m, cur="$"):
+    """A bar label, in whatever unit keeps it meaningful. A $49.5M bar in a
+    chart scaled to billions must not read "$0.0B"."""
     sign = "-" if m < 0 else ""
     a = abs(m)
-    if a >= 1000:
-        return f"{sign}${a / 1000:,.1f}B"
-    if a >= 100:
-        return f"{sign}${a:,.0f}M"
-    return f"{sign}${a:,.1f}M"
+    for cut, u in TIERS:
+        if a >= cut:
+            v = a / cut if cut else a
+            return f"{sign}{cur}{v:,.1f}{u}" if (cut or a < 100) \
+                else f"{sign}{cur}{v:,.0f}{u}"
+    return f"{sign}{cur}{a:,.1f}M"
 
 
 def build(spec):
     periods = spec["periods"]
     labels = [p["label"] for p in periods]
+    cur = spec.get("currency", "$")
+    unit, div = unit_for([p[k] for p in periods for k, _, _ in SERIES])
     fig = go.Figure()
 
     for key, name, color in SERIES:
@@ -50,9 +67,9 @@ def build(spec):
         fig.add_bar(
             name=name,
             x=labels,
-            y=[v / 1000 for v in vals],          # the axis is in billions
+            y=[v / div for v in vals],
             marker=dict(color=color, line=dict(width=0)),
-            text=[money(v) for v in vals],
+            text=[money(v, cur) for v in vals],
             # negative bars read better with the figure on the outside, which
             # is what "auto" gets wrong when a bar is tall and the label short
             textposition="outside",
@@ -60,11 +77,11 @@ def build(spec):
             cliponaxis=False,
             customdata=vals,
             hovertemplate="<b>%{x} &middot; " + name + "</b><br>"
-                          "$%{customdata:,.1f}M<extra></extra>",
+                          + cur + "%{customdata:,.1f}M<extra></extra>",
         )
 
-    lo = min(0.0, min(p["fcf"] for p in periods) / 1000)
-    hi = max(max(p[k] for k, _, _ in SERIES) for p in periods) / 1000
+    lo = min(0.0, min(p["fcf"] for p in periods) / div)
+    hi = max(max(p[k] for k, _, _ in SERIES) for p in periods) / div
     pad = (hi - lo) * 0.16
 
     fig.update_layout(
@@ -88,7 +105,7 @@ def build(spec):
             range=[lo - pad, hi + pad],
             tickfont=dict(size=11, color="#667"),
             gridcolor="#dcdcdc", zerolinecolor="#9aa", zerolinewidth=2,
-            ticksuffix="B",
+            ticksuffix=unit,
             showline=False, ticks="",
         ),
         legend=dict(
@@ -148,8 +165,9 @@ def main():
 
     for q in spec["periods"]:
         net = q["debt"] - q["cash"]
-        print(f'{q["label"]}: debt ${q["debt"]:,.1f}M | cash ${q["cash"]:,.1f}M | '
-              f'FCF ${q["fcf"]:,.1f}M | net debt ${net:,.1f}M')
+        c = spec.get("currency", "$")
+        print(f'{q["label"]}: debt {c}{q["debt"]:,.1f}M | cash {c}{q["cash"]:,.1f}M | '
+              f'FCF {c}{q["fcf"]:,.1f}M | net debt {c}{net:,.1f}M')
     print(f"{warn} warning(s)")
 
 

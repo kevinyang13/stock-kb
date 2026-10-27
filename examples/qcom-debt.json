@@ -1,0 +1,16 @@
+{
+ "ticker": "QCOM",
+ "company": "Qualcomm",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: FQ3 FY26, quarter ended Jun 28, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-28. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "FQ3 FY26",
+   "debt": 15270.0,
+   "fcf": 495.0,
+   "cash": 4533.0
+  }
+ ]
+}
