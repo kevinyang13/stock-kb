@@ -862,3 +862,20 @@ is stock comp**, just under a quarter. SPCX reports $2,363M, PLTR $265M on a muc
 exactly one node per chart, and always on the pooled one. Hovered in the browser on NVDA:
 `Operating expenses · Q2 FY27 / amount $8.4B / year ago $5.4B / year over year +56% / % of revenue
 8.7% / % of gross profit 11.7% / stock comp $2.0B`, then the two notes.
+
+---
+
+## 2026-10-26 — Call Sheet removed
+
+**What changed**: `tracker.html` deleted, and the `Call Sheet` nav tab removed from the five
+shared-CSS pages (`heatmap.html`, `catalysts.html`, `brief.html`, `events.html`,
+`financials.html`). The site is five tabs again.
+
+The page held its predictions inline, in a `<script type="application/json" id="records">` block
+— twelve calls on NOW, MSFT and MU dated 2026-08-15, by Kevin, ChatGPT, Claude and Gemini, all
+still `actualPrice: null`. Nothing else read that block and no `*.json` in the repo fed it, so
+deleting the file removes the only copy in the working tree. Git history keeps it:
+`git show HEAD~1:tracker.html` (or whichever commit precedes this one) brings it back whole.
+
+`Site.nav()` highlights the current tab by walking `nav.tabs a.tab` in the DOM, so dropping a
+link needed no change in `assets/site.js`.
