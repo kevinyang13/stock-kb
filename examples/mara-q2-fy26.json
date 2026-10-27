@@ -9,11 +9,28 @@
  "revenue_yoy": -27,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 174.9,
-   "yoy": -27,
-   "note": "not split by segment",
+   "name": "Block rewards",
+   "value": 156.5,
+   "yoy": -28,
    "color": "#e8502a"
+  },
+  {
+   "name": "Mining participant",
+   "value": 12.8,
+   "yoy": 16,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Other",
+   "value": 4.6,
+   "yoy": -7,
+   "color": "#c8a020"
+  },
+  {
+   "name": "Transaction fees",
+   "value": 1.0,
+   "yoy": -66,
+   "color": "#f0a030"
   }
  ],
  "cost_of_revenue": 117.9,
@@ -48,5 +65,6 @@
   "R&D": 8.5,
   "SG&A": 115.3
  },
- "stock_comp": 46.7
+ "stock_comp": 46.7,
+ "segment_source": "MARA 10-Q, quarter ended Jun 30 2026, disaggregation note"
 }

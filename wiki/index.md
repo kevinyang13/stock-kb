@@ -21,7 +21,7 @@ Table of contents for this knowledge base. One line per page.
 
 ## Companies
 
-- [[favorites-financials]] — index of the 66 income statement charts on the Financials tab, with the data caveats that apply to them.
+- [[favorites-financials]] — index of the 66 income statement charts on the Financials tab, which of them carry a reported revenue segment split (53 do) and the data caveats that apply to them.
 - [[coreweave-q2-fy26]] — CoreWeave Q2 2026: $2,575M revenue (+112% Y/Y), 66% gross margin, a $49M operating loss and a $626M net loss driven by financing cost.
 - [[nebius-q2-fy26]] — Nebius Group Q2 2026: $582.3M revenue (+454% Y/Y) at a 77% gross margin, a $190.4M net loss that is almost all depreciation and interest, and capex running at eight times revenue.
 - [[micron-fq4-fy26]] — Micron's record fiscal Q4 2026: $54.2B revenue (+379% Y/Y), 87% gross margin, business-unit breakdown and the figures behind the Financials tab chart.

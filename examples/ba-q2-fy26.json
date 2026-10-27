@@ -9,11 +9,22 @@
  "revenue_yoy": 8,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 24.6,
+   "name": "Commercial Airplanes",
+   "value": 11.8,
    "yoy": 8,
-   "note": "not split by segment",
    "color": "#e8502a"
+  },
+  {
+   "name": "Defense, Space, and Security",
+   "value": 7.5,
+   "yoy": 13,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Global Services",
+   "value": 5.3,
+   "yoy": 1,
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 22.1,
@@ -44,5 +55,6 @@
   "SG&A": 1.7,
   "Operating expenses": 2.7
  },
- "stock_comp": 0.5
+ "stock_comp": 0.5,
+ "segment_source": "stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws"
 }

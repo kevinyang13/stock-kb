@@ -9,11 +9,21 @@
  "revenue_yoy": 14,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 174.2,
-   "yoy": 14,
-   "note": "not split by segment",
+   "name": "Mining",
+   "value": 113.7,
+   "yoy": -19,
    "color": "#e8502a"
+  },
+  {
+   "name": "Engineering",
+   "value": 37.3,
+   "yoy": 253,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Data Center",
+   "value": 23.2,
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 133.0,
@@ -43,5 +53,6 @@
   "Cost of revenue": 91.0,
   "SG&A": 75.9
  },
- "stock_comp": 35.6
+ "stock_comp": 35.6,
+ "segment_source": "stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws"
 }

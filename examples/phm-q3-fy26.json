@@ -9,11 +9,22 @@
  "revenue_yoy": -10,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 3974.0,
-   "yoy": -10,
-   "note": "not split by segment",
+   "name": "Home Sales",
+   "value": 3859.0,
+   "yoy": -9,
    "color": "#e8502a"
+  },
+  {
+   "name": "Financial Services",
+   "value": 107.0,
+   "yoy": 4,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Land Sales and Other",
+   "value": 8.0,
+   "yoy": -85,
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 2969.0,
@@ -38,5 +49,6 @@
   "Net profit": 586.0,
   "Tax": 182.0
  },
- "stock_comp": 11.0
+ "stock_comp": 11.0,
+ "segment_source": "stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws"
 }

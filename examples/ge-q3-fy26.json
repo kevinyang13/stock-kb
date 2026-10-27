@@ -9,11 +9,22 @@
  "revenue_yoy": 16,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 14118.0,
-   "yoy": 16,
-   "note": "not split by segment",
+   "name": "Commercial Engines & Services",
+   "value": 10342.0,
+   "yoy": 21,
    "color": "#e8502a"
+  },
+  {
+   "name": "Defense & Propulsion Tech",
+   "value": 3469.0,
+   "yoy": 7,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Insurance & other",
+   "value": 307.0,
+   "yoy": -25,
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 10116.0,
@@ -44,5 +55,6 @@
   "Operating profit": 2509.0,
   "Net profit": 2157.0,
   "Tax": 344.0
- }
+ },
+ "segment_source": "GE Aerospace 3Q26 earnings release, Exhibit 99.1"
 }

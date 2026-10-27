@@ -9,11 +9,19 @@
  "revenue_yoy": 50,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 33.3,
-   "yoy": 50,
-   "note": "not split by segment",
+   "name": "Space Based Intelligence & AI Services",
+   "value": 24.5,
    "color": "#e8502a"
+  },
+  {
+   "name": "Mission Solutions",
+   "value": 5.1,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Advanced Technology Programs",
+   "value": 3.7,
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 9.1,
@@ -50,5 +58,6 @@
   "Operating expenses": 29.5,
   "Net loss": 41.2
  },
- "stock_comp": 4.3
+ "stock_comp": 4.3,
+ "segment_source": "stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws"
 }

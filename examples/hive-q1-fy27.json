@@ -9,11 +9,16 @@
  "revenue_yoy": 73,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 79.1,
-   "yoy": 73,
-   "note": "not split by segment",
+   "name": "Digital currency mining",
+   "value": 72.1,
+   "yoy": 77,
    "color": "#e8502a"
+  },
+  {
+   "name": "HPC hosting",
+   "value": 7.1,
+   "yoy": 47,
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 54.9,
@@ -44,5 +49,6 @@
   "SG&A": 5.8,
   "Operating expenses": 10.3
  },
- "stock_comp": 7.1
+ "stock_comp": 7.1,
+ "segment_source": "HIVE Digital 10-Q, quarter ended Jun 30 2026, segmented information"
 }

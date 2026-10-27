@@ -55,9 +55,30 @@ revenue" bar is a fallback for companies that publish no split, not a default.
    fetch look like a missing disclosure.
 4. Never invent segment names or values.
 
-**Do not use `stockanalysis.com/stocks/<ticker>/metrics/revenue-by-segment/`.** Its figures are
-annual even with `?p=quarterly`. NVDA's two segments there sum to $303B against $96.2B of quarterly
-revenue — the error is large and silent.
+**Do not use the rendered `stockanalysis.com/stocks/<ticker>/metrics/revenue-by-segment/` page.**
+Its figures are annual even with `?p=quarterly`. NVDA's two segments there sum to $303B against
+$96.2B of quarterly revenue — the error is large and silent.
+
+**Its data endpoint is usable, and is a different thing.** `bin/segfetch.py` reads
+`/metrics/revenue-by-segment/__data.json?p=quarterly`, which carries a `quarterly` array keyed by
+period end rather than the annual figures the page renders. It has one trap of its own: the
+endpoint buckets every filer into **calendar** quarters, so a fiscal-quarter filer's own period end
+is not in it at all — HD (Aug 2), MRVL (Aug 1), SNOW (Jul 31) and T (Sep 30) each came back a
+quarter short, and SMCI came back a full year short. Matching on the nearest date would have
+attached the wrong quarter's split to the chart silently.
+
+So the guard is not the date, it is the sum: the split is written only when the segments add up to
+the revenue the chart already draws, within 0.5%. A wrong quarter does not foot.
+
+**For everything the endpoint cannot reach, go to the filer.** `python3 bin/edgar.py <ticker>`
+lists the revenue notes in its latest filing; `python3 bin/edgar.py <ticker> R39` prints one. EDGAR
+renders each note of a filing as its own small `R##.htm` report and `FilingSummary.xml` names them,
+so the disaggregation note comes down on its own rather than inside a 3MB 10-Q. Figures read that
+way go into `bin/segapply.py`, which applies the same sum check — against the values **as the chart
+will round them**, since three segments that each round up can add $0.1M of revenue the company
+never reported. Rigetti hit exactly that, and its two service lines are shown as one because of it.
+
+Then `python3 bin/segnotes.py` writes the split onto the card, or the reason there is none.
 
 Segments that have been verified against revenue, as examples of the shapes you will meet: Micron
 by business unit, Alphabet's six lines, Qualcomm's QCT sub-streams plus QTL and a residual, SanDisk

@@ -69,10 +69,23 @@ revenue; the reported segment figure is $574.9M. Full detail in [[nebius-q2-fy26
 ## Caveats that apply to these charts
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
-`income-statement-chart` skill. The 50 statements added in the bulk watchlist pass predate that rule
-and still show a single revenue bar; they are a backlog to fill in, not a standard to copy.
+`income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
+**53 of the 66 charts now carry a reported split**, and the 13 that do not each say on the card why.
 
-**Nine of the original twelve carry a reported segment split**: NVDA, MSFT, GOOG, MU, SNDK, TSM, TSLA, QCOM and INTU. Three do not — SMCI (Supermicro's release does not split server/storage systems from subsystems), IONQ and CRWV (both report a single revenue line) — and those show one revenue bar.
+Those 13 are ARQQ, ASTS, CLSK, CRWV, DDOG, HUT, INFQ, NET, NU, OUST, SKHY, SMCI and XNDU. Most
+report one segment and disclose revenue by geography only. Two are worth naming:
+
+- **HUT** does report three segments — Compute $72.5M, Digital Infrastructure $33.0M, Power $5.5M —
+  but intersegment eliminations are $36.0M against $74.9M of revenue, so the three cannot be drawn
+  as bars that foot. The card gives the gross figures instead.
+- **NU** is charted on the aggregator's net revenue line, which no reported split adds up to.
+
+**IONQ was previously recorded here as publishing no split. That was wrong** — its 10-Q
+disaggregates revenue into quantum hardware and platform/consulting/support, $46.5M and $33.6M for
+Q2 FY26, and the chart now shows both. SMCI and CRWV were checked again and do hold: Supermicro's
+FY26 10-K gives net sales by geography only, and CoreWeave the same.
+
+**Nine of the original twelve carry a reported segment split**: NVDA, MSFT, GOOG, MU, SNDK, TSM, TSLA, QCOM and INTU.
 
 Each split was validated against the revenue total before use. Four footed exactly (MSFT, GOOG, QCOM, SNDK); TSLA is out by $44M on $28.0B and TSM by NT$0.1B, both rounding. Two segment values are **derived rather than reported**: TSMC publishes platform mix only as rounded percentages, which the chart applies to revenue, and Intuit's Global Business Solutions is shown as the remainder so its two segments foot.
 

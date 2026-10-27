@@ -9,11 +9,16 @@
  "revenue_yoy": 287,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 80.1,
-   "yoy": 287,
-   "note": "not split by segment",
+   "name": "Quantum hardware",
+   "value": 46.5,
+   "yoy": 230,
    "color": "#e8502a"
+  },
+  {
+   "name": "Platform, consulting & support",
+   "value": 33.6,
+   "yoy": 407,
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 59.0,
@@ -49,5 +54,6 @@
   "Operating expenses": 173.1,
   "Net loss": 176.8
  },
- "stock_comp": 141.8
+ "stock_comp": 141.8,
+ "segment_source": "IonQ 10-Q, quarter ended Jun 30 2026, disaggregation note"
 }

@@ -9,11 +9,28 @@
  "revenue_yoy": 6,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 47.9,
-   "yoy": 6,
-   "note": "not split by segment",
+   "name": "Hardlines",
+   "value": 14.4,
+   "yoy": 2,
    "color": "#e8502a"
+  },
+  {
+   "name": "Building Materials",
+   "value": 14.4,
+   "yoy": 1,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Décor",
+   "value": 13.9,
+   "yoy": 1,
+   "color": "#c8a020"
+  },
+  {
+   "name": "Other",
+   "value": 5.1,
+   "yoy": 62,
+   "color": "#f0a030"
   }
  ],
  "cost_of_revenue": 32.4,
@@ -44,5 +61,6 @@
   "Operating profit": 6.6,
   "Net profit": 4.6
  },
- "stock_comp": 0.1
+ "stock_comp": 0.1,
+ "segment_source": "Home Depot 10-Q, quarter ended Aug 2 2026, net sales by segment"
 }

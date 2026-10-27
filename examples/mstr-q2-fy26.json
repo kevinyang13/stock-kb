@@ -9,11 +9,28 @@
  "revenue_yoy": 7,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 122.4,
-   "yoy": 7,
-   "note": "not split by segment",
+   "name": "Subscription Services",
+   "value": 62.9,
+   "yoy": 54,
    "color": "#e8502a"
+  },
+  {
+   "name": "Product Support",
+   "value": 40.2,
+   "yoy": -23,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Other Services",
+   "value": 15.6,
+   "yoy": 8,
+   "color": "#c8a020"
+  },
+  {
+   "name": "Product Licenses",
+   "value": 3.7,
+   "yoy": -49,
+   "color": "#f0a030"
   }
  ],
  "cost_of_revenue": 40.8,
@@ -43,5 +60,6 @@
   "R&D": 24.1,
   "SG&A": 70.2
  },
- "stock_comp": 14.3
+ "stock_comp": 14.3,
+ "segment_source": "stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws"
 }

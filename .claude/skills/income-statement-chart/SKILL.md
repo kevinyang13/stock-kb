@@ -58,9 +58,25 @@ fallback, not a default, and is only acceptable when the company genuinely publi
    Never imply a split was unavailable when it was simply not fetched.
 4. Never invent segment names or values.
 
-**Do not use** `stockanalysis.com/stocks/<t>/metrics/revenue-by-segment/`. Its figures are annual
-even with `?p=quarterly` — NVDA's two segments there sum to $303B against $96.2B of quarterly
-revenue.
+**Do not use the rendered** `stockanalysis.com/stocks/<t>/metrics/revenue-by-segment/` page. Its
+figures are annual even with `?p=quarterly` — NVDA's two segments there sum to $303B against $96.2B
+of quarterly revenue.
+
+Its **data endpoint** is a different thing and is usable: `bin/segfetch.py` reads
+`/metrics/revenue-by-segment/__data.json?p=quarterly`, which carries a `quarterly` array keyed by
+period end. Two traps, both handled there:
+
+- the endpoint buckets every filer into **calendar** quarters, so a fiscal-quarter filer's own
+  period end is simply absent — HD, MRVL, SNOW and T all come back a quarter short
+- so the guard is the sum, not the date: a split is written only when the segments add up to the
+  revenue the chart already draws, within 0.5%
+
+For everything that endpoint cannot reach, go to the filer: `python3 bin/edgar.py <ticker>` lists
+the revenue notes in its latest filing and `python3 bin/edgar.py <ticker> R39` prints one. EDGAR
+renders each note as its own small `R##.htm` report, so the disaggregation note comes down on its
+own instead of a 3MB 10-Q. Put the figures in
+`bin/segapply.py`, which checks them the same way and writes the spec. Then run `bin/segnotes.py`
+to put the split — or the reason there is none — on the card.
 
 ## Step 3 — Build the spec
 

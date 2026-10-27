@@ -9,11 +9,16 @@
  "revenue_yoy": 62,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 234.1,
-   "yoy": 62,
-   "note": "not split by segment",
+   "name": "Space Systems",
+   "value": 189.5,
+   "yoy": 94,
    "color": "#e8502a"
+  },
+  {
+   "name": "Launch Services",
+   "value": 44.6,
+   "yoy": -4,
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 149.5,
@@ -41,5 +46,6 @@
   "Operating expenses": 106.0,
   "Net loss": 66.4
  },
- "stock_comp": 19.6
+ "stock_comp": 19.6,
+ "segment_source": "stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws"
 }

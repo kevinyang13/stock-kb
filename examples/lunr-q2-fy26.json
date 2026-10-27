@@ -9,11 +9,27 @@
  "revenue_yoy": 310,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 206.2,
-   "yoy": 310,
-   "note": "not split by segment",
+   "name": "Civil",
+   "value": 76.3,
+   "yoy": 64,
    "color": "#e8502a"
+  },
+  {
+   "name": "Commercial",
+   "value": 66.3,
+   "note": "from $2.1M a year ago",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "National security",
+   "value": 60.9,
+   "note": "from $1.7M a year ago",
+   "color": "#c8a020"
+  },
+  {
+   "name": "Grant revenue",
+   "value": 2.8,
+   "color": "#f0a030"
   }
  ],
  "cost_of_revenue": 170.3,
@@ -49,5 +65,6 @@
   "Operating expenses": 16.8,
   "Net loss": 25.2
  },
- "stock_comp": 10.5
+ "stock_comp": 10.5,
+ "segment_source": "Intuitive Machines 10-Q, quarter ended Jun 30 2026, by customer"
 }

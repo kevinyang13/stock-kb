@@ -9,11 +9,16 @@
  "revenue_yoy": 657,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 117.7,
-   "yoy": 657,
-   "note": "not split by segment",
+   "name": "Spacecraft solutions",
+   "value": 108.3,
+   "note": "from $9.2M a year ago",
    "color": "#e8502a"
+  },
+  {
+   "name": "Launch services",
+   "value": 9.4,
+   "yoy": 48,
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 93.8,
@@ -41,5 +46,6 @@
   "Operating expenses": 56.6,
   "Net loss": 80.3
  },
- "stock_comp": 17.0
+ "stock_comp": 17.0,
+ "segment_source": "Firefly Aerospace 10-Q, quarter ended Jun 30 2026, disaggregation"
 }

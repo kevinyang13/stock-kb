@@ -9,11 +9,16 @@
  "revenue_yoy": 90,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 117.1,
-   "yoy": 90,
-   "note": "not split by segment",
+   "name": "Defense Tech",
+   "value": 61.9,
+   "note": "from $5.1M a year ago",
    "color": "#e8502a"
+  },
+  {
+   "name": "Space",
+   "value": 55.2,
+   "yoy": -3,
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 84.5,
@@ -45,5 +50,6 @@
   "Operating expenses": 56.2,
   "Net loss": 97.0
  },
- "stock_comp": 3.9
+ "stock_comp": 3.9,
+ "segment_source": "Redwire 10-Q, quarter ended Jun 30 2026, segment reporting note"
 }

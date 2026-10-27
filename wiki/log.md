@@ -879,3 +879,72 @@ deleting the file removes the only copy in the working tree. Git history keeps i
 
 `Site.nav()` highlights the current tab by walking `nav.tabs a.tab` in the DOM, so dropping a
 link needed no change in `assets/site.js`.
+
+---
+
+## 2026-10-26 — Revenue segment splits on 27 more charts
+
+**What changed**: 40 of the 66 statements carried the placeholder note *"Single revenue bar — no
+segment split was pulled for this name"*. That line said nothing about whether the company
+publishes a split. All 40 are now resolved: **27 gained a reported split** and the other 13 say on
+the card why there is none. The Financials page now stands at **53 of 66 charts with a segment
+split**.
+
+**Where the figures came from**, and why one of them contradicts an older rule here:
+
+- `bin/segfetch.py` (new) reads stockanalysis's `revenue-by-segment` **data endpoint**,
+  `__data.json?p=quarterly`. The rendered page of that name is still unusable — annual figures, as
+  recorded in [[sankey-income-statement]] — but the endpoint behind it carries a `quarterly` array
+  keyed by period end. It supplied ASML, BA, BKSY, MSTR, NOW, PHM, PLTR, RIOT and RKLB.
+- `bin/edgar.py` (new) fetches a single note out of an SEC filing. EDGAR renders every note as its
+  own small `R##.htm` report and `FilingSummary.xml` names them, so a disaggregation note comes
+  down on its own instead of inside a 3MB 10-Q. This supplied COIN, FLY, HD, HIVE, IONQ, LUNR,
+  MARA, MRVL, PL, QBTS, RDW, RGTI, SNOW and VOYG.
+- `bin/segapply.py` (new) holds the figures that had to be read by hand — the three above plus
+  COHR, GE and T from their 8-K exhibits, and MDA from its own release, since MDA Space files in
+  Canada and has no SEC disaggregation note.
+- `bin/segnotes.py` (new) rewrites the card note from the spec, so the note and the chart cannot
+  drift apart.
+
+**The trap in the endpoint, and the guard that caught it.** It buckets every filer into *calendar*
+quarters, so a fiscal-quarter filer's own period end is not in it: HD (Aug 2), MRVL (Aug 1), SNOW
+(Jul 31) and T (Sep 30) each came back a quarter short, and SMCI a full year short. Matching on the
+nearest date would have hung the wrong quarter's split on the chart without a word. The guard is
+the sum instead — a split is written only when the segments add up to the revenue the chart already
+draws, within 0.5% — and a wrong quarter does not foot. Those five went to the filings instead.
+
+**A rounding bug the sum check also caught.** Rigetti's three reported lines are $4,098K, $952K and
+$88K. At the one decimal the chart draws they become 4.1 + 1.0 + 0.1 = $5.2M against $5.1M of
+revenue — $0.1M of revenue Rigetti never reported, purely from rounding each line up. The two
+service lines are shown as one, labelled "Research, services & access", and the card says so. The
+check compares values **as the chart will round them** for exactly this reason.
+
+**A correction.** The audit on 2026-10-19 recorded IONQ as hand-verified to publish no split. That
+was wrong: IonQ's 10-Q disaggregates revenue into quantum hardware $46.5M and platform, consulting
+and support $33.6M. Both now show. SMCI and CRWV were rechecked and do hold — Supermicro's FY26
+10-K gives net sales by geography only, and so does CoreWeave's 10-Q.
+
+**AT&T's segment table, open since the bulk pass, is now on the chart.** It was unreachable then
+because AT&T restructured its segments in Q1 2026: the old Communications / Mobility / Business
+Wireline names no longer exist. Q3 FY26 is Advanced Connectivity $29.5B, Legacy $1.5B, Latin
+America $1.2B.
+
+**Not blindly trusted**: the endpoint's figures were checked against the companies' own releases
+for PLTR (Government $990M +79%, Commercial $945M +110%) and BA (BCA $11,751M, BDS $7,483M, BGS
+$5.3B), and BKSY's three segment names were confirmed against its 10-Q segment note rather than
+taken from the aggregator's labels. RGTI's labels came from the aggregator as "Other" for what the
+filing calls sales of quantum computers and components; the filing's wording is used.
+
+**Growth rates off a near-zero base** read as noise — Intuitive Machines' commercial line would
+print "+3047% Y/Y". Above 999% the chart shows "from $2.1M a year ago" instead, which says the same
+thing and says it better. Affects LUNR, RDW and FLY.
+
+**Verification**: all 27 charts re-rendered with no validator warnings — the "segments vs revenue"
+identity is one of the five it checks — and nine were opened in the browser (T, HD, LUNR, GE, COIN,
+MDA, QBTS, HUT, RGTI), confirming the live chart draws the new bars and the card note matches.
+
+**Noted, not fixed**: on HD and several others the "Cost of revenue" label sits under its own node
+rectangle and the value is partly covered. It predates this change — the published PNG has it too —
+and is a layout problem for the renderer, not the data. Also SKHY's Q2 FY26 statement shows ₩79.3T
+of revenue with ₩93.8T of net profit, net profit above revenue on ₩62.1T of non-operating income;
+the figures agree with the aggregator but the shape is odd enough to be worth a look.

@@ -9,11 +9,22 @@
  "revenue_yoy": 5,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 32.3,
-   "yoy": 5,
-   "note": "not split by segment",
+   "name": "Advanced Connectivity",
+   "value": 29.5,
+   "yoy": 7,
    "color": "#e8502a"
+  },
+  {
+   "name": "Legacy",
+   "value": 1.5,
+   "yoy": -25,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Latin America",
+   "value": 1.2,
+   "yoy": 13,
+   "color": "#c8a020"
   }
  ],
  "cost_of_revenue": 12.4,
@@ -44,5 +55,6 @@
   "Operating profit": 6.6,
   "Net profit": 9.3,
   "Tax": 1.0
- }
+ },
+ "segment_source": "AT&T 3Q26 earnings release, Exhibit 99.1 to the 8-K filed 2026-10-21"
 }

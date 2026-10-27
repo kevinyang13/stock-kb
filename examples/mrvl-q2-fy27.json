@@ -9,11 +9,16 @@
  "revenue_yoy": 37,
  "segments": [
   {
-   "name": "Total revenue",
-   "value": 2739.0,
-   "yoy": 37,
-   "note": "not split by segment",
+   "name": "Data center",
+   "value": 2172.0,
+   "yoy": 46,
    "color": "#e8502a"
+  },
+  {
+   "name": "Communications & other",
+   "value": 568.0,
+   "yoy": 10,
+   "color": "#1b1b7a"
   }
  ],
  "cost_of_revenue": 1283.0,
@@ -46,5 +51,6 @@
   "Net profit": 195.0,
   "Tax": 39.0
  },
- "stock_comp": 326.0
+ "stock_comp": 326.0,
+ "segment_source": "Marvell 10-Q, quarter ended Aug 1 2026, net revenue by end market"
 }
