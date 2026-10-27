@@ -1008,3 +1008,39 @@ figures, or ahead with no actual, and nothing in between is drawn. Five cards op
 back live, both the reported dot (`Sep '26 · reported Oct 15, 2026 / actual $4.60 / estimate $4.45
 / surprise +$0.15 (+3%)`) and the unreported one (`Dec '26 · not reported yet / consensus $5.22 /
 range $5.12 to $5.52 / estimates 6 (5 up in 4 weeks) / no actual yet`).
+
+---
+
+## 2026-10-26 — P/E and dividend on the card KPIs
+
+**What changed**: two more tiles above every statement — `P/E` showing trailing and forward side by
+side, and `Dividend` showing the yield with the annual rate under it. `bin/pefetch.py` (new) writes
+both from stockanalysis.com's quote data (`peRatio`, `forwardPE`, `dividend`, `exDividendDate`),
+the same source the heatmap's forward P/E column uses. All 66 cards updated, no failures.
+
+**These two do not belong to the quarter the rest of the card describes.** The other four KPIs come
+from one filed statement and never change; these are measured against the share price and are stale
+the moment they are written. So they share one note that carries the date, and `financials.json`
+gains a `marketAsOf` stamp:
+
+> Market figures as of Oct 26, 2026: P/E 11.0 trailing, 8.3 forward; dividend $2.83 a year, 6.57%
+> yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the
+> other figures on this card they move every session and are not from the filing.
+
+**What reads as missing, and why.** A loss-maker has no meaningful trailing P/E and a company with
+no positive forward estimate has no forward one; both print `n/a` rather than a negative number,
+because a negative P/E is not a cheap stock, just a loss. 24 of the 66 pay a dividend and 42 read
+"None" — a fact about the company rather than a gap in the data.
+
+**A bug of mine, caught by reading the output rather than the exit status.** The quote hands the
+dividend over as one preformatted string, `"$2.83 (6.57%)"`, which this parses rather than prints.
+The parser defaulted a missing currency symbol to `$` — and Nintendo's comes through as
+`162.00 (1.91%)` with no symbol at all, so the card briefly showed a **$162** dividend for what is
+¥162. The symbol now comes from the quote's own `curr.dividend` code, with the code itself as the
+fallback; nothing is assumed. Nintendo reads ¥162.00, and it is the only non-dollar dividend on the
+page — SKHY, TSM and ASML all quote theirs in dollars per ADR.
+
+**Verification**: all 66 refetched after the fix, then VZ opened in the browser — six tiles on one
+row at 1440px, `Revenue $34.3B · Gross margin 62% · Operating margin 23% · Net profit $3.8B · P/E
+11.0 · 8.3 · Dividend 6.57%`. Loss-making cards carry five, since they have no operating margin
+tile to begin with.

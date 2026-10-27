@@ -68,6 +68,17 @@ revenue; the reported segment figure is $574.9M. Full detail in [[nebius-q2-fy26
 
 ## Caveats that apply to these charts
 
+**Two of the six KPI tiles are not from the filing.** P/E and dividend are measured against
+today's share price, so they move every session while the other four never change. `bin/pefetch.py`
+writes them from stockanalysis.com's quote data and stamps the date on the card note and on
+`marketAsOf` in `financials.json`; re-run it whenever the figures look stale.
+
+A loss-maker has no meaningful trailing P/E and a company with no positive forward estimate has no
+forward one — both read `n/a` rather than a negative number, since a negative P/E is not a cheap
+stock, just a loss. 24 of the 66 pay a dividend; the rest read "None", which is a fact about the
+company, not a gap in the data.
+
+
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
 `income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
 **53 of the 66 charts now carry a reported split**, and the 13 that do not each say on the card why.
