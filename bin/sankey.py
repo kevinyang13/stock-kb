@@ -10,6 +10,7 @@ including costs -- the renderer decides direction and colour.
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -55,6 +56,98 @@ def validate(spec, rev, cor, gross, opex, opex_items, op, tax, other, net, tol=N
         if abs(got - want) > tol:
             issues.append(f"  ! {name}: {got:,.2f} vs {want:,.2f} (drift {got - want:+.2f})")
     return issues
+
+
+NBSP = "&#160;"       # plotly collapses runs of ordinary spaces in hover text
+
+# Two lines on every chart are computed rather than filed, so the statement
+# foots. The hover says so instead of letting them pass as reported figures.
+DERIVED = {
+    "Cost of revenue": "revenue less reported gross profit",
+    "Operating expenses": "gross profit less operating profit",
+    "Interest & other": "net profit plus tax, less operating profit",
+    "Interest & other, net": "net profit plus tax, less operating profit",
+    "Non-operating & tax, net": "charges less operating expenses",
+}
+
+
+def block(title, rows, notes=()):
+    """A monospace, column-aligned hover block. Rows are (label, value)."""
+    rows = [(l, v) for l, v in rows if v is not None]
+    lw = max((len(l) for l, _ in rows), default=0)
+    vw = max((len(v) for _, v in rows), default=0)
+    line = lambda l, v: l + NBSP * (lw - len(l) + 3 + vw - len(v)) + v
+    out = [f"<b>{title}</b>", ""] + [line(l, v) for l, v in rows]
+    for n in notes:
+        out += ["", n]
+    return "<br>".join(out)
+
+
+def node_tips(labels, links, spec, rev, gross, cur, unit, dec):
+    """One hover block per node: what it is worth, what share of revenue it
+    is, and -- where it applies -- its growth and how it was derived."""
+    period = spec.get("period", "")
+    m = lambda v: money(v, unit, cur, dec)
+    inflow, outflow = {}, {}
+    for a, b, v, _ in links:
+        outflow[a] = outflow.get(a, 0.0) + v
+        inflow[b] = inflow.get(b, 0.0) + v
+    seg = {sg["name"]: sg for sg in spec.get("segments", [])}
+
+    # "% of gross profit" only means something for what gross profit pays for,
+    # so it is offered to the nodes gross profit actually flows into. Cost of
+    # revenue sits above it and would read as nonsense.
+    after_gross, frontier = set(), [i for i, n in enumerate(labels)
+                                    if n == "Gross profit"]
+    while frontier:
+        a = frontier.pop()
+        for x, b, _, _ in links:
+            if x == a and b not in after_gross:
+                after_gross.add(b)
+                frontier.append(b)
+
+    tips = []
+    for i, name in enumerate(labels):
+        val = inflow.get(i, outflow.get(i, 0.0))
+        rows = [("amount", m(val))]
+        if rev and name != "Revenue":
+            rows.append(("% of revenue", f"{val / rev * 100:,.1f}%"))
+        if name == "Revenue" and spec.get("revenue_yoy") is not None:
+            rows.append(("year over year", pct(spec["revenue_yoy"])))
+        if name in seg and seg[name].get("yoy") is not None:
+            rows.append(("year over year", pct(seg[name]["yoy"])))
+        if gross and i in after_gross:
+            rows.append(("% of gross profit", f"{val / gross * 100:,.1f}%"))
+
+        notes = []
+        if name in DERIVED:
+            notes.append(f"<i>derived: {DERIVED[name]}</i>")
+        note = seg[name].get("note") if name in seg else None
+        # mkspec's default note is just "N% of revenue", which the rows above
+        # now say more precisely
+        if note and not re.fullmatch(r"\d+% of revenue", note):
+            notes.append(f"<i>{note}</i>")
+        tips.append(block(f"{name} \u00b7 {period}" if period else name,
+                          rows, notes))
+    return tips
+
+
+def link_tips(labels, links, cur, unit, dec):
+    """Each band says what share of its source it carries, so the widths
+    read as proportions rather than just sizes."""
+    out_total = {}
+    for a, _, v, _ in links:
+        out_total[a] = out_total.get(a, 0.0) + v
+    tips = []
+    for a, b, v, _ in links:
+        # a node with one outgoing band always carries 100% of itself, which
+        # tells the reader nothing
+        many = sum(1 for x, _, _, _ in links if x == a) > 1
+        share = v / out_total[a] * 100 if (many and out_total.get(a)) else None
+        tail = f" \u00b7 {share:,.0f}% of {labels[a]}" if share is not None else ""
+        tips.append(f"{labels[a]} \u2192 {labels[b]}<br>"
+                    f"<b>{money(v, unit, cur, dec)}</b>{tail}")
+    return tips
 
 
 def build(spec):
@@ -138,20 +231,17 @@ def build(spec):
         # label stays empty -- the annotations draw the visible text, and any
         # node text plotly draws leaves a glyph beside the bar even transparent.
         # The names ride along in customdata purely for the hover readout.
-        node=dict(label=["" for _ in labels], customdata=labels,
-                  hovertemplate="<b>%{customdata}</b><br>"
-                                + cur + "%{value:." + str(dec) + "f}" + unit
-                                + "<extra></extra>",
+        node=dict(label=["" for _ in labels],
+                  customdata=node_tips(labels, links, spec, rev, gross,
+                                       cur, unit, dec),
+                  hovertemplate="%{customdata}<extra></extra>",
                   color=colors, x=xs, y=ys,
                   pad=26, thickness=22,
                   line=dict(width=0)),
         link=dict(source=[l[0] for l in links], target=[l[1] for l in links],
                   value=[l[2] for l in links], color=[l[3] for l in links],
-                  customdata=[f"{labels[l[0]]} &#8594; {labels[l[1]]}"
-                              for l in links],
-                  hovertemplate="%{customdata}<br><b>" + cur
-                                + "%{value:." + str(dec) + "f}" + unit
-                                + "</b><extra></extra>"),
+                  customdata=link_tips(labels, links, cur, unit, dec),
+                  hovertemplate="%{customdata}<extra></extra>"),
     ))
 
     # Text is drawn by hand so each node can carry value + margin + Y/Y.
@@ -221,6 +311,9 @@ def build(spec):
         title=dict(y=0.995, yanchor='top', text=f"<b>{spec['company']} {spec['period']} Income Statement</b>",
                    x=0.5, xanchor="center", font=dict(size=40, color=INK)),
         annotations=ann,
+        hoverlabel=dict(align="left", bgcolor="#fbfbfb", bordercolor="#c9c9c9",
+                        font=dict(family="SFMono-Regular, Menlo, Consolas, "
+                                         "monospace", size=12, color="#12312c")),
         paper_bgcolor=BG, plot_bgcolor=BG,
         width=spec.get("width", 1500), height=spec.get("height", 880),
         margin=dict(l=300, r=270, t=185, b=70),
@@ -309,19 +402,16 @@ def build_loss(spec):
         # label stays empty -- the annotations draw the visible text, and any
         # node text plotly draws leaves a glyph beside the bar even transparent.
         # The names ride along in customdata purely for the hover readout.
-        node=dict(label=["" for _ in labels], customdata=labels,
-                  hovertemplate="<b>%{customdata}</b><br>"
-                                + cur + "%{value:." + str(dec) + "f}" + unit
-                                + "<extra></extra>",
+        node=dict(label=["" for _ in labels],
+                  customdata=node_tips(labels, links, spec, rev, gross,
+                                       cur, unit, dec),
+                  hovertemplate="%{customdata}<extra></extra>",
                   color=colors, x=xs, y=ys,
                   pad=26, thickness=22, line=dict(width=0)),
         link=dict(source=[l[0] for l in links], target=[l[1] for l in links],
                   value=[l[2] for l in links], color=[l[3] for l in links],
-                  customdata=[f"{labels[l[0]]} &#8594; {labels[l[1]]}"
-                              for l in links],
-                  hovertemplate="%{customdata}<br><b>" + cur
-                                + "%{value:." + str(dec) + "f}" + unit
-                                + "</b><extra></extra>"),
+                  customdata=link_tips(labels, links, cur, unit, dec),
+                  hovertemplate="%{customdata}<extra></extra>"),
     ))
 
     ann = []
@@ -378,6 +468,9 @@ def build_loss(spec):
         title=dict(y=0.995, yanchor="top",
                    text=f"<b>{spec['company']} {spec['period']} Income Statement</b>",
                    x=0.5, xanchor="center", font=dict(size=40, color=INK)),
+        hoverlabel=dict(align="left", bgcolor="#fbfbfb", bordercolor="#c9c9c9",
+                        font=dict(family="SFMono-Regular, Menlo, Consolas, "
+                                         "monospace", size=12, color="#12312c")),
         annotations=ann, paper_bgcolor=BG, plot_bgcolor=BG,
         width=spec.get("width", 1700), height=spec.get("height", 940),
         margin=dict(l=300, r=270, t=185, b=120),

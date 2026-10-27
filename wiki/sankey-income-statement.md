@@ -291,6 +291,39 @@ It rewrites every page's asset links to `?v=<newest asset mtime>`, which makes e
 `.claude/skills/income-statement-chart/SKILL.md` encodes this whole procedure, including the
 chartable/not-chartable gate and the source traps, so a bare ticker is enough to trigger it.
 
+## What the hover says
+
+Every node and every band carries a hover block, built by `node_tips()` and `link_tips()` in
+`bin/sankey.py` from the spec alone.
+
+A node gives its amount, its share of revenue, and — for anything gross profit pays for — its
+share of gross profit. That last line is offered only to nodes **reachable from the gross profit
+node** in the link graph: cost of revenue sits above gross profit, so "% of gross profit" there
+would be nonsense.
+
+Two nodes on every chart are computed rather than filed, and the hover now says so:
+
+| Node | Derivation |
+|---|---|
+| Cost of revenue | revenue less reported gross profit |
+| Operating expenses | gross profit less operating profit |
+| Interest & other (, net) | net profit plus tax, less operating profit |
+| Non-operating & tax, net | charges less operating expenses |
+
+A band says what share of its source it carries — `Revenue → Cost of revenue · 23% of Revenue` —
+so the widths read as proportions. A node with only one outgoing band always carries 100% of
+itself, so that case is suppressed.
+
+Blocks use `&#160;` padding and a monospace `hoverlabel` font, exactly as the debt chart does, and
+literal characters rather than HTML entities: plotly does not decode entities in hover text.
+
+**Trap: two specs can write the same chart.** `bin/sankey.py` names its output from the spec's own
+`ticker` and `period`, not from the filename, so `examples/tsm-q3-fy26.json` and
+`examples/tsm-q3-fy26-filed.json` both wrote `charts/TSM-Q3-FY26.json`. A loop over
+`examples/*.json` rendered whichever sorted last — the superseded USD one — and silently replaced
+the published NT$ chart. Superseded specs now live in `examples/superseded/`, which the loops do
+not touch.
+
 ## A second chart on the same pipeline
 
 `bin/debtbars.py` emits the debt/coverage bars that sit under the Sankey on the NBIS and CRWV

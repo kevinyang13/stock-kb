@@ -712,3 +712,58 @@ total matches its spec.
 
 Worth keeping as a habit: a validator that fails almost everything is usually itself the bug, and
 the cheapest test is to do one case by hand.
+
+---
+
+## 2026-10-26 — Hover detail on the income statement charts
+
+**What changed**: every node and band on all 66 Sankeys now explains itself on hover. No change to
+any chart's appearance or figures.
+
+- `bin/sankey.py` — `node_tips()` and `link_tips()`, plus a monospace `hoverlabel`. Built entirely
+  from the existing specs; no new data was fetched.
+- `charts/*.json` — all 66 re-rendered.
+- `examples/superseded/` — new, with the stale USD TSM spec moved into it and a README saying why.
+
+**What a node now says**: its amount, its share of revenue, and its share of gross profit where
+that means anything. The gross profit line is offered only to nodes reachable from the gross
+profit node in the link graph, so cost of revenue — which sits above gross profit — does not get
+a "% of gross profit" reading that would be nonsense.
+
+**What a band now says**: its share of its source, e.g. `Revenue → Cost of revenue · 23% of
+Revenue`. Suppressed where a node has a single outgoing band, since 100% tells the reader nothing.
+
+**Derived lines are now labelled as derived.** Four node names are computed so the statement foots
+and were previously indistinguishable from filed figures:
+
+| Node | Derivation |
+|---|---|
+| Cost of revenue | revenue less reported gross profit |
+| Operating expenses | gross profit less operating profit |
+| Interest & other (, net) | net profit plus tax, less operating profit |
+| Non-operating & tax, net | charges less operating expenses |
+
+**A real bug this surfaced, worth more than the feature.** Re-rendering every spec in a loop
+silently replaced TSMC's published chart with the wrong currency. `bin/sankey.py` names its output
+from the spec's `ticker` and `period`, not from the filename, so both `examples/tsm-q3-fy26.json`
+(USD, transcribed from the reference image, long superseded) and `examples/tsm-q3-fy26-filed.json`
+(NT$, filed, what the card's KPIs use) write `charts/TSM-Q3-FY26.json`. `examples/*.json` sorts
+`-filed` first, so the stale USD spec ran last and won. The chart would have read `$1.9B` for a
+segment whose card KPI says `NT$1,494.2B` for revenue.
+
+Caught by diffing the rendered chart rather than trusting the loop's exit status. Superseded specs
+now live in `examples/superseded/`, out of the glob, with a README explaining the collision.
+Renaming alone would not have helped — the collision is on spec contents, not filenames.
+
+**Verification**: all 66 charts checked programmatically — node and link tooltip arrays present and
+the right length, both hovertemplates replaced, no raw HTML entities, node labels still empty so
+plotly draws no glyphs on the bars. Then hovered in the browser: a node gave
+`Gross profit · Q2 FY26 / amount $448.7M / % of revenue 77.1%` in the monospace font, and a band
+gave `Revenue → Cost of revenue / $133.6M · 23% of Revenue`. No console errors.
+
+Note that `Plotly.Fx.hover` does not drive a sankey trace — it is not cartesian — so the check had
+to use a real pointer over the node rect's measured position.
+
+**Still to do**: year-over-year per node, which needs the prior-year column fetched per ticker and
+a rule for the five charts built from filings rather than the aggregator, where the two bases
+disagree on opex and operating income.
