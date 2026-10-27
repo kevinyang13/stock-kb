@@ -657,3 +657,58 @@ quarter and holds $38.4B of cash against $5.2B of debt.
 **Not done**: no PNG fallbacks for these. The page renders them live and `drawDebt` has no raster
 path, so the two debt PNGs copied into `assets/financials/` earlier were removed rather than left
 unreferenced.
+
+---
+
+## 2026-10-26 — Tooltips on the debt and coverage bars
+
+**What changed**: every bar on every debt chart now explains itself on hover, with the actual
+figures. No change to the charts themselves.
+
+- `bin/debtfetch.py` — also captures the component lines behind each bar: the debt breakdown
+  (`debtc`, `currentPortDebt`, `debtnc`, `currentCapLeases`, `capitalLeases`), the cash lines that
+  sit *outside* cash and equivalents (`investmentsc`, `restrictedCash`), and `ncfo` / `capex`.
+  Anything the components do not account for is shown as `Other`, never dropped.
+- `bin/debtbars.py` — builds a column-aligned monospace block per bar and renders it through
+  `hovertemplate="%{customdata}"`.
+- `examples/*-debt.json`, `charts/*-debt.json` — all 65 refetched and re-rendered.
+- `assets/sankey.js` — chart JSON is now fetched with `cache: "no-store"`.
+
+The free cash flow tooltip is the one that prompted this, and reads:
+
+```
+Free cash flow · Q2 FY26
+
+Operating cash flow    $2,246M
+Capital expenditure   -$5,657M
+------------------------------
+Free cash flow        -$3,411M
+```
+
+**Entity rules, now fully mapped.** Three different behaviours in one library:
+
+| Where | HTML entity | What to use |
+|---|---|---|
+| layout title | kills the whole kaleido render (`plotly.js error` 525) | plain ASCII |
+| legend / trace name | decoded correctly | either |
+| hover text | **not** decoded — `&middot;` renders literally | literal characters |
+
+The hover case was found by reading the rendered tooltip back out of the DOM rather than trusting
+the JSON. `&#160;` is the exception and is required: plotly collapses runs of ordinary spaces in
+hover text, so the columns only line up with non-breaking spaces and a monospace `hoverlabel` font.
+
+**Cache fix**: `assets/sankey.js` fetched `charts/<stem>.json` with no cache directive. A
+regenerated chart keeps its filename, so a returning visitor could have been shown last month's
+figures with nothing to indicate it. Now `cache: "no-store"`; the module's in-memory Map still
+means one fetch per chart per page load.
+
+**My checker was wrong before the data was.** The first validation pass reported 45 of 65 charts
+failing to foot, including NBIS as `[2246, 5657, 3411]`. The figures were right — 2,246 − 5,657 =
+−3,411 — and the regex was wrong: its leading `(-?)` was unanchored, so the match began at the
+currency symbol and the minus sign was never captured. Rewritten to split each line on the
+non-breaking spaces and parse the trailing token. On the corrected check all 65 pass: debt
+components sum to the debt total, operating cash flow plus capex equals free cash flow, and every
+total matches its spec.
+
+Worth keeping as a habit: a validator that fails almost everything is usually itself the bug, and
+the cheapest test is to do one case by hand.

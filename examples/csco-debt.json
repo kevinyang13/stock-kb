@@ -10,7 +10,49 @@
    "label": "FQ4 FY26",
    "debt": 31185.0,
    "fcf": 4996.0,
-   "cash": 7218.0
+   "cash": 7218.0,
+   "debt_parts": [
+    {
+     "label": "Short-term debt",
+     "value": 6661.0
+    },
+    {
+     "label": "Current portion",
+     "value": 3500.0
+    },
+    {
+     "label": "Long-term debt",
+     "value": 19372.0
+    },
+    {
+     "label": "Current leases",
+     "value": 404.0
+    },
+    {
+     "label": "Long-term leases",
+     "value": 1248.0
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Short-term investments",
+     "value": 8700.0
+    },
+    {
+     "label": "Restricted cash (separate)",
+     "value": 9.0
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 5386.0
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -390.0
+    }
+   ]
   }
  ]
 }

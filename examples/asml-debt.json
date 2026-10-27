@@ -10,7 +10,29 @@
    "label": "Q3 FY26",
    "debt": 1963.0,
    "fcf": 11384.3,
-   "cash": 8030.9
+   "cash": 8030.9,
+   "debt_parts": [
+    {
+     "label": "Long-term debt",
+     "value": 1963.0
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Short-term investments",
+     "value": 4704.2
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 11797.6
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -413.3
+    }
+   ]
   }
  ]
 }

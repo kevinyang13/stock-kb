@@ -10,7 +10,41 @@
    "label": "Q1 FY27",
    "debt": 374.3,
    "fcf": -26.9,
-   "cash": 208.0
+   "cash": 208.0,
+   "debt_parts": [
+    {
+     "label": "Current portion",
+     "value": 3.2
+    },
+    {
+     "label": "Long-term debt",
+     "value": 262.6
+    },
+    {
+     "label": "Current leases",
+     "value": 12.2
+    },
+    {
+     "label": "Long-term leases",
+     "value": 96.2
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Short-term investments",
+     "value": 10.9
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 4.1
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -31.0
+    }
+   ]
   }
  ]
 }

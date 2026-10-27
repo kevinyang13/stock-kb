@@ -332,6 +332,21 @@ Nothing is guessed. A ticker whose column cannot be matched within 7 days, or wh
 missing, is reported and skipped. A null total debt is only read as zero when every debt component
 is also null — a missing total with components present is a gap, not a debt-free balance sheet.
 
+**Each bar carries its own breakdown as a tooltip**, so the figure can be checked without opening
+a filing: the debt bar lists current portion, long-term and leases; the free cash flow bar shows
+operating cash flow less capital expenditure footing to the total; the cash bar names what is
+*not* in it, such as short-term investments and restricted cash. `bin/debtfetch.py` captures the
+component lines, and anything the components do not account for is shown as `Other` rather than
+quietly dropped.
+
+The blocks are column-aligned with `&#160;` and a monospace `hoverlabel` font, because plotly
+collapses runs of ordinary spaces in hover text.
+
+**Trap, and the opposite of the title trap above**: plotly decodes HTML entities in a legend name
+but **not** in hover text, where `&middot;` renders literally as "&middot;". Hover text uses
+literal characters instead. So: no entities in a layout title (kaleido dies), entities fine in a
+legend name, literal characters in hover text.
+
 **Currency comes from the card's own KPI values**, not from the sankey spec. Reading it from the
 spec picked up a stale USD file for TSM, which has both a NT$ spec and a superseded USD one. The
 chart picks its axis unit from the largest bar — M, B or T — so TSMC reads in NT$ trillions and

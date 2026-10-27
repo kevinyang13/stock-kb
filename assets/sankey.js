@@ -211,7 +211,10 @@ const Sankey = (() => {
 
   async function load(stem) {
     if (!cache.has(stem)) {
-      const r = await fetch(`charts/${stem}.json`);
+      // no-store, because a regenerated chart keeps its filename: a cached
+      // copy would show last month's figures with no way to tell. The Map
+      // above still means one fetch per chart per page load.
+      const r = await fetch(`charts/${stem}.json`, { cache: "no-store" });
       if (!r.ok) throw new Error(`${stem}: HTTP ${r.status}`);
       cache.set(stem, await r.json());
     }

@@ -10,7 +10,28 @@
    "label": "H1 FY26",
    "debt": 2.2,
    "fcf": -25.7,
-   "cash": 28.9
+   "cash": 28.9,
+   "debt_parts": [
+    {
+     "label": "Current leases",
+     "value": 1.0
+    },
+    {
+     "label": "Long-term leases",
+     "value": 1.1
+    }
+   ],
+   "cash_parts": [],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": -25.7
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -0.0
+    }
+   ]
   }
  ]
 }

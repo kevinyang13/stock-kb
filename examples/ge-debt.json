@@ -10,7 +10,49 @@
    "label": "Q3 FY26",
    "debt": 20588.0,
    "fcf": 1816.0,
-   "cash": 8264.0
+   "cash": 8264.0,
+   "debt_parts": [
+    {
+     "label": "Short-term debt",
+     "value": 480.0
+    },
+    {
+     "label": "Current portion",
+     "value": 1891.0
+    },
+    {
+     "label": "Long-term debt",
+     "value": 17096.0
+    },
+    {
+     "label": "Current leases",
+     "value": 296.0
+    },
+    {
+     "label": "Long-term leases",
+     "value": 825.0
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Short-term investments",
+     "value": 1500.0
+    },
+    {
+     "label": "Restricted cash (separate)",
+     "value": 500.0
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 2152.0
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -336.0
+    }
+   ]
   }
  ]
 }

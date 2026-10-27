@@ -20,7 +20,7 @@ import plotly.graph_objects as go
 SERIES = [
     ("debt", "Debt", "#e8537f"),
     ("fcf", "Free cash flow", "#2ab7ca"),
-    ("cash", "Cash &amp; equivalents", "#4a79dc"),
+    ("cash", "Cash \u0026 equivalents", "#4a79dc"),
 ]
 INK = "#12312c"
 # Narrow on purpose: this sits beside the sankey in one row, so the design
@@ -55,6 +55,62 @@ def money(m, cur="$"):
     return f"{sign}{cur}{a:,.1f}M"
 
 
+NBSP = "&#160;"       # plotly collapses runs of ordinary spaces in hover text
+RULE = "-"            # the subtotal rule, one monospace cell per character
+
+
+def block_unit(vals):
+    """One unit for a whole tooltip block, so its lines stay comparable.
+    Millions until the numbers get unwieldy, which keeps the common case
+    reading the way a filing does."""
+    top = max((abs(v) for v in vals), default=0)
+    if top < 1e5:
+        return "M", 1.0
+    if top < 1e8:
+        return "B", 1e3
+    return "T", 1e6
+
+
+def fmt_in(v, cur, unit, div):
+    a = abs(v) / div
+    dec = 0 if a >= 100 else 1
+    return f"{'-' if v < 0 else ''}{cur}{a:,.{dec}f}{unit}"
+
+
+def hover(title, rows, total, cur, notes=()):
+    """A monospace, column-aligned breakdown for one bar's tooltip."""
+    unit, div = block_unit([v for _, v in rows] + [total[1]] +
+                           [v for _, v in notes])
+    body = [(l, fmt_in(v, cur, unit, div)) for l, v in rows]
+    foot = (total[0], fmt_in(total[1], cur, unit, div))
+    tail = [(l, fmt_in(v, cur, unit, div)) for l, v in notes]
+
+    lw = max(len(l) for l, _ in body + [foot] + tail)
+    vw = max(len(v) for _, v in body + [foot] + tail)
+    line = lambda l, v: l + NBSP * (lw - len(l) + 3 + vw - len(v)) + v
+
+    out = [f"<b>{title}</b>", ""]
+    out += [line(l, v) for l, v in body]
+    if body:
+        out.append(RULE * (lw + 3 + vw))
+    out.append(f"<b>{line(*foot)}</b>")
+    if tail:
+        out += ["", "<i>not in this bar</i>"] + [line(l, v) for l, v in tail]
+    return "<br>".join(out)
+
+
+def tooltip(p, key, name, cur):
+    """What this bar is made of. Debt and cash are balance sheet figures at
+    the period end; free cash flow is the period's own flow."""
+    rows = [(d["label"], d["value"]) for d in p.get(f"{key}_parts") or []]
+    notes = ()
+    if key == "cash":
+        rows, notes = [], tuple((d["label"], d["value"])
+                                for d in p.get("cash_parts") or [])
+    return hover(f"{name} \u00b7 {p['label']}", rows, (name, p[key]),
+                 cur, notes)
+
+
 def build(spec):
     periods = spec["periods"]
     labels = [p["label"] for p in periods]
@@ -64,6 +120,7 @@ def build(spec):
 
     for key, name, color in SERIES:
         vals = [p[key] for p in periods]
+        tips = [tooltip(p, key, name, cur) for p in periods]
         fig.add_bar(
             name=name,
             x=labels,
@@ -75,9 +132,8 @@ def build(spec):
             textposition="outside",
             textfont=dict(size=11, color=INK),
             cliponaxis=False,
-            customdata=vals,
-            hovertemplate="<b>%{x} &middot; " + name + "</b><br>"
-                          + cur + "%{customdata:,.1f}M<extra></extra>",
+            customdata=tips,
+            hovertemplate="%{customdata}<extra></extra>",
         )
 
     lo = min(0.0, min(p["fcf"] for p in periods) / div)
@@ -114,6 +170,10 @@ def build(spec):
             bgcolor="rgba(0,0,0,0)", borderwidth=0,
             traceorder="normal", itemwidth=30,
         ),
+        hoverlabel=dict(align="left", bgcolor="#fbfbfb",
+                        bordercolor="#c9c9c9",
+                        font=dict(family="SFMono-Regular, Menlo, Consolas, "
+                                         "monospace", size=12, color=INK)),
         plot_bgcolor="#f2f2f2",
         paper_bgcolor="#f2f2f2",
         margin=dict(l=46, r=16, t=62, b=104),

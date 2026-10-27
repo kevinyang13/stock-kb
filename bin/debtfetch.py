@@ -142,12 +142,35 @@ def build(item, currency):
                               f"are present: {parts}")
         debt = 0
 
+    ocf, capex = at(cf, "ncfo", ci), at(cf, "capex", ci)
     fcf = at(cf, F_FCF, ci)
     if fcf is None:
-        ocf, capex = at(cf, "ncfo", ci), at(cf, "capex", ci)
         if ocf is None or capex is None:
             raise LookupError(f"{sym}: no free cash flow for {want}")
         fcf = ocf + capex         # capex is already negative
+
+    # What each bar is made of, for its tooltip. Only lines the source
+    # actually carries; anything the components do not account for is shown
+    # as a residual rather than quietly dropped.
+    def parts(pairs, total):
+        out = [(label, v) for label, f in pairs
+               for v in [at(bs, f, bi) or 0] if v]
+        rest = total - sum(v for _, v in out)
+        if out and abs(rest) > max(1e5, abs(total) * 0.005):
+            out.append(("Other", rest))
+        return [{"label": l, "value": round(v / 1e6, 1)} for l, v in out]
+
+    debt_parts = parts([("Short-term debt", "debtc"),
+                        ("Current portion", "currentPortDebt"),
+                        ("Long-term debt", "debtnc"),
+                        ("Current leases", "currentCapLeases"),
+                        ("Long-term leases", "capitalLeases")], debt)
+    cash_parts = []
+    for label, f in (("Short-term investments", "investmentsc"),
+                     ("Restricted cash (separate)", "restrictedCash")):
+        v = at(bs, f, bi)
+        if v:
+            cash_parts.append({"label": label, "value": round(v / 1e6, 1)})
 
     m = lambda v: round(v / 1e6, 1)
     flow = "half year" if "half year" in item.get("periodEnd", "") else "quarter"
@@ -162,8 +185,16 @@ def build(item, currency):
                   f"statement, column {want.isoformat()}. Debt and cash are "
                   f"balance sheet stocks at the period end; free cash flow is "
                   f"that {flow}'s flow.",
-        "periods": [{"label": item["period"], "debt": m(debt),
-                     "fcf": m(fcf), "cash": m(cash)}],
+        "periods": [{
+            "label": item["period"],
+            "debt": m(debt), "fcf": m(fcf), "cash": m(cash),
+            "debt_parts": debt_parts,
+            "cash_parts": cash_parts,
+            "fcf_parts": ([{"label": "Operating cash flow", "value": m(ocf)}]
+                          if ocf is not None else [])
+                         + ([{"label": "Capital expenditure", "value": m(capex)}]
+                            if capex is not None else []),
+        }],
     }
 
 

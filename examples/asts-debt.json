@@ -10,7 +10,41 @@
    "label": "Q2 FY26",
    "debt": 2993.7,
    "fcf": -694.8,
-   "cash": 2288.3
+   "cash": 2288.3,
+   "debt_parts": [
+    {
+     "label": "Current portion",
+     "value": 8.5
+    },
+    {
+     "label": "Long-term debt",
+     "value": 2963.4
+    },
+    {
+     "label": "Current leases",
+     "value": 3.7
+    },
+    {
+     "label": "Long-term leases",
+     "value": 18.1
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Restricted cash (separate)",
+     "value": 6.2
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": -97.2
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -597.6
+    }
+   ]
   }
  ]
 }

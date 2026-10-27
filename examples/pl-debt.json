@@ -10,7 +10,41 @@
    "label": "Q2 FY27",
    "debt": 498.6,
    "fcf": 25.6,
-   "cash": 415.1
+   "cash": 415.1,
+   "debt_parts": [
+    {
+     "label": "Long-term debt",
+     "value": 448.3
+    },
+    {
+     "label": "Current leases",
+     "value": 3.6
+    },
+    {
+     "label": "Long-term leases",
+     "value": 46.7
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Short-term investments",
+     "value": 450.3
+    },
+    {
+     "label": "Restricted cash (separate)",
+     "value": 1.9
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 52.9
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -27.3
+    }
+   ]
   }
  ]
 }
