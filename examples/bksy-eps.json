@@ -1,0 +1,58 @@
+{
+ "ticker": "BKSY",
+ "company": "BlackSky",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 6, 2025",
+   "actual": -0.35,
+   "estimate": -0.37,
+   "surprise": 0.02,
+   "surprisePct": 5.41
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 26, 2026",
+   "actual": -0.19,
+   "estimate": -0.25,
+   "surprise": 0.06,
+   "surprisePct": 24.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 7, 2026",
+   "actual": -0.82,
+   "estimate": -0.37,
+   "surprise": -0.45,
+   "surprisePct": -121.62
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 6, 2026",
+   "actual": -0.32,
+   "estimate": -0.38,
+   "surprise": 0.06,
+   "surprisePct": 15.79
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.25,
+   "high": -0.23,
+   "low": -0.26,
+   "analysts": 2,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 05, 2026"
+  }
+ ]
+}

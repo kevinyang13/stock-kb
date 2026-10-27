@@ -1,0 +1,58 @@
+{
+ "ticker": "LUNR",
+ "company": "Intuitive Machines",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 13, 2025",
+   "actual": -0.06,
+   "estimate": -0.04,
+   "surprise": -0.02,
+   "surprisePct": -50.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Mar 19, 2026",
+   "actual": -0.04,
+   "estimate": -0.04,
+   "surprise": 0.0,
+   "surprisePct": 0.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 14, 2026",
+   "actual": -0.18,
+   "estimate": -0.07,
+   "surprise": -0.11,
+   "surprisePct": -157.14
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 13, 2026",
+   "actual": -0.16,
+   "estimate": -0.07,
+   "surprise": -0.09,
+   "surprisePct": -128.57
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.12,
+   "high": -0.08,
+   "low": -0.14,
+   "analysts": 5,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 12, 2026"
+  }
+ ]
+}

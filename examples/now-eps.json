@@ -1,0 +1,58 @@
+{
+ "ticker": "NOW",
+ "company": "ServiceNow",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 29, 2025",
+   "actual": 0.59,
+   "estimate": 0.47,
+   "surprise": 0.12,
+   "surprisePct": 25.53
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 28, 2026",
+   "actual": 0.52,
+   "estimate": 0.48,
+   "surprise": 0.04,
+   "surprisePct": 8.33
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 22, 2026",
+   "actual": 0.49,
+   "estimate": 0.55,
+   "surprise": -0.06,
+   "surprisePct": -10.91
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 22, 2026",
+   "actual": 0.31,
+   "estimate": 0.4,
+   "surprise": -0.09,
+   "surprisePct": -22.5
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 0.56,
+   "high": 0.68,
+   "low": 0.44,
+   "analysts": 12,
+   "up": 0,
+   "down": 0,
+   "due": "Oct 28, 2026"
+  }
+ ]
+}

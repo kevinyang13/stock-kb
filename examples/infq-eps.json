@@ -1,0 +1,31 @@
+{
+ "ticker": "INFQ",
+ "company": "Infleqtion",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 12, 2026",
+   "actual": -0.06,
+   "estimate": -0.07,
+   "surprise": 0.01,
+   "surprisePct": 14.29
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.05,
+   "high": -0.05,
+   "low": -0.06,
+   "analysts": 3,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 11, 2026"
+  }
+ ]
+}

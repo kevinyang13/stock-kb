@@ -1,0 +1,58 @@
+{
+ "ticker": "RDW",
+ "company": "Redwire",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 5, 2025",
+   "actual": -0.21,
+   "estimate": -0.12,
+   "surprise": -0.09,
+   "surprisePct": -75.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 25, 2026",
+   "actual": -0.35,
+   "estimate": -0.16,
+   "surprise": -0.19,
+   "surprisePct": -118.75
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 6, 2026",
+   "actual": -0.18,
+   "estimate": -0.16,
+   "surprise": -0.02,
+   "surprisePct": -12.5
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 5, 2026",
+   "actual": -0.09,
+   "estimate": -0.18,
+   "surprise": 0.09,
+   "surprisePct": 50.0
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.1,
+   "high": -0.08,
+   "low": -0.12,
+   "analysts": 4,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 4, 2026"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "ticker": "MARA",
+ "company": "MARA Holdings",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 4, 2025",
+   "actual": -0.32,
+   "estimate": -0.26,
+   "surprise": -0.06,
+   "surprisePct": -23.08
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 26, 2026",
+   "actual": -0.46,
+   "estimate": -0.23,
+   "surprise": -0.23,
+   "surprisePct": -100.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 11, 2026",
+   "actual": -0.61,
+   "estimate": -0.46,
+   "surprise": -0.15,
+   "surprisePct": -32.61
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 6, 2026",
+   "actual": -0.7,
+   "estimate": -0.56,
+   "surprise": -0.14,
+   "surprisePct": -25.0
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.04,
+   "high": 1.04,
+   "low": -0.63,
+   "analysts": 3,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 3, 2026"
+  }
+ ]
+}

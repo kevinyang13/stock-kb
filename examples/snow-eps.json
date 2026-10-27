@@ -1,0 +1,58 @@
+{
+ "ticker": "SNOW",
+ "company": "Snowflake",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Oct '25",
+   "quarterEnd": "Oct 2025",
+   "reported": "Dec 3, 2025",
+   "actual": -0.84,
+   "estimate": -0.58,
+   "surprise": -0.26,
+   "surprisePct": -44.83
+  },
+  {
+   "label": "Jan '26",
+   "quarterEnd": "Jan 2026",
+   "reported": "Feb 25, 2026",
+   "actual": -0.8,
+   "estimate": -0.65,
+   "surprise": -0.15,
+   "surprisePct": -23.08
+  },
+  {
+   "label": "Apr '26",
+   "quarterEnd": "Apr 2026",
+   "reported": "May 27, 2026",
+   "actual": -0.7,
+   "estimate": -0.59,
+   "surprise": -0.11,
+   "surprisePct": -18.64
+  },
+  {
+   "label": "Jul '26",
+   "quarterEnd": "Jul 2026",
+   "reported": "Sep 2, 2026",
+   "actual": -0.44,
+   "estimate": -0.51,
+   "surprise": 0.07,
+   "surprisePct": 13.73
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Oct '26",
+   "quarterEnd": "Oct 2026",
+   "estimate": -0.32,
+   "high": -0.22,
+   "low": -0.47,
+   "analysts": 10,
+   "up": 0,
+   "down": 0,
+   "due": "Dec 2, 2026"
+  }
+ ]
+}

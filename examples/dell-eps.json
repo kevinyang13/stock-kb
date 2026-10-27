@@ -1,0 +1,58 @@
+{
+ "ticker": "DELL",
+ "company": "Dell Technologies",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Oct '25",
+   "quarterEnd": "Oct 2025",
+   "reported": "Nov 25, 2025",
+   "actual": 2.35,
+   "estimate": 2.26,
+   "surprise": 0.09,
+   "surprisePct": 3.98
+  },
+  {
+   "label": "Jan '26",
+   "quarterEnd": "Jan 2026",
+   "reported": "Feb 26, 2026",
+   "actual": 3.61,
+   "estimate": 3.32,
+   "surprise": 0.29,
+   "surprisePct": 8.73
+  },
+  {
+   "label": "Apr '26",
+   "quarterEnd": "Apr 2026",
+   "reported": "May 28, 2026",
+   "actual": 4.63,
+   "estimate": 2.79,
+   "surprise": 1.84,
+   "surprisePct": 65.95
+  },
+  {
+   "label": "Jul '26",
+   "quarterEnd": "Jul 2026",
+   "reported": "Sep 1, 2026",
+   "actual": 6.76,
+   "estimate": 4.72,
+   "surprise": 2.04,
+   "surprisePct": 43.22
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Oct '26",
+   "quarterEnd": "Oct 2026",
+   "estimate": 6.41,
+   "high": 7.13,
+   "low": 6.23,
+   "analysts": 8,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 24, 2026"
+  }
+ ]
+}

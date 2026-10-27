@@ -1,0 +1,58 @@
+{
+ "ticker": "HUT",
+ "company": "Hut 8",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 4, 2025",
+   "actual": -0.07,
+   "estimate": -0.16,
+   "surprise": 0.09,
+   "surprisePct": 56.25
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 25, 2026",
+   "actual": 0.36,
+   "estimate": -0.12,
+   "surprise": 0.48,
+   "surprisePct": 400.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 6, 2026",
+   "actual": -0.12,
+   "estimate": -0.28,
+   "surprise": 0.16,
+   "surprisePct": 57.14
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 4, 2026",
+   "actual": -0.26,
+   "estimate": -0.5,
+   "surprise": 0.24,
+   "surprisePct": 48.0
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -1.17,
+   "high": -0.59,
+   "low": -1.68,
+   "analysts": 5,
+   "up": 1,
+   "down": 1,
+   "due": "Nov 04, 2026"
+  }
+ ]
+}

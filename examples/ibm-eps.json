@@ -1,0 +1,57 @@
+{
+ "ticker": "IBM",
+ "company": "IBM",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 28, 2026",
+   "actual": 4.52,
+   "estimate": 4.33,
+   "surprise": 0.19,
+   "surprisePct": 4.39
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 22, 2026",
+   "actual": 1.91,
+   "estimate": 1.81,
+   "surprise": 0.1,
+   "surprisePct": 5.52
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 22, 2026",
+   "actual": 2.93,
+   "estimate": 2.93,
+   "surprise": 0.0,
+   "surprisePct": 0.0
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 21, 2026",
+   "actual": 2.95,
+   "estimate": 2.88,
+   "surprise": 0.07,
+   "surprisePct": 2.43
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 4.63,
+   "high": 4.73,
+   "low": 4.56,
+   "analysts": 7,
+   "up": 3,
+   "down": 1
+  }
+ ]
+}

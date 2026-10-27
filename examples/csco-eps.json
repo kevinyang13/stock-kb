@@ -1,0 +1,58 @@
+{
+ "ticker": "CSCO",
+ "company": "Cisco",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Oct '25",
+   "quarterEnd": "Oct 2025",
+   "reported": "Nov 12, 2025",
+   "actual": 0.81,
+   "estimate": 0.8,
+   "surprise": 0.01,
+   "surprisePct": 1.25
+  },
+  {
+   "label": "Jan '26",
+   "quarterEnd": "Jan 2026",
+   "reported": "Feb 11, 2026",
+   "actual": 0.88,
+   "estimate": 0.82,
+   "surprise": 0.06,
+   "surprisePct": 7.32
+  },
+  {
+   "label": "Apr '26",
+   "quarterEnd": "Apr 2026",
+   "reported": "May 13, 2026",
+   "actual": 0.9,
+   "estimate": 0.86,
+   "surprise": 0.04,
+   "surprisePct": 4.65
+  },
+  {
+   "label": "Jul '26",
+   "quarterEnd": "Jul 2026",
+   "reported": "Aug 12, 2026",
+   "actual": 1.08,
+   "estimate": 0.99,
+   "surprise": 0.09,
+   "surprisePct": 9.09
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Oct '26",
+   "quarterEnd": "Oct 2026",
+   "estimate": 1.15,
+   "high": 1.19,
+   "low": 1.11,
+   "analysts": 8,
+   "up": 1,
+   "down": 0,
+   "due": "Nov 11, 2026"
+  }
+ ]
+}

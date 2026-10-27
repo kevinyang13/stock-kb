@@ -1,0 +1,57 @@
+{
+ "ticker": "NFLX",
+ "company": "Netflix",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 20, 2026",
+   "actual": 0.56,
+   "estimate": 0.55,
+   "surprise": 0.01,
+   "surprisePct": 1.82
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 16, 2026",
+   "actual": 0.7,
+   "estimate": 0.76,
+   "surprise": -0.06,
+   "surprisePct": -7.89
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 16, 2026",
+   "actual": 0.8,
+   "estimate": 0.79,
+   "surprise": 0.01,
+   "surprisePct": 1.27
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 20, 2026",
+   "actual": 0.87,
+   "estimate": 0.82,
+   "surprise": 0.05,
+   "surprisePct": 6.1
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 0.67,
+   "high": 0.71,
+   "low": 0.66,
+   "analysts": 11,
+   "up": 0,
+   "down": 10
+  }
+ ]
+}

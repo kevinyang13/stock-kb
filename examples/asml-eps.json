@@ -1,0 +1,57 @@
+{
+ "ticker": "ASML",
+ "company": "ASML",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 28, 2026",
+   "actual": 8.55,
+   "estimate": 9.01,
+   "surprise": -0.46,
+   "surprisePct": -5.11
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 15, 2026",
+   "actual": 8.37,
+   "estimate": 7.72,
+   "surprise": 0.65,
+   "surprisePct": 8.42
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 15, 2026",
+   "actual": 8.81,
+   "estimate": 7.98,
+   "surprise": 0.83,
+   "surprisePct": 10.4
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 14, 2026",
+   "actual": 14.89,
+   "estimate": 12.47,
+   "surprise": 2.42,
+   "surprisePct": 19.41
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 17.22,
+   "high": 18.04,
+   "low": 16.53,
+   "analysts": 3,
+   "up": 2,
+   "down": 0
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "ticker": "PLTR",
+ "company": "Palantir",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 3, 2025",
+   "actual": 0.18,
+   "estimate": 0.12,
+   "surprise": 0.06,
+   "surprisePct": 50.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 2, 2026",
+   "actual": 0.24,
+   "estimate": 0.17,
+   "surprise": 0.07,
+   "surprisePct": 41.18
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 4, 2026",
+   "actual": 0.25,
+   "estimate": 0.22,
+   "surprise": 0.03,
+   "surprisePct": 13.64
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 3, 2026",
+   "actual": 0.31,
+   "estimate": 0.28,
+   "surprise": 0.03,
+   "surprisePct": 10.71
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 0.34,
+   "high": 0.43,
+   "low": 0.29,
+   "analysts": 9,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 02, 2026"
+  }
+ ]
+}

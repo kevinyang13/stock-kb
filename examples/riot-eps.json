@@ -1,0 +1,58 @@
+{
+ "ticker": "RIOT",
+ "company": "Riot Platforms",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 30, 2025",
+   "actual": 0.26,
+   "estimate": -0.19,
+   "surprise": 0.45,
+   "surprisePct": 236.84
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Mar 2, 2026",
+   "actual": -2.03,
+   "estimate": -0.22,
+   "surprise": -1.81,
+   "surprisePct": -822.73
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 30, 2026",
+   "actual": -1.44,
+   "estimate": -0.33,
+   "surprise": -1.11,
+   "surprisePct": -336.36
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 10, 2026",
+   "actual": -0.68,
+   "estimate": -0.39,
+   "surprise": -0.29,
+   "surprisePct": -74.36
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.34,
+   "high": -0.25,
+   "low": -0.43,
+   "analysts": 6,
+   "up": 0,
+   "down": 1,
+   "due": "Nov 04, 2026"
+  }
+ ]
+}

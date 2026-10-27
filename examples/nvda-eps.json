@@ -1,0 +1,58 @@
+{
+ "ticker": "NVDA",
+ "company": "NVIDIA",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Oct '25",
+   "quarterEnd": "Oct 2025",
+   "reported": "Nov 19, 2025",
+   "actual": 1.24,
+   "estimate": 1.18,
+   "surprise": 0.06,
+   "surprisePct": 5.08
+  },
+  {
+   "label": "Jan '26",
+   "quarterEnd": "Jan 2026",
+   "reported": "Feb 25, 2026",
+   "actual": 1.57,
+   "estimate": 1.45,
+   "surprise": 0.12,
+   "surprisePct": 8.28
+  },
+  {
+   "label": "Apr '26",
+   "quarterEnd": "Apr 2026",
+   "reported": "May 20, 2026",
+   "actual": 1.87,
+   "estimate": 1.7,
+   "surprise": 0.17,
+   "surprisePct": 10.0
+  },
+  {
+   "label": "Jul '26",
+   "quarterEnd": "Jul 2026",
+   "reported": "Aug 26, 2026",
+   "actual": 2.22,
+   "estimate": 2.09,
+   "surprise": 0.13,
+   "surprisePct": 6.22
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Oct '26",
+   "quarterEnd": "Oct 2026",
+   "estimate": 2.49,
+   "high": 2.7,
+   "low": 2.34,
+   "analysts": 13,
+   "up": 1,
+   "down": 0,
+   "due": "Nov 18, 2026"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "ticker": "QBTS",
+ "company": "D-Wave Quantum",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 6, 2025",
+   "actual": -0.41,
+   "estimate": -0.07,
+   "surprise": -0.34,
+   "surprisePct": -485.71
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 26, 2026",
+   "actual": -0.12,
+   "estimate": -0.05,
+   "surprise": -0.07,
+   "surprisePct": -140.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 12, 2026",
+   "actual": -0.05,
+   "estimate": -0.1,
+   "surprise": 0.05,
+   "surprisePct": 50.0
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 6, 2026",
+   "actual": -0.13,
+   "estimate": -0.12,
+   "surprise": -0.01,
+   "surprisePct": -8.33
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.1,
+   "high": -0.05,
+   "low": -0.15,
+   "analysts": 2,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 5, 2026"
+  }
+ ]
+}

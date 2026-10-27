@@ -1,0 +1,57 @@
+{
+ "ticker": "T",
+ "company": "AT&T",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 28, 2026",
+   "actual": 0.52,
+   "estimate": 0.46,
+   "surprise": 0.06,
+   "surprisePct": 13.04
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 22, 2026",
+   "actual": 0.57,
+   "estimate": 0.55,
+   "surprise": 0.02,
+   "surprisePct": 3.64
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 22, 2026",
+   "actual": 0.65,
+   "estimate": 0.59,
+   "surprise": 0.06,
+   "surprisePct": 10.17
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 21, 2026",
+   "actual": 0.65,
+   "estimate": 0.61,
+   "surprise": 0.04,
+   "surprisePct": 6.56
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 0.52,
+   "high": 0.55,
+   "low": 0.51,
+   "analysts": 7,
+   "up": 3,
+   "down": 0
+  }
+ ]
+}

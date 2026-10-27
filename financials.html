@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Financials</title>
-<link rel="stylesheet" href="assets/site.css?v=1793061029">
+<link rel="stylesheet" href="assets/site.css?v=1793078783">
 </head>
 <body>
 
@@ -31,8 +31,8 @@
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-<script src="assets/sankey.js?v=1793061029"></script>
-<script src="assets/site.js?v=1793061029"></script>
+<script src="assets/sankey.js?v=1793078783"></script>
+<script src="assets/site.js?v=1793078783"></script>
 <script>
 Site.nav();
 
@@ -44,6 +44,7 @@ Site.nav();
   var finPick = 0;
   var chartEl = null;
   var debtEl = null;
+  var epsEl = null;
 
   function finCard(f) {
     var kpis = (f.highlights || []).map(function (h) {
@@ -66,6 +67,9 @@ Site.nav();
         '<figure class="fin-fig"><div class="fin-chart" id="fin-chart"></div></figure>' +
         (f.debt
           ? '<figure class="fin-fig fin-fig-debt"><div class="fin-chart" id="fin-debt"></div></figure>'
+          : "") +
+        (f.eps
+          ? '<figure class="fin-fig fin-fig-eps"><div class="fin-chart" id="fin-eps"></div></figure>'
           : "") +
       "</div>" +
       '<div class="fin-tools">' +
@@ -91,11 +95,13 @@ Site.nav();
     var body = document.getElementById("fin-body");
     if (chartEl) Sankey.unmount(chartEl);   // innerHTML is about to drop it
     if (debtEl) Sankey.unmount(debtEl);
-    chartEl = debtEl = null;
+    if (epsEl) Sankey.unmount(epsEl);
+    chartEl = debtEl = epsEl = null;
     body.innerHTML = finItems.length ? finCard(finItems[finPick]) : "";
     if (finItems.length) {
       drawChart(finItems[finPick]);
       drawDebt(finItems[finPick]);
+      drawEps(finItems[finPick]);
     }
   }
 
@@ -116,6 +122,25 @@ Site.nav();
       })
       .catch(function () {
         if (el === debtEl && el.parentElement) el.parentElement.remove();
+      });
+  }
+
+  // Actual against street estimate, four reported quarters and the one still
+  // ahead. Adjusted EPS, which is not the GAAP figure the sankey is built
+  // from - the hover and the card note both say so.
+  function drawEps(f) {
+    epsEl = document.getElementById("fin-eps");
+    if (!epsEl || !f.eps) { epsEl = null; return; }
+    if (typeof Plotly === "undefined" || typeof Sankey === "undefined") return;
+
+    var el = epsEl;
+    Sankey.load(f.eps)
+      .then(function (fig) {
+        if (el !== epsEl) return;          // the ticker changed while fetching
+        Sankey.mount(el, fig);
+      })
+      .catch(function () {
+        if (el === epsEl && el.parentElement) el.parentElement.remove();
       });
   }
 

@@ -1,0 +1,58 @@
+{
+ "ticker": "MSTR",
+ "company": "Strategy",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 30, 2025",
+   "actual": 8.42,
+   "estimate": -0.11,
+   "surprise": 8.53,
+   "surprisePct": 7754.55
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 5, 2026",
+   "actual": -42.93,
+   "estimate": 46.02,
+   "surprise": -88.95,
+   "surprisePct": -193.29
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 5, 2026",
+   "actual": -38.25,
+   "estimate": -3.41,
+   "surprise": -34.84,
+   "surprisePct": -1021.7
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 30, 2026",
+   "actual": -24.45,
+   "estimate": 52.04,
+   "surprise": -76.49,
+   "surprisePct": -146.98
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 21.5,
+   "high": 52.82,
+   "low": -0.9,
+   "analysts": 3,
+   "up": 0,
+   "down": 0,
+   "due": "Oct 29, 2026"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "ticker": "ASTS",
+ "company": "AST SpaceMobile",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 10, 2025",
+   "actual": -0.45,
+   "estimate": -0.18,
+   "surprise": -0.27,
+   "surprisePct": -150.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Mar 2, 2026",
+   "actual": -0.26,
+   "estimate": -0.18,
+   "surprise": -0.08,
+   "surprisePct": -44.44
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 11, 2026",
+   "actual": -0.66,
+   "estimate": -0.23,
+   "surprise": -0.43,
+   "surprisePct": -186.96
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 10, 2026",
+   "actual": -0.44,
+   "estimate": -0.28,
+   "surprise": -0.16,
+   "surprisePct": -57.14
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.41,
+   "high": -0.22,
+   "low": -0.6,
+   "analysts": 7,
+   "up": 1,
+   "down": 3,
+   "due": "Nov 9, 2026"
+  }
+ ]
+}

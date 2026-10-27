@@ -1,0 +1,58 @@
+{
+ "ticker": "CRWV",
+ "company": "CoreWeave",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 10, 2025",
+   "actual": -0.31,
+   "estimate": -0.54,
+   "surprise": 0.23,
+   "surprisePct": 42.59
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 26, 2026",
+   "actual": -0.84,
+   "estimate": -0.61,
+   "surprise": -0.23,
+   "surprisePct": -37.7
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 7, 2026",
+   "actual": -1.38,
+   "estimate": -1.17,
+   "surprise": -0.21,
+   "surprisePct": -17.95
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 11, 2026",
+   "actual": -1.32,
+   "estimate": -1.52,
+   "surprise": 0.2,
+   "surprisePct": 13.16
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -1.45,
+   "high": -0.5,
+   "low": -1.72,
+   "analysts": 10,
+   "up": 1,
+   "down": 2,
+   "due": "Nov 9, 2026"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "ticker": "HD",
+ "company": "Home Depot",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Oct '25",
+   "quarterEnd": "Oct 2025",
+   "reported": "Nov 18, 2025",
+   "actual": 3.74,
+   "estimate": 3.81,
+   "surprise": -0.07,
+   "surprisePct": -1.84
+  },
+  {
+   "label": "Jan '26",
+   "quarterEnd": "Jan 2026",
+   "reported": "Feb 24, 2026",
+   "actual": 2.72,
+   "estimate": 2.52,
+   "surprise": 0.2,
+   "surprisePct": 7.94
+  },
+  {
+   "label": "Apr '26",
+   "quarterEnd": "Apr 2026",
+   "reported": "May 19, 2026",
+   "actual": 3.43,
+   "estimate": 3.4,
+   "surprise": 0.03,
+   "surprisePct": 0.88
+  },
+  {
+   "label": "Jul '26",
+   "quarterEnd": "Jul 2026",
+   "reported": "Aug 18, 2026",
+   "actual": 4.92,
+   "estimate": 4.71,
+   "surprise": 0.21,
+   "surprisePct": 4.46
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Oct '26",
+   "quarterEnd": "Oct 2026",
+   "estimate": 3.86,
+   "high": 3.98,
+   "low": 3.74,
+   "analysts": 11,
+   "up": 0,
+   "down": 1,
+   "due": "Nov 17, 2026"
+  }
+ ]
+}

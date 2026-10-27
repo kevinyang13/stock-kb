@@ -1,0 +1,58 @@
+{
+ "ticker": "AMD",
+ "company": "AMD",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 4, 2025",
+   "actual": 0.97,
+   "estimate": 0.97,
+   "surprise": 0.0,
+   "surprisePct": 0.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 3, 2026",
+   "actual": 1.24,
+   "estimate": 1.11,
+   "surprise": 0.13,
+   "surprisePct": 11.71
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 5, 2026",
+   "actual": 1.11,
+   "estimate": 1.06,
+   "surprise": 0.05,
+   "surprisePct": 4.72
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 4, 2026",
+   "actual": 1.44,
+   "estimate": 1.35,
+   "surprise": 0.09,
+   "surprisePct": 6.67
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 1.68,
+   "high": 1.84,
+   "low": 1.46,
+   "analysts": 13,
+   "up": 3,
+   "down": 1,
+   "due": "Nov 03, 2026"
+  }
+ ]
+}

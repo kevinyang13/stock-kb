@@ -1,0 +1,58 @@
+{
+ "ticker": "OUST",
+ "company": "Ouster",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 4, 2025",
+   "actual": -0.37,
+   "estimate": -0.43,
+   "surprise": 0.06,
+   "surprisePct": 13.95
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Mar 2, 2026",
+   "actual": 0.06,
+   "estimate": -0.39,
+   "surprise": 0.45,
+   "surprisePct": 115.38
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 5, 2026",
+   "actual": -0.25,
+   "estimate": -0.31,
+   "surprise": 0.06,
+   "surprisePct": 19.35
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 6, 2026",
+   "actual": -0.26,
+   "estimate": -0.31,
+   "surprise": 0.05,
+   "surprisePct": 16.13
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.3,
+   "high": -0.3,
+   "low": -0.3,
+   "analysts": 1,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 03, 2026"
+  }
+ ]
+}

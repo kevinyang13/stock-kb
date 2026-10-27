@@ -1,0 +1,58 @@
+{
+ "ticker": "INTC",
+ "company": "Intel",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 23, 2025",
+   "actual": 0.11,
+   "estimate": -0.11,
+   "surprise": 0.22,
+   "surprisePct": 200.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 22, 2026",
+   "actual": 0.04,
+   "estimate": -0.02,
+   "surprise": 0.06,
+   "surprisePct": 300.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 23, 2026",
+   "actual": 0.17,
+   "estimate": -0.1,
+   "surprise": 0.27,
+   "surprisePct": 270.0
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 23, 2026",
+   "actual": 0.3,
+   "estimate": 0.1,
+   "surprise": 0.2,
+   "surprisePct": 200.0
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 0.28,
+   "high": 0.3,
+   "low": 0.26,
+   "analysts": 13,
+   "up": 2,
+   "down": 0,
+   "due": "Oct 29, 2026"
+  }
+ ]
+}

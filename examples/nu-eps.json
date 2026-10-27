@@ -1,0 +1,58 @@
+{
+ "ticker": "NU",
+ "company": "Nu Holdings",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 13, 2025",
+   "actual": 0.17,
+   "estimate": 0.15,
+   "surprise": 0.02,
+   "surprisePct": 13.33
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 25, 2026",
+   "actual": 0.19,
+   "estimate": 0.18,
+   "surprise": 0.01,
+   "surprisePct": 5.56
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 14, 2026",
+   "actual": 0.19,
+   "estimate": 0.2,
+   "surprise": -0.01,
+   "surprisePct": -5.0
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 13, 2026",
+   "actual": 0.22,
+   "estimate": 0.2,
+   "surprise": 0.02,
+   "surprisePct": 10.0
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 0.23,
+   "high": 0.24,
+   "low": 0.22,
+   "analysts": 4,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 12, 2026"
+  }
+ ]
+}

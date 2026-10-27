@@ -1,0 +1,57 @@
+{
+ "ticker": "PHM",
+ "company": "PulteGroup",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 29, 2026",
+   "actual": 2.88,
+   "estimate": 2.78,
+   "surprise": 0.1,
+   "surprisePct": 3.6
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 23, 2026",
+   "actual": 1.79,
+   "estimate": 1.8,
+   "surprise": -0.01,
+   "surprisePct": -0.56
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 22, 2026",
+   "actual": 2.48,
+   "estimate": 2.38,
+   "surprise": 0.1,
+   "surprisePct": 4.2
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 22, 2026",
+   "actual": 2.53,
+   "estimate": 2.63,
+   "surprise": -0.1,
+   "surprisePct": -3.8
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 3.08,
+   "high": 3.32,
+   "low": 2.52,
+   "analysts": 6,
+   "up": 0,
+   "down": 1
+  }
+ ]
+}

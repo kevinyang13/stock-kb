@@ -1,0 +1,58 @@
+{
+ "ticker": "IONQ",
+ "company": "IonQ",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 5, 2025",
+   "actual": -3.58,
+   "estimate": -0.44,
+   "surprise": -3.14,
+   "surprisePct": -713.64
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 25, 2026",
+   "actual": 1.93,
+   "estimate": -0.48,
+   "surprise": 2.41,
+   "surprisePct": 502.08
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 6, 2026",
+   "actual": -0.73,
+   "estimate": -0.55,
+   "surprise": -0.18,
+   "surprisePct": -32.73
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 5, 2026",
+   "actual": -0.72,
+   "estimate": -0.59,
+   "surprise": -0.13,
+   "surprisePct": -22.03
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.79,
+   "high": -0.79,
+   "low": -0.79,
+   "analysts": 1,
+   "up": 0,
+   "down": 1,
+   "due": "Nov 05, 2026"
+  }
+ ]
+}

@@ -214,13 +214,19 @@
     display:flex;justify-content:center;align-items:flex-start;min-height:120px}
   .fin-fig img{display:block;width:100%;height:auto}
   .fin-chart{flex:0 0 auto}
-  /* The two figures share one row. The sankey takes what is left after the
-     debt bars, which are drawn narrow on purpose; min-width:0 lets it shrink
-     below its content, and the flex-basis is the width under which the row
-     wraps and the charts stack instead. */
+  /* The figures share one row. The sankey takes what is left after the two
+     side charts, which are drawn narrow on purpose; min-width:0 lets it
+     shrink below its content, and the flex-basis is the width under which the
+     row wraps and the charts stack instead. The side charts do not grow: a
+     wrapped row would otherwise stretch a 430px chart across the page. */
   .fin-row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:14px}
-  .fin-row>.fin-fig{flex:1 1 620px;min-width:0}
+  /* min-width:0 alone let the sankey collapse to nothing once two side
+     charts shared the row. The floor is what the sankey needs to stay
+     readable, so on a 1440 screen the earnings dots wrap underneath
+     rather than squeezing it; past about 1900 all three fit in a row. */
+  .fin-row>.fin-fig{flex:1 1 620px;min-width:min(100%,760px)}
   .fin-row>.fin-fig-debt{flex:0 1 330px;min-width:290px}
+  .fin-row>.fin-fig-eps{flex:0 1 430px;min-width:300px}
   .fin-fig.is-panning{cursor:grab}
   .fin-fig.is-dragging{cursor:grabbing}
   .fin-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:8px 0 0}

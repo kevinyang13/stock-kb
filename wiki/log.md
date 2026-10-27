@@ -948,3 +948,63 @@ rectangle and the value is partly covered. It predates this change — the publi
 and is a layout problem for the renderer, not the data. Also SKHY's Q2 FY26 statement shows ₩79.3T
 of revenue with ₩93.8T of net profit, net profit above revenue on ₩62.1T of non-operating income;
 the figures agree with the aggregator but the shape is odd enough to be worth a look.
+
+---
+
+## 2026-10-26 — Earnings: actual against estimate, on 63 cards
+
+**What changed**: a third figure on each Financials card. One column per quarter — a filled dot for
+what the company earned, a hollow one for what the street expected, a hairline joining the pair —
+four reported quarters and the one still ahead, which carries a consensus and no actual. Full
+description in [[earnings-surprise-chart]].
+
+- `bin/epsfetch.py` (new) — Nasdaq's `earnings-surprise`, `earnings-forecast` and `earnings-date`
+  endpoints, which carry Zacks' consensus, into `examples/<t>-eps.json`.
+- `bin/epsdots.py` (new) — the figure, same JSON pipeline as the sankey and the debt bars.
+- `bin/epsnotes.py` (new) — links the chart on the card and writes the note.
+- `financials.html`, `assets/site.css`, `assets/sankey.js` — a third figure slot, and marker sizes
+  now scale with the rest of the figure.
+
+**63 of 66 cards carry it.** Nintendo (7974) is not on Nasdaq, Arqit has no surprise history
+published, and Xanadu has no reported quarters. Those three draw nothing rather than an empty
+frame.
+
+**The basis warning is the point of the note.** The sankey on the same card is GAAP, from the
+filing. This chart is adjusted EPS, the basis the street scores against. The two differ by whatever
+a company excludes, and for some names that is most of the number — NBIS reports -$0.12 adjusted
+against a GAAP loss of a different size entirely. For a foreign filer it is also the ADR's earnings
+per share in US dollars: TSM files in New Taiwan dollars and charts at $4.60 per ADR. Both facts
+are in the card note and the hover.
+
+**A guard that was wrong, and how it showed.** The fetcher asks Nasdaq for the company name first
+and refuses the ticker if the name does not match the card — tickers are reused, and a chart drawn
+from another company's earnings would look entirely plausible. The first run rejected 21 of 66, and
+18 of those were the guard's fault, not the data's: it split names on whitespace without stripping
+punctuation, so "Tesla, Inc." tokenised as `tesla,` and matched nothing. Every *Name, Inc.* on the
+list failed. Two further shapes failed honestly — a short card name that shares no word with the
+registered one (AMD against Advanced Micro Devices, IBM against International Business Machines,
+TSMC against Taiwan Semiconductor Manufacturing, SpaceX against Space Exploration Technologies),
+and "Nu Holdings", which reduced to an empty set because `nu` is two letters and `holdings` is a
+noise word.
+
+It now recognises a name four ways — a shared word, one word prefixing another, the card's name
+matching the registered name's initials, or equal first tokens. Checked against decoys before
+rerunning: MDA Space against Medallia, Planet Labs against Pitney Bowes, Firefly against Fly
+Leasing and Nebius against Nuveen are all still refused.
+
+**A rejection that looks like a refusal is worth re-reading.** This is the second time a
+self-policing rule here has hidden its own bug — the first was `yoyfetch.py` silently skipping SK
+Hynix because its divisor had no entry for trillions. A guard that refuses 21 names needs its
+refusals read one by one, because a correct refusal and a broken test look identical from outside.
+
+**Layout**: the sankey now has a 760px floor, so on a 1440px screen the debt bars sit beside it and
+the earnings dots wrap underneath; past about 1900px all three share a row. Without the floor
+`min-width:0` let the sankey collapse to 2px the moment a third chart joined. Checked at 375px too:
+no horizontal page scroll.
+
+**Verification**: 63 rendered with no validator warnings — a quarter is either reported, with both
+figures, or ahead with no actual, and nothing in between is drawn. Five cards opened in the browser
+(NVDA, TSM, 7974, NBIS, RGTI): three figures each except Nintendo, which draws one. Hovers read
+back live, both the reported dot (`Sep '26 · reported Oct 15, 2026 / actual $4.60 / estimate $4.45
+/ surprise +$0.15 (+3%)`) and the unreported one (`Dec '26 · not reported yet / consensus $5.22 /
+range $5.12 to $5.52 / estimates 6 (5 up in 4 weeks) / no actual yet`).

@@ -1,0 +1,57 @@
+{
+ "ticker": "TSM",
+ "company": "TSMC",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 15, 2026",
+   "actual": 3.14,
+   "estimate": 2.82,
+   "surprise": 0.32,
+   "surprisePct": 11.35
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 16, 2026",
+   "actual": 3.49,
+   "estimate": 3.31,
+   "surprise": 0.18,
+   "surprisePct": 5.44
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 16, 2026",
+   "actual": 4.31,
+   "estimate": 3.87,
+   "surprise": 0.44,
+   "surprisePct": 11.37
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 15, 2026",
+   "actual": 4.6,
+   "estimate": 4.45,
+   "surprise": 0.15,
+   "surprisePct": 3.37
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 5.22,
+   "high": 5.52,
+   "low": 5.12,
+   "analysts": 6,
+   "up": 5,
+   "down": 0
+  }
+ ]
+}

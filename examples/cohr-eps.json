@@ -1,0 +1,58 @@
+{
+ "ticker": "COHR",
+ "company": "Coherent",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 5, 2025",
+   "actual": 0.93,
+   "estimate": 0.85,
+   "surprise": 0.08,
+   "surprisePct": 9.41
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 4, 2026",
+   "actual": 1.11,
+   "estimate": 1.03,
+   "surprise": 0.08,
+   "surprisePct": 7.77
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 6, 2026",
+   "actual": 1.21,
+   "estimate": 1.23,
+   "surprise": -0.02,
+   "surprisePct": -1.63
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 12, 2026",
+   "actual": 1.47,
+   "estimate": 1.43,
+   "surprise": 0.04,
+   "surprisePct": 2.8
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 1.78,
+   "high": 1.84,
+   "low": 1.73,
+   "analysts": 8,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 04, 2026"
+  }
+ ]
+}

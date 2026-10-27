@@ -1,0 +1,57 @@
+{
+ "ticker": "BA",
+ "company": "Boeing",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 29, 2025",
+   "actual": -7.47,
+   "estimate": -3.85,
+   "surprise": -3.62,
+   "surprisePct": -94.03
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 27, 2026",
+   "actual": -1.91,
+   "estimate": -0.4,
+   "surprise": -1.51,
+   "surprisePct": -377.5
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 22, 2026",
+   "actual": -0.2,
+   "estimate": -0.95,
+   "surprise": 0.75,
+   "surprisePct": 78.95
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 28, 2026",
+   "actual": -0.76,
+   "estimate": -0.34,
+   "surprise": -0.42,
+   "surprisePct": -123.53
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.21,
+   "high": -0.01,
+   "low": -0.4,
+   "analysts": 7,
+   "up": 0,
+   "down": 4
+  }
+ ]
+}

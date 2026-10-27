@@ -1,0 +1,58 @@
+{
+ "ticker": "AAPL",
+ "company": "Apple",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 30, 2025",
+   "actual": 1.85,
+   "estimate": 1.73,
+   "surprise": 0.12,
+   "surprisePct": 6.94
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 29, 2026",
+   "actual": 2.84,
+   "estimate": 2.65,
+   "surprise": 0.19,
+   "surprisePct": 7.17
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 30, 2026",
+   "actual": 2.01,
+   "estimate": 1.92,
+   "surprise": 0.09,
+   "surprisePct": 4.69
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 30, 2026",
+   "actual": 1.91,
+   "estimate": 1.88,
+   "surprise": 0.03,
+   "surprisePct": 1.6
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 2.0,
+   "high": 2.09,
+   "low": 1.96,
+   "analysts": 8,
+   "up": 1,
+   "down": 0,
+   "due": "Nov 02, 2026"
+  }
+ ]
+}

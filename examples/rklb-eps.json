@@ -1,0 +1,58 @@
+{
+ "ticker": "RKLB",
+ "company": "Rocket Lab",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 10, 2025",
+   "actual": -0.01,
+   "estimate": -0.09,
+   "surprise": 0.08,
+   "surprisePct": 88.89
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 26, 2026",
+   "actual": -0.1,
+   "estimate": -0.08,
+   "surprise": -0.02,
+   "surprisePct": -25.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 7, 2026",
+   "actual": -0.06,
+   "estimate": -0.07,
+   "surprise": 0.01,
+   "surprisePct": 14.29
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 10, 2026",
+   "actual": -0.06,
+   "estimate": -0.07,
+   "surprise": 0.01,
+   "surprisePct": 14.29
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.05,
+   "high": -0.05,
+   "low": -0.06,
+   "analysts": 2,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 09, 2026"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "ticker": "AMZN",
+ "company": "Amazon",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 30, 2025",
+   "actual": 1.95,
+   "estimate": 1.58,
+   "surprise": 0.37,
+   "surprisePct": 23.42
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 5, 2026",
+   "actual": 1.95,
+   "estimate": 1.98,
+   "surprise": -0.03,
+   "surprisePct": -1.52
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 29, 2026",
+   "actual": 1.56,
+   "estimate": 1.6,
+   "surprise": -0.04,
+   "surprisePct": -2.5
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 30, 2026",
+   "actual": 1.88,
+   "estimate": 1.83,
+   "surprise": 0.05,
+   "surprisePct": 2.73
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 2.01,
+   "high": 2.23,
+   "low": 1.87,
+   "analysts": 14,
+   "up": 2,
+   "down": 2,
+   "due": "Oct 29, 2026"
+  }
+ ]
+}

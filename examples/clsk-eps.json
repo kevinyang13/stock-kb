@@ -1,0 +1,58 @@
+{
+ "ticker": "CLSK",
+ "company": "CleanSpark",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 25, 2025",
+   "actual": -0.01,
+   "estimate": 0.04,
+   "surprise": -0.05,
+   "surprisePct": -125.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 5, 2026",
+   "actual": -0.1,
+   "estimate": -0.08,
+   "surprise": -0.02,
+   "surprisePct": -25.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 11, 2026",
+   "actual": -0.52,
+   "estimate": -0.25,
+   "surprise": -0.27,
+   "surprisePct": -108.0
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 6, 2026",
+   "actual": -0.4,
+   "estimate": -0.3,
+   "surprise": -0.1,
+   "surprisePct": -33.33
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.36,
+   "high": -0.27,
+   "low": -0.43,
+   "analysts": 3,
+   "up": 1,
+   "down": 0,
+   "due": "Nov 24, 2026"
+  }
+ ]
+}

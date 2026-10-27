@@ -1,0 +1,58 @@
+{
+ "ticker": "MSFT",
+ "company": "Microsoft",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 29, 2025",
+   "actual": 4.13,
+   "estimate": 3.65,
+   "surprise": 0.48,
+   "surprisePct": 13.15
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 28, 2026",
+   "actual": 4.14,
+   "estimate": 3.88,
+   "surprise": 0.26,
+   "surprisePct": 6.7
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 29, 2026",
+   "actual": 4.27,
+   "estimate": 4.07,
+   "surprise": 0.2,
+   "surprisePct": 4.91
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 29, 2026",
+   "actual": 4.74,
+   "estimate": 4.21,
+   "surprise": 0.53,
+   "surprisePct": 12.59
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 4.71,
+   "high": 4.84,
+   "low": 4.62,
+   "analysts": 14,
+   "up": 1,
+   "down": 2,
+   "due": "Oct 28, 2026"
+  }
+ ]
+}

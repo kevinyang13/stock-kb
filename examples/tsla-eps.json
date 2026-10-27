@@ -1,0 +1,57 @@
+{
+ "ticker": "TSLA",
+ "company": "Tesla",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 28, 2026",
+   "actual": 0.31,
+   "estimate": 0.34,
+   "surprise": -0.03,
+   "surprisePct": -8.82
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 22, 2026",
+   "actual": 0.18,
+   "estimate": 0.21,
+   "surprise": -0.03,
+   "surprisePct": -14.29
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 22, 2026",
+   "actual": 0.04,
+   "estimate": 0.32,
+   "surprise": -0.28,
+   "surprisePct": -87.5
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 21, 2026",
+   "actual": 0.2,
+   "estimate": 0.22,
+   "surprise": -0.02,
+   "surprisePct": -9.09
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 0.25,
+   "high": 0.73,
+   "low": 0.05,
+   "analysts": 10,
+   "up": 1,
+   "down": 5
+  }
+ ]
+}

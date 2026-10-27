@@ -1,0 +1,58 @@
+{
+ "ticker": "INTU",
+ "company": "Intuit",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Oct '25",
+   "quarterEnd": "Oct 2025",
+   "reported": "Nov 20, 2025",
+   "actual": 1.88,
+   "estimate": 1.63,
+   "surprise": 0.25,
+   "surprisePct": 15.34
+  },
+  {
+   "label": "Jan '26",
+   "quarterEnd": "Jan 2026",
+   "reported": "Feb 26, 2026",
+   "actual": 2.83,
+   "estimate": 2.23,
+   "surprise": 0.6,
+   "surprisePct": 26.91
+  },
+  {
+   "label": "Apr '26",
+   "quarterEnd": "Apr 2026",
+   "reported": "May 20, 2026",
+   "actual": 11.43,
+   "estimate": 11.13,
+   "surprise": 0.3,
+   "surprisePct": 2.7
+  },
+  {
+   "label": "Jul '26",
+   "quarterEnd": "Jul 2026",
+   "reported": "Aug 25, 2026",
+   "actual": 2.17,
+   "estimate": 2.12,
+   "surprise": 0.05,
+   "surprisePct": 2.36
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Oct '26",
+   "quarterEnd": "Oct 2026",
+   "estimate": 2.47,
+   "high": 2.5,
+   "low": 2.45,
+   "analysts": 9,
+   "up": 1,
+   "down": 0,
+   "due": "Nov 19, 2026"
+  }
+ ]
+}

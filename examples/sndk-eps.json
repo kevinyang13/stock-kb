@@ -1,0 +1,58 @@
+{
+ "ticker": "SNDK",
+ "company": "SanDisk",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 6, 2025",
+   "actual": 0.9,
+   "estimate": 0.58,
+   "surprise": 0.32,
+   "surprisePct": 55.17
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 29, 2026",
+   "actual": 5.83,
+   "estimate": 3.31,
+   "surprise": 2.52,
+   "surprisePct": 76.13
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 30, 2026",
+   "actual": 23.22,
+   "estimate": 14.17,
+   "surprise": 9.05,
+   "surprisePct": 63.87
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 5, 2026",
+   "actual": 38.82,
+   "estimate": 33.28,
+   "surprise": 5.54,
+   "surprisePct": 16.65
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 45.22,
+   "high": 45.42,
+   "low": 44.81,
+   "analysts": 4,
+   "up": 0,
+   "down": 0,
+   "due": "Oct 29, 2026"
+  }
+ ]
+}

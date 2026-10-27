@@ -1,0 +1,58 @@
+{
+ "ticker": "FLY",
+ "company": "Firefly Aerospace",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 12, 2025",
+   "actual": -0.33,
+   "estimate": -0.42,
+   "surprise": 0.09,
+   "surprisePct": 21.43
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Mar 19, 2026",
+   "actual": -0.38,
+   "estimate": -0.48,
+   "surprise": 0.1,
+   "surprisePct": 20.83
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 4, 2026",
+   "actual": -0.46,
+   "estimate": -0.5,
+   "surprise": 0.04,
+   "surprisePct": 8.0
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 11, 2026",
+   "actual": -0.42,
+   "estimate": -0.5,
+   "surprise": 0.08,
+   "surprisePct": 16.0
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.6,
+   "high": -0.56,
+   "low": -0.64,
+   "analysts": 2,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 10, 2026"
+  }
+ ]
+}

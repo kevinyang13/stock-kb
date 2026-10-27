@@ -1,0 +1,58 @@
+{
+ "ticker": "RGTI",
+ "company": "Rigetti Computing",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 10, 2025",
+   "actual": -0.03,
+   "estimate": -0.05,
+   "surprise": 0.02,
+   "surprisePct": 40.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Mar 4, 2026",
+   "actual": -0.03,
+   "estimate": -0.05,
+   "surprise": 0.02,
+   "surprisePct": 40.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 11, 2026",
+   "actual": -0.04,
+   "estimate": -0.05,
+   "surprise": 0.01,
+   "surprisePct": 20.0
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 6, 2026",
+   "actual": -0.16,
+   "estimate": -0.06,
+   "surprise": -0.1,
+   "surprisePct": -166.67
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.07,
+   "high": -0.07,
+   "low": -0.08,
+   "analysts": 3,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 9, 2026"
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "ticker": "SPCX",
+ "company": "SpaceX",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 4, 2026",
+   "actual": -0.09,
+   "estimate": -0.26,
+   "surprise": 0.17,
+   "surprisePct": 65.38
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 20, 2026",
+   "actual": 0.35,
+   "estimate": 0.1,
+   "surprise": 0.25,
+   "surprisePct": 250.0
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 0.28,
+   "high": 0.5,
+   "low": 0.07,
+   "analysts": 9,
+   "up": 1,
+   "down": 5
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "ticker": "META",
+ "company": "Meta Platforms",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 28, 2026",
+   "actual": 8.88,
+   "estimate": 8.21,
+   "surprise": 0.67,
+   "surprisePct": 8.16
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 29, 2026",
+   "actual": 7.31,
+   "estimate": 6.71,
+   "surprise": 0.6,
+   "surprisePct": 8.94
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 29, 2026",
+   "actual": 6.18,
+   "estimate": 7.1,
+   "surprise": -0.92,
+   "surprisePct": -12.96
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 21, 2026",
+   "actual": 7.4,
+   "estimate": 6.52,
+   "surprise": 0.88,
+   "surprisePct": 13.5
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 8.16,
+   "high": 8.66,
+   "low": 7.85,
+   "analysts": 12,
+   "up": 5,
+   "down": 4
+  }
+ ]
+}

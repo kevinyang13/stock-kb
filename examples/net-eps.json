@@ -1,0 +1,58 @@
+{
+ "ticker": "NET",
+ "company": "Cloudflare",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 30, 2025",
+   "actual": -0.01,
+   "estimate": -0.03,
+   "surprise": 0.02,
+   "surprisePct": 66.67
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 10, 2026",
+   "actual": -0.07,
+   "estimate": 0.02,
+   "surprise": -0.09,
+   "surprisePct": -450.0
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 7, 2026",
+   "actual": -0.05,
+   "estimate": -0.06,
+   "surprise": 0.01,
+   "surprisePct": 16.67
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 6, 2026",
+   "actual": -0.05,
+   "estimate": -0.03,
+   "surprise": -0.02,
+   "surprisePct": -66.67
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 0.02,
+   "high": 0.04,
+   "low": 0.01,
+   "analysts": 9,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 05, 2026"
+  }
+ ]
+}

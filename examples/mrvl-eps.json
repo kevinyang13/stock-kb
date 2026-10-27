@@ -1,0 +1,58 @@
+{
+ "ticker": "MRVL",
+ "company": "Marvell Technology",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Oct '25",
+   "quarterEnd": "Oct 2025",
+   "reported": "Dec 2, 2025",
+   "actual": 0.62,
+   "estimate": 0.58,
+   "surprise": 0.04,
+   "surprisePct": 6.9
+  },
+  {
+   "label": "Jan '26",
+   "quarterEnd": "Jan 2026",
+   "reported": "Mar 5, 2026",
+   "actual": 0.66,
+   "estimate": 0.62,
+   "surprise": 0.04,
+   "surprisePct": 6.45
+  },
+  {
+   "label": "Apr '26",
+   "quarterEnd": "Apr 2026",
+   "reported": "May 27, 2026",
+   "actual": 0.59,
+   "estimate": 0.61,
+   "surprise": -0.02,
+   "surprisePct": -3.28
+  },
+  {
+   "label": "Jul '26",
+   "quarterEnd": "Jul 2026",
+   "reported": "Aug 27, 2026",
+   "actual": 0.62,
+   "estimate": 0.65,
+   "surprise": -0.03,
+   "surprisePct": -4.62
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Oct '26",
+   "quarterEnd": "Oct 2026",
+   "estimate": 0.79,
+   "high": 0.82,
+   "low": 0.74,
+   "analysts": 12,
+   "up": 2,
+   "down": 0,
+   "due": "Dec 1, 2026"
+  }
+ ]
+}

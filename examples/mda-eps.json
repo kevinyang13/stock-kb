@@ -1,0 +1,40 @@
+{
+ "ticker": "MDA",
+ "company": "MDA Space",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 7, 2026",
+   "actual": 0.28,
+   "estimate": 0.23,
+   "surprise": 0.05,
+   "surprisePct": 21.74
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 7, 2026",
+   "actual": 0.26,
+   "estimate": 0.24,
+   "surprise": 0.02,
+   "surprisePct": 8.33
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 0.2,
+   "high": 0.22,
+   "low": 0.17,
+   "analysts": 5,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 05, 2026"
+  }
+ ]
+}

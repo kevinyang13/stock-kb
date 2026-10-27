@@ -38,6 +38,15 @@ const Sankey = (() => {
 
     for (const t of f.data) {
       if (t.textfont) t.textfont.size *= s;
+      // Scatter markers are sized in pixels like everything else here, so a
+      // chart drawn at 0.6 would otherwise keep full-size dots on a shrunken
+      // plot. Guarded: bar traces carry a marker with no size.
+      if (t.marker && typeof t.marker.size === 'number') {
+        t.marker.size *= s;
+        if (t.marker.line && typeof t.marker.line.width === 'number') {
+          t.marker.line.width *= s;
+        }
+      }
       if (!t.node) continue;
       t.node.pad *= s;
       t.node.thickness *= s;

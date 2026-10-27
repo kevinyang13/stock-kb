@@ -1,0 +1,58 @@
+{
+ "ticker": "SMCI",
+ "company": "Super Micro",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 4, 2025",
+   "actual": 0.26,
+   "estimate": 0.19,
+   "surprise": 0.07,
+   "surprisePct": 36.84
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 3, 2026",
+   "actual": 0.56,
+   "estimate": 0.41,
+   "surprise": 0.15,
+   "surprisePct": 36.59
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 5, 2026",
+   "actual": 0.68,
+   "estimate": 0.55,
+   "surprise": 0.13,
+   "surprisePct": 23.64
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 11, 2026",
+   "actual": 1.62,
+   "estimate": 0.56,
+   "surprise": 1.06,
+   "surprisePct": 189.29
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 1.04,
+   "high": 1.55,
+   "low": 0.89,
+   "analysts": 6,
+   "up": 1,
+   "down": 0,
+   "due": "Nov 03, 2026"
+  }
+ ]
+}
