@@ -1044,3 +1044,42 @@ page — SKHY, TSM and ASML all quote theirs in dollars per ADR.
 row at 1440px, `Revenue $34.3B · Gross margin 62% · Operating margin 23% · Net profit $3.8B · P/E
 11.0 · 8.3 · Dividend 6.57%`. Loss-making cards carry five, since they have no operating margin
 tile to begin with.
+
+---
+
+## 2026-10-27 — Added V (Visa) to the watchlist
+
+**Sources**: stockanalysis.com's V quote page and quote data, read 2026-10-27 (forward P/E 26.75,
+trailing 34.21, earnings date Oct 27, 2026, ex-dividend Aug 11, 2026). Contract id from the IBKR
+connector's `search_contracts`. The earnings fact is Visa's own fiscal Q4 2026 release, filed as an
+8-K on 2026-10-27 (`sec.gov/Archives/edgar/data/1403161/000140316126000126/v-20261027.htm`).
+
+**What changed**:
+
+- `watchlist.json` — `V` added after NU, tags `Fintech`, forward P/E 26.75. 101 symbols to 102,
+  favorites unchanged at 15. `Fintech` is the ranked tag the heatmap already uses for COIN, MFH and
+  NU, so Visa reads as Fintech there rather than needing a new category.
+- `ibkr-conids.json` — `V` conid 49462172, NYSE, "VISA INC-CLASS A SHARES". The file's note said
+  every id was resolved on 2026-09-28, which stopped being true when NBIS was added on the 26th;
+  it now records both later additions.
+- The IBKR watchlist "Stock KB Heatmap" (id 100) — V appended. That API is full-replace, so all 99
+  existing instruments were resubmitted with it and the result read back: 100 instruments, every
+  original intact and in its original order.
+
+**Nothing added to `events.json`, and that is the file's own rule.** Both dates the source
+publishes for V are in the past: Visa reported fiscal Q4 2026 after the close *today*, and the
+ex-dividend date on the quote page is Aug 11, 2026. The file carries only future-dated ticker
+events and omits passed ones rather than estimating a next date, so V has no entry until a
+confirmed one is published. (Visa's board raised the quarterly dividend 16% to $0.780 per share in
+that release, so the next ex-dividend date will be a new figure, not the one on the quote page.)
+
+**Caveat worth knowing before reading the heatmap's P/E colouring**: `watchlist.json` carries one
+`peAsOf` stamp for the whole file, and it still says Sep 01, 2026. V's 26.75 was read today, so the
+file now holds one figure fresher than its own stamp. The heatmap prints that stamp under the P/E
+view, which means it currently understates how fresh V's number is rather than overstating it. A
+full refresh is a separate job — `quotes.py --pe` still reads the watchlist out of an inline block
+in `heatmap.html` that no longer exists, so that path needs fixing before it can run.
+
+**Not done**: no income statement chart. Visa is not on the Financials tab, so there is no Sankey,
+no debt bars and no earnings-surprise dots for it — only the heatmap, and the Catalysts and Events
+pages once it has something to show. No order placed, staged or cancelled.
