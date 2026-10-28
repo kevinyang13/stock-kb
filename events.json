@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-27T20:47:48",
- "generatedLabel": "Oct 27, 2026",
+ "generated": "2026-10-28T06:41:40",
+ "generatedLabel": "Oct 28, 2026",
  "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no confirmed next date and are omitted rather than estimated.",
  "events": [
   {
@@ -12,32 +12,18 @@
    "fav": false
   },
   {
-   "date": "2026-10-27",
-   "type": "exdiv",
-   "ticker": "ASML",
-   "title": "ASML ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-10-27",
-   "type": "earnings",
-   "ticker": "BA",
-   "title": "BA earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-27",
-   "type": "earnings",
-   "ticker": "V",
-   "title": "V earnings",
-   "fav": false
-  },
-  {
    "date": "2026-10-28",
    "type": "fed",
    "ticker": null,
    "title": "FOMC decision",
    "note": "Rate decision, no SEP",
+   "fav": false
+  },
+  {
+   "date": "2026-10-28",
+   "type": "earnings",
+   "ticker": "GEV",
+   "title": "GEV earnings",
    "fav": false
   },
   {
@@ -120,6 +106,13 @@
    "fav": true
   },
   {
+   "date": "2026-10-30",
+   "type": "earnings",
+   "ticker": "CCJ",
+   "title": "CCJ earnings",
+   "fav": false
+  },
+  {
    "date": "2026-11-02",
    "type": "earnings",
    "ticker": "AAPL",
@@ -200,6 +193,13 @@
   {
    "date": "2026-11-04",
    "type": "earnings",
+   "ticker": "LEU",
+   "title": "LEU earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-04",
+   "type": "earnings",
    "ticker": "QCOM",
    "title": "QCOM earnings",
    "fav": true
@@ -248,10 +248,24 @@
    "fav": false
   },
   {
+   "date": "2026-11-06",
+   "type": "earnings",
+   "ticker": "VST",
+   "title": "VST earnings",
+   "fav": false
+  },
+  {
    "date": "2026-11-09",
    "type": "earnings",
    "ticker": "ASTS",
    "title": "ASTS earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-09",
+   "type": "earnings",
+   "ticker": "CEG",
+   "title": "CEG earnings",
    "fav": false
   },
   {

@@ -1293,3 +1293,76 @@ directly.
 reading "40 earnings - 5 ex-dividend - 14 macro/Fed"; the VRT chip opens the VRT card with all
 three charts drawn; `?t=SPY` shows the fallback message; clicking a chip on the Financials page
 rewrites the URL to that ticker.
+
+## 2026-10-28 — Added the power and nuclear fuel names: CEG, VST, CCJ, LEU, GEV
+
+**Source**: no new document. IBKR `search_contracts` for the contract ids,
+stockanalysis.com quote pages for forward P/E and the event dates.
+
+Five names added to `watchlist.json`, 103 symbols to 108. All five are power generation or nuclear
+fuel — the group the AI data centre build-out buys its electricity and enriched uranium from:
+
+| Ticker | Company | Conid | Forward P/E | Tags |
+|---|---|---|---|---|
+| CEG | Constellation Energy | 538132976 (NASDAQ) | 20.92 | Nuclear, Power, Energy |
+| VST | Vistra Corp | 254457731 (NYSE) | 14.46 | Nuclear, Power, Energy |
+| CCJ | Cameco Corp | 1447060 (NYSE) | 53.71 | Uranium, Energy |
+| LEU | Centrus Energy (Class A) | 168391375 (NYSE) | 38.35 | Uranium, Energy |
+| GEV | GE Vernova | 691984365 (NYSE) | 43.02 | Power, Industrials, Energy |
+
+All five resolved to their US primary listing. Each symbol returns several contracts — CEG alone
+matches a Mexican line, a Challenger Energy, a 2x ETF, a Cerro Grande Mining and a Swiss USD line —
+so the match was made on description, not on the first row.
+
+**Two new sector tags, and a label that would have gone wrong without them.** The heatmap's sector
+label is the highest-ranked tag a ticker holds, from the `SECTORS` list. `Power` and `Uranium` were
+not in that list, and `Energy` outranked `Nuclear`, so all five tiles would have read **Energy** —
+the same label as XLE, which is an oil and gas ETF. `Nuclear` now sits ahead of `Energy`, with
+`Uranium` and `Power` beside it. The five tiles read Nuclear, Nuclear, Uranium, Uranium and Power.
+
+One existing tile changed with it: **URA** (ETF, Nuclear, Energy) now reads **Nuclear** instead of
+Energy. For a uranium miners ETF that is the better label, but it is a change to a tile nobody
+asked about, so it is recorded here.
+
+**`SECTORS` is duplicated.** The same list and the same `sectorRank` / `sectorLabel` functions
+exist twice — in `assets/site.js`, which `catalysts.html` uses through `Site.sectorLabel`, and
+again inline in `heatmap.html`, which uses its own local copy even though it loads `site.js`. Both
+copies were byte-identical before this change and both were edited. A future edit to one alone will
+silently relabel one page and not the other.
+
+**The stale P/E stamp is gone.** `watchlist.json` still carried `"peAsOf": "Sep 01, 2026"`. With
+`quotes.py --pe` working again, a full `--all` pass was run: 108 symbols, 66 values written, 47 of
+them different from the September figures, and nothing lost — the pass keeps the old value for any
+symbol the source has no forward P/E for. The file now holds a P/E for 67 of 108, up from 48 of
+103, and `peAsOf` reads Oct 28, 2026 truthfully. The other 41 are ETFs, funds and companies with no
+positive forward estimate, which have no meaningful forward P/E rather than a missing one.
+
+**Calendar**: `quotes.py --events CEG VST CCJ LEU GEV` — the non-destructive version, so the other
+103 symbols' dates were untouched. GEV Oct 28, CCJ Oct 30, LEU Nov 4, VST Nov 6, CEG Nov 9. The
+file now carries 61 events: 43 earnings, 4 ex-dividend, 14 macro and Fed, across 45 tickers. The
+counts moved by less than the five additions because two earnings dates and one ex-dividend date
+sat on Oct 27 and have now aged out of the file, which is the rule working.
+
+**GEV reported this morning**, before this was written. This was written at 9:43 a.m. ET with the
+market open and GEV down 6.1% on the session, so that is an intraday move and not a close. The
+calendar shows the event; there is no card to open for it.
+
+**No Financials cards yet.** None of the five has an income statement chart, so their calendar
+chips are plain text rather than links — which is the honest behaviour the chip linking was built
+for, now exercised by five names on its first day. All five file real statements and are
+chartable.
+
+**Verification**: served locally — 108 tiles on the heatmap, all five priced, reading Nuclear,
+Nuclear, Uranium, Uranium and Power; URA reads Nuclear and XLE still reads Energy. The Events month
+view shows GEV, CCJ, LEU and VST as plain chips with no `href` (CEG is November, outside the
+month), status "43 earnings · 4 ex-dividend · 14 macro/Fed". The IBKR watchlist was read back after
+the edit: 106 instruments, the five new ones appended, nothing dropped.
+
+**The IBKR watchlist is two names short of the repo.** It holds 106 instruments where
+`ibkr-conids.json` has 108 symbols: **BITF** and **MFH** have conids in the repo but are not in the
+broker's list, and were already absent before this change. Left as found rather than silently
+added, since why they are missing is not known.
+
+**`wiki/index.md` said 53 of the 68 charts carry a segment split.** Counted from the specs it is
+54, which is what `favorites-financials.md` already said — the index line was not updated when
+Vertiv was charted. Corrected.
