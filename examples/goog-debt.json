@@ -1,0 +1,44 @@
+{
+ "ticker": "GOOG",
+ "company": "Alphabet",
+ "currency": "$",
+ "unit": "millions",
+ "partial": true,
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "Alphabet 8-K exhibit 99.1, Oct 28, 2026, condensed consolidated balance sheet and statement of cash flows. The data vendor had no 2026-09-30 column when this was built, so the figures were read from the filing. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "incomplete": "Alphabet's condensed balance sheet does not break out the current portion of long-term debt or the current operating lease liability; both sit inside accrued expenses and other current liabilities. The debt bar is therefore the non-current debt only. At Jun 30, 2026 those two lines were $1,999M and $3,446M, so the bar understates total debt by roughly that order.",
+ "periods": [
+  {
+   "label": "Q3 FY26",
+   "debt": 141917.0,
+   "fcf": -9065.0,
+   "cash": 56334.0,
+   "debt_parts": [
+    {
+     "label": "Long-term debt",
+     "value": 125102.0
+    },
+    {
+     "label": "Long-term leases",
+     "value": 16815.0
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Marketable securities",
+     "value": 208764.0
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 42290.0
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -51355.0
+    }
+   ]
+  }
+ ]
+}

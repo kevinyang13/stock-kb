@@ -159,9 +159,11 @@
     "Alphabet's reportable segments are a different cut: Google Services, Google Cloud and Other Bets, with operating income of $39,157M, $11,121M and -$2,047M, less $7,655M of unallocated Alphabet-level activities, mostly shared AI research and development.",
     "Market figures as of Oct 28, 2026: P/E 16.1 trailing, 23.4 forward; dividend $0.88 a year, 0.27% yield, last ex-dividend Sep 4, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $9.11 actual against $2.88 expected, beat by $6.23 (+216%). Sep '26 consensus is $2.94 from 14 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
-    "No debt and coverage chart on this card yet. The quarter's balance sheet and cash flow statement had not reached the data source when the card was built, hours after the release, and the builder refuses a column from a different quarter rather than pairing a June balance sheet with a September income statement. It returns on the next refresh."
+    "Debt and coverage, Q3 FY26: $141,917M of debt against $56,334M of cash and free cash flow of MINUS $9,065M for the quarter -- $42,290M of operating cash flow against $51,355M of capital expenditure. Net debt $85,583M, and Alphabet holds a further $208,764M of marketable securities beside the cash. Long-term debt went from $46,547M at Dec 31, 2025 to $125,102M at Sep 30, 2026; the quarter alone brought $28.7B of senior unsecured notes and $12.4B raised through an at-the-market equity program.",
+    "The debt bar is understated and this is the reason. The data source still has no Sep 30, 2026 balance sheet column, so these figures were read from the 8-K exhibit itself -- and Alphabet's condensed balance sheet does not break out the current portion of long-term debt or the current operating lease liability, which sit inside accrued expenses and other current liabilities. The bar is non-current debt only: $125,102M of long-term debt plus $16,815M of long-term operating leases. At Jun 30, 2026 the two missing lines were $1,999M and $3,446M, so the shortfall is of that order, about 4%. The spec is marked partial and will be rebuilt from the full balance sheet when the 10-Q data lands."
    ],
-   "eps": "GOOG-eps"
+   "eps": "GOOG-eps",
+   "debt": "GOOG-debt"
   },
   {
    "t": "MU",

@@ -1441,3 +1441,46 @@ Microsoft · FQ1 FY27, ServiceNow · Q3 FY26, Vertiv Holdings · Q3 FY26 and GE 
 VRT and GEV show three live charts each, GOOG, MSFT and NOW show two plus the pending-debt note;
 the status line reads 69 statements; `?t=GEV` deep-links to the new card. Every sankey was opened
 as an image and checked for crossing bands, labels on bars and clipped text.
+
+## 2026-10-28 — Alphabet's debt chart, built from the filing instead of waiting
+
+**Source**: Alphabet 8-K exhibit 99.1, Oct 28, 2026 — the condensed consolidated balance sheet and
+statement of cash flows (source: sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm).
+
+The GOOG card shipped a few hours ago with no debt and coverage chart, because `bin/debtfetch.py`
+could not find a 2026-09-30 column at the data vendor. A third run still could not, and the SEC's
+own XBRL company-concept API has nothing newer than 2026-06-30 for Alphabet either — the detail
+arrives with the 10-Q, which is not filed yet. So the figures were read from the release.
+
+| Bar | Q3 FY26 |
+|---|---|
+| Debt | $141,917M |
+| Cash & equivalents | $56,334M |
+| Free cash flow | **−$9,065M** |
+
+Net debt $85,583M, with a further $208,764M of marketable securities beside the cash. Free cash
+flow is negative because capital expenditure was $51,355M against $42,290M of operating cash flow.
+Long-term debt went from $46,547M at Dec 31, 2025 to $125,102M at Sep 30, 2026; the quarter alone
+brought $28.7B of senior unsecured notes and $12.4B raised through an at-the-market equity program.
+
+**The bar is understated and the card says so.** Alphabet's condensed balance sheet does not break
+out the current portion of long-term debt or the current operating lease liability — both sit
+inside accrued expenses and other current liabilities. The bar is non-current debt only:
+$125,102M of long-term debt plus $16,815M of long-term operating leases. At Jun 30, 2026 the two
+missing lines were $1,999M and $3,446M, so the shortfall is about 4%.
+
+**A hand-built spec must not freeze.** `bin/debtfetch.py` skips any ticker that already has a spec
+unless named or given `--all`, so a spec written by hand would have blocked the complete one
+forever — the same shadowing trap recorded earlier today for `segapply.specs()`. The spec carries
+`"partial": true`, and `debtfetch.py` now treats a partial spec as missing and retries it on every
+run, printing `~ GOOG: partial spec on disk, retrying`. It will overwrite this file with the real
+balance sheet when the vendor has one.
+
+**MSFT and NOW are still without theirs, and both are now reachable.** Microsoft filed a 10-Q today
+and the SEC XBRL API carries its 2026-09-30 balance sheet in full. ServiceNow's 8-K exhibit carries
+a balance sheet, and XBRL has its cash and lease liabilities at 2026-09-30. Neither was built here;
+this entry records that the data exists so the next run does not repeat the search.
+
+**Verification**: served locally — the GOOG card draws three charts, the pending-debt note is gone,
+the understated-bar note is on the card, and the debt figure reads $141,917M. The bar image was
+opened: the negative free cash flow bar draws below the axis with its label clear of it.

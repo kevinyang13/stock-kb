@@ -173,8 +173,18 @@ def main():
     for item in items:
         out = HERE / "examples" / f"{item['t'].lower()}-debt.json"
         if out.exists() and not refetch and not args:
-            skipped.append(item["t"])
-            continue
+            # A spec marked "partial" was written by hand from the filing
+            # because the vendor had no column for that quarter yet. It is
+            # deliberately incomplete, so it must not block the complete one:
+            # retry it on every run until this builds it from the real source.
+            try:
+                if not json.loads(out.read_text()).get("partial"):
+                    skipped.append(item["t"])
+                    continue
+            except (json.JSONDecodeError, OSError):
+                pass
+            else:
+                print(f"  ~ {item['t']}: partial spec on disk, retrying")
         try:
             spec = build(item, currency_of(item))
         except (urllib.error.URLError, LookupError, ValueError, KeyError) as e:
