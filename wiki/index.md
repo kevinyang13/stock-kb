@@ -22,10 +22,11 @@ Table of contents for this knowledge base. One line per page.
 ## Companies
 
 - [[earnings-surprise-chart]] — the actual-vs-estimate EPS dots on each Financials card: where the figures come from, and why they are not the EPS the income statement beside them is built from.
-- [[favorites-financials]] — index of the 67 income statement charts on the Financials tab, which of them carry a reported revenue segment split (53 do) and the data caveats that apply to them.
+- [[favorites-financials]] — index of the 68 income statement charts on the Financials tab, which of them carry a reported revenue segment split (53 do) and the data caveats that apply to them.
 - [[coreweave-q2-fy26]] — CoreWeave Q2 2026: $2,575M revenue (+112% Y/Y), 66% gross margin, a $49M operating loss and a $626M net loss driven by financing cost.
 - [[nebius-q2-fy26]] — Nebius Group Q2 2026: $582.3M revenue (+454% Y/Y) at a 77% gross margin, a $190.4M net loss that is almost all depreciation and interest, and capex running at eight times revenue.
 - [[visa-q4-fy26]] — Visa fiscal Q4 2026: $12,139M of net revenue (+13% Y/Y) with no cost of revenue at all, a 60% operating margin, and $5,123M of client incentives netted out of revenue before the statement starts.
+- [[vertiv-q2-fy26]] — Vertiv Holdings Q2 2026: $3,274.3M of net sales (+24% Y/Y) at a 38% gross margin, growth that is almost entirely the Americas, and the last quarter filed before the Oct 28, 2026 Q3 release.
 - [[micron-fq4-fy26]] — Micron's record fiscal Q4 2026: $54.2B revenue (+379% Y/Y), 87% gross margin, business-unit breakdown and the figures behind the Financials tab chart.
 
 ## Pages referenced but not yet written

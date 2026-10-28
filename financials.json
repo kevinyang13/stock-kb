@@ -3360,6 +3360,59 @@
    ],
    "debt": "V-debt",
    "eps": "V-eps"
+  },
+  {
+   "t": "VRT",
+   "company": "Vertiv Holdings",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "reported Jul 29, 2026",
+   "img": "assets/financials/VRT-Q2-FY26.png",
+   "source": "Vertiv Holdings 8-K exhibit 99.1, Jul 29, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050323/q22026exhibit991vrt07292026.htm",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$3,274M",
+     "s": "+24% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "38%",
+     "s": "$1,235M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "19%",
+     "s": "$638M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$498M",
+     "s": "15% margin"
+    },
+    {
+     "k": "P/E",
+     "v": "47.2 · 26.3",
+     "s": "trailing · forward"
+    },
+    {
+     "k": "Dividend",
+     "v": "0.12%",
+     "s": "$0.25 a year"
+    }
+   ],
+   "notes": [
+    "Segments: Vertiv's three reportable segments are geographic. Americas $2,070.8M (+29.2% Y/Y), Asia Pacific $719.9M (+28.5%) and Europe, Middle East & Africa $483.6M (+1.7%), summing exactly to $3,274.3M of net sales. The chart rounds to whole millions, so the three bands read 2,071 + 720 + 484 against a 3,274 revenue bar; the filed figures carry one decimal and foot exactly. Vertiv splits each region into products and services as well: $2,606.4M of products and $667.9M of services and spares company-wide -- $40.3M of spares that the income statement groups with products, so its own products/services split reads $2,646.7M and $627.6M. Both foot to the same $3,274.3M.",
+    "This card is one quarter behind. Vertiv reports Q3 2026 before the open on Oct 28, 2026; this is Q2, reported Jul 29, 2026, and is the most recent statement Vertiv has filed.",
+    "Vertiv presents no gross profit line, so it is derived as net sales less cost of sales: $3,274.3M - $2,039.4M = $1,234.9M. \"Other operating\" of $29M combines a $3.9M restructuring credit, a $3.9M foreign currency loss and $28.9M of other operating expense.",
+    "The -$18M non-operating line is $17.4M of net interest expense plus $0.5M of other non-operating expense, as filed.",
+    "Debt and coverage, Q2 FY26: $3.3B of debt against $2.8B of cash and $0.9B of free cash flow for the quarter. Net debt $0.5B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.52 actual against $1.43 expected, beat by $0.09 (+6%). Sep '26 consensus is $1.82 from 6 analysts, due Oct 28, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 27, 2026.",
+    "Market figures as of Oct 27, 2026: P/E 47.2 trailing, 26.3 forward; dividend $0.25 a year, 0.12% yield, last ex-dividend Sep 14, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+   ],
+   "debt": "VRT-debt",
+   "eps": "VRT-eps"
   }
  ],
  "marketAsOf": "Oct 27, 2026"

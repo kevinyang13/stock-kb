@@ -1194,3 +1194,53 @@ overflow, and hover readouts carrying the year-ago column from the release
 
 **Also**: `bin/pefetch.py` re-run across all 67 cards so the `marketAsOf` stamp and every card's
 market note agree on Oct 27, 2026. 25 of the 67 now pay a dividend.
+
+---
+
+## 2026-10-27 — Vertiv Q2 2026 charted, and the cost-of-revenue label fixed on every card
+
+**Source**: Vertiv Holdings 8-K exhibit 99.1, filed 2026-07-29, the quarter ended June 30, 2026
+(`sec.gov/Archives/edgar/data/1674101/000162828026050323/q22026exhibit991vrt07292026.htm`). Debt,
+cash and free cash flow from stockanalysis.com; street consensus from the Nasdaq/Zacks endpoints;
+both read 2026-10-27.
+
+**What changed**: `examples/vrt-q2-fy26.json`, `charts/VRT-Q2-FY26.json`,
+`assets/financials/VRT-Q2-FY26.png`, the debt and eps specs and their charts, a `VRT` entry in
+`financials.json` (67 statements to 68), `wiki/vertiv-q2-fy26.md` (new), and counts in
+`wiki/index.md` and `wiki/favorites-financials.md`. Plus every chart re-rendered — see below.
+
+**The quarter**: $3,274.3M of net sales (+24% Y/Y), $2,039.4M of cost of sales, $637.9M of
+operating profit (19% margin) and $497.8M of net income (15% margin). The three reportable
+segments are geographic and foot exactly: Americas $2,070.8M (+29.2%), Asia Pacific $719.9M
+(+28.5%), EMEA $483.6M (+1.7%). The Americas alone is $468.5M of the $636.2M of growth, and
+$124.1M of that was acquisitions, leaving 21.1% organic.
+
+**Deliberately one quarter stale, and the card says so.** Vertiv releases Q3 2026 before the open
+on Oct 28, 2026 — tomorrow. Q2 is the latest statement it has filed, so that is what is charted,
+with a card note stating the position rather than letting the card look current.
+
+**A disagreement inside one filing.** The income statement splits the quarter into $2,646.7M of
+products and $627.6M of services; the segment table splits the same total into $2,606.4M of
+products and $667.9M of "services & spares". The $40.3M difference is spares, grouped one way in
+one table and the other way in the other. Both foot to $3,274.3M. The card quotes the segment
+table and names the gap.
+
+**The renderer fix, and it was not new.** The `Cost of revenue` label is drawn below its node, and
+that node is the bottom of a *full* column, so its bar reaches the floor of the sankey — the label
+landed **on the bar**. VRT's `($2,039M)` was half hidden behind the red rectangle. So were DELL's
+`($37.1B)`, HD's `($32.4B)`, SMCI's, TSLA's, PHM's, GE's and MDA's, in every published PNG. I had
+noticed this on HD days ago and recorded it as "pre-existing" without fixing it, which is how it
+survived.
+
+Nothing flows *out* of a cost node, so the space to its right is always empty. The label now sits
+there. **All 68 charts were re-rendered** so the placement is consistent across the page, and the
+PNGs recopied; the loss-layout charts are unchanged in appearance.
+
+**The lesson, repeated**: the validator checks that the figures conserve and says nothing about
+whether the text is readable. Both defects fixed today — the dropped annotation on V and this one —
+were visible only by opening the image. "Pre-existing" is not a status that fixes anything.
+
+**Verification**: validator silent on all three VRT charts; the PNG read at full size; the page
+served locally shows 68 chips, the VRT card with three charts, six KPI tiles, no horizontal
+overflow, and segment hovers carrying the right percentages (Americas 63.3%, Asia Pacific 22.0%,
+EMEA 14.8%).

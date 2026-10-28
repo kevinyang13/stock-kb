@@ -1,0 +1,58 @@
+{
+ "ticker": "VRT",
+ "company": "Vertiv Holdings",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 27, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 22, 2025",
+   "actual": 1.24,
+   "estimate": 1.0,
+   "surprise": 0.24,
+   "surprisePct": 24.0
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 11, 2026",
+   "actual": 1.36,
+   "estimate": 1.29,
+   "surprise": 0.07,
+   "surprisePct": 5.43
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 22, 2026",
+   "actual": 1.17,
+   "estimate": 1.02,
+   "surprise": 0.15,
+   "surprisePct": 14.71
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 29, 2026",
+   "actual": 1.52,
+   "estimate": 1.43,
+   "surprise": 0.09,
+   "surprisePct": 6.29
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 1.82,
+   "high": 1.84,
+   "low": 1.79,
+   "analysts": 6,
+   "up": 1,
+   "down": 1,
+   "due": "Oct 28, 2026"
+  }
+ ]
+}

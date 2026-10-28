@@ -307,8 +307,12 @@ def build(spec):
     label(X["gross"], 0.895, "Gross profit",
           [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     if cor_id is not None:
-        label(X["gross"], py(ys[cor_id]) - 0.13, "Cost of revenue",
-              [f"({m(cor)})"], color=COST)
+        # The cost node is the bottom of a full column, so its bar reaches the
+        # floor of the sankey and a label underneath it lands *on* the bar --
+        # DELL, SMCI, TSLA and HD all shipped that way. Nothing flows out of a
+        # cost node, so the space to its right is empty: put the label there.
+        label(X["gross"] + 0.013, py(ys[cor_id]), "Cost of revenue",
+              [f"({m(cor)})"], color=COST, xa="left")
     label(X["op"], 0.895, "Operating profit",
           [m(op), f"{op / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     label(X["op"], 0.045, "Operating expenses",
