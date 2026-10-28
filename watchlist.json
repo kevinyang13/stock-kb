@@ -190,6 +190,15 @@
    ]
   },
   {
+   "t": "VRT",
+   "pe": 26.32,
+   "tags": [
+    "AI Infra",
+    "Data Center",
+    "Hardware"
+   ]
+  },
+  {
    "t": "ORCL",
    "pe": 17.69,
    "tags": [

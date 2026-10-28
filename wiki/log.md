@@ -1083,3 +1083,47 @@ in `heatmap.html` that no longer exists, so that path needs fixing before it can
 **Not done**: no income statement chart. Visa is not on the Financials tab, so there is no Sankey,
 no debt bars and no earnings-surprise dots for it — only the heatmap, and the Catalysts and Events
 pages once it has something to show. No order placed, staged or cancelled.
+
+---
+
+## 2026-10-27 — Added VRT (Vertiv Holdings) to the watchlist
+
+**Sources**: stockanalysis.com's VRT quote data, read 2026-10-27 (forward P/E 26.32, trailing
+47.20, $11.48B of trailing revenue, ex-dividend Sep 14, 2026). Contract id from the IBKR
+connector's `search_contracts`. The earnings date is Vertiv's own announcement of 2026-10-14:
+third-quarter 2026 results before market open on Wednesday, October 28, 2026
+(`investors.vertiv.com/news/news-details/2026/Vertiv-Announces-Date-of-Third-Quarter-2026-Earnings-Release-and-Conference-Call/`).
+
+**What changed**:
+
+- `watchlist.json` — `VRT` inserted after NBIS, tags `AI Infra / Data Center / Hardware`, forward
+  P/E 26.32. 102 symbols to 103, favorites unchanged at 15. It reads as AI Infra on the board,
+  which is the highest-ranked tag it holds. Vertiv sells the power and cooling the racks sit in, so
+  it belongs beside CRWV and NBIS rather than in Industrials with GE.
+- `ibkr-conids.json` — `VRT` conid 402783527, NYSE, "VERTIV HOLDINGS CO-A". `search_contracts`
+  returns four VRT rows: the US primary listing, a Mexican and a Canadian cross-listing of the same
+  company, and Virtus Health in Australia. The US NYSE row is the one taken.
+- The IBKR watchlist "Stock KB Heatmap" (id 100) — VRT inserted after NBIS, mirroring the file's
+  order. Full-replace API again, so all 100 existing instruments were resubmitted and read back:
+  101 instruments, every original intact and in order.
+- `events.json` — VRT earnings at 2026-10-28, sorted into place after SKHY. The note records that
+  this entry was added by hand from Vertiv's announcement rather than by the refresh job, because
+  that job cannot run (see below).
+
+**A date conflict, resolved toward the company.** Vertiv's own release says October 28 before the
+open. One third-party calendar (Bullstory) lists October 20. The company's announcement wins; the
+aggregator is wrong, not early.
+
+**Why the event went in by hand.** `quotes.py --events` is a full rewrite: it keeps only the macro
+and Fed entries plus whatever it refetches, so running it for one ticker would delete every other
+ticker's events. It also still reads the watchlist out of an inline `<script id="watchlist">` block
+in `heatmap.html` that no longer exists — the watchlist moved to `watchlist.json`. Both the `--pe`
+and `--events` paths in that file are broken the same way and need fixing before either can run
+again.
+
+**Verification**: heatmap served locally — 103 tiles, VRT reading `VRT · AI INFRA · $208.56
+· +4.39%` with `VRT -- AI Infra, Data Center, Hardware` on its hover. Events page shows
+`VRT earnings` under the 28th, beside the FOMC decision and GOOG, MSFT, NOW and SKHY.
+
+**Not done**: no income statement chart — Vertiv is not on the Financials tab. No order placed,
+staged or cancelled.

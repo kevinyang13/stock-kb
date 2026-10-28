@@ -1,5 +1,5 @@
 {
- "note": "IBKR contract ids (conid) per heatmap ticker. Resolved via IBKR search_contracts, 2026-09-28; NBIS added 2026-10-26 and V added 2026-10-27, both resolved the same way. Used as contract_id for get_price_snapshot / get_price_history / get_company_connections, and as contract_id_ex (stringified) for watchlists.",
+ "note": "IBKR contract ids (conid) per heatmap ticker. Resolved via IBKR search_contracts, 2026-09-28; NBIS added 2026-10-26, V and VRT added 2026-10-27, all resolved the same way. Used as contract_id for get_price_snapshot / get_price_history / get_company_connections, and as contract_id_ex (stringified) for watchlists.",
  "generated": "2026-09-28",
  "ibkrWatchlist": {
   "id": "100",
@@ -517,6 +517,11 @@
    "conid": 49462172,
    "ex": "NYSE",
    "desc": "VISA INC-CLASS A SHARES"
+  },
+  "VRT": {
+   "conid": 402783527,
+   "ex": "NYSE",
+   "desc": "VERTIV HOLDINGS CO-A"
   }
  }
 }

@@ -1,7 +1,7 @@
 {
  "generated": "2026-10-19T17:24:52-07:00",
  "generatedLabel": "Oct 19, 2026",
- "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no upcoming date yet. Macro and Fed dates are scheduled releases. NBIS carries an estimated date: Nebius has not confirmed one, and sources split between Nov 10 and Nov 11, 2026.",
+ "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no upcoming date yet. VRT's Oct 28, 2026 earnings entry was added by hand on 2026-10-27 from Vertiv's own announcement of the date, not by the refresh job. Macro and Fed dates are scheduled releases. NBIS carries an estimated date: Nebius has not confirmed one, and sources split between Nov 10 and Nov 11, 2026.",
  "events": [
   {
    "date": "2026-10-20",
@@ -129,6 +129,13 @@
    "type": "earnings",
    "ticker": "SKHY",
    "title": "SKHY earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-28",
+   "type": "earnings",
+   "ticker": "VRT",
+   "title": "VRT earnings",
    "fav": false
   },
   {
