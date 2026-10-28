@@ -155,6 +155,12 @@
   .ev.corporate{border-left-color:var(--cream);background:rgba(234,229,223,.10)}
   .ev .s{color:var(--gold);font-weight:700}
   .ev.fav .s:after{content:" \2605"}
+  /* a chip that opens the ticker's income statement */
+  a.ev.link{display:block;text-decoration:none;cursor:pointer}
+  a.ev.link:hover,a.ev.link:focus-visible{
+    filter:brightness(1.35);outline:1px solid var(--gold);outline-offset:-1px;
+  }
+  a.ev.link .s{text-decoration:underline;text-underline-offset:2px}
 
   .weeklist{display:flex;flex-direction:column;gap:1px;margin-top:6px;font-family:var(--sans)}
   .weeklist .wday{background:var(--teal-deep);padding:11px 14px;display:grid;

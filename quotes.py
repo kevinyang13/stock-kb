@@ -178,6 +178,15 @@ def collect(symbols):
 # ---------------------------------------------------------------- forward P/E
 
 PAGE_FILE = HERE / "heatmap.html"
+WATCHLIST_FILE = HERE / "watchlist.json"
+
+
+def watchlist():
+    """The symbol list. It used to live in an inline <script id="watchlist">
+    block in heatmap.html; it moved to watchlist.json when the tabs were split
+    into separate pages, and both refresh jobs here kept reading the block that
+    no longer exists."""
+    return json.loads(WATCHLIST_FILE.read_text())
 
 
 def forward_pe(symbols, pause=2.0):
@@ -234,10 +243,8 @@ def forward_pe(symbols, pause=2.0):
 
 
 def refresh_pe():
-    """Rewrite the watchlist block in heatmap.html with fresh P/E values."""
-    src = PAGE_FILE.read_text()
-    block = re.search(r'(id="watchlist">)(.*?)(</script>)', src, re.S)
-    doc = json.loads(block.group(2))
+    """Write fresh forward P/E values into watchlist.json."""
+    doc = watchlist()
 
     # Resumable: only ask for symbols we do not already have, unless told
     # to refetch everything. A stopped run can simply be run again.
@@ -259,18 +266,11 @@ def refresh_pe():
         if q["t"] in pe:
             q["pe"] = pe[q["t"]]
 
-    lines = []
-    for q in doc["symbols"]:
-        pe_part = ' "pe": %s,' % q["pe"] if "pe" in q else ""
-        lines.append('    { "t": %-8s%s "tags": %s }' % (
-            '"%s",' % q["t"], pe_part, json.dumps(q["tags"])))
-
-    body = '\n{\n  "name": %s,\n  "peAsOf": %s,\n  "symbols": [\n%s\n  ]\n}\n' % (
-        json.dumps(doc["name"]),
-        json.dumps(datetime.now().strftime("%b %d, %Y")),
-        ",\n".join(lines))
-
-    PAGE_FILE.write_text(src[:block.start(2)] + body + src[block.end(2):])
+    # the file carries fav/sector flags as well as tags, so it is written back
+    # whole rather than rebuilt from the few fields this function touches
+    doc["peAsOf"] = datetime.now().strftime("%b %d, %Y")
+    WATCHLIST_FILE.write_text(
+        json.dumps(doc, indent=1, ensure_ascii=False) + "\n")
 
     total = sum(1 for q in doc["symbols"] if "pe" in q)
     print(f"\nadded {len(pe)}; file now has P/E for {total} of {len(doc['symbols'])}")
@@ -328,11 +328,13 @@ def ticker_events(symbols, pause=2.0):
 
 
 def refresh_events():
-    """Rewrite events.json with every future-dated ticker event we can see.
-    Macro and Fed entries already in the file are preserved."""
-    src = PAGE_FILE.read_text()
-    block = re.search(r'(id="watchlist">)(.*?)(</script>)', src, re.S)
-    doc = json.loads(block.group(2))
+    """Refresh events.json with every future-dated ticker event we can see.
+
+    Macro, Fed and corporate entries are preserved. So are the ticker events
+    of symbols this run did not ask about: naming a few symbols refreshes
+    those and leaves the rest of the calendar alone. Rewriting the whole file
+    from a one-symbol run used to delete every other ticker's events."""
+    doc = watchlist()
 
     named = [a.upper() for a in sys.argv[1:] if not a.startswith("-")]
     symbols = [q["t"] for q in doc["symbols"] if not named or q["t"] in named]
@@ -365,12 +367,18 @@ def refresh_events():
                 "fav": sym in favs,
             })
 
-    keep = []
+    keep, other = [], []
     if EVENTS_FILE.exists():
         old = json.loads(EVENTS_FILE.read_text())
-        keep = [e for e in old.get("events", []) if e["type"] in ("fed", "macro", "corporate")]
+        asked = set(symbols)
+        for e in old.get("events", []):
+            if e["type"] in ("fed", "macro", "corporate"):
+                keep.append(e)
+            elif e.get("ticker") not in asked and e["date"] >= today.isoformat():
+                other.append(e)          # a symbol this run did not refresh
 
     events.extend(keep)
+    events.extend(other)
     events.sort(key=lambda e: (e["date"], e.get("ticker") or ""))
 
     EVENTS_FILE.write_text(json.dumps({
@@ -380,12 +388,12 @@ def refresh_events():
                  "Symbols whose published date has already passed have no confirmed "
                  "next date and are omitted rather than estimated."),
         "events": events,
-    }, indent=2) + "\n")
+    }, indent=1, ensure_ascii=False) + "\n")
 
     ticker_events_kept = len([e for e in events if e["type"] in ("earnings", "exdiv")])
     print(f"\nwrote {ticker_events_kept} upcoming ticker events "
           f"({stale} published dates already past, omitted); "
-          f"kept {len(keep)} macro/fed entries")
+          f"kept {len(keep)} macro/fed entries and {len(other)} not refreshed")
     if throttled:
         print("stopped early on rate limiting -- run again to resume")
 

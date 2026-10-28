@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Financials</title>
-<link rel="stylesheet" href="assets/site.css?v=1793078783">
+<link rel="stylesheet" href="assets/site.css?v=1793159081">
 </head>
 <body>
 
@@ -31,8 +31,8 @@
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-<script src="assets/sankey.js?v=1793078783"></script>
-<script src="assets/site.js?v=1793078783"></script>
+<script src="assets/sankey.js?v=1793159081"></script>
+<script src="assets/site.js?v=1793159081"></script>
 <script>
 Site.nav();
 
@@ -85,6 +85,19 @@ Site.nav();
       (notes ? '<ul class="fin-notes">' + notes + "</ul>" : "") +
       '<p class="fin-src">Source: ' + src + "</p>" +
       "</article>";
+  }
+
+  // Which card the URL asks for. The Events calendar links straight here,
+  // so a ticker with no card must not silently show someone else's statement.
+  function pickFromUrl() {
+    var m = /[?&]t=([^&#]+)/.exec(location.search) ||
+            /^#([A-Za-z0-9.\-]+)$/.exec(location.hash);
+    if (!m) return -1;
+    var want = decodeURIComponent(m[1]).toUpperCase();
+    for (var i = 0; i < finItems.length; i++) {
+      if (String(finItems[i].t).toUpperCase() === want) return i;
+    }
+    return -2;                                  // asked for, and not here
   }
 
   function renderFin() {
@@ -202,6 +215,10 @@ Site.nav();
     var chip = e.target.closest(".chip");
     if (!chip) return;
     finPick = +chip.dataset.i;
+    if (window.history && history.replaceState) {
+      history.replaceState(null, "", "?t=" +
+        encodeURIComponent(finItems[finPick].t));
+    }
     renderFin();
   });
 
@@ -227,8 +244,17 @@ Site.nav();
           finItems.length + " statement" + (finItems.length === 1 ? "" : "s") +
           (doc.note ? " &middot; " + esc(doc.note) : "");
         bust = doc.generated ? "?v=" + encodeURIComponent(doc.generated) : "";
-        finPick = 0;
+        var at = pickFromUrl();
+        finPick = at >= 0 ? at : 0;
         renderFin();
+        if (at === -2) {
+          var asked = (/[?&]t=([^&#]+)/.exec(location.search) || [])[1] || "";
+          statusEl.innerHTML += "<br><b>no card for " +
+            esc(decodeURIComponent(asked).toUpperCase()) +
+            "</b> &middot; showing " + esc(finItems[0].t) + " instead";
+        }
+        var card = document.querySelector(".fin-item");
+        if (at >= 0 && card) card.scrollIntoView({ block: "start" });
       })
       .catch(function (err) {
         statusEl.innerHTML = "<b>Could not load financials</b><br>" + esc(String(err.message || err));

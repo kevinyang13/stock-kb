@@ -1,78 +1,8 @@
 {
- "generated": "2026-10-19T17:24:52-07:00",
- "generatedLabel": "Oct 19, 2026",
- "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no upcoming date yet. VRT's Oct 28, 2026 earnings entry was added by hand on 2026-10-27 from Vertiv's own announcement of the date, not by the refresh job. Macro and Fed dates are scheduled releases. NBIS carries an estimated date: Nebius has not confirmed one, and sources split between Nov 10 and Nov 11, 2026.",
+ "generated": "2026-10-27T20:47:48",
+ "generatedLabel": "Oct 27, 2026",
+ "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no confirmed next date and are omitted rather than estimated.",
  "events": [
-  {
-   "date": "2026-10-20",
-   "type": "exdiv",
-   "ticker": "DELL",
-   "title": "DELL ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-10-20",
-   "type": "earnings",
-   "ticker": "GE",
-   "title": "GE earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-20",
-   "type": "earnings",
-   "ticker": "NFLX",
-   "title": "NFLX earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-20",
-   "type": "earnings",
-   "ticker": "SPCX",
-   "title": "SPCX earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-21",
-   "type": "earnings",
-   "ticker": "IBM",
-   "title": "IBM earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-21",
-   "type": "earnings",
-   "ticker": "META",
-   "title": "META earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-21",
-   "type": "earnings",
-   "ticker": "T",
-   "title": "T earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-21",
-   "type": "earnings",
-   "ticker": "TSLA",
-   "title": "TSLA earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-10-22",
-   "type": "earnings",
-   "ticker": "PHM",
-   "title": "PHM earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-26",
-   "type": "earnings",
-   "ticker": "VZ",
-   "title": "VZ earnings",
-   "fav": false
-  },
   {
    "date": "2026-10-27",
    "type": "fed",
@@ -93,6 +23,13 @@
    "type": "earnings",
    "ticker": "BA",
    "title": "BA earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-27",
+   "type": "earnings",
+   "ticker": "V",
+   "title": "V earnings",
    "fav": false
   },
   {
@@ -122,13 +59,6 @@
    "type": "earnings",
    "ticker": "NOW",
    "title": "NOW earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-28",
-   "type": "earnings",
-   "ticker": "SKHY",
-   "title": "SKHY earnings",
    "fav": false
   },
   {
@@ -233,6 +163,20 @@
    "fav": false
   },
   {
+   "date": "2026-11-03",
+   "type": "earnings",
+   "ticker": "RIOT",
+   "title": "RIOT earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-03",
+   "type": "earnings",
+   "ticker": "SMCI",
+   "title": "SMCI earnings",
+   "fav": true
+  },
+  {
    "date": "2026-11-04",
    "type": "earnings",
    "ticker": "COHR",
@@ -263,9 +207,23 @@
   {
    "date": "2026-11-05",
    "type": "earnings",
+   "ticker": "BITF",
+   "title": "BITF earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-05",
+   "type": "earnings",
    "ticker": "BKSY",
    "title": "BKSY earnings",
    "fav": false
+  },
+  {
+   "date": "2026-11-05",
+   "type": "earnings",
+   "ticker": "IONQ",
+   "title": "IONQ earnings",
+   "fav": true
   },
   {
    "date": "2026-11-05",
@@ -290,11 +248,39 @@
    "fav": false
   },
   {
+   "date": "2026-11-09",
+   "type": "earnings",
+   "ticker": "ASTS",
+   "title": "ASTS earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-09",
+   "type": "earnings",
+   "ticker": "QUBT",
+   "title": "QUBT earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-09",
+   "type": "earnings",
+   "ticker": "RKLB",
+   "title": "RKLB earnings",
+   "fav": false
+  },
+  {
    "date": "2026-11-10",
    "type": "macro",
    "ticker": null,
    "title": "CPI (October)",
    "note": "Consumer prices, 8:30am ET",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "earnings",
+   "ticker": "CRWV",
+   "title": "CRWV earnings",
    "fav": false
   },
   {
@@ -307,9 +293,37 @@
   {
    "date": "2026-11-10",
    "type": "earnings",
-   "ticker": "NBIS",
-   "title": "NBIS earnings (est.)",
-   "fav": true
+   "ticker": "HQ",
+   "title": "HQ earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "exdiv",
+   "ticker": "IBM",
+   "title": "IBM ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "earnings",
+   "ticker": "QBTS",
+   "title": "QBTS earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "earnings",
+   "ticker": "RGTI",
+   "title": "RGTI earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-11",
+   "type": "earnings",
+   "ticker": "XNDU",
+   "title": "XNDU earnings",
+   "fav": false
   },
   {
    "date": "2026-11-12",
@@ -342,6 +356,13 @@
    "fav": false
   },
   {
+   "date": "2026-11-17",
+   "type": "earnings",
+   "ticker": "NVDA",
+   "title": "NVDA earnings",
+   "fav": true
+  },
+  {
    "date": "2026-11-18",
    "type": "fed",
    "ticker": null,
@@ -355,6 +376,13 @@
    "ticker": "MSFT",
    "title": "MSFT ex-dividend",
    "fav": true
+  },
+  {
+   "date": "2026-11-24",
+   "type": "earnings",
+   "ticker": "DELL",
+   "title": "DELL earnings",
+   "fav": false
   },
   {
    "date": "2026-11-25",
@@ -371,6 +399,13 @@
    "title": "PCE (October)",
    "note": "8:30am ET — Personal Income and Outlays",
    "fav": false
+  },
+  {
+   "date": "2026-12-03",
+   "type": "exdiv",
+   "ticker": "QCOM",
+   "title": "QCOM ex-dividend",
+   "fav": true
   },
   {
    "date": "2026-12-08",

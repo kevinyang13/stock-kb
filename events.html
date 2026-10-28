@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Events</title>
-<link rel="stylesheet" href="assets/site.css?v=1793078783">
+<link rel="stylesheet" href="assets/site.css?v=1793159081">
 </head>
 <body>
 
@@ -43,7 +43,7 @@
 
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
-<script src="assets/site.js?v=1793078783"></script>
+<script src="assets/site.js?v=1793159081"></script>
 <script>
 Site.nav();
 
@@ -51,6 +51,9 @@ Site.nav();
   var esc = Site.esc;
   var evData = null, evLoaded = false;
   var DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  // tickers that have an income statement card -- only those become links,
+  // so a chip never promises a page that is not there
+  var charted = {};
 
   function ymd(d) {
     return d.getFullYear() + "-" +
@@ -81,8 +84,13 @@ Site.nav();
          e.type === "exdiv" ? "ex-div" :
          esc(e.title.replace(e.ticker, "").trim()))     // corporate: say what it is
       : esc(e.title);
-    return '<div class="ev ' + esc(e.type) + (e.fav ? " fav" : "") + '" title="' +
-           esc(e.title) + '">' + label + "</div>";
+    var cls = "ev " + esc(e.type) + (e.fav ? " fav" : "");
+    if (e.ticker && charted[e.ticker]) {
+      return '<a class="' + cls + ' link" href="financials.html?t=' +
+             encodeURIComponent(e.ticker) + '" title="' + esc(e.title) +
+             ' -- open the income statement">' + label + "</a>";
+    }
+    return '<div class="' + cls + '" title="' + esc(e.title) + '">' + label + "</div>";
   }
 
   function renderMonth(events, today) {
@@ -165,6 +173,16 @@ Site.nav();
   function loadEvents() {
     if (evLoaded) { drawEvents(); return; }
     evLoaded = true;
+
+    // the card list is a nicety: if it fails the calendar still draws, just
+    // without links, so it is fetched separately rather than chained
+    fetch("financials.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (doc) {
+        (doc && doc.items || []).forEach(function (i) { charted[i.t] = true; });
+        if (evData) drawEvents();
+      })
+      .catch(function () { /* no links, no harm */ });
 
     fetch("events.json", { cache: "no-store" })
       .then(function (r) {

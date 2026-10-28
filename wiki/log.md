@@ -1244,3 +1244,52 @@ were visible only by opening the image. "Pre-existing" is not a status that fixe
 served locally shows 68 chips, the VRT card with three charts, six KPI tiles, no horizontal
 overflow, and segment hovers carrying the right percentages (Americas 63.3%, Asia Pacific 22.0%,
 EMEA 14.8%).
+
+---
+
+## 2026-10-27 — Event calendar refreshed for all 103 symbols, and its chips now open the statement
+
+**Source**: stockanalysis.com quote pages, read 2026-10-27 through `quotes.py --events`.
+
+**Both refresh jobs in `quotes.py` were dead, and in the same way.** `refresh_pe()` and
+`refresh_events()` each read the watchlist out of an inline `<script id="watchlist">` block in
+`heatmap.html`. That block stopped existing when the tabs were split into separate pages and the
+list moved to `watchlist.json`; neither function had been run since. Both now read
+`watchlist.json`, and `--pe` writes its values back there with the `peAsOf` stamp instead of
+rewriting a block inside a page.
+
+**`--events` was also destructive by design.** It rebuilt the file from whatever it had just
+fetched plus the macro and Fed entries, so `quotes.py --events VRT` would have deleted every other
+ticker's events. It now keeps the future-dated events of symbols the run did not ask about, so a
+one-symbol refresh touches one symbol. That is why VRT's Oct 28 entry went in by hand earlier
+today; it would not have to now.
+
+**The refresh**: 103 symbols read, 59 events in the file — 40 earnings, 5 ex-dividend, 14 macro
+and Fed. 43 tickers carry a date. 50 published dates were already in the past and were omitted
+rather than estimated, which is the file's own rule.
+
+Two symbols have no quote page at all: VFTNX, a mutual fund, and BCII. MFH's published date is
+August 2023 and was dropped as stale.
+
+**One disappearance worth recording.** The previous calendar (generated Oct 19) carried SKHY
+earnings on Oct 28. The source now publishes **no** earnings date for SKHY, so the refresh dropped
+it. That is the rule working, not a bug, but it means the Oct 28 cluster is GOOG, MSFT, NOW and
+VRT, plus the FOMC decision — SK Hynix is no longer on the calendar until a date is published
+again. V's Oct 27 entry is kept because it is today's date, and Visa did report tonight.
+
+**Clicking a ticker now opens its income statement.** On the Events page a chip with a ticker
+becomes a link to `financials.html?t=<TICKER>`; macro, Fed and corporate chips stay plain. Only
+the 68 tickers that actually have a card are linked — the page fetches `financials.json` for that
+list, and if that fetch fails the calendar still draws, just without links, so the nicety cannot
+break the calendar.
+
+`financials.html` learned to read `?t=` (and a `#TICKER` hash), selects that card, and scrolls to
+it. A ticker with no card does **not** silently show someone else's statement: the page falls back
+to the first card and says so in the status line, "no card for SPY - showing NVDA instead".
+Clicking a chip on that page also writes the ticker into the URL, so any card can now be linked to
+directly.
+
+**Verification**: served locally — 27 linked chips and 7 plain ones in the month view, status
+reading "40 earnings - 5 ex-dividend - 14 macro/Fed"; the VRT chip opens the VRT card with all
+three charts drawn; `?t=SPY` shows the fallback message; clicking a chip on the Financials page
+rewrites the URL to that ticker.
