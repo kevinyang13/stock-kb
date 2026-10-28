@@ -54,11 +54,20 @@ def block(title, rows, notes=()):
 
 
 def beat(p):
-    """How the quarter landed, in the words a reader would use."""
+    """How the quarter landed, in the words a reader would use -- or nothing,
+    when the two figures cannot be shown to share a basis. Subtracting an
+    adjusted consensus from a GAAP actual produces a number that looks like a
+    result and is not one, so the chart declines to print it."""
+    if p.get("basisUnverified"):
+        return None
     d = p["actual"] - p["estimate"]
     pct = p.get("surprisePct")
     tail = f" ({pct:+.0f}%)" if pct is not None else ""
     return signed(d) + tail
+
+
+BASIS_WARN = ("<i>actual and estimate may be on different bases;</i><br>"
+              "<i>no surprise figure is shown</i>")
 
 
 def reported_tip(p, cur, which):
@@ -69,7 +78,8 @@ def reported_tip(p, cur, which):
                          else " · reported")
     if which == "estimate":
         head = f"{p['label']} · street estimate"
-    return block(head, rows)
+    notes = (BASIS_WARN,) if p.get("basisUnverified") else ()
+    return block(head, rows, notes)
 
 
 def ahead_tip(p, cur):
@@ -97,15 +107,23 @@ def build(spec):
 
     fig = go.Figure()
 
-    # the hairline first, so both dots sit on top of it
-    gx, gy = [], []
-    for p in done:
-        gx += [p["label"], p["label"], None]
-        gy += [p["actual"], p["estimate"], None]
-    fig.add_scatter(
-        x=gx, y=gy, mode="lines", showlegend=False, hoverinfo="skip",
-        line=dict(color="#c2c7cd", width=1),
-    )
+    # The hairline first, so both dots sit on top of it. It is what the eye
+    # reads as "the gap", so a pair whose basis is unverified gets a dotted
+    # one instead -- the two figures are still drawn, but the chart stops
+    # asserting that the distance between them means anything.
+    for unverified, dash in ((False, "solid"), (True, "dot")):
+        gx, gy = [], []
+        for p in done:
+            if bool(p.get("basisUnverified")) is not unverified:
+                continue
+            gx += [p["label"], p["label"], None]
+            gy += [p["actual"], p["estimate"], None]
+        if not gx:
+            continue
+        fig.add_scatter(
+            x=gx, y=gy, mode="lines", showlegend=False, hoverinfo="skip",
+            line=dict(color="#c2c7cd", width=1, dash=dash),
+        )
 
     fig.add_scatter(
         name="Estimate",
@@ -192,6 +210,13 @@ def validate(spec):
     if not (spec.get("reported") or []):
         print(f"  ! {spec['ticker']}: nothing reported", file=sys.stderr)
         warn += 1
+    # Not a warning: the pair is drawn, only its surprise figure is withheld.
+    # Printed so a run says which cards are carrying one.
+    for p in spec.get("reported") or []:
+        if p.get("basisUnverified"):
+            print(f"  ~ {spec['ticker']} {p.get('label')}: basis unverified "
+                  f"({p['actual']:+.2f} vs {p['estimate']:+.2f}), surprise "
+                  f"withheld", file=sys.stderr)
     return warn
 
 

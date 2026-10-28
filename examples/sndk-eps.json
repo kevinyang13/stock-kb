@@ -2,7 +2,7 @@
  "ticker": "SNDK",
  "company": "SanDisk",
  "currency": "$",
- "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
  "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
  "reported": [
   {
@@ -12,7 +12,8 @@
    "actual": 0.9,
    "estimate": 0.58,
    "surprise": 0.32,
-   "surprisePct": 55.17
+   "surprisePct": 55.17,
+   "basisUnverified": true
   },
   {
    "label": "Dec '25",
@@ -21,7 +22,8 @@
    "actual": 5.83,
    "estimate": 3.31,
    "surprise": 2.52,
-   "surprisePct": 76.13
+   "surprisePct": 76.13,
+   "basisUnverified": true
   },
   {
    "label": "Mar '26",
@@ -30,7 +32,8 @@
    "actual": 23.22,
    "estimate": 14.17,
    "surprise": 9.05,
-   "surprisePct": 63.87
+   "surprisePct": 63.87,
+   "basisUnverified": true
   },
   {
    "label": "Jun '26",

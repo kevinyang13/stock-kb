@@ -106,6 +106,41 @@ def num(v):
         return None
 
 
+# A row's actual and its consensus are served as one pair, but they are not
+# guaranteed to share a basis: Nasdaq has handed back a GAAP actual against an
+# adjusted consensus more than once, and the resulting "surprise" is then an
+# artefact of the mismatch rather than a result. Alphabet's Jun 2026 row is
+# $9.11 against $2.88 -- a 216% beat -- because $6.26 of that EPS was an
+# unrealised gain on equity securities that the consensus never included; on
+# the same basis the quarter was roughly level. GE Vernova's Dec 2025 row does
+# the same thing with the Prolec remeasurement gain.
+#
+# There is no field that states the basis, so the pair is judged on its own
+# plausibility: a profitable company does not miss or beat its own consensus by
+# half. Both sides must be positive, because a loss maker crossing zero makes
+# the ratio meaningless rather than wrong -- an actual of -$38.25 against
+# -$3.41 is arithmetic, not a bad figure.
+BASIS = ("EPS as the vendor scores it -- usually the street's adjusted figure, "
+         "which is not the GAAP EPS the income statement is built from. The "
+         "feed states no basis and has mixed GAAP actuals with adjusted "
+         "consensus, so a pair that cannot be shown to share one is marked "
+         "basisUnverified and carries no surprise figure.")
+
+MISMATCH_REL = 0.40     # gap against the estimate
+MISMATCH_ABS = 0.15     # and at least this many cents, so rounding is not it
+
+
+def basis_unverified(actual, estimate):
+    """True when the pair cannot be shown to share a basis, so no surprise
+    figure may be published for it."""
+    if actual is None or estimate is None:
+        return False
+    if actual <= 0 or estimate <= 0:
+        return False
+    gap = abs(actual - estimate)
+    return gap >= MISMATCH_ABS and gap / estimate > MISMATCH_REL
+
+
 def label_of(fiscal_end):
     """'Jun 2026' -> "Jun '26". The card's own period names are fiscal and do
     not line up across companies; the quarter end does."""
@@ -146,7 +181,7 @@ def build(item):
         if act is None or est is None:
             continue
         rep = when(r.get("dateReported"))
-        done.append({
+        row = {
             "label": label_of(r.get("fiscalQtrEnd")),
             "quarterEnd": (r.get("fiscalQtrEnd") or "").strip(),
             "reported": f"{rep:%b %-d, %Y}" if rep else None,
@@ -154,7 +189,10 @@ def build(item):
             "estimate": round(est, 4),
             "surprise": round(act - est, 4),
             "surprisePct": num(r.get("percentageSurprise")),
-        })
+        }
+        if basis_unverified(act, est):
+            row["basisUnverified"] = True
+        done.append(row)
     if not done:
         raise LookupError(f"{sym}: no reported quarters")
     done = done[-KEEP:]
@@ -198,8 +236,7 @@ def build(item):
         "ticker": sym,
         "company": item["company"],
         "currency": "$",
-        "basis": ("Adjusted EPS as the street scores it, which is not the GAAP "
-                  "EPS the income statement is built from."),
+        "basis": BASIS,
         "source": ("Nasdaq earnings surprise and analyst forecast endpoints "
                    "(Zacks consensus), read " +
                    datetime.now().strftime("%b %-d, %Y") + "."),

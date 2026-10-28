@@ -1531,3 +1531,72 @@ one since it was charted.
 **Verification**: served locally — both cards draw three charts, the pending-debt notes are gone,
 MSFT reads $133,931M and NOW reads $8,415M. Both bar images were opened: no negative gridline, the
 quarter label clear of the axis.
+
+---
+
+## 2026-10-28 — the earnings charts were comparing two different things
+
+Kevin noticed the actual-vs-estimate chart "is not updated" after the five Oct 28 reports. It is
+not: every one of those five still shows Jun '26 as its newest reported quarter. But the reason is
+not this repo, and chasing it turned up something worse.
+
+**The vendor is the one that is behind, not `epsfetch.py`.** All five endpoints were queried live:
+Nasdaq's surprise table still ends at Jun 2026 for NOW, GOOG, MSFT, VRT and GEV, and Sep 2026 is
+still sitting in the *forecast* table hours after all five reported. A refetch today writes
+byte-identical files. NOW's earnings-date endpoint is blank too -- "our vendor, Zacks Investment
+Research, hasn't provided us with the upcoming earnings report date." Zacks posts the surprise row
+a day or two after the print, so the charts fill themselves in without intervention.
+
+**The real defect: a GAAP actual scored against an adjusted consensus.** The two sides of a row
+come back as one pair with no statement of basis, and they are not always on the same one. Alphabet
+Jun '26 read **$9.11 actual against $2.88 expected -- a 216% beat**. The $9.11 is Alphabet's real
+GAAP diluted EPS, but about **$6.26 of it was an unrealised gain on equity securities** that the
+consensus never included; on a like-for-like basis the quarter was roughly level. GE Vernova's
+Dec '25 row does the same thing with the Prolec remeasurement gain: $13.39 against $3.05.
+
+So the Financials page was publishing a 216% beat where the company roughly matched. The figures
+were both real; the subtraction between them was not.
+
+**A third basis, which is why NOW looked wrong.** ServiceNow Q2 FY26: the company reported **$0.29
+GAAP** and **$0.90 non-GAAP**; the vendor's actual is **$0.31**. It matches neither. Zacks computes
+its own normalised EPS, and for some names it lands away from both of the company's own figures.
+That is why the card's "Sep '26 consensus $0.56" matches neither the $1.02 the press quoted (the
+company's non-GAAP basis) nor the $0.27 GAAP actual. The series is internally consistent, so it is
+still publishable -- but the card used to call it "adjusted EPS as the street scores it", which was
+simply false. That claim is gone.
+
+**The rule.** There is no basis field to read, so a pair is judged on its own plausibility: a
+profitable company does not miss or beat its own consensus by half. Both sides must be positive,
+because a loss maker crossing zero makes the ratio meaningless rather than wrong -- MSTR's
+-$38.25 against -$3.41 is arithmetic, not a bad figure.
+
+    gap >= $0.15  and  gap / estimate > 0.40     ->  basisUnverified
+
+Calibrated against all 255 stored rows: it flags **15 rows on 11 cards** -- CRM, DELL, GEV, GOOG,
+INTC, ORCL, SKHY, SMCI, SNDK, SPCX, TSLA -- and leaves 240 alone. The $0.15 floor is what keeps
+DDOG's $0.17-against-$0.06 out of it; a 183% "beat" on an eleven-cent gap is uninformative either
+way, but it is not evidence of a mixed basis.
+
+A flagged pair is still drawn -- both figures are real -- but the chart stops asserting that the
+distance between them means anything: **the joining hairline goes dotted, the surprise row
+disappears from the hover, and the card's note says why.** `bin/epsdots.py` prints a `~` line for
+each one so a render says which cards carry them.
+
+**Same lesson as the sankey labels and the stray gridline, third time now.** The validator checks
+that a reported quarter has both figures present. Both were present. Nothing in this repo could
+have caught a number that is correct, well-formed, and measuring something else -- only reading it
+against the filing did.
+
+**Not a restatement**: ServiceNow filed an 8-K/A for Q3 FY26 (`erq3fy262.htm`). Every figure in it
+matches the original -- revenue $4,106M, operating income $385M, net income $277M, GAAP EPS $0.27,
+non-GAAP $1.00, cRPO $13.65B. It also confirms the **five-for-one stock split**, which is why the
+per-share figures on that card are small against the historical ones.
+
+**Housekeeping**: five background shells had been spinning since this morning. Each waits on
+`pgrep -f epsfetch.py` (or `pefetch.py`) from inside a shell whose own command line contains that
+string, so `pgrep -f` matches the waiter itself and the loop can never exit. Killed. The pattern
+that works is `pgrep -f "[e]psfetch.py"`.
+
+**Verification**: served locally. 15 rows withhold the surprise figure and carry the basis warning;
+240 still show theirs -- MSFT Jun '26 still reads `+$0.53 (+13%)`. The Alphabet image was opened:
+Mar '26 and Jun '26 join with a dotted line, Sep '25 and Dec '25 stay solid.
