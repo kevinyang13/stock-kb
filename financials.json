@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-26T16:58:15-07:00",
- "generatedLabel": "Oct 26, 2026",
+ "generated": "2026-10-27T18:32:28-07:00",
+ "generatedLabel": "Oct 27, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -35,7 +35,7 @@
     },
     {
      "k": "P/E",
-     "v": "27.3 · 17.9",
+     "v": "27.6 · 18.0",
      "s": "trailing · forward"
     },
     {
@@ -51,7 +51,7 @@
     "$7.8B of interest and other income sits above the tax line, on top of the operating result.",
     "Debt and coverage, Q2 FY27: $38.9B of debt against $22.4B of cash and $21.4B of free cash flow for the quarter. Net debt $16.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $2.22 actual against $2.09 expected, beat by $0.13 (+6%). Oct '26 consensus is $2.49 from 13 analysts, due Nov 18, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 27.3 trailing, 17.9 forward; dividend $1.00 a year, 0.46% yield, last ex-dividend Sep 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Market figures as of Oct 27, 2026: P/E 27.6 trailing, 18.0 forward; dividend $1.00 a year, 0.46% yield, last ex-dividend Sep 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Market figures as of Oct 26, 2026: trailing 27.3, forward 17.9. Share price over earnings, so unlike the other figures on this card it moves every session and is not from the filing (source: stockanalysis.com)."
    ],
    "debt": "NVDA-debt",
@@ -89,12 +89,12 @@
     },
     {
      "k": "P/E",
-     "v": "20.9 · 19.4",
+     "v": "21.4 · 19.9",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "2.05%",
+     "v": "2.00%",
      "s": "$3.68 a year"
     }
    ],
@@ -105,7 +105,7 @@
     "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line.",
     "Debt and coverage, FQ3 FY26: $15.3B of debt against $4.5B of cash and $495.0M of free cash flow for the quarter. Net debt $10.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.53 actual against $1.54 expected, missed by $0.01 (-1%). Sep '26 consensus is $1.46 from 9 analysts, due Nov 04, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 20.9 trailing, 19.4 forward; dividend $3.68 a year, 2.05% yield, last ex-dividend Dec 3, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 21.4 trailing, 19.9 forward; dividend $3.68 a year, 2.00% yield, last ex-dividend Dec 3, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "QCOM-debt",
    "eps": "QCOM-eps"
@@ -142,7 +142,7 @@
     },
     {
      "k": "P/E",
-     "v": "15.8 · 23.1",
+     "v": "15.9 · 23.7",
      "s": "trailing · forward"
     },
     {
@@ -158,7 +158,7 @@
     "R&D of $18.2B is 15% of revenue.",
     "Debt and coverage, Q2 FY26: $120.8B of debt against $55.9B of cash and -$5.9B of free cash flow for the quarter. Net debt $64.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $9.11 actual against $2.88 expected, beat by $6.23 (+216%). Sep '26 consensus is $2.94 from 14 analysts, due Oct 28, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 15.8 trailing, 23.1 forward; dividend $0.88 a year, 0.28% yield, last ex-dividend Sep 4, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 15.9 trailing, 23.7 forward; dividend $0.88 a year, 0.28% yield, last ex-dividend Sep 4, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "GOOG-debt",
    "eps": "GOOG-eps"
@@ -195,12 +195,12 @@
     },
     {
      "k": "P/E",
-     "v": "12.2 · 5.1",
+     "v": "12.5 · 5.3",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.07%",
+     "v": "0.06%",
      "s": "$0.60 a year"
     }
    ],
@@ -212,7 +212,7 @@
     "Full fiscal year 2026: $133.19B revenue and $84.97B net income.",
     "Debt and coverage, FQ4 FY26: $5.2B of debt against $38.4B of cash and $32.9B of free cash flow for the quarter. Net debt -$33.2B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Aug '26: $33.19 actual against $31.41 expected, beat by $1.78 (+6%). Nov '26 consensus is $37.93 from 9 analysts, due Dec 16, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 12.2 trailing, 5.1 forward; dividend $0.60 a year, 0.07% yield, last ex-dividend Oct 14, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 12.5 trailing, 5.3 forward; dividend $0.60 a year, 0.06% yield, last ex-dividend Oct 14, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "MU-debt",
    "eps": "MU-eps"
@@ -249,7 +249,7 @@
     },
     {
      "k": "P/E",
-     "v": "17.0 · 5.8",
+     "v": "17.7 · 6.1",
      "s": "trailing · forward"
     },
     {
@@ -265,7 +265,7 @@
     "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one.",
     "Debt and coverage, FQ4 FY26: $201.0M of debt against $4.8B of cash and $7.1B of free cash flow for the quarter. Net debt -$4.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $38.82 actual against $33.28 expected, beat by $5.54 (+17%). Sep '26 consensus is $45.22 from 4 analysts, due Oct 29, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 17.0 trailing, 5.8 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 17.7 trailing, 6.1 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "SNDK-debt",
    "eps": "SNDK-eps"
@@ -302,12 +302,12 @@
     },
     {
      "k": "P/E",
-     "v": "28.3 · 19.9",
+     "v": "29.1 · 20.3",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.96%",
+     "v": "0.93%",
      "s": "$4.06 a year"
     }
    ],
@@ -318,7 +318,7 @@
     "This replaces the earlier entry, which was transcribed from the App Economy Insights reference image rather than filed figures.",
     "Debt and coverage, Q3 FY26: NT$818.4B of debt against NT$3.6T of cash and NT$476.6B of free cash flow for the quarter. Net debt -NT$2.8T. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $4.60 actual against $4.45 expected, beat by $0.15 (+3%). Dec '26 consensus is $5.22 from 6 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 28.3 trailing, 19.9 forward; dividend $4.06 a year, 0.96% yield, last ex-dividend Dec 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 29.1 trailing, 20.3 forward; dividend $4.06 a year, 0.93% yield, last ex-dividend Dec 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "TSM-debt",
    "eps": "TSM-eps"
@@ -355,7 +355,7 @@
     },
     {
      "k": "P/E",
-     "v": "430.3 · 182.9",
+     "v": "447.7 · 190.3",
      "s": "trailing · forward"
     },
     {
@@ -371,7 +371,7 @@
     "Operating profit of $718M is smaller than Micron's quarterly tax bill.",
     "Debt and coverage, Q3 FY26: $16.4B of debt against $17.9B of cash and $1.5B of free cash flow for the quarter. Net debt -$1.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $0.20 actual against $0.22 expected, missed by $0.02 (-9%). Dec '26 consensus is $0.25 from 10 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 430.3 trailing, 182.9 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 447.7 trailing, 190.3 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "TSLA-debt",
    "eps": "TSLA-eps"
@@ -408,12 +408,12 @@
     },
     {
      "k": "P/E",
-     "v": "20.6 · 14.3",
+     "v": "19.9 · 13.8",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "1.62%",
+     "v": "1.68%",
      "s": "$5.52 a year"
     }
    ],
@@ -425,7 +425,7 @@
     "Seasonality matters for Intuit — the fiscal fourth quarter is not its tax-season peak.",
     "Debt and coverage, FQ4 FY26: $8.4B of debt against $4.7B of cash and $1.3B of free cash flow for the quarter. Net debt $3.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $2.17 actual against $2.12 expected, beat by $0.05 (+2%). Oct '26 consensus is $2.47 from 9 analysts, due Nov 19, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 20.6 trailing, 14.3 forward; dividend $5.52 a year, 1.62% yield, last ex-dividend Oct 8, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 19.9 trailing, 13.8 forward; dividend $5.52 a year, 1.68% yield, last ex-dividend Oct 8, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "INTU-debt",
    "eps": "INTU-eps"
@@ -462,7 +462,7 @@
     },
     {
      "k": "P/E",
-     "v": "10.0 · 7.0",
+     "v": "10.8 · 7.5",
      "s": "trailing · forward"
     },
     {
@@ -478,7 +478,7 @@
     "Revenue nearly doubled year over year.",
     "Debt and coverage, FQ4 FY26: $9.3B of debt against $7.5B of cash and $718.7M of free cash flow for the quarter. Net debt $1.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.62 actual against $0.56 expected, beat by $1.06 (+189%). Sep '26 consensus is $1.04 from 6 analysts, due Nov 03, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 10.0 trailing, 7.0 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 10.8 trailing, 7.5 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "SMCI-debt",
    "eps": "SMCI-eps"
@@ -532,7 +532,7 @@
     "The tax line was a small benefit, so it is folded into the non-operating line rather than drawn as a cost.",
     "Debt and coverage, Q2 FY26: $54.5M of debt against $1.2B of cash and -$114.0M of free cash flow for the quarter. Net debt -$1.2B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.72 actual against -$0.59 expected, missed by $0.13 (-22%). Sep '26 consensus is -$0.79 from 1 analysts, due Nov 05, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "IONQ-debt",
    "eps": "IONQ-eps"
@@ -569,7 +569,7 @@
     },
     {
      "k": "P/E",
-     "v": "29.7 · 26.9",
+     "v": "29.6 · 26.9",
      "s": "trailing · forward"
     },
     {
@@ -585,7 +585,7 @@
     "The most balanced statement of the group — no single line dominates.",
     "Debt and coverage, FQ4 FY26: $128.8B of debt against $20.9B of cash and $19.6B of free cash flow for the quarter. Net debt $107.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $4.74 actual against $4.21 expected, beat by $0.53 (+13%). Sep '26 consensus is $4.71 from 14 analysts, due Oct 28, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 29.7 trailing, 26.9 forward; dividend $3.92 a year, 0.74% yield, last ex-dividend Nov 19, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 29.6 trailing, 26.9 forward; dividend $3.92 a year, 0.74% yield, last ex-dividend Nov 19, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "MSFT-debt",
    "eps": "MSFT-eps"
@@ -622,7 +622,7 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 52.1",
+     "v": "n/a · 52.7",
      "s": "trailing · forward"
     },
     {
@@ -637,8 +637,8 @@
     "R&D is $3,574M, 25% of revenue. Capex was roughly $19.6B in the quarter, mostly AI infrastructure — more than revenue, and not visible on an income statement.",
     "The App Economy Insights reference chart for this quarter shows operating profit of $2.8B and R&D of $4.6B. The filed figures used here are $4,019M and $3,574M. The segment split matches between the two.",
     "Debt and coverage, Q3 FY26: $39.2B of debt against $51.3B of cash and -$10.0B of free cash flow for the quarter. Net debt -$12.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $0.35 actual against $0.10 expected, beat by $0.25 (+250%). Dec '26 consensus is $0.28 from 9 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, 52.1 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Earnings chart: adjusted EPS against the street's consensus, two reported quarters and the one ahead. Sep '26: $0.35 actual against $0.10 expected, beat by $0.25 (+250%). Dec '26 consensus is $0.28 from 9 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, 52.7 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "SPCX-debt",
    "eps": "SPCX-eps"
@@ -675,12 +675,12 @@
     },
     {
      "k": "P/E",
-     "v": "21.5 · 19.2",
+     "v": "21.1 · 18.8",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.33%",
+     "v": "0.34%",
      "s": "$2.10 a year"
     }
    ],
@@ -691,7 +691,7 @@
     "Operating profit here is the filed $12,988M. stockanalysis.com shows $22,878M because it places a $9,890M operating charge below the line; this chart follows the 8-K, where revenue less all costs gives $12,988M.",
     "Debt and coverage, Q3 FY26: $114.8B of debt against $11.2B of cash and -$1.2B of free cash flow for the quarter. Net debt $103.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $7.40 actual against $6.52 expected, beat by $0.88 (+14%). Dec '26 consensus is $8.16 from 12 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 21.5 trailing, 19.2 forward; dividend $2.10 a year, 0.33% yield, last ex-dividend Sep 21, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 21.1 trailing, 18.8 forward; dividend $2.10 a year, 0.34% yield, last ex-dividend Sep 21, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "META-debt",
    "eps": "META-eps"
@@ -745,7 +745,7 @@
     "Revenue backlog was roughly $104B at June 30; FY26 guidance is $12.4-13.2B revenue against $35-39B of capex.",
     "Debt and coverage, Q2 FY26: $51.6B of debt against $5.5B of cash and -$5.7B of free cash flow for the quarter. Net debt $46.1B. Debt and cash are the Jun 30, 2026 balance sheet; free cash flow is that quarter's operating cash flow less capex (source: stockanalysis.com). The debt figure is the reported total, which includes $16.5B of lease obligations.",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$1.32 actual against -$1.52 expected, beat by $0.20 (+13%). Sep '26 consensus is -$1.45 from 10 analysts, due Nov 9, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "CRWV-debt",
    "eps": "CRWV-eps"
@@ -782,12 +782,12 @@
     },
     {
      "k": "P/E",
-     "v": "20.7 · 29.5",
+     "v": "20.4 · 29.1",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "1.91%",
+     "v": "1.94%",
      "s": "¥162.00 a year"
     }
    ],
@@ -799,7 +799,7 @@
     "Net profit exceeds operating profit: $405M of non-operating income sits below the line, which for Nintendo is mostly FX and interest on its cash. Cost of sales also absorbed roughly $300M of IEEPA tariff refunds.",
     "Nintendo does not break R&D out of SG&A, so operating expenses appear as a single line.",
     "No debt and coverage chart: Nintendo publishes no quarterly cash flow statement, so there is no free cash flow figure for this quarter to set the balance sheet against.",
-    "Market figures as of Oct 26, 2026: P/E 20.7 trailing, 29.5 forward; dividend ¥162.00 a year, 1.91% yield, last ex-dividend Sep 29, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 20.4 trailing, 29.1 forward; dividend ¥162.00 a year, 1.94% yield, last ex-dividend Sep 29, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ]
   },
   {
@@ -834,7 +834,7 @@
     },
     {
      "k": "P/E",
-     "v": "39.5 · 37.5",
+     "v": "39.8 · 37.9",
      "s": "trailing · forward"
     },
     {
@@ -848,7 +848,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, FQ3 FY26: $84.3B of debt against $39.5B of cash and $31.9B of free cash flow for the quarter. Net debt $44.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.91 actual against $1.88 expected, beat by $0.03 (+2%). Sep '26 consensus is $2.00 from 8 analysts, due Nov 02, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 39.5 trailing, 37.5 forward; dividend $1.08 a year, 0.31% yield, last ex-dividend Aug 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 39.8 trailing, 37.9 forward; dividend $1.08 a year, 0.31% yield, last ex-dividend Aug 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "AAPL-debt",
    "eps": "AAPL-eps"
@@ -885,7 +885,7 @@
     },
     {
      "k": "P/E",
-     "v": "14.4 · 9.6",
+     "v": "13.9 · 9.2",
      "s": "trailing · forward"
     },
     {
@@ -899,7 +899,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q3 FY26: $6.8B of debt against $4.4B of cash and $2.4B of free cash flow for the quarter. Net debt $2.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Aug '26: $4.75 actual against $4.86 expected, missed by $0.11 (-2%). Nov '26 consensus is $5.11 from 12 analysts, due Dec 9, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 14.4 trailing, 9.6 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 13.9 trailing, 9.2 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "ADBE-debt",
    "eps": "ADBE-eps"
@@ -936,7 +936,7 @@
     },
     {
      "k": "P/E",
-     "v": "136.3 · 47.8",
+     "v": "143.8 · 50.4",
      "s": "trailing · forward"
     },
     {
@@ -950,7 +950,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $4.3B of debt against $5.1B of cash and $1.6B of free cash flow for the quarter. Net debt -$810.0M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.44 actual against $1.35 expected, beat by $0.09 (+7%). Sep '26 consensus is $1.68 from 13 analysts, due Nov 03, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 136.3 trailing, 47.8 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 143.8 trailing, 50.4 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "AMD-debt",
    "eps": "AMD-eps"
@@ -987,7 +987,7 @@
     },
     {
      "k": "P/E",
-     "v": "20.0 · 26.8",
+     "v": "20.4 · 27.2",
      "s": "trailing · forward"
     },
     {
@@ -1001,7 +1001,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $251.6B of debt against $78.2B of cash and -$8.8B of free cash flow for the quarter. Net debt $173.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.88 actual against $1.83 expected, beat by $0.05 (+3%). Sep '26 consensus is $2.01 from 14 analysts, due Oct 29, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 20.0 trailing, 26.8 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 20.4 trailing, 27.2 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "AMZN-debt",
    "eps": "AMZN-eps"
@@ -1047,7 +1047,7 @@
     "No segment split: Arqit reports one segment and gives no revenue split in its interim results.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, H1 FY26: $2.2M of debt against $28.9M of cash and -$25.7M of free cash flow for the half year. Net debt -$26.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that half year's flow (source: stockanalysis.com).",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "ARQQ-debt"
   },
@@ -1083,12 +1083,12 @@
     },
     {
      "k": "P/E",
-     "v": "40.7 · 25.1",
+     "v": "42.0 · 25.8",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.50%",
+     "v": "0.48%",
      "s": "$7.92 a year"
     }
    ],
@@ -1098,7 +1098,7 @@
     "Reported in €. Margins compare with the other statements here; the absolute figures do not.",
     "Debt and coverage, Q3 FY26: €2.0B of debt against €8.0B of cash and €11.4B of free cash flow for the quarter. Net debt -€6.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $14.89 actual against $12.47 expected, beat by $2.42 (+19%). Dec '26 consensus is $17.22 from 3 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 40.7 trailing, 25.1 forward; dividend $7.92 a year, 0.50% yield, last ex-dividend Oct 27, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 42.0 trailing, 25.8 forward; dividend $7.92 a year, 0.48% yield, last ex-dividend Oct 27, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "ASML-debt",
    "eps": "ASML-eps"
@@ -1145,7 +1145,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $3.0B of debt against $2.3B of cash and -$694.8M of free cash flow for the quarter. Net debt $705.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.44 actual against -$0.28 expected, missed by $0.16 (-57%). Sep '26 consensus is -$0.41 from 7 analysts, due Nov 9, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "ASTS-debt",
    "eps": "ASTS-eps"
@@ -1182,12 +1182,12 @@
     },
     {
      "k": "P/E",
-     "v": "42.0 · 18.9",
+     "v": "43.7 · 19.7",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.79%",
+     "v": "0.76%",
      "s": "$2.60 a year"
     }
    ],
@@ -1196,7 +1196,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q3 FY26: $59.4B of debt against $24.0B of cash and $13.7B of free cash flow for the quarter. Net debt $35.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $3.03 actual against $2.83 expected, beat by $0.20 (+7%). Oct '26 consensus is $3.45 from 10 analysts, due Dec 10, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 42.0 trailing, 18.9 forward; dividend $2.60 a year, 0.79% yield, last ex-dividend Sep 21, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 43.7 trailing, 19.7 forward; dividend $2.60 a year, 0.76% yield, last ex-dividend Sep 21, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "AVGO-debt",
    "eps": "AVGO-eps"
@@ -1228,7 +1228,7 @@
     },
     {
      "k": "P/E",
-     "v": "70.2 · 213.4",
+     "v": "18.1 · 82.5",
      "s": "trailing · forward"
     },
     {
@@ -1243,7 +1243,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $48.4B of debt against $7.2B of cash and $631.0M of free cash flow for the quarter. Net debt $41.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.76 actual against -$0.34 expected, missed by $0.42 (-124%). Sep '26 consensus is -$0.21 from 7 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 70.2 trailing, 213.4 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 18.1 trailing, 82.5 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "BA-debt",
    "eps": "BA-eps"
@@ -1290,7 +1290,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $221.3M of debt against $36.9M of cash and -$19.0M of free cash flow for the quarter. Net debt $184.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.32 actual against -$0.38 expected, beat by $0.06 (+16%). Sep '26 consensus is -$0.25 from 2 analysts, due Nov 05, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "BKSY-debt",
    "eps": "BKSY-eps"
@@ -1337,7 +1337,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q3 FY26: $1.8B of debt against $202.6M of cash and -$136.0M of free cash flow for the quarter. Net debt $1.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.40 actual against -$0.30 expected, missed by $0.10 (-33%). Sep '26 consensus is -$0.36 from 3 analysts, due Nov 24, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "CLSK-debt",
    "eps": "CLSK-eps"
@@ -1374,7 +1374,7 @@
     },
     {
      "k": "P/E",
-     "v": "53.8 · 23.6",
+     "v": "57.2 · 25.1",
      "s": "trailing · forward"
     },
     {
@@ -1388,7 +1388,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, FQ4 FY26: $3.6B of debt against $1.2B of cash and -$486.2M of free cash flow for the quarter. Net debt $2.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.47 actual against $1.43 expected, beat by $0.04 (+3%). Sep '26 consensus is $1.78 from 8 analysts, due Nov 04, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 53.8 trailing, 23.6 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 57.2 trailing, 25.1 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "COHR-debt",
    "eps": "COHR-eps"
@@ -1420,7 +1420,7 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 106.7",
+     "v": "n/a · 107.6",
      "s": "trailing · forward"
     },
     {
@@ -1435,7 +1435,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $6.7B of debt against $8.6B of cash and $197.3M of free cash flow for the quarter. Net debt -$1.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.39 actual against $0.14 expected, missed by $0.53 (-379%). Sep '26 consensus is -$0.15 from 10 analysts, due Oct 29, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, 106.7 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, 107.6 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "COIN-debt",
    "eps": "COIN-eps"
@@ -1472,12 +1472,12 @@
     },
     {
      "k": "P/E",
-     "v": "22.9 · 16.9",
+     "v": "22.3 · 16.4",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.71%",
+     "v": "0.73%",
      "s": "$1.76 a year"
     }
    ],
@@ -1486,7 +1486,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY27: $42.4B of debt against $8.3B of cash and $1.1B of free cash flow for the quarter. Net debt $34.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $4.95 actual against $2.35 expected, beat by $2.60 (+111%). Oct '26 consensus is $2.41 from 12 analysts, due Dec 2, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 22.9 trailing, 16.9 forward; dividend $1.76 a year, 0.71% yield, last ex-dividend Sep 17, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 22.3 trailing, 16.4 forward; dividend $1.76 a year, 0.73% yield, last ex-dividend Sep 17, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "CRM-debt",
    "eps": "CRM-eps"
@@ -1523,12 +1523,12 @@
     },
     {
      "k": "P/E",
-     "v": "33.1 · 21.4",
+     "v": "33.5 · 21.6",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "1.52%",
+     "v": "1.51%",
      "s": "$1.68 a year"
     }
    ],
@@ -1537,7 +1537,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, FQ4 FY26: $31.2B of debt against $7.2B of cash and $5.0B of free cash flow for the quarter. Net debt $24.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $1.08 actual against $0.99 expected, beat by $0.09 (+9%). Oct '26 consensus is $1.15 from 8 analysts, due Nov 11, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 33.1 trailing, 21.4 forward; dividend $1.68 a year, 1.52% yield, last ex-dividend Oct 2, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 33.5 trailing, 21.6 forward; dividend $1.68 a year, 1.51% yield, last ex-dividend Oct 2, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "CSCO-debt",
    "eps": "CSCO-eps"
@@ -1574,7 +1574,7 @@
     },
     {
      "k": "P/E",
-     "v": "571.4 · 105.7",
+     "v": "572.5 · 105.9",
      "s": "trailing · forward"
     },
     {
@@ -1588,7 +1588,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $1.3B of debt against $435.0M of cash and $306.0M of free cash flow for the quarter. Net debt $842.8M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.18 actual against $0.13 expected, beat by $0.05 (+38%). Sep '26 consensus is $0.18 from 9 analysts, due Nov 04, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 571.4 trailing, 105.7 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 572.5 trailing, 105.9 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "DDOG-debt",
    "eps": "DDOG-eps"
@@ -1625,12 +1625,12 @@
     },
     {
      "k": "P/E",
-     "v": "27.2 · 16.6",
+     "v": "29.3 · 17.8",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.54%",
+     "v": "0.50%",
      "s": "$2.52 a year"
     }
    ],
@@ -1639,7 +1639,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY27: $35.3B of debt against $11.6B of cash and $986.0M of free cash flow for the quarter. Net debt $23.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $6.76 actual against $4.72 expected, beat by $2.04 (+43%). Oct '26 consensus is $6.41 from 8 analysts, due Nov 24, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 27.2 trailing, 16.6 forward; dividend $2.52 a year, 0.54% yield, last ex-dividend Oct 20, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 29.3 trailing, 17.8 forward; dividend $2.52 a year, 0.50% yield, last ex-dividend Oct 20, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "DELL-debt",
    "eps": "DELL-eps"
@@ -1686,7 +1686,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $53.4M of debt against $459.8M of cash and -$106.3M of free cash flow for the quarter. Net debt -$406.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.42 actual against -$0.50 expected, beat by $0.08 (+16%). Sep '26 consensus is -$0.60 from 2 analysts, due Nov 10, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "FLY-debt",
    "eps": "FLY-eps"
@@ -1723,12 +1723,12 @@
     },
     {
      "k": "P/E",
-     "v": "33.3 · 32.5",
+     "v": "34.4 · 33.5",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.65%",
+     "v": "0.63%",
      "s": "$1.88 a year"
     }
    ],
@@ -1737,7 +1737,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q3 FY26: $20.6B of debt against $8.3B of cash and $1.8B of free cash flow for the quarter. Net debt $12.3B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $2.25 actual against $2.02 expected, beat by $0.23 (+11%). Dec '26 consensus is $2.02 from 6 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 33.3 trailing, 32.5 forward; dividend $1.88 a year, 0.65% yield, last ex-dividend Oct 5, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 34.4 trailing, 33.5 forward; dividend $1.88 a year, 0.63% yield, last ex-dividend Oct 5, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "GE-debt",
    "eps": "GE-eps"
@@ -1774,12 +1774,12 @@
     },
     {
      "k": "P/E",
-     "v": "22.4 · 20.8",
+     "v": "22.3 · 20.7",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "2.92%",
+     "v": "2.93%",
      "s": "$9.32 a year"
     }
    ],
@@ -1788,7 +1788,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY27: $63.2B of debt against $2.1B of cash and $4.5B of free cash flow for the quarter. Net debt $61.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $4.92 actual against $4.71 expected, beat by $0.21 (+4%). Oct '26 consensus is $3.86 from 11 analysts, due Nov 17, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 22.4 trailing, 20.8 forward; dividend $9.32 a year, 2.92% yield, last ex-dividend Sep 3, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 22.3 trailing, 20.7 forward; dividend $9.32 a year, 2.93% yield, last ex-dividend Sep 3, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "HD-debt",
    "eps": "HD-eps"
@@ -1835,7 +1835,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q1 FY27: $374.3M of debt against $208.0M of cash and -$26.9M of free cash flow for the quarter. Net debt $166.3M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.19 actual against -$0.21 expected, beat by $0.02 (+10%). Sep '26 consensus is -$0.17 from 3 analysts, due Nov 13, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "HIVE-debt",
    "eps": "HIVE-eps"
@@ -1882,7 +1882,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $7.7B of debt against $233.6M of cash and -$585.2M of free cash flow for the quarter. Net debt $7.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.26 actual against -$0.50 expected, beat by $0.24 (+48%). Sep '26 consensus is -$1.17 from 5 analysts, due Nov 04, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "HUT-debt",
    "eps": "HUT-eps"
@@ -1919,12 +1919,12 @@
     },
     {
      "k": "P/E",
-     "v": "21.6 · 19.4",
+     "v": "21.4 · 19.1",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "2.67%",
+     "v": "2.70%",
      "s": "$6.76 a year"
     }
    ],
@@ -1933,7 +1933,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q3 FY26: $67.1B of debt against $9.2B of cash and $3.7B of free cash flow for the quarter. Net debt $57.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $2.95 actual against $2.88 expected, beat by $0.07 (+2%). Dec '26 consensus is $4.63 from 7 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 21.6 trailing, 19.4 forward; dividend $6.76 a year, 2.67% yield, last ex-dividend Nov 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 21.4 trailing, 19.1 forward; dividend $6.76 a year, 2.70% yield, last ex-dividend Nov 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "IBM-debt",
    "eps": "IBM-eps"
@@ -1979,8 +1979,8 @@
     "No segment split: Infleqtion discloses revenue by geography and by government share only.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $14.5M of debt against $59.3M of cash and $11.8M of free cash flow for the quarter. Net debt -$44.8M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.06 actual against -$0.07 expected, beat by $0.01 (+14%). Sep '26 consensus is -$0.05 from 3 analysts, due Nov 11, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Earnings chart: adjusted EPS against the street's consensus, one reported quarter and the one ahead. Jun '26: -$0.06 actual against -$0.07 expected, beat by $0.01 (+14%). Sep '26 consensus is -$0.05 from 3 analysts, due Nov 11, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "INFQ-debt",
    "eps": "INFQ-eps"
@@ -2012,7 +2012,7 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 52.0",
+     "v": "n/a · 53.7",
      "s": "trailing · forward"
     },
     {
@@ -2027,7 +2027,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $50.5B of debt against $12.9B of cash and $4.5B of free cash flow for the quarter. Net debt $37.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.30 actual against $0.10 expected, beat by $0.20 (+200%). Sep '26 consensus is $0.28 from 13 analysts, due Oct 29, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, 52.0 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, 53.7 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "INTC-debt",
    "eps": "INTC-eps"
@@ -2074,7 +2074,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $481.4M of debt against $367.4M of cash and -$81.2M of free cash flow for the quarter. Net debt $114.0M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.16 actual against -$0.07 expected, missed by $0.09 (-129%). Sep '26 consensus is -$0.12 from 5 analysts, due Nov 12, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "LUNR-debt",
    "eps": "LUNR-eps"
@@ -2121,7 +2121,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $2.5B of debt against $421.3M of cash and -$245.4M of free cash flow for the quarter. Net debt $2.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.70 actual against -$0.56 expected, missed by $0.14 (-25%). Sep '26 consensus is -$0.04 from 3 analysts, due Nov 3, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "MARA-debt",
    "eps": "MARA-eps"
@@ -2158,7 +2158,7 @@
     },
     {
      "k": "P/E",
-     "v": "50.1 · 25.0",
+     "v": "51.9 · 23.6",
      "s": "trailing · forward"
     },
     {
@@ -2172,8 +2172,8 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Reported in C$. Margins compare with the other statements here; the absolute figures do not.",
     "Debt and coverage, Q2 FY26: C$378.3M of debt against C$397.8M of cash and -C$145.5M of free cash flow for the quarter. Net debt -C$19.5M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.26 actual against $0.24 expected, beat by $0.02 (+8%). Sep '26 consensus is $0.20 from 5 analysts, due Nov 05, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 50.1 trailing, 25.0 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Earnings chart: adjusted EPS against the street's consensus, two reported quarters and the one ahead. Jun '26: $0.26 actual against $0.24 expected, beat by $0.02 (+8%). Sep '26 consensus is $0.20 from 5 analysts, due Nov 05, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+    "Market figures as of Oct 27, 2026: P/E 51.9 trailing, 23.6 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "MDA-debt",
    "eps": "MDA-eps"
@@ -2210,7 +2210,7 @@
     },
     {
      "k": "P/E",
-     "v": "78.5 · 41.4",
+     "v": "81.8 · 43.1",
      "s": "trailing · forward"
     },
     {
@@ -2224,7 +2224,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY27: $5.3B of debt against $3.9B of cash and $478.8M of free cash flow for the quarter. Net debt $1.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $0.62 actual against $0.65 expected, missed by $0.03 (-5%). Oct '26 consensus is $0.79 from 12 analysts, due Dec 1, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 78.5 trailing, 41.4 forward; dividend $0.24 a year, 0.10% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 81.8 trailing, 43.1 forward; dividend $0.24 a year, 0.10% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "MRVL-debt",
    "eps": "MRVL-eps"
@@ -2256,7 +2256,7 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 3.8",
+     "v": "n/a · 3.9",
      "s": "trailing · forward"
     },
     {
@@ -2271,7 +2271,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $6.8B of debt against $1.7B of cash and -$5.9M of free cash flow for the quarter. Net debt $5.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$24.45 actual against $52.04 expected, missed by $76.49 (-147%). Sep '26 consensus is $21.50 from 3 analysts, due Oct 29, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, 3.8 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, 3.9 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "MSTR-debt",
    "eps": "MSTR-eps"
@@ -2303,7 +2303,7 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 224.1",
+     "v": "n/a · 221.3",
      "s": "trailing · forward"
     },
     {
@@ -2318,7 +2318,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $3.5B of debt against $1.7B of cash and $67.6M of free cash flow for the quarter. Net debt $1.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.05 actual against -$0.03 expected, missed by $0.02 (-67%). Sep '26 consensus is $0.02 from 9 analysts, due Nov 05, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, 224.1 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, 221.3 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "NET-debt",
    "eps": "NET-eps"
@@ -2355,7 +2355,7 @@
     },
     {
      "k": "P/E",
-     "v": "18.5 · 17.8",
+     "v": "18.1 · 17.4",
      "s": "trailing · forward"
     },
     {
@@ -2369,7 +2369,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q3 FY26: $17.5B of debt against $8.2B of cash and $2.9B of free cash flow for the quarter. Net debt $9.3B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $0.87 actual against $0.82 expected, beat by $0.05 (+6%). Dec '26 consensus is $0.67 from 11 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 18.5 trailing, 17.8 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 18.1 trailing, 17.4 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "NFLX-debt",
    "eps": "NFLX-eps"
@@ -2406,7 +2406,7 @@
     },
     {
      "k": "P/E",
-     "v": "98.8 · 34.9",
+     "v": "96.7 · 34.2",
      "s": "trailing · forward"
     },
     {
@@ -2420,7 +2420,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $8.5B of debt against $2.5B of cash and $473.0M of free cash flow for the quarter. Net debt $6.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.31 actual against $0.40 expected, missed by $0.09 (-22%). Sep '26 consensus is $0.56 from 12 analysts, due Oct 28, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 98.8 trailing, 34.9 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 96.7 trailing, 34.2 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "NOW-debt",
    "eps": "NOW-eps"
@@ -2457,7 +2457,7 @@
     },
     {
      "k": "P/E",
-     "v": "17.1 · 12.8",
+     "v": "16.9 · 12.7",
      "s": "trailing · forward"
     },
     {
@@ -2471,7 +2471,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $5.9B of debt against $10.5B of cash and -$2.9B of free cash flow for the quarter. Net debt -$4.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.22 actual against $0.20 expected, beat by $0.02 (+10%). Sep '26 consensus is $0.23 from 4 analysts, due Nov 12, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 17.1 trailing, 12.8 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 16.9 trailing, 12.7 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "NU-debt",
    "eps": "NU-eps"
@@ -2508,12 +2508,12 @@
     },
     {
      "k": "P/E",
-     "v": "19.8 · 14.8",
+     "v": "20.5 · 15.3",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "1.59%",
+     "v": "1.53%",
      "s": "$2.00 a year"
     }
    ],
@@ -2522,7 +2522,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q1 FY27: $169.1B of debt against $36.4B of cash and -$5.4B of free cash flow for the quarter. Net debt $132.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Aug '26: $1.63 actual against $1.39 expected, beat by $0.24 (+17%). Nov '26 consensus is $1.57 from 9 analysts, due Dec 9, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 19.8 trailing, 14.8 forward; dividend $2.00 a year, 1.59% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 20.5 trailing, 15.3 forward; dividend $2.00 a year, 1.53% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "ORCL-debt",
    "eps": "ORCL-eps"
@@ -2569,7 +2569,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $16.4M of debt against $91.8M of cash and -$15.4M of free cash flow for the quarter. Net debt -$75.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.26 actual against -$0.31 expected, beat by $0.05 (+16%). Sep '26 consensus is -$0.30 from 1 analysts, due Nov 03, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "OUST-debt",
    "eps": "OUST-eps"
@@ -2620,7 +2620,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q3 FY26: $2.4B of debt against $1.4B of cash and $437.2M of free cash flow for the quarter. Net debt $1.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $2.53 actual against $2.63 expected, missed by $0.10 (-4%). Dec '26 consensus is $3.08 from 6 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 13.0 trailing, 13.0 forward; dividend $1.04 a year, 0.86% yield, last ex-dividend Sep 15, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 13.0 trailing, 13.0 forward; dividend $1.04 a year, 0.86% yield, last ex-dividend Sep 15, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "PHM-debt",
    "eps": "PHM-eps"
@@ -2667,7 +2667,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY27: $498.6M of debt against $415.1M of cash and $25.6M of free cash flow for the quarter. Net debt $83.5M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: -$0.03 actual against -$0.18 expected, beat by $0.15 (+83%). Oct '26 consensus is -$0.08 from 2 analysts, due Dec 9, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "PL-debt",
    "eps": "PL-eps"
@@ -2704,7 +2704,7 @@
     },
     {
      "k": "P/E",
-     "v": "170.1 · 104.9",
+     "v": "170.0 · 104.9",
      "s": "trailing · forward"
     },
     {
@@ -2718,7 +2718,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $211.4M of debt against $2.0B of cash and $1.2B of free cash flow for the quarter. Net debt -$1.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.31 actual against $0.28 expected, beat by $0.03 (+11%). Sep '26 consensus is $0.34 from 9 analysts, due Nov 02, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 170.1 trailing, 104.9 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 170.0 trailing, 104.9 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "PLTR-debt",
    "eps": "PLTR-eps"
@@ -2765,7 +2765,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $48.1M of debt against $296.6M of cash and -$32.9M of free cash flow for the quarter. Net debt -$248.5M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.13 actual against -$0.12 expected, missed by $0.01 (-8%). Sep '26 consensus is -$0.10 from 2 analysts, due Nov 5, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "QBTS-debt",
    "eps": "QBTS-eps"
@@ -2812,7 +2812,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $90.3M of debt against $557.0M of cash and -$33.5M of free cash flow for the quarter. Net debt -$466.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.09 actual against -$0.18 expected, beat by $0.09 (+50%). Sep '26 consensus is -$0.10 from 4 analysts, due Nov 4, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "RDW-debt",
    "eps": "RDW-eps"
@@ -2859,7 +2859,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $7.7M of debt against $27.8M of cash and -$27.8M of free cash flow for the quarter. Net debt -$20.1M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.16 actual against -$0.06 expected, missed by $0.10 (-167%). Sep '26 consensus is -$0.07 from 3 analysts, due Nov 9, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "RGTI-debt",
    "eps": "RGTI-eps"
@@ -2906,7 +2906,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $877.8M of debt against $471.4M of cash and -$176.1M of free cash flow for the quarter. Net debt $406.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.68 actual against -$0.39 expected, missed by $0.29 (-74%). Sep '26 consensus is -$0.34 from 6 analysts, due Nov 04, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "RIOT-debt",
    "eps": "RIOT-eps"
@@ -2953,7 +2953,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $133.7M of debt against $2.1B of cash and -$110.1M of free cash flow for the quarter. Net debt -$2.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.06 actual against -$0.07 expected, beat by $0.01 (+14%). Sep '26 consensus is -$0.05 from 2 analysts, due Nov 09, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "RKLB-debt",
    "eps": "RKLB-eps"
@@ -2990,7 +2990,7 @@
     },
     {
      "k": "P/E",
-     "v": "8.3 · 3.9",
+     "v": "8.5 · 4.0",
      "s": "trailing · forward"
     },
     {
@@ -3004,8 +3004,8 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Reported in ₩. Margins compare with the other statements here; the absolute figures do not.",
     "Debt and coverage, Q2 FY26: ₩21.1T of debt against ₩26.8T of cash and ₩54.7T of free cash flow for the quarter. Net debt -₩5.7T. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $8.76 actual against $5.12 expected, beat by $3.64 (+71%). Sep '26 consensus is $5.96 from 6 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 8.3 trailing, 3.9 forward; dividend $0.03 a year, 0.02% yield, last ex-dividend Aug 31, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Earnings chart: adjusted EPS against the street's consensus, one reported quarter and the one ahead. Jun '26: $8.76 actual against $5.12 expected, beat by $3.64 (+71%). Sep '26 consensus is $5.96 from 6 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+    "Market figures as of Oct 27, 2026: P/E 8.5 trailing, 4.0 forward; dividend $0.03 a year, 0.02% yield, last ex-dividend Aug 31, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "SKHY-debt",
    "eps": "SKHY-eps"
@@ -3037,7 +3037,7 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 132.8",
+     "v": "n/a · 133.8",
      "s": "trailing · forward"
     },
     {
@@ -3052,7 +3052,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY27: $2.8B of debt against $1.7B of cash and $83.8M of free cash flow for the quarter. Net debt $1.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: -$0.44 actual against -$0.51 expected, beat by $0.07 (+14%). Oct '26 consensus is -$0.32 from 10 analysts, due Dec 2, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, 132.8 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, 133.8 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "SNOW-debt",
    "eps": "SNOW-eps"
@@ -3089,12 +3089,12 @@
     },
     {
      "k": "P/E",
-     "v": "11.2 · 8.2",
+     "v": "11.2 · 8.3",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "5.32%",
+     "v": "5.30%",
      "s": "$1.11 a year"
     }
    ],
@@ -3103,7 +3103,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q3 FY26: $180.6B of debt against $10.8B of cash and $5.6B of free cash flow for the quarter. Net debt $169.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $0.65 actual against $0.61 expected, beat by $0.04 (+7%). Dec '26 consensus is $0.52 from 7 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 11.2 trailing, 8.2 forward; dividend $1.11 a year, 5.32% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E 11.2 trailing, 8.3 forward; dividend $1.11 a year, 5.30% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "T-debt",
    "eps": "T-eps"
@@ -3150,7 +3150,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $491.1M of debt against $373.4M of cash and -$79.9M of free cash flow for the quarter. Net debt $117.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.76 actual against -$1.01 expected, beat by $0.25 (+25%). Sep '26 consensus is -$0.85 from 1 analysts, due Nov 02, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "VOYG-debt",
    "eps": "VOYG-eps"
@@ -3187,12 +3187,12 @@
     },
     {
      "k": "P/E",
-     "v": "11.0 · 8.3",
+     "v": "11.2 · 8.5",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "6.57%",
+     "v": "6.44%",
      "s": "$2.83 a year"
     }
    ],
@@ -3201,7 +3201,7 @@
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $193.6B of debt against $1.8B of cash and $6.4B of free cash flow for the quarter. Net debt $191.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.30 actual against $1.27 expected, beat by $0.03 (+2%). Sep '26 consensus is $1.27 from 7 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 11.0 trailing, 8.3 forward; dividend $2.83 a year, 6.57% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Market figures as of Oct 27, 2026: P/E 11.2 trailing, 8.5 forward; dividend $2.83 a year, 6.44% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Market figures as of Oct 26, 2026: trailing 11.0, forward 8.3. Share price over earnings, so unlike the other figures on this card it moves every session and is not from the filing (source: stockanalysis.com)."
    ],
    "debt": "VZ-debt",
@@ -3248,7 +3248,7 @@
     "No segment split: Xanadu gives no revenue split in its interim results.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $59.1M of debt against $312.8M of cash and -$29.7M of free cash flow for the quarter. Net debt -$253.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Market figures as of Oct 26, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "XNDU-debt"
   },
@@ -3284,7 +3284,7 @@
     },
     {
      "k": "P/E",
-     "v": "933.1 · n/a",
+     "v": "n/a · n/a",
      "s": "trailing · forward"
     },
     {
@@ -3301,12 +3301,66 @@
     "Toloka sits in discontinued operations after the 2025 investment transaction and is not part of this statement.",
     "Debt and coverage, Q2 FY26: $10.2B of debt against $8.0B of cash and -$3.4B of free cash flow for the quarter. Net debt $2.2B. Debt and cash are the Jun 30, 2026 balance sheet; free cash flow is that quarter's operating cash flow less capex (source: stockanalysis.com). Q2 capex of $5,657M reconciles with the 6-K's $8,130.3M first half.",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.12 actual against -$0.67 expected, beat by $0.55 (+82%). Sep '26 consensus is -$0.43 from 5 analysts, due Nov 10, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 26, 2026: P/E 933.1 trailing, n/a forward (no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Market figures as of Oct 26, 2026: trailing 933.1, forward n/a — no forward P/E: no positive forward estimate. Share price over earnings, so unlike the other figures on this card it moves every session and is not from the filing (source: stockanalysis.com)."
    ],
    "debt": "NBIS-debt",
    "eps": "NBIS-eps"
+  },
+  {
+   "t": "V",
+   "company": "Visa",
+   "period": "Q4 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "reported Oct 27, 2026",
+   "img": "assets/financials/V-Q4-FY26.png",
+   "source": "Visa 8-K exhibit 99.1, Oct 27, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$12,139M",
+     "s": "+13% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "100%",
+     "s": "no cost of revenue"
+    },
+    {
+     "k": "Operating margin",
+     "v": "60%",
+     "s": "$7,262M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$6,002M",
+     "s": "49% margin"
+    },
+    {
+     "k": "P/E",
+     "v": "34.2 · 26.8",
+     "s": "trailing · forward"
+    },
+    {
+     "k": "Dividend",
+     "v": "0.67%",
+     "s": "$2.68 a year"
+    }
+   ],
+   "notes": [
+    "Visa reports one operating segment, and its revenue disaggregation is by category and gross of client incentives: service $5,255M (+14% Y/Y), data processing $6,245M (+16%), international transaction $4,115M (+8%) and other $1,647M (+40%), less client incentives of $5,123M (+21%), giving net revenue of $12,139M. Those four categories sum to $17,262M, a total Visa does not report, and the incentives are a deduction from revenue rather than a segment -- so the chart draws the single net revenue bar rather than bands that do not add up.",
+    "Visa reports no cost of revenue: every cost sits in operating expenses. Gross profit therefore equals net revenue and the 100% gross margin is literal, not a missing line.",
+    "Operating expenses of $4,877M are drawn as four bands. Personnel $1,871M, marketing $711M and general and administrative $829M are as filed; \"Other operating\" $1,466M combines network and processing $293M, professional fees $322M, depreciation and amortisation $377M and the litigation provision $474M.",
+    "The $98M non-operating line is as filed -- $290M of investment income and other, less $192M of interest expense -- and equals net profit plus tax less operating profit, so the statement foots without a derived bridge.",
+    "The chart is GAAP. Visa also reported non-GAAP net income of $6.6B and non-GAAP EPS of $3.48 for the quarter, against GAAP EPS of $3.19.",
+    "Debt and coverage, Q4 FY26: $22.1B of debt against $12.9B of cash and $6.9B of free cash flow for the quarter. Net debt $9.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: adjusted EPS against the street's consensus, five reported quarters and the one ahead. Sep '26: $3.48 actual against $3.43 expected, beat by $0.05 (+1%). Dec '26 consensus is $3.63 from 10 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 27, 2026. The Sep '26 actual is Visa's own non-GAAP EPS of $3.48 from the Oct 27, 2026 release, against the $3.43 Zacks consensus for that quarter; the vendor had not yet published its own surprise row for it.",
+    "Market figures as of Oct 27, 2026: P/E 34.2 trailing, 26.8 forward; dividend $2.68 a year, 0.67% yield, last ex-dividend Aug 11, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+   ],
+   "debt": "V-debt",
+   "eps": "V-eps"
   }
  ],
- "marketAsOf": "Oct 26, 2026"
+ "marketAsOf": "Oct 27, 2026"
 }

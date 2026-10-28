@@ -1,0 +1,66 @@
+{
+ "ticker": "V",
+ "company": "Visa",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 27, 2026. The Sep '26 actual is Visa's own non-GAAP EPS of $3.48 from the Oct 27, 2026 release, against the $3.43 Zacks consensus for that quarter; the vendor had not yet published its own surprise row for it.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 28, 2025",
+   "actual": 2.98,
+   "estimate": 2.97,
+   "surprise": 0.01,
+   "surprisePct": 0.34
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 29, 2026",
+   "actual": 3.17,
+   "estimate": 3.14,
+   "surprise": 0.03,
+   "surprisePct": 0.96
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 28, 2026",
+   "actual": 3.31,
+   "estimate": 3.09,
+   "surprise": 0.22,
+   "surprisePct": 7.12
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 28, 2026",
+   "actual": 3.32,
+   "estimate": 3.23,
+   "surprise": 0.09,
+   "surprisePct": 2.79
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 27, 2026",
+   "actual": 3.48,
+   "estimate": 3.43,
+   "surprise": 0.05,
+   "surprisePct": 1.46
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 3.63,
+   "high": 3.75,
+   "low": 3.56,
+   "analysts": 10,
+   "up": 2,
+   "down": 1
+  }
+ ]
+}

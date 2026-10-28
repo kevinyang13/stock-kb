@@ -1,0 +1,46 @@
+{
+ "ticker": "V",
+ "company": "Visa",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q4 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q4 FY26",
+   "debt": 22071.0,
+   "fcf": 6893.0,
+   "cash": 12938.0,
+   "debt_parts": [
+    {
+     "label": "Current portion",
+     "value": 2716.0
+    },
+    {
+     "label": "Long-term debt",
+     "value": 19355.0
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Short-term investments",
+     "value": 1145.0
+    },
+    {
+     "label": "Restricted cash (separate)",
+     "value": 628.0
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 7386.0
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -493.0
+    }
+   ]
+  }
+ ]
+}

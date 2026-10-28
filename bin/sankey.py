@@ -201,7 +201,10 @@ def build(spec):
 
     rev_id = node("Revenue", NEUTRAL, X["revenue"], 0.5)
     gross_id = node("Gross profit", PROFIT, X["gross"], 0.30)
-    cor_id = node("Cost of revenue", COST, X["gross"], 0.80)
+    # Visa and Nu report no cost of revenue at all. Drawing the node anyway
+    # left a "Cost of revenue ($0M)" label floating with no bar under it.
+    cor_id = (node("Cost of revenue", COST, X["gross"], 0.80)
+              if abs(cor) >= 10 ** -dec / 2 else None)
     op_id = node("Operating profit", PROFIT, X["op"], 0.20)
     opex_id = node("Operating expenses", COST, X["op"], 0.60)
     net_id = node("Net profit", PROFIT, X["leaf"], 0.12)
@@ -215,7 +218,8 @@ def build(spec):
     for sid, s in zip(seg_ids, segs):
         link(sid, rev_id, s["value"], NEUTRAL_LINK)
     link(rev_id, gross_id, gross, PROFIT_LINK)
-    link(rev_id, cor_id, cor, COST_LINK)
+    if cor_id is not None:
+        link(rev_id, cor_id, cor, COST_LINK)
     link(gross_id, op_id, op, PROFIT_LINK)
     link(gross_id, opex_id, opex, COST_LINK)
 
@@ -302,8 +306,9 @@ def build(spec):
           [m(rev), yoy(spec.get("revenue_yoy"))], color="#111", va="bottom")
     label(X["gross"], 0.895, "Gross profit",
           [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
-    label(X["gross"], py(ys[cor_id]) - 0.13, "Cost of revenue",
-          [f"({m(cor)})"], color=COST)
+    if cor_id is not None:
+        label(X["gross"], py(ys[cor_id]) - 0.13, "Cost of revenue",
+              [f"({m(cor)})"], color=COST)
     label(X["op"], 0.895, "Operating profit",
           [m(op), f"{op / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     label(X["op"], 0.045, "Operating expenses",
@@ -384,7 +389,8 @@ def build_loss(spec):
 
     rev_id = node("Revenue", NEUTRAL, X["revenue"], 0.42)
     gross_id = node("Gross profit", PROFIT, X["gross"], 0.08)
-    cor_id = node("Cost of revenue", COST, 0.40, 0.84)
+    cor_id = (node("Cost of revenue", COST, 0.40, 0.84)
+              if abs(cor) >= 10 ** -dec / 2 else None)
     # the loss gets its own column: when it dwarfs revenue it would
     # otherwise swamp the gross/cost column and bury their labels
     loss_id = node("Net loss", COST, X["gross"], 0.66)
@@ -399,7 +405,8 @@ def build_loss(spec):
     for sid, sg in zip(seg_ids, segs):
         link(sid, rev_id, sg["value"], NEUTRAL_LINK)
     link(rev_id, gross_id, gross, PROFIT_LINK)
-    link(rev_id, cor_id, cor, COST_LINK)
+    if cor_id is not None:
+        link(rev_id, cor_id, cor, COST_LINK)
     # declaration order must match top-to-bottom node order or the bands cross
     inc_id = node("Non-operating income", PROFIT, X["gross"], 0.32) if other_income > 0 else None
     link(gross_id, pool_id, gross, PROFIT_LINK)
@@ -469,7 +476,9 @@ def build_loss(spec):
           color="#111", va="bottom")
     label(X["gross"], 0.895, "Gross profit",
           [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
-    label(0.40, py(ys[cor_id]) - 0.115, "Cost of revenue", [f"({m(cor)})"], color=COST)
+    if cor_id is not None:
+        label(0.40, py(ys[cor_id]) - 0.115, "Cost of revenue",
+              [f"({m(cor)})"], color=COST)
     label(X["gross"] - 0.015, py(ys[loss_id]), "Net loss",
           [f"({m(net_loss)})", f"{net_loss / rev * 100:.0f}% of revenue"],
           color=COST, xa="right")

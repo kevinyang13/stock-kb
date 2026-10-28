@@ -1127,3 +1127,70 @@ again.
 
 **Not done**: no income statement chart — Vertiv is not on the Financials tab. No order placed,
 staged or cancelled.
+
+---
+
+## 2026-10-27 — Visa's fiscal Q4 2026 charted; the first split that could not be drawn
+
+**Source**: Visa 8-K exhibit 99.1, filed 2026-10-27, the quarter ended September 30, 2026
+(`sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm`). Debt,
+cash and free cash flow from stockanalysis.com; street consensus from the Nasdaq/Zacks endpoints;
+both read 2026-10-27.
+
+**What changed**: `examples/v-q4-fy26.json`, `charts/V-Q4-FY26.json` and
+`assets/financials/V-Q4-FY26.png`; `examples/v-debt.json`, `examples/v-eps.json` and their charts;
+a `V` entry in `financials.json`, 66 statements to 67; `wiki/visa-q4-fy26.md` (new);
+`wiki/index.md` and `wiki/favorites-financials.md` counts.
+
+**The quarter**: $12,139M of net revenue (+13% Y/Y), $4,877M of operating expenses, $7,262M of
+operating income (60% margin), $98M of non-operating income, $1,358M of tax and $6,002M of net
+income (49% margin). GAAP EPS $3.19; non-GAAP $3.48.
+
+**Two structural things about Visa that the chart had to deal with.**
+
+*No cost of revenue.* Visa publishes none — the statement runs net revenue straight into operating
+expenses. Gross profit therefore equals revenue and the card's gross margin tile reads **100%**,
+which is literal rather than a missing line. Nu Holdings is the same shape.
+
+*A revenue split that exists and still cannot be drawn.* Visa reports one operating segment and
+disaggregates revenue by category, but every category is stated **gross of client incentives**:
+service $5,255M, data processing $6,245M, international transaction $4,115M, other $1,647M, less
+client incentives of $5,123M, giving $12,139M. The four positive categories sum to $17,262M — a
+total Visa never reports — and the incentives are a deduction from revenue, not a segment. A
+sankey cannot draw a negative band, and drawing the four alone would put $17.3B of segments
+against a $12.1B revenue bar, which is exactly what the sum check exists to catch. So the chart
+draws one `Net revenue` bar and the card carries the whole table. **This is a third case, distinct
+from "no split published" and from "split not fetched":** the split is real, published and
+unusable as bands. Said so on the card in those words rather than letting it read as either of the
+other two.
+
+Worth watching: client incentives are 30% of gross revenue and grew 21% against 13% growth in net
+revenue.
+
+**Two fixes to the tooling, both found by looking at the rendered image.**
+
+1. `bin/sankey.py` drew a `Cost of revenue ($0M)` label with no bar under it whenever a company
+   has no cost line. The node and its label are now created only when the figure rounds to
+   something. This also cleans up the NU chart, which has carried that stray label since it was
+   built.
+2. The first render lost the left-hand segment label **entirely**. The note read "after $5,123M of
+   client incentives", which made the label block wider than the 300px left margin, and plotly
+   drops an annotation that does not fit rather than clipping it. Shortened to "net of client
+   incentives" and it came back. This is the **second** time that trap has cost a label — NBIS lost
+   its largest segment's label the same way on 2026-10-26 — and the lesson is the same: the
+   validator proves the figures conserve and says nothing about whether the text survived.
+
+**One hardcoded phrase corrected.** `bin/epsnotes.py` wrote "four reported quarters and the one
+ahead" into every card. Visa's chart carries five, because the quarter the statement covers
+reported today while the vendor's surprise row for it had not published yet — so the Sep '26
+actual is Visa's own non-GAAP $3.48 against the $3.43 Zacks consensus, and the spec's source line
+says exactly that. The note now counts what the spec holds.
+
+**Verification**: validator silent on all three charts; PNG read at full size — no crossed bands,
+no clipped text, five opex leaves overlapped so the seven filed expense lines were grouped into
+four; the page served locally shows the V chip, three charts, six KPI tiles, no horizontal
+overflow, and hover readouts carrying the year-ago column from the release
+(`Operating expenses $4,877M, year ago $4,576M, +7%`).
+
+**Also**: `bin/pefetch.py` re-run across all 67 cards so the `marketAsOf` stamp and every card's
+market note agree on Oct 27, 2026. 25 of the 67 now pay a dividend.

@@ -1,0 +1,58 @@
+{
+ "company": "Visa",
+ "ticker": "V",
+ "period": "Q4 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 12139.0,
+ "revenue_yoy": 13,
+ "segments": [
+  {
+   "name": "Net revenue",
+   "value": 12139.0,
+   "yoy": 13,
+   "note": "net of client incentives",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 0.0,
+ "gross_profit": 12139.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 4877.0,
+ "opex_items": [
+  {
+   "name": "Personnel",
+   "value": 1871.0
+  },
+  {
+   "name": "Marketing",
+   "value": 711.0
+  },
+  {
+   "name": "General & administrative",
+   "value": 829.0
+  },
+  {
+   "name": "Other operating",
+   "value": 1466.0
+  }
+ ],
+ "operating_profit": 7262.0,
+ "other": 98.0,
+ "tax": 1358.0,
+ "net_profit": 6002.0,
+ "prior": {
+  "Revenue": 10724.0,
+  "Gross profit": 10724.0,
+  "Operating expenses": 4576.0,
+  "Operating profit": 6148.0,
+  "Net profit": 5090.0,
+  "Tax": 1133.0,
+  "Personnel": 1742.0,
+  "Marketing": 576.0,
+  "General & administrative": 544.0,
+  "Other operating": 1714.0
+ }
+}

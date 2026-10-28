@@ -29,8 +29,15 @@ def note_for(spec):
     swing = (f"{word} by ${abs(d):,.2f}" if d else "came in level with")
     if pct is not None and d:
         swing += f" ({pct:+.0f}%)"
-    out = (f"{HEAD} adjusted EPS against the street's consensus, four reported "
-           f"quarters and the one ahead. {last['label']}: {money(last['actual'])} "
+    # the count is not always four: V carries five, because the quarter the
+    # card's statement covers reported before the vendor's surprise row did
+    words = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+             7: "seven", 8: "eight"}
+    n = words.get(len(done), str(len(done)))
+    tail = "and the one ahead" if ahead else "with none yet ahead"
+    out = (f"{HEAD} adjusted EPS against the street's consensus, {n} reported "
+           f"quarter{'' if len(done) == 1 else 's'} {tail}. "
+           f"{last['label']}: {money(last['actual'])} "
            f"actual against {money(last['estimate'])} expected, {swing}.")
     if ahead:
         nxt = ahead[0]
