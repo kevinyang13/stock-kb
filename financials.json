@@ -587,9 +587,10 @@
     "These eight lines carry no percent-of-revenue label on the chart. Eight segment blocks leave about 90 pixels each in the left column, and a fourth line of text overran it -- the Y/Y figure is the one worth keeping.",
     "Market figures as of Oct 28, 2026: P/E 29.6 trailing, 26.9 forward; dividend $3.92 a year, 0.74% yield, last ex-dividend Nov 19, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $4.74 actual against $4.21 expected, beat by $0.53 (+13%). Sep '26 consensus is $4.71 from 14 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
-    "No debt and coverage chart on this card yet. The quarter's balance sheet and cash flow statement had not reached the data source when the card was built, hours after the release, and the builder refuses a column from a different quarter rather than pairing a June balance sheet with a September income statement. It returns on the next refresh."
+    "Debt and coverage, FQ1 FY27: $133,931M of debt against $20,281M of cash and $18,633M of free cash flow for the quarter -- $58,000M of operating cash flow against $39,367M of capital expenditure. Net debt $113,650M, with $44,228M of short-term investments beside the cash. Leases are most of that debt: $10,763M current and $87,687M long-term, against $4,391M of current and $31,090M of long-term borrowings. Finance leases alone are $70,973M, which is how Microsoft carries much of its data centre capacity. Read from the 10-Q's balance sheet, cash flow statement and lease note, because the data source still has no Sep 30 column."
    ],
-   "eps": "MSFT-eps"
+   "eps": "MSFT-eps",
+   "debt": "MSFT-debt"
   },
   {
    "t": "SPCX",
@@ -2423,9 +2424,10 @@
     "The -$15M non-operating line is $69M of interest income less $81M of interest expense and $3M of other expense, as filed. Interest expense was $6M a year ago.",
     "Market figures as of Oct 28, 2026: P/E 93.8 trailing, 34.2 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.31 actual against $0.40 expected, missed by $0.09 (-22%). Sep '26 consensus is $0.56 from 13 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
-    "No debt and coverage chart on this card yet. The quarter's balance sheet and cash flow statement had not reached the data source when the card was built, hours after the release, and the builder refuses a column from a different quarter rather than pairing a June balance sheet with a September income statement. It returns on the next refresh."
+    "Debt and coverage, Q3 FY26: $8,415M of debt against $2,393M of cash and $748M of free cash flow for the quarter -- $839M of operating cash flow against $91M of capital expenditure. Net debt $6,022M, with $2,214M of marketable securities beside the cash and a further $2,354M of long-term marketable securities. Debt is new: ServiceNow carried $1,491M of long-term debt and no short-term debt at Dec 31, 2025, and now carries $5,438M and $2,086M, having raised $3,943M of senior notes and spent $9,167M on business combinations over the nine months. Read from the 8-K exhibit's balance sheet and cash flow statement, because the data source still has no Sep 30 column."
    ],
-   "eps": "NOW-eps"
+   "eps": "NOW-eps",
+   "debt": "NOW-debt"
   },
   {
    "t": "NU",

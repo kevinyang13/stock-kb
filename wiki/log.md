@@ -1484,3 +1484,50 @@ this entry records that the data exists so the next run does not repeat the sear
 **Verification**: served locally — the GOOG card draws three charts, the pending-debt note is gone,
 the understated-bar note is on the card, and the debt figure reads $141,917M. The bar image was
 opened: the negative free cash flow bar draws below the axis with its label clear of it.
+
+## 2026-10-28 — Microsoft's and ServiceNow's debt charts, and a stray gridline under every all-positive one
+
+**Sources**: Microsoft 10-Q filed Oct 28, 2026 — balance sheet, cash flow statement and the
+supplemental lease note (`bin/edgar.py MSFT R73`). ServiceNow 8-K exhibit 99.1 of the same date —
+condensed balance sheet and statement of cash flows.
+
+The last two cards missing a debt chart now have one, read from the filings for the same reason
+Alphabet's was: the data vendor still has no 2026-09-30 column. Unlike Alphabet's, **both of these
+are complete** — every line the vendor's own composition uses is published, so neither spec is
+marked partial.
+
+| | Debt | Cash | Free cash flow | Net debt |
+|---|---|---|---|---|
+| MSFT FQ1 FY27 | $133,931M | $20,281M | $18,633M | $113,650M |
+| NOW Q3 FY26 | $8,415M | $2,393M | $748M | $6,022M |
+
+**Microsoft's debt is mostly leases.** $10,763M current and $87,687M long-term, against $4,391M of
+current and $31,090M of long-term borrowings. Finance lease liabilities alone are $70,973M. Those
+figures are not on the face of the balance sheet — the current portions sit inside "other current
+liabilities" and the finance leases inside "other long-term liabilities" — so they come from the
+lease note. The composition was checked against the vendor's own Jun 30 spec before use: current
+leases $9,683M = operating $5,393M + finance $4,290M, long-term $78,836M = $16,532M + $62,304M.
+Both foot exactly, so the Sep 30 figures are built the same way.
+
+**ServiceNow's debt is new.** At Dec 31, 2025 it carried $1,491M of long-term debt and no
+short-term debt; it now carries $5,438M and $2,086M, having raised $3,943M of senior notes and
+spent $9,167M on business combinations over the nine months. Goodwill went from $3,578M to
+$10,012M in the same period.
+
+**A gridline nobody asked for.** The first MSFT render drew a labelled **−20B** line under three
+bars that never go negative. `bin/debtbars.py` padded the axis 16% below the lower bound, and with
+`lo = 0` that reached a whole tick. Dropping the pad to zero removed the label but crowded the
+quarter label against the baseline, so an all-positive chart now keeps a thin 4% skirt: plotly
+spaces ticks at roughly an eighth of the range or wider, so 4% can never reach the first negative
+one. A chart with negative free cash flow still gets the full pad, because something is drawn there.
+
+This only ever showed when the pad happened to reach a tick, which is why it survived 65 cards.
+The four other charts touched today were re-rendered; the rest keep their old padding until they
+are next rendered, which changes nothing about their figures.
+
+**Only one card on the Financials tab now has no debt chart**: 7974, Nintendo, which has not had
+one since it was charted.
+
+**Verification**: served locally — both cards draw three charts, the pending-debt notes are gone,
+MSFT reads $133,931M and NOW reads $8,415M. Both bar images were opened: no negative gridline, the
+quarter label clear of the axis.

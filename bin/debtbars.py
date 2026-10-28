@@ -139,6 +139,14 @@ def build(spec):
     lo = min(0.0, min(p["fcf"] for p in periods) / div)
     hi = max(max(p[k] for k, _, _ in SERIES) for p in periods) / div
     pad = (hi - lo) * 0.16
+    # Below the baseline, pad for what is actually drawn there. The full 16%
+    # pad reached a whole tick on an all-positive chart and plotly labelled it
+    # -- MSFT FQ1 FY27 drew a "-20B" gridline under three bars that never go
+    # negative. Dropping the pad to zero instead crowded the quarter label
+    # against the axis, so an all-positive chart keeps a thin 4% skirt: plotly
+    # spaces ticks at roughly an eighth of the range or wider, so 4% cannot
+    # reach the first negative one.
+    bottom = lo - pad if lo < 0 else -hi * 0.04
 
     fig.update_layout(
         # No HTML entities in the title: kaleido fails the whole render with a
@@ -158,7 +166,7 @@ def build(spec):
             showgrid=False, showline=False, ticks="",
         ),
         yaxis=dict(
-            range=[lo - pad, hi + pad],
+            range=[bottom, hi + pad],
             tickfont=dict(size=11, color="#667"),
             gridcolor="#dcdcdc", zerolinecolor="#9aa", zerolinewidth=2,
             ticksuffix=unit,

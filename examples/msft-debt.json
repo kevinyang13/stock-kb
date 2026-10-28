@@ -1,0 +1,50 @@
+{
+ "ticker": "MSFT",
+ "company": "Microsoft",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: FQ1 FY27, quarter ended Sep 30, 2026.",
+ "source": "Microsoft 10-Q, Oct 28, 2026, balance sheet, cash flow statement and the supplemental lease note (R73). The data vendor had no 2026-09-30 column when this was built, so the figures were read from the filing. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "FQ1 FY27",
+   "debt": 133931.0,
+   "fcf": 18633.0,
+   "cash": 20281.0,
+   "debt_parts": [
+    {
+     "label": "Current portion",
+     "value": 4391.0
+    },
+    {
+     "label": "Long-term debt",
+     "value": 31090.0
+    },
+    {
+     "label": "Current leases",
+     "value": 10763.0
+    },
+    {
+     "label": "Long-term leases",
+     "value": 87687.0
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Short-term investments",
+     "value": 44228.0
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 58000.0
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -39367.0
+    }
+   ]
+  }
+ ]
+}
