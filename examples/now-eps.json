@@ -3,7 +3,7 @@
  "company": "ServiceNow",
  "currency": "$",
  "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
  "reported": [
   {
    "label": "Sep '25",
@@ -49,10 +49,9 @@
    "estimate": 0.56,
    "high": 0.68,
    "low": 0.44,
-   "analysts": 12,
+   "analysts": 13,
    "up": 0,
-   "down": 0,
-   "due": "Oct 28, 2026"
+   "down": 0
   }
  ]
 }

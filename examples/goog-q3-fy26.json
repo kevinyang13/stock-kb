@@ -1,83 +1,85 @@
 {
  "company": "Alphabet",
  "ticker": "GOOG",
- "period": "Q2 FY26",
+ "period": "Q3 FY26",
  "currency": "$",
  "unit": "B",
  "decimals": 1,
- "revenue": 119.8,
- "revenue_yoy": 24,
+ "revenue": 127.6,
+ "revenue_yoy": 25,
  "segments": [
   {
    "name": "Google Search & other",
-   "value": 63.3,
-   "yoy": 17,
-   "note": "53% of revenue",
+   "value": 63.4,
+   "yoy": 12,
+   "note": "50% of revenue",
    "color": "#e8502a"
   },
   {
    "name": "Google Cloud",
-   "value": 24.8,
-   "yoy": 82,
-   "note": "21% of revenue",
+   "value": 30.7,
+   "yoy": 103,
+   "note": "24% of revenue",
    "color": "#1b1b7a"
   },
   {
    "name": "Subscriptions, platforms & devices",
-   "value": 12.9,
+   "value": 14.3,
+   "yoy": 11,
    "note": "11% of revenue",
    "color": "#c8a020"
   },
   {
    "name": "YouTube ads",
-   "value": 11.1,
-   "yoy": 13,
+   "value": 11.2,
+   "yoy": 9,
    "note": "9% of revenue",
    "color": "#f0a030"
   },
   {
    "name": "Google Network",
-   "value": 7.3,
-   "yoy": -1,
+   "value": 7.5,
+   "yoy": 1,
    "note": "6% of revenue",
    "color": "#6cb6e8"
   },
   {
    "name": "Other Bets",
    "value": 0.4,
+   "yoy": 8,
    "note": "0% of revenue",
    "color": "#7cd07c"
   }
  ],
- "cost_of_revenue": 45.9,
- "gross_profit": 73.9,
- "opex_total": 33.1,
+ "cost_of_revenue": 51.4,
+ "gross_profit": 76.2,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 35.6,
  "opex_items": [
   {
    "name": "R&D",
-   "value": 18.2
+   "value": 20.6
   },
   {
    "name": "SG&A",
    "value": 14.9
   }
  ],
- "operating_profit": 40.8,
- "other": 98.0,
- "tax": 26.6,
- "net_profit": 112.2,
- "width": 1700,
- "height": 940,
+ "operating_profit": 40.6,
+ "other": -8.2,
+ "tax": 5.9,
+ "net_profit": 26.5,
  "prior": {
-  "Revenue": 96.4,
-  "Gross profit": 57.4,
-  "Cost of revenue": 39.0,
-  "R&D": 13.8,
-  "SG&A": 12.3,
-  "Operating expenses": 26.1,
-  "Operating profit": 31.3,
-  "Net profit": 28.2,
-  "Tax": 5.7
+  "Revenue": 102.3,
+  "Cost of revenue": 41.4,
+  "Gross profit": 61.0,
+  "R&D": 15.2,
+  "SG&A": 14.6,
+  "Operating expenses": 29.7,
+  "Operating profit": 31.2,
+  "Tax": 9.0,
+  "Net profit": 35.0
  },
- "stock_comp": 8.0
+ "stock_comp": 6.3
 }

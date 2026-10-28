@@ -3,7 +3,7 @@
  "company": "Vertiv Holdings",
  "currency": "$",
  "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 27, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
  "reported": [
   {
    "label": "Sep '25",
@@ -51,8 +51,7 @@
    "low": 1.79,
    "analysts": 6,
    "up": 1,
-   "down": 1,
-   "due": "Oct 28, 2026"
+   "down": 1
   }
  ]
 }

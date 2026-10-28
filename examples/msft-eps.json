@@ -3,7 +3,7 @@
  "company": "Microsoft",
  "currency": "$",
  "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
  "reported": [
   {
    "label": "Sep '25",
@@ -51,8 +51,7 @@
    "low": 4.62,
    "analysts": 14,
    "up": 1,
-   "down": 2,
-   "due": "Oct 28, 2026"
+   "down": 2
   }
  ]
 }

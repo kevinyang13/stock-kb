@@ -1366,3 +1366,78 @@ added, since why they are missing is not known.
 **`wiki/index.md` said 53 of the 68 charts carry a segment split.** Counted from the specs it is
 54, which is what `favorites-financials.md` already said — the index line was not updated when
 Vertiv was charted. Corrected.
+
+## 2026-10-28 — Every name that reported today, charted: GOOG, MSFT, NOW, VRT and a first card for GEV
+
+**Sources**: the five companies' own Item 2.02 8-K exhibits filed October 28, 2026, plus GE
+Vernova's 10-Q of the same date. Market figures and balance sheet columns from stockanalysis.com,
+read 2026-10-28.
+
+The event calendar had five names reporting today. All five had filed by mid-morning, so all five
+are now charted on their just-reported quarter. The Financials tab goes from 68 cards to 69.
+
+| Ticker | Was | Now | Revenue | Y/Y | Operating margin | Net |
+|---|---|---|---|---|---|---|
+| GOOG | Q2 FY26 | Q3 FY26 | $127,577M | +25% | 32% | $26,468M, **−24%** |
+| MSFT | FQ4 FY26 | FQ1 FY27 | $92,279M | +19% | 50% | $36,629M, +32% |
+| NOW | Q2 FY26 | Q3 FY26 | $4,106M | +21% | 9% | $277M, **−45%** |
+| VRT | Q2 FY26 | Q3 FY26 | $4,312.8M | +61% | 23% | $764.5M, +92% |
+| GEV | — | Q3 FY26 | $12,642M | +27% | 11% | $1,289M, +185% |
+
+**Two of the five grew revenue and shrank profit, for opposite reasons.** Alphabet's operating
+income rose 30% while net income fell 24%, entirely from a $20,980M swing in other income — from
++$12,759M a year ago to −$8,221M. Nothing operating changed. ServiceNow's fall is the opposite: it
+is above the line, in cost of subscription revenue, which rose 58% against 21% subscription revenue
+growth and took gross margin from 77.3% to 70.5%. Both cards say which it is, because a net margin
+read alone would mislead in both directions.
+
+**GE Vernova is the first card in this repo built from a 10-Q.** Its earnings release is organised
+around adjusted EBITDA and carries segment cost of revenues but no consolidated profit and loss
+statement, so there was nothing in the 8-K exhibit to chart. The 10-Q filed the same morning has
+one. `bin/edgar.py GEV R2` prints it on its own, which is what that script exists for.
+
+**Microsoft recast its segments, from three to two.** Productivity & Business Processes,
+Intelligent Cloud and More Personal Computing are gone; the reportable segments are now Agents and
+Infra ($76,795M) and Devices and Consumer ($15,484M). Two bands say almost nothing about a 19%
+quarter, so the card draws the eight product and service offering lines Microsoft reports
+alongside, which foot to the same $92,279M: Azure $33,165M (+48%), Microsoft 365 cloud $27,778M,
+productivity and server licensing, search and advertising, XBOX, industry solutions, Windows OEM
+and devices, frontier and support services. Prior-year figures are Microsoft's own recast ones.
+
+**Eight segments is a layout limit, found by looking.** The validator printed no warnings on the
+first MSFT render. The image showed every segment's "% of revenue" line sitting on the next
+segment's name — eight blocks share about 90 pixels each in the left column, and a four-line block
+does not fit. The ratio line was dropped on that card; the Y/Y stayed, because that is what the
+quarter is about. `wiki/sankey-income-statement.md` already said a label carries at most two
+sub-lines; this is the first card that had to obey it. **Three sessions running, every layout
+defect has been invisible to the validator and obvious in the image.**
+
+**Three cards have no debt chart.** `bin/debtfetch.py` refused GOOG, MSFT and NOW: the data source
+has no balance sheet or cash flow column for 2026-09-30 yet, hours after the releases, and the
+builder will not pair a June balance sheet with a September income statement. It was run twice,
+twenty minutes apart, with the same result. The stale June specs were deleted rather than left to
+render beside the new statements, each card carries a note saying the chart is pending and why,
+and `debtfetch.py` will pick them up on the next run. VRT and GEV went through and have theirs.
+
+**The earnings-surprise rows are a quarter behind too.** Nasdaq's endpoints still show Jun '26 as
+the last reported quarter for all five, with Sep '26 as the estimate ahead, so each card's EPS
+chart shows a consensus for the quarter its own income statement already covers. That is the same
+state Visa's card was in yesterday, and `bin/epsnotes.py` words it correctly.
+
+**One spec per ticker, enforced by deletion.** `bin/segapply.specs()` maps ticker to spec by
+walking `examples/*.json` sorted, last one wins. With both `msft-fq1-fy27.json` and
+`msft-fq4-fy26.json` on disk, `fq4-fy26` sorts last and would have shadowed the new quarter for
+every tool that uses that map. Nothing broke today — `segnotes.py` only rewrites placeholder
+notes — but the four superseded specs were deleted, along with the superseded chart JSON and PNGs,
+and the repo is back to one spec per ticker. Git history keeps the old ones.
+
+**Arithmetic corrected in my own drafts before they shipped**: Vertiv "12% above the guidance
+midpoint" was 15%; the products/services spares gap was $43.3M, not $43.2M; GE Vernova's net cash
+is five times gross debt, not six — cash is six times gross debt, net cash is five.
+`wiki/index.md` also still said 53 of the charts carry a segment split; it is 55 of 69 now.
+
+**Verification**: served locally — all five cards draw, headings read Alphabet · Q3 FY26,
+Microsoft · FQ1 FY27, ServiceNow · Q3 FY26, Vertiv Holdings · Q3 FY26 and GE Vernova · Q3 FY26;
+VRT and GEV show three live charts each, GOOG, MSFT and NOW show two plus the pending-debt note;
+the status line reads 69 statements; `?t=GEV` deep-links to the new card. Every sankey was opened
+as an image and checked for crossing bands, labels on bars and clipped text.

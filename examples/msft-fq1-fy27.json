@@ -1,0 +1,90 @@
+{
+ "company": "Microsoft",
+ "ticker": "MSFT",
+ "period": "FQ1 FY27",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 92.3,
+ "revenue_yoy": 19,
+ "segments": [
+  {
+   "name": "Azure",
+   "value": 33.2,
+   "yoy": 48,
+   "color": "#e8502a"
+  },
+  {
+   "name": "Microsoft 365 cloud",
+   "value": 27.8,
+   "yoy": 17,
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Productivity & server licensing",
+   "value": 8.4,
+   "yoy": -3,
+   "color": "#c8a020"
+  },
+  {
+   "name": "Search and advertising",
+   "value": 6.6,
+   "yoy": 10,
+   "color": "#f0a030"
+  },
+  {
+   "name": "XBOX",
+   "value": 5.4,
+   "yoy": -2,
+   "color": "#6cb6e8"
+  },
+  {
+   "name": "Industry solutions",
+   "value": 5.3,
+   "yoy": 9,
+   "color": "#7cd07c"
+  },
+  {
+   "name": "Windows OEM and devices",
+   "value": 3.6,
+   "yoy": -22,
+   "color": "#9a6cc8"
+  },
+  {
+   "name": "Frontier and support services",
+   "value": 2.1,
+   "yoy": 4,
+   "color": "#4aa8a0"
+  }
+ ],
+ "cost_of_revenue": 29.7,
+ "gross_profit": 62.6,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 16.6,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 9.0
+  },
+  {
+   "name": "SG&A",
+   "value": 7.6
+  }
+ ],
+ "operating_profit": 45.9,
+ "other": 0.0,
+ "tax": 9.3,
+ "net_profit": 36.6,
+ "prior": {
+  "Revenue": 77.7,
+  "Cost of revenue": 24.0,
+  "Gross profit": 53.6,
+  "R&D": 8.1,
+  "SG&A": 7.5,
+  "Operating expenses": 15.7,
+  "Operating profit": 38.0,
+  "Tax": 6.6,
+  "Net profit": 27.7
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "ticker": "GEV",
+ "company": "GE Vernova",
+ "currency": "$",
+ "basis": "Adjusted EPS as the street scores it, which is not the GAAP EPS the income statement is built from.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Oct 22, 2025",
+   "actual": 1.64,
+   "estimate": 1.78,
+   "surprise": -0.14,
+   "surprisePct": -7.87
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Jan 28, 2026",
+   "actual": 13.39,
+   "estimate": 3.05,
+   "surprise": 10.34,
+   "surprisePct": 339.02
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 22, 2026",
+   "actual": 1.98,
+   "estimate": 1.84,
+   "surprise": 0.14,
+   "surprisePct": 7.61
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Jul 22, 2026",
+   "actual": 2.47,
+   "estimate": 3.17,
+   "surprise": -0.7,
+   "surprisePct": -22.08
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 4.03,
+   "high": 4.46,
+   "low": 3.33,
+   "analysts": 7,
+   "up": 1,
+   "down": 2
+  }
+ ]
+}

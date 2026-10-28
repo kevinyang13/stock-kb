@@ -3,3 +3,4 @@
 .obsidian/
 bin/*.log
 out/
+__pycache__/

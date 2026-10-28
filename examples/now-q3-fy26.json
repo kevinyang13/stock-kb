@@ -1,0 +1,56 @@
+{
+ "company": "ServiceNow",
+ "ticker": "NOW",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 4106.0,
+ "revenue_yoy": 21,
+ "segments": [
+  {
+   "name": "Subscription",
+   "value": 3988.0,
+   "yoy": 21,
+   "note": "97% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Professional services & other",
+   "value": 118.0,
+   "yoy": 9,
+   "note": "3% of revenue",
+   "color": "#1b1b7a"
+  }
+ ],
+ "cost_of_revenue": 1211.0,
+ "gross_profit": 2895.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 2510.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 956.0
+  },
+  {
+   "name": "SG&A",
+   "value": 1554.0
+  }
+ ],
+ "operating_profit": 385.0,
+ "other": -15.0,
+ "tax": 93.0,
+ "net_profit": 277.0,
+ "prior": {
+  "Revenue": 3407.0,
+  "Cost of revenue": 774.0,
+  "Gross profit": 2633.0,
+  "R&D": 750.0,
+  "SG&A": 1311.0,
+  "Operating expenses": 2061.0,
+  "Operating profit": 572.0,
+  "Tax": 192.0,
+  "Net profit": 502.0
+ }
+}

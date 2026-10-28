@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-27T18:32:28-07:00",
- "generatedLabel": "Oct 27, 2026",
+ "generated": "2026-10-28T07:10:00-07:00",
+ "generatedLabel": "Oct 28, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -113,54 +113,54 @@
   {
    "t": "GOOG",
    "company": "Alphabet",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/GOOG-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/goog/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "reported Oct 28, 2026",
+   "img": "assets/financials/GOOG-Q3-FY26.png",
+   "source": "Alphabet 8-K exhibit 99.1, Oct 28, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$119.8B",
-     "s": "+24% Y/Y"
+     "v": "$127.6B",
+     "s": "+25% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "62%",
-     "s": "$73.9B"
+     "v": "60%",
+     "s": "$76.2B"
     },
     {
      "k": "Operating margin",
-     "v": "34%",
-     "s": "$40.8B"
+     "v": "32%",
+     "s": "$40.6B"
     },
     {
      "k": "Net profit",
-     "v": "$112.2B",
-     "s": "94% margin"
+     "v": "$26.5B",
+     "s": "21% margin"
     },
     {
      "k": "P/E",
-     "v": "15.9 · 23.7",
+     "v": "16.1 · 23.4",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.28%",
+     "v": "0.27%",
      "s": "$0.88 a year"
     }
    ],
    "notes": [
-    "Segments: Google Search & other $63.3B, Google Cloud $24.8B, Subscriptions, platforms & devices $12.9B, YouTube ads $11.1B, Google Network $7.3B, Other Bets $0.4B",
-    "Read the net margin carefully. 94% is not an operating result — a $99.0B gain on sale of investments sits in the interest and other line.",
-    "Operating profit was $40.8B on a 34% margin. That is the number comparable to the other statements here.",
-    "R&D of $18.2B is 15% of revenue.",
-    "Debt and coverage, Q2 FY26: $120.8B of debt against $55.9B of cash and -$5.9B of free cash flow for the quarter. Net debt $64.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $9.11 actual against $2.88 expected, beat by $6.23 (+216%). Sep '26 consensus is $2.94 from 14 analysts, due Oct 28, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 15.9 trailing, 23.7 forward; dividend $0.88 a year, 0.28% yield, last ex-dividend Sep 4, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Segments: the six revenue lines Alphabet reports -- Google Search & other $63,350M (+12% Y/Y), Google Cloud $30,709M (+103%), subscriptions, platforms and devices $14,290M (+11%), YouTube ads $11,207M (+9%), Google Network $7,455M (+1%) and Other Bets $372M (+8%). They sum to $127,383M against $127,577M of revenue; the $194M difference is hedging gains, which Alphabet reports separately and does not allocate to any line.",
+    "Read the operating margin, not the net margin. Operating income rose 30% to $40,576M, but net income FELL 24% to $26,468M, because other income swung from +$12,759M a year ago to -$8,221M this quarter. The whole of that reversal is below the operating line. Net margin reads 21% against a 32% operating margin for that reason alone.",
+    "Alphabet presents no gross profit line, so it is derived as revenues less cost of revenues: $127,577M - $51,419M = $76,158M. Operating expenses are R&D $20,640M plus sales and marketing $8,804M and general and administrative $6,138M, grouped as SG&A.",
+    "The chart draws net income of $26,468M. Net income available to common stockholders is $26,170M after $298M of preferred stock dividends -- the first quarter Alphabet has paid any -- and the $2.12 diluted EPS is computed on that lower figure.",
+    "Alphabet's reportable segments are a different cut: Google Services, Google Cloud and Other Bets, with operating income of $39,157M, $11,121M and -$2,047M, less $7,655M of unallocated Alphabet-level activities, mostly shared AI research and development.",
+    "Market figures as of Oct 28, 2026: P/E 16.1 trailing, 23.4 forward; dividend $0.88 a year, 0.27% yield, last ex-dividend Sep 4, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $9.11 actual against $2.88 expected, beat by $6.23 (+216%). Sep '26 consensus is $2.94 from 14 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
+    "No debt and coverage chart on this card yet. The quarter's balance sheet and cash flow statement had not reached the data source when the card was built, hours after the release, and the builder refuses a column from a different quarter rather than pairing a June balance sheet with a September income statement. It returns on the next refresh."
    ],
-   "debt": "GOOG-debt",
    "eps": "GOOG-eps"
   },
   {
@@ -540,31 +540,31 @@
   {
    "t": "MSFT",
    "company": "Microsoft",
-   "period": "FQ4 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/MSFT-FQ4-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/msft/financials/income-statement/?p=quarterly",
+   "period": "FQ1 FY27",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "reported Oct 28, 2026",
+   "img": "assets/financials/MSFT-FQ1-FY27.png",
+   "source": "Microsoft 8-K exhibit 99.1, Oct 28, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$90.0B",
-     "s": "+18% Y/Y"
+     "v": "$92.3B",
+     "s": "+19% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "67%",
-     "s": "$60.5B"
+     "v": "68%",
+     "s": "$62.6B"
     },
     {
      "k": "Operating margin",
-     "v": "45%",
-     "s": "$40.6B"
+     "v": "50%",
+     "s": "$45.9B"
     },
     {
      "k": "Net profit",
-     "v": "$35.8B",
+     "v": "$36.6B",
      "s": "40% margin"
     },
     {
@@ -579,15 +579,14 @@
     }
    ],
    "notes": [
-    "Segments: Intelligent Cloud $39.3B, Productivity & Business Processes $37.8B, More Personal Computing $12.9B",
-    "R&D ($10.0B) and SG&A ($9.9B) are almost exactly equal.",
-    "A 45% operating margin at $90B of quarterly revenue.",
-    "The most balanced statement of the group — no single line dominates.",
-    "Debt and coverage, FQ4 FY26: $128.8B of debt against $20.9B of cash and $19.6B of free cash flow for the quarter. Net debt $107.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $4.74 actual against $4.21 expected, beat by $0.53 (+13%). Sep '26 consensus is $4.71 from 14 analysts, due Oct 28, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 29.6 trailing, 26.9 forward; dividend $3.92 a year, 0.74% yield, last ex-dividend Nov 19, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Segments: Microsoft recast its segments effective fiscal 2027 and now reports only two -- Agents and Infra $76,795M (+25% Y/Y) and Devices and Consumer $15,484M (-3%). Two bands say very little about a quarter, so the chart draws the eight product and service offering lines Microsoft also reports, which foot to the same $92,279M: Azure $33,165M (+48%), Microsoft 365 cloud $27,778M (+17%), productivity and server licensing $8,407M (-3%), search and advertising $6,554M (+10%), XBOX $5,379M (-2%), industry solutions $5,337M (+9%), Windows OEM and devices $3,551M (-22%) and frontier and support services $2,108M (+4%). Prior-year figures are Microsoft's own recast ones.",
+    "Gross margin is the filed line, $62,559M, not a derived figure. Operating expenses are R&D $9,047M plus sales and marketing $5,716M and general and administrative $1,881M, grouped as SG&A.",
+    "Other income and expense is almost exactly nil this quarter at +$38M, against -$3,660M a year ago. That swing is OpenAI: Microsoft's own non-GAAP strips out a $207M net gain from its OpenAI investments this quarter and a $3.1B net loss in the year-ago quarter. GAAP net income grew 32%; on Microsoft's non-GAAP basis it grew 18%.",
+    "These eight lines carry no percent-of-revenue label on the chart. Eight segment blocks leave about 90 pixels each in the left column, and a fourth line of text overran it -- the Y/Y figure is the one worth keeping.",
+    "Market figures as of Oct 28, 2026: P/E 29.6 trailing, 26.9 forward; dividend $3.92 a year, 0.74% yield, last ex-dividend Nov 19, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $4.74 actual against $4.21 expected, beat by $0.53 (+13%). Sep '26 consensus is $4.71 from 14 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
+    "No debt and coverage chart on this card yet. The quarter's balance sheet and cash flow statement had not reached the data source when the card was built, hours after the release, and the builder refuses a column from a different quarter rather than pairing a June balance sheet with a September income statement. It returns on the next refresh."
    ],
-   "debt": "MSFT-debt",
    "eps": "MSFT-eps"
   },
   {
@@ -2377,36 +2376,36 @@
   {
    "t": "NOW",
    "company": "ServiceNow",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/NOW-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/now/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "reported Oct 28, 2026",
+   "img": "assets/financials/NOW-Q3-FY26.png",
+   "source": "ServiceNow 8-K exhibit 99.1, Oct 28, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000092/erq3fy26.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$3,987M",
-     "s": "+24% Y/Y"
+     "v": "$4,106M",
+     "s": "+21% Y/Y"
     },
     {
      "k": "Gross margin",
      "v": "71%",
-     "s": "$2,818M"
+     "s": "$2,895M"
     },
     {
      "k": "Operating margin",
-     "v": "4%",
-     "s": "$162M"
+     "v": "9%",
+     "s": "$385M"
     },
     {
      "k": "Net profit",
-     "v": "$298M",
+     "v": "$277M",
      "s": "7% margin"
     },
     {
      "k": "P/E",
-     "v": "96.7 · 34.2",
+     "v": "93.8 · 34.2",
      "s": "trailing · forward"
     },
     {
@@ -2416,13 +2415,14 @@
     }
    ],
    "notes": [
-    "Segments: Subscription $3,877M (+25%), Professional Services and Other $110M (+8%). Source: stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $8.5B of debt against $2.5B of cash and $473.0M of free cash flow for the quarter. Net debt $6.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.31 actual against $0.40 expected, missed by $0.09 (-22%). Sep '26 consensus is $0.56 from 12 analysts, due Oct 28, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 96.7 trailing, 34.2 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Segments: ServiceNow splits revenue two ways only -- subscription $3,988M (+21% Y/Y) and professional services and other $118M (+9%) -- and they foot exactly to $4,106M. Professional services runs at a gross loss: $157M of cost against $118M of revenue.",
+    "Revenue grew 20.5% and operating income fell 33%, from $572M to $385M. The cause is on the cost of revenue line: cost of subscription revenue rose 58%, from $666M to $1,054M, against 21% subscription revenue growth. Subscription gross margin fell from 79.8% to 73.6% and total gross margin from 77.3% to 70.5%. Operating margin is 9%, against 17% a year ago.",
+    "Operating expenses are R&D $956M plus sales and marketing $1,271M and general and administrative $283M, grouped as SG&A.",
+    "The -$15M non-operating line is $69M of interest income less $81M of interest expense and $3M of other expense, as filed. Interest expense was $6M a year ago.",
+    "Market figures as of Oct 28, 2026: P/E 93.8 trailing, 34.2 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.31 actual against $0.40 expected, missed by $0.09 (-22%). Sep '26 consensus is $0.56 from 13 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
+    "No debt and coverage chart on this card yet. The quarter's balance sheet and cash flow statement had not reached the data source when the card was built, hours after the release, and the builder refuses a column from a different quarter rather than pairing a June balance sheet with a September income statement. It returns on the next refresh."
    ],
-   "debt": "NOW-debt",
    "eps": "NOW-eps"
   },
   {
@@ -3364,56 +3364,110 @@
   {
    "t": "VRT",
    "company": "Vertiv Holdings",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "reported Jul 29, 2026",
-   "img": "assets/financials/VRT-Q2-FY26.png",
-   "source": "Vertiv Holdings 8-K exhibit 99.1, Jul 29, 2026",
-   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026050323/q22026exhibit991vrt07292026.htm",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "reported Oct 28, 2026",
+   "img": "assets/financials/VRT-Q3-FY26.png",
+   "source": "Vertiv Holdings 8-K exhibit 99.1, Oct 28, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067707/q32026exhibit991vrt10282026.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$3,274M",
-     "s": "+24% Y/Y"
+     "v": "$4,313M",
+     "s": "+61% Y/Y"
     },
     {
      "k": "Gross margin",
      "v": "38%",
-     "s": "$1,235M"
+     "s": "$1,643M"
     },
     {
      "k": "Operating margin",
-     "v": "19%",
-     "s": "$638M"
+     "v": "23%",
+     "s": "$984M"
     },
     {
      "k": "Net profit",
-     "v": "$498M",
-     "s": "15% margin"
+     "v": "$765M",
+     "s": "18% margin"
     },
     {
      "k": "P/E",
-     "v": "47.2 · 26.3",
+     "v": "45.4 · 28.1",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "0.12%",
+     "v": "0.10%",
      "s": "$0.25 a year"
     }
    ],
    "notes": [
-    "Segments: Vertiv's three reportable segments are geographic. Americas $2,070.8M (+29.2% Y/Y), Asia Pacific $719.9M (+28.5%) and Europe, Middle East & Africa $483.6M (+1.7%), summing exactly to $3,274.3M of net sales. The chart rounds to whole millions, so the three bands read 2,071 + 720 + 484 against a 3,274 revenue bar; the filed figures carry one decimal and foot exactly. Vertiv splits each region into products and services as well: $2,606.4M of products and $667.9M of services and spares company-wide -- $40.3M of spares that the income statement groups with products, so its own products/services split reads $2,646.7M and $627.6M. Both foot to the same $3,274.3M.",
-    "This card is one quarter behind. Vertiv reports Q3 2026 before the open on Oct 28, 2026; this is Q2, reported Jul 29, 2026, and is the most recent statement Vertiv has filed.",
-    "Vertiv presents no gross profit line, so it is derived as net sales less cost of sales: $3,274.3M - $2,039.4M = $1,234.9M. \"Other operating\" of $29M combines a $3.9M restructuring credit, a $3.9M foreign currency loss and $28.9M of other operating expense.",
-    "The -$18M non-operating line is $17.4M of net interest expense plus $0.5M of other non-operating expense, as filed.",
-    "Debt and coverage, Q2 FY26: $3.3B of debt against $2.8B of cash and $0.9B of free cash flow for the quarter. Net debt $0.5B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.52 actual against $1.43 expected, beat by $0.09 (+6%). Sep '26 consensus is $1.82 from 6 analysts, due Oct 28, 2026. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 27, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 47.2 trailing, 26.3 forward; dividend $0.25 a year, 0.12% yield, last ex-dividend Sep 14, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Segments: Vertiv's three reportable segments are geographic. Americas $2,988.8M (+74.5% Y/Y), Asia Pacific $779.3M (+49.9%) and Europe, Middle East & Africa $544.7M (+22.8%), summing exactly to $4,312.8M of net sales. The chart rounds to whole millions. The products/services split disagrees with itself again, as it did in Q2: the income statement reads $3,637.1M of products and $675.7M of services, while the offerings table reads $3,593.8M and $719.0M of services and spares -- $43.3M of spares grouped differently. Both foot to $4,312.8M.",
+    "The quarter beat Vertiv's own guidance by a wide margin. With the Q2 release it guided Q3 net sales of $3,650M to $3,850M; it delivered $4,312.8M, $463M above the top of that range, and raised full-year guidance to $14,450M-$14,850M.",
+    "Vertiv presents no gross profit line, so it is derived as net sales less cost of sales: $4,312.8M - $2,669.4M = $1,643.4M. \"Other operating\" of $37M combines $0.2M of restructuring costs, a $7.1M foreign currency loss and $30.1M of other operating expense.",
+    "The +$11M non-operating line is $17.4M of other non-operating income less $6.4M of net interest expense, as filed. It adds to profit rather than subtracting from it, which is why it enters operating profit from above on the chart.",
+    "Market figures as of Oct 28, 2026: P/E 45.4 trailing, 28.1 forward; dividend $0.25 a year, 0.10% yield, last ex-dividend Sep 14, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Debt and coverage, Q3 FY26: $3,268.2M of debt against $3,512.9M of cash and $654.9M of free cash flow for the quarter. Vertiv is now net cash by $244.7M, having carried $527.6M of net debt a quarter ago. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.52 actual against $1.43 expected, beat by $0.09 (+6%). Sep '26 consensus is $1.82 from 6 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026."
    ],
-   "debt": "VRT-debt",
-   "eps": "VRT-eps"
+   "eps": "VRT-eps",
+   "debt": "VRT-debt"
+  },
+  {
+   "t": "GEV",
+   "company": "GE Vernova",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "reported Oct 28, 2026",
+   "img": "assets/financials/GEV-Q3-FY26.png",
+   "source": "GE Vernova 10-Q, Oct 28, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000163/gev-20260930.htm",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$12,642M",
+     "s": "+27% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "25%",
+     "s": "$3,107M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "11%",
+     "s": "$1,394M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,289M",
+     "s": "10% margin"
+    },
+    {
+     "k": "P/E",
+     "v": "22.9 · 38.4",
+     "s": "trailing · forward"
+    },
+    {
+     "k": "Dividend",
+     "v": "0.23%",
+     "s": "$2.00 a year"
+    }
+   ],
+   "notes": [
+    "Segments: GE Vernova's three reportable segments are Power $6,067M (+25% Y/Y), Electrification $3,862M (+51%) and Wind $2,741M (+4%). These are segment revenues inclusive of intersegment sales and sum to $12,670M against $12,642M of consolidated revenue -- the $29M difference is intersegment eliminations, so the three bands are 0.2% wider in total than the revenue bar they feed. Power breaks down further into Gas Power $5,117M, Nuclear Power $719M and Hydro Power $231M.",
+    "The income statement comes from the 10-Q filed the same morning, not from the earnings release. GE Vernova's press release is built around adjusted EBITDA and carries segment cost of revenues but no consolidated profit and loss statement.",
+    "Electrification's 51% growth is mostly bought, not organic: GE Vernova puts organic Electrification revenue at $2,914M, 16% growth, with the rest from the Prolec GE acquisition. Power's 25% is organic. Wind grew 4% and carries a 2.6% segment EBITDA margin.",
+    "The +$388M non-operating line is $71M of interest and other financial income, $212M of non-operating benefit income and $105M of other income, as filed. It adds to profit, which is why it enters operating profit from above on the chart.",
+    "The chart draws consolidated net income of $1,289M. Net income attributable to GE Vernova is $1,291M; the $2M difference is a loss attributable to noncontrolling interests. Diluted EPS was $4.81 against $1.64 a year ago.",
+    "Market figures as of Oct 28, 2026: P/E 22.9 trailing, 38.4 forward; dividend $2.00 a year, 0.23% yield, last ex-dividend Oct 27, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Debt and coverage, Q3 FY26: $2,795.0M of debt against $16,764.0M of cash and $5,410.0M of free cash flow in the quarter -- net cash of $13,969.0M, five times gross debt. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: adjusted EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $2.47 actual against $3.17 expected, missed by $0.70 (-22%). Sep '26 consensus is $4.03 from 7 analysts. This is adjusted EPS, not the GAAP figure the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026."
+   ],
+   "eps": "GEV-eps",
+   "debt": "GEV-debt"
   }
  ],
- "marketAsOf": "Oct 27, 2026"
+ "marketAsOf": "Oct 28, 2026"
 }

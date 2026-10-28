@@ -1,0 +1,33 @@
+{
+ "ticker": "GEV",
+ "company": "GE Vernova",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q3 FY26",
+   "debt": 2795.0,
+   "fcf": 5410.0,
+   "cash": 16764.0,
+   "debt_parts": [
+    {
+     "label": "Long-term debt",
+     "value": 2795.0
+    }
+   ],
+   "cash_parts": [],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 6057.0
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -647.0
+    }
+   ]
+  }
+ ]
+}

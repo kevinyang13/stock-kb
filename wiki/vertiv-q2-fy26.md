@@ -1,10 +1,10 @@
 # Vertiv Holdings Q2 FY26
 
-**Summary**: Vertiv's second quarter 2026 (quarter ended June 30, 2026): $3,274.3M of net sales, up 24% year over year, a 38% gross margin, $637.9M of operating profit and $497.8M of net income. Growth is an Americas story — the Americas segment grew 29% and EMEA grew 1.7%. This is the last quarter Vertiv has filed; Q3 2026 is released before the open on October 28, 2026.
+**Summary**: Vertiv's second quarter 2026 (quarter ended June 30, 2026): $3,274.3M of net sales, up 24% year over year, a 38% gross margin, $637.9M of operating profit and $497.8M of net income. Growth is an Americas story — the Americas segment grew 29% and EMEA grew 1.7%. Q3 2026 has since been reported and is charted on [[vertiv-q3-fy26]]; this page is kept as the record of the quarter before it.
 
 **Sources**: Vertiv Holdings 8-K exhibit 99.1, filed July 29, 2026 (source: sec.gov/Archives/edgar/data/1674101/000162828026050323/q22026exhibit991vrt07292026.htm). Debt, cash and free cash flow from stockanalysis.com, read 2026-10-27. Street EPS consensus from the Nasdaq/Zacks endpoints, read 2026-10-27. Q3 date and guidance from Vertiv's own announcements.
 
-**Last updated**: 2026-10-27
+**Last updated**: 2026-10-28 (superseded by [[vertiv-q3-fy26]])
 
 ---
 
@@ -80,13 +80,14 @@ Vertiv pays a token dividend: $0.25 a year, a 0.12% yield.
 
 ## What comes next
 
-Vertiv reports Q3 2026 **before the open on October 28, 2026** — the day after this page was
-written. The guidance set with the Q2 release was Q3 net sales of $3,650M to $3,850M, 34-36%
+Vertiv reported Q3 2026 **before the open on October 28, 2026**, the day after this page was
+written, and the result is on [[vertiv-q3-fy26]]: net sales of $4,312.8M, $463M above the top of
+the guidance range below, with operating profit up 90%. What follows is what was known when this
+page was written. The guidance set with the Q2 release was Q3 net sales of $3,650M to $3,850M, 34-36%
 organic growth, adjusted operating margin of 24.0-25.0% and adjusted diluted EPS of $1.77 to
 $1.83; full year, $13,800M to $14,200M of net sales and $6.65 to $6.75 of adjusted EPS. The street
 consensus carried on the card's earnings chart is $1.82 from 6 analysts, due Oct 28, 2026 — the
-top of Vertiv's own range. Until that print is charted, the Financials card is one quarter behind, and the card
-says so.
+top of Vertiv's own range. That print is now charted; the Financials card carries Q3.
 
 On the adjusted basis the street scores, Vertiv has beaten in each of the last four quarters:
 Sep '25 $1.24 against $1.00 (+24%), Dec '25 $1.36 against $1.29, Mar '26 $1.17 against $1.02
@@ -98,4 +99,5 @@ the $1.27 GAAP EPS above.
 - [[sankey-income-statement]]
 - [[favorites-financials]]
 - [[earnings-surprise-chart]]
+- [[vertiv-q3-fy26]]
 - [[visa-q4-fy26]]
