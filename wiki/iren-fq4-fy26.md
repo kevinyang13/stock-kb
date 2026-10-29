@@ -20,9 +20,10 @@ $137,225K, pretax to $(691,968)K and net to $(683,999)K, and the two reported se
 revenue total to the dollar. An independent aggregator reading the same filings reports $137.23M,
 $(691.97)M and $(684.00)M. Nothing here is estimated.
 
-This also means the card is **not the most recent quarter that exists**. IREN had not filed its
-FQ1 FY27 10-Q, for the quarter ended September 30 2026, when this was built — last year's landed
-November 6 — so the September quarter is reported nowhere yet.
+This also means the card is **not the most recent quarter that exists**. IREN had not published
+its FQ1 FY27 results, for the quarter ended September 30 2026, when this was built; the
+confirmed date is **November 5, 2026**. The September quarter is reported nowhere yet, and in
+about a week this card is superseded by one that is filed rather than derived.
 
 ## Income statement
 

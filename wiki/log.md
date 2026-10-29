@@ -1663,3 +1663,9 @@ Jun 30 2026, all three charts draw, and the KPIs read $137.2M / 76% / ($620.4M) 
 The sankey image was opened: no crossed bands, no clipped labels, flows proportional. The debt
 image was opened: the negative free cash flow bar draws below the baseline with the quarter label
 clear of it.
+
+**IREN's next report has a confirmed date.** The event refresh that ran alongside the card came
+back with Nov 5, 2026 for IREN, so the card and the page now cite that instead of hedging off last
+year's Nov 6 filing. The derived FQ4 FY26 card is superseded in about a week by a quarter that is
+actually filed. The same refresh rewrote the whole calendar: 49 upcoming ticker events, 57
+published dates already past and omitted rather than estimated, 14 macro and Fed entries kept.
