@@ -1763,3 +1763,51 @@ moves as before.
 claude.ai connector rather than a local MCP server, so the headless `claude -p` that launchd runs
 cannot reach it, and `get_price_snapshot` takes one symbol per call — 109 calls, no batching. The
 file format is deliberately writer-agnostic so that decision stays open.
+
+## 2026-10-29 — four of the five names that reported today, charted from their own filings
+
+**Sources**: Sandisk 8-K ex-99.1, Amazon 8-K ex-99.1, Intel 8-K ex-99.1 and Coinbase's 10-Q, all
+filed Oct 29, 2026. Strategy's 8-K ex-99.1 of the same date was read and deliberately not charted.
+
+**What changed**: SNDK, AMZN, INTC and COIN moved off the June quarter and onto the one they
+reported this afternoon. All four statements were read from the filing rather than the aggregator,
+which has no column for these period ends yet. Four new wiki pages, listed in the index.
+
+**Every segment split foots exactly.** Sandisk's three end markets to $11,031M, Amazon's seven
+product lines to $201,944M, Coinbase's three revenue sources to $1,215.6M. Intel's do not and
+cannot: it reports business-unit revenue **inclusive of intersegment sales**, so Intel Products
+$15.4B plus Foundry $6.7B plus All Other $0.7B is $22.8B against $16.5B consolidated, with $(6.3)B
+of eliminations. The card draws CCPG and DCAI as reported and carries Foundry-external-and-other as
+the $1,113M residual, which also absorbs the rounding — the 8-K gives business units to $0.1B only.
+
+**Three of the four quarters are stories about where profit sits, not how much there is.**
+
+- **Amazon**: operating income +61%, net income **−2%**. The year-ago quarter had $10,748M of
+  non-operating income; this one had a $1,207M expense. Operating income is the comparable figure.
+- **Coinbase**: operating income $61.7M, net income $718.7M. $715.0M of the difference is a mark on
+  crypto Coinbase holds for its own account. The 59% net margin is a balance sheet, not a business.
+- **Intel**: net margin 21% against a 15% operating margin, because $1,460M of the profit is equity
+  gains plus interest and other. Net income fell 18% while operating income rose 269%.
+- **Sandisk** is the exception and still carries a caveat: $513M of its $539M non-operating line is
+  a gain on equity securities. Its real figure is $8,780M of operating income on revenue that grew
+  378% while cost of revenue grew 2%.
+
+**Strategy (MSTR) was read and not charted, on purpose.** Q3 revenue was $125.4M and operating
+income was $20,909.8M, because a **$20,912.4M gain on digital assets is reported inside operating
+expenses**. Excluding it, gross profit of $89.6M against $92.2M of cash opex is a $2.6M operating
+loss. A Sankey conserves flow, so an operating profit 167 times revenue cannot be drawn without
+recasting Strategy's own operating income line into a non-operating one. The Q2 FY26 card, which used the loss layout because that quarter's digital-asset move was a
+charge rather than a gain, stays up. This needs a decision about recasting before it can be charted.
+
+**Two things on these cards are honestly stale and say so.** The debt chart is still the prior
+quarter: `debtfetch.py` reported "no column for 2026-10-02" and the like for all four, and the
+releases give cash flow year to date rather than for the quarter, so a quarterly free-cash-flow bar
+could not be read from them either. And the earnings chart does not yet carry today's print — the
+vendor still shows Jun '26 as the most recent actual. Each card now names the reported GAAP EPS and
+the consensus beside it **without scoring a surprise**, because the two are not on the same basis.
+That is the rule commit a19008c put in; this is the first time it has been applied by hand.
+
+**Verification**: every spec rendered with no validator warnings and all four images were opened
+and checked — no crossed bands, no clipped labels, flows proportional. `financials.json` parses.
+The SNDK card was loaded in the browser: chip, header "FQ1 FY27 quarter ended Oct 2, 2026 · 8-K
+filed Oct 29, 2026", KPIs $11,031M / 85% / 80% / $8,101M, and the live chart draws.

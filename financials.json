@@ -221,37 +221,37 @@
   },
   {
    "t": "SNDK",
-   "company": "SanDisk",
-   "period": "FQ4 FY26",
-   "periodEnd": "quarter ended Jul 3, 2026",
-   "reported": "",
-   "img": "assets/financials/SNDK-FQ4-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/sndk/financials/income-statement/?p=quarterly",
+   "company": "Sandisk Corporation",
+   "period": "FQ1 FY27",
+   "periodEnd": "quarter ended Oct 2, 2026",
+   "reported": "8-K filed Oct 29, 2026",
+   "img": "assets/financials/SNDK-FQ1-FY27.png",
+   "source": "Sandisk 8-K exhibit 99.1, fiscal Q1 2027 results, Oct 29 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026068243/0001628280-26-068243-index.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$8,965M",
-     "s": "+372% Y/Y"
+     "v": "$11,031M",
+     "s": "+378% Y/Y"
     },
     {
      "k": "Gross margin",
      "v": "85%",
-     "s": "$7,582M"
+     "s": "$9,378M"
     },
     {
      "k": "Operating margin",
-     "v": "78%",
-     "s": "$7,035M"
+     "v": "80%",
+     "s": "$8,780M"
     },
     {
      "k": "Net profit",
-     "v": "$6,903M",
-     "s": "77% margin"
+     "v": "$8,101M",
+     "s": "73% margin"
     },
     {
      "k": "P/E",
-     "v": "17.7 · 6.1",
+     "v": "18.0 · 6.5",
      "s": "trailing · forward"
     },
     {
@@ -261,13 +261,15 @@
     }
    ],
    "notes": [
-    "Segments: Edge $5,432M, Datacenter $2,977M, Consumer $556M",
-    "The same memory cycle as Micron, in an even more extreme form: cost of revenue is only $1,383M against $8,965M of revenue.",
-    "Operating expenses total $547M — 6% of revenue.",
-    "A 77% net margin on a commodity NAND business is a pricing artifact, not a structural one.",
-    "Debt and coverage, FQ4 FY26: $201.0M of debt against $4.8B of cash and $7.1B of free cash flow for the quarter. Net debt -$4.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $38.82 actual against $33.28 expected, beat by $5.54 (+17%). Sep '26 consensus is $45.22 from 4 analysts, due Oct 29, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Sep '25, Dec '25, Mar '26 cannot be shown to share a basis here, so those pairs are drawn with a dotted join and no surprise figure is published for them. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 17.7 trailing, 6.1 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Segments: Edge $5,832M (+320% Y/Y), Datacenter $4,802M (from $269M a year ago) and Consumer $397M (-39%), which foot exactly to $11,031M. Datacenter is the quarter: it was 12% of revenue a year ago and is 44% now, and it grew 61% sequentially on its own.",
+    "Revenue grew 378% year over year, from $2,308M. This is the NAND pricing cycle in its most extreme form -- cost of revenue rose only 2%, from $1,621M to $1,653M, while revenue grew almost fivefold. An 85% gross margin on a commodity memory business is a pricing artifact, not a structural one, and it reverses when pricing does.",
+    "$513M of the $539M non-operating line is a gain on equity securities, not operating performance. Operating income of $8,780M is the figure that describes the business; net income of $8,101M is after that one-off gain and $1,218M of tax.",
+    "Sandisk announced an eight-for-one forward stock split alongside these results, effective after the close on Nov 19, 2026 for holders of record Nov 9. Every per-share figure on this card is pre-split, as the company reports them.",
+    "Guidance for fiscal Q2 2027 is revenue of $12,200M to $12,600M at an 84.4%-85.4% GAAP gross margin. The company also repurchased about 3.2 million shares for $5.0B in the quarter.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $38.82 actual against $33.28 expected, beat by $5.54 (+17%). Sep '26 consensus is $46.19 from 4 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Sep '25, Dec '25, Mar '26 cannot be shown to share a basis here, so those pairs are drawn with a dotted join and no surprise figure is published for them. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
+    "Market figures as of Oct 29, 2026: P/E 18.0 trailing, 6.5 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "The debt chart on this card is still the prior quarter (FQ4 FY26, quarter ended Jul 3, 2026), not the quarter the income statement covers. The data vendor had no column for the new period end when this card was built, and the company's own release reports cash flow year to date rather than for the quarter, so a quarterly free cash flow bar could not be read from it either. It is refreshed when the vendor catches up.",
+    "The earnings chart does not yet include the quarter reported today. The vendor's feed still shows Jun '26 as the most recent actual and carries the Sep quarter as a consensus of $46.19. The company reported $52.60 diluted GAAP ($49.51 non-GAAP). Those two are not on the same basis -- the consensus is the street's adjusted figure -- so no surprise is scored here; the chart updates when the vendor publishes its own actual."
    ],
    "debt": "SNDK-debt",
    "eps": "SNDK-eps"
@@ -960,36 +962,36 @@
   {
    "t": "AMZN",
    "company": "Amazon",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/AMZN-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/amzn/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "8-K filed Oct 29, 2026",
+   "img": "assets/financials/AMZN-Q3-FY26.png",
+   "source": "Amazon 8-K exhibit 99.1, Q3 2026 results, Oct 29 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/0001018724-26-000038-index.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$200.6B",
-     "s": "+20% Y/Y"
+     "v": "$201.9B",
+     "s": "+12% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "52%",
-     "s": "$104.8B"
+     "v": "53%",
+     "s": "$107.4B"
     },
     {
      "k": "Operating margin",
      "v": "14%",
-     "s": "$27.5B"
+     "s": "$28.1B"
     },
     {
      "k": "Net profit",
-     "v": "$62.6B",
-     "s": "31% margin"
+     "v": "$20.7B",
+     "s": "10% margin"
     },
     {
      "k": "P/E",
-     "v": "20.4 · 27.2",
+     "v": "19.6 · 27.4",
      "s": "trailing · forward"
     },
     {
@@ -999,11 +1001,15 @@
     }
    ],
    "notes": [
-    "Segments: Online stores $70.4B, Third-party seller services $46.8B, AWS $42.2B, Advertising $19.8B, Subscription services $13.7B, Physical stores & other $7.7B",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $251.6B of debt against $78.2B of cash and -$8.8B of free cash flow for the quarter. Net debt $173.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.88 actual against $1.83 expected, beat by $0.05 (+3%). Sep '26 consensus is $2.01 from 14 analysts, due Oct 29, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 20.4 trailing, 27.2 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Segments: Online stores $68.5B (+2% Y/Y), Third-party seller services $46.5B (+9%), AWS $46.0B (+39%), Advertising services $19.6B (+11%), Subscription services $14.0B (+11%) and Physical stores & other $7.4B, which foot exactly to $201,944M.",
+    "AWS is the quarter. It grew 39% against 20% in the same quarter last year, and its growth has accelerated in each of the last five quarters: 20%, 24%, 28%, 37%, 39%. On the reportable-segment basis AWS earned $17,773M of operating income on $45,984M of sales -- 63% of company operating income on 23% of revenue.",
+    "Operating income grew 61% to $28,076M while revenue grew 12%. The retail side is where that came from: North America segment operating income rose from $4,789M to $8,723M.",
+    "Net income fell 2% even so, to $20,685M from $21,187M. The reason is below the operating line: non-operating income was a $1,207M expense this quarter against $10,748M of income a year ago, a swing of almost $12B, driven by the year-ago quarter's investment gains. Operating income, not net income, is the comparable figure here.",
+    "Opex is grouped to the two lines this chart draws: R&D is Technology and infrastructure ($34,814M) and SG&A is fulfillment, sales and marketing, general and administrative and other operating expense together ($44,481M).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.88 actual against $1.83 expected, beat by $0.05 (+3%). Sep '26 consensus is $2.01 from 14 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
+    "Market figures as of Oct 29, 2026: P/E 19.6 trailing, 27.4 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "The debt chart on this card is still the prior quarter (Q2 FY26, quarter ended Jun 30, 2026), not the quarter the income statement covers. The data vendor had no column for the new period end when this card was built, and the company's own release reports cash flow year to date rather than for the quarter, so a quarterly free cash flow bar could not be read from it either. It is refreshed when the vendor catches up.",
+    "The earnings chart does not yet include the quarter reported today. The vendor's feed still shows Jun '26 as the most recent actual and carries the Sep quarter as a consensus of $2.01. The company reported $1.89 diluted GAAP. Those two are not on the same basis -- the consensus is the street's adjusted figure -- so no surprise is scored here; the chart updates when the vendor publishes its own actual."
    ],
    "debt": "AMZN-debt",
    "eps": "AMZN-eps"
@@ -1398,31 +1404,36 @@
   {
    "t": "COIN",
    "company": "Coinbase",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/COIN-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/coin/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "10-Q filed Oct 29, 2026",
+   "img": "assets/financials/COIN-Q3-FY26.png",
+   "source": "Coinbase 10-Q for the quarter ended Sep 30 2026, filed Oct 29 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000122/0001679788-26-000122-index.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$1,154M",
-     "s": "-17% Y/Y"
+     "v": "$1,216M",
+     "s": "-35% Y/Y"
     },
     {
      "k": "Gross margin",
      "v": "84%",
-     "s": "$965M"
+     "s": "$1,021M"
     },
     {
-     "k": "Net loss",
-     "v": "($359M)",
-     "s": "(31%) margin"
+     "k": "Operating margin",
+     "v": "5%",
+     "s": "$62M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$719M",
+     "s": "59% margin"
     },
     {
      "k": "P/E",
-     "v": "n/a · 107.6",
+     "v": "n/a · 108.7",
      "s": "trailing · forward"
     },
     {
@@ -1432,12 +1443,15 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $965M + $359M balances against the charges on the right.",
-    "Segments: Transaction revenue $599M (-22%), Subscription & services $555M (-12%). Source: Coinbase 10-Q, quarter ended Jun 30 2026, revenue by source.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $6.7B of debt against $8.6B of cash and $197.3M of free cash flow for the quarter. Net debt -$1.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.39 actual against $0.14 expected, missed by $0.53 (-379%). Sep '26 consensus is -$0.15 from 10 analysts, due Oct 29, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 27, 2026: P/E n/a trailing, 107.6 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Segments: Transaction revenue $590M (-44% Y/Y), Subscription & services $570M (-20%) and Other revenue $55M (-48%), which foot exactly to $1,215.6M of total revenue. Subscription & services is now 47% of revenue against 38% a year ago -- not because it grew, but because transaction revenue fell faster.",
+    "The 59% net margin is not the business. Operating income was $62M on $1,216M of revenue -- a 5% operating margin. Net income of $719M is almost entirely a $715M gain on crypto assets held for investment, a mark-to-market on Coinbase's own balance sheet rather than anything customers paid it. Strip the non-operating line and the quarter is roughly break-even.",
+    "Revenue fell 35% year over year. Coinbase attributes it to a 59% fall in consumer spot trading volume and a 53% fall in institutional spot volume, partly offset by prediction markets and derivatives. Monthly transacting users were 7.4 million against 9.3 million.",
+    "Cost of revenue is transaction expense ($194M). SG&A of $512M is sales and marketing plus general and administrative ($561M) net of $49M of operating credits -- gains on crypto held for operations, a restructuring reversal and other operating income -- which are reported inside operating expenses and cannot be drawn as a negative band.",
+    "Assets on platform were $376.6B against $515.9B a year earlier, a fall the company attributes mostly to crypto prices rather than outflows.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.39 actual against $0.14 expected, missed by $0.53 (-379%). Sep '26 consensus is -$0.16 from 10 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
+    "Market figures as of Oct 29, 2026: P/E n/a trailing, 108.7 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "The debt chart on this card is still the prior quarter (Q2 FY26, quarter ended Jun 30, 2026), not the quarter the income statement covers. The data vendor had no column for the new period end when this card was built, and the company's own release reports cash flow year to date rather than for the quarter, so a quarterly free cash flow bar could not be read from it either. It is refreshed when the vendor catches up.",
+    "The earnings chart does not yet include the quarter reported today. The vendor's feed still shows Jun '26 as the most recent actual and carries the Sep quarter as a consensus of -$0.16. The company reported $2.51 diluted GAAP. Those two are not on the same basis -- the consensus is the street's adjusted figure -- so no surprise is scored here; the chart updates when the vendor publishes its own actual."
    ],
    "debt": "COIN-debt",
    "eps": "COIN-eps"
@@ -1989,32 +2003,37 @@
   },
   {
    "t": "INTC",
-   "company": "Intel",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 27, 2026",
-   "reported": "",
-   "img": "assets/financials/INTC-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/intc/financials/income-statement/?p=quarterly",
+   "company": "Intel Corporation",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 26, 2026",
+   "reported": "8-K filed Oct 29, 2026",
+   "img": "assets/financials/INTC-Q3-FY26.png",
+   "source": "Intel 8-K exhibit 99.1, Q3 2026 results, Oct 29 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/0000050863-26-000188-index.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$16,128M",
-     "s": "+25% Y/Y"
+     "v": "$16,513M",
+     "s": "+21% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "40%",
-     "s": "$6,509M"
+     "v": "43%",
+     "s": "$7,096M"
     },
     {
-     "k": "Net loss",
-     "v": "($11,033M)",
-     "s": "(68%) margin"
+     "k": "Operating margin",
+     "v": "15%",
+     "s": "$2,522M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$3,520M",
+     "s": "21% margin"
     },
     {
      "k": "P/E",
-     "v": "n/a · 53.7",
+     "v": "n/a · 54.7",
      "s": "trailing · forward"
     },
     {
@@ -2024,12 +2043,15 @@
     }
    ],
    "notes": [
-    "Segments: Client Computing & Physical AI $8,877M, Data Center & AI $6,262M, Foundry (external) & other $989M",
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $6,509M + $11,033M balances against the charges on the right.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $50.5B of debt against $12.9B of cash and $4.5B of free cash flow for the quarter. Net debt $37.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.30 actual against $0.10 expected, a gap the two figures cannot be compared across -- see below. Sep '26 consensus is $0.28 from 13 analysts, due Oct 29, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Jun '26 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
-    "Market figures as of Oct 27, 2026: P/E n/a trailing, 53.7 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Segments: Client Computing & Physical AI $8.1B (-5% Y/Y) and Data Center & AI $7.3B (+78%), with Foundry (external) & other as the $1,113M residual to revenue. Intel reports business-unit revenue inclusive of intersegment sales -- Intel Products $15.4B, Intel Foundry $6.7B, All Other $0.7B and $(6.3)B of eliminations -- so the gross figures cannot be charted directly. CCPG and DCAI are as-reported to $0.1B and the residual carries their rounding.",
+    "Data Center & AI grew 78% year over year and is now 44% of revenue, against Client Computing's 49% and falling. Intel Foundry revenue grew 58%, almost all of it internal.",
+    "Net income of $3,520M is larger than it looks. $1,460M of it is below the operating line -- $330M of gains on equity investments and $1,130M of interest and other income -- against operating income of $2,522M. Operating margin is 15%; net margin reads 21% because of that.",
+    "Net income attributable to Intel is $3,320M after $200M attributable to non-controlling interests. The chart draws consolidated net income of $3,520M. Diluted EPS attributable to Intel was $0.60 against $0.90 a year ago, on 5,307M diluted shares against 4,531M -- a 17% larger share count after a $23B equity offering.",
+    "Restructuring and other charges of $54M are drawn as their own operating line rather than folded into SG&A, because Intel reports them separately.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.30 actual against $0.10 expected, a gap the two figures cannot be compared across -- see below. Sep '26 consensus is $0.28 from 13 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Jun '26 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
+    "Market figures as of Oct 29, 2026: P/E n/a trailing, 54.7 forward (no trailing P/E: the last twelve months are a loss); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "The debt chart on this card is still the prior quarter (Q2 FY26, quarter ended Jun 27, 2026), not the quarter the income statement covers. The data vendor had no column for the new period end when this card was built, and the company's own release reports cash flow year to date rather than for the quarter, so a quarterly free cash flow bar could not be read from it either. It is refreshed when the vendor catches up.",
+    "The earnings chart does not yet include the quarter reported today. The vendor's feed still shows Jun '26 as the most recent actual and carries the Sep quarter as a consensus of $0.28. The company reported $0.60 diluted GAAP attributable to Intel. Those two are not on the same basis -- the consensus is the street's adjusted figure -- so no surprise is scored here; the chart updates when the vendor publishes its own actual."
    ],
    "debt": "INTC-debt",
    "eps": "INTC-eps"
@@ -3528,5 +3550,5 @@
    "debt": "IREN-debt"
   }
  ],
- "marketAsOf": "Oct 28, 2026"
+ "marketAsOf": "Oct 29, 2026"
 }

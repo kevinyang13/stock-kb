@@ -36,6 +36,10 @@ Table of contents for this knowledge base. One line per page.
 - [[vertiv-q3-fy26]] — Vertiv Q3 2026: $4,312.8M of net sales (+61% Y/Y), $463M above the top of its own guidance, organic orders up over 100%, and a balance sheet that flipped to net cash.
 - [[ge-vernova-q3-fy26]] — GE Vernova Q3 2026: $12,642M revenue (+27% Y/Y) with operating income up 281%, $29.3B of orders (+96% organic) and a $197B backlog; the first card in the repo sourced from a 10-Q.
 - [[iren-fq4-fy26]] — IREN fiscal Q4 2026: $137.2M revenue (−27% Y/Y) and a $684.0M net loss of which $450.4M is one impairment; the first quarter AI Cloud revenue passed Bitcoin Mining. Quarter derived from the 10-K minus the 10-Q.
+- [[sandisk-fq1-fy27]] — Sandisk fiscal Q1 2027: $11,031M revenue (+378% Y/Y) at an 85% gross margin, Datacenter from $269M to $4,802M in a year, and an eight-for-one stock split announced alongside.
+- [[amazon-q3-fy26]] — Amazon Q3 2026: $201.9B revenue (+12% Y/Y) with operating income up 61%, AWS +39% and accelerating for a fifth quarter, and net income down 2% on a $12B non-operating swing.
+- [[intel-q3-fy26]] — Intel Q3 2026: $16,513M revenue (+21% Y/Y), operating income up 269%, Data Center & AI +78%, and a 17% larger share count after a $23B equity offering.
+- [[coinbase-q3-fy26]] — Coinbase Q3 2026: $1,215.6M revenue (−35% Y/Y) at a 5% operating margin, and a 59% net margin that is almost entirely a $715M mark on its own crypto holdings.
 
 ## Pages referenced but not yet written
 

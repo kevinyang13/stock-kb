@@ -1,0 +1,55 @@
+{
+ "company": "Intel Corporation",
+ "ticker": "INTC",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 16513.0,
+ "revenue_yoy": 21,
+ "segments": [
+  {
+   "name": "Client Computing & Physical AI",
+   "value": 8100.0,
+   "yoy": -5,
+   "note": "49% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Data Center & AI",
+   "value": 7300.0,
+   "yoy": 78,
+   "note": "44% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Foundry (external) & other",
+   "value": 1113.0,
+   "note": "residual to revenue",
+   "color": "#c8a020"
+  }
+ ],
+ "cost_of_revenue": 9417.0,
+ "gross_profit": 7096.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 4574.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 3490.0
+  },
+  {
+   "name": "SG&A",
+   "value": 1030.0
+  },
+  {
+   "name": "Restructuring & other",
+   "value": 54.0
+  }
+ ],
+ "operating_profit": 2522.0,
+ "other": 1460.0,
+ "tax": 462.0,
+ "net_profit": 3520.0
+}

@@ -1,0 +1,52 @@
+{
+ "company": "Coinbase",
+ "ticker": "COIN",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 1216.0,
+ "revenue_yoy": -35,
+ "segments": [
+  {
+   "name": "Transaction revenue",
+   "value": 590.0,
+   "yoy": -44,
+   "note": "49% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Subscription & services",
+   "value": 570.0,
+   "yoy": -20,
+   "note": "47% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Other revenue",
+   "value": 55.0,
+   "yoy": -48,
+   "note": "5% of revenue",
+   "color": "#c8a020"
+  }
+ ],
+ "cost_of_revenue": 194.0,
+ "gross_profit": 1021.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 959.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 447.0
+  },
+  {
+   "name": "SG&A",
+   "value": 512.0
+  }
+ ],
+ "operating_profit": 62.0,
+ "other": 762.0,
+ "tax": 105.0,
+ "net_profit": 719.0
+}

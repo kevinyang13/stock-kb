@@ -3,7 +3,7 @@
  "company": "Coinbase",
  "currency": "$",
  "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
  "reported": [
   {
    "label": "Sep '25",
@@ -46,13 +46,12 @@
   {
    "label": "Sep '26",
    "quarterEnd": "Sep 2026",
-   "estimate": -0.15,
+   "estimate": -0.16,
    "high": 0.99,
    "low": -0.77,
    "analysts": 10,
    "up": 3,
-   "down": 3,
-   "due": "Oct 29, 2026"
+   "down": 4
   }
  ]
 }
