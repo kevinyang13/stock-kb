@@ -1,0 +1,77 @@
+{
+ "ticker": "PLTR",
+ "company": "Palantir",
+ "sharesOut": 2403058480.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "69608A108",
+ "filers": 2706,
+ "dropped": 137,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 29.60193796315563
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 31.67506203684437
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 7.43
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 31.293
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.899004313869216
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.0813132604246904
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.348228262842775
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.3026891963111944
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.0922008106935457
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 2.9312027812157115
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.4157494411039053
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.227393101145004
+   },
+   {
+    "name": "GOLDMAN SACHS GROUP INC",
+    "pct": 0.9448728854904938
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 0.9391618717493717
+   }
+  ]
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "ticker": "ORCL",
+ "company": "Oracle",
+ "sharesOut": 3031501149.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "68389X105",
+ "filers": 3420,
+ "dropped": 69,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 18.056347266689293
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 25.008652733310704
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 38.352
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.583000000000006
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 4.794775916477807
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.6875460541017926
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.594265650400385
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.8896797719801888
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.2947037481066777
+   }
+  ],
+  "active": [
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 1.3111074364300035
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.0077910084275545
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 0.8585155578313126
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 0.7901699792494454
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 0.7553981962881321
+   }
+  ]
+ }
+}

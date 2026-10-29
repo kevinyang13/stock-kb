@@ -1,0 +1,77 @@
+{
+ "ticker": "CRM",
+ "company": "Salesforce",
+ "sharesOut": 823000000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "79466L302",
+ "filers": 2371,
+ "dropped": 96,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 32.08431616149983
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 54.96568383850017
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 2.964
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 9.986000000000002
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.839478614823815
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.326273147023087
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 5.451941433778858
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.4075695018226004
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.9568313487241797
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.832480680437424
+   },
+   {
+    "name": "HARRIS ASSOCIATES L P",
+    "pct": 1.962487120291616
+   },
+   {
+    "name": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP",
+    "pct": 1.6134400972053462
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.4845795868772782
+   },
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 1.426832928311057
+   }
+  ]
+ }
+}

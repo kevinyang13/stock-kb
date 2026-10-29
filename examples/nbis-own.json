@@ -1,0 +1,65 @@
+{
+ "ticker": "NBIS",
+ "company": "Nebius Group",
+ "sharesOut": 274098839.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "N97284108",
+ "filers": 1001,
+ "dropped": 56,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 10.709108013748233
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 49.85389198625177
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 15.207
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 24.229999999999997
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 4.206975134250751
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 1.4848202257434588
+   }
+  ],
+  "active": [
+   {
+    "name": "GOLDMAN SACHS GROUP INC",
+    "pct": 3.575258120666465
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 2.533126380735965
+   },
+   {
+    "name": "Orbis Allan Gray Ltd",
+    "pct": 2.3694806675193543
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 2.2395253560340693
+   },
+   {
+    "name": "Value Aligned Research Advisors, LLC",
+    "pct": 2.226978057356894
+   }
+  ]
+ }
+}

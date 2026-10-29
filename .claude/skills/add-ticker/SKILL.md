@@ -141,11 +141,34 @@ These two KPIs are measured against today's price, not the filed quarter, so the
 the moment they are written and carry their own as-of note. A company with no positive
 earnings reads `n/a`, which is correct, not a failure.
 
-### 3f. What gets committed
+### 3f. Who owns the shares
 
-`charts/*.json` is what the page actually fetches and is tracked — income statement, debt and
-earnings alike. Under `assets/financials/` **only the income-statement PNG is tracked** (70
-cards, 70 PNGs); the debt and earnings PNGs are local fallbacks and stay out.
+```bash
+python3 bin/ownfetch.py --data <13f-dir> IREN
+python3 bin/ownpie.py examples/iren-own.json --json
+```
+
+`<13f-dir>` is an unpacked SEC Form 13F data set, about 400MB and deliberately **not** in the
+repo: download the newest quarter from
+https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets, point at it, delete it
+afterwards. A new set appears roughly six weeks after each quarter end, so the donut is always
+a quarter or so behind the income statement beside it. That is inherent to the form.
+
+The slice sizes come from stockanalysis and the holder names from the filings, for reasons
+[[share-ownership-donut]] sets out. Two things will stop it, both correctly:
+
+- **the two vendor percentages add to more than 100%**, leaving no honest residual (ARQQ, PHM)
+- **no price on or before the 13F period end**, which means the stock had not listed yet, so
+  no 13F names it either (SKHY)
+
+Neither is a bug to work around. Leave the card without a donut and say so in the notes.
+
+### 3g. What gets committed
+
+`charts/*.json` is what the page actually fetches and is tracked — income statement, debt,
+earnings and ownership alike. Under `assets/financials/` **only the income-statement PNG is
+tracked** (70 cards, 70 PNGs); the debt, earnings and ownership PNGs are local fallbacks and
+stay out.
 
 ## Step 4 — Events calendar
 

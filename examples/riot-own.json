@@ -1,0 +1,77 @@
+{
+ "ticker": "RIOT",
+ "company": "Riot Platforms",
+ "sharesOut": 375258935.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "767292105",
+ "filers": 427,
+ "dropped": 24,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 28.231484381076207
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 58.85751561892379
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 6.96
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 5.951000000000001
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.523327232701334
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 5.7893702117978885
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.03618317575836
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.515192609604352
+   },
+   {
+    "name": "DIMENSIONAL FUND ADVISORS LP",
+    "pct": 1.8621126236474557
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 5.235130510616623
+   },
+   {
+    "name": "Situational Awareness LP",
+    "pct": 4.556853523021378
+   },
+   {
+    "name": "JANE STREET GROUP, LLC",
+    "pct": 4.483867386128994
+   },
+   {
+    "name": "Starboard Value LP",
+    "pct": 2.6953591391501446
+   },
+   {
+    "name": "TOMS Capital Investment Management LP",
+    "pct": 1.5655856402193329
+   }
+  ]
+ }
+}

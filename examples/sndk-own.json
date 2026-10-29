@@ -1,0 +1,77 @@
+{
+ "ticker": "SNDK",
+ "company": "Sandisk Corporation",
+ "sharesOut": 146419001.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "80004C200",
+ "filers": 1723,
+ "dropped": 98,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 32.298998393525444
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 48.80100160647455
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.432
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.468000000000007
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.031396150558355
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.603142306646389
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.048281274641397
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.452891342975356
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.4012846529392724
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 5.369292882964008
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.8317062414597407
+   },
+   {
+    "name": "Clear Street Group Inc.",
+    "pct": 2.0375716127171226
+   },
+   {
+    "name": "Situational Awareness LP",
+    "pct": 1.704248753889531
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.6397127309999882
+   }
+  ]
+ }
+}

@@ -41,6 +41,11 @@ stays at 6am across daylight saving changes — unlike a UTC cron.
 ## Related
 
 - `quotes.py --pe` — refresh forward P/E in `heatmap.html`
+- `ownfetch.py --data <dir>` then `ownpie.py examples/<t>-own.json --json` —
+  refresh the ownership donuts. `<dir>` is an unpacked SEC Form 13F data set
+  (~400MB, not kept in the repo): download the newest quarter from
+  https://www.sec.gov/data-research/sec-markets-data/form-13f-data-sets,
+  point at it, delete it. A new set lands about six weeks after each quarter end.
 - `quotes.py --events` — refresh `events.json` earnings and ex-dividend dates
 - Catalyst routine (cloud) — currently fails on the same egress block;
   see https://claude.ai/code/routines

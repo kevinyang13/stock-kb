@@ -1,0 +1,73 @@
+{
+ "ticker": "QBTS",
+ "company": "D-Wave Quantum",
+ "sharesOut": 372439933.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "26740W109",
+ "filers": 529,
+ "dropped": 22,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 29.018610805519867
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 24.390389194480132
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 1.134
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 45.457
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.90006577248525
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 5.9127746647940675
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.280064941371364
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.489096409541025
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.424462631401021
+   }
+  ],
+  "active": [
+   {
+    "name": "UBS Group AG",
+    "pct": 3.1268666348943843
+   },
+   {
+    "name": "Clear Street Group Inc.",
+    "pct": 1.6665401451460362
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.1660355443142023
+   },
+   {
+    "name": "UNICOM Systems, Inc.",
+    "pct": 0.8380803784539399
+   }
+  ]
+ }
+}

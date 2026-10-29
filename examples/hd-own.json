@@ -1,0 +1,77 @@
+{
+ "ticker": "HD",
+ "company": "Home Depot",
+ "sharesOut": 997689626.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "437076102",
+ "filers": 4059,
+ "dropped": 48,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 33.11575298303947
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 43.294247016960526
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.064
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 23.526000000000003
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.176781623666997
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.522678627110432
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.728427034882289
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.5811184489553867
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.5321951177630067
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.265566205255902
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.8130283736156638
+   },
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 1.684130571484964
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.642807700197536
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 1.3205129788530046
+   }
+  ]
+ }
+}

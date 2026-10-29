@@ -1,0 +1,77 @@
+{
+ "ticker": "INFQ",
+ "company": "Infleqtion",
+ "sharesOut": 225357052.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "45676K103",
+ "filers": 256,
+ "dropped": 5,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 11.43239777266898
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 30.47960222733102
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 7.655
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 50.433
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 4.009031854037565
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.419054771802748
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 1.3860449328206512
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 1.1659089328165333
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.0591747534929592
+   }
+  ],
+  "active": [
+   {
+    "name": "S&G Foundation",
+    "pct": 5.13579579484382
+   },
+   {
+    "name": "Defiance ETFs, LLC",
+    "pct": 2.1910155267739304
+   },
+   {
+    "name": "Penserra Capital Management LLC",
+    "pct": 2.17338705690914
+   },
+   {
+    "name": "GLYNN CAPITAL MANAGEMENT LLC",
+    "pct": 1.9148546547369638
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.5095010206292545
+   }
+  ]
+ }
+}

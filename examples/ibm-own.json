@@ -1,0 +1,77 @@
+{
+ "ticker": "IBM",
+ "company": "IBM",
+ "sharesOut": 945120805.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "459200101",
+ "filers": 3517,
+ "dropped": 116,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 33.179310986910934
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 32.77768901308906
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.089
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 33.95400000000001
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.122081388315221
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.494975634358192
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 5.929935591672855
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.999436140864553
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.4810055895447145
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.8473646868878313
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 1.7149029959191302
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.5858637245849223
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.3168063737629816
+   },
+   {
+    "name": "Bank of New York Mellon Corp",
+    "pct": 0.9808139817639503
+   }
+  ]
+ }
+}

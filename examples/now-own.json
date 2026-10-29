@@ -1,0 +1,77 @@
+{
+ "ticker": "NOW",
+ "company": "ServiceNow",
+ "sharesOut": 1037917000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "81762P102",
+ "filers": 2147,
+ "dropped": 78,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 32.243800213493444
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 50.92019978650656
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.142
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 16.694
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 9.254859781658842
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.489135258406982
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.72467625060578
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.426469842964322
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.3387706338753484
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.565810560960077
+   },
+   {
+    "name": "UBS AM, a distinct business unit of UBS ASSET MANAGEMENT AMERICAS LLC",
+    "pct": 1.6030251937293638
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 1.5479402495575272
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.343968641037771
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.0979568693835826
+   }
+  ]
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "ticker": "BA",
+ "company": "Boeing",
+ "sharesOut": 792449940.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "097023105",
+ "filers": 2580,
+ "dropped": 51,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 25.465688003062155
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 47.30031199693785
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.046
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 27.187999999999995
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.703129613461766
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.494218675819447
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.801311487259372
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.268467835331024
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.6927865500248507
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 7.439116469615734
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 3.869762170718317
+   },
+   {
+    "name": "Newport Trust Company, LLC",
+    "pct": 3.5662530304437907
+   },
+   {
+    "name": "LOOMIS SAYLES & CO L P",
+    "pct": 1.755979816214006
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.425375715215525
+   }
+  ]
+ }
+}

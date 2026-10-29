@@ -1,0 +1,77 @@
+{
+ "ticker": "MSFT",
+ "company": "Microsoft",
+ "sharesOut": 7426194552.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "594918104",
+ "filers": 6103,
+ "dropped": 130,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 30.543242723223884
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 44.57475727677611
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.032
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 24.850000000000005
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.17871264679466
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.5335213560938765
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.250537792805189
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.5535567196920375
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.2677515357397278
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 2.5041098061444917
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.8202258916526162
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.7192474571732712
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 1.349922753814759
+   },
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 1.2758939768751698
+   }
+  ]
+ }
+}

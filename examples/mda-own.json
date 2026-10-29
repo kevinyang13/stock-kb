@@ -1,0 +1,69 @@
+{
+ "ticker": "MDA",
+ "company": "MDA Space",
+ "sharesOut": 162063406.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "55293N109",
+ "filers": 171,
+ "dropped": 9,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 9.573420367188406
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 51.9715796328116
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 1.043
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 37.412
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 2.4118325638546683
+   },
+   {
+    "name": "VAN ECK ASSOCIATES CORP",
+    "pct": 2.0296136439339056
+   },
+   {
+    "name": "NORGES BANK",
+    "pct": 1.0802543542741536
+   }
+  ],
+  "active": [
+   {
+    "name": "Connor, Clark & Lunn Investment Management Ltd.",
+    "pct": 4.767692590639493
+   },
+   {
+    "name": "Senvest Management, LLC",
+    "pct": 2.700864499910609
+   },
+   {
+    "name": "Capital International Investors",
+    "pct": 2.082797149160249
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.9981068397390094
+   },
+   {
+    "name": "Federation des caisses Desjardins du Quebec",
+    "pct": 1.738837328890891
+   }
+  ]
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "ticker": "INTC",
+ "company": "Intel Corporation",
+ "sharesOut": 5254526315.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "458140100",
+ "filers": 3405,
+ "dropped": 160,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 28.389712296630965
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 39.59928770336904
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.069
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 31.941999999999997
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.116411193574924
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 5.428275850208584
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.126911961235463
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.0999011211536773
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.7013136796898884
+   }
+  ],
+  "active": [
+   {
+    "name": "NVIDIA CORP",
+    "pct": 4.08745944209816
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.005083246975803
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.797150653341052
+   },
+   {
+    "name": "SOFTBANK GROUP CORP.",
+    "pct": 1.6548879344607488
+   },
+   {
+    "name": "PRIMECAP MANAGEMENT CO/CA/",
+    "pct": 1.432116873887994
+   }
+  ]
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "ticker": "SNOW",
+ "company": "Snowflake",
+ "sharesOut": 352455000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "833445109",
+ "filers": 1418,
+ "dropped": 44,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 26.30481800812597
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 54.48918199187403
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 2.469
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 16.737000000000002
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.910476514732377
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.274650097175526
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.6539518520094765
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.25784114284093
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.8204619029379636
+   }
+  ],
+  "active": [
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 2.6156008568469735
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 2.17139067398675
+   },
+   {
+    "name": "JENNISON ASSOCIATES LLC",
+    "pct": 1.798940290249819
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 1.5092326680001702
+   },
+   {
+    "name": "WELLINGTON MANAGEMENT GROUP LLP",
+    "pct": 1.4613675504674355
+   }
+  ]
+ }
+}

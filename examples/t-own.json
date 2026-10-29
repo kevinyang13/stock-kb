@@ -1,0 +1,77 @@
+{
+ "ticker": "T",
+ "company": "AT&T",
+ "sharesOut": 6736473433.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "00206R102",
+ "filers": 2594,
+ "dropped": 77,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 31.78285649480381
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 37.32714350519619
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.108
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 30.782
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.303989595797757
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.73294282996989
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.96214549533428
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.6280616224616824
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.9939410187829059
+   }
+  ],
+  "active": [
+   {
+    "name": "Newport Trust Company, LLC",
+    "pct": 2.6531626195459532
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.657211078026677
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.577612129803526
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.4386759624885765
+   },
+   {
+    "name": "Bank of New York Mellon Corp",
+    "pct": 1.118145491838682
+   }
+  ]
+ }
+}

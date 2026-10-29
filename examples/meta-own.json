@@ -1,0 +1,77 @@
+{
+ "ticker": "META",
+ "company": "Meta Platforms",
+ "sharesOut": 2556241253.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "30303M102",
+ "filers": 4886,
+ "dropped": 146,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 25.48443071066292
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 42.240569289337074
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 13.374
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.901000000000003
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 6.783278995928168
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 5.61140294687201
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 3.600362950562241
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.1496364216605497
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.501689911112627
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 3.751435584863398
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.7973415829229638
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 1.5991011393007983
+   },
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 1.5499232693120144
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.5427267263494084
+   }
+  ]
+ }
+}

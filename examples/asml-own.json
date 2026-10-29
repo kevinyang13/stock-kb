@@ -1,0 +1,61 @@
+{
+ "ticker": "ASML",
+ "company": "ASML",
+ "sharesOut": 383100000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "N07059210",
+ "filers": 2380,
+ "dropped": 106,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 4.729904147077103
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 46.8740958529229
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.016
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 48.38
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "VAN ECK ASSOCIATES CORP",
+    "pct": 0.6419785956669277
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 1.430002871312973
+   },
+   {
+    "name": "Fisher Asset Management, LLC",
+    "pct": 1.236652049073349
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 0.9727692508483424
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 0.8196836335160532
+   },
+   {
+    "name": "STATE FARM MUTUAL AUTOMOBILE INSURANCE CO",
+    "pct": 0.7199616288175411
+   }
+  ]
+ }
+}

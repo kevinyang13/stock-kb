@@ -1,0 +1,77 @@
+{
+ "ticker": "INTU",
+ "company": "Intuit",
+ "sharesOut": 267236000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "461202103",
+ "filers": 1696,
+ "dropped": 57,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 35.55004405917791
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 56.34795594082209
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 2.219
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 5.8830000000000044
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 9.823652127707344
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.720076636381326
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.972939274648625
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.206388735050667
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.5947858821416276
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.5648505440883715
+   },
+   {
+    "name": "FIL Ltd",
+    "pct": 1.9001444416171474
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.8469270607253514
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.7993410318969
+   },
+   {
+    "name": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP",
+    "pct": 1.6719940427187954
+   }
+  ]
+ }
+}

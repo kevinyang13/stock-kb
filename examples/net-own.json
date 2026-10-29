@@ -1,0 +1,77 @@
+{
+ "ticker": "NET",
+ "company": "Cloudflare",
+ "sharesOut": 356079715.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "18915M107",
+ "filers": 1188,
+ "dropped": 33,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 24.635109003576375
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 57.38389099642363
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 9.733
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 8.247999999999994
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 6.065750473879143
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 4.723584436704011
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.052565869976615
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.0840179003176296
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.6748791769842886
+   }
+  ],
+  "active": [
+   {
+    "name": "Capital World Investors",
+    "pct": 6.831529844377684
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 4.2850873996009575
+   },
+   {
+    "name": "BAILLIE GIFFORD & CO",
+    "pct": 4.099810628078042
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 3.5541117527573847
+   },
+   {
+    "name": "Capital International Investors",
+    "pct": 3.0838614325446763
+   }
+  ]
+ }
+}

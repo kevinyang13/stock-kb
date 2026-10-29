@@ -1,0 +1,73 @@
+{
+ "ticker": "BKSY",
+ "company": "BlackSky",
+ "sharesOut": 40924846.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "09263B207",
+ "filers": 222,
+ "dropped": 4,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 22.68454074525626
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 53.81645925474375
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 3.516
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 19.982999999999997
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.561897728338428
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.38914897810489
+   },
+   {
+    "name": "VAN ECK ASSOCIATES CORP",
+    "pct": 2.504327077980941
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.3398377601714127
+   }
+  ],
+  "active": [
+   {
+    "name": "Tema ETFs LLC",
+    "pct": 3.5350750006487504
+   },
+   {
+    "name": "Tidal Investments LLC",
+    "pct": 3.4384637635533193
+   },
+   {
+    "name": "AWM Investment Company, Inc.",
+    "pct": 2.9322040698699268
+   },
+   {
+    "name": "Driehaus Capital Management LLC",
+    "pct": 2.525551348440016
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.3014674264137733
+   }
+  ]
+ }
+}

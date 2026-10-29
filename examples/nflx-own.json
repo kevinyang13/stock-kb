@@ -1,0 +1,77 @@
+{
+ "ticker": "NFLX",
+ "company": "Netflix",
+ "sharesOut": 4106325903.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "64110L106",
+ "filers": 3282,
+ "dropped": 77,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 31.69064341858677
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 52.70335658141323
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.59
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 15.015999999999995
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.49349535907988
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.697640238420209
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.386636283992971
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.6864096665928954
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.8278264748826976
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 3.3104354406133947
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.297818297886815
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.4285304273375887
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 2.278894033511397
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 2.126868764512674
+   }
+  ]
+ }
+}

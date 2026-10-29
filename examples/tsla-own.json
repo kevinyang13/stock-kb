@@ -1,0 +1,77 @@
+{
+ "ticker": "TSLA",
+ "company": "Tesla",
+ "sharesOut": 3952757946.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "88160R101",
+ "filers": 4123,
+ "dropped": 148,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 20.4779130734757
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 22.221086926524297
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 28.504
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 28.797
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 5.417056443253305
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.655573488536604
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.971514006286688
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.7434591478018118
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.2535686646368707
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 1.4031833660881596
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 1.1570571642587497
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.0618481468736007
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.0060374185128511
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 0.9834168327796715
+   }
+  ]
+ }
+}

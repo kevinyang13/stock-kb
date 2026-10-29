@@ -1,0 +1,61 @@
+{
+ "ticker": "XNDU",
+ "company": "Xanadu Quantum",
+ "sharesOut": 304393300.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "98390R102",
+ "filers": 67,
+ "dropped": 6,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 0.13730937485212344
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 30.626690625147877
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 17.306
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 51.93000000000001
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "VAN ECK ASSOCIATES CORP",
+    "pct": 0.07448751335853976
+   }
+  ],
+  "active": [
+   {
+    "name": "Deer Management Co. LLC",
+    "pct": 7.485432826543817
+   },
+   {
+    "name": "Capricorn Investment Group LLC",
+    "pct": 3.6403399812019517
+   },
+   {
+    "name": "Defiance ETFs, LLC",
+    "pct": 1.8723362176499942
+   },
+   {
+    "name": "Penserra Capital Management LLC",
+    "pct": 1.8580836043368891
+   },
+   {
+    "name": "StepStone Group LP",
+    "pct": 1.1228414028823894
+   }
+  ]
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "ticker": "RDW",
+ "company": "Redwire",
+ "sharesOut": 248956315.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "75776W103",
+ "filers": 315,
+ "dropped": 11,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 29.443315641764276
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 32.90068435823572
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 1.114
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 36.542
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 6.454209044667134
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 5.862697638338678
+   },
+   {
+    "name": "Mirae Asset Global Investments Co., Ltd.",
+    "pct": 4.76054122186055
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.000419973279248
+   },
+   {
+    "name": "VAN ECK ASSOCIATES CORP",
+    "pct": 2.75198000098933
+   }
+  ],
+  "active": [
+   {
+    "name": "RENAISSANCE TECHNOLOGIES LLC",
+    "pct": 3.7756423250400375
+   },
+   {
+    "name": "Marex Group Ltd",
+    "pct": 2.4671171727457484
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 1.5075588663015036
+   },
+   {
+    "name": "D. E. Shaw & Co., Inc.",
+    "pct": 1.5001559610970303
+   },
+   {
+    "name": "VOYA INVESTMENT MANAGEMENT LLC",
+    "pct": 1.3903756568697605
+   }
+  ]
+ }
+}

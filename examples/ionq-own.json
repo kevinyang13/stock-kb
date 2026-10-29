@@ -1,0 +1,77 @@
+{
+ "ticker": "IONQ",
+ "company": "IonQ",
+ "sharesOut": 429407678.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "46222L108",
+ "filers": 754,
+ "dropped": 31,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 19.346937688287316
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 26.641062311712684
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.471
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 53.541000000000004
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 4.866344052655714
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.632572680733482
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.25081728044928
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 1.8918220181428613
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.5043860021524813
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 6.11991781851651
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 1.8389820221146582
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.5074457983958078
+   },
+   {
+    "name": "Marex Group Ltd",
+    "pct": 0.863424477472897
+   },
+   {
+    "name": "D. E. Shaw & Co., Inc.",
+    "pct": 0.6266718407396525
+   }
+  ]
+ }
+}

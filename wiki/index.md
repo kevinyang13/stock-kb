@@ -15,6 +15,9 @@ Table of contents for this knowledge base. One line per page.
 - `bin/debtfetch.py` — builds a debt/coverage spec for every statement on the Financials page, pulling the balance sheet and cash flow column that matches the quarter the card already shows.
 - `bin/debtbars.py` — the debt/coverage grouped bar chart that sits under the Sankey on the Financials card: debt, free cash flow and cash for the quarter the card covers. Same figure-JSON pipeline, same renderer.
 - `quotes.py --events` — refreshes `events.json`. Keeps a published date that has already passed for 10 days, because a past date is a fact (the day the company reported) while a future one may be a stale leftover; preserves the curated macro, Fed, corporate and market-holiday entries, which are never fetched.
+- `bin/ownfetch.py` — builds the ownership spec for every Financials card: slice sizes from stockanalysis, the index/active split and the named holders from the SEC's own Form 13F data set. Checks each filing's implied price before trusting its share count.
+- `bin/ownpie.py` — the share-ownership donut that sits beside the sankey, with the top five holders of each institutional slice on hover. Same figure-JSON pipeline, same renderer.
+- `bin/passive-managers.json` — the managers counted as index and ETF rather than active. An editorial list, deliberately conservative, kept out of the code so it can be audited.
 - `bin/stamp.py` — versions the shared CSS and JS links in every page, so an edit under `assets/` cannot hide behind a browser's cached copy.
 - `prices.json` — the committed price snapshot the published site reads, because every quote feed refuses a cross-origin request from the Pages origin. Carries `generated`, `generatedLabel`, `source` and `quotes[{t, price, pct}]`; the writer is not built yet, so the file ships empty.
 
@@ -25,6 +28,7 @@ Table of contents for this knowledge base. One line per page.
 ## Companies
 
 - [[earnings-surprise-chart]] — the actual-vs-estimate EPS dots on each Financials card: where the figures come from, and why they are not the EPS the income statement beside them is built from.
+- [[share-ownership-donut]] — the "Who owns the shares" chart on each Financials card: four slices of the whole share count, the five largest holders named on hover from their own 13F, and why the slice sizes and the holder names have to come from different sources.
 - [[favorites-financials]] — index of the 70 income statement charts on the Financials tab, which of them carry a reported revenue segment split (56 do) and the data caveats that apply to them.
 - [[coreweave-q2-fy26]] — CoreWeave Q2 2026: $2,575M revenue (+112% Y/Y), 66% gross margin, a $49M operating loss and a $626M net loss driven by financing cost.
 - [[nebius-q2-fy26]] — Nebius Group Q2 2026: $582.3M revenue (+454% Y/Y) at a 77% gross margin, a $190.4M net loss that is almost all depreciation and interest, and capex running at eight times revenue.

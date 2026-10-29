@@ -1,0 +1,77 @@
+{
+ "ticker": "PL",
+ "company": "Planet Labs",
+ "sharesOut": 363847989.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "72703X106",
+ "filers": 467,
+ "dropped": 15,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 21.255664299117797
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 42.1633357008822
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 7.218
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 29.363000000000003
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 5.0797419688363314
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.537142265200207
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.283522614165115
+   },
+   {
+    "name": "VAN ECK ASSOCIATES CORP",
+    "pct": 2.7251649864141476
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.735807587492259
+   }
+  ],
+  "active": [
+   {
+    "name": "Alphabet Inc.",
+    "pct": 9.6878075640539
+   },
+   {
+    "name": "AMERICAN CENTURY COMPANIES INC",
+    "pct": 3.957669805892482
+   },
+   {
+    "name": "D. E. Shaw & Co., Inc.",
+    "pct": 2.679030885065576
+   },
+   {
+    "name": "Driehaus Capital Management LLC",
+    "pct": 1.8472423108541627
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 1.2493854954355677
+   }
+  ]
+ }
+}

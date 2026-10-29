@@ -1,0 +1,73 @@
+{
+ "ticker": "HUT",
+ "company": "Hut 8",
+ "sharesOut": 123259468.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "44812J104",
+ "filers": 409,
+ "dropped": 17,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 21.142192507170577
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 50.80080749282942
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 8.525
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 19.532000000000004
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.683186657920672
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 5.055626233921438
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.695097888950811
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.1033167204648326
+   }
+  ],
+  "active": [
+   {
+    "name": "COATUE MANAGEMENT LLC",
+    "pct": 7.8821336467231875
+   },
+   {
+    "name": "LONE PINE CAPITAL LLC",
+    "pct": 4.683652374680053
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.6943009359735353
+   },
+   {
+    "name": "T. Rowe Price Investment Management, Inc.",
+    "pct": 1.600410120218919
+   },
+   {
+    "name": "D. E. Shaw & Co., Inc.",
+    "pct": 1.5513055759740906
+   }
+  ]
+ }
+}

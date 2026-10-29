@@ -1,0 +1,77 @@
+{
+ "ticker": "LUNR",
+ "company": "Intuitive Machines",
+ "sharesOut": 228924068.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "46125A100",
+ "filers": 319,
+ "dropped": 11,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 26.80576637612444
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 49.13423362387556
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 4.116
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 19.944000000000003
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 5.3448403686413615
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.351755622305296
+   },
+   {
+    "name": "Mirae Asset Global Investments Co., Ltd.",
+    "pct": 2.9804603157759715
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 2.699636195526632
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.7545817856076191
+   }
+  ],
+  "active": [
+   {
+    "name": "Advent International, L.P.",
+    "pct": 10.043080310804193
+   },
+   {
+    "name": "TWO SIGMA INVESTMENTS, LP",
+    "pct": 2.5127545785181487
+   },
+   {
+    "name": "D. E. Shaw & Co., Inc.",
+    "pct": 2.178998059740927
+   },
+   {
+    "name": "RENAISSANCE TECHNOLOGIES LLC",
+    "pct": 1.6263908083268903
+   },
+   {
+    "name": "VOYA INVESTMENT MANAGEMENT LLC",
+    "pct": 1.505613206209493
+   }
+  ]
+ }
+}

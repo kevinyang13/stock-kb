@@ -1,0 +1,65 @@
+{
+ "ticker": "HIVE",
+ "company": "HIVE Digital",
+ "sharesOut": 274277338.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "433921103",
+ "filers": 180,
+ "dropped": 10,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 3.436715810458827
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 38.16828418954117
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 1.047
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 57.348000000000006
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "CHARLES SCHWAB INVESTMENT MANAGEMENT INC",
+    "pct": 1.5587736964254773
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 0.979904508187986
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 6.21313963605699
+   },
+   {
+    "name": "CITADEL ADVISORS LLC",
+    "pct": 3.66977894469721
+   },
+   {
+    "name": "MILLENNIUM MANAGEMENT LLC",
+    "pct": 3.604864358133737
+   },
+   {
+    "name": "Situational Awareness LP",
+    "pct": 3.3301059674131737
+   },
+   {
+    "name": "Vident Advisory, LLC",
+    "pct": 1.5936715850727703
+   }
+  ]
+ }
+}

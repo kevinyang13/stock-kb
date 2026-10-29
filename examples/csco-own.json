@@ -1,0 +1,77 @@
+{
+ "ticker": "CSCO",
+ "company": "Cisco",
+ "sharesOut": 3942586873.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "17275R102",
+ "filers": 3988,
+ "dropped": 51,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 34.237739284637314
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 47.68026071536269
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.034
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.047999999999995
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 9.09738454861436
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.208799904356604
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 5.00060159359233
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.02618189131276
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.5619523235296886
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.5049848095002267
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.0393137193910604
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.9292796443093114
+   },
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 1.7038126530585647
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.2723875368110373
+   }
+  ]
+ }
+}

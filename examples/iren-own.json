@@ -1,0 +1,69 @@
+{
+ "ticker": "IREN",
+ "company": "IREN Limited",
+ "sharesOut": 394058648.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "Q4982L109",
+ "filers": 656,
+ "dropped": 20,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 8.629837766766618
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 48.20116223323338
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 2.064
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 41.105
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 3.3789772328508825
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 1.6204410263316946
+   },
+   {
+    "name": "NORGES BANK",
+    "pct": 1.3190356375581942
+   }
+  ],
+  "active": [
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 3.606398456708911
+   },
+   {
+    "name": "GOLDMAN SACHS GROUP INC",
+    "pct": 3.1768189997951777
+   },
+   {
+    "name": "CITIGROUP INC",
+    "pct": 2.9108078348784265
+   },
+   {
+    "name": "Situational Awareness LP",
+    "pct": 2.404235777614504
+   },
+   {
+    "name": "Value Aligned Research Advisors, LLC",
+    "pct": 2.148747919370621
+   }
+  ]
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "ticker": "CLSK",
+ "company": "CleanSpark",
+ "sharesOut": 256817073.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "18452B209",
+ "filers": 398,
+ "dropped": 14,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 42.75604596818733
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 52.49995403181267
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 3.969
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 0.7749999999999999
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 16.483621398488566
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 4.461854060613797
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.330711689093972
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.28403138135602
+   },
+   {
+    "name": "DIMENSIONAL FUND ADVISORS LP",
+    "pct": 3.7564215989643337
+   }
+  ],
+  "active": [
+   {
+    "name": "Situational Awareness LP",
+    "pct": 4.780110160355266
+   },
+   {
+    "name": "D. E. Shaw & Co., Inc.",
+    "pct": 4.384498222203475
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 2.941507319491956
+   },
+   {
+    "name": "Point72 Asset Management, L.P.",
+    "pct": 2.326176733584998
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 1.4046359760513274
+   }
+  ]
+ }
+}

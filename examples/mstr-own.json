@@ -1,0 +1,77 @@
+{
+ "ticker": "MSTR",
+ "company": "Strategy",
+ "sharesOut": 384225751.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "594972408",
+ "filers": 812,
+ "dropped": 43,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 21.366228465035658
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 36.57377153496434
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 5.317
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 36.743
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 5.0476273257385085
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.99593415070194
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.88797444240014
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 1.9591505723935718
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.198969873312838
+   }
+  ],
+  "active": [
+   {
+    "name": "Capital International Investors",
+    "pct": 9.083722761726088
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 2.4310400788311557
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.428378102122572
+   },
+   {
+    "name": "GOLDMAN SACHS GROUP INC",
+    "pct": 1.5121740239633237
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 1.2865902368943511
+   }
+  ]
+ }
+}

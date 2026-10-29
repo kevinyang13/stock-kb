@@ -1,0 +1,77 @@
+{
+ "ticker": "RGTI",
+ "company": "Rigetti Computing",
+ "sharesOut": 333768747.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "76655K103",
+ "filers": 464,
+ "dropped": 15,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 34.965466616520665
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 28.968533383479333
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.684
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 35.382000000000005
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.548878903871728
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 5.962974418332823
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.322564988387004
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 3.543282618968516
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.5986522339073286
+   }
+  ],
+  "active": [
+   {
+    "name": "UBS Group AG",
+    "pct": 1.9400540218943867
+   },
+   {
+    "name": "D. E. Shaw & Co., Inc.",
+    "pct": 1.6071214121195116
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.4165256760843459
+   },
+   {
+    "name": "UNICOM Systems, Inc.",
+    "pct": 1.0552021516861794
+   },
+   {
+    "name": "Defiance ETFs, LLC",
+    "pct": 1.033040400274505
+   }
+  ]
+ }
+}

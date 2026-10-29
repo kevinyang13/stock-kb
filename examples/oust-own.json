@@ -1,0 +1,77 @@
+{
+ "ticker": "OUST",
+ "company": "Ouster",
+ "sharesOut": 72112333.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "68989M202",
+ "filers": 320,
+ "dropped": 9,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 25.318170301155053
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 25.334829698844946
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 3.003
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 46.344
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.70623105481832
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.7551676493395383
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.8459403747206458
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.500014803293079
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.2783633972846227
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.724940725465088
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 1.4163360933004345
+   },
+   {
+    "name": "EXCHANGE TRADED CONCEPTS, LLC",
+    "pct": 0.9279550004296768
+   },
+   {
+    "name": "Penn Capital Management Company, LLC",
+    "pct": 0.9098138594406591
+   },
+   {
+    "name": "RENAISSANCE TECHNOLOGIES LLC",
+    "pct": 0.7986151273180969
+   }
+  ]
+ }
+}

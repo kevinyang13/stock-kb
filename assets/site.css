@@ -238,6 +238,7 @@
   .fin-row>.fin-fig{flex:1 1 620px;min-width:min(100%,760px)}
   .fin-row>.fin-fig-debt{flex:0 1 330px;min-width:290px}
   .fin-row>.fin-fig-eps{flex:0 1 430px;min-width:300px}
+  .fin-row>.fin-fig-own{flex:0 1 360px;min-width:300px}
   .fin-fig.is-panning{cursor:grab}
   .fin-fig.is-dragging{cursor:grabbing}
   .fin-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:8px 0 0}

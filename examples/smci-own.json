@@ -1,0 +1,77 @@
+{
+ "ticker": "SMCI",
+ "company": "Super Micro",
+ "sharesOut": 656965384.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "86800U302",
+ "filers": 750,
+ "dropped": 23,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 29.35864939804522
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 39.18435060195479
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 12.571
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.885999999999996
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.258574372618695
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 5.534054591832193
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 5.002492642747826
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 3.74990137988762
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.3608670072638103
+   }
+  ],
+  "active": [
+   {
+    "name": "JANE STREET GROUP, LLC",
+    "pct": 4.381841677064678
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 2.997103421205523
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 1.7834648956176966
+   },
+   {
+    "name": "GOLDMAN SACHS GROUP INC",
+    "pct": 1.687419804754888
+   },
+   {
+    "name": "TWO SIGMA INVESTMENTS, LP",
+    "pct": 1.489248176278341
+   }
+  ]
+ }
+}

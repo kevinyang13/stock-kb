@@ -1,0 +1,77 @@
+{
+ "ticker": "MU",
+ "company": "Micron Technology",
+ "sharesOut": 1131423212.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "595112103",
+ "filers": 3749,
+ "dropped": 150,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 32.625063859708185
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 46.603936140291815
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.208
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 20.563000000000002
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 9.265075869771001
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.510344070968203
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.4259185660051665
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.448756283780397
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.179739618069635
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.2096955069364443
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 2.6046527671910624
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 2.361527385740076
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 2.2834966373307886
+   },
+   {
+    "name": "PRIMECAP MANAGEMENT CO/CA/",
+    "pct": 1.698501126384881
+   }
+  ]
+ }
+}

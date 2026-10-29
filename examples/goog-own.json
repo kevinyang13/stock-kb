@@ -1,0 +1,77 @@
+{
+ "ticker": "GOOG",
+ "company": "Alphabet",
+ "sharesOut": 12294000000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "02079K305",
+ "filers": 5659,
+ "dropped": 77,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 23.86029813322401
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 42.07870186677599
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 9.801
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 24.260000000000005
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 3.749575427037579
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.1149476492598014
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 1.9438527655767042
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.2207434358223523
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 0.80442728973483
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 2.0393200341630062
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 0.9802448430128518
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 0.8241101268911665
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 0.7476775337563039
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 0.7424569546120059
+   }
+  ]
+ }
+}

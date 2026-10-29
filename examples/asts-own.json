@@ -1,0 +1,77 @@
+{
+ "ticker": "ASTS",
+ "company": "AST SpaceMobile",
+ "sharesOut": 389167494.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "00217D100",
+ "filers": 735,
+ "dropped": 19,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 21.860851181767664
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 33.886148818232336
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.789
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 43.464
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 3.924654868528151
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.4254037671501925
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 3.215932263859633
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 1.678929278713088
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.3118066330586182
+   }
+  ],
+  "active": [
+   {
+    "name": "Rakuten Group, Inc.",
+    "pct": 3.985450542279875
+   },
+   {
+    "name": "Alphabet Inc.",
+    "pct": 2.298107148692126
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.8803798140447978
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 1.6964664577047126
+   },
+   {
+    "name": "Marex Group Ltd",
+    "pct": 1.5983752743747914
+   }
+  ]
+ }
+}

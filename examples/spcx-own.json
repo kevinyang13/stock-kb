@@ -1,0 +1,56 @@
+{
+ "ticker": "SPCX",
+ "company": "SpaceX",
+ "sharesOut": 13581063709.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "84615Q103",
+ "filers": 1676,
+ "dropped": 66,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 1.0200546867412845
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 24.475945313258713
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 45.111
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 29.393000000000008
+  }
+ ],
+ "top": {
+  "index": [],
+  "active": [
+   {
+    "name": "Alphabet Inc.",
+    "pct": 4.058514942645719
+   },
+   {
+    "name": "Valor Management LLC",
+    "pct": 3.706738594167654
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 2.227777127645017
+   },
+   {
+    "name": "VY Capital Management Co. Ltd.",
+    "pct": 2.0014006695210034
+   },
+   {
+    "name": "Gigafund Management Company, LLC",
+    "pct": 1.2651935715913958
+   }
+  ]
+ }
+}

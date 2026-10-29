@@ -1,0 +1,69 @@
+{
+ "ticker": "NU",
+ "company": "Nu Holdings",
+ "sharesOut": 4830688659.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "G6683N103",
+ "filers": 841,
+ "dropped": 15,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 13.7246746570497
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 48.42632534295031
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 22.816
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 15.032999999999998
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.349108958586685
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.0039714590101467
+   },
+   {
+    "name": "NORGES BANK",
+    "pct": 0.9581918493911367
+   }
+  ],
+  "active": [
+   {
+    "name": "BAILLIE GIFFORD & CO",
+    "pct": 4.759783691950825
+   },
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 2.955310144735204
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.4420236808310523
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 2.0692072301900755
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.5652264995205107
+   }
+  ]
+ }
+}

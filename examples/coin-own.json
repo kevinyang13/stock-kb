@@ -1,0 +1,77 @@
+{
+ "ticker": "COIN",
+ "company": "Coinbase",
+ "sharesOut": 263836923.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "19260Q107",
+ "filers": 1072,
+ "dropped": 50,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 26.56213649079348
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 29.179863509206516
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 3.135
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 41.123000000000005
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 6.333754506377411
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 5.36921627152239
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.627957334842023
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 3.6242853696410036
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.3327447614297716
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.4411007969494853
+   },
+   {
+    "name": "Paradigm Operations LP",
+    "pct": 1.2072976609115473
+   },
+   {
+    "name": "GOLDMAN SACHS GROUP INC",
+    "pct": 0.964311958717014
+   },
+   {
+    "name": "ARK Investment Management LLC",
+    "pct": 0.9518451668722653
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 0.877224072234954
+   }
+  ]
+ }
+}

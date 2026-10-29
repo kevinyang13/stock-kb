@@ -1,0 +1,65 @@
+{
+ "ticker": "TSM",
+ "company": "TSMC",
+ "sharesOut": 25932000000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "874039100",
+ "filers": 3423,
+ "dropped": 152,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 3.679162810209421
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 45.26983718979058
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.315
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 50.736000000000004
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 0.07755997223507635
+   },
+   {
+    "name": "VAN ECK ASSOCIATES CORP",
+    "pct": 0.06636820916242481
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 0.22727730603115842
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 0.13254771710627797
+   },
+   {
+    "name": "Sanders Capital, LLC",
+    "pct": 0.10083705074811045
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 0.09189143143606356
+   },
+   {
+    "name": "Fisher Asset Management, LLC",
+    "pct": 0.0727525759679161
+   }
+  ]
+ }
+}

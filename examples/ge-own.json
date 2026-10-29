@@ -1,0 +1,77 @@
+{
+ "ticker": "GE",
+ "company": "GE Aerospace",
+ "sharesOut": 1033351921.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "369604301",
+ "filers": 3368,
+ "dropped": 59,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 29.966337506912527
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 50.89766249308748
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.18
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.955999999999996
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.628098926232122
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.5937970032573245
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.499689510907679
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.4027493920921446
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.6247231614717248
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 4.743921117653779
+   },
+   {
+    "name": "TCI FUND MANAGEMENT LTD",
+    "pct": 4.589746439344936
+   },
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 2.99440174941137
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 1.995727649109388
+   },
+   {
+    "name": "Capital International Investors",
+    "pct": 1.7719661257590094
+   }
+  ]
+ }
+}

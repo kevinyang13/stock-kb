@@ -1,0 +1,77 @@
+{
+ "ticker": "COHR",
+ "company": "Coherent",
+ "sharesOut": 196931166.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "19247G107",
+ "filers": 1258,
+ "dropped": 51,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 34.21923199694887
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 53.36776800305113
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.309
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 12.103999999999997
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.433450295013234
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.482296966646712
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 5.086022798443188
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.362506542006662
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.675721729083755
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 5.5921620857107
+   },
+   {
+    "name": "NVIDIA CORP",
+    "pct": 3.954763056650972
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.7737261962893167
+   },
+   {
+    "name": "Capital International Investors",
+    "pct": 1.8283347796762652
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.6658526258865496
+   }
+  ]
+ }
+}

@@ -1875,3 +1875,64 @@ never fetches: Thanksgiving (Nov 26, closed), the day after (Nov 27, 1:00 pm ET)
 (Dec 24, 1:00 pm ET) and Christmas Day (Dec 25, closed). The chip is deliberately colourless and
 italic so a closure reads as an absence of trading rather than as another event competing with the
 earnings around it.
+
+## 2026-10-29 — A share-ownership donut on every Financials card
+
+**Sources**: SEC Form 13F data set covering filings received June–August 2026, holdings as of
+**June 30, 2026** (source: sec.gov/data-research/sec-markets-data/form-13f-data-sets), and
+stockanalysis.com's statistics endpoint. Full method in [[share-ownership-donut]].
+
+A fourth chart now sits beside the sankey: four slices of the whole share count — index and ETF
+managers, other institutions, insiders, and the residual everyone else — with the institutional
+total in the hole. **Hovering either institutional slice names its five largest holders**, each as
+a percentage of all shares outstanding, read from that manager's own 13F. 66 of the 70 cards have
+one.
+
+**It takes two sources, and that is the whole design.** A raw 13F sum is not an ownership
+percentage: managers with shared investment discretion report the same shares twice, so adding the
+table up for NVIDIA gives **24.8bn shares against 24.1bn outstanding**, 103% of the company — and
+11.2bn of those shares are filed under `DFND`, the code for exactly that shared discretion. So the
+slice sizes come from stockanalysis's institutional and insider percentages, which are a netted
+pair leaving an honest residual, and the filings supply the ratio inside the institutional slice
+and the names. Dividing one 13F total by another cancels most of the double counting. The two are
+on different dates and both cards and wiki say so.
+
+**The filings had to be checked before they could be used.** The largest single reported holding
+of NVIDIA in this data set is **7.0bn shares by a state teachers' pension fund** — 29% of the
+company, and about four times that fund's entire portfolio. Nobody rejects an implausible 13F. A
+naive top-five would have published it at number one, on a public site.
+
+The check uses the only other number in the table. A filer reports both a share count and a market
+value, so `VALUE / SSHPRNAMT` is an implied price, and for a real filing it is the period-end
+price: every honest NVIDIA filer implies **$200.09**, the pension fund implies **$0.005**. One
+deliberate exemption — Form 13F moved `VALUE` from thousands to whole dollars in 2023 and a
+minority still file the old way, implying exactly the price over a thousand. T. Rowe Price is one;
+its **share count is right**, so it is kept. 113 of NVIDIA's 5,927 filings were dropped.
+
+**The same test identifies the company.** Filers type the issuer name freehand, so a name match
+alone can land on the wrong CUSIP. A candidate is accepted only once its filers imply the price
+this ticker actually closed at on the period end, read from its own history — a wrong company
+fails immediately.
+
+**The passive split is an editorial call and is labelled as one.** A 13F says what a manager holds
+and never why; BlackRock files one covering iShares and its active mandates together, with no field
+separating them. So the list in `bin/passive-managers.json` is conservative — FMR, JPMorgan, Morgan
+Stanley, Goldman, Capital Research, T. Rowe and Invesco are all counted as **active**, which
+understates the index share rather than overstating it. The list is a data file, not code, so it
+can be audited and argued with.
+
+**Four cards have no donut and each refusal is right**: Nintendo (7974) has no US statistics page;
+ARQQ and PHM report institutional plus insider percentages that exceed 100%, leaving no honest
+residual; SKHY had not listed by June 30, so no 13F names it. The generator reports and skips
+rather than drawing a slice it cannot support.
+
+**Verification**: all 66 specs rendered with zero validator warnings — the validator checks that
+the slices sum to 100%, that none is negative, and that no named holder owns more than the group
+it sits in. The NVDA and DELL cards were opened in the browser and hovered; DELL's 47.1% insider
+slice is Michael Dell and reads correctly, as do GOOG at 9.8%, AMZN at 8.9% and META at 13.4%.
+Checked at phone width: the donut goes full-width and its legend wraps to two columns.
+
+One fix found on the way: `own` was first written into `financials.json` as a path. `Sankey.load()`
+takes a **stem** and builds `charts/<stem>.json` itself, so the page asked for
+`charts/charts/NVDA-own.json.json` and the figure silently removed itself. The debt and earnings
+charts have always used stems; this one now does too.

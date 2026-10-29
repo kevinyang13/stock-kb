@@ -1,0 +1,69 @@
+{
+ "ticker": "QCOM",
+ "company": "Qualcomm",
+ "sharesOut": 1067839507.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "747525103",
+ "filers": 2952,
+ "dropped": 75,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 39.896600814425355
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 43.80639918557465
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.048
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 16.249
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.91069063995588
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.44641976146702
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.941122954725068
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.169743185012165
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.7762080168101515
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.3808172261227267
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.601392520870648
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 1.1822029356701822
+   }
+  ]
+ }
+}

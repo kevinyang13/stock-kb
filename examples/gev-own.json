@@ -1,0 +1,77 @@
+{
+ "ticker": "GEV",
+ "company": "GE Vernova",
+ "sharesOut": 264677066.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "36828A101",
+ "filers": 3283,
+ "dropped": 134,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 31.3956918971369
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 50.28730810286311
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.098
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.218999999999994
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 8.222843153324058
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.631477469982231
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.445167908881081
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.3980120740797393
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.784800652127525
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 6.101963892859534
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.1595973864996676
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 1.891892288091179
+   },
+   {
+    "name": "Fisher Asset Management, LLC",
+    "pct": 1.344838468173136
+   },
+   {
+    "name": "GOLDMAN SACHS GROUP INC",
+    "pct": 1.1112337931084668
+   }
+  ]
+ }
+}

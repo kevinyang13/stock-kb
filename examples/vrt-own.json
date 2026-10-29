@@ -1,0 +1,77 @@
+{
+ "ticker": "VRT",
+ "company": "Vertiv Holdings",
+ "sharesOut": 385060421.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "92537N108",
+ "filers": 1962,
+ "dropped": 84,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 34.263357919699985
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 46.91764208030001
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.188
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.631000000000004
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 9.328785053190392
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.515329447479101
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 4.651106429865977
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.293230126603949
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.3446904713169676
+   }
+  ],
+  "active": [
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 2.3660697135112727
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 2.1504960126764106
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.790510170350642
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 1.438076389575235
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.1158908487247512
+   }
+  ]
+ }
+}

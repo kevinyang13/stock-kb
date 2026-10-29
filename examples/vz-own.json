@@ -1,0 +1,73 @@
+{
+ "ticker": "VZ",
+ "company": "Verizon",
+ "sharesOut": 4145000000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "92343V104",
+ "filers": 3041,
+ "dropped": 80,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 35.52784759405267
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 34.689152405947326
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.036
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 29.747
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 9.607144945717732
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.248398214716526
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 5.058534957780458
+   },
+   {
+    "name": "CHARLES SCHWAB INVESTMENT MANAGEMENT INC",
+    "pct": 3.0826253799758745
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.5770812545235224
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.6960885404101327
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.4682935102533172
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 0.9936030880579011
+   },
+   {
+    "name": "UBS AM, a distinct business unit of UBS ASSET MANAGEMENT AMERICAS LLC",
+    "pct": 0.9933227020506634
+   }
+  ]
+ }
+}

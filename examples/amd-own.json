@@ -1,0 +1,77 @@
+{
+ "ticker": "AMD",
+ "company": "AMD",
+ "sharesOut": 1632475042.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "007903107",
+ "filers": 3823,
+ "dropped": 173,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 34.22967931707515
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 39.74832068292484
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.437
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 25.585000000000004
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 9.206971385967444
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.523847180507155
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.555150007616472
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.423841099066555
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.3234609426880293
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.25709132648412
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 2.201458342417954
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 1.5656320214664574
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.487702438026002
+   },
+   {
+    "name": "UBS AM, a distinct business unit of UBS ASSET MANAGEMENT AMERICAS LLC",
+    "pct": 1.0749616716039203
+   }
+  ]
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "ticker": "VOYG",
+ "company": "Voyager Technologies",
+ "sharesOut": 61029060.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "92892B103",
+ "filers": 238,
+ "dropped": 5,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 25.50765031269146
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 53.15034968730854
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.608
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 20.733999999999998
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 6.086082597372465
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.6375359541831385
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 3.5631189469410147
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 2.9715515854250416
+   },
+   {
+    "name": "VAN ECK ASSOCIATES CORP",
+    "pct": 1.5593833495059566
+   }
+  ],
+  "active": [
+   {
+    "name": "Senvest Management, LLC",
+    "pct": 4.859632443953749
+   },
+   {
+    "name": "WELLINGTON MANAGEMENT GROUP LLP",
+    "pct": 3.7803105602478557
+   },
+   {
+    "name": "Tema ETFs LLC",
+    "pct": 2.217771337130213
+   },
+   {
+    "name": "FRONTIER CAPITAL MANAGEMENT CO LLC",
+    "pct": 2.2006794795790725
+   },
+   {
+    "name": "Tidal Investments LLC",
+    "pct": 2.1640788830763573
+   }
+  ]
+ }
+}

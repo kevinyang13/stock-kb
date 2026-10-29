@@ -1,0 +1,77 @@
+{
+ "ticker": "AAPL",
+ "company": "Apple",
+ "sharesOut": 14594180000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "037833100",
+ "filers": 5897,
+ "dropped": 230,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 29.51005081915422
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 36.174949180845786
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.062
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 34.253
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.968909106232759
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.5718520053884495
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.214898877497742
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.544415260055721
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.2893999936961174
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 2.2293047913620363
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.6624040405147806
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.567487916415996
+   },
+   {
+    "name": "Berkshire Hathaway Inc",
+    "pct": 1.5617034187600811
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 1.2879485452420074
+   }
+  ]
+ }
+}

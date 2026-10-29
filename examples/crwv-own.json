@@ -1,0 +1,69 @@
+{
+ "ticker": "CRWV",
+ "company": "CoreWeave",
+ "sharesOut": 551536602.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "21873S108",
+ "filers": 928,
+ "dropped": 39,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 11.974702952627153
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 42.50329704737285
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 19.175
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 26.346999999999998
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 4.370691974492021
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 3.093868101975941
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 2.8627784525531816
+   }
+  ],
+  "active": [
+   {
+    "name": "Magnetar Financial LLC",
+    "pct": 9.439614127368468
+   },
+   {
+    "name": "NVIDIA CORP",
+    "pct": 8.56032996337748
+   },
+   {
+    "name": "GOLDMAN SACHS GROUP INC",
+    "pct": 3.282456492343549
+   },
+   {
+    "name": "JANE STREET GROUP, LLC",
+    "pct": 2.5175163261422133
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 2.249837083341932
+   }
+  ]
+ }
+}

@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Financials</title>
-<link rel="stylesheet" href="assets/site.css?v=1793310573">
+<link rel="stylesheet" href="assets/site.css?v=1793312871">
 </head>
 <body>
 
@@ -31,8 +31,8 @@
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-<script src="assets/sankey.js?v=1793310573"></script>
-<script src="assets/site.js?v=1793310573"></script>
+<script src="assets/sankey.js?v=1793312871"></script>
+<script src="assets/site.js?v=1793312871"></script>
 <script>
 Site.nav();
 
@@ -45,6 +45,7 @@ Site.nav();
   var chartEl = null;
   var debtEl = null;
   var epsEl = null;
+  var ownEl = null;
 
   function finCard(f) {
     var kpis = (f.highlights || []).map(function (h) {
@@ -70,6 +71,9 @@ Site.nav();
           : "") +
         (f.eps
           ? '<figure class="fin-fig fin-fig-eps"><div class="fin-chart" id="fin-eps"></div></figure>'
+          : "") +
+        (f.own
+          ? '<figure class="fin-fig fin-fig-own"><div class="fin-chart" id="fin-own"></div></figure>'
           : "") +
       "</div>" +
       '<div class="fin-tools">' +
@@ -109,12 +113,14 @@ Site.nav();
     if (chartEl) Sankey.unmount(chartEl);   // innerHTML is about to drop it
     if (debtEl) Sankey.unmount(debtEl);
     if (epsEl) Sankey.unmount(epsEl);
-    chartEl = debtEl = epsEl = null;
+    if (ownEl) Sankey.unmount(ownEl);
+    chartEl = debtEl = epsEl = ownEl = null;
     body.innerHTML = finItems.length ? finCard(finItems[finPick]) : "";
     if (finItems.length) {
       drawChart(finItems[finPick]);
       drawDebt(finItems[finPick]);
       drawEps(finItems[finPick]);
+      drawOwn(finItems[finPick]);
     }
   }
 
@@ -135,6 +141,26 @@ Site.nav();
       })
       .catch(function () {
         if (el === debtEl && el.parentElement) el.parentElement.remove();
+      });
+  }
+
+  // Who owns the stock, as four slices of the whole share count. The hover is
+  // the point of it: each institutional slice names its five largest holders
+  // from their own 13F. Same figure-JSON pipeline as the sankey, and the same
+  // rule -- no raster fallback, the card still reads without it.
+  function drawOwn(f) {
+    ownEl = document.getElementById("fin-own");
+    if (!ownEl || !f.own) { ownEl = null; return; }
+    if (typeof Plotly === "undefined" || typeof Sankey === "undefined") return;
+
+    var el = ownEl;
+    Sankey.load(f.own)
+      .then(function (fig) {
+        if (el !== ownEl) return;          // the ticker changed while fetching
+        Sankey.mount(el, fig);
+      })
+      .catch(function () {
+        if (el === ownEl && el.parentElement) el.parentElement.remove();
       });
   }
 

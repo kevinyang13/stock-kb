@@ -1,0 +1,77 @@
+{
+ "ticker": "AMZN",
+ "company": "Amazon",
+ "sharesOut": 10786313572.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "023135106",
+ "filers": 6021,
+ "dropped": 123,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 26.045750779370398
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 42.17824922062961
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 8.936
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 22.839999999999996
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 6.9384552377817705
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 5.894174369734334
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 3.682323486599264
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.162107400672924
+   },
+   {
+    "name": "NORGES BANK",
+    "pct": 1.3031848189996234
+   }
+  ],
+  "active": [
+   {
+    "name": "FMR LLC",
+    "pct": 3.390040179707099
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.6630013563265988
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 1.5573360247569112
+   },
+   {
+    "name": "Invesco Ltd.",
+    "pct": 1.3333408772143938
+   },
+   {
+    "name": "Capital Research Global Investors",
+    "pct": 1.118119477937981
+   }
+  ]
+ }
+}

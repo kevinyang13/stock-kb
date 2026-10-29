@@ -1,0 +1,77 @@
+{
+ "ticker": "RKLB",
+ "company": "Rocket Lab",
+ "sharesOut": 598459739.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "773121108",
+ "filers": 1085,
+ "dropped": 34,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 24.377030688788032
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 29.50596931121197
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.949
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 45.168
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 6.780761905188078
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 4.531342082478835
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.227387633840478
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 2.4132061120990462
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 1.7550450457286317
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.065126324228805
+   },
+   {
+    "name": "JPMORGAN CHASE & CO",
+    "pct": 2.306773889763702
+   },
+   {
+    "name": "BAILLIE GIFFORD & CO",
+    "pct": 1.7352064513733312
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 1.2315638830300664
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.1521911250908727
+   }
+  ]
+ }
+}

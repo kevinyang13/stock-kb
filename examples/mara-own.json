@@ -1,0 +1,77 @@
+{
+ "ticker": "MARA",
+ "company": "MARA Holdings",
+ "sharesOut": 386299297.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "565788106",
+ "filers": 402,
+ "dropped": 13,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 39.62264623135193
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 32.691353768648064
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 1.981
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 25.705000000000005
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 16.59222356803823
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 7.092926705481424
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 4.2828643822253705
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.1164315139822785
+   },
+   {
+    "name": "CHARLES SCHWAB INVESTMENT MANAGEMENT INC",
+    "pct": 1.2239015283530272
+   }
+  ],
+  "active": [
+   {
+    "name": "D. E. Shaw & Co., Inc.",
+    "pct": 2.6860180902684894
+   },
+   {
+    "name": "Marex Group Ltd",
+    "pct": 2.0587684372617434
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.7517145520458972
+   },
+   {
+    "name": "BANK OF AMERICA CORP /DE/",
+    "pct": 1.5792371478221976
+   },
+   {
+    "name": "UBS Group AG",
+    "pct": 1.4442312070787953
+   }
+  ]
+ }
+}

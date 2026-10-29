@@ -1,0 +1,77 @@
+{
+ "ticker": "V",
+ "company": "Visa",
+ "sharesOut": 1859493296.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "92826C839",
+ "filers": 4440,
+ "dropped": 83,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 28.322881574509548
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 53.232118425490455
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.039
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 18.40599999999999
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 7.403579313576617
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 5.708571266610257
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 4.456709210959156
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.4353556475527083
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 1.9814332796605039
+   }
+  ],
+  "active": [
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 2.4716601075608287
+   },
+   {
+    "name": "FMR LLC",
+    "pct": 2.3086931849847336
+   },
+   {
+    "name": "PRICE T ROWE ASSOCIATES INC /MD/",
+    "pct": 1.9076187623964416
+   },
+   {
+    "name": "TCI FUND MANAGEMENT LTD",
+    "pct": 1.6399162645865222
+   },
+   {
+    "name": "Capital World Investors",
+    "pct": 1.5202693691238778
+   }
+  ]
+ }
+}

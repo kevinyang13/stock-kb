@@ -1,0 +1,77 @@
+{
+ "ticker": "ADBE",
+ "company": "Adobe",
+ "sharesOut": 389200000.0,
+ "asOf13F": "2026-06-30",
+ "cusip": "00724F101",
+ "filers": 1902,
+ "dropped": 79,
+ "slices": [
+  {
+   "key": "index",
+   "label": "Index & ETF managers",
+   "pct": 36.793311797580536
+  },
+  {
+   "key": "active",
+   "label": "Other institutions",
+   "pct": 50.55668820241946
+  },
+  {
+   "key": "insiders",
+   "label": "Insiders",
+   "pct": 0.168
+  },
+  {
+   "key": "retail",
+   "label": "Retail & other",
+   "pct": 12.482000000000006
+  }
+ ],
+ "top": {
+  "index": [
+   {
+    "name": "BlackRock, Inc.",
+    "pct": 10.574533658787256
+   },
+   {
+    "name": "VANGUARD CAPITAL MANAGEMENT LLC",
+    "pct": 6.784483556012333
+   },
+   {
+    "name": "STATE STREET CORP",
+    "pct": 5.271199383350463
+   },
+   {
+    "name": "GEODE CAPITAL MANAGEMENT, LLC",
+    "pct": 2.9845228674203494
+   },
+   {
+    "name": "VANGUARD PORTFOLIO MANAGEMENT LLC",
+    "pct": 2.405921891058582
+   }
+  ],
+  "active": [
+   {
+    "name": "Invesco Ltd.",
+    "pct": 3.765405704008222
+   },
+   {
+    "name": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP",
+    "pct": 1.743839157245632
+   },
+   {
+    "name": "MORGAN STANLEY",
+    "pct": 1.385025950668037
+   },
+   {
+    "name": "PRIMECAP MANAGEMENT CO/CA/",
+    "pct": 1.3430470195272353
+   },
+   {
+    "name": "UBS AM, a distinct business unit of UBS ASSET MANAGEMENT AMERICAS LLC",
+    "pct": 1.2963892600205549
+   }
+  ]
+ }
+}
