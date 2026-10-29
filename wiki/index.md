@@ -8,6 +8,7 @@ Table of contents for this knowledge base. One line per page.
 
 ## Automation
 
+- `.claude/skills/add-ticker/SKILL.md` — the skill that puts a new ticker everywhere it belongs: heatmap tile, IBKR watchlist, Financials card, events calendar, and the Catalysts and Morning Brief tabs when it is a favorite. Calls the income statement skill for the statement itself.
 - `.claude/skills/income-statement-chart/SKILL.md` — the skill that turns a bare ticker into a published income statement chart. Encodes the chartable gate, the mandatory segment breakdown, and the source traps.
 - `bin/yoyfetch.py` — adds the year-ago figure for each income statement node, keeping only the lines whose basis matches what the chart draws.
 - `bin/sadata.py` — reads a statement from stockanalysis.com's SvelteKit data endpoint and hydrates devalue's flattened payload. Shared by both fetchers.

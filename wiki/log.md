@@ -1669,3 +1669,45 @@ back with Nov 5, 2026 for IREN, so the card and the page now cite that instead o
 year's Nov 6 filing. The derived FQ4 FY26 card is superseded in about a week by a quarter that is
 actually filed. The same refresh rewrote the whole calendar: 49 upcoming ticker events, 57
 published dates already past and omitted rather than estimated, 14 macro and Fed entries kept.
+
+## 2026-10-28 — a skill for adding a ticker, and the brief job pointed back at a file that exists
+
+**Source**: none — this is workflow, not a filing.
+
+**What changed**: new skill `.claude/skills/add-ticker/SKILL.md`. Adding a ticker touches seven
+places and the order between them is a dependency chain, not a preference: the Financials
+pipeline reads `financials.json`, and the IBKR and events steps read `watchlist.json`. That order
+lived only in my head and in the shape of past runs. It is written down now.
+
+The seven: the heatmap tile in `watchlist.json`, the IBKR watchlist in `ibkr-conids.json` plus the
+connector, the Financials card, `events.json`, `news.json` for catalysts, `brief.json` for the
+Morning Brief, and the wiki. Four of the seven are unconditional; the card depends on the ticker
+being chartable at all, and the last two apply only to favorites.
+
+**It delegates rather than duplicates.** The income statement half is still
+`income-statement-chart`'s job — sourcing, the mandatory segment split, `mkspec.py`, `sankey.py`,
+the five-identity validator. `add-ticker` calls it and then does the three things that come after
+it and read what it wrote: `debtfetch.py`/`debtbars.py`, `epsfetch.py`/`epsdots.py`/`epsnotes.py`,
+and `pefetch.py`.
+
+**Both skills answered to "add NVDA", which is one trigger too many.** `income-statement-chart`'s
+description has been narrowed to charting an existing ticker and nothing else, and now points at
+`add-ticker` for a new name. `add-ticker` owns "add <TICKER>".
+
+**A break found while writing step 6.** `bin/morning-brief.sh` told the 6am job that the watchlist
+"lives in heatmap.html in the JSON block with id=`watchlist`". That block has not existed since
+the site was split into five pages and the watchlist moved to `watchlist.json` — `grep -c` returns
+0. So the job was being sent to a source that is gone, and the step the skill describes as
+automatic, a favorite reaching `brief.json`'s `favorites[]` by way of `"fav": true`, was not
+reliably automatic at all. The prompt now names `watchlist.json` and says to read favorites from
+it so a new one is picked up without editing the prompt again.
+
+**Two things the skill records because they are not visible from the code.** The ranked `SECTORS`
+list exists twice — `assets/site.js` and inline in `heatmap.html` — so a genuinely new sector has
+to be added to both or the two pages disagree about what a tile is. And `edit_watchlist` is
+full-replace: writing just the new symbol deletes the other 108.
+
+**Verification**: both skills' frontmatter parses and both are listed. `bash -n bin/morning-brief.sh`
+passes. Every figure quoted in the skill was checked against the repo rather than recalled —
+15 favorites of 109 symbols, 70 cards against 70 tracked income-statement PNGs and 206 tracked
+chart JSONs, `ibkrWatchlist` id 100, BITF and MFH carrying explicit `UNRESOLVED` notes.

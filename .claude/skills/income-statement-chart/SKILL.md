@@ -5,9 +5,10 @@ description: >
   of Stock Signal Desk. Covers sourcing the quarterly figures, the mandatory revenue-by-segment
   breakdown, rendering with bin/sankey.py, validation, and adding the entry to financials.json.
 
-  Use whenever a ticker is given with intent to chart or add its financials: "add NVDA", "generate
+  Use whenever a ticker is given with intent to chart its financials and nothing else: "generate
   the financial for CRWV", "do the income statement for Nintendo", "chart META", "add this to the
-  Financials tab".
+  Financials tab". For putting a NEW ticker on the whole site -- heatmap, IBKR, events, catalysts
+  as well as the card -- use add-ticker, which calls this skill for the statement itself.
 ---
 
 # Income Statement Chart

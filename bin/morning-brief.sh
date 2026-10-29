@@ -33,9 +33,10 @@ WHERE THE DATA COMES FROM
 - Per-ticker news: WebFetch https://stockanalysis.com/stocks/{ticker}/ (use
   /etf/{ticker}/ for ETFs) asking what is driving the stock today.
 - Do NOT use benzinga.com or cnbc.com: both return 403.
-- The watchlist lives in heatmap.html in the JSON block with id="watchlist".
-  Favorites are entries with "fav": true. Holdings to always cover: INTU
-  (employer, RSU/option exposure), MSFT, MC.
+- The watchlist lives in watchlist.json at the repo root, as a "symbols"
+  array. Favorites are entries with "fav": true -- read them from that file,
+  so a newly added favorite is picked up without editing this prompt.
+  Holdings to always cover: INTU (employer, RSU/option exposure), MSFT, MC.
 
 WHAT TO WRITE
 Keep the existing brief.json structure exactly: generated, subject,
