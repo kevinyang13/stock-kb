@@ -1,5 +1,5 @@
 {
- "note": "IBKR contract ids (conid) per heatmap ticker. Resolved via IBKR search_contracts, 2026-09-28; NBIS added 2026-10-26, V and VRT added 2026-10-27, CEG, VST, CCJ, LEU and GEV added 2026-10-28, all resolved the same way. Used as contract_id for get_price_snapshot / get_price_history / get_company_connections, and as contract_id_ex (stringified) for watchlists.",
+ "note": "IBKR contract ids (conid) per heatmap ticker. Resolved via IBKR search_contracts, 2026-09-28; NBIS added 2026-10-26, V and VRT added 2026-10-27, CEG, VST, CCJ, LEU and GEV added 2026-10-28, all resolved the same way. Used as contract_id for get_price_snapshot / get_price_history / get_company_connections, and as contract_id_ex (stringified) for watchlists. IREN added 2026-10-28.",
  "generated": "2026-09-28",
  "ibkrWatchlist": {
   "id": "100",
@@ -547,6 +547,11 @@
    "conid": 691984365,
    "ex": "NYSE",
    "desc": "GE VERNOVA INC"
+  },
+  "IREN": {
+   "conid": 526906130,
+   "ex": "NASDAQ",
+   "desc": "IREN LTD"
   }
  }
 }

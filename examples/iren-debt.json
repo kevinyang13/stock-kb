@@ -1,0 +1,50 @@
+{
+ "ticker": "IREN",
+ "company": "IREN Limited",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: FQ4 FY26, quarter ended Jun 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "FQ4 FY26",
+   "debt": 7839.5,
+   "fcf": -167.1,
+   "cash": 5895.6,
+   "debt_parts": [
+    {
+     "label": "Current portion",
+     "value": 169.4
+    },
+    {
+     "label": "Long-term debt",
+     "value": 7423.6
+    },
+    {
+     "label": "Current leases",
+     "value": 125.9
+    },
+    {
+     "label": "Long-term leases",
+     "value": 120.7
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Restricted cash (separate)",
+     "value": 1670.3
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 1811.1
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -1978.2
+    }
+   ]
+  }
+ ]
+}

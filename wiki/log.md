@@ -1600,3 +1600,66 @@ that works is `pgrep -f "[e]psfetch.py"`.
 **Verification**: served locally. 15 rows withhold the surprise figure and carry the basis warning;
 240 still show theirs -- MSFT Jun '26 still reads `+$0.53 (+13%)`. The Alphabet image was opened:
 Mar '26 and Jun '26 join with a dotted line, Sep '25 and Dec '25 stay solid.
+
+---
+
+## 2026-10-28 — IREN added: a quarter that is never filed on its own
+
+Kevin asked to add IREN. Watchlist, conid, income statement, earnings and debt charts, wiki page.
+The Financials tab goes from 69 cards to 70.
+
+**IREN's fiscal year ends June 30, so its fourth quarter is reported nowhere.** A December-year
+company files a Q4 8-K; a June-year company's fourth quarter exists only inside the annual figures.
+So this card is the first in the repo built by **subtraction**: the twelve months in the FY26 10-K
+minus the nine months in the 10-Q to Mar 31, 2026.
+
+That has to prove itself before it can be published, and it does, three ways: revenue comes to
+exactly $137,225K, pretax to $(691,968)K, net to $(683,999)K, and the two segments foot to revenue
+to the dollar. An aggregator reading the same two filings independently reports $137.23M,
+$(691.97)M and $(684.00)M. The year-ago column is derived the same way so the Y/Y is like for like.
+
+**AI Cloud passed Bitcoin Mining.** $70.5M against $66.7M, 51.4% of revenue against 3.7% a year
+ago, +913% Y/Y while mining fell 63%. Total revenue still fell 27%, because mining lost $113.6M of
+quarterly revenue and AI Cloud added only $63.6M. A transition, not yet a replacement. Over the
+full fiscal year AI Cloud was $128.8M against mining's $578.2M, so the crossover is a quarter-end
+event rather than a year-long trend.
+
+**Two things on this card would mislead if left to stand alone**, and both are called out:
+
+*The 76% gross margin is not comparable to anything else on the page.* IREN reports cost of
+revenue **exclusive of D&A**, and D&A was $112.1M against $33.3M of cost of revenue -- more than
+three times larger. For a bitcoin miner the depreciation of the hardware *is* the cost of
+production. Carrying it above the line would put gross profit at a loss. The figure is faithful to
+the filing and comparable to nothing.
+
+*The loss is one charge.* Impairment of assets was $450.4M -- 62% of the $724.3M of operating
+expenses and 328% of revenue. Without it the operating loss is around $170M. `mkspec.py` would have
+buried this inside a single $596.0M bar called "Other operating", because it only knows R&D, SG&A
+and a remainder. The bar was split by hand into SG&A, D&A, impairment and a net other, so the chart
+shows what actually happened. Rounding the four parts individually summed to 596.1 against a true
+596.020, and the 0.1 was taken off the smallest and most aggregated line rather than off the
+impairment or D&A, which are single reported figures.
+
+**The balance sheet is the company.** $7,839.5M of debt against $5,895.6M of cash, net debt
+$1,943.9M. Free cash flow -$167.1M: $1,811.1M of operating cash flow against **$1,978.2M of capex**
+-- about fourteen times the quarter's revenue, spent in the same three months.
+
+**This is not the most recent quarter that exists.** IREN had not filed its FQ1 FY27 10-Q for the
+September quarter when this was built; last year's landed Nov 6. So the card is the most recent
+quarter *on file*, and says so.
+
+**Heatmap tile**: tagged `AI Infra, Data Center, Crypto, Mining`, so it reads **AI Infra** -- the
+highest-ranked tag wins. That is a judgement call: AI Cloud is now the majority of revenue, but
+IREN is still a bitcoin miner converting its own sites. Dropping `AI Infra` would move it to
+Data Center, which is where HUT sits.
+
+**A gap in my own earlier work, found while updating the index**: the five wiki pages written
+earlier today -- Alphabet, Microsoft, ServiceNow, Vertiv Q3 and GE Vernova -- were never added to
+`wiki/index.md`'s Companies list. Only its counts had been updated. All five are listed now,
+with IREN.
+
+**Verification**: served locally. The chip appears, the header reads FQ4 FY26 quarter ended
+Jun 30 2026, all three charts draw, and the KPIs read $137.2M / 76% / ($620.4M) / ($684.0M).
+The sankey image was opened: no crossed bands, no clipped labels, flows proportional. The debt
+image was opened: the negative free cash flow bar draws below the baseline with the quarter label
+clear of it.

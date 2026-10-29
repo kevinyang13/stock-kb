@@ -1,6 +1,6 @@
 # Watchlist Financials
 
-**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 69 statements, each the company's most recent reported quarter, plus Nintendo.
+**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 70 statements, each the company's most recent reported quarter, plus Nintendo.
 
 **Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K, CoreWeave's results release and Nebius's 6-K exhibit 99.1 for those three.
 
@@ -75,13 +75,13 @@ writes them from stockanalysis.com's quote data and stamps the date on the card 
 
 A loss-maker has no meaningful trailing P/E and a company with no positive forward estimate has no
 forward one — both read `n/a` rather than a negative number, since a negative P/E is not a cheap
-stock, just a loss. 27 of the 69 pay a dividend; the rest read "None", which is a fact about the
+stock, just a loss. 27 of the 70 pay a dividend; the rest read "None", which is a fact about the
 company, not a gap in the data.
 
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
 `income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
-**55 of the 69 charts now carry a reported split**, and the 14 that do not each say on the card why.
+**56 of the 70 charts now carry a reported split**, and the 14 that do not each say on the card why.
 Visa is the only one of those 14 whose split exists but cannot be drawn: its categories are gross of
 client incentives and sum to a total it never reports — see [[visa-q4-fy26]].
 

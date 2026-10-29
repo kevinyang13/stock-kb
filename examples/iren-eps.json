@@ -1,0 +1,58 @@
+{
+ "ticker": "IREN",
+ "company": "IREN Limited",
+ "currency": "$",
+ "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 6, 2025",
+   "actual": -0.34,
+   "estimate": 0.14,
+   "surprise": -0.48,
+   "surprisePct": -342.86
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 5, 2026",
+   "actual": -0.44,
+   "estimate": -0.09,
+   "surprise": -0.35,
+   "surprisePct": -388.89
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 7, 2026",
+   "actual": -0.25,
+   "estimate": -0.18,
+   "surprise": -0.07,
+   "surprisePct": -38.89
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 27, 2026",
+   "actual": -0.41,
+   "estimate": -0.5,
+   "surprise": 0.09,
+   "surprisePct": 18.0
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": -0.46,
+   "high": -0.29,
+   "low": -0.64,
+   "analysts": 3,
+   "up": 0,
+   "down": 0,
+   "due": "Nov 05, 2026"
+  }
+ ]
+}

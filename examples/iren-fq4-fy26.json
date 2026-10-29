@@ -1,0 +1,55 @@
+{
+ "company": "IREN Limited",
+ "ticker": "IREN",
+ "period": "FQ4 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 137.2,
+ "revenue_yoy": -27,
+ "segments": [
+  {
+   "name": "AI Cloud",
+   "value": 70.5,
+   "yoy": 913,
+   "note": "51% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Bitcoin Mining",
+   "value": 66.7,
+   "yoy": -63,
+   "note": "49% of revenue",
+   "color": "#1b1b7a"
+  }
+ ],
+ "cost_of_revenue": 33.3,
+ "gross_profit": 103.9,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "SG&A",
+   "value": 128.3
+  },
+  {
+   "name": "Depreciation & amortisation",
+   "value": 112.1
+  },
+  {
+   "name": "Impairment of assets",
+   "value": 450.4
+  },
+  {
+   "name": "Other operating, net",
+   "value": 33.5
+  }
+ ],
+ "net_loss": 684.0,
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 63.6
+  }
+ ]
+}

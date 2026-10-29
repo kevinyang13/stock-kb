@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T06:41:40",
+ "generated": "2026-10-28T17:23:10",
  "generatedLabel": "Oct 28, 2026",
  "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no confirmed next date and are omitted rather than estimated.",
  "events": [
@@ -45,6 +45,13 @@
    "type": "earnings",
    "ticker": "NOW",
    "title": "NOW earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-28",
+   "type": "earnings",
+   "ticker": "SKHY",
+   "title": "SKHY earnings",
    "fav": false
   },
   {
@@ -224,6 +231,13 @@
    "ticker": "IONQ",
    "title": "IONQ earnings",
    "fav": true
+  },
+  {
+   "date": "2026-11-05",
+   "type": "earnings",
+   "ticker": "IREN",
+   "title": "IREN earnings",
+   "fav": false
   },
   {
    "date": "2026-11-05",
