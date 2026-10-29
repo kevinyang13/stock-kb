@@ -31,6 +31,22 @@ from urllib.parse import urlparse, parse_qs
 PORT = 8090
 HERE = Path(__file__).resolve().parent
 PAGE = HERE / "heatmap.html"
+
+# What the static handler will serve. A whitelist rather than a guess: this
+# process can read the whole repo, and nothing outside this list needs to
+# reach a browser.
+TYPES = {
+    ".html": "text/html; charset=utf-8",
+    ".css": "text/css; charset=utf-8",
+    ".js": "application/javascript; charset=utf-8",
+    ".json": "application/json; charset=utf-8",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".svg": "image/svg+xml",
+    ".webp": "image/webp",
+    ".ico": "image/x-icon",
+}
 TIMEOUT = 12
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -440,6 +456,25 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(raw)
 
+    def static(self, path):
+        """Serve a file from the repo, or None if it is not one to serve.
+
+        The server binds 127.0.0.1, but a path arriving over HTTP is still
+        untrusted input: resolve it and require the result to be inside the
+        repo, so "../../.ssh/id_rsa" cannot walk out of it.
+        """
+        rel = path.lstrip("/")
+        if not rel:
+            return None
+        target = (HERE / rel).resolve()
+        try:
+            target.relative_to(HERE)
+        except ValueError:
+            return None                       # escaped the repo
+        if not target.is_file() or target.suffix.lower() not in TYPES:
+            return None
+        return target
+
     def do_GET(self):
         url = urlparse(self.path)
 
@@ -465,6 +500,15 @@ class Handler(BaseHTTPRequestHandler):
                 "asOf": datetime.now().strftime("%b %d, %Y at %-I:%M %p"),
             }), "application/json")
 
+        # Everything else is the rest of the local site: the other pages, the
+        # stylesheet, the chart JSON. Served from here so a page that needs
+        # /api/quotes is on the same origin as it -- every quote feed refuses
+        # a cross-origin call, which is the whole reason this server exists.
+        target = self.static(url.path)
+        if target:
+            ctype = TYPES[target.suffix.lower()]
+            return self.send(200, target.read_bytes(), ctype)
+
         self.send(404, "not found", "text/plain")
 
 
@@ -478,6 +522,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
     print(f"heatmap:  http://localhost:{PORT}")
+    print(f"holdings: http://localhost:{PORT}/holdings.html  (live prices work here)")
     print(f"quotes:   http://localhost:{PORT}/api/quotes?symbols=AAPL,MSFT")
     print("ctrl-c to stop\n")
     try:

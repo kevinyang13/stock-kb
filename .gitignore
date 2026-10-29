@@ -4,3 +4,8 @@
 bin/*.log
 out/
 __pycache__/
+
+# Local only: positions and cost basis. The repo is public and Pages serves
+# it, so these must never be committed.
+holdings.json
+holdings.html

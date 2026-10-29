@@ -18,6 +18,8 @@ Table of contents for this knowledge base. One line per page.
 - `bin/ownfetch.py` — builds the ownership spec for every Financials card: slice sizes from stockanalysis, the index/active split and the named holders from the SEC's own Form 13F data set. Checks each filing's implied price before trusting its share count.
 - `bin/ownpie.py` — the share-ownership donut that sits beside the sankey, with the top five holders of each institutional slice on hover. Same figure-JSON pipeline, same renderer.
 - `bin/passive-managers.json` — the managers counted as index and ETF rather than active. An editorial list, deliberately conservative, kept out of the code so it can be audited.
+- `quotes.py` — the local server: proxies the quote feeds for same-origin pages and serves the rest of the local site from a whitelist of extensions, resolved inside the repo. Run it and open http://localhost:8090 when a page needs live prices.
+- `holdings.html` / `holdings.json` — **local only, in `.gitignore`**: a scenario table for positions held, with editable price columns and a P/L total per scenario. Never committed; the repo is public and Pages serves it.
 - `bin/stamp.py` — versions the shared CSS and JS links in every page, so an edit under `assets/` cannot hide behind a browser's cached copy.
 - `prices.json` — the committed price snapshot the published site reads, because every quote feed refuses a cross-origin request from the Pages origin. Carries `generated`, `generatedLabel`, `source` and `quotes[{t, price, pct}]`; the writer is not built yet, so the file ships empty.
 

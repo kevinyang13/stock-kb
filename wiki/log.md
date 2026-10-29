@@ -1936,3 +1936,51 @@ One fix found on the way: `own` was first written into `financials.json` as a pa
 takes a **stem** and builds `charts/<stem>.json` itself, so the page asked for
 `charts/charts/NVDA-own.json.json` and the figure silently removed itself. The debt and earnings
 charts have always used stems; this one now does too.
+
+## 2026-10-29 — A local-only Holdings page
+
+**Sources**: none — this page holds nothing but figures typed into it, plus live prices from the
+`quotes.py` proxy.
+
+A scenario table for positions actually held: shares and cost basis down the left, then a group of
+three columns per scenario — price per share, position value, profit or loss — and a totals row.
+Every price cell is editable, scenarios can be added and removed, and the arithmetic is the
+obvious one: `shares × price`, against `shares × basis`.
+
+**It is deliberately not part of the published site.** `holdings.html` and `holdings.json` both
+went into `.gitignore` **before either file was created**, so neither can be committed by accident.
+This repository is public and GitHub Pages serves it; a commit would publish position sizes and
+cost basis to the world. Nothing about the page or its data is in this log beyond that.
+
+The page's state lives in the browser's `localStorage`, not in the file. `holdings.json` is only
+the seed it reads the first time. **Export** downloads a replacement for that file and **Reset to
+file** throws the browser copy away — a browser cannot write to disk, and a write endpoint on a
+local HTTP server was not worth the risk for this.
+
+Two small design decisions worth keeping:
+
+- **A blank price cell means "unchanged from cost", not zero.** Typing a price into one row of a
+  new scenario and leaving the rest empty used to show every other position wiped out, which is a
+  frightening and useless number. The fallback is the cost basis, so a half-filled scenario still
+  totals to something honest.
+- **The table rebuilds on `change`, not on `input`.** Redrawing every keystroke moved the caret
+  out of the cell being typed in.
+
+**`quotes.py` now serves the rest of the local site, not just the heatmap.** The live-price button
+calls `api/quotes`, and every quote feed refuses a cross-origin call — which is the entire reason
+that proxy exists — so the page has to be served from the same origin as it. Static files are
+served from a **whitelist of extensions**, and each path is resolved and required to sit inside the
+repo, so `../../.ssh/id_rsa` cannot walk out of it. Verified: `/../../../etc/passwd` and its
+URL-encoded form both 404, as do `.gitignore` and `quotes.py`; `assets/site.css` and
+`holdings.json` serve. The server still binds 127.0.0.1 only.
+
+This is also the first time prices have worked anywhere in this repo since the Pages origin
+started refusing every feed — `python3 quotes.py` then
+`http://localhost:8090/holdings.html` priced all three positions on the first try.
+
+**One thing to flag rather than fix.** The page does not reproduce the down-case total of the
+spreadsheet it was modelled on. One position's value in that column was computed on a smaller
+share count than the share count on its own row, which every other cell in the sheet uses. The
+page derives every scenario from the single share count per position, so it cannot reproduce a
+figure built on two. Whether the sheet's share count or its down case is the wrong one is the
+owner's call, not this repo's. Figures withheld here on purpose: this log is published.
