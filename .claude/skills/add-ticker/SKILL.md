@@ -153,9 +153,17 @@ cards, 70 PNGs); the debt and earnings PNGs are local fallbacks and stay out.
 python3 quotes.py --events
 ```
 
-Rewrites `events.json` with every future-dated earnings and ex-dividend date it can see,
-preserving macro, Fed and corporate entries. It prints how many published dates it dropped as
-already past — that is normal, not data loss.
+Rewrites `events.json` with every earnings and ex-dividend date it can see, preserving the
+curated entries — macro, Fed, corporate and market holidays — which are never fetched. It prints
+how many published dates it dropped as too old; that is normal, not data loss.
+
+The source gives one date per field with no flag saying whether it is the next one or the last
+one. A **future** date is therefore a schedule that may be stale; a **past** date is a fact, the
+day the company reported. Past dates are kept for `KEEP_PAST_DAYS` (10) so the Events page's
+default window, which opens on the start of this week, is not blank behind today. A past date
+already in the file survives even when the run refreshes that symbol, because the source swaps in
+the next date the moment a company reports and the day it actually reported is then gone from the
+feed.
 
 **A date it cannot confirm is left out, never estimated.** If the new ticker's next report is
 not in the output, say so on the card rather than reasoning from last year's filing date.

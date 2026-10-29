@@ -14,6 +14,7 @@ Table of contents for this knowledge base. One line per page.
 - `bin/sadata.py` — reads a statement from stockanalysis.com's SvelteKit data endpoint and hydrates devalue's flattened payload. Shared by both fetchers.
 - `bin/debtfetch.py` — builds a debt/coverage spec for every statement on the Financials page, pulling the balance sheet and cash flow column that matches the quarter the card already shows.
 - `bin/debtbars.py` — the debt/coverage grouped bar chart that sits under the Sankey on the Financials card: debt, free cash flow and cash for the quarter the card covers. Same figure-JSON pipeline, same renderer.
+- `quotes.py --events` — refreshes `events.json`. Keeps a published date that has already passed for 10 days, because a past date is a fact (the day the company reported) while a future one may be a stale leftover; preserves the curated macro, Fed, corporate and market-holiday entries, which are never fetched.
 - `bin/stamp.py` — versions the shared CSS and JS links in every page, so an edit under `assets/` cannot hide behind a browser's cached copy.
 - `prices.json` — the committed price snapshot the published site reads, because every quote feed refuses a cross-origin request from the Pages origin. Carries `generated`, `generatedLabel`, `source` and `quotes[{t, price, pct}]`; the writer is not built yet, so the file ships empty.
 

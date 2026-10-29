@@ -153,6 +153,10 @@
   .ev.fed{border-left-color:#8fb8ff;background:rgba(143,184,255,.14)}
   .ev.macro{border-left-color:#c9a0ff;background:rgba(201,160,255,.13)}
   .ev.corporate{border-left-color:var(--cream);background:rgba(234,229,223,.10)}
+  /* market closure: no colour of its own, so it reads as an absence of
+     trading rather than as another event competing with the earnings */
+  .ev.holiday{border-left-color:var(--cream-dim);background:rgba(255,255,255,.04);
+    font-style:italic}
   .ev .s{color:var(--gold);font-weight:700}
   .ev.fav .s:after{content:" \2605"}
   /* a chip that opens the ticker's income statement */
@@ -182,6 +186,7 @@
   #ev-body .legend .d:before{background:var(--green)}
   #ev-body .legend .f:before{background:#8fb8ff}
   #ev-body .legend .m:before{background:#c9a0ff}
+  #ev-body .legend .h:before{background:var(--cream-dim)}
 
   .bar{
     display:flex;flex-wrap:wrap;gap:10px;align-items:center;

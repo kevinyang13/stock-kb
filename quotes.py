@@ -23,7 +23,7 @@ import threading
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
@@ -282,6 +282,22 @@ def refresh_pe():
 
 EVENTS_FILE = HERE / "events.json"
 
+# How far back the calendar keeps a date that has already happened.
+#
+# The source publishes one date per field and gives no flag saying whether it
+# is the next one or the last one. That ambiguity only applies forward: a date
+# in the FUTURE may be a real schedule or a stale leftover, but a date in the
+# PAST is a plain fact -- the company reported that day. The Events page opens
+# on a window that starts before today, so recent past dates are kept to fill
+# it and older ones are dropped. A past date already in the file is also kept
+# even when this run refreshed that symbol, because the source replaces the
+# field with the next date as soon as a company reports and the day it
+# actually reported is then unrecoverable from the feed.
+KEEP_PAST_DAYS = 10
+
+# Types that are not tied to a ticker and are curated by hand, never fetched.
+CURATED = ("fed", "macro", "corporate", "holiday")
+
 
 def cell(html, label):
     """Pull the value cell that follows a labelled metric on a quote page."""
@@ -344,6 +360,7 @@ def refresh_events():
     found, throttled = ticker_events(symbols)
 
     today = datetime.now().date()
+    floor = today - timedelta(days=KEEP_PAST_DAYS)
     events = []
     stale = 0
 
@@ -356,7 +373,7 @@ def refresh_events():
                 when = datetime.strptime(raw, "%b %d, %Y").date()
             except ValueError:
                 continue
-            if when < today:
+            if when < floor:
                 stale += 1
                 continue
             events.append({
@@ -367,33 +384,45 @@ def refresh_events():
                 "fav": sym in favs,
             })
 
-    keep, other = [], []
+    keep, other, past = [], [], []
     if EVENTS_FILE.exists():
         old = json.loads(EVENTS_FILE.read_text())
         asked = set(symbols)
+        seen = {(e["date"], e["type"], e.get("ticker")) for e in events}
         for e in old.get("events", []):
-            if e["type"] in ("fed", "macro", "corporate"):
+            key = (e["date"], e["type"], e.get("ticker"))
+            if e["type"] in CURATED:
                 keep.append(e)
+            elif key in seen:
+                continue                 # this run found it again
+            elif floor.isoformat() <= e["date"] < today.isoformat():
+                past.append(e)           # already happened: a fact, see KEEP_PAST_DAYS
             elif e.get("ticker") not in asked and e["date"] >= today.isoformat():
                 other.append(e)          # a symbol this run did not refresh
 
     events.extend(keep)
     events.extend(other)
+    events.extend(past)
     events.sort(key=lambda e: (e["date"], e.get("ticker") or ""))
 
     EVENTS_FILE.write_text(json.dumps({
         "generated": datetime.now().isoformat(timespec="seconds"),
         "generatedLabel": datetime.now().strftime("%b %d, %Y"),
-        "note": ("Ticker dates are the next confirmed date published by the source. "
-                 "Symbols whose published date has already passed have no confirmed "
-                 "next date and are omitted rather than estimated."),
+        "note": (f"Ticker dates are the one date the source publishes per symbol. "
+                 f"A future date is the next scheduled report; a past date is the day "
+                 f"the company last reported, kept for {KEEP_PAST_DAYS} days so the "
+                 f"calendar is not blank behind today. A symbol whose published date "
+                 f"is older than that has no confirmed next date and is omitted rather "
+                 f"than estimated. Macro, Fed and market-holiday entries are curated "
+                 f"by hand."),
         "events": events,
     }, indent=1, ensure_ascii=False) + "\n")
 
     ticker_events_kept = len([e for e in events if e["type"] in ("earnings", "exdiv")])
-    print(f"\nwrote {ticker_events_kept} upcoming ticker events "
-          f"({stale} published dates already past, omitted); "
-          f"kept {len(keep)} macro/fed entries and {len(other)} not refreshed")
+    print(f"\nwrote {ticker_events_kept} ticker events "
+          f"({stale} published dates older than {KEEP_PAST_DAYS} days, omitted); "
+          f"kept {len(keep)} curated, {len(other)} not refreshed, "
+          f"{len(past)} already-reported")
     if throttled:
         print("stopped early on rate limiting -- run again to resume")
 

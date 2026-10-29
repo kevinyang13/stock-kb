@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Events</title>
-<link rel="stylesheet" href="assets/site.css?v=1793243015">
+<link rel="stylesheet" href="assets/site.css?v=1793310573">
 </head>
 <body>
 
@@ -26,7 +26,8 @@
   <div class="bar">
     <select id="ev-range" aria-label="Calendar range">
       <option value="week">This week</option>
-      <option value="month" selected>This month</option>
+      <option value="month">This month</option>
+      <option value="span" selected>This week + next month</option>
     </select>
     <select id="ev-kind" aria-label="Event type">
       <option value="all">All events</option>
@@ -43,7 +44,7 @@
 
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
-<script src="assets/site.js?v=1793243015"></script>
+<script src="assets/site.js?v=1793310573"></script>
 <script>
 Site.nav();
 
@@ -51,6 +52,8 @@ Site.nav();
   var esc = Site.esc;
   var evData = null, evLoaded = false;
   var DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var MONTH = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   // tickers that have an income statement card -- only those become links,
   // so a chip never promises a page that is not there
   var charted = {};
@@ -73,7 +76,9 @@ Site.nav();
     var want = document.getElementById("ev-kind").value;
     if (want === "all") return true;
     if (want === "fav") return !!e.fav;
-    if (want === "macro") return e.type === "macro" || e.type === "fed";
+    if (want === "macro") {
+      return e.type === "macro" || e.type === "fed" || e.type === "holiday";
+    }
     return e.type === want;
   }
 
@@ -93,28 +98,69 @@ Site.nav();
     return '<div class="' + cls + '" title="' + esc(e.title) + '">' + label + "</div>";
   }
 
-  function renderMonth(events, today) {
-    var first = new Date(today.getFullYear(), today.getMonth(), 1);
-    var start = new Date(first);
-    start.setDate(1 - first.getDay());              // back up to Sunday
+  // Whole days between two dates, counted off the calendar rather than the
+  // clock. A plain (b - a) / 86400000 is an hour out across the November DST
+  // change, which is enough to add a 43rd cell and break the seven-column
+  // grid for the rest of the year.
+  function dayDiff(a, b) {
+    return Math.round(
+      (Date.UTC(b.getFullYear(), b.getMonth(), b.getDate()) -
+       Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())) / 864e5);
+  }
+
+  function weekStart(d) {
+    var s = new Date(d);
+    s.setDate(d.getDate() - d.getDay());            // back up to Sunday
+    return s;
+  }
+
+  // The window a range covers, as two inclusive calendar days.
+  //
+  // "span" is the default and runs from the start of this week to the end of
+  // next month. It is deliberately not anchored on the 1st: the week behind
+  // today holds the quarter that just reported, and reading it beside what is
+  // still scheduled is the point of the page. A month view drops those the
+  // moment the month turns.
+  function spanFor(range, today) {
+    if (range === "month") {
+      return [new Date(today.getFullYear(), today.getMonth(), 1),
+              new Date(today.getFullYear(), today.getMonth() + 1, 0)];
+    }
+    return [weekStart(today),
+            new Date(today.getFullYear(), today.getMonth() + 2, 0)];
+  }
+
+  function renderSpan(events, today, from, to) {
+    var start = weekStart(from);
+    var last = new Date(to);
+    last.setDate(to.getDate() + (6 - to.getDay()));  // forward to Saturday
+    var cells = dayDiff(start, last) + 1;
 
     var byDay = {};
     events.forEach(function (e) {
       (byDay[e.date] = byDay[e.date] || []).push(e);
     });
 
+    var fromKey = ymd(from), toKey = ymd(to);
     var html = '<div class="cal-scroll"><div class="cal">' +
       DOW.map(function (d) { return '<div class="dow">' + d + "</div>"; }).join("");
 
-    for (var i = 0; i < 42; i++) {
+    for (var i = 0; i < cells; i++) {
       var day = new Date(start);
       day.setDate(start.getDate() + i);
       var key = ymd(day);
-      var out = day.getMonth() !== today.getMonth();
       var isToday = key === ymd(today);
 
-      html += '<div class="day' + (out ? " out" : "") + (isToday ? " today" : "") + '">' +
-        '<span class="d">' + day.getDate() + "</span>" +
+      // A window can run across three months, so a bare day number is
+      // ambiguous -- name the month on its 1st and on the opening cell.
+      var num = (i === 0 || day.getDate() === 1)
+        ? MONTH[day.getMonth()] + " " + day.getDate()
+        : day.getDate();
+
+      html += '<div class="day' +
+          (key < fromKey || key > toKey ? " out" : "") +
+          (isToday ? " today" : "") + '">' +
+        '<span class="d">' + num + "</span>" +
         (byDay[key] || []).map(evChip).join("") +
       "</div>";
     }
@@ -147,28 +193,49 @@ Site.nav();
     return html + "</div>";
   }
 
+  function dayLabel(d) {
+    return MONTH[d.getMonth()] + " " + d.getDate();
+  }
+
   function drawEvents() {
     if (!evData) return;
 
     var today = new Date();
     var shown = (evData.events || []).filter(evKind);
     var range = document.getElementById("ev-range").value;
+    var win = spanFor(range, today);
 
     document.getElementById("ev-body").innerHTML =
-      (range === "week" ? renderWeek(shown, today) : renderMonth(shown, today)) +
+      (range === "week"
+        ? renderWeek(shown, today)
+        : renderSpan(shown, today, win[0], win[1])) +
       '<div class="legend">' +
         '<span class="e">Earnings</span><span class="d">Ex-dividend</span>' +
         '<span class="f">Fed</span><span class="m">Macro</span>' +
+        '<span class="h">Market holiday</span>' +
       "</div>";
 
-    var counts = { earnings: 0, exdiv: 0, fed: 0, macro: 0 };
+    // Count what the window actually holds, not what the file holds -- the
+    // file runs past the window and a count that includes December would
+    // describe a calendar the reader cannot see.
+    var fromKey = range === "week" ? ymd(weekStart(today)) : ymd(win[0]);
+    var toKey = range === "week"
+      ? ymd(new Date(weekStart(today).getFullYear(),
+                     weekStart(today).getMonth(),
+                     weekStart(today).getDate() + 6))
+      : ymd(win[1]);
+
+    var counts = { earnings: 0, exdiv: 0, fed: 0, macro: 0, holiday: 0 };
     (evData.events || []).forEach(function (e) {
+      if (e.date < fromKey || e.date > toKey) return;
       if (counts[e.type] !== undefined) counts[e.type]++;
     });
     document.getElementById("ev-status").innerHTML =
-      "<b>" + esc(evData.generatedLabel || "") + "</b><br>" +
+      "<b>" + esc(dayLabel(parseDay(fromKey)) + " \u2013 " +
+                  dayLabel(parseDay(toKey))) + "</b><br>" +
       counts.earnings + " earnings &middot; " + counts.exdiv + " ex-dividend &middot; " +
-      (counts.fed + counts.macro) + " macro/Fed";
+      (counts.fed + counts.macro + counts.holiday) + " macro/Fed &middot; " +
+      "dates as of " + esc(evData.generatedLabel || "");
   }
   function loadEvents() {
     if (evLoaded) { drawEvents(); return; }

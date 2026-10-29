@@ -1811,3 +1811,67 @@ That is the rule commit a19008c put in; this is the first time it has been appli
 and checked — no crossed bands, no clipped labels, flows proportional. `financials.json` parses.
 The SNDK card was loaded in the browser: chip, header "FQ1 FY27 quarter ended Oct 2, 2026 · 8-K
 filed Oct 29, 2026", KPIs $11,031M / 85% / 80% / $8,101M, and the live chart draws.
+
+## 2026-10-29 — Events calendar: a window that starts behind today
+
+**Source**: nyse.com/markets/hours-calendars (read 2026-10-29) for the market closures. Ticker
+dates from stockanalysis.com via `quotes.py --events`.
+
+The Events tab opened on the current calendar month, drawn as a fixed 42-cell grid anchored on the
+1st. On Oct 29 that showed Sep 27 – Nov 7: one week of November, and nothing of the back half of
+the month. The request was a window running from Oct 26 through the whole of November.
+
+**The page now draws an arbitrary span rather than a month.** `renderMonth` became `renderSpan`,
+which takes two inclusive calendar days, widens them out to whole weeks, and computes its own cell
+count. `spanFor()` names the windows: "This month" is unchanged, and the new default, **"This week
++ next month"**, runs from the Sunday of the current week to the last day of the following month —
+Oct 25 to Nov 30 today. It is deliberately not anchored on the 1st. The week behind today holds the
+quarter that just reported, and reading it beside what is still scheduled is the point of the page;
+a month view drops those the moment the month turns.
+
+Three things had to change with it:
+
+- **Cell counting is calendar arithmetic, not clock arithmetic.** `(last - start) / 86400000` is an
+  hour out across the November 1 DST change, which rounds to a 43rd cell and breaks the
+  seven-column grid for the rest of the year. `dayDiff()` subtracts `Date.UTC(y, m, d)` triples
+  instead. This is the same trap the file's existing `parseDay()` comment warns about, in a
+  different place.
+- **`out` now means outside the window**, not "a different month from today" — otherwise the
+  default view dimmed all of November.
+- **The day number names its month** on the 1st and on the opening cell, because a window can run
+  across three months and a bare "3" is then ambiguous.
+
+The status line now reads the window it is showing (`Oct 25 – Nov 30`) and counts only the events
+inside it, with the fetch date moved to the end as "dates as of". It previously counted the whole
+file, which includes December, and so described a calendar the reader could not see.
+
+**The refresher had to change first, or the widened window would have been empty behind today.**
+`refresh_events()` dropped every date earlier than today. That rule exists because the source
+publishes one date per field with no flag saying whether it is the next one or the last one — but
+the ambiguity only runs forward. A future date may be a stale leftover; **a past date is a fact**,
+the day the company reported. So `KEEP_PAST_DAYS = 10` now bounds how far back the calendar keeps
+one, and a past date already in the file survives even when the run refreshes that symbol: the
+source swaps in the next date as soon as a company reports, and the day it actually reported is
+then unrecoverable from the feed. Without that, this run would have deleted the Oct 28 and Oct 29
+earnings — GOOG, MSFT, NOW, GEV, SKHY, VRT, then AMZN, INTC, COIN, MSTR, SNDK — the week the
+window was widened to show.
+
+**The refresh then put 17 more events on the calendar**, 49 ticker entries to 66. The week behind
+today filled in: VZ on Oct 26, BA and V on Oct 27, and the ASML, GEV and V ex-dividends — all
+dates the old rule had thrown away. The one that matters most is **INTU on Nov 19**, which had no
+calendar entry at all; it is a favorite and the employer, and the Morning Brief covers it every
+day.
+
+**Six favorites still have no earnings entry and none was invented.** TSLA (Oct 21), META (Oct 21)
+and SPCX (Oct 20) are in the file but fall behind the default window, which opens on Oct 25 — the
+month view shows them. **MU, SMH and NBIS return no earnings date from the source at all.** SMH is
+an ETF and has none to give. MU and NBIS should have one, so that is either a parse miss in
+`cell()` or a field the source is not publishing for them; it needs a look rather than a guess.
+NBIS is the live one — a favorite with an open position and a Q3 report due in November that the
+calendar cannot currently show.
+
+**Four market closures added** as a new curated `holiday` type, which `quotes.py` preserves and
+never fetches: Thanksgiving (Nov 26, closed), the day after (Nov 27, 1:00 pm ET), Christmas Eve
+(Dec 24, 1:00 pm ET) and Christmas Day (Dec 25, closed). The chip is deliberately colourless and
+italic so a closure reads as an absence of trading rather than as another event competing with the
+earnings around it.

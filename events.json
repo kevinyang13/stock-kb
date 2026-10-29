@@ -1,22 +1,112 @@
 {
- "generated": "2026-10-28T17:23:10",
- "generatedLabel": "Oct 28, 2026",
- "note": "Ticker dates are the next confirmed date published by the source. Symbols whose published date has already passed have no confirmed next date and are omitted rather than estimated.",
+ "generated": "2026-10-29T14:52:21",
+ "generatedLabel": "Oct 29, 2026",
+ "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
  "events": [
+  {
+   "date": "2026-10-20",
+   "type": "earnings",
+   "ticker": "GE",
+   "title": "GE earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-20",
+   "type": "earnings",
+   "ticker": "NFLX",
+   "title": "NFLX earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-20",
+   "type": "earnings",
+   "ticker": "SPCX",
+   "title": "SPCX earnings",
+   "fav": true
+  },
+  {
+   "date": "2026-10-20",
+   "type": "exdiv",
+   "ticker": "DELL",
+   "title": "DELL ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-10-21",
+   "type": "earnings",
+   "ticker": "IBM",
+   "title": "IBM earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-21",
+   "type": "earnings",
+   "ticker": "META",
+   "title": "META earnings",
+   "fav": true
+  },
+  {
+   "date": "2026-10-21",
+   "type": "earnings",
+   "ticker": "T",
+   "title": "T earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-21",
+   "type": "earnings",
+   "ticker": "TSLA",
+   "title": "TSLA earnings",
+   "fav": true
+  },
+  {
+   "date": "2026-10-22",
+   "type": "earnings",
+   "ticker": "PHM",
+   "title": "PHM earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-26",
+   "type": "earnings",
+   "ticker": "VZ",
+   "title": "VZ earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-27",
+   "type": "earnings",
+   "ticker": "BA",
+   "title": "BA earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-27",
+   "type": "earnings",
+   "ticker": "V",
+   "title": "V earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-27",
+   "type": "exdiv",
+   "ticker": "ASML",
+   "title": "ASML ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-10-27",
+   "type": "exdiv",
+   "ticker": "GEV",
+   "title": "GEV ex-dividend",
+   "fav": false
+  },
   {
    "date": "2026-10-27",
    "type": "fed",
    "ticker": null,
    "title": "FOMC meeting, day 1",
    "note": "Oct 27-28 meeting",
-   "fav": false
-  },
-  {
-   "date": "2026-10-28",
-   "type": "fed",
-   "ticker": null,
-   "title": "FOMC decision",
-   "note": "Rate decision, no SEP",
    "fav": false
   },
   {
@@ -62,19 +152,11 @@
    "fav": false
   },
   {
-   "date": "2026-10-29",
-   "type": "macro",
+   "date": "2026-10-28",
+   "type": "fed",
    "ticker": null,
-   "title": "GDP Q3, advance estimate",
-   "note": "8:30am ET — BEA first read on Q3 growth",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "macro",
-   "ticker": null,
-   "title": "PCE (September)",
-   "note": "8:30am ET — Personal Income and Outlays; Fed's preferred gauge",
+   "title": "FOMC decision",
+   "note": "Rate decision, no SEP",
    "fav": false
   },
   {
@@ -113,6 +195,22 @@
    "fav": true
   },
   {
+   "date": "2026-10-29",
+   "type": "macro",
+   "ticker": null,
+   "title": "GDP Q3, advance estimate",
+   "note": "8:30am ET — BEA first read on Q3 growth",
+   "fav": false
+  },
+  {
+   "date": "2026-10-29",
+   "type": "macro",
+   "ticker": null,
+   "title": "PCE (September)",
+   "note": "8:30am ET — Personal Income and Outlays; Fed's preferred gauge",
+   "fav": false
+  },
+  {
    "date": "2026-10-30",
    "type": "earnings",
    "ticker": "CCJ",
@@ -142,14 +240,6 @@
   },
   {
    "date": "2026-11-03",
-   "type": "macro",
-   "ticker": null,
-   "title": "JOLTS (September)",
-   "note": "10:00am ET — job openings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-03",
    "type": "earnings",
    "ticker": "AMD",
    "title": "AMD earnings",
@@ -175,6 +265,14 @@
    "ticker": "SMCI",
    "title": "SMCI earnings",
    "fav": true
+  },
+  {
+   "date": "2026-11-03",
+   "type": "macro",
+   "ticker": null,
+   "title": "JOLTS (September)",
+   "note": "10:00am ET — job openings",
+   "fav": false
   },
   {
    "date": "2026-11-04",
@@ -255,17 +353,17 @@
   },
   {
    "date": "2026-11-06",
-   "type": "macro",
-   "ticker": null,
-   "title": "Employment Situation (October)",
-   "note": "Jobs report, 8:30am ET",
+   "type": "earnings",
+   "ticker": "VST",
+   "title": "VST earnings",
    "fav": false
   },
   {
    "date": "2026-11-06",
-   "type": "earnings",
-   "ticker": "VST",
-   "title": "VST earnings",
+   "type": "macro",
+   "ticker": null,
+   "title": "Employment Situation (October)",
+   "note": "Jobs report, 8:30am ET",
    "fav": false
   },
   {
@@ -298,14 +396,6 @@
   },
   {
    "date": "2026-11-10",
-   "type": "macro",
-   "ticker": null,
-   "title": "CPI (October)",
-   "note": "Consumer prices, 8:30am ET",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
    "type": "earnings",
    "ticker": "CRWV",
    "title": "CRWV earnings",
@@ -327,13 +417,6 @@
   },
   {
    "date": "2026-11-10",
-   "type": "exdiv",
-   "ticker": "IBM",
-   "title": "IBM ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
    "type": "earnings",
    "ticker": "QBTS",
    "title": "QBTS earnings",
@@ -344,6 +427,28 @@
    "type": "earnings",
    "ticker": "RGTI",
    "title": "RGTI earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "exdiv",
+   "ticker": "IBM",
+   "title": "IBM ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "exdiv",
+   "ticker": "V",
+   "title": "V ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "macro",
+   "ticker": null,
+   "title": "CPI (October)",
+   "note": "Consumer prices, 8:30am ET",
    "fav": false
   },
   {
@@ -361,19 +466,18 @@
    "fav": false
   },
   {
+   "date": "2026-11-12",
+   "type": "earnings",
+   "ticker": "SPCE",
+   "title": "SPCE earnings",
+   "fav": false
+  },
+  {
    "date": "2026-11-13",
    "type": "macro",
    "ticker": null,
    "title": "PPI (October)",
    "note": "Producer prices, 8:30am ET",
-   "fav": false
-  },
-  {
-   "date": "2026-11-17",
-   "type": "macro",
-   "ticker": null,
-   "title": "Advance Retail Sales (October)",
-   "note": "8:30am ET — Census advance report",
    "fav": false
   },
   {
@@ -391,12 +495,27 @@
    "fav": true
   },
   {
+   "date": "2026-11-17",
+   "type": "macro",
+   "ticker": null,
+   "title": "Advance Retail Sales (October)",
+   "note": "8:30am ET — Census advance report",
+   "fav": false
+  },
+  {
    "date": "2026-11-18",
    "type": "fed",
    "ticker": null,
    "title": "FOMC minutes (Oct 27-28 meeting)",
    "note": "2:00pm ET",
    "fav": false
+  },
+  {
+   "date": "2026-11-19",
+   "type": "earnings",
+   "ticker": "INTU",
+   "title": "INTU earnings",
+   "fav": true
   },
   {
    "date": "2026-11-19",
@@ -429,6 +548,22 @@
    "fav": false
   },
   {
+   "date": "2026-11-26",
+   "type": "holiday",
+   "ticker": null,
+   "title": "Markets closed - Thanksgiving",
+   "note": "NYSE and Nasdaq closed all day",
+   "fav": false
+  },
+  {
+   "date": "2026-11-27",
+   "type": "holiday",
+   "ticker": null,
+   "title": "Early close 1:00 pm ET",
+   "note": "Day after Thanksgiving; 1:15 pm for eligible options",
+   "fav": false
+  },
+  {
    "date": "2026-12-03",
    "type": "exdiv",
    "ticker": "QCOM",
@@ -457,6 +592,22 @@
    "ticker": "TSM",
    "title": "TSM ex-dividend",
    "fav": true
+  },
+  {
+   "date": "2026-12-24",
+   "type": "holiday",
+   "ticker": null,
+   "title": "Early close 1:00 pm ET",
+   "note": "Christmas Eve; 1:15 pm for eligible options",
+   "fav": false
+  },
+  {
+   "date": "2026-12-25",
+   "type": "holiday",
+   "ticker": null,
+   "title": "Markets closed - Christmas Day",
+   "note": "NYSE and Nasdaq closed all day",
+   "fav": false
   }
  ]
 }
