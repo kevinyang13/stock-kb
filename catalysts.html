@@ -6,7 +6,7 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Catalysts</title>
-<link rel="stylesheet" href="assets/site.css?v=1793194767">
+<link rel="stylesheet" href="assets/site.css?v=1793243015">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 
 <footer>Prices are whatever the last reload returned &middot; not investment advice</footer>
 
-<script src="assets/site.js?v=1793194767"></script>
+<script src="assets/site.js?v=1793243015"></script>
 <script>
 Site.nav();
 
@@ -87,7 +87,7 @@ Site.nav();
 
     // day moves for just these tickers, then redraw
     var syms = items.map(function (n) { return n.t; });
-    Site.fromStockAnalysis(syms, function (sym, price, pct) {
+    Site.prices(syms, function (sym, price, pct) {
       quotes[sym] = { price: price, pct: pct };
     }, function () {}).then(render);
   }).catch(function (e) {

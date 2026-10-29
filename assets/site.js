@@ -89,7 +89,9 @@ var Site = (function () {
 
   // One pass over a list of symbols. Anything that does not come back with a
   // price is returned as a miss rather than written off, so it can be retried.
-  function quotePass(syms, lanes, onQuote) {
+  // `state.reached` records whether the host answered at all, which is what
+  // separates a throttled run from one the browser is not allowed to make.
+  function quotePass(syms, lanes, onQuote, state) {
     var next = 0, missed = [];
 
     function pump() {
@@ -98,7 +100,10 @@ var Site = (function () {
 
       return fetch("https://stockanalysis.com/api/quotes/s/" +
                    encodeURIComponent(sym.toLowerCase()), { cache: "no-store" })
-        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (r) {
+          if (state) state.reached = true;   // a reply, even a 404, is contact
+          return r.ok ? r.json() : null;
+        })
         .then(function (j) {
           var d = j && j.status === 200 ? j.data : null;
           if (d && isFinite(d.p)) {
@@ -123,15 +128,24 @@ var Site = (function () {
   // A hundred symbols in quick succession can get the whole run rate-limited,
   // and a limited request looks exactly like a symbol with no data. So retry
   // the misses twice, slower and narrower each time, before calling them dry.
+  //
+  // Unless nothing answered at all: stockanalysis.com sends no CORS header to
+  // the published origin, so from GitHub Pages every one of these requests is
+  // blocked before it leaves the browser. Retrying a wall is just six seconds
+  // of waiting for the same nothing, so a shutout gives up immediately.
   function fromStockAnalysis(syms, onQuote, onProgress) {
-    return quotePass(syms, LANES, onQuote)
+    var state = { reached: false };
+
+    return quotePass(syms, LANES, onQuote, state)
       .then(function (missed) {
+        if (!state.reached) return syms.slice();   // blocked, not throttled
         if (!missed.length) return [];
         onProgress(syms.length - missed.length, syms.length, "retrying " + missed.length);
         return wait(1500).then(function () { return quotePass(missed, 3, onQuote); });
       })
       .then(function (missed) {
         if (!missed.length) return [];
+        if (!state.reached) return missed;
         onProgress(syms.length - missed.length, syms.length, "retrying " + missed.length);
         return wait(4000).then(function () { return quotePass(missed, 2, onQuote); });
       })
@@ -155,6 +169,109 @@ var Site = (function () {
       });
   }
 
+  // Live quotes, straight from the browser. Both sources only answer a page
+  // served from localhost -- stockanalysis.com allowlists it, and the proxy
+  // only exists when quotes.py is the server -- so on the published site
+  // this returns nothing and the snapshot below is what the page shows.
+  function fetchQuotes(syms, onQuote, onProgress) {
+    onProgress = onProgress || function () {};
+    return fromStockAnalysis(syms, onQuote, onProgress).then(function (hits) {
+      if (hits) return { hits: hits, source: "stockanalysis.com" };
+      return fromProxy(syms, onQuote).then(function (n) {
+        return { hits: n, source: "local proxy" };
+      });
+    });
+  }
+
+  // prices.json: a committed snapshot, written by whatever can actually reach
+  // a quote feed. Shape, so any writer can produce it:
+  //
+  //   { "generated": "2026-10-28T23:26:00Z",      ISO 8601, required
+  //     "generatedLabel": "Oct 28, 2026, 7:26 PM EDT",   shown as-is
+  //     "source": "IBKR",                         named on the page
+  //     "quotes": [ { "t": "IREN", "price": 28.84, "pct": 5.1 } ] }
+  //
+  // A symbol the writer could not price is left out rather than written with
+  // a null, so a gap reads as "no quote" instead of as a price of nothing.
+  function snapshot() {
+    return fetch("prices.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (doc) {
+        if (!doc || !doc.quotes) return null;
+        var map = {};
+        (doc.quotes || []).forEach(function (q) {
+          if (!q || !q.t || !isFinite(q.price)) return;
+          map[String(q.t).toUpperCase()] =
+            { price: Number(q.price), pct: isFinite(q.pct) ? Number(q.pct) : null };
+        });
+        doc.map = map;
+        return doc;
+      })
+      .catch(function () { return null; });
+  }
+
+  // How old the snapshot is, in words, so a stale one cannot pass for live.
+  function ageOf(iso) {
+    var then = Date.parse(iso);
+    if (!isFinite(then)) return null;
+    var mins = Math.round((Date.now() - then) / 60000);
+    if (mins < 2) return "just now";
+    if (mins < 90) return mins + " min old";
+    var hrs = Math.round(mins / 60);
+    if (hrs < 36) return hrs + "h old";
+    return Math.round(hrs / 24) + "d old";
+  }
+
+  // What the pages call. The snapshot paints first, so there is something on
+  // screen immediately and the page never hangs on "loading"; a live fetch
+  // then upgrades it where one is reachable. Never rejects -- a run that
+  // priced nothing comes back as hits: 0 and says why.
+  function prices(syms, onQuote, onProgress) {
+    onProgress = onProgress || function () {};
+
+    return snapshot().then(function (snap) {
+      var base = null;
+
+      if (snap) {
+        var hits = 0;
+        syms.forEach(function (s) {
+          var q = snap.map[String(s).toUpperCase()];
+          if (!q) return;
+          hits++;
+          onQuote(s, q.price, q.pct);
+        });
+        if (hits) {
+          base = {
+            hits: hits, live: false,
+            source: snap.source || "snapshot",
+            label: snap.generatedLabel || snap.generated || "snapshot",
+            age: ageOf(snap.generated),
+          };
+          onProgress(hits, syms.length, "snapshot");
+        }
+      }
+
+      // Nothing to show: say which half failed, rather than blaming the
+      // snapshot for a live source's error or the other way round.
+      function nothing(why) {
+        return { hits: 0, live: false, source: null, label: null, age: null,
+                 detail: "no snapshot in prices.json, and " + why };
+      }
+
+      return fetchQuotes(syms, onQuote, onProgress)
+        .then(function (res) {
+          if (res.hits) {
+            return { hits: res.hits, live: true, source: res.source, label: null, age: null };
+          }
+          return base || nothing("no quote service this page can reach");
+        })
+        .catch(function (e) {
+          return base || nothing("no quote service this page can reach (" +
+                                 e.message + ")");
+        });
+    });
+  }
+
 
   // the watchlist is a file now, not an inline block, so pages share one copy
   function watchlist() {
@@ -175,6 +292,7 @@ var Site = (function () {
     esc: esc, money: money, pctText: pctText,
     peOf: peOf, sectorRank: sectorRank, sectorLabel: sectorLabel, SECTORS: SECTORS,
     quotePass: quotePass, wait: wait,
+    prices: prices, snapshot: snapshot, fetchQuotes: fetchQuotes,
     fromStockAnalysis: fromStockAnalysis, fromProxy: fromProxy,
     watchlist: watchlist, nav: nav,
   };

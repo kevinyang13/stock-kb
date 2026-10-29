@@ -1,0 +1,13 @@
+{
+  "generated": null,
+  "generatedLabel": "no snapshot written yet",
+  "source": null,
+  "format": {
+    "generated": "ISO 8601 instant the snapshot was taken. Required -- the page dates the snapshot from this, and shows how old it is.",
+    "generatedLabel": "Human-readable version of the same instant, shown on the page as written.",
+    "source": "Who priced it: IBKR, cnbc.com, whatever fetched. Named on the page so the figures are attributable.",
+    "quotes": "[{t, price, pct}] -- ticker as it appears in watchlist.json, last price, percent change on the day. A symbol the writer could not price is LEFT OUT, never written with a null: a gap has to read as 'no quote', not as a price of nothing."
+  },
+  "why": "Every quote feed refuses a cross-origin browser request from https://kevinyang13.github.io, so the published page cannot fetch prices itself. It reads this file instead. Anything that can reach a feed may write it -- a desktop session through the IBKR connector, or a server-side fetch -- as long as it matches the shape above.",
+  "quotes": []
+}

@@ -1711,3 +1711,55 @@ full-replace: writing just the new symbol deletes the other 108.
 passes. Every figure quoted in the skill was checked against the repo rather than recalled —
 15 favorites of 109 symbols, 70 cards against 70 tracked income-statement PNGs and 206 tracked
 chart JSONs, `ibkrWatchlist` id 100, BITF and MFH carrying explicit `UNRESOLVED` notes.
+
+## 2026-10-28 — the published heatmap could not price anything, and why the fix is a file
+
+**Problem**: https://kevinyang13.github.io/stock-kb/heatmap.html painted its 109 tiles and then sat
+on "0 of 109 priced, retrying 109..." forever. Deployment was not at fault: the live `heatmap.html`
+was byte-identical to the local one and the live `watchlist.json` carried all 109 symbols.
+
+The page fetches quotes from the browser, and **every quote feed refuses a cross-origin request
+from the Pages origin**. Probed from the live page itself, all six throw `TypeError: Failed to
+fetch`: stockanalysis.com, Yahoo query1 and query2, Stooq, Nasdaq and CNBC. A control fetch to
+api.github.com from the same page returns 200, so cross-origin itself is fine — these six
+specifically refuse browsers. The in-page fallback, `fetch("api/quotes?...")`, is the `quotes.py`
+proxy, which only exists when `quotes.py` is the server, so on Pages it 404s. No source at all.
+
+It works from localhost, which is why this went unnoticed: stockanalysis.com allowlists localhost
+and 127.0.0.1, and still prices 105 of 109 there.
+
+**A correction worth recording**: CNBC was going to be the fix, on the strength of it answering
+`curl` with `access-control-allow-origin: *`. It does — to curl. A real browser gets an Akamai
+block page instead ("Access Denied ... errors.edgesuite.net"), which carries no CORS header, so
+the browser reports it as a CORS failure. Verified twice: `fetch()` from the page throws, and a
+tab navigated straight at the URL renders the Access Denied page. **curl is not a valid test for
+whether a browser can read an endpoint.** The CNBC work was written, tested and thrown away.
+
+**What landed**
+
+- `prices.json` — a committed snapshot the page reads as its price source. Shape, so that anything
+  able to reach a feed can write it: `generated` (ISO 8601), `generatedLabel`, `source`, and
+  `quotes` as `[{t, price, pct}]`. A symbol the writer could not price is **left out**, never
+  written with a null, so a gap reads as "no quote" rather than as a price of nothing. The file
+  ships empty: no writer exists yet, and the choice of feed is still open.
+- `assets/site.js` — `Site.prices()` is now the one entry point. It paints the snapshot first, so
+  the page never hangs on "loading", then upgrades it with a live fetch where one is reachable. A
+  snapshot is labelled with **its own timestamp and age** ("4h old"), never the time it was read,
+  so a stale snapshot cannot pass for live. With neither snapshot nor live source the page says
+  "prices unavailable" and names which half failed.
+- `fromStockAnalysis` now gives up instead of retrying when *nothing* answered. The two retry waves
+  exist for rate-limiting, and a CORS wall is not rate-limiting: on Pages they were six seconds of
+  waiting for the same nothing.
+- The quote code was **duplicated** in `heatmap.html` and `assets/site.js`. The copy in
+  `heatmap.html` is gone; it and `catalysts.html` both call `Site.prices` now.
+
+**Verification**: all three branches exercised in the browser. Live on localhost — 105 of 109,
+labelled `source: stockanalysis.com`. Snapshot with the live fetch stubbed out — `live: false`,
+the snapshot's own label and age, and BITF correctly absent rather than nulled. Empty and missing
+`prices.json` with no live source — `hits: 0` and "prices unavailable". Catalysts renders day
+moves as before.
+
+**Still open**: nothing writes `prices.json`. Kevin chose IBKR as the feed, but the connector is a
+claude.ai connector rather than a local MCP server, so the headless `claude -p` that launchd runs
+cannot reach it, and `get_price_snapshot` takes one symbol per call — 109 calls, no batching. The
+file format is deliberately writer-agnostic so that decision stays open.
