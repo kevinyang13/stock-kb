@@ -281,7 +281,26 @@ var Site = (function () {
     });
   }
 
+  // Holdings is a local-only page: holdings.html and holdings.json are both in
+  // .gitignore, because this repo is public and Pages serves it. So the tab is
+  // added at runtime on localhost rather than written into every page's markup,
+  // where it would ship a dead link to the live site.
+  function isLocal() {
+    return location.hostname === "localhost" ||
+           location.hostname === "127.0.0.1" ||
+           location.protocol === "file:";
+  }
+
   function nav() {
+    var tabs = document.querySelector("nav.tabs");
+    if (tabs && isLocal() && !tabs.querySelector('a[href="holdings.html"]')) {
+      var a = document.createElement("a");
+      a.className = "tab";
+      a.href = "holdings.html";
+      a.textContent = "Holdings";
+      tabs.appendChild(a);
+    }
+
     var here = location.pathname.split("/").pop() || "heatmap.html";
     [].forEach.call(document.querySelectorAll("nav.tabs a.tab"), function (a) {
       a.classList.toggle("on", a.getAttribute("href") === here);
