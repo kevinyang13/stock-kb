@@ -3,7 +3,7 @@
  "company": "GE Aerospace",
  "currency": "$",
  "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
  "reported": [
   {
    "label": "Dec '25",
@@ -46,12 +46,12 @@
   {
    "label": "Dec '26",
    "quarterEnd": "Dec 2026",
-   "estimate": 2.02,
-   "high": 2.08,
+   "estimate": 2.03,
+   "high": 2.16,
    "low": 1.95,
    "analysts": 6,
-   "up": 2,
-   "down": 1
+   "up": 3,
+   "down": 2
   }
  ]
 }

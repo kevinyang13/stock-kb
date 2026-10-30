@@ -21,6 +21,26 @@ echo "=== $(date '+%Y-%m-%d %H:%M:%S %Z') starting"
 # --autostash so uncommitted local edits do not abort the run
 git pull --quiet --rebase --autostash origin main || echo "warn: pull failed, continuing on local state"
 
+# The earnings actual-vs-estimate charts, before the brief.
+#
+# The vendor posts a quarter's actual a day or two after the company reports,
+# so a card built on results day shows the previous quarter as its newest dot
+# and stays that way until something refetches it. Nothing did: the charts only
+# moved when they were refreshed by hand. This is that refresh, and it redraws
+# only the cards whose figures actually moved.
+echo "--- earnings charts"
+python3 bin/epsrefresh.py || echo "warn: earnings refresh failed, continuing"
+
+if ! git diff --quiet -- charts examples financials.json; then
+  git add charts examples financials.json
+  git commit -q -m "chore: refresh earnings actual vs estimate" \
+    -m "Cards whose vendor figures moved since the last run. Written by bin/epsrefresh.py from bin/morning-brief.sh."
+  git push -q origin main || echo "warn: push failed"
+  echo "committed earnings chart updates"
+else
+  echo "no earnings chart changes"
+fi
+
 read -r -d '' PROMPT <<'PROMPT_END'
 Regenerate brief.json in this repo: the Morning Brief shown on the site's
 Morning Brief tab. Overwrite it completely with today's data.

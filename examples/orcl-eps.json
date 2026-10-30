@@ -3,7 +3,7 @@
  "company": "Oracle",
  "currency": "$",
  "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
  "reported": [
   {
    "label": "Nov '25",
@@ -50,7 +50,7 @@
    "estimate": 1.57,
    "high": 1.6,
    "low": 1.51,
-   "analysts": 9,
+   "analysts": 10,
    "up": 0,
    "down": 0,
    "due": "Dec 9, 2026"

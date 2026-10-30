@@ -1984,3 +1984,50 @@ share count than the share count on its own row, which every other cell in the s
 page derives every scenario from the single share count per position, so it cannot reproduce a
 figure built on two. Whether the sheet's share count or its down case is the wrong one is the
 owner's call, not this repo's. Figures withheld here on purpose: this log is published.
+
+## 2026-10-29 — The earnings charts now refresh on a schedule
+
+**Source**: Nasdaq earnings-surprise and analyst-forecast endpoints (Zacks consensus), via
+`bin/epsfetch.py`.
+
+The actual-vs-estimate dots were never on any schedule. `bin/morning-brief.sh` runs every weekday
+at 6am and regenerated `brief.json` and nothing else, so the EPS charts only moved when the fetcher
+was run by hand. That is why the four cards shipped earlier today all carried the note "the vendor
+still shows Jun '26 as the most recent actual" — the vendor posts a quarter's actual a day or two
+after the company reports, and by then nothing was looking.
+
+Refetching proved the data had been sitting there: **30 of 70 cards had new figures**, a backlog
+going back weeks. GOOG now carries its Sep '26 quarter — **$2.12 actual against $2.94 expected, a
+28% miss** — where the chart previously stopped at June.
+
+`bin/epsrefresh.py` is what the 6am job now calls, before the brief. It commits and pushes only
+when something moved. Two things it does that `epsfetch.py --all` does not:
+
+- **Redraws only the cards whose figures changed.** Re-rendering 70 charts a morning would churn
+  70 files in git for nothing.
+- **Keeps the previous `source` line when the numbers are unchanged.** Every spec records the date
+  it was read, so a refetch rewrites all 70 specs daily even when not one figure moved. The read
+  date is only interesting on a spec whose numbers it explains, so an unchanged spec keeps the date
+  it already had and stays out of the diff.
+
+**Two bugs found by looking at the output rather than the exit code.**
+
+The first was a gap: comparing each spec only against this run's own snapshot meant a spec updated
+by anything else — `epsfetch.py` by hand, the add-ticker skill — would leave a stale chart behind
+permanently, with nothing to notice. A chart older than its spec is now redrawn too.
+
+The second was caused by the fix. `epsfetch.py` rewrites every spec it touches, new read date and
+all, so by the time the mtime test ran, every spec was newer than its chart and the first full run
+redrew **67 of 70** — exactly the churn the script exists to avoid. Staleness is now read *before*
+the fetch. Git showed the redraw was wasteful rather than wrong: only 30 of those 67 charts
+differed by a byte.
+
+**The browser side was already correct** and needed nothing. `Sankey.load()` fetches with
+`cache: "no-store"`, with a comment saying why: a regenerated chart keeps its filename, so a cached
+copy would show last month's figures with no way to tell.
+
+**Noticed, not fixed.** 25 cards carry a reported surprise above 100% in absolute terms, and MSTR
+has one at 7,754%. Most are arithmetic rather than error — a loss-maker whose consensus is near
+zero produces an explosive percentage from a one-cent miss — but it is not a figure worth printing,
+and whether to suppress it below some consensus floor is a decision rather than a bug fix. The dots
+themselves show both numbers and remain honest.

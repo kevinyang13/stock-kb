@@ -162,6 +162,14 @@ def build(spec):
         ),
         xaxis=dict(
             type="category",
+            # Pin the quarter order. A category axis otherwise takes its order
+            # from the order the categories first appear across the traces,
+            # and the hairlines joining each pair are emitted grouped rather
+            # than chronologically -- so adding a quarter could silently
+            # reorder the axis. It did: six charts were drawing their quarters
+            # out of sequence, GOOG as Dec '25, Sep '26, Mar '26, Jun '26.
+            categoryorder="array",
+            categoryarray=labels,
             tickfont=dict(size=12, color=INK),
             showgrid=False, showline=False, ticks="",
         ),
@@ -191,6 +199,21 @@ def build(spec):
         width=DESIGN[0], height=DESIGN[1],
     )
     return fig
+
+
+def axis_order(fig, labels):
+    """The drawn axis must run in the spec's order, oldest quarter first.
+
+    Checked rather than trusted: this was wrong on six charts and nothing
+    caught it, because a scrambled time axis still renders perfectly.
+    """
+    drawn = []
+    for tr in fig.data:
+        for x in (tr.x or []):
+            if x is not None and x not in drawn:
+                drawn.append(x)
+    pinned = list(fig.layout.xaxis.categoryarray or [])
+    return drawn[:len(labels)] == labels or pinned == labels
 
 
 def validate(spec):
@@ -225,6 +248,13 @@ def main():
     stem = f"{spec['ticker']}-eps"
     warn = validate(spec)
     fig = build(spec)
+
+    labels = ([p["label"] for p in (spec.get("reported") or [])] +
+              [p["label"] for p in (spec.get("ahead") or [])])
+    if not axis_order(fig, labels):
+        print(f"  ! {spec['ticker']}: quarters would draw out of order",
+              file=sys.stderr)
+        warn += 1
 
     Path("out").mkdir(exist_ok=True)
     fig.write_html(f"out/{stem}.html", include_plotlyjs="cdn")

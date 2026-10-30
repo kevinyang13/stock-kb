@@ -3,7 +3,7 @@
  "company": "MDA Space",
  "currency": "$",
  "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 26, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
  "reported": [
   {
    "label": "Mar '26",
@@ -31,7 +31,7 @@
    "estimate": 0.2,
    "high": 0.22,
    "low": 0.17,
-   "analysts": 5,
+   "analysts": 6,
    "up": 0,
    "down": 0,
    "due": "Nov 05, 2026"

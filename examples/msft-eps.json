@@ -3,17 +3,8 @@
  "company": "Microsoft",
  "currency": "$",
  "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 28, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
  "reported": [
-  {
-   "label": "Sep '25",
-   "quarterEnd": "Sep 2025",
-   "reported": "Oct 29, 2025",
-   "actual": 4.13,
-   "estimate": 3.65,
-   "surprise": 0.48,
-   "surprisePct": 13.15
-  },
   {
    "label": "Dec '25",
    "quarterEnd": "Dec 2025",
@@ -40,18 +31,27 @@
    "estimate": 4.21,
    "surprise": 0.53,
    "surprisePct": 12.59
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 28, 2026",
+   "actual": 4.89,
+   "estimate": 4.71,
+   "surprise": 0.18,
+   "surprisePct": 3.82
   }
  ],
  "ahead": [
   {
-   "label": "Sep '26",
-   "quarterEnd": "Sep 2026",
-   "estimate": 4.71,
-   "high": 4.84,
-   "low": 4.62,
-   "analysts": 14,
-   "up": 1,
-   "down": 2
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 4.84,
+   "high": 4.95,
+   "low": 4.71,
+   "analysts": 13,
+   "up": 2,
+   "down": 1
   }
  ]
 }
