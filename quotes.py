@@ -163,6 +163,52 @@ def from_yahoo(symbols):
 SOURCES = [("cnbc", from_cnbc), ("nasdaq", from_nasdaq), ("yahoo", from_yahoo)]
 
 
+def extended(symbols, pause=0.0):
+    """Pre-market and after-hours marks, where the session is running.
+
+    None of the price sources above carries an extended-hours quote.
+    stockanalysis's quote endpoint does: `ep` is the extended price, `ecp` its
+    percent move off the regular close, `eu` the stamp it was read at, `es`
+    which session it is, and `ms` whether the regular market is open. They are
+    null while the regular session is trading, which is correct rather than a
+    failure -- there is no after-hours price at noon.
+
+    One request per symbol, so this is only worth doing for a short list.
+    """
+    out = {}
+
+    def one(sym):
+        try:
+            req = urllib.request.Request(
+                f"https://stockanalysis.com/api/quotes/s/{sym.lower()}",
+                headers={"User-Agent": UA, "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=12) as r:
+                d = (json.loads(r.read().decode("utf-8", "replace"))
+                     .get("data") or {})
+        except Exception:
+            return
+        if not d.get("e") or d.get("ep") in (None, ""):
+            with lock:
+                out[sym] = {"marketState": d.get("ms")}
+            return
+        with lock:
+            out[sym] = {
+                "extPrice": d.get("ep"),
+                "extPct": d.get("ecp"),
+                "extAsOf": d.get("eu"),
+                "extSession": d.get("es"),
+                "marketState": d.get("ms"),
+            }
+
+    lock = threading.Lock()
+    threads = [threading.Thread(target=one, args=(s,)) for s in symbols]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    return out
+
+
 def collect(symbols):
     """Try each source, keep whatever it returns, and pass the still-missing
     symbols to the next one. Reports every source that contributed."""
@@ -180,11 +226,20 @@ def collect(symbols):
             found.update(got)
             missing = [s for s in missing if s not in found]
 
+    # Extended-hours marks come from a different feed and are additive: a
+    # failure here must not cost the regular quote that was already found.
+    try:
+        ext = extended([s for s in symbols if s in found])
+    except Exception:
+        ext = {}
+
     quotes = []
     for s in symbols:
         if s in found:
             price, pct = found[s]
-            quotes.append({"symbol": s, "price": round(price, 2), "pct": round(pct, 2)})
+            q = {"symbol": s, "price": round(price, 2), "pct": round(pct, 2)}
+            q.update(ext.get(s) or {})
+            quotes.append(q)
         else:
             quotes.append({"symbol": s, "error": "not found"})
 
