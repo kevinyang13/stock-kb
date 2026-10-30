@@ -2016,15 +2016,54 @@ The first was a gap: comparing each spec only against this run's own snapshot me
 by anything else — `epsfetch.py` by hand, the add-ticker skill — would leave a stale chart behind
 permanently, with nothing to notice. A chart older than its spec is now redrawn too.
 
-The second was caused by the fix. `epsfetch.py` rewrites every spec it touches, new read date and
-all, so by the time the mtime test ran, every spec was newer than its chart and the first full run
-redrew **67 of 70** — exactly the churn the script exists to avoid. Staleness is now read *before*
-the fetch. Git showed the redraw was wasteful rather than wrong: only 30 of those 67 charts
-differed by a byte.
+The second was caused by the fix, and took two goes to kill. `epsfetch.py` rewrites every spec it
+touches, new read date and all, so by the time the mtime test ran, every spec was newer than its
+chart and the first full run redrew **67 of 70** — exactly the churn the script exists to avoid.
+Git showed it was wasteful rather than wrong: only 30 of those 67 charts differed by a byte.
+
+Moving the mtime check to before the fetch did not fix it either, and the verification run that
+was supposed to prove it was itself invalid — it had a `git stash` and `stash pop` immediately
+before it, which rewrites every modified file with a fresh mtime in arbitrary order. That accident
+found the real flaw: **`morning-brief.sh` runs `git pull` before the refresh**, and a pull resets
+mtimes the same way, so on any morning the repo had moved the job would have redrawn all 70 charts
+and committed them.
+
+So staleness is **content, not time**. `epsdots.py` stamps a `specDigest` into each chart naming
+the figures it was drawn from, and `epsrefresh.py` compares that. A pull, a checkout or a `touch`
+cannot fake it, and because the digest ignores the read-date line it is immune to that churn by
+construction — which let the before-the-fetch snapshot be deleted again. Verified by touching all
+67 specs to the current time: 0 charts considered stale.
 
 **The browser side was already correct** and needed nothing. `Sankey.load()` fetches with
 `cache: "no-store"`, with a comment saying why: a regenerated chart keeps its filename, so a cached
 copy would show last month's figures with no way to tell.
+
+**An estimate with no actual meant two different things and drew identically.** A quarter can be
+unreported, or reported with the vendor not yet having posted the figure — Zacks runs a day or
+more behind a results release. The second case put an apparently untouched earnings chart beside
+an income statement already showing that quarter's results, which reads as a broken page. Checked
+at the source: Nasdaq's newest SNDK row is still **Jun 2026, reported 8/5/2026**, and its
+earnings-date endpoint says Zacks has not supplied a date. The pipeline was right; the vendor is
+behind.
+
+So a pending quarter the company has already reported is now labelled **"reported / awaiting
+vendor"** on the chart, with a hover that says the actual is withheld rather than guessed. The
+test reuses `events.json`, which since this morning keeps a ticker's earnings date for ten days
+after it passes: an earnings date later than anything the vendor has posted means the vendor is
+behind. It flagged exactly the five names that reported on Oct 29 — AMZN, COIN, INTC, MSTR, SNDK —
+and none of the five that reported on Oct 28, whose actuals the vendor already carries.
+
+**The actual was deliberately not taken from the 8-K.** It is on the same card, in the income
+statement. But the estimate dots are the street's adjusted EPS and the filing's figure is GAAP;
+plotting one against the other is what commit a19008c forbids, and it would manufacture a large
+beat or miss out of a basis mismatch. An empty column that explains itself is the honest answer.
+
+**The refresh was also hiding its own failures.** It printed only the fetcher's summary line, so
+a run reported "failed 3" without naming them — and the failure lines go to stderr, which exits
+zero and was being dropped. A daily job that will not say which tickers failed is how this rotted
+in the first place. They are now printed. The three are permanent and legitimate: Nintendo (7974)
+is a Japanese listing absent from Nasdaq's US endpoints, ARQQ has no earnings-surprise record, and
+XNDU has no reported quarters yet.
 
 **Noticed, not fixed.** 25 cards carry a reported surprise above 100% in absolute terms, and MSTR
 has one at 7,754%. Most are arithmetic rather than error — a loss-maker whose consensus is near

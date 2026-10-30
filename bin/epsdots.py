@@ -14,6 +14,7 @@ the income statement on the same card. bin/epsfetch.py writes that warning
 into the spec and it is repeated in the hover, because two EPS figures on one
 card invite exactly the wrong comparison.
 """
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -96,6 +97,14 @@ def ahead_tip(p, cur):
         rows.append(("estimates", f"{p['analysts']}{tail}"))
     if p.get("due"):
         rows.append(("due", p["due"]))
+    # Reported, but the vendor has not posted the figure. Without this the
+    # column is indistinguishable from a quarter that is simply still ahead,
+    # on a card whose income statement already shows the quarter's results.
+    if p.get("awaitingVendor"):
+        return block(f"{p['label']} · reported, awaiting the vendor", rows,
+                     ("<i>the company has reported this quarter;</i>",
+                      "<i>the vendor has not posted its actual yet,</i>",
+                      "<i>so no dot is drawn rather than a guess</i>"))
     return block(f"{p['label']} · not reported yet", rows,
                  ("<i>no actual yet</i>",))
 
@@ -146,6 +155,22 @@ def build(spec):
         hovertemplate="%{customdata}<extra></extra>",
     )
 
+    # A quarter the company has reported but the vendor has not posted gets a
+    # caret under its estimate. The hollow dot alone reads as "nothing has
+    # happened", which is wrong and looks like the chart is broken when the
+    # income statement beside it already shows the quarter.
+    waiting = [p for p in ahead if p.get("awaitingVendor")]
+    if waiting:
+        fig.add_scatter(
+            x=[p["label"] for p in waiting],
+            y=[p["estimate"] for p in waiting],
+            mode="text", showlegend=False, hoverinfo="skip",
+            # leading blank line so the first word clears the hollow dot
+            text=["<br>reported<br>awaiting vendor"] * len(waiting),
+            textposition="bottom center",
+            textfont=dict(size=9.5, color="#7c858e"),
+        )
+
     vals = [v for p in done for v in (p["actual"], p["estimate"])] + \
            [p["estimate"] for p in ahead] + \
            [v for p in ahead for v in (p.get("low"), p.get("high")) if v is not None]
@@ -170,6 +195,10 @@ def build(spec):
             # out of sequence, GOOG as Dec '25, Sep '26, Mar '26, Jun '26.
             categoryorder="array",
             categoryarray=labels,
+            # Room past the last column for the "awaiting vendor" label, which
+            # sits under the final estimate and would otherwise be cut off by
+            # the plot edge.
+            range=[-0.6, len(labels) - 1 + (0.9 if waiting else 0.6)],
             tickfont=dict(size=12, color=INK),
             showgrid=False, showline=False, ticks="",
         ),
@@ -199,6 +228,17 @@ def build(spec):
         width=DESIGN[0], height=DESIGN[1],
     )
     return fig
+
+
+def spec_digest(spec):
+    """A fingerprint of the figures a chart is drawn from.
+
+    `source` is left out: it records the date the spec was read, which changes
+    on every fetch and says nothing about whether the chart would differ.
+    """
+    body = {k: v for k, v in spec.items() if k != "source"}
+    return hashlib.sha256(
+        json.dumps(body, sort_keys=True, default=str).encode()).hexdigest()[:16]
 
 
 def axis_order(fig, labels):
@@ -265,6 +305,12 @@ def main():
         j = fig.to_plotly_json()
         lay = j["layout"]
         j["design"] = {"width": lay.pop("width"), "height": lay.pop("height")}
+        # Which spec figures this chart was drawn from. bin/epsrefresh.py
+        # compares it to decide whether a redraw is needed. It used to compare
+        # file mtimes, which a git pull or checkout resets -- so the scheduled
+        # job, which pulls first, would redraw all 70 charts some mornings for
+        # no reason. Content cannot be reset by touching a file.
+        j["specDigest"] = spec_digest(spec)
         (charts / f"{stem}.json").write_text(
             json.dumps(j, separators=(",", ":"), default=str))
 

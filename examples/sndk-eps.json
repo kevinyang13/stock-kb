@@ -54,7 +54,8 @@
    "low": 45.3,
    "analysts": 4,
    "up": 1,
-   "down": 0
+   "down": 0,
+   "awaitingVendor": true
   }
  ]
 }

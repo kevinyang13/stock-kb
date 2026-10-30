@@ -20,6 +20,7 @@ Two things it does that a plain `epsfetch.py --all` does not:
   a spec whose numbers it explains, so an unchanged spec keeps the date it
   already had and stays out of the diff.
 """
+import hashlib
 import json
 import subprocess
 import sys
@@ -44,12 +45,29 @@ def digest(path):
     return json.dumps(spec, sort_keys=True), src
 
 
+def spec_digest(spec):
+    """Must match bin/epsdots.py's, which stamps it into the chart it draws."""
+    body = {k: v for k, v in spec.items() if k != "source"}
+    return hashlib.sha256(
+        json.dumps(body, sort_keys=True, default=str).encode()).hexdigest()[:16]
+
+
 def stale(ticker, spec_path):
-    """Is the drawn chart missing, or older than the spec it is drawn from?"""
+    """Is the drawn chart missing, or drawn from figures the spec no longer has?
+
+    Compared by content, not by modification time. git rewrites a file's mtime
+    on pull and checkout, and the scheduled job pulls before it runs, so an
+    mtime test redrew all 70 charts on any morning the repo had moved.
+    """
     chart = ROOT / "charts" / f"{ticker}-eps.json"
     if not chart.exists():
         return True
-    return chart.stat().st_mtime < spec_path.stat().st_mtime
+    try:
+        drawn = json.loads(chart.read_text()).get("specDigest")
+        want = spec_digest(json.loads(spec_path.read_text()))
+    except (OSError, ValueError):
+        return True
+    return drawn != want
 
 
 def specs(only):
@@ -71,15 +89,19 @@ def main():
     only = {a.upper() for a in sys.argv[1:] if not a.startswith("-")}
 
     before = {t: digest(p) for t, p in specs(only)}
-    # Staleness has to be read BEFORE the fetch. epsfetch.py rewrites every
-    # spec it touches, new read date and all, so after it has run every spec
-    # is newer than its chart and an mtime test would redraw all 70 every day.
-    was_stale = {t for t, p in specs(only) if stale(t, p)}
 
     args = ["bin/epsfetch.py"] + (sorted(only) if only else ["--all"])
     print(f"fetching {'the named cards' if only else 'every card'} ...")
     r = run(args)
-    print(r.stdout.strip().splitlines()[-1] if r.stdout.strip() else "(no output)")
+    lines = r.stdout.strip().splitlines()
+    # Carry the fetcher's own complaints through. Printing only its summary
+    # line hid WHICH tickers failed, and a daily job that reports "failed 3"
+    # without naming them is how a dead source goes unnoticed for weeks.
+    # They arrive on stderr, which exits 0 and would otherwise be dropped.
+    for line in (r.stdout + r.stderr).splitlines():
+        if line.lstrip().startswith("!"):
+            print("  " + line.strip())
+    print(lines[-1] if lines else "(no output)")
 
     changed, restored = [], 0
     for t, p in specs(only):
@@ -90,9 +112,9 @@ def main():
         # A spec can also be updated by something other than this script --
         # epsfetch.py run by hand, or the add-ticker skill. Comparing only
         # against this run's own snapshot would leave that chart stale for
-        # good, so a chart that was older than its spec when this started is
+        # good, so a chart drawn from figures the spec no longer carries is
         # redrawn whatever moved it.
-        if t in was_stale:
+        if stale(t, p):
             changed.append((t, p))
             continue
         if was_data is not None and now_data == was_data and was_src:

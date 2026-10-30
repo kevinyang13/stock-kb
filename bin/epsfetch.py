@@ -232,6 +232,15 @@ def build(item):
     if ahead and due:
         ahead[0]["due"] = due
 
+    # An estimate with no actual means one of two very different things, and
+    # the chart drew them identically: the quarter has not been reported, or
+    # it HAS been reported and the vendor has not posted the figure yet. The
+    # second is common -- Zacks runs a day or more behind a results release,
+    # so a card can show its own filed income statement beside an earnings
+    # chart that looks like nothing happened. Say which it is.
+    if ahead and reported_since(sym, newest_report(done)):
+        ahead[0]["awaitingVendor"] = True
+
     return {
         "ticker": sym,
         "company": item["company"],
@@ -243,6 +252,49 @@ def build(item):
         "reported": done,
         "ahead": ahead,
     }
+
+
+def newest_report(done):
+    """The date of the newest quarter the vendor has actually posted."""
+    best = None
+    for p in done:
+        try:
+            d = datetime.strptime(p.get("reported", ""), "%b %d, %Y").date()
+        except ValueError:
+            continue
+        if best is None or d > best:
+            best = d
+    return best
+
+
+def reported_since(sym, vendor_date):
+    """Has this company reported since the newest quarter the vendor has?
+
+    Read from events.json, which keeps a ticker's earnings date for ten days
+    after it passes. A past date there is a fact -- the day the company
+    reported -- so a date later than anything the vendor has posted means the
+    vendor is simply behind.
+    """
+    if vendor_date is None:
+        return False
+    path = HERE / "events.json"
+    if not path.exists():
+        return False
+    try:
+        events = json.loads(path.read_text()).get("events") or []
+    except (OSError, ValueError):
+        return False
+    today = datetime.now().date()
+    for e in events:
+        if e.get("ticker") != sym or e.get("type") != "earnings":
+            continue
+        try:
+            when = datetime.strptime(e["date"], "%Y-%m-%d").date()
+        except (KeyError, ValueError):
+            continue
+        if vendor_date < when <= today:
+            return True
+    return False
 
 
 def main():
