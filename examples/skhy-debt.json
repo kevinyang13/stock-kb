@@ -3,50 +3,37 @@
  "company": "SK Hynix",
  "currency": "₩",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 21113139.0,
-   "fcf": 54740949.0,
-   "cash": 26835986.0,
+   "label": "Q3 FY26",
+   "debt": 15799000.0,
+   "fcf": 42111000.0,
+   "cash": 114460000.0,
    "debt_parts": [
     {
      "label": "Short-term debt",
-     "value": 2664419.0
+     "value": 1333000.0
     },
     {
      "label": "Current portion",
-     "value": 3194454.0
+     "value": 3222000.0
     },
     {
      "label": "Long-term debt",
-     "value": 12727761.0
-    },
-    {
-     "label": "Current leases",
-     "value": 526461.0
-    },
-    {
-     "label": "Long-term leases",
-     "value": 2000044.0
+     "value": 11244000.0
     }
    ],
-   "cash_parts": [
-    {
-     "label": "Short-term investments",
-     "value": 22420619.0
-    }
-   ],
+   "cash_parts": [],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": 65412382.0
+     "value": 54781000.0
     },
     {
      "label": "Capital expenditure",
-     "value": -10671433.0
+     "value": -12670000.0
     }
    ]
   }

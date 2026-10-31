@@ -3163,51 +3163,44 @@
   {
    "t": "SKHY",
    "company": "SK Hynix",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/SKHY-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/skhy/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "reported Oct 28, 2026",
+   "img": "assets/financials/SKHY-Q3-FY26.png",
+   "source": "SK hynix 3Q26 business results",
+   "sourceUrl": "https://news.skhynix.com/en/q3-2026-business-results/",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "\u20a979.3T",
-     "s": "+257% Y/Y"
+     "v": "\u20a9104.6T",
+     "s": "+328% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "83%",
-     "s": "\u20a966.0T"
+     "v": "86%",
+     "s": "\u20a989.7T"
     },
     {
      "k": "Operating margin",
-     "v": "76%",
-     "s": "\u20a960.5T"
+     "v": "80%",
+     "s": "\u20a983.3T"
     },
     {
      "k": "Net profit",
-     "v": "\u20a993.8T",
-     "s": "118% margin"
-    },
-    {
-     "k": "P/E",
-     "v": "8.5 \u00b7 4.0",
-     "s": "trailing \u00b7 forward"
-    },
-    {
-     "k": "Dividend",
-     "v": "0.02%",
-     "s": "$0.03 a year"
+     "v": "\u20a939.8T",
+     "s": "38% margin"
     }
    ],
    "notes": [
-    "No segment split: SK Hynix reports a single semiconductor segment.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Reported in \u20a9. Margins compare with the other statements here; the absolute figures do not.",
-    "Debt and coverage, Q2 FY26: \u20a921.1T of debt against \u20a926.8T of cash and \u20a954.7T of free cash flow for the quarter. Net debt -\u20a95.7T. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, two reported quarters and the one ahead. Sep '26: $3.84 actual against $5.96 expected, missed by $2.12 (-36%). Dec '26 consensus is $7.08 from 5 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Jun '26 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 8.5 trailing, 4.0 forward; dividend $0.03 a year, 0.02% yield, last ex-dividend Aug 31, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Figures are in Korean won, as filed. SK hynix reports in Korea and files nothing with the SEC, so this card is built from the company's own 3Q26 results release rather than an EDGAR filing.",
+    "No segment split: SK hynix does not break revenue out by segment in its quarterly release.",
+    "Revenue of \u20a9104.6T is up 328% year over year and operating profit up 632%, at an 80% operating margin -- the memory cycle, with HBM4 ramping (source: SK hynix 3Q26 release).",
+    "Net profit is less than half of operating profit. \u20a932.6T of net non-operating expense sits between them: a \u20a911.6T net foreign-exchange loss and a \u20a922.9T valuation loss on investment assets. Neither describes the memory business, and the 38% net margin should be read against the 80% operating margin rather than on its own (source: SK hynix 3Q26 release).",
+    "The vendor publishes no R&D and SG&A split for this quarter, where it did for Q2 FY26, so the \u20a96.3T of operating expenses is drawn as a single band rather than split (source: stockanalysis.com).",
+    "SK hynix notes its 3Q26 results review was not finalised at the time of the release.",
+    "Debt and coverage, Q3 FY26: \u20a915.8T of debt against \u20a9114.5T of cash and \u20a942.1T of free cash flow for the quarter, so SK hynix is in a net cash position of \u20a998.7T -- which matches the net cash figure in the company's own 3Q26 release. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com, cross-checked against the SK hynix 3Q26 release).",
+    "Earnings chart: reported EPS against the street's consensus, two reported quarters and the one ahead. Sep '26: $3.84 actual against $5.96 expected, missed by $2.12 (-36%). Dec '26 consensus is $8.19 from 6 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Jun '26 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 30, 2026.",
+    "No ownership donut: SK hynix is a Korean listing with no price on or before the 13F period end, so no US manager's Form 13F names it and the slices cannot be built. This is inherent to the form, not a gap to fill."
    ],
    "debt": "SKHY-debt",
    "eps": "SKHY-eps"

@@ -2157,3 +2157,38 @@ was built. SK Hynix's Q3 figures do not reconcile below the operating line — o
 ₩83.3T less the vendor's ₩21.5T of non-operating items gives ₩61.9T against a reported pretax of
 ₩50.7T, an unexplained ₩11.2T — and the vendor publishes no R&D line for the quarter where Q2 had
 one. SK Hynix files in Korea, not with the SEC, so neither gap can be closed from EDGAR.
+
+## 2026-10-30 — SK hynix refreshed to Q3 FY26
+
+SKHY was one of the four stale cards and is now on Q3 FY26: ₩104.6T of revenue (+328% Y/Y), an 80%
+operating margin and ₩39.8T of net profit. Figures stay in won, as filed; SK hynix reports in Korea
+and files nothing with the SEC, so the card is sourced from the company's own 3Q26 release.
+
+**The reconciliation gap closed.** The vendor's non-operating line is ₩21.5T, which leaves ₩11.2T
+unexplained between operating income and the reported pretax figure. The company's release gives net
+non-operating expense of ₩32.6T — a ₩11.6T net FX loss plus a ₩22.9T valuation loss on investment
+assets — which is exactly the figure `bin/mkspec.py` derives as `net + tax − operating`. So the chart
+was right before the explanation existed; what was missing was the ability to say what the band is.
+It now says.
+
+**A unit trap caught late.** `bin/debtfetch.py` matches the balance sheet column to the period the
+card already shows, so running it before updating the card to Q3 produced the Q2 column: ₩21.1T of
+debt against ₩26.8T of cash. Re-run after the card moved, it gives ₩15.8T against ₩114.5T, a net
+cash position of ₩98.7T — which matches the net cash figure in SK hynix's own release to the
+decimal. The order of operations in the skill is a dependency chain, not a preference, and this is
+what skipping it costs. The first set of figures had already been written into a card note and had
+to be corrected.
+
+**A dangling link, caught by an audit rather than by looking.** The refresh set `own: "SKHY-own"` on
+the card out of habit. SK hynix has never had an ownership donut and cannot: there is no price on or
+before the 13F period end, so no US manager's Form 13F names it. The page rendered without
+complaint and the missing chart was only visible as an absent plot id. A sweep of all 72 cards for
+links to charts that do not exist now reports none.
+
+**A rendering defect diagnosed and then withdrawn.** The Q3 chart appeared to show the net profit
+band crossing the tax band, and `bin/sankey.py` was edited to declare the links leaving the
+operating profit node in top-to-bottom target order. Sampling the rendered pixels down three
+vertical slices showed a single green-to-pink boundary descending monotonically at every slice —
+no interleaving, before or after the edit. What looked like a crossing was two translucent bands of
+the *same* colour, tax and interest, overlapping where they sit adjacent. The renderer change was
+reverted. It touches every profit-layout card and there was no defect to justify it.
