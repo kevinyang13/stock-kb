@@ -2192,3 +2192,32 @@ vertical slices showed a single green-to-pink boundary descending monotonically 
 no interleaving, before or after the edit. What looked like a crossing was two translucent bands of
 the *same* colour, tax and interest, overlapping where they sit adjacent. The renderer change was
 reverted. It touches every profit-layout card and there was no defect to justify it.
+
+## 2026-10-30 — MSTR Q3 reported, deliberately not charted
+
+Strategy was the only one of Thursday's six reporters whose card was stale, and it is the one card
+that did not get rebuilt. The decision taken was to **recast**: move the digital-asset gain below the
+operating line, the way the Coinbase card already treats gains on crypto held for investment, so the
+chart shows the software business rather than the bitcoin mark.
+
+The figures reconcile exactly once the right source is used. MSTR's Q3 10-Q is not filed yet — the
+newest on EDGAR is Q2, from August — so the figures come from the 8-K exhibit 99.1 of Oct 29. That
+also closes a $47M hole in the vendor's version: stockanalysis omits $47,050K of interest income.
+Recast, the quarter is
+
+    operating loss (2,600) + digital asset gain 20,912,392
+      + interest net 31,670 + other 821  =  pretax 20,942,283
+
+to the dollar, in thousands.
+
+**It is not charted because the renderer cannot draw it.** The recast operating result is a $2.6M
+*loss* while net income is a $19.5bn *profit*. `bin/sankey.py`'s profit layout skips the
+gross→operating link when operating profit is not positive, which leaves the operating node emitting
+$1,409M of tax with nothing flowing in; the loss layout does not apply either, because it is selected
+on net income being negative and here it is strongly positive. Supporting a negative operating line
+with a positive net result is a real change to a renderer shared by all 72 cards, and putting it in
+a data refresh is how a shared renderer breaks quietly. The card carries a note saying Q3 is
+reported, what the figures are, and why it is still showing Q2.
+
+Drawn as filed rather than recast it would have been worse: a $125.4M revenue bar against a flow 167
+times its size.
