@@ -2115,3 +2115,45 @@ the 10-Q's five lines made the right-hand labels collide; they are drawn as thre
 and deleted, and it was not pulled in this pass. Neither was added to `ibkr-conids.json`: the IBKR
 connector is not present in the session at all, so no contract id could be resolved, and a conid is
 not something to guess. Both are gaps to close, not figures to fill in.
+
+## 2026-10-30 — refreshed the cards that had fallen a quarter behind
+
+Swept all 72 Financials cards against the vendor's newest available quarter rather than against the
+events calendar, which only keeps ten days of past earnings dates and would have missed anything
+whose feed had already rolled forward. Four cards were behind: **BA, MSTR, SKHY, VZ**, all still on
+Q2 FY26. Of the six watchlist names that reported on Thursday Oct 29 — AMZN, COIN, INTC, LLY, MSTR,
+SNDK — only MSTR was stale; the rest were built the same day they reported.
+
+**BA and VZ are now Q3 FY26.** Boeing: $24,188M revenue (+4%), $354M of operating profit and a
+$116M net loss. Verizon: $34.3B revenue (+1%), $8.65B operating profit, $5.32B net income.
+
+**A third vendor-versus-filing disagreement on the operating line, in one day.** stockanalysis puts
+Boeing's Q3 operating income at $72M; the 10-Q says $354M. The vendor omits "Income from operating
+investments, net" of $215M and classifies G&A differently. Verizon, checked the same way, reconciles
+to its 10-Q line for line. So the vendor is not uniformly wrong — it is wrong where a quarter
+carries an unusual line, which is exactly where a card is most likely to mislead. Three instances
+now (Meta, Lilly, Boeing) is enough to treat checking the operating line against the filing as
+routine rather than exceptional whenever a one-off item is present.
+
+**Boeing's SG&A on the card is a derived figure**: G&A of $1,198M net of $215M of operating
+investment income and a $1M disposition loss, because both sit inside operating income and a Sankey
+cannot draw a negative band. Same convention as the Coinbase card. The card says so.
+
+**Boeing is drawn in millions, not billions.** At one decimal in billions its $116M net loss renders
+as "$0.1B", which destroys the figure. The previous Q2 card had this problem.
+
+**A pre-existing layout bug, found and not fixed.** In the loss layout, when cost of revenue is a
+very high share of revenue and the loss is small, the net-loss node's label lands on top of the
+cost-of-revenue bar and the cost-of-revenue label is partly hidden behind it; the cost bar also runs
+off the bottom of the canvas. The published Q2 Boeing card has the identical defect, so this is not
+a regression from this refresh. It is a `bin/sankey.py` `build_loss` geometry problem that would
+affect every loss card, so it was left alone rather than changed in a data refresh.
+
+**Still outstanding: MSTR and SKHY.** Neither was rebuilt. MicroStrategy's Q3 carries a $20.9bn
+digital-asset fair-value gain that its own statement reports *inside* operating expenses as a
+credit, which would draw a $125M-revenue company with $20.9bn of operating profit; that is a
+presentation decision, not a data problem, and it is the same decision left open when the Q2 card
+was built. SK Hynix's Q3 figures do not reconcile below the operating line — operating income of
+₩83.3T less the vendor's ₩21.5T of non-operating items gives ₩61.9T against a reported pretax of
+₩50.7T, an unexplained ₩11.2T — and the vendor publishes no R&D line for the quarter where Q2 had
+one. SK Hynix files in Korea, not with the SEC, so neither gap can be closed from EDGAR.

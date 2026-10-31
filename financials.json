@@ -1275,31 +1275,36 @@
   {
    "t": "BA",
    "company": "Boeing",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/BA-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/ba/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "10-Q filed Oct 27, 2026",
+   "img": "assets/financials/BA-Q3-FY26.png",
+   "source": "Boeing Q3 2026 Form 10-Q",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/12927/000162828026067508/",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$24.6B",
-     "s": "+8% Y/Y"
+     "v": "$24,188M",
+     "s": "+4% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "10%",
-     "s": "$2.4B"
+     "v": "9%",
+     "s": "$2,167M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "1%",
+     "s": "$354M"
     },
     {
      "k": "Net loss",
-     "v": "($0.4B)",
-     "s": "(2%) margin"
+     "v": "$116M",
+     "s": "-0.5% margin"
     },
     {
      "k": "P/E",
-     "v": "18.1 \u00b7 82.5",
+     "v": "18.5 \u00b7 215.0",
      "s": "trailing \u00b7 forward"
     },
     {
@@ -1309,17 +1314,20 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2.4B + $0.4B balances against the charges on the right.",
-    "Segments: Commercial Airplanes $11.8B (+8%), Defense, Space, and Security $7.5B (+13%), Global Services $5.3B (+1%). Source: stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $48.4B of debt against $7.2B of cash and $631.0M of free cash flow for the quarter. Net debt $41.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: -$0.34 actual against -$0.21 expected, missed by $0.13 (-62%). Dec '26 consensus is $0.19 from 8 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 18.1 trailing, 82.5 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Segments: Commercial Airplanes $10,720M (-3% Y/Y), Defense, Space & Security $7,935M (+15%), Global Services $5,574M (+4%). The three sum to $24,229M against $24,188M of revenue; the $41M difference is the unallocated items line, which is negative and cannot be drawn as a band (source: 10-Q R2).",
+    "Operating profit is the 10-Q's $354M. stockanalysis reports $72M for the same quarter because it omits 'Income from operating investments, net' of $215M and classifies G&A differently. This card follows the filing (sources: 10-Q R2; stockanalysis.com).",
+    "SG&A on the card is $983M: G&A of $1,198M net of the $215M of operating investment income and a $1M loss on dispositions, both of which sit inside operating income and are credits a Sankey cannot draw as a negative band. This is the convention the Coinbase card uses.",
+    "Boeing is close to breakeven, not profitable. $354M of operating profit against $573M of interest and debt expense produces a $123M pretax loss; a $7M tax benefit leaves a $116M net loss.",
+    "The $116M net loss becomes a $203M loss attributable to common shareholders after $87M of mandatory convertible preferred stock dividends, which is the $(0.26) diluted loss per share (source: 10-Q R2).",
+    "Drawn in millions rather than billions: at one decimal in billions the net loss rounds to $0.1B, which loses the figure.",
+    "Market figures as of Oct 30, 2026: P/E 18.5 trailing, 215.0 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: -$0.34 actual against -$0.21 expected, missed by $0.13 (-62%). Dec '26 consensus is -$0.16 from 8 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 30, 2026.",
+    "Debt and coverage, Q3 FY26: $48.5B of debt against $9.5B of cash and $464.0M of free cash flow for the quarter. Net debt $39.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
-   "debt": "BA-debt",
    "eps": "BA-eps",
+   "debt": "BA-debt",
    "own": "BA-own"
   },
   {
@@ -3361,17 +3369,17 @@
   {
    "t": "VZ",
    "company": "Verizon",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/VZ-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/vz/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "10-Q filed Oct 29, 2026",
+   "img": "assets/financials/VZ-Q3-FY26.png",
+   "source": "Verizon Q3 2026 Form 10-Q",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000052/",
    "highlights": [
     {
      "k": "Revenue",
      "v": "$34.3B",
-     "s": "-1% Y/Y"
+     "s": "+1% Y/Y"
     },
     {
      "k": "Gross margin",
@@ -3380,37 +3388,39 @@
     },
     {
      "k": "Operating margin",
-     "v": "23%",
-     "s": "$7.9B"
+     "v": "25%",
+     "s": "$8.7B"
     },
     {
      "k": "Net profit",
-     "v": "$3.8B",
-     "s": "11% margin"
+     "v": "$5.3B",
+     "s": "15% margin"
     },
     {
      "k": "P/E",
-     "v": "11.2 \u00b7 8.5",
+     "v": "11.4 \u00b7 8.6",
      "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
-     "v": "6.44%",
+     "v": "6.33%",
      "s": "$2.83 a year"
     }
    ],
    "notes": [
-    "Segments: Consumer $26.2B, Business & other $8.1B",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $193.6B of debt against $1.8B of cash and $6.4B of free cash flow for the quarter. Net debt $191.9B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $1.31 actual against $1.27 expected, beat by $0.04 (+3%). Dec '26 consensus is $1.15 from 8 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 11.2 trailing, 8.5 forward; dividend $2.83 a year, 6.44% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
-    "Market figures as of Oct 26, 2026: trailing 11.0, forward 8.3. Share price over earnings, so unlike the other figures on this card it moves every session and is not from the filing (source: stockanalysis.com).",
+    "Segments: Consumer $26,432M (+1% Y/Y), Business & other $7,881M (+2%). Verizon reports Consumer $26,432M and Business $7,023M; the $858M residual is corporate and other, folded into 'Business & other' as on the previous card so the split foots to revenue exactly.",
+    "The vendor's figures reconcile to the 10-Q line for line this quarter, including the $8,650M of operating income -- unlike Boeing and Lilly in the same refresh (sources: 10-Q R2; stockanalysis.com).",
+    "Depreciation & amortization of $5,095M is 15% of revenue and the second largest cost on the card after cost of services. It grew 10% Y/Y against 1% revenue growth.",
+    "Net profit $5,320M is consolidated. $122M is attributable to noncontrolling interests, leaving $5,198M to Verizon and $1.25 diluted EPS (source: 10-Q R2).",
+    "Revenue grew 1.5% and operating income 6.7%, but interest expense rose 17% to $1,950M, so pretax income grew only 4.4%.",
+    "Market figures as of Oct 30, 2026: P/E 11.4 trailing, 8.6 forward; dividend $2.83 a year, 6.33% yield, last ex-dividend Oct 9, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $1.31 actual against $1.27 expected, beat by $0.04 (+3%). Dec '26 consensus is $1.15 from 8 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 30, 2026.",
+    "Debt and coverage, Q3 FY26: $189.0B of debt against $4.5B of cash and $7.8B of free cash flow for the quarter. Net debt $184.5B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
-   "debt": "VZ-debt",
    "eps": "VZ-eps",
+   "debt": "VZ-debt",
    "own": "VZ-own"
   },
   {

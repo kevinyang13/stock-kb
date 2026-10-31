@@ -3,7 +3,7 @@
  "company": "Boeing",
  "currency": "$",
  "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
- "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 30, 2026.",
  "reported": [
   {
    "label": "Dec '25",
@@ -46,12 +46,12 @@
   {
    "label": "Dec '26",
    "quarterEnd": "Dec 2026",
-   "estimate": 0.19,
-   "high": 0.83,
-   "low": -0.14,
+   "estimate": -0.16,
+   "high": 0.4,
+   "low": -0.88,
    "analysts": 8,
-   "up": 2,
-   "down": 1
+   "up": 0,
+   "down": 4
   }
  ]
 }

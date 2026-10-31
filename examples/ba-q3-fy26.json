@@ -1,0 +1,54 @@
+{
+ "company": "Boeing",
+ "ticker": "BA",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 24188.0,
+ "revenue_yoy": 4,
+ "segments": [
+  {
+   "name": "Commercial Airplanes",
+   "value": 10720.0,
+   "yoy": -3,
+   "note": "44% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Defense, Space, and Security",
+   "value": 7935.0,
+   "yoy": 15,
+   "note": "33% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Global Services",
+   "value": 5574.0,
+   "yoy": 4,
+   "note": "23% of revenue",
+   "color": "#c8a020"
+  }
+ ],
+ "cost_of_revenue": 22021.0,
+ "gross_profit": 2167.0,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 830.0
+  },
+  {
+   "name": "SG&A",
+   "value": 983.0
+  }
+ ],
+ "net_loss": 116.0,
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 470.0
+  }
+ ]
+}

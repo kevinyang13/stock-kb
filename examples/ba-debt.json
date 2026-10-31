@@ -3,46 +3,46 @@
  "company": "Boeing",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 48362.0,
-   "fcf": 631.0,
-   "cash": 7239.0,
+   "label": "Q3 FY26",
+   "debt": 48462.0,
+   "fcf": 464.0,
+   "cash": 9498.0,
    "debt_parts": [
     {
      "label": "Current portion",
-     "value": 4565.0
+     "value": 4569.0
     },
     {
      "label": "Long-term debt",
-     "value": 41031.0
+     "value": 41037.0
     },
     {
      "label": "Long-term leases",
-     "value": 2766.0
+     "value": 2856.0
     }
    ],
    "cash_parts": [
     {
      "label": "Short-term investments",
-     "value": 12056.0
+     "value": 11173.0
     },
     {
      "label": "Restricted cash (separate)",
-     "value": 727.0
+     "value": 43.0
     }
    ],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": 1364.0
+     "value": 1496.0
     },
     {
      "label": "Capital expenditure",
-     "value": -733.0
+     "value": -1032.0
     }
    ]
   }

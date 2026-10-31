@@ -3,50 +3,41 @@
  "company": "Verizon",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 193646.0,
-   "fcf": 6426.0,
-   "cash": 1752.0,
+   "label": "Q3 FY26",
+   "debt": 188968.0,
+   "fcf": 7801.0,
+   "cash": 4495.0,
    "debt_parts": [
     {
      "label": "Current portion",
-     "value": 23946.0
+     "value": 23889.0
     },
     {
      "label": "Long-term debt",
-     "value": 142881.0
+     "value": 142344.0
     },
     {
      "label": "Current leases",
-     "value": 4835.0
+     "value": 4772.0
     },
     {
      "label": "Long-term leases",
-     "value": 21984.0
+     "value": 17963.0
     }
    ],
-   "cash_parts": [
-    {
-     "label": "Short-term investments",
-     "value": 35.0
-    },
-    {
-     "label": "Restricted cash (separate)",
-     "value": 140.0
-    }
-   ],
+   "cash_parts": [],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": 10435.0
+     "value": 11517.0
     },
     {
      "label": "Capital expenditure",
-     "value": -4009.0
+     "value": -3716.0
     }
    ]
   }
