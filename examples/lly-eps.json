@@ -1,0 +1,57 @@
+{
+ "ticker": "LLY",
+ "company": "Eli Lilly",
+ "currency": "$",
+ "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 30, 2026.",
+ "reported": [
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 4, 2026",
+   "actual": 7.54,
+   "estimate": 6.99,
+   "surprise": 0.55,
+   "surprisePct": 7.87
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "Apr 30, 2026",
+   "actual": 8.55,
+   "estimate": 7.06,
+   "surprise": 1.49,
+   "surprisePct": 21.1
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 5, 2026",
+   "actual": 8.38,
+   "estimate": 6.01,
+   "surprise": 2.37,
+   "surprisePct": 39.43
+  },
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "reported": "Oct 29, 2026",
+   "actual": 7.48,
+   "estimate": 5.38,
+   "surprise": 2.1,
+   "surprisePct": 39.03
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Dec '26",
+   "quarterEnd": "Dec 2026",
+   "estimate": 10.46,
+   "high": 11.46,
+   "low": 9.9,
+   "analysts": 4,
+   "up": 0,
+   "down": 1
+  }
+ ]
+}

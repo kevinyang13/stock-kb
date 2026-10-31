@@ -38,7 +38,7 @@ var Site = (function () {
     "Crypto", "Mining", "Fintech",
     "Consumer Tech", "Media", "Retail",
     "Telecom", "Nuclear", "Uranium", "Power", "Energy", "Industrials",
-    "Auto", "Homebuilder",
+    "Auto", "Homebuilder", "Pharma",
     "ETF", "Fund", "Broad Market", "Leveraged", "Private Tech", "SPAC",
     "Unclassified"
   ];

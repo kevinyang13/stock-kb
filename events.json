@@ -1,8 +1,15 @@
 {
- "generated": "2026-10-29T14:52:21",
- "generatedLabel": "Oct 29, 2026",
+ "generated": "2026-10-30T19:12:20",
+ "generatedLabel": "Oct 30, 2026",
  "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
  "events": [
+  {
+   "date": "2026-10-20",
+   "type": "exdiv",
+   "ticker": "DELL",
+   "title": "DELL ex-dividend",
+   "fav": false
+  },
   {
    "date": "2026-10-20",
    "type": "earnings",
@@ -23,13 +30,6 @@
    "ticker": "SPCX",
    "title": "SPCX earnings",
    "fav": true
-  },
-  {
-   "date": "2026-10-20",
-   "type": "exdiv",
-   "ticker": "DELL",
-   "title": "DELL ex-dividend",
-   "fav": false
   },
   {
    "date": "2026-10-21",
@@ -75,16 +75,10 @@
   },
   {
    "date": "2026-10-27",
-   "type": "earnings",
-   "ticker": "BA",
-   "title": "BA earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-27",
-   "type": "earnings",
-   "ticker": "V",
-   "title": "V earnings",
+   "type": "fed",
+   "ticker": null,
+   "title": "FOMC meeting, day 1",
+   "note": "Oct 27-28 meeting",
    "fav": false
   },
   {
@@ -96,6 +90,13 @@
   },
   {
    "date": "2026-10-27",
+   "type": "earnings",
+   "ticker": "BA",
+   "title": "BA earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-27",
    "type": "exdiv",
    "ticker": "GEV",
    "title": "GEV ex-dividend",
@@ -103,10 +104,24 @@
   },
   {
    "date": "2026-10-27",
+   "type": "earnings",
+   "ticker": "HOOD",
+   "title": "HOOD earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-27",
+   "type": "earnings",
+   "ticker": "V",
+   "title": "V earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-28",
    "type": "fed",
    "ticker": null,
-   "title": "FOMC meeting, day 1",
-   "note": "Oct 27-28 meeting",
+   "title": "FOMC decision",
+   "note": "Rate decision, no SEP",
    "fav": false
   },
   {
@@ -152,11 +167,19 @@
    "fav": false
   },
   {
-   "date": "2026-10-28",
-   "type": "fed",
+   "date": "2026-10-29",
+   "type": "macro",
    "ticker": null,
-   "title": "FOMC decision",
-   "note": "Rate decision, no SEP",
+   "title": "GDP Q3, advance estimate",
+   "note": "8:30am ET — BEA first read on Q3 growth",
+   "fav": false
+  },
+  {
+   "date": "2026-10-29",
+   "type": "macro",
+   "ticker": null,
+   "title": "PCE (September)",
+   "note": "8:30am ET — Personal Income and Outlays; Fed's preferred gauge",
    "fav": false
   },
   {
@@ -183,6 +206,13 @@
   {
    "date": "2026-10-29",
    "type": "earnings",
+   "ticker": "LLY",
+   "title": "LLY earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-10-29",
+   "type": "earnings",
    "ticker": "MSTR",
    "title": "MSTR earnings",
    "fav": false
@@ -193,22 +223,6 @@
    "ticker": "SNDK",
    "title": "SNDK earnings",
    "fav": true
-  },
-  {
-   "date": "2026-10-29",
-   "type": "macro",
-   "ticker": null,
-   "title": "GDP Q3, advance estimate",
-   "note": "8:30am ET — BEA first read on Q3 growth",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "macro",
-   "ticker": null,
-   "title": "PCE (September)",
-   "note": "8:30am ET — Personal Income and Outlays; Fed's preferred gauge",
-   "fav": false
   },
   {
    "date": "2026-10-30",
@@ -240,6 +254,14 @@
   },
   {
    "date": "2026-11-03",
+   "type": "macro",
+   "ticker": null,
+   "title": "JOLTS (September)",
+   "note": "10:00am ET — job openings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-03",
    "type": "earnings",
    "ticker": "AMD",
    "title": "AMD earnings",
@@ -265,14 +287,6 @@
    "ticker": "SMCI",
    "title": "SMCI earnings",
    "fav": true
-  },
-  {
-   "date": "2026-11-03",
-   "type": "macro",
-   "ticker": null,
-   "title": "JOLTS (September)",
-   "note": "10:00am ET — job openings",
-   "fav": false
   },
   {
    "date": "2026-11-04",
@@ -308,6 +322,13 @@
    "ticker": "QCOM",
    "title": "QCOM earnings",
    "fav": true
+  },
+  {
+   "date": "2026-11-04",
+   "type": "earnings",
+   "ticker": "RDW",
+   "title": "RDW earnings",
+   "fav": false
   },
   {
    "date": "2026-11-05",
@@ -353,17 +374,17 @@
   },
   {
    "date": "2026-11-06",
-   "type": "earnings",
-   "ticker": "VST",
-   "title": "VST earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-06",
    "type": "macro",
    "ticker": null,
    "title": "Employment Situation (October)",
    "note": "Jobs report, 8:30am ET",
+   "fav": false
+  },
+  {
+   "date": "2026-11-06",
+   "type": "earnings",
+   "ticker": "VST",
+   "title": "VST earnings",
    "fav": false
   },
   {
@@ -396,6 +417,14 @@
   },
   {
    "date": "2026-11-10",
+   "type": "macro",
+   "ticker": null,
+   "title": "CPI (October)",
+   "note": "Consumer prices, 8:30am ET",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
    "type": "earnings",
    "ticker": "CRWV",
    "title": "CRWV earnings",
@@ -417,6 +446,13 @@
   },
   {
    "date": "2026-11-10",
+   "type": "exdiv",
+   "ticker": "IBM",
+   "title": "IBM ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
    "type": "earnings",
    "ticker": "QBTS",
    "title": "QBTS earnings",
@@ -432,23 +468,8 @@
   {
    "date": "2026-11-10",
    "type": "exdiv",
-   "ticker": "IBM",
-   "title": "IBM ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "exdiv",
    "ticker": "V",
    "title": "V ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "macro",
-   "ticker": null,
-   "title": "CPI (October)",
-   "note": "Consumer prices, 8:30am ET",
    "fav": false
   },
   {
@@ -457,6 +478,20 @@
    "ticker": "XNDU",
    "title": "XNDU earnings",
    "fav": false
+  },
+  {
+   "date": "2026-11-12",
+   "type": "earnings",
+   "ticker": "LUNR",
+   "title": "LUNR earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-12",
+   "type": "earnings",
+   "ticker": "NBIS",
+   "title": "NBIS earnings",
+   "fav": true
   },
   {
    "date": "2026-11-12",
@@ -481,6 +516,28 @@
    "fav": false
   },
   {
+   "date": "2026-11-13",
+   "type": "exdiv",
+   "ticker": "LLY",
+   "title": "LLY ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-11-16",
+   "type": "earnings",
+   "ticker": "INFQ",
+   "title": "INFQ earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-17",
+   "type": "macro",
+   "ticker": null,
+   "title": "Advance Retail Sales (October)",
+   "note": "8:30am ET — Census advance report",
+   "fav": false
+  },
+  {
    "date": "2026-11-17",
    "type": "earnings",
    "ticker": "HD",
@@ -493,14 +550,6 @@
    "ticker": "NVDA",
    "title": "NVDA earnings",
    "fav": true
-  },
-  {
-   "date": "2026-11-17",
-   "type": "macro",
-   "ticker": null,
-   "title": "Advance Retail Sales (October)",
-   "note": "8:30am ET — Census advance report",
-   "fav": false
   },
   {
    "date": "2026-11-18",

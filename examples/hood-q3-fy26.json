@@ -1,0 +1,56 @@
+{
+ "company": "Robinhood Markets",
+ "ticker": "HOOD",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 1424.0,
+ "revenue_yoy": 12,
+ "segments": [
+  {
+   "name": "Transaction-based",
+   "value": 867.0,
+   "yoy": 19,
+   "note": "61% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Net interest",
+   "value": 415.0,
+   "yoy": -9,
+   "note": "29% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Other",
+   "value": 142.0,
+   "yoy": 61,
+   "note": "10% of revenue",
+   "color": "#c8a020"
+  }
+ ],
+ "cost_of_revenue": 68.0,
+ "gross_profit": 1356.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 671.0,
+ "opex_items": [
+  {
+   "name": "Technology & development",
+   "value": 254.0
+  },
+  {
+   "name": "General & administrative",
+   "value": 163.0
+  },
+  {
+   "name": "Marketing, ops & credit",
+   "value": 254.0
+  }
+ ],
+ "operating_profit": 685.0,
+ "other": -60.0,
+ "tax": 149.0,
+ "net_profit": 476.0
+}

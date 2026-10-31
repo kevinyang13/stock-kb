@@ -1,0 +1,70 @@
+{
+ "company": "Eli Lilly",
+ "ticker": "LLY",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 24.4,
+ "revenue_yoy": 39,
+ "segments": [
+  {
+   "name": "Cardiometabolic Health",
+   "value": 19.8,
+   "yoy": 50,
+   "note": "81% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Oncology",
+   "value": 2.6,
+   "yoy": 8,
+   "note": "11% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Immunology",
+   "value": 1.4,
+   "yoy": 5,
+   "note": "6% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "Neuroscience",
+   "value": 0.4,
+   "yoy": 41,
+   "note": "2% of revenue",
+   "color": "#f0a030"
+  },
+  {
+   "name": "Other",
+   "value": 0.2,
+   "yoy": -54,
+   "note": "1% of revenue",
+   "color": "#6cb6e8"
+  }
+ ],
+ "cost_of_revenue": 3.9,
+ "gross_profit": 20.5,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 11.9,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 4.2
+  },
+  {
+   "name": "SG&A",
+   "value": 3.1
+  },
+  {
+   "name": "Acquired IPR&D + impairment",
+   "value": 4.5
+  }
+ ],
+ "operating_profit": 8.6,
+ "other": -0.2,
+ "tax": 2.0,
+ "net_profit": 6.5
+}

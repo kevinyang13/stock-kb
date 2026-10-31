@@ -31,7 +31,7 @@ Table of contents for this knowledge base. One line per page.
 
 - [[earnings-surprise-chart]] — the actual-vs-estimate EPS dots on each Financials card: where the figures come from, and why they are not the EPS the income statement beside them is built from.
 - [[share-ownership-donut]] — the "Who owns the shares" chart on each Financials card: four slices of the whole share count, the five largest holders named on hover from their own 13F, and why the slice sizes and the holder names have to come from different sources.
-- [[favorites-financials]] — index of the 70 income statement charts on the Financials tab, which of them carry a reported revenue segment split (56 do) and the data caveats that apply to them.
+- [[favorites-financials]] — index of the 72 income statement charts on the Financials tab, which of them carry a reported revenue segment split (56 do) and the data caveats that apply to them.
 - [[coreweave-q2-fy26]] — CoreWeave Q2 2026: $2,575M revenue (+112% Y/Y), 66% gross margin, a $49M operating loss and a $626M net loss driven by financing cost.
 - [[nebius-q2-fy26]] — Nebius Group Q2 2026: $582.3M revenue (+454% Y/Y) at a 77% gross margin, a $190.4M net loss that is almost all depreciation and interest, and capex running at eight times revenue.
 - [[visa-q4-fy26]] — Visa fiscal Q4 2026: $12,139M of net revenue (+13% Y/Y) with no cost of revenue at all, a 60% operating margin, and $5,123M of client incentives netted out of revenue before the statement starts.
@@ -47,6 +47,8 @@ Table of contents for this knowledge base. One line per page.
 - [[amazon-q3-fy26]] — Amazon Q3 2026: $201.9B revenue (+12% Y/Y) with operating income up 61%, AWS +39% and accelerating for a fifth quarter, and net income down 2% on a $12B non-operating swing.
 - [[intel-q3-fy26]] — Intel Q3 2026: $16,513M revenue (+21% Y/Y), operating income up 269%, Data Center & AI +78%, and a 17% larger share count after a $23B equity offering.
 - [[coinbase-q3-fy26]] — Coinbase Q3 2026: $1,215.6M revenue (−35% Y/Y) at a 5% operating margin, and a 59% net margin that is almost entirely a $715M mark on its own crypto holdings.
+- [[eli-lilly-q3-fy26]] — Eli Lilly Q3 2026: $24,397M revenue (+39% Y/Y) and a 35% operating margin, Mounjaro and Zepbound together 66% of the company, and a $4,181M acquired IPR&D charge the vendor puts below the operating line and the 8-K puts above it.
+- [[robinhood-q3-fy26]] — Robinhood Q3 2026: record $1,424M of net revenues (+12% Y/Y) but net income down 14%, crypto revenue −55%, and why a brokerage's securities-loaned balance cannot be drawn as debt.
 
 ## Pages referenced but not yet written
 

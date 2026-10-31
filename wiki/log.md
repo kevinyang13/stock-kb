@@ -2070,3 +2070,48 @@ has one at 7,754%. Most are arithmetic rather than error — a loss-maker whose 
 zero produces an explosive percentage from a one-cent miss — but it is not a figure worth printing,
 and whether to suppress it below some consensus floor is a decision rather than a bug fix. The dots
 themselves show both numbers and remain honest.
+
+## 2026-10-30 — LLY and HOOD added to the site
+
+Added **Eli Lilly (LLY)** and **Robinhood Markets (HOOD)** to the watchlist and the Financials tab.
+Neither is a favorite, so neither enters the Catalysts sweep or the Morning Brief. Cards:
+[[eli-lilly-q3-fy26]] and [[robinhood-q3-fy26]]. The tab now carries 72 statements.
+
+**A new sector.** Nothing in the ranked `SECTORS` list covered a drug manufacturer, so `Pharma` was
+added at rank 30, between `Homebuilder` and the fund block. That list exists twice — `assets/site.js`
+and inline in `heatmap.html` — and both copies were edited; they are verified identical, 37 entries
+each. HOOD is tagged `Fintech` only: tagging it `Crypto` as well would have been true but would have
+labelled the tile "Crypto", because Crypto outranks Fintech.
+
+**The vendor moved Lilly's IPR&D charge below the operating line.** stockanalysis reports $13,092M of
+operating income for Lilly's Q3 FY26; the 8-K reports $8,608M. The $4,484M difference is the $4,181M
+acquired IPR&D charge plus a $303M impairment, which Lilly includes in operating income and the
+vendor does not. A card built on the vendor's figure would have shown a 54% operating margin for a
+quarter the company reports at 35%. The card follows the filing. This is the Meta trap again, and it
+is now the second recorded instance, which suggests checking the operating line against the filing
+whenever a quarter carries a large one-off charge.
+
+**Robinhood files no gross profit line.** Its statement runs net revenues, then operating expenses,
+then operating income. The card uses brokerage and transaction expense ($68M) as the cost line — the
+convention [[coinbase-q3-fy26]] already uses — which means the 95% gross margin on that card is a
+construction of the chart rather than a reported figure. The card says so.
+
+**One debt chart was generated and thrown away.** `bin/debtfetch.py` produced a Robinhood chart
+showing $22.6B of debt against $685M of quarterly operating profit. $19,480M of that is *securities
+loaned* — collateralised stock lending, matched by securities borrowed and user assets on the other
+side — which the vendor's balance sheet maps into short-term debt. Robinhood's actual long-term
+borrowings are $2,660M. The chart was deleted and the card says why. COIN, NU and V show no such
+distortion, so this is specific to a broker running a large lending book. Lilly's debt chart was
+skipped by the fetcher itself: no cash and equivalents figure for the Sep 30, 2026 column.
+
+**Two rendering defects, both caught by looking at the PNG rather than the validator.** The validator
+passed clean on a first draft of both charts in which the largest revenue segment had no label at
+all — Lilly's Cardiometabolic Health at 81% of revenue, Robinhood's Transaction-based at 61%. Long
+`note` strings pushed the whole annotation block off the left edge of the canvas and plotly dropped
+it silently. Shortening the notes fixed it. Separately, splitting Robinhood's operating expenses into
+the 10-Q's five lines made the right-hand labels collide; they are drawn as three.
+
+**Not done.** Neither ticker has an ownership donut — that needs a ~400MB Form 13F data set pulled
+and deleted, and it was not pulled in this pass. Neither was added to `ibkr-conids.json`: the IBKR
+connector is not present in the session at all, so no contract id could be resolved, and a conid is
+not something to guess. Both are gaps to close, not figures to fill in.
