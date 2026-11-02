@@ -2256,3 +2256,38 @@ the 85% gross margin, which the card already called "a pricing artifact, not a s
 **Checked and not changed:** the card's guidance note reads "84.4%-85.4% GAAP gross margin" while the
 earnings call says non-GAAP 84.5%–85.5%. The 8-K exhibit lists **both** — GAAP 84.4%–85.4% and
 non-GAAP 84.5%–85.5% — so the card is right as written and was left alone.
+
+## 2026-11-02 (second pass) — the sector leg of the SNDK drawdown
+
+The first pass explained Sandisk's fall as a NAND pricing read and said the sell-off was
+"NAND-specific, not memory-wide". That was too clean. Broad semiconductors fell the same week, and a
+note that attributed the whole 23% to NAND would have overstated the NAND signal.
+
+Added the layer that was missing, and corrected the claim rather than appending around it.
+
+| Oct 28 close → Nov 2 | Move | Oct 30 alone |
+|---|---|---|
+| Nasdaq-100 (QQQ) | −6.1% | −3.47% |
+| NVIDIA | −6.2% | −4.22% |
+| Semis (SMH) | −10.5% | −6.98% |
+| [[micron-fq4-fy26]] | −15.2% | −5.30% |
+| Sandisk | −23.5% | −13.47% |
+| [[intel-q3-fy26]] | −37.2% | −28.58% |
+
+**The sector leg was largely Intel.** It guided fiscal Q4 revenue to $15.0–16.0bn against a
+consensus near $17.0bn and fell 28.58% on Oct 30, taking SMH down 6.98% (source:
+q326earningsrelease.htm). That is the same session Kioxia's NAND read landed, which is why Sandisk's
+−13.47% is roughly double either shock alone.
+
+**The corrected claim.** Sandisk fell more than twice SMH, so the sector accounts for part of the
+move and NAND pricing for the rest — neither alone. The NAND-specific residual is clearest on Nov 2:
+the broad sector steadied (QQQ −1.36%, SMH −2.71%, NVIDIA −1.26%) while Sandisk fell a further 6.6%
+and Kioxia fell 15.8% in Tokyo.
+
+**Kioxia guidance detail added:** it gave no full-year forecast alongside the ~¥2.0tn vs ~¥2.35tn
+October–December guide.
+
+**Checked, not claimed:** several outlets attribute part of Intel's fall to a Fab 28 incident and to
+2027 capital spending. Intel's own 8-K mentions neither, so neither is stated here. One outlet
+attributed the Oct 30 sector fall to an OpenAI revenue figure, sourced secondhand to another outlet;
+not used.

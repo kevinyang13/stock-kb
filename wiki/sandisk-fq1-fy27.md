@@ -2,7 +2,7 @@
 
 **Summary**: Sandisk's fiscal first quarter 2027 (quarter ended October 2, 2026): $11,031M of revenue, up 378% year over year, an 85% gross margin and $8,101M of net income. Datacenter revenue went from $269M to $4,802M in a year. The company also announced an eight-for-one forward stock split.
 
-**Sources**: Sandisk 8-K exhibit 99.1, fiscal Q1 2027 results, filed October 29, 2026 (source: sec.gov/Archives/edgar/data/2023554/000162828026068243). Share prices and peer moves from stockanalysis.com, read 2026-11-02. Kioxia figures from its fiscal Q2 2026 results of October 30, 2026 as reported by Investing.com and Seoul Economic Daily. Flash Ventures ownership from Sandisk's FY2026 Form 10-K (source: sndk-20260703.htm). Management quotes from the fiscal Q1 2027 earnings call of October 29, 2026.
+**Sources**: Sandisk 8-K exhibit 99.1, fiscal Q1 2027 results, filed October 29, 2026 (source: sec.gov/Archives/edgar/data/2023554/000162828026068243). Share prices and peer moves from stockanalysis.com, read 2026-11-02. Kioxia figures from its fiscal Q2 2026 results of October 30, 2026 as reported by Investing.com and Seoul Economic Daily. Flash Ventures ownership from Sandisk's FY2026 Form 10-K (source: sndk-20260703.htm). Management quotes from the fiscal Q1 2027 earnings call of October 29, 2026. Intel's Q4 outlook from its 8-K of October 29, 2026 (source: q326earningsrelease.htm). Index and peer moves (QQQ, SMH, NVDA, MU, INTC) from stockanalysis.com, read 2026-11-02.
 
 **Last updated**: 2026-11-02
 
@@ -63,6 +63,7 @@ Kioxia's own quarter was also a record — revenue ¥2,480.0bn, operating profit
   the quarter before
 - it guided October–December adjusted operating profit to about **¥2.0tn against a consensus near
   ¥2.35tn**, roughly 15% below, which implies **NAND prices approximately flat quarter on quarter**
+- it gave **no full-year forecast**
 - its shares fell **15.8% in Tokyo on Nov 2**
 
 (source: Kioxia fiscal Q2 2026 results of October 30, 2026, as reported by Investing.com and Seoul
@@ -71,17 +72,41 @@ Economic Daily.)
 So the market did not revise this quarter. It repriced the **pricing assumption** behind the 85%
 gross margin the section above describes — the one that "unwinds when pricing does".
 
-### It is NAND-specific, not memory-wide
+### Three layers, and Oct 30 is where they met
 
-| | Oct 28 → Nov 2 | Oct 30 | Nov 2 |
-|---|---|---|---|
-| Sandisk | −23% | −13.5% | −6.6% |
-| [[micron-fq4-fy26]] | −15% | −5.3% | −5.8% |
-| SK Hynix | — | −7.1% | **+3.8%** |
+The NAND story did not happen in a vacuum. Broad tech sold off, semiconductors sold off harder, and
+NAND hardest of all — and Sandisk's worst session was the sector day and the Kioxia day at once.
 
-SK Hynix fell with the group on Oct 30 and then **rose** on Nov 2, the session Sandisk fell a
-further 6.6%. Micron and SK Hynix both sell DRAM alongside NAND. Sandisk does not — and that
-absence of a second product line is the same concentration that produced +378% on the way up.
+| Oct 28 close → Nov 2 | Move | Oct 30 alone |
+|---|---|---|
+| Nasdaq-100 (QQQ) | −6.1% | −3.47% |
+| NVIDIA | −6.2% | −4.22% |
+| Semis (SMH) | −10.5% | −6.98% |
+| [[micron-fq4-fy26]] | −15.2% | −5.30% |
+| **Sandisk** | **−23.5%** | **−13.47%** |
+| [[intel-q3-fy26]] | −37.2% | −28.58% |
+
+**The sector leg was largely Intel.** It reported Oct 29 with Q3 revenue of $16,513M (+21% Y/Y), then
+guided fiscal Q4 revenue to **$15.0–16.0bn against a consensus near $17.0bn** — roughly 9% light at
+the midpoint — and fell **28.58%** on Oct 30, dragging SMH down 6.98% with it (source:
+q326earningsrelease.htm, Intel 8-K of October 29, 2026).
+
+That is the same session Kioxia's NAND read landed. Sandisk's −13.47% is roughly double either shock
+on its own, because it took both.
+
+### Within the sector, NAND is the worst corner — not the only one
+
+Sandisk fell **more than twice** the semiconductor ETF. So the sector accounts for part of the move
+and NAND pricing for the rest; neither explains it alone, and a note claiming this was purely a NAND
+story would be wrong.
+
+The cleanest read on the NAND-specific part is **SK Hynix**: it fell 7.1% on Oct 30 with everything
+else, then **rose 3.8% on Nov 2** — the session Sandisk fell a further 6.6% and the day Kioxia's own
+shares fell 15.8% in Tokyo. By Nov 2 the broad sector had steadied (QQQ −1.36%, SMH −2.71%, NVIDIA
+−1.26%) and the NAND names had not.
+
+Micron and SK Hynix sell DRAM alongside NAND. Sandisk does not — and that absence of a second product
+line is the same concentration that produced +378% on the way up.
 
 ### What Sandisk itself said
 
