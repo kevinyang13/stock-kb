@@ -2221,3 +2221,38 @@ reported, what the figures are, and why it is still showing Q2.
 
 Drawn as filed rather than recast it would have been worse: a $125.4M revenue bar against a flow 167
 times its size.
+
+## 2026-11-02 — why SNDK fell, and a NAND demand note on its card
+
+Question asked: why is Sandisk down, when the quarter on its card is a record. Answered from price
+data and the filings rather than from the move itself, and the answer was filed back onto the card
+and [[sandisk-fq1-fy27]] as four notes and a new section.
+
+**The move.** $1,404.77 on Oct 28 to $1,075.08 on Nov 2, −23% in three sessions. The worst single
+day was **not** the results (Oct 29, −5.32%) but **Oct 30, −13.47%**, the day Kioxia reported.
+
+**Why Kioxia matters here.** It is not a comparable — it is the manufacturer. Sandisk and Kioxia
+co-own Flash Ventures (Flash Partners, Flash Alliance, Flash Forward), 49.9%/50.1%, which supplies
+*all* of Sandisk's flash wafers, extended January 2026 through Dec 31, 2034 (source:
+sndk-20260703.htm, FY2026 10-K). Kioxia's NAND average selling price rose in the mid-20% range in
+July–September against about 70% the quarter before, and it guided Oct–Dec adjusted operating profit
+to ~¥2.0tn against a ~¥2.35tn consensus, implying prices roughly flat quarter on quarter. Its own
+shares fell 15.8% in Tokyo on Nov 2.
+
+**It is NAND-specific.** Micron fell 15% over the same stretch against Sandisk's 23%, and SK Hynix
+fell 7.1% on Oct 30 but *rose* 3.8% on Nov 2 while Sandisk fell a further 6.6%. Both of those sell
+DRAM beside NAND; Sandisk does not. The same concentration produced the +378% on the way up.
+
+**Both sides stated, not resolved into one.** Sandisk's own guidance points the other way — CFO Luis
+Visoso expects "pricing to continue to increase modestly throughout the year", ~50% of FY27 bits and
+~2/3 of FY28 bits are under long-term agreements, 95% with investment-grade counterparties, and a
+wafer takes "120 days or so" to produce. Contracted bits blunt a spot move without removing it. The
+two are not in conflict: Sandisk describes its contracted book, Kioxia the marginal wafer. The note
+says so rather than picking a winner.
+
+Nothing about the quarter the chart draws changed. What was repriced is the pricing assumption behind
+the 85% gross margin, which the card already called "a pricing artifact, not a structural one".
+
+**Checked and not changed:** the card's guidance note reads "84.4%-85.4% GAAP gross margin" while the
+earnings call says non-GAAP 84.5%–85.5%. The 8-K exhibit lists **both** — GAAP 84.4%–85.4% and
+non-GAAP 84.5%–85.5% — so the card is right as written and was left alone.
