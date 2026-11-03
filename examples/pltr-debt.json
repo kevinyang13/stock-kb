@@ -3,38 +3,34 @@
  "company": "Palantir",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 211.4,
-   "fcf": 1201.6,
-   "cash": 2030.0,
+   "label": "Q3 FY26",
+   "debt": 225.3,
+   "fcf": 1196.6,
+   "cash": 3619.4,
    "debt_parts": [
     {
      "label": "Long-term leases",
-     "value": 211.4
+     "value": 225.3
     }
    ],
    "cash_parts": [
     {
      "label": "Short-term investments",
-     "value": 7379.1
-    },
-    {
-     "label": "Restricted cash (separate)",
-     "value": 9.7
+     "value": 6942.1
     }
    ],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": 1216.2
+     "value": 1204.6
     },
     {
      "label": "Capital expenditure",
-     "value": -14.6
+     "value": -8.0
     }
    ]
   }

@@ -2291,3 +2291,68 @@ October–December guide.
 2027 capital spending. Intel's own 8-K mentions neither, so neither is stated here. One outlet
 attributed the Oct 30 sector fall to an OpenAI revenue figure, sourced secondhand to another outlet;
 not used.
+
+## 2026-11-02 — AAPL and PLTR refreshed to the quarters reported today
+
+Both filed 8-Ks today. Apple moves FQ3 FY26 → **FQ4 FY26** (quarter ended Sep 26, 2026) and Palantir
+Q2 FY26 → **Q3 FY26** (quarter ended Sep 30, 2026). New pages: [[apple-fq4-fy26]],
+[[palantir-q3-fy26]].
+
+Both statements foot exactly and both segment splits foot to revenue to the dollar.
+
+**Who actually reported.** The vendor staleness sweep over all 72 cards returned `checked 72 stale 1
+errors 0`, with only MSTR stale — but that sweep compares against the *vendor's* newest quarter, and
+the vendor has not ingested today's filings. Today's reporters came from `events.json` (AAPL, PLTR,
+VOYG) checked against EDGAR submissions. VOYG filed nothing: the Oct 30 8-K under the CIK first tried
+belonged to Cyngn, not Voyager Technologies (CIK 1788060) — a wrong-CIK match caught before it
+reached a card. CCJ reported Oct 30 but has no card.
+
+**An order dependency, hit and fixed.** `bin/yoyfetch.py` reads the period the card *already shows*,
+exactly as `bin/debtfetch.py` does. Run before the cards were updated, it matched Jun 30 / Jun 27 and
+wrote a year-ago block and a stock-comp figure **for the wrong quarter** into both new specs — PLTR
+got $265.2M of stock comp, which is Q2's. Re-run after the cards moved, it failed cleanly on both
+("no column for 2026-09-30") because the vendor lacks the quarter. The wrong values were stripped
+rather than left in place.
+
+So the prior-year hovers come from **the 8-Ks' own prior-year columns** instead, which is the same
+basis as the bar each figure is attached to — the test yoyfetch itself applies. PLTR's stock comp was
+set to $318.9M and then verified against the release's own SBC footnote, which gives $318,889K.
+
+**Apple.** Record September quarter, $114,477M (+12%). Gross margin widened to 47.9% from 47.2%, but
+operating margin *fell* to 31.1% from 31.6%, because R&D grew 32% to $11,730M against revenue's 12%.
+Net margin flat at 26.8%, helped by the tax rate falling from 16.3% to 15.0%. iPad (−10%) and
+Wearables (−8%) shrank; iPhone (+17%) and Mac (+24%) covered them. The card draws net sales by
+category, but Apple's *reportable* segments are geographic — both are in the release, both foot to
+$114,477M, and the geography table is on the page (Greater China +21%, the fastest-growing region).
+
+**Palantir.** $2,313M (+96%), and U.S. commercial revenue passed U.S. government for the first time
+($984M against $953M). Net margin 49.0% sits *above* the 46.9% operating margin — $63M of
+non-operating income and a 1.2% effective tax rate, not operations, and the card says so. The gap
+between adjusted operating margin (62%) and GAAP (47%) reconciles exactly to stock compensation
+$318.9M plus $23.1M of payroll taxes on it = $342.0M. GAAP and adjusted diluted EPS are both $0.44
+this quarter, so for once the street's adjusted consensus of $0.32 is a like-for-like comparison.
+
+**International is derived.** Palantir's release publishes only U.S. commercial, U.S. government and
+the U.S. total. International ($376M) is total minus U.S.; it foots exactly but carries no Y/Y,
+because the release gives none. The 10-Q's four-way split is not filed yet. Stated on the card rather
+than filled in.
+
+**Apple's debt chart is deliberately left on the prior quarter** (FQ3 FY26). The vendor had no
+balance-sheet column for Sep 26, so `debtfetch` skipped it, as designed. Palantir's refreshed
+cleanly to Q3: $225.3M debt, $3,619.4M cash, net cash $3,394.1M. Its cash bar is cash and equivalents
+only — a further $6,942.1M of marketable securities sits beside it, and the company states $10.4bn
+in total, so the chart understates liquidity rather than overstating it. Noted on the card.
+
+**Neither earnings chart includes today's quarter.** The vendor's feed still shows Jun '26 as the
+most recent actual for both. Reported: Apple $2.10 diluted against a $1.98 consensus, Palantir $0.44
+against $0.32.
+
+**Found, not fixed — a pre-existing crossing on every profit-layout card.** Palantir's chart shows
+the tax band crossing the net-profit band between the operating-profit node and the right column. It
+is not from this refresh: in `bin/sankey.py`'s profit layout the `operating → tax` link is always
+declared before `operating → net`, while the tax node sits *below* the net node, so plotly stacks
+them against their vertical order. AAPL, PLTR and the published NVDA chart all carry the identical
+link order, and NVIDIA's shipped PNG shows the same crossing. Palantir only makes it obvious because
+a 1.2% tax rate draws a very thin band across a very wide one. This is a change to a renderer shared
+by all 72 cards, so it is recorded here beside the loss-layout label collision rather than made
+inside a data refresh.

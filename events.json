@@ -1,71 +1,8 @@
 {
- "generated": "2026-10-30T19:12:20",
- "generatedLabel": "Oct 30, 2026",
+ "generated": "2026-11-02T16:13:31",
+ "generatedLabel": "Nov 02, 2026",
  "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
  "events": [
-  {
-   "date": "2026-10-20",
-   "type": "exdiv",
-   "ticker": "DELL",
-   "title": "DELL ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-10-20",
-   "type": "earnings",
-   "ticker": "GE",
-   "title": "GE earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-20",
-   "type": "earnings",
-   "ticker": "NFLX",
-   "title": "NFLX earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-20",
-   "type": "earnings",
-   "ticker": "SPCX",
-   "title": "SPCX earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-10-21",
-   "type": "earnings",
-   "ticker": "IBM",
-   "title": "IBM earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-21",
-   "type": "earnings",
-   "ticker": "META",
-   "title": "META earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-10-21",
-   "type": "earnings",
-   "ticker": "T",
-   "title": "T earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-21",
-   "type": "earnings",
-   "ticker": "TSLA",
-   "title": "TSLA earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-10-22",
-   "type": "earnings",
-   "ticker": "PHM",
-   "title": "PHM earnings",
-   "fav": false
-  },
   {
    "date": "2026-10-26",
    "type": "earnings",
@@ -404,6 +341,13 @@
   {
    "date": "2026-11-09",
    "type": "earnings",
+   "ticker": "MARA",
+   "title": "MARA earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-09",
+   "type": "earnings",
    "ticker": "QUBT",
    "title": "QUBT earnings",
    "fav": false
@@ -574,6 +518,13 @@
    "fav": true
   },
   {
+   "date": "2026-11-23",
+   "type": "earnings",
+   "ticker": "HPE",
+   "title": "HPE earnings",
+   "fav": false
+  },
+  {
    "date": "2026-11-24",
    "type": "earnings",
    "ticker": "DELL",
@@ -613,10 +564,24 @@
    "fav": false
   },
   {
+   "date": "2026-12-02",
+   "type": "earnings",
+   "ticker": "SNOW",
+   "title": "SNOW earnings",
+   "fav": false
+  },
+  {
    "date": "2026-12-03",
    "type": "exdiv",
    "ticker": "QCOM",
    "title": "QCOM ex-dividend",
+   "fav": true
+  },
+  {
+   "date": "2026-12-07",
+   "type": "exdiv",
+   "ticker": "GOOG",
+   "title": "GOOG ex-dividend",
    "fav": true
   },
   {
@@ -641,6 +606,13 @@
    "ticker": "TSM",
    "title": "TSM ex-dividend",
    "fav": true
+  },
+  {
+   "date": "2026-12-22",
+   "type": "exdiv",
+   "ticker": "VST",
+   "title": "VST ex-dividend",
+   "fav": false
   },
   {
    "date": "2026-12-24",

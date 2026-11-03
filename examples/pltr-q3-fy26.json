@@ -1,0 +1,69 @@
+{
+ "company": "Palantir",
+ "ticker": "PLTR",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 2313.0,
+ "revenue_yoy": 96,
+ "segments": [
+  {
+   "name": "U.S. commercial",
+   "value": 984.0,
+   "yoy": 148,
+   "note": "43% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "U.S. government",
+   "value": 953.0,
+   "yoy": 96,
+   "note": "41% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "International",
+   "value": 376.0,
+   "note": "16% of revenue",
+   "color": "#c8a020"
+  }
+ ],
+ "cost_of_revenue": 383.0,
+ "gross_profit": 1930.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 845.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 220.0
+  },
+  {
+   "name": "SG&A",
+   "value": 229.0
+  },
+  {
+   "name": "Sales & marketing",
+   "value": 397.0
+  }
+ ],
+ "operating_profit": 1085.0,
+ "other": 63.0,
+ "tax": 14.0,
+ "net_profit": 1134.0,
+ "stock_comp": 318.9,
+ "prior": {
+  "Revenue": 1181.0,
+  "Cost of revenue": 207.0,
+  "Gross profit": 974.0,
+  "R&D": 144.0,
+  "SG&A": 162.0,
+  "Sales & marketing": 275.0,
+  "Operating expenses": 581.0,
+  "Operating profit": 393.0,
+  "Net profit": 477.0,
+  "Tax": 4.0
+ },
+ "prior_source": "Palantir 8-K exhibit 99.1 of Nov 2, 2026, three months ended Sep 30, 2025"
+}

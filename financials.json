@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-30T19:30:00-07:00",
- "generatedLabel": "Oct 30, 2026",
+ "generated": "2026-11-02T16:10:00-08:00",
+ "generatedLabel": "Nov 2, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -856,50 +856,54 @@
   {
    "t": "AAPL",
    "company": "Apple",
-   "period": "FQ3 FY26",
-   "periodEnd": "quarter ended Jun 27, 2026",
-   "reported": "",
-   "img": "assets/financials/AAPL-FQ3-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/aapl/financials/income-statement/?p=quarterly",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Sep 26, 2026",
+   "reported": "8-K filed Nov 2, 2026",
+   "img": "assets/financials/AAPL-FQ4-FY26.png",
+   "source": "Apple 8-K exhibit 99.1, Q4 fiscal 2026 results, Nov 2 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/a8-kex991q4202609262026.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$109.4B",
-     "s": "+16% Y/Y"
+     "v": "$114.5B",
+     "s": "+12% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "50%",
+     "v": "48%",
      "s": "$54.8B"
     },
     {
      "k": "Operating margin",
-     "v": "33%",
-     "s": "$35.7B"
+     "v": "31%",
+     "s": "$35.6B"
     },
     {
      "k": "Net profit",
-     "v": "$29.8B",
+     "v": "$30.7B",
      "s": "27% margin"
     },
     {
      "k": "P/E",
-     "v": "39.8 \u00b7 37.9",
+     "v": "37.7 \u00b7 35.5",
      "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
-     "v": "0.31%",
+     "v": "0.32%",
      "s": "$1.08 a year"
     }
    ],
    "notes": [
-    "Segments: iPhone $54.2B, Services $30.7B, Mac $10.3B, Wearables, Home & Accessories $7.9B, iPad $6.2B",
+    "Segments: iPhone $57,583M (+17% Y/Y), Services $31,573M (+10%), Mac $10,792M (+24%), Wearables, Home & Accessories $8,300M (-8%) and iPad $6,229M (-10%), which foot exactly to $114,477M. Apple's net sales by category, as the release reports them.",
+    "A record September quarter: revenue $114,477M against $102,466M, up 11.7%. iPhone and Mac carried it; iPad and Wearables both shrank. Services reached $31,573M, 28% of revenue.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, FQ3 FY26: $84.3B of debt against $39.5B of cash and $31.9B of free cash flow for the quarter. Net debt $44.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.91 actual against $1.88 expected, beat by $0.03 (+2%). Sep '26 consensus is $1.98 from 7 analysts, due Nov 02, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 39.8 trailing, 37.9 forward; dividend $1.08 a year, 0.31% yield, last ex-dividend Aug 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.91 actual against $1.88 expected, beat by $0.03 (+2%). Sep '26 consensus is $1.98 from 7 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 2, 2026.",
+    "Market figures as of Nov 2, 2026: P/E 37.7 trailing, 35.5 forward; dividend $1.08 a year, 0.32% yield, last ex-dividend Aug 10, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Apple's REPORTABLE segments are geographic, not the product categories this card draws. The card uses net sales by category because that is the split that describes the quarter; both are in the same release and both foot to $114,477M. By geography: Americas $48,680M (+10% Y/Y), Europe $32,008M (+12%), Greater China $17,539M (+21%), Rest of Asia Pacific $9,710M (+15%) and Japan $6,540M (-1%). Greater China was the fastest-growing region.",
+    "Year-ago figures in the chart hovers come from the 8-K's own prior-year column (three months ended Sep 27, 2025), not from the data vendor, which has not published this quarter yet. Same basis as the bar each one is attached to.",
+    "The earnings chart does not yet include the quarter reported today. The vendor's feed still shows Jun '26 as the most recent actual and carries the Sep quarter as a consensus of $1.98. Apple reported diluted EPS of $2.10 against $1.85 a year ago. The chart updates when the vendor publishes its own actual.",
+    "The debt chart on this card is still the PRIOR quarter (FQ3 FY26, quarter ended Jun 27, 2026), not the quarter the income statement covers. The data vendor had no balance-sheet column for Sep 26, 2026 when this card was built, and the chart is left on the period it can actually match rather than being mixed with this quarter's figures. It is refreshed when the vendor catches up.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -2865,36 +2869,36 @@
   {
    "t": "PLTR",
    "company": "Palantir",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/PLTR-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/pltr/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "8-K filed Nov 2, 2026",
+   "img": "assets/financials/PLTR-Q3-FY26.png",
+   "source": "Palantir 8-K exhibit 99.1, Q3 2026 results, Nov 2 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$1,935M",
-     "s": "+93% Y/Y"
+     "v": "$2,313M",
+     "s": "+96% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "85%",
-     "s": "$1,639M"
+     "v": "83%",
+     "s": "$1,930M"
     },
     {
      "k": "Operating margin",
      "v": "47%",
-     "s": "$912M"
+     "s": "$1,085M"
     },
     {
      "k": "Net profit",
-     "v": "$1,062M",
-     "s": "55% margin"
+     "v": "$1,134M",
+     "s": "49% margin"
     },
     {
      "k": "P/E",
-     "v": "170.0 \u00b7 104.9",
+     "v": "125.6 \u00b7 85.3",
      "s": "trailing \u00b7 forward"
     },
     {
@@ -2904,11 +2908,17 @@
     }
    ],
    "notes": [
-    "Segments: Government $990M (+79%), Commercial $945M (+110%). Source: stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws.",
+    "Segments: U.S. commercial $984M (+148% Y/Y), U.S. government $953M (+96%) and International $376M, which foot exactly to $2,313M. The first two are the only revenue splits the release publishes; International is DERIVED as total revenue minus the $1,937M of U.S. revenue, and carries no year-over-year figure because the release gives none. The 10-Q's four-way split (U.S. and international, commercial and government) is not filed yet.",
+    "U.S. commercial revenue passed U.S. government revenue for the first time in the company's history -- $984M against $953M, having grown 148% against 96%.",
+    "Net margin (49%) is HIGHER than operating margin (47%), which is not an operating result. $89M of interest income, less $26M of other expense, sits above the tax line, and tax was only $14M on $1,148M of pretax income -- an effective rate of 1.2%. Operating income of $1,085M is the figure that describes the business.",
+    "Guidance: Q4 2026 revenue of $2,649M to $2,653M and adjusted income from operations of $1,640M to $1,644M. Full-year 2026 revenue raised to $8,530M-$8,534M (+91% Y/Y) and U.S. commercial revenue to more than $3,559M (+143% or better).",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $211.4M of debt against $2.0B of cash and $1.2B of free cash flow for the quarter. Net debt -$1.8B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.31 actual against $0.28 expected, beat by $0.03 (+11%). Sep '26 consensus is $0.33 from 10 analysts, due Nov 02, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 170.0 trailing, 104.9 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.31 actual against $0.28 expected, beat by $0.03 (+11%). Sep '26 consensus is $0.32 from 10 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 2, 2026.",
+    "Market figures as of Nov 2, 2026: P/E 125.6 trailing, 85.3 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Debt and coverage, Q3 FY26: $225.3M of debt against $3,619.4M of cash and $1,196.6M of free cash flow for the quarter. NET CASH $3,394.1M. The cash bar is cash and equivalents only -- Palantir holds a further $6,942.1M of marketable securities, and states $10.4bn of cash, equivalents and US Treasury securities in total, so the chart understates liquidity rather than overstating it (source: stockanalysis.com balance sheet; release of Nov 2, 2026).",
+    "Stock-based compensation was $318.9M in the quarter, 13.8% of revenue, against $172.3M a year ago. It is company-wide and the release spreads it across cost of revenue ($37.9M), sales and marketing ($123.5M), R&D ($65.2M) and G&A ($92.3M), which is why the chart attaches it to total operating expenses rather than to one band.",
+    "Year-ago figures in the chart hovers come from the 8-K's own prior-year column (three months ended Sep 30, 2025), not from the data vendor, which has not published this quarter yet. Same basis as the bar each one is attached to.",
+    "The earnings chart does not yet include the quarter reported today; the vendor still shows Jun '26 as the most recent actual against a Sep consensus of $0.32. Palantir reported diluted GAAP EPS of $0.44 AND adjusted EPS of $0.44 -- the two are identical this quarter, so for once the comparison with the street's adjusted consensus is like for like: a beat of $0.12, or 38%. The chart updates when the vendor publishes its own actual.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -3863,5 +3873,5 @@
    "eps": "HOOD-eps"
   }
  ],
- "marketAsOf": "Oct 30, 2026"
+ "marketAsOf": "Nov 2, 2026"
 }

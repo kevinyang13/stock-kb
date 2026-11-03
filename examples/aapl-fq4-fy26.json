@@ -1,0 +1,78 @@
+{
+ "company": "Apple",
+ "ticker": "AAPL",
+ "period": "FQ4 FY26",
+ "currency": "$",
+ "unit": "B",
+ "decimals": 1,
+ "revenue": 114.5,
+ "revenue_yoy": 12,
+ "segments": [
+  {
+   "name": "iPhone",
+   "value": 57.6,
+   "yoy": 17,
+   "note": "50% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Services",
+   "value": 31.6,
+   "yoy": 10,
+   "note": "28% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Mac",
+   "value": 10.8,
+   "yoy": 24,
+   "note": "9% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "Wearables, Home & Accessories",
+   "value": 8.3,
+   "yoy": -8,
+   "note": "7% of revenue",
+   "color": "#f0a030"
+  },
+  {
+   "name": "iPad",
+   "value": 6.2,
+   "yoy": -10,
+   "note": "5% of revenue",
+   "color": "#6cb6e8"
+  }
+ ],
+ "cost_of_revenue": 59.7,
+ "gross_profit": 54.8,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 19.2,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 11.7
+  },
+  {
+   "name": "SG&A",
+   "value": 7.5
+  }
+ ],
+ "operating_profit": 35.6,
+ "other": 0.5,
+ "tax": 5.4,
+ "net_profit": 30.7,
+ "prior": {
+  "Revenue": 102.5,
+  "Cost of revenue": 54.1,
+  "Gross profit": 48.3,
+  "R&D": 8.9,
+  "SG&A": 7.0,
+  "Operating expenses": 15.9,
+  "Operating profit": 32.4,
+  "Net profit": 27.5,
+  "Tax": 5.3
+ },
+ "prior_source": "Apple 8-K exhibit 99.1 of Nov 2, 2026, three months ended Sep 27, 2025"
+}
