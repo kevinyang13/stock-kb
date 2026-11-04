@@ -2427,3 +2427,118 @@ cost-of-revenue bar. Identical on the published Q2 FY26 PNG, so it is not from t
   each card gives the reported EPS in the meantime.
 - **P/E and dividend** still read as of Oct 27, 2026 on all 72 cards. Refreshing three would make
   them inconsistent with the other 69; that is a separate sweep.
+
+## 2026-11-04 — Six companies reported; four cards refreshed, one blocked, one gated
+
+**Sources**: 8-K exhibit 99.1 filed Nov 4, 2026 by Qualcomm (qcom092726erex991.htm), Coherent
+(d176836dex991.htm), Datadog (ex-991x20260930x8k.htm), Hut 8 (tm2628741d1_ex99-1.htm), Redwire
+(exhibit991redwire09302026e.htm) and Centrus Energy (ex991-10q2026_11x04.htm); Datadog's 10-Q
+(ddog-20260930.htm) for the revenue split.
+
+The Events calendar listed six tickers for today — COHR, DDOG, HUT, LEU, QCOM and RDW — and this
+time **all six actually filed**, unlike RIOT yesterday. EDGAR was still checked first rather than
+the calendar trusted.
+
+| Ticker | Was | Now | Outcome |
+|---|---|---|---|
+| QCOM | FQ3 FY26 | **FQ4 FY26** | refreshed |
+| COHR | FQ4 FY26 | **FQ1 FY27** | refreshed |
+| DDOG | Q2 FY26 | **Q3 FY26** | refreshed, and gained a revenue split |
+| RDW | Q2 FY26 | **Q3 FY26** | refreshed |
+| HUT | Q2 FY26 | Q2 FY26 | **blocked — cannot be drawn** |
+| LEU | no card | no card | **gated — gross loss** |
+
+All four refreshed charts passed the five-identity validator with no warnings, and every
+prior-year hover was read back off the live figure and checked against the filing.
+
+**Two of the four quarters carry an income tax benefit rather than a charge** — Qualcomm $78M and
+Coherent $22.8M — so both flow into net profit on the Sankey. That path has now been exercised
+enough times (SPCX, AMD, and these two) to count as ordinary rather than exceptional.
+
+**Qualcomm is the first card on the tab whose revenue went backwards.** $10,322M, down 8%, with
+Handsets down 26% and Automotive up 89% past $2B for the first time. Three things on that card are
+the reverse of the usual direction and each is stated on it rather than left to be noticed:
+
+- **GAAP revenue is $120M LOWER than non-GAAP revenue**, because a payment to a customer from a
+  legal settlement is netted against revenue under GAAP.
+- **GAAP full-year EPS of $12.70 exceeds non-GAAP $10.54**, because of a $5.7B valuation-allowance
+  release in the second fiscal quarter.
+- **The trailing P/E of 13.7 is a denominator effect**, not a cheap price. Against fiscal 2026
+  non-GAAP EPS the same price is roughly 16.5x, against a 17.1 forward multiple. A one-line note
+  now says so, because the P/E is a KPI tile and would otherwise stand alone.
+
+The year-ago quarter was a **GAAP net loss of $3,117M**, so the chart's `prior` block deliberately
+omits Net profit and Tax. A percentage change against a negative base is not meaningful, and the
+hover would have printed "-140%" where the release says "+140%" — the same sign trap avoided on
+DDOG's operating line, which was a $5.8M loss a year ago.
+
+**Datadog left the no-segment-split list.** The previous card drew one "Total revenue" bar and its
+note said Datadog discloses revenue by geography only. Both halves were true, and the split still
+never reached the chart. It is now drawn from the 10-Q filed the same day: North America $881.4M
+(+39%), International $315.7M (+25%), footing to $1,197.1M exactly. The note says on its face that
+this is a geographic disaggregation and not a segment table.
+
+That moves the tab to **60 of 72 cards carrying a split**, from 59. The count and the list in
+[[favorites-financials]] were recounted from the specs rather than carried forward, using
+`len(segments) > 1` rather than a name test — the earlier test counted CRWV's single
+"Cloud compute revenue" bar as a split and missed Visa.
+
+**Coherent's release has the column-order trap in a third arrangement.** Its three quarterly
+columns run Sep 30 2026, Jun 30 2026, Sep 30 2025, so last quarter sits *between* the two
+year-over-year columns and the comparative is the third. AMD's and Ouster's each differ again.
+The rule that has now held three times: read the header, never the position.
+
+**Hut 8 reported and its card could not be refreshed.** Operating income of $318.2M **exceeds**
+gross profit of $40.8M, because a $413.8M gain on digital assets is reported inside operating
+expenses as a credit, netting the whole operating-expense block to −$277.4M. `bin/sankey.py`
+cannot draw a negative expense band — `link()` silently drops any non-positive value, so the
+gross→opex link would vanish and the chart would not conserve. Moving the gain below the operating
+line produces a $95.6M operating loss against positive net income, which is the same unsupported
+shape that blocks MSTR, and would contradict the filing besides.
+
+So the card keeps its Q2 FY26 chart and carries a note saying what the Q3 figures are, why they
+are not drawn, and where to read them. An openly stale chart beats a silently broken one. Full
+figures are in [[hut-8-q3-fy26]]. **This is the second card blocked on `bin/sankey.py` layout
+work**, after MSTR.
+
+**Centrus Energy reported a gross loss and therefore gets no card.** Revenue $55.5M against $66.1M
+of cost of sales — a $10.6M gross loss, which is the chartable gate in the `income-statement-chart`
+skill, alongside SPCE, QUBT and CAN. Worth recording rather than just skipping: over nine months
+Centrus is gross *profitable*, $70.8M on $308.3M, because its LEU customers carry annual rather
+than quarterly purchase commitments. The gate is applied to the quarter a card would draw, so the
+quarter is what blocks it. [[centrus-q3-fy26]] has the figures, the backlog, and the DOE's
+signal that it will not fund roughly $0.8B of it.
+
+**A silent data bug in `bin/mkspec.py`, found on RDW.** The script only emits a third
+operating-expense band when it exceeds the larger of $1M or 0.2% of revenue. Redwire's filed
+transaction expenses of $0.934M fall just under, so the band was dropped — and because the loss
+layout computes the below-the-line residual by *subtraction*, the dropped $0.9M landed in
+non-operating income, which then read **$2.2M instead of the true $3.1M**. That is not a missing
+band, it is a wrong figure in a different place. The band was restored by hand and the residual
+with it. The floor is a reasonable default for keeping hairlines off a chart; what is wrong is
+that in the loss layout a dropped band is absorbed rather than discarded. Recorded, not fixed.
+
+**Redwire's chart has the loss-layout label collision**, with the "Net loss" and "Cost of revenue"
+labels on their own bars and their figures clipped. Identical on the published Q2 FY26 PNG, so it
+is not from this refresh — it is the same `bin/sankey.py` defect Ouster and Boeing carry.
+
+**A rounding artefact worth knowing about, not worth fudging.** On RDW the card's KPI reads "+5%
+Y/Y" (filed: 5.4%) while the chart's Revenue hover reads "+6%". The hover divides the node's
+inflow — the sum of the two rounded segment bars, $109.1M — by the rounded prior-year $103.4M,
+which gives 5.5% and rounds up. Both figures are honest roundings of the same filing. Adjusting a
+stored prior to make the two agree would be fudging a source figure to fix a display, so it is
+recorded instead.
+
+**Not refreshed, deliberately**
+- **QCOM, COHR and RDW debt charts stay on the June quarter** and are labelled with it. The vendor
+  has no September balance sheet column for any of them, so `debtfetch` skipped rather than
+  matching one 91–92 days away. Each card's note now gives the company's own balance sheet figures
+  for the new quarter instead: Qualcomm $15,112M of debt against $4,636M of cash plus $3,045M of
+  marketable securities; Coherent $4,000.6M against $1,552.9M; Redwire $47.0M against $488.9M.
+  DDOG's did refresh — $1,307.2M of debt, $881.2M of cash, $279.1M of free cash flow.
+- **No earnings chart shows today's actual.** `epsfetch` marked all five passed due dates
+  `awaitingVendor`, drawing the "reported, awaiting vendor" caret. Working as designed.
+- **P/E and dividend were refreshed for these five tickers only**, so they now read Nov 4, 2026
+  while the other 67 cards read Oct 27, 2026. That inconsistency is deliberate: `pefetch` is part
+  of the per-ticker refresh, and a site-wide sweep is a separate job. Each card states its own
+  as-of date.

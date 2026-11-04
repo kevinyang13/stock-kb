@@ -1,0 +1,79 @@
+{
+ "company": "Qualcomm",
+ "ticker": "QCOM",
+ "period": "FQ4 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 10322.0,
+ "revenue_yoy": -8,
+ "segments": [
+  {
+   "name": "QCT Handsets",
+   "value": 5137.0,
+   "yoy": -26,
+   "note": "50% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "QCT Automotive",
+   "value": 1990.0,
+   "yoy": 89,
+   "note": "19% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "QCT IoT",
+   "value": 1888.0,
+   "yoy": 4,
+   "note": "18% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "QTL licensing",
+   "value": 1304.0,
+   "yoy": -7,
+   "note": "13% of revenue",
+   "color": "#f0a030"
+  },
+  {
+   "name": "QSI & other",
+   "value": 3.0,
+   "note": "residual to total",
+   "color": "#6cb6e8"
+  }
+ ],
+ "cost_of_revenue": 5084.0,
+ "gross_profit": 5238.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 3882.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 2684.0
+  },
+  {
+   "name": "SG&A",
+   "value": 963.0
+  },
+  {
+   "name": "Restructuring",
+   "value": 235.0
+  }
+ ],
+ "operating_profit": 1356.0,
+ "other": -183.0,
+ "tax": -78.0,
+ "net_profit": 1251.0,
+ "prior": {
+  "Revenue": 11270.0,
+  "Cost of revenue": 5033.0,
+  "Gross profit": 6237.0,
+  "R&D": 2370.0,
+  "SG&A": 910.0,
+  "Operating expenses": 3319.0,
+  "Operating profit": 2918.0
+ },
+ "stock_comp": 873.0
+}

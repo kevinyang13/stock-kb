@@ -1,0 +1,63 @@
+{
+ "company": "Datadog",
+ "ticker": "DDOG",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 1197.0,
+ "revenue_yoy": 35,
+ "segments": [
+  {
+   "name": "North America",
+   "value": 881.0,
+   "yoy": 39,
+   "note": "74% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "International",
+   "value": 316.0,
+   "yoy": 25,
+   "note": "26% of revenue",
+   "color": "#1b1b7a"
+  }
+ ],
+ "cost_of_revenue": 237.0,
+ "gross_profit": 960.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 885.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 492.0
+  },
+  {
+   "name": "SG&A",
+   "value": 90.0
+  },
+  {
+   "name": "Sales & marketing",
+   "value": 303.0
+  }
+ ],
+ "operating_profit": 75.0,
+ "other": 50.0,
+ "tax": 6.0,
+ "net_profit": 118.0,
+ "prior": {
+  "Revenue": 885.7,
+  "Cost of revenue": 176.5,
+  "Gross profit": 709.2,
+  "R&D": 402.0,
+  "SG&A": 74.3,
+  "Sales & marketing": 238.7,
+  "Operating expenses": 715.0,
+  "Net profit": 33.9,
+  "Tax": 1.8,
+  "Interest & other": 41.5
+ },
+ "stock_comp": 237.2,
+ "segment_source": "Datadog 10-Q, quarter ended Sep 30 2026, revenue by geographic area (Datadog reports one operating segment)"
+}

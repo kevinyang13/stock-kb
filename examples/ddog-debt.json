@@ -3,42 +3,42 @@
  "company": "Datadog",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 1277.8,
-   "fcf": 306.0,
-   "cash": 435.0,
+   "label": "Q3 FY26",
+   "debt": 1307.2,
+   "fcf": 279.1,
+   "cash": 881.2,
    "debt_parts": [
     {
      "label": "Long-term debt",
-     "value": 985.5
+     "value": 986.6
     },
     {
      "label": "Current leases",
-     "value": 44.2
+     "value": 46.2
     },
     {
      "label": "Long-term leases",
-     "value": 248.0
+     "value": 274.5
     }
    ],
    "cash_parts": [
     {
      "label": "Short-term investments",
-     "value": 4550.5
+     "value": 4352.4
     }
    ],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": 315.9
+     "value": 290.0
     },
     {
      "label": "Capital expenditure",
-     "value": -9.9
+     "value": -10.9
     }
    ]
   }

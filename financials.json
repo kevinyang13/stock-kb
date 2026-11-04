@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-03T16:30:00-08:00",
- "generatedLabel": "Nov 3, 2026",
+ "generated": "2026-11-04T16:45:00-08:00",
+ "generatedLabel": "Nov 4, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -63,52 +63,61 @@
   {
    "t": "QCOM",
    "company": "Qualcomm",
-   "period": "FQ3 FY26",
-   "periodEnd": "quarter ended Jun 28, 2026",
-   "reported": "",
-   "img": "assets/financials/QCOM-FQ3-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/qcom/financials/income-statement/?p=quarterly",
+   "period": "FQ4 FY26",
+   "periodEnd": "quarter ended Sep 27, 2026",
+   "reported": "8-K filed Nov 4, 2026",
+   "img": "assets/financials/QCOM-FQ4-FY26.png",
+   "source": "Qualcomm 8-K exhibit 99.1, Q4 and fiscal 2026 results",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/804328/000080432826000127/qcom092726erex991.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$9,947M",
-     "s": "-4% Y/Y"
+     "v": "$10,322M",
+     "s": "-8% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "53%",
-     "s": "$5,277M"
+     "v": "51%",
+     "s": "$5,238M"
     },
     {
      "k": "Operating margin",
-     "v": "19%",
-     "s": "$1,843M"
+     "v": "13%",
+     "s": "$1,356M"
     },
     {
      "k": "Net profit",
-     "v": "$2,002M",
-     "s": "20% margin"
+     "v": "$1,251M",
+     "s": "12% margin"
     },
     {
      "k": "P/E",
-     "v": "21.4 \u00b7 19.9",
+     "v": "13.7 \u00b7 17.1",
      "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
-     "v": "2.00%",
+     "v": "2.12%",
      "s": "$3.68 a year"
     }
    ],
    "notes": [
-    "Segments: QCT Handsets $5,086M, QCT IoT $1,830M, QCT Automotive $1,588M, QTL licensing $1,278M, QSI & other $165M",
-    "The only favorite with revenue down year over year.",
-    "R&D is $2,607M, 26% of revenue \u2014 more than three times SG&A.",
-    "Net profit exceeds operating profit because $619M of interest and other income lands below the operating line.",
-    "Debt and coverage, FQ3 FY26: $15.3B of debt against $4.5B of cash and $495.0M of free cash flow for the quarter. Net debt $10.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.53 actual against $1.54 expected, missed by $0.01 (-1%). Sep '26 consensus is $1.46 from 9 analysts, due Nov 04, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 21.4 trailing, 19.9 forward; dividend $3.68 a year, 2.00% yield, last ex-dividend Dec 3, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Segments: QCT Handsets $5,137M (-26%), QCT Automotive $1,990M (+89%), QCT IoT $1,888M (+4%), QTL licensing $1,304M (-7%), QSI & other $3M. Source: Qualcomm FQ4 FY26 earnings release, Exhibit 99.1.",
+    "Revenue FELL 8%. Handsets, which were 62% of QCT a year ago, fell 26% to $5,137M and are now 50% of the company.",
+    "Automotive passed $2B in a quarter for the first time, up 89%. Automotive and IoT together grew 36% and are 38% of revenue.",
+    "GAAP revenue is $120M LOWER than non-GAAP revenue, not higher: a payment to a customer from a legal settlement is netted against revenue. Non-GAAP revenue was $10,442M.",
+    "Gross margin 51%, down from 55% a year ago. Qualcomm says industry-wide input cost increases across wafer fabrication, assembly, test, advanced packaging and memory are being passed into product pricing, with the full benefit expected in the second half of fiscal 2027.",
+    "The $235M band drawn as Restructuring is the statement's own (Other) operating line, which the release identifies as restructuring and restructuring-related charges. A year ago that line was $39M.",
+    "Income tax was a $78M BENEFIT, not a charge, so on the chart it flows into net profit rather than out of it. Net margin 12% against a 13% operating margin.",
+    "A year ago this quarter was a GAAP net LOSS of $3,117M, on a $6,088M tax charge. The chart's year-ago hovers carry revenue, margins and operating profit but deliberately omit net profit and tax: a percentage change against a negative base is not meaningful.",
+    "Stock compensation of $873M is 8% of revenue, reported company-wide and spread across cost of revenues, R&D and SG&A without Qualcomm saying how, so the chart puts it on the pooled operating-expenses node only.",
+    "Fiscal 2026 as a whole: revenue $43,120M (-3%), GAAP diluted EPS $12.70 against non-GAAP $10.54. GAAP EPS is the higher of the two because of a $5.7B income tax benefit from a valuation allowance release in the second quarter.",
+    "Guidance for FQ1 FY27: revenue $10.4B-$11.2B, QCT $9.0B-$9.6B, QTL $1.3B-$1.5B, GAAP diluted EPS $1.03-$1.23 and non-GAAP $2.15-$2.35.",
+    "The 13.7 trailing P/E is a denominator effect, not a cheap stock: trailing GAAP EPS of $12.70 includes the $5.7B income tax benefit from the second-quarter valuation allowance release. Against fiscal 2026 non-GAAP EPS of $10.54 the same share price is roughly 16.5x, close to the 17.1 forward multiple.",
+    "Debt and coverage: the bars still show FQ3 FY26, the quarter ended Jun 28, 2026 -- $15.3B of debt against $4.5B of cash and $495.0M of free cash flow, net debt $10.7B. bin/debtfetch.py skipped the new quarter rather than matching a balance sheet column 91 days away from Sep 27, 2026. Qualcomm's own release gives $15,112M of total debt ($2,492M short-term, $12,620M long-term) against $4,636M of cash and equivalents plus $3,045M of marketable securities at Sep 27, 2026 (source: qcom092726erex991.htm). Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.53 actual against $1.54 expected, missed by $0.01 (-1%). Sep '26 consensus is $1.46 from 9 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 4, 2026.",
+    "Market figures as of Nov 4, 2026: P/E 13.7 trailing, 17.1 forward; dividend $3.68 a year, 2.12% yield, last ex-dividend Dec 3, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -1451,36 +1460,36 @@
   {
    "t": "COHR",
    "company": "Coherent",
-   "period": "FQ4 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/COHR-FQ4-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/cohr/financials/income-statement/?p=quarterly",
+   "period": "FQ1 FY27",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "8-K filed Nov 4, 2026",
+   "img": "assets/financials/COHR-FQ1-FY27.png",
+   "source": "Coherent 8-K exhibit 99.1, Q1 fiscal 2027 results",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/820318/000119312526447200/d176836dex991.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$2,046M",
-     "s": "+34% Y/Y"
+     "v": "$2,370M",
+     "s": "+50% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "38%",
-     "s": "$787M"
+     "v": "39%",
+     "s": "$928M"
     },
     {
      "k": "Operating margin",
-     "v": "12%",
-     "s": "$242M"
+     "v": "16%",
+     "s": "$378M"
     },
     {
      "k": "Net profit",
-     "v": "$241M",
-     "s": "12% margin"
+     "v": "$382M",
+     "s": "16% margin"
     },
     {
      "k": "P/E",
-     "v": "57.2 \u00b7 25.1",
+     "v": "47.4 \u00b7 20.7",
      "s": "trailing \u00b7 forward"
     },
     {
@@ -1490,11 +1499,19 @@
     }
    ],
    "notes": [
-    "Segments: Datacenter & Communications $1,615M (+59%), Industrial $430M (-16%). Source: Coherent FQ4 FY26 earnings release, Exhibit 99.1.",
+    "Segments: Datacenter & Communications $1,952M (+79%), Industrial $419M (-15%). Source: Coherent FQ1 FY27 earnings release, Exhibit 99.1, Table 5.",
+    "Datacenter & Communications is 82% of revenue, up from 69% a year ago. It grew 79% while Industrial fell 15%, so all of the growth and more came from one segment.",
+    "The release's three columns run Sep 30 2026, Jun 30 2026, Sep 30 2025 -- last quarter sits between the two year-over-year columns. The year-ago comparative is the THIRD column, not the second.",
+    "Gross margin 39.1%, against 38.5% last quarter and 36.6% a year ago. Coherent guides to 40%-42% non-GAAP gross margin for FQ2 FY27.",
+    "Income tax was a $22.8M BENEFIT, not a charge, so on the chart it flows into net profit rather than out of it.",
+    "Net earnings of $381.6M is the consolidated figure the statement foots to. Net earnings attributable to Coherent Corp. is $384.7M, after a $3.1M loss attributable to non-controlling interests.",
+    "Operating expenses include $8.6M of restructuring charges. A year ago the same subtotal also carried a $9.1M impairment and a $115.2M GAIN on the sale of a business, so year-ago operating expenses of $320.2M are comparable as a total but not band for band.",
+    "Non-GAAP operating income was $550.3M against GAAP $377.9M. The gap is $73.2M of share-based compensation, $69.5M of acquired-intangible amortization, $8.6M of restructuring and $21.2M of integration and site consolidation.",
+    "Guidance for FQ2 FY27: revenue $2.55B-$2.75B, non-GAAP gross margin 40%-42%, total operating expenses $430M-$450M, a non-GAAP tax rate of 18%-20% and non-GAAP EPS of $2.28-$2.48. Coherent also targets a first $3B revenue quarter by the end of fiscal 2027 and non-GAAP gross margin above 45% before the end of calendar 2028.",
+    "Debt and coverage: the bars still show FQ4 FY26, the quarter ended Jun 30, 2026 -- $3.6B of debt against $1.2B of cash and -$486.2M of free cash flow, net debt $2.4B. bin/debtfetch.py skipped the new quarter rather than matching a balance sheet column 92 days away from Sep 30, 2026. Coherent's own release gives $4,000.6M of debt ($19.9M current portion, $3,980.7M long-term) against $1,552.9M of cash and equivalents, $200.0M of short-term investments and $44.6M of restricted cash at Sep 30, 2026 -- up from $3,222.2M of debt and $1,162.0M of cash at Jun 30, 2026 (source: d176836dex991.htm). Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.47 actual against $1.43 expected, beat by $0.04 (+3%). Sep '26 consensus is $1.80 from 8 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 4, 2026.",
+    "Market figures as of Nov 4, 2026: P/E 47.4 trailing, 20.7 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, FQ4 FY26: $3.6B of debt against $1.2B of cash and -$486.2M of free cash flow for the quarter. Net debt $2.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.47 actual against $1.43 expected, beat by $0.04 (+3%). Sep '26 consensus is $1.78 from 8 analysts, due Nov 04, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 57.2 trailing, 25.1 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -1671,36 +1688,36 @@
   {
    "t": "DDOG",
    "company": "Datadog",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/DDOG-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/ddog/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "8-K filed Nov 4, 2026",
+   "img": "assets/financials/DDOG-Q3-FY26.png",
+   "source": "Datadog 8-K exhibit 99.1, Q3 2026 results",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1561550/000162828026069792/ex-991x20260930x8k.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$1,121M",
-     "s": "+36% Y/Y"
+     "v": "$1,197M",
+     "s": "+35% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "79%",
-     "s": "$882M"
+     "v": "80%",
+     "s": "$960M"
     },
     {
      "k": "Operating margin",
-     "v": "1%",
-     "s": "$7M"
+     "v": "6%",
+     "s": "$75M"
     },
     {
      "k": "Net profit",
-     "v": "$45M",
-     "s": "4% margin"
+     "v": "$118M",
+     "s": "10% margin"
     },
     {
      "k": "P/E",
-     "v": "572.5 \u00b7 105.9",
+     "v": "263.4 \u00b7 68.2",
      "s": "trailing \u00b7 forward"
     },
     {
@@ -1710,11 +1727,19 @@
     }
    ],
    "notes": [
-    "No segment split: Datadog discloses revenue by geography only; no product or segment split.",
+    "The revenue split on this chart is by GEOGRAPHY, not by segment: North America $881M (+39%), International $316M (+25%). Datadog reports a single operating segment, and this is the only disaggregation it files. Source: Datadog 10-Q, quarter ended Sep 30 2026, revenue by geographic area.",
+    "The previous card for this ticker drew one Total revenue bar and said Datadog discloses revenue by geography only. That was true and the split was still never drawn; it is now.",
+    "Net margin of 10% is higher than the 6% operating margin, and neither reason is the business: $50M of interest and other income, and a 5.0% effective tax rate -- $6.3M of tax on $124.6M of pretax income.",
+    "Operating income of $75M is the figure that describes the business. The same line was a $5.8M LOSS a year ago, which is why the chart's year-ago hover omits it: a percentage change against a negative base is not meaningful.",
+    "R&D is $492M, 41% of revenue -- more than cost of revenue, sales and marketing, or G&A.",
+    "SG&A on this chart is general and administrative alone, $90M. Sales and marketing is drawn as its own $303M band.",
+    "Stock compensation is $237.2M, 20% of revenue, split across cost of revenue $9.5M, R&D $146.4M, sales and marketing $49.2M and G&A $32.1M, so the chart attaches it to total operating expenses rather than to one band.",
+    "Guidance: Q4 2026 revenue $1.19B-$1.20B, and full-year 2026 revenue $4.515B-$4.525B.",
+    "The debt chart's $279.1M of free cash flow is operating cash flow less capital expenditure ($290.0M less $10.9M). Datadog's own release states $251M, which also deducts capitalised software development costs. Both start from the same $290M of operating cash flow.",
+    "Debt and coverage, Q3 FY26: $1.3B of debt against $881.2M of cash and $279.1M of free cash flow for the quarter. Net debt $426.0M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.18 actual against $0.13 expected, beat by $0.05 (+38%). Sep '26 consensus is $0.18 from 10 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 4, 2026.",
+    "Market figures as of Nov 4, 2026: P/E 263.4 trailing, 68.2 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $1.3B of debt against $435.0M of cash and $306.0M of free cash flow for the quarter. Net debt $842.8M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.18 actual against $0.13 expected, beat by $0.05 (+38%). Sep '26 consensus is $0.18 from 10 analysts, due Nov 04, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E 572.5 trailing, 105.9 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -2021,12 +2046,13 @@
     }
    ],
    "notes": [
+    "Hut 8 reported Q3 FY26 on Nov 4, 2026 and this chart still shows Q2 FY26. The new quarter cannot be drawn: operating income of $318.2M EXCEEDS gross profit of $40.8M, because a $413.8M gain on digital assets is reported inside operating expenses as a credit, and the renderer has no way to draw a negative expense band. The Q3 figures are on the wiki page hut-8-q3-fy26: revenue $71.1M (-15%), net income $189.5M of which $131.1M is attributable to Hut 8.",
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $48M + $150M balances against the charges on the right.",
     "No segment split: Hut 8 reports Power, Digital Infrastructure and Compute, but intersegment eliminations are $36.0M against $74.9M of revenue, so the three do not add up to the bar: gross segment revenue was Compute $72.5M, Digital Infrastructure $33.0M, Power $5.5M.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $7.7B of debt against $233.6M of cash and -$585.2M of free cash flow for the quarter. Net debt $7.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.26 actual against -$0.50 expected, beat by $0.24 (+48%). Sep '26 consensus is -$1.17 from 5 analysts, due Nov 04, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.26 actual against -$0.50 expected, beat by $0.24 (+48%). Sep '26 consensus is -$1.06 from 5 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 4, 2026.",
+    "Market figures as of Nov 4, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -2993,27 +3019,27 @@
   {
    "t": "RDW",
    "company": "Redwire",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/RDW-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/rdw/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "8-K filed Nov 4, 2026",
+   "img": "assets/financials/RDW-Q3-FY26.png",
+   "source": "Redwire 8-K exhibit 99.1, Q3 2026 results",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819810/000181981026000139/exhibit991redwire09302026e.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$117M",
-     "s": "+90% Y/Y"
+     "v": "$109.0M",
+     "s": "+5% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "28%",
-     "s": "$33M"
+     "v": "32%",
+     "s": "$35.2M"
     },
     {
      "k": "Net loss",
-     "v": "($41M)",
-     "s": "(35%) margin"
+     "v": "($23.2M)",
+     "s": "(21%) margin"
     },
     {
      "k": "P/E",
@@ -3027,12 +3053,17 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $33M + $41M balances against the charges on the right.",
-    "Segments: Defense Tech $61.9M (from $5.1M a year ago), Space $55.2M (-3%). Source: Redwire 10-Q, quarter ended Jun 30 2026, segment reporting note.",
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss plus non-operating income fund every charge. $35.2M + $23.2M + $3.1M balances against the $61.5M of charges on the right.",
+    "Segments: Space $61.3M (+32%), Defense Tech $47.8M (-16%). Source: Redwire 8-K exhibit 99.1, quarter ended Sep 30 2026. The two have swapped places since the previous card, where Defense Tech was the larger.",
+    "Gross margin of 32.3% is the highest Redwire has reported and roughly double the 16.3% of a year ago. Cost of sales FELL 15% while revenue grew 5%.",
+    "Revenue growth of 5% is the slowest of the four cards refreshed on Nov 4; the improvement here is margin, not volume.",
+    "Non-operating income of $3.1M is $2.7M of net interest income, a $0.4M tax benefit and $21K of other income.",
+    "The $0.9M Transaction expenses band is a filed line that bin/mkspec.py drops automatically, because it falls under the script's $1M floor for a third operating-expense band. It was put back by hand, so non-operating income reads the true $3.1M instead of $2.2M.",
+    "Stock compensation is $6.3M, down from $12.0M a year ago.",
+    "Debt and coverage: the bars still show Q2 FY26, the quarter ended Jun 30, 2026 -- $90.3M of debt against $557.0M of cash and -$33.5M of free cash flow, net debt -$466.7M. bin/debtfetch.py skipped the new quarter rather than matching a balance sheet column 92 days away from Sep 30, 2026. Redwire's own release gives $47.0M of debt ($4.5M short-term, $42.5M long-term) plus $3.2M of notes payable to sellers, against $488.9M of cash, equivalents and restricted cash at Sep 30, 2026, and free cash flow of -$66.4M for the quarter (source: exhibit991redwire09302026e.htm). Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.09 actual against -$0.18 expected, beat by $0.09 (+50%). Sep '26 consensus is -$0.10 from 4 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 4, 2026.",
+    "Market figures as of Nov 4, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $90.3M of debt against $557.0M of cash and -$33.5M of free cash flow for the quarter. Net debt -$466.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.09 actual against -$0.18 expected, beat by $0.09 (+50%). Sep '26 consensus is -$0.10 from 4 analysts, due Nov 4, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -3887,5 +3918,5 @@
    "eps": "HOOD-eps"
   }
  ],
- "marketAsOf": "Nov 2, 2026"
+ "marketAsOf": "Nov 4, 2026"
 }

@@ -81,16 +81,20 @@ company, not a gap in the data.
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
 `income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
-**59 of the 72 charts now carry a reported split**, and the 13 that do not each say on the card why.
-Visa is the only one of those 13 whose split exists but cannot be drawn: its categories are gross of
+**60 of the 72 charts now carry a reported split**, and the 12 that do not each say on the card why.
+Visa is the only one of those 12 whose split exists but cannot be drawn: its categories are gross of
 client incentives and sum to a total it never reports — see [[visa-q4-fy26]].
 
-Those 12 are ARQQ, ASTS, CLSK, CRWV, DDOG, HUT, INFQ, NET, NU, SKHY, SMCI and XNDU. Most
-report one segment and disclose revenue by geography only. Two are worth naming:
+Those 11 are ARQQ, ASTS, CLSK, CRWV, HUT, INFQ, NET, NU, SKHY, SMCI and XNDU. Most
+report one segment and disclose revenue by geography only. DDOG left this list on Nov 4, 2026:
+its geographic split was always filed and is now drawn -- see [[datadog-q3-fy26]]. Two of the
+remaining eleven are worth naming:
 
 - **HUT** does report three segments — Compute $72.5M, Digital Infrastructure $33.0M, Power $5.5M —
-  but intersegment eliminations are $36.0M against $74.9M of revenue, so the three cannot be drawn
-  as bars that foot. The card gives the gross figures instead.
+  but in the Q2 FY26 quarter the card draws, intersegment eliminations are $36.0M against $74.9M of
+  revenue, so the three cannot be drawn as bars that foot. The card gives the gross figures instead.
+  The Q3 FY26 release splits revenue cleanly and would chart — but that quarter cannot be drawn at
+  all, for a different reason, set out in [[hut-8-q3-fy26]].
 - **NU** is charted on the aggregator's net revenue line, which no reported split adds up to.
 
 **IONQ was previously recorded here as publishing no split. That was wrong** — its 10-Q
