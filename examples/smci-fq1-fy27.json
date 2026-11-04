@@ -1,0 +1,55 @@
+{
+ "company": "Super Micro",
+ "ticker": "SMCI",
+ "period": "FQ1 FY27",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 19946.0,
+ "revenue_yoy": 298,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 19946.0,
+   "yoy": 298,
+   "note": "company publishes no segment split",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 17405.0,
+ "gross_profit": 2541.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 477.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 227.0
+  },
+  {
+   "name": "SG&A",
+   "value": 117.0
+  },
+  {
+   "name": "Sales & marketing",
+   "value": 133.0
+  }
+ ],
+ "operating_profit": 2064.0,
+ "other": -35.0,
+ "tax": 435.0,
+ "net_profit": 1594.0,
+ "prior": {
+  "Revenue": 5017.8,
+  "Cost of revenue": 4550.4,
+  "Gross profit": 467.4,
+  "R&D": 173.3,
+  "SG&A": 63.9,
+  "Sales & marketing": 47.9,
+  "Operating expenses": 285.1,
+  "Operating profit": 182.3,
+  "Net profit": 168.3,
+  "Tax": 40.2
+ },
+ "stock_comp": 100.2
+}

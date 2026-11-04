@@ -1,0 +1,56 @@
+{
+ "company": "Ouster",
+ "ticker": "OUST",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 59.3,
+ "revenue_yoy": 50,
+ "segments": [
+  {
+   "name": "Product revenue",
+   "value": 56.0,
+   "yoy": 42,
+   "note": "94% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Royalties",
+   "value": 3.3,
+   "note": "up from 38K a year ago",
+   "color": "#1b1b7a"
+  }
+ ],
+ "cost_of_revenue": 34.1,
+ "gross_profit": 25.3,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 18.6
+  },
+  {
+   "name": "SG&A",
+   "value": 16.3
+  },
+  {
+   "name": "Sales & marketing",
+   "value": 9.6
+  }
+ ],
+ "net_loss": 14.2,
+ "other_income": 5.0,
+ "prior": {
+  "Revenue": 39.5,
+  "Cost of revenue": 22.9,
+  "Gross profit": 16.7,
+  "R&D": 17.8,
+  "SG&A": 15.7,
+  "Sales & marketing": 7.4,
+  "Operating expenses": 40.9,
+  "Net loss": 21.7
+ },
+ "stock_comp": 11.5
+}

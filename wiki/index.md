@@ -31,8 +31,11 @@ Table of contents for this knowledge base. One line per page.
 
 - [[earnings-surprise-chart]] — the actual-vs-estimate EPS dots on each Financials card: where the figures come from, and why they are not the EPS the income statement beside them is built from.
 - [[share-ownership-donut]] — the "Who owns the shares" chart on each Financials card: four slices of the whole share count, the five largest holders named on hover from their own 13F, and why the slice sizes and the holder names have to come from different sources.
-- [[favorites-financials]] — index of the 72 income statement charts on the Financials tab, which of them carry a reported revenue segment split (56 do) and the data caveats that apply to them.
+- [[favorites-financials]] — index of the 72 income statement charts on the Financials tab, which of them carry a reported revenue segment split (59 do) and the data caveats that apply to them.
 - [[apple-fq4-fy26]] — Apple fiscal Q4 2026: a record $114,477M September quarter (+12% Y/Y) at a 47.9% gross margin, but operating margin slipped as R&D grew 32%; Greater China was the fastest-growing region at +21%.
+- [[amd-q3-fy26]] — AMD Q3 2026: $13,377M revenue (+45% Y/Y) with Data Center up 97% to $8,546M, a 54% GAAP gross margin that three sources would each quote differently, a $1,097M customer-warrant charge below the operating line and a $555M income tax benefit.
+- [[super-micro-fq1-fy27]] — Super Micro fiscal Q1 2027: $19,946M of net sales (+298% Y/Y) on a 12.7% gross margin that fell 480bp in a quarter, operating expenses of just 2.4% of revenue, and figures the company itself labels preliminary and unaudited.
+- [[ouster-q3-fy26]] — Ouster Q3 2026: $59.3M revenue (+50% Y/Y) at a 43% gross margin and a $14.2M net loss narrowed from $21.7M; royalties went from $38K to $3.3M, and the release's five columns are not in the order they look.
 - [[palantir-q3-fy26]] — Palantir Q3 2026: $2,313M revenue (+96% Y/Y), U.S. commercial revenue passing U.S. government for the first time, and a net margin above operating margin on interest income and a 1.2% tax rate.
 - [[coreweave-q2-fy26]] — CoreWeave Q2 2026: $2,575M revenue (+112% Y/Y), 66% gross margin, a $49M operating loss and a $626M net loss driven by financing cost.
 - [[nebius-q2-fy26]] — Nebius Group Q2 2026: $582.3M revenue (+454% Y/Y) at a 77% gross margin, a $190.4M net loss that is almost all depreciation and interest, and capex running at eight times revenue.

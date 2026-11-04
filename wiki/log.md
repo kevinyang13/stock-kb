@@ -2356,3 +2356,74 @@ link order, and NVIDIA's shipped PNG shows the same crossing. Palantir only make
 a 1.2% tax rate draws a very thin band across a very wide one. This is a change to a renderer shared
 by all 72 cards, so it is recorded here beside the loss-layout label collision rather than made
 inside a data refresh.
+
+## 2026-11-03 — AMD, Super Micro and Ouster refreshed to the quarters reported today
+
+**Source**: each company's own 8-K exhibit 99.1, all three filed November 3, 2026 — AMD
+`q32026991.htm`, Super Micro `exhibit991_20260930.htm`, Ouster `exhibit991-9302026.htm`.
+
+`events.json` listed four reporters for today. Three filed; **RIOT did not** — its most recent 8-K
+is October 14 — so its card is untouched and still shows Q2 FY26. A calendar date is a schedule, not
+a filing.
+
+**Changed**
+- `financials.json`: AMD Q2 FY26 → **Q3 FY26**, Super Micro FQ4 FY26 → **FQ1 FY27**, Ouster Q2 FY26
+  → **Q3 FY26**. Source switched from the vendor to the 8-K exhibit on all three. `generated`
+  stamped Nov 3, 2026.
+- New specs, charts and PNGs: `examples/amd-q3-fy26.json`, `examples/smci-fq1-fy27.json`,
+  `examples/oust-q3-fy26.json` and the matching `charts/` and `assets/financials/` files.
+- `examples/smci-debt.json` and `examples/oust-debt.json` refreshed to the Sep 30 column;
+  `examples/{amd,smci,oust}-eps.json` refreshed.
+- New pages: [[amd-q3-fy26]], [[super-micro-fq1-fy27]], [[ouster-q3-fy26]].
+- [[favorites-financials]]: the split count was recounted from the specs rather than carried
+  forward. It read 58 of 72 with 14 single-bar charts; it is **59 of 72 with 13**. Ouster accounts
+  for one of the three, CoreWeave for another from an earlier refresh; the third was already drift.
+
+**Prior-year columns were taken from the filings, not from `yoyfetch`.** The vendor has none of
+these quarters. Ouster's release lays out five columns as *Sep 2026 · Sep 2025 · Jun 2026 · nine
+months 2026 · nine months 2025*, so the year-ago comparative is the **second** column and last
+quarter is the third. Reading the third as the comparative — which is what the eye does — put last
+quarter's R&D, G&A, operating expenses and net loss into the prior-year slot. It was caught against
+the release's own "improvement of $8 million year over year" line and corrected before anything was
+committed; it had also reached the first draft of the wiki page's non-operating rows. AMD's release
+has the same trap in a different order (Sep 2026 · Jun 2026 · Sep 2025) and was read correctly.
+
+**AMD's gross margin moved from 56% to 54%, and the old figure was not wrong so much as a different
+line.** AMD splits cost of sales into two rows and subtotals them. The previous card used the first
+row alone, leaving out $257M of acquisition-related intangible amortisation, which gives $7,467M of
+gross profit and 56%. The 8-K's own subtotal is $7,210M and 54%. AMD's non-GAAP gross margin is also
+56%, arrived at a third way. The card now follows the subtotals throughout and says so.
+
+**AMD's quarter has two large offsetting items below the operating line.** A $1,097M charge for
+remeasuring warrants issued to customers — driven by AMD's own share price — and a $555M income tax
+**benefit** rather than a charge. The tax benefit flows *into* net profit on the chart, which the
+renderer has handled since SPCX. Net margin is 18% against a 21% operating margin.
+
+**Super Micro's figures are preliminary.** Its release states that closing procedures are not
+complete, that its auditor has performed no procedures on the data, and that final results may
+differ materially. That warning is now the first note on the card; no other card carries one.
+
+**Found, not fixed — a third `bin/sankey.py` defect: two dollar signs in one annotation delete it
+from the PNG.** Ouster's new Royalties segment carried the note "up from $38K a year ago". The
+annotation block already contains "$3.3M", so the text held two `$` characters, MathJax read them as
+a delimited math span, and kaleido dropped the whole label — name, figure and note — from the
+raster. The live chart JSON kept it, so the page was correct and only the fallback image was wrong,
+which is the worst way for this to fail. Isolated by bisection: a 45-character note with no `$`
+renders, a two-character `$x` does not. Worked around in data by writing "up from 38K a year ago".
+The fix belongs in the renderer — escaping `$` or disabling MathJax in the kaleido call — and is
+recorded here with the loss-layout label collision and the profit-layout band crossing rather than
+made inside a data refresh.
+
+**Ouster's chart still has the loss-layout label collision**: the "Net loss" block sits on the
+cost-of-revenue bar. Identical on the published Q2 FY26 PNG, so it is not from this refresh.
+
+**Not refreshed, deliberately**
+- **AMD's debt chart stays on Q2 FY26** and is labelled with that period. The vendor has no Sep 26
+  balance sheet, so `debtfetch` skipped it rather than matching a column 91 days away. AMD's own
+  release gives $7,079M of debt against $3,226M a quarter earlier.
+- **No earnings chart shows today's actual.** `epsfetch` detected all three due dates had passed
+  with no vendor figure and marked them `awaitingVendor`, which draws a caret reading "reported,
+  awaiting vendor" under the estimate instead of a dot. That machinery worked as designed; a note on
+  each card gives the reported EPS in the meantime.
+- **P/E and dividend** still read as of Oct 27, 2026 on all 72 cards. Refreshing three would make
+  them inconsistent with the other 69; that is a separate sweep.

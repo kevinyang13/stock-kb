@@ -3,54 +3,33 @@
  "company": "Super Micro",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: FQ4 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: FQ1 FY27, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "FQ4 FY26",
-   "debt": 9259.9,
-   "fcf": 718.7,
-   "cash": 7521.5,
+   "label": "FQ1 FY27",
+   "debt": 8646.0,
+   "fcf": -475.6,
+   "cash": 6897.5,
    "debt_parts": [
     {
      "label": "Short-term debt",
-     "value": 258.3
-    },
-    {
-     "label": "Current portion",
-     "value": 1781.5
+     "value": 1962.7
     },
     {
      "label": "Long-term debt",
-     "value": 6680.5
-    },
-    {
-     "label": "Current leases",
-     "value": 40.6
-    },
-    {
-     "label": "Long-term leases",
-     "value": 499.0
+     "value": 6683.3
     }
    ],
-   "cash_parts": [
-    {
-     "label": "Short-term investments",
-     "value": 23.1
-    },
-    {
-     "label": "Restricted cash (separate)",
-     "value": 47.0
-    }
-   ],
+   "cash_parts": [],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": 747.0
+     "value": -434.0
     },
     {
      "label": "Capital expenditure",
-     "value": -28.2
+     "value": -41.6
     }
    ]
   }

@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-02T16:10:00-08:00",
- "generatedLabel": "Nov 2, 2026",
+ "generated": "2026-11-03T16:30:00-08:00",
+ "generatedLabel": "Nov 3, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -466,32 +466,32 @@
   {
    "t": "SMCI",
    "company": "Super Micro",
-   "period": "FQ4 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/SMCI-FQ4-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/smci/financials/income-statement/?p=quarterly",
+   "period": "FQ1 FY27",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "8-K filed Nov 3, 2026",
+   "img": "assets/financials/SMCI-FQ1-FY27.png",
+   "source": "Super Micro 8-K exhibit 99.1, Q1 fiscal 2027 results, Nov 3 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/exhibit991_20260930.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$11,120M",
-     "s": "+93% Y/Y"
+     "v": "$19,946M",
+     "s": "+298% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "17%",
-     "s": "$1,943M"
+     "v": "13%",
+     "s": "$2,541M"
     },
     {
      "k": "Operating margin",
-     "v": "13%",
-     "s": "$1,488M"
+     "v": "10%",
+     "s": "$2,064M"
     },
     {
      "k": "Net profit",
-     "v": "$1,178M",
-     "s": "11% margin"
+     "v": "$1,594M",
+     "s": "8% margin"
     },
     {
      "k": "P/E",
@@ -505,13 +505,16 @@
     }
    ],
    "notes": [
-    "No segment split: Super Micro's FY26 10-K discloses net sales by geography only.",
-    "The lowest gross margin of any favorite at 17% \u2014 this is a systems assembler, not a chip designer.",
-    "Operating expenses are only $455M, 4% of revenue, so most of the thin gross profit survives to operating profit.",
-    "Revenue nearly doubled year over year.",
-    "Debt and coverage, FQ4 FY26: $9.3B of debt against $7.5B of cash and $718.7M of free cash flow for the quarter. Net debt $1.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.62 actual against $0.56 expected, a gap the two figures cannot be compared across -- see below. Sep '26 consensus is $1.04 from 6 analysts, due Nov 03, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Jun '26 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
+    "These figures are PRELIMINARY. Super Micro's own release states that its closing procedures for the quarter are not complete, that the figures are unaudited and have not been reviewed by its auditor, and that final results may differ materially. No other card on this page carries that warning.",
+    "Revenue nearly quadrupled, from $5,018M to $19,946M, and grew 79% from the $11,120M of the quarter before. Guidance is $19.5B to $21.5B for FQ2 and $72.0B to $82.0B for fiscal 2027.",
+    "No segment split: the release discloses no revenue breakdown at all, and the 10-Q for this quarter is not filed yet. The FY26 10-K disclosed net sales by geography only.",
+    "Gross margin of 12.7% is the lowest of any card here, and it FELL from 17.5% in the quarter before even as revenue grew 79% sequentially. It is up from 9.3% a year ago. This is a systems assembler, not a chip designer.",
+    "Operating expenses of $477M are 2.4% of revenue, so almost all of a thin gross margin survives to a $2,064M operating profit. Stock compensation alone is $100M of that $477M.",
+    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
+    "Debt and coverage, FQ1 FY27: $8.6B of debt against $6.9B of cash and -$475.6M of free cash flow for the quarter. Net debt $1.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com). Super Micro's own release quotes the same pair: $8.6B of bank debt and convertible notes, $6.9B of cash.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.62 actual against $0.56 expected, a gap the two figures cannot be compared across -- see below. Sep '26 consensus is $1.04 from 6 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Jun '26 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 3, 2026.",
     "Market figures as of Oct 27, 2026: P/E 10.8 trailing, 7.5 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "The earnings chart's Sep '26 column shows the $1.04 consensus with no actual beside it: Super Micro reported hours ago and the vendor has not posted its figure yet. GAAP diluted EPS was $1.75 and non-GAAP $1.81.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -968,32 +971,32 @@
   {
    "t": "AMD",
    "company": "AMD",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 27, 2026",
-   "reported": "",
-   "img": "assets/financials/AMD-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/amd/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 26, 2026",
+   "reported": "8-K filed Nov 3, 2026",
+   "img": "assets/financials/AMD-Q3-FY26.png",
+   "source": "AMD 8-K exhibit 99.1, Q3 2026 results, Nov 3 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/q32026991.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$11,536M",
-     "s": "+50% Y/Y"
+     "v": "$13,377M",
+     "s": "+45% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "56%",
-     "s": "$6,463M"
+     "v": "54%",
+     "s": "$7,210M"
     },
     {
      "k": "Operating margin",
-     "v": "17%",
-     "s": "$1,990M"
+     "v": "21%",
+     "s": "$2,832M"
     },
     {
      "k": "Net profit",
-     "v": "$2,297M",
-     "s": "20% margin"
+     "v": "$2,428M",
+     "s": "18% margin"
     },
     {
      "k": "P/E",
@@ -1007,11 +1010,17 @@
     }
    ],
    "notes": [
-    "Segments: Data Center $6,700M, Client $3,100M, Embedded $977M, Gaming $779M",
+    "Segments: Data Center $8,546M, Client $2,949M, Embedded $1,109M, Gaming $773M. The four lines foot to revenue to the dollar. Data Center alone is 64% of revenue and nearly doubled, up 97% year over year on the Instinct MI450 Series launch and EPYC.",
+    "Gaming fell 40% to $773M on lower semi-custom and graphics revenue, so the reported Client and Gaming segment fell 8% overall even though Client itself grew 7%.",
+    "Net profit is 18% of revenue against a 21% operating margin, because $959M of net non-operating EXPENSE sits between the two. Almost all of it is a $1,097M remeasurement of warrants AMD issued to certain customers, which moves with AMD's own share price and is not an operating result; $67M of investment gains and net interest partly offset it.",
+    "Income tax was a $555M BENEFIT, not a charge, so on this chart it flows into net profit rather than out of it. The warrant charge and the tax benefit are most of the distance between $1.46 of GAAP diluted EPS and $2.09 non-GAAP.",
+    "GAAP gross margin is 54%. The previous card on this ticker showed 56% because it used AMD's 'Cost of sales' line alone and left out the acquisition-related intangible amortisation AMD reports inside Total cost of sales. This card follows the 8-K: cost of revenue is $6,167M, being $5,910M of cost of sales plus $257M of amortisation. AMD's own non-GAAP gross margin for the quarter is also 56%, measured a different way again.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $4.3B of debt against $5.1B of cash and $1.6B of free cash flow for the quarter. Net debt -$810.0M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.44 actual against $1.35 expected, beat by $0.09 (+7%). Sep '26 consensus is $1.68 from 13 analysts, due Nov 03, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.44 actual against $1.35 expected, beat by $0.09 (+7%). Sep '26 consensus is $1.68 from 13 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 3, 2026.",
     "Market figures as of Oct 27, 2026: P/E 143.8 trailing, 50.4 forward; pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Debt and coverage still covers Q2 FY26 and is labelled with that period. The vendor has no Sep 26, 2026 balance sheet column yet, so bin/debtfetch.py skipped the quarter rather than matching one 91 days away. AMD's own 8-K reports $7,079M of total debt, $15,776M of cash and short-term investments and $554M of free cash flow for the quarter.",
+    "The earnings chart's Sep '26 column shows the $1.68 consensus with no actual beside it: AMD reported hours ago and the vendor has not posted its figure yet. GAAP diluted EPS was $1.46 and non-GAAP $2.09.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -2718,27 +2727,27 @@
   {
    "t": "OUST",
    "company": "Ouster",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/OUST-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/oust/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "8-K filed Nov 3, 2026",
+   "img": "assets/financials/OUST-Q3-FY26.png",
+   "source": "Ouster 8-K exhibit 99.1, Q3 2026 results, Nov 3 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1816581/000162828026069487/exhibit991-9302026.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$55M",
-     "s": "+56% Y/Y"
+     "v": "$59.3M",
+     "s": "+50% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "38%",
-     "s": "$21M"
+     "v": "43%",
+     "s": "$25.3M"
     },
     {
      "k": "Net loss",
-     "v": "($18M)",
-     "s": "(33%) margin"
+     "v": "($14.2M)",
+     "s": "(24%) margin"
     },
     {
      "k": "P/E",
@@ -2752,12 +2761,17 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $21M + $18M balances against the charges on the right.",
-    "No segment split: Ouster reports one segment and discloses revenue by geography only.",
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $25.3M + $14.2M, plus $5.0M of non-operating income, balances against the $44.5M of charges on the right.",
+    "Revenue is split by type, not by segment: Product revenue $56.0M, up 42% year over year, and Royalties $3.3M against $38K a year ago. Ouster reports one operating segment; the statement itself disaggregates revenue into these two lines, so this is the company's own split rather than a derived one.",
+    "Gross margin was 43%, against 49% in the quarter before -- but Ouster says a one-time refund added roughly 1,000 basis points to that 49%, so the underlying move is much smaller than the two printed margins suggest.",
+    "The net loss narrowed to $14.2M from $21.7M a year ago, an improvement of $7.6M. Two thirds of that, $5.0M, is the operating loss shrinking; $1.8M is more non-operating income, almost all interest on a cash and investments balance that doubled to $421M; $0.8M is the tax line turning from a charge into a benefit.",
+    "Income tax was a $0.7M BENEFIT rather than a charge, which is why the non-operating income bar of $5.0M is larger than the $4.4M of other income reported on the statement.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $16.4M of debt against $91.8M of cash and -$15.4M of free cash flow for the quarter. Net debt -$75.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.26 actual against -$0.31 expected, beat by $0.05 (+16%). Sep '26 consensus is -$0.30 from 1 analysts, due Nov 03, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
+    "Debt and coverage, Q3 FY26: $15.4M of debt against $88.9M of cash and -$35.0M of free cash flow for the quarter. Net debt -$73.5M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.26 actual against -$0.31 expected, beat by $0.05 (+16%). Sep '26 consensus is -$0.30 from 1 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 3, 2026.",
     "Market figures as of Oct 27, 2026: P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "The debt chart's cash bar is cash and cash equivalents only, $88.9M. The $330.9M of short-term investments and $0.3M of restricted cash are named on the bar's hover but not added into it; together with cash they make the $421M of liquidity Ouster's release quotes. The $15.4M of debt is entirely lease liabilities.",
+    "The earnings chart's Sep '26 column shows the -$0.30 consensus with no actual beside it: Ouster reported hours ago and the vendor has not posted its figure yet. GAAP diluted EPS was -$0.20.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],

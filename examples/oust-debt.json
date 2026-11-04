@@ -3,28 +3,28 @@
  "company": "Ouster",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 16.4,
-   "fcf": -15.4,
-   "cash": 91.8,
+   "label": "Q3 FY26",
+   "debt": 15.4,
+   "fcf": -35.0,
+   "cash": 88.9,
    "debt_parts": [
     {
      "label": "Current leases",
-     "value": 4.8
+     "value": 4.9
     },
     {
      "label": "Long-term leases",
-     "value": 11.6
+     "value": 10.4
     }
    ],
    "cash_parts": [
     {
      "label": "Short-term investments",
-     "value": 169.3
+     "value": 330.9
     },
     {
      "label": "Restricted cash (separate)",
@@ -34,11 +34,11 @@
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": -12.8
+     "value": -29.3
     },
     {
      "label": "Capital expenditure",
-     "value": -2.6
+     "value": -5.7
     }
    ]
   }

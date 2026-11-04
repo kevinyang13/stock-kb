@@ -81,11 +81,11 @@ company, not a gap in the data.
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
 `income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
-**58 of the 72 charts now carry a reported split**, and the 14 that do not each say on the card why.
-Visa is the only one of those 14 whose split exists but cannot be drawn: its categories are gross of
+**59 of the 72 charts now carry a reported split**, and the 13 that do not each say on the card why.
+Visa is the only one of those 13 whose split exists but cannot be drawn: its categories are gross of
 client incentives and sum to a total it never reports — see [[visa-q4-fy26]].
 
-Those 13 are ARQQ, ASTS, CLSK, CRWV, DDOG, HUT, INFQ, NET, NU, OUST, SKHY, SMCI and XNDU. Most
+Those 12 are ARQQ, ASTS, CLSK, CRWV, DDOG, HUT, INFQ, NET, NU, SKHY, SMCI and XNDU. Most
 report one segment and disclose revenue by geography only. Two are worth naming:
 
 - **HUT** does report three segments — Compute $72.5M, Digital Infrastructure $33.0M, Power $5.5M —
