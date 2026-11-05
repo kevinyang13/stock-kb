@@ -142,11 +142,14 @@ Site.nav();
     return bits.filter(Boolean).join(", ");
   }
 
+  // Plotly's hover parser understands <b> and <br> and decodes only a short
+  // list of entities -- &middot; is not on it and printed raw, so the
+  // separator here is the character itself.
   function hover(s) {
-    var L = ["<b>" + esc(s.company) + "</b> &middot; " + esc(s.site),
+    var L = ["<b>" + esc(s.company) + "</b> \u00b7 " + esc(s.site),
              esc(where(s))];
     L.push(STATUS[s.status].label +
-      (s.mw ? " &middot; " + s.mw.toLocaleString("en-US") + " MW" +
+      (s.mw ? " \u00b7 " + s.mw.toLocaleString("en-US") + " MW" +
               (s.mwBasis ? " (" + esc(s.mwBasis) + ")" : "") : ""));
     if (s.power) L.push(esc(s.power));
     if (s.tenant) L.push("Tenant: " + esc(s.tenant));

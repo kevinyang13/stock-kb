@@ -2714,3 +2714,19 @@ actually building.
 Still absent, and listed as absent on the page: Google's 37 operational locations, AWS's 39
 launched Regions, Microsoft's 60-plus Azure regions, and Meta's campuses beyond the three named
 multi-gigawatt ones.
+
+## 2026-11-04 — Map hover printed a raw HTML entity
+
+The Data Centers map's tooltips showed `&middot;` as literal text instead of a separator dot.
+
+Plotly does not render hover strings as HTML. It parses a small pseudo-HTML subset — `<b>`,
+`<br>`, `<i>`, `<a>` and a short entity table — and anything outside it prints raw. `&amp;`,
+`&gt;` and the numeric entities `esc()` produces are all on that table, which is why `PG&E` and
+`>90% closed-loop liquid cooling` were fine; `&middot;` is not on it.
+
+Fixed by putting the character itself (`·`) in the two hover strings rather than the entity.
+The page's footer and its HTML table keep `&middot;`, because those are real HTML and render
+correctly.
+
+Rule for anything added to this map later: **hover text is not HTML.** Use the character, not the
+entity.
