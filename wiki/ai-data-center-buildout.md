@@ -1,6 +1,6 @@
 # AI Data Center Build-out
 
-**Summary**: The public companies building and letting AI compute capacity, split by business model — pure-play neoclouds, infrastructure and HPC hosts, hyperscalers and colocation REITs — with each one's footprint, site counts by stage, power and cooling arrangements, and the KPIs that actually move. 110 sites are pinned on the [Data Centers map](../map.html), which shades US states by the November 3, 2026 Senate result.
+**Summary**: The 19 public companies building and letting AI compute capacity, split by business model — pure-play neoclouds, infrastructure and HPC hosts, hyperscalers and colocation REITs — with each one's footprint, site counts by stage, power and cooling arrangements, and the KPIs that actually move. 113 sites are pinned on the [Data Centers map](../map.html), which shades US states by the November 3, 2026 Senate result.
 
 **Sources**: Company site lists, SEC filings and press releases as cited line by line below; the US state shading is the 2026 Senate map (Nov 3, 2026) and, as an alternative layer, the 2024 presidential certificates published by the National Archives (source: archives.gov/electoral-college/2024). Figures that exist only in third-party trackers are labelled as such.
 
@@ -16,7 +16,7 @@ them at once.
 
 | Model | What it sells | Who it is here |
 |---|---|---|
-| **Pure-play neocloud** | GPU compute by the hour or by contract; usually leases the buildings | CoreWeave, Nebius, IREN |
+| **Pure-play neocloud** | GPU compute by the hour or by contract; usually leases the buildings | CoreWeave, Nebius, IREN, Boost Run |
 | **Infrastructure / HPC host** | Powered shell, or powered land, on a long lease; the tenant brings the chips | Applied Digital, Core Scientific, Cipher, TeraWulf, Galaxy, Hut 8, Riot |
 | **Hyperscaler** | Its own cloud, and its own models; builds for itself | Microsoft, Alphabet, Meta, Amazon, Oracle |
 | **Colocation REIT** | Space, power and interconnection, mostly to enterprises | Equinix, Digital Realty |
@@ -53,7 +53,9 @@ list), IREN (8 of 8),
 Core Scientific (9 pins covering all 10 listed facilities — Dalton's two entries share a city),
 TeraWulf (3 of 3), Galaxy (1 of 1). Partial: Applied Digital (3 of 5 campuses, two unlocated),
 Cipher (3 of 5 named sites), Hut 8 (4 pins plus one unlocated, against about 15 sites under
-management), Riot (its 2 AI campuses, not its mining estate). Pipeline-complete for Google: all 32 sites it flags as in development. Partial for
+management), Riot (its 2 AI campuses, not its mining estate). Not locatable at all for Boost Run beyond two sites: it publishes counts and megawatts but
+no cities, so one pin at its headquarters stands for the estate, as it does for the two REITs.
+Pipeline-complete for Google: all 32 sites it flags as in development. Partial for
 Microsoft (7) and Amazon (8), which publish no status list — those are the named campuses
 only. Deliberately illustrative: the two REITs, which carry one pin each for roughly 280 and
 300+ facilities. CoreWeave is a special case — it reports 51
@@ -93,6 +95,7 @@ forecast of any company's permits.
 
 | Ticker | Company | Model | Pinned sites | Headline capacity claim |
 |---|---|---|---|---|
+| BRUN | Boost Run | Neocloud | 2 named + 1 platform | 6 US facilities operating, 5 in progress, >125 MW |
 | CRWV | CoreWeave | Neocloud | 2 own, many leased | 51 active data centers, >1.5 GW active, ~4.2 GW contracted |
 | NBIS | Nebius Group | Neocloud | 15 | target of >3 GW contracted by end-2026 |
 | IREN | IREN | Neocloud | 8 | ~2,750 MW announced in Texas alone |
@@ -112,6 +115,16 @@ forecast of any company's permits.
 | DLR | Digital Realty | REIT | platform | 300+ facilities across 50+ metros |
 
 ---
+
+## Boost Run (BRUN)
+
+| | |
+|---|---|
+| **Ticker and model** | BRUN. Pure-play neocloud, and the purest form of it here: it owns no campuses at all. It buys GPU servers and puts them in other operators' halls, with TierPoint among the named partners, Lenovo as OEM and Lumen for connectivity. Nasdaq-listed since May 2026 through a SPAC combination with Willow Lane; headquartered in Northbrook, Illinois. |
+| **Footprint** | **Mostly undisclosed.** The company reports the count and the capacity but not the cities. Two sites are named in its own filings: Rock Island, Illinois and Pryor, Oklahoma. Risk factors add that some of its data centers are in California. |
+| **Sites by stage** | **Operational**: six US facilities at the May 2026 listing, over 125 MW across eleven sites in total; the prospectus describes four active facilities as of Q3 2025. **In progress**: five more. The two that are located — Rock Island, about 10,000 sq ft at 6.5 MW total load and **4 MW critical load**, on a 60-month lease targeted to commence September 1, 2026; and Pryor, on a **144-month** lease with two five-year renewals, targeted to commence December 15, 2026. |
+| **Power and infrastructure** | Whatever its landlords provide. That is the model, not a gap: the capital goes into GPUs rather than substations, which is the opposite trade from [[iren-fq4-fy26]], and it means Boost Run carries colocation lease obligations rather than construction risk. The Pryor lease runs twelve years, which is a long commitment for leased space. |
+| **KPIs to watch** | Contracted revenue — $940M of long-term customer contracts averaging three years at the listing — against revenue actually recognised, which was an order of magnitude smaller. Lease obligations and their terms, since the 144-month Pryor lease and the seven-year colocation leases are the balance-sheet weight here. And watch the counterparties: revenue includes computing services paid for in digital assets by the decentralised networks Bittensor and Aethir, which is a different credit from a hyperscaler contract. |
 
 ## CoreWeave (CRWV)
 
@@ -319,6 +332,8 @@ Their absence from the tables is a gap in the public market, not a gap in this p
   1.2 GW; press coverage of the city approval described at least 800 MW with a first 200 MW.
   The larger figure is the campus plan and the smaller one is what the utility has approved,
   and the site note says so rather than averaging them.
+- **No Boost Run site list.** Six operating facilities and five in progress, and the company
+  names two of the eleven. The rest is a count, not a map.
 - **No Beacon Point pin.** Hut 8 has not disclosed the location.
 - **No Polaris Forge 3 or Delta Forge 2 pins**, for the same reason.
 - **No investment view.** Everything above is sourcing and structure. [[favorites-financials]]

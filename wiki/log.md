@@ -2730,3 +2730,42 @@ correctly.
 
 Rule for anything added to this map later: **hover text is not HTML.** Use the character, not the
 entity.
+
+## 2026-11-04 — Boost Run (BRUN) added to the map: what a neocloud with no buildings looks like
+
+Fifth entry for the day. Boost Run is the nineteenth company on [[ai-data-center-buildout]] and
+the hardest one to map, because it owns nothing.
+
+**The model is the finding.** Boost Run buys GPU servers and puts them in other operators' halls
+— TierPoint is a named partner, Lenovo the OEM, Lumen the connectivity. It has no campuses, no
+substations and no construction risk, and in exchange it carries colocation lease obligations.
+That is the opposite trade from IREN, which owns its land and its substations.
+
+**It publishes counts, not places.** Six US facilities operating and five in progress, over 125 MW
+across eleven sites at its May 2026 Nasdaq listing (the prospectus describes four active
+facilities as of Q3 2025). Not one city appears in that disclosure. Two sites are named, both in
+the 10-Q's subsequent-events note:
+
+| Site | What the filing says |
+|---|---|
+| Rock Island, IL | ~10,000 rentable sq ft, **6.5 MW total load / 4 MW critical load**, 60-month initial term plus one 36-month extension, lease signed July 16, 2026, targeted to commence September 1, 2026 |
+| Pryor, OK | **144-month** initial term with two five-year renewals, lease signed August 13, 2026, targeted to commence December 15, 2026. No megawatt figure, no landlord named |
+
+Both are shown as not-yet-live: Rock Island's commencement target has passed but no later filing
+confirms delivery, so the map says building rather than asserting live. Pryor's target is still
+in the future.
+
+The remaining nine sites get **one pin at the Northbrook headquarters** standing for the estate,
+the same treatment Equinix and Digital Realty get, with the counts and the 125 MW in its note.
+Risk factors add only that some of the data centers are in California.
+
+Found the two sites by XBRL tag, not by reading: the prospectus carried a `PryorOklahomaMember`
+element with an August 13, 2026 date long before any narrative text turned up. Worth remembering
+as a way into a filing whose business section is 300,000 characters down the page.
+
+Two things the next pass should check rather than assume: the rent figures in those lease notes
+read "$2,364 per month" and "$660 per month", which in a statement tabulated in thousands mean
+millions, and nothing on the map depends on them; and BRUN has **no heatmap tile, no Financials
+card and no events entry** — it is on the map only. Adding it properly is an `add-ticker` run.
+
+Map total: 113 sites, 37 operational, 61 under construction, 15 planned.
