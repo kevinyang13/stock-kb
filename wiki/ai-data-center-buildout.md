@@ -1,6 +1,6 @@
 # AI Data Center Build-out
 
-**Summary**: The public companies building and letting AI compute capacity, split by business model — pure-play neoclouds, infrastructure and HPC hosts, hyperscalers and colocation REITs — with each one's footprint, site counts by stage, power and cooling arrangements, and the KPIs that actually move. 68 sites are pinned on the [Data Centers map](../map.html), which shades US states by the November 3, 2026 Senate result.
+**Summary**: The public companies building and letting AI compute capacity, split by business model — pure-play neoclouds, infrastructure and HPC hosts, hyperscalers and colocation REITs — with each one's footprint, site counts by stage, power and cooling arrangements, and the KPIs that actually move. 110 sites are pinned on the [Data Centers map](../map.html), which shades US states by the November 3, 2026 Senate result.
 
 **Sources**: Company site lists, SEC filings and press releases as cited line by line below; the US state shading is the 2026 Senate map (Nov 3, 2026) and, as an alternative layer, the 2024 presidential certificates published by the National Archives (source: archives.gov/electoral-college/2024). Figures that exist only in third-party trackers are labelled as such.
 
@@ -40,19 +40,23 @@ the table under the map carries the source link for every row.
 
 - **Pins are city or county centroids, not parcels.** Several campuses are deliberately sited
   away from the named town.
-- **Hyperscaler entries are the named AI-era campuses only**, not every data center those
-  companies own. Google publishes **69 locations, 44 of them in the US**
-  (source: datacenters.google/locations); three are pinned here. Microsoft operates in more
-  than 60 Azure regions; two are pinned. Pinning the rest would bury the build-out this page
-  is about, because most of that estate predates it.
+- **Hyperscaler entries are the pipeline, not the estate.** Google publishes **69 locations,
+  44 of them in the US**, and marks **32 of the 69 as "in development"** (source:
+  datacenters.google/locations) — all 32 are pinned, because that flag is exactly the
+  build-out this page is about. Its operational sites are not, apart from Pryor. Microsoft and
+  Amazon publish no equivalent status list, so their entries are the campuses each has named
+  in a release, a permit filing or credible reporting; AWS's own regions page names only two
+  unlaunched Regions worldwide, which is a different unit of measurement from a campus.
 
 **Coverage, company by company.** Complete against the company's own site list: Nebius (15, from its own region and facility
 list), IREN (8 of 8),
 Core Scientific (9 pins covering all 10 listed facilities — Dalton's two entries share a city),
 TeraWulf (3 of 3), Galaxy (1 of 1). Partial: Applied Digital (3 of 5 campuses, two unlocated),
 Cipher (3 of 5 named sites), Hut 8 (4 pins plus one unlocated, against about 15 sites under
-management), Riot (its 2 AI campuses, not its mining estate). Deliberately illustrative: every hyperscaler, and the two REITs, which carry one
-pin each for roughly 280 and 300+ facilities. CoreWeave is a special case — it reports 51
+management), Riot (its 2 AI campuses, not its mining estate). Pipeline-complete for Google: all 32 sites it flags as in development. Partial for
+Microsoft (7) and Amazon (8), which publish no status list — those are the named campuses
+only. Deliberately illustrative: the two REITs, which carry one pin each for roughly 280 and
+300+ facilities. CoreWeave is a special case — it reports 51
 active data centers and publishes no site list, so what is pinned is 2 of its own plus the 4
 landlord campuses it leases, which appear under the landlord's ticker.
 - **One site has no pin at all**: Hut 8's Beacon Point, its first gigawatt-scale campus, is not
@@ -99,10 +103,10 @@ forecast of any company's permits.
 | GLXY | Galaxy Digital | Host | 1 | 1.63 GW approved at one campus |
 | HUT | Hut 8 | Host | 4 (+1 unlocated) | 7,859 MW development pipeline |
 | RIOT | Riot Platforms | Host | 2 | 910 MW IT leased at Corsicana, 191 MW at Rockdale |
-| MSFT | Microsoft | Hyperscaler | 2 | Fairwater WI + Atlanta as one "AI superfactory" |
-| GOOG | Alphabet | Hyperscaler | 3 | $4bn Arkansas, reported $9bn Oklahoma |
+| MSFT | Microsoft | Hyperscaler | 7 | Fairwater WI + Atlanta, and a ~2 GW Pecos campus |
+| GOOG | Alphabet | Hyperscaler | 33 | 32 sites flagged in development by Google itself |
 | META | Meta Platforms | Hyperscaler | 3 | Hyperion to 2 GW by 2030, scaling to 5 GW |
-| AMZN | Amazon (AWS) | Hyperscaler | 1 | Project Rainier live, dedicated to Anthropic |
+| AMZN | Amazon (AWS) | Hyperscaler | 8 | Rainier live; ~$20bn pledged in Pennsylvania alone |
 | ORCL | Oracle / Stargate | Hyperscaler | 3 (+4 partner sites) | 4.5 GW of additional leasing for OpenAI |
 | EQIX | Equinix | REIT | platform | ~280 data centers, 77 markets, 36 countries |
 | DLR | Digital Realty | REIT | platform | 300+ facilities across 50+ metros |
@@ -214,8 +218,8 @@ forecast of any company's permits.
 | | |
 |---|---|
 | **Ticker and model** | MSFT. Hyperscaler: builds for its own Azure estate and for OpenAI, and *also* rents capacity from this page's hosts — Microsoft is the named tenant at IREN's Childress campus. |
-| **Footprint** | More than 60 Azure regions globally. The named AI-era builds here are Mount Pleasant, Wisconsin and Atlanta, Georgia. |
-| **Sites by stage** | **Operational**: Fairwater at Mount Pleasant, first building completed June 2026 on 315 acres, with approval to expand by a further 1,000 acres; Fairwater 2 in Atlanta, about 1M sq ft on 85 acres. **In progress**: a second Mount Pleasant facility due 2028. **Leased in**: Childress, where IREN delivered the first 50 MW IT building in August 2026 with three more due. |
+| **Footprint** | More than 60 Azure regions globally. Named AI-era builds pinned here: Mount Pleasant WI, Atlanta GA, Pecos TX, San Jose CA, Castroville TX, Prince William County VA and Person County NC. |
+| **Sites by stage** | **Operational**: Fairwater at Mount Pleasant, first building completed June 2026 on 315 acres, with approval for 15 more buildings in January 2026 and more than $20bn now committed across four campuses there; Fairwater 2 in Atlanta, about 1M sq ft on 85 acres. **In progress**: a second Mount Pleasant facility due 2028; **Pecos, Texas**, which Microsoft says adds about **2 GW** to its global capacity with the company funding the on-site energy supply; San Jose, 48 MW, ground broken June 2026; Castroville (SAT 82) near San Antonio, ~$400M on a tracker's dates rather than Microsoft's. **Planned**: Wellington (MNZ07) in Prince William County, a permit filing for two buildings and a substation on 123 acres; Person County NC, 1,385 acres with permitting from 2026. **Leased in**: Childress, where IREN delivered the first 50 MW IT building in August 2026 with three more due. |
 | **Power and infrastructure** | Fairwater puts more than 90% of servers on closed-loop liquid cooling with a water-cooled chiller plant — closed-loop matters because water consumption is the live local objection in most of these counties. Microsoft links Atlanta and Wisconsin over a dedicated network into what it calls an AI superfactory, which is a training-topology claim, not a marketing one. |
 | **KPIs to watch** | Azure growth and, specifically, the capacity-constrained language in the quarterly commentary: [[microsoft-fq1-fy27]] has Azure at +48% and 36% of the company. Capex and finance-lease additions. How much capacity is leased from third parties rather than owned — that is the line that connects MSFT to IREN and CRWV. |
 
@@ -224,8 +228,8 @@ forecast of any company's permits.
 | | |
 |---|---|
 | **Ticker and model** | GOOG. Hyperscaler with its own silicon (TPUs), which changes the economics: it is not bidding for the same GPUs as everyone else on this page. It is also, indirectly, a large credit backer of other operators' tenants. |
-| **Footprint** | The 2026 announcements cluster in the mid-South and plains: West Memphis AR, Pryor/Stillwater/Muskogee OK, a Tulsa-area campus, Armstrong County TX, and a reported Kansas site. |
-| **Sites by stage** | **Operational**: Pryor (MidAmerica), long-established. **In progress**: West Memphis, $4bn through 2027 on about 1,100 acres, Google's first data center in Arkansas; Armstrong County, developed by Crusoe. **Planned/reported**: a $9bn Oklahoma programme spanning Stillwater and Muskogee, a Tulsa campus confirmed in August 2026, and a reported $1bn Port of Little Rock site. |
+| **Footprint** | Google's own list runs to 69 locations, 44 in the US. The 32 it flags as **in development** are what is mapped here: 21 US sites across Texas (Armstrong County, Haskell, Pampa, Wilbarger County), Oklahoma (Stillwater, Tulsa, Muskogee County), Missouri (Kansas City, New Florence), Minnesota (Hermantown, Pine Island), Indiana (Michigan City, Morgan County), Georgia (Columbia County, LaGrange), Iowa, Virginia, South Carolina, Ohio, Michigan and Arkansas — plus 11 abroad in India, Thailand, Malaysia, Germany, Belgium, the Netherlands, Sweden, Austria, Finland (two) and Norway. |
+| **Sites by stage** | **Operational**: Pryor (MidAmerica) is the only operational Google site pinned; the other 37 are deliberately out of scope. **In development**: all 32, as Google itself labels them — the company does not distinguish permitting from construction, so the map shows them in one bucket and the hover says so. The ones with public dollar figures: West Memphis at $4bn through 2027 on about 1,100 acres, a reported $9bn Oklahoma programme covering Stillwater and Muskogee, and Armstrong County, developed by Crusoe. |
 | **Power and infrastructure** | Entergy Arkansas is building roughly $600M of new generation and transmission for West Memphis, with Google covering the cost — the clearest example on this page of a tenant paying for grid build rather than queueing for it. Armstrong County pairs with 531 MW of adjacent West Texas wind. |
 | **KPIs to watch** | Cloud revenue and backlog: [[alphabet-q3-fy26]] has Cloud more than doubling while free cash flow went negative on capex. Capex guidance, which is the number that moves the whole supply chain. And the off-balance-sheet exposure: Google credit-enhances Fluidstack's leases at TeraWulf and Cipher, so some of Google's capacity shows up on other companies' sites. |
 
@@ -244,9 +248,9 @@ forecast of any company's permits.
 | | |
 |---|---|
 | **Ticker and model** | AMZN. Hyperscaler with its own accelerators (Trainium), and a landlord relationship running the other way: AWS is the *tenant* on Cipher's 300 MW lease. |
-| **Footprint** | The named AI build is Project Rainier at New Carlisle, Indiana, plus a further $15bn announced across northwest Indiana. AWS's general region footprint is global and not pinned here. |
-| **Sites by stage** | **Operational**: Project Rainier, live since October 2025, roughly $11bn in its first phase, dedicated to a single customer — Anthropic — for training and serving Claude. **In progress**: further buildings at New Carlisle, with full campus build-out projected no earlier than late 2027. |
-| **Power and infrastructure** | AEP Indiana Michigan Power. Reported IT power of about 910 MW rising toward 1,925 MW is a press estimate rather than an AWS figure, and should be quoted as such. The site drew an Indiana environmental halt order over wetland impacts earlier in 2026. |
+| **Footprint** | Project Rainier at New Carlisle, Indiana, plus campuses in Pennsylvania (Homer City), Mississippi (Vicksburg, Madison County), North Carolina (Richmond County), Virginia (Louisa County), Georgia (Covington) and Ohio (New Albany). AWS's 39 launched Regions are a different unit and are not pinned. |
+| **Sites by stage** | **Operational**: Project Rainier, live since October 2025, roughly $11bn in its first phase, dedicated to a single customer — Anthropic — for training and serving Claude. **In progress**: further buildings at New Carlisle, full build-out projected no earlier than late 2027; Vicksburg ($3bn, construction from 2026); Madison County, the centre of a $12bn Mississippi expansion announced April 2026; Richmond County ($10bn); Louisa County, about $11bn of the $35bn Virginia programme that runs to 2040; New Albany, a five-building campus inside Ohio commitments of more than $23bn by 2029. **Planned**: Homer City, a 36-building campus on 1,100 acres with construction filed to start in December 2026 and completion in 2036; Covington, 430 acres with no construction date published. |
+| **Power and infrastructure** | AEP Indiana Michigan Power at Rainier. The Pennsylvania campus is the one to watch on power: it sits on the former Homer City generating station and runs on **on-site natural gas**, not a utility queue. AWS also says the sites for Ohio's most recent $10bn are not yet determined. Reported IT power of about 910 MW rising toward 1,925 MW is a press estimate rather than an AWS figure, and should be quoted as such. The site drew an Indiana environmental halt order over wetland impacts earlier in 2026. |
 | **KPIs to watch** | AWS growth rate and backlog: [[amazon-q3-fy26]] has AWS at +39% and accelerating for a fifth quarter. Capex against operating cash flow. Single-tenant concentration at Rainier is an unusual structure for AWS and worth watching as a template. |
 
 ## Oracle, and the Stargate sites (ORCL)
@@ -306,9 +310,9 @@ Their absence from the tables is a gap in the public market, not a gap in this p
 - **No per-site megawatts for CoreWeave's 51 data centers.** The company publishes the total
   and not the list; third-party trackers disagree with each other on the individual sites, so
   none of their figures are used here.
-- **No legacy hyperscaler estate.** Google's other 66 locations, Meta's other US campuses,
-  AWS's 38 regions and Microsoft's 60-plus are all real and all absent. They would be a second
-  layer on the map, not an extension of this one.
+- **No legacy hyperscaler estate.** Google's 37 operational locations, Meta's other US
+  campuses, AWS's 39 launched regions and Microsoft's 60-plus are all real and almost all
+  absent. They would be a second layer on the map, not an extension of this one.
 - **No Digital Realty site list.** Its platform figures are the company's own description and
   were not verified against a filing in this pass.
 - **Nebius's Independence capacity is quoted two ways.** The operator list gives the campus

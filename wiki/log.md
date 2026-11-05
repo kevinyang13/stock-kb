@@ -2673,3 +2673,44 @@ carries both rather than averaging them.
 
 Map totals are now 68 sites — 36 operational, 22 under construction, 10 planned — against 60
 before.
+
+## 2026-11-04 — Hyperscaler pipelines added to the map: 68 sites to 110
+
+Fourth entry for the day. The map's hyperscaler coverage was the weakest part of it —
+three Google pins against a company list of 69 locations — so the under-construction and
+planned sites were filled in for Google, Microsoft and Amazon.
+
+**Google publishes the status itself, which made it the easy one.** `datacenters.google/locations`
+marks **32 of its 69 locations as "in development"**. All 32 are now pinned: 21 in the US and 11
+abroad (India, Thailand, Malaysia, Germany, Belgium, the Netherlands, Sweden, Austria, Finland
+twice, Norway). Google's 37 operational sites are still deliberately out of scope apart from
+Pryor — the map is the build-out, not the estate.
+
+The one honest compromise: **"in development" is Google's bucket, not the map's.** The company
+does not distinguish permitting from construction, so all 32 land in the construction bucket and
+every one of them carries a note saying that is Google's wording rather than an observed build
+status.
+
+**Microsoft and Amazon publish no equivalent.** AWS's regions page lists exactly two unlaunched
+Regions worldwide, which is a different unit from a campus and useless here. So both are the
+named campuses only:
+
+| | added | best of them |
+|---|---|---|
+| MSFT | 5 | **Pecos, Texas** — Microsoft's own blog puts it at about **2 GW** of added global capacity, with Microsoft funding the on-site energy supply |
+| AMZN | 7 | **Homer City, Pennsylvania** — 36 buildings on 1,100 acres, construction filed for December 2026, completion 2036, running on **on-site natural gas** at a former coal plant |
+
+Sourcing is uneven across those twelve and the map says which is which: Microsoft's Pecos and
+San Jose, and AWS's Vicksburg, Madison County, Louisa County and Covington, come from a company
+blog, local news or state economic-development announcements; Castroville (SAT 82) and Richmond
+County come from project trackers and are labelled `project tracker (secondary)` in the source
+column. Prince William County and Person County are **permit filings**, not construction, and sit
+in the planned bucket.
+
+Totals: **110 sites — 36 operational, 60 under construction, 14 planned**, against 68 before.
+Google is now the largest single block on the map at 33 pins, which is a fair picture of who is
+actually building.
+
+Still absent, and listed as absent on the page: Google's 37 operational locations, AWS's 39
+launched Regions, Microsoft's 60-plus Azure regions, and Meta's campuses beyond the three named
+multi-gigawatt ones.

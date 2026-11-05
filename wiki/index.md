@@ -21,7 +21,7 @@ Table of contents for this knowledge base. One line per page.
 - `quotes.py` — the local server: proxies the quote feeds for same-origin pages and serves the rest of the local site from a whitelist of extensions, resolved inside the repo. Run it and open http://localhost:8090 when a page needs live prices.
 - `holdings.html` / `holdings.json` — **local only, in `.gitignore`**: a scenario table for positions held, with editable price columns and a P/L total per scenario. Never committed; the repo is public and Pages serves it.
 - `bin/stamp.py` — versions the shared CSS and JS links in every page, so an edit under `assets/` cannot hide behind a browser's cached copy.
-- `map.html` / `datacenters.json` — the Data Centers tab: a Plotly map of 68 AI data center sites, sized by megawatt and coloured by stage, over US states shaded by the Nov 3, 2026 Senate result (or the 2024 presidential result). The data file carries one record per site with its source link; only locations a company, a filing or a named report puts in a specific city or county are pinned.
+- `map.html` / `datacenters.json` — the Data Centers tab: a Plotly map of 110 AI data center sites, sized by megawatt and coloured by stage, over US states shaded by the Nov 3, 2026 Senate result (or the 2024 presidential result). The data file carries one record per site with its source link; only locations a company, a filing or a named report puts in a specific city or county are pinned.
 - `prices.json` — the committed price snapshot the published site reads, because every quote feed refuses a cross-origin request from the Pages origin. Carries `generated`, `generatedLabel`, `source` and `quotes[{t, price, pct}]`; the writer is not built yet, so the file ships empty.
 
 ## Strategy
@@ -30,7 +30,7 @@ Table of contents for this knowledge base. One line per page.
 
 ## Themes
 
-- [[ai-data-center-buildout]] — the AI data center build-out: 18 public companies across four business models (pure-play neocloud, infrastructure host, hyperscaler, colocation REIT), their site counts by stage, power arrangements and the KPIs that move; 68 sites pinned on the Data Centers map.
+- [[ai-data-center-buildout]] — the AI data center build-out: 18 public companies across four business models (pure-play neocloud, infrastructure host, hyperscaler, colocation REIT), their site counts by stage, power arrangements and the KPIs that move; 110 sites pinned on the Data Centers map.
 
 ## Companies
 
