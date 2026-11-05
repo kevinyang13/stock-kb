@@ -360,6 +360,61 @@
    "own": "TSM-own"
   },
   {
+   "t": "6488",
+   "company": "GlobalWafers",
+   "period": "Q2 FY26",
+   "periodEnd": "quarter ended Jun 30, 2026",
+   "reported": "Taipei Exchange filing, Aug 4, 2026",
+   "img": "assets/financials/6488-Q2-FY26.png",
+   "source": "stockanalysis.com quarterly income statement (TPEx 6488), converted to USD",
+   "sourceUrl": "https://stockanalysis.com/quote/tpex/6488/financials/",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$462.0M",
+     "s": "-5% Y/Y in New Taiwan dollars"
+    },
+    {
+     "k": "Gross margin",
+     "v": "21%",
+     "s": "$95.4M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "9%",
+     "s": "$43.2M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$114.8M",
+     "s": "25% margin, almost all non-operating"
+    },
+    {
+     "k": "P/E",
+     "v": "28.6 \u00b7 28.3",
+     "s": "trailing \u00b7 forward"
+    },
+    {
+     "k": "Dividend",
+     "v": "1.31%",
+     "s": "NT$7.70 a year"
+    }
+   ],
+   "notes": [
+    "THIS IS NOT THE LATEST QUARTER. GlobalWafers presented Q3 FY26 on November 3, 2026 \u00b7 revenue about NT$14.9B (+2.6% Y/Y, -2.3% Q/Q), gross margin 20.0%, operating margin 9.8%, net margin 10.1%, EPS NT$3.13. Those are deck figures, not a full statement; Taiwan's filing deadline for the Q3 report is November 14, 2026, and this card is built on the last quarter that has one.",
+    "Net profit is NOT an operating result. $96.1M of non-operating income \u2014 more than twice operating profit \u2014 is mostly a mark on the company's Siltronic stake. Net margin 25% against an operating margin of 9%. The operating line is the one that describes the business.",
+    "Filed in New Taiwan dollars and converted at USD/TWD 32.931 (Yahoo Finance TWD=X, November 4, 2026; open.er-api.com gave 32.824 the same day, a 0.3% spread). In the filed currency: revenue NT$15,214.3M, gross NT$3,140.4M, operating NT$1,422.8M, net NT$3,779.1M.",
+    "The -5% Y/Y is measured in New Taiwan dollars, which is the basis the company reports on. Year-ago hover figures are the June 2025 quarter converted at the SAME rate, so the chart's comparison is constant-currency and no part of the change is exchange rate.",
+    "No segment split: GlobalWafers publishes no quarterly revenue breakdown. Its Q3 deck describes record output at Sherman, Texas, record 12-inch SOI at its Missouri site and record shipments in Japan, without figures.",
+    "In the source, R&D plus SG&A exceed total operating expenses by NT$0.6M \u2014 a rounding artefact in the vendor's own data. At one decimal in USD it disappears; the bands sum exactly.",
+    "A mid-July 2026 fire at the Novara plant in Italy is what held Q3 revenue down; management said the quarter would otherwise have grown by double digits sequentially. That sits in the NEXT card, not this one.",
+    "Debt and coverage, Q2 FY26: $2,192.7M of debt against $722.0M of cash and -$1.9M of free cash flow for the quarter. Net debt $1,470.7M. Converted at the same USD/TWD 32.931 as the income statement \u2014 in the filed currency, NT$72.2B of debt against NT$23.8B of cash. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com). The $1.432B GDR placed alongside the November 3 Q3 presentation is NOT in these bars; GlobalWafers said it left the company in a net cash position of NT$26.3B.",
+    "No earnings chart and no ownership donut. Both pipelines resolve a US listing, and TPEx 6488 is not one: `epsfetch` found nothing at the vendor's quote endpoint, and a Taipei Exchange share is not reported on Form 13F. Neither is a failure to work around \u2014 the data does not exist for this listing.",
+    "Market figures as of Nov 4, 2026: P/E 28.6 trailing, 28.3 forward; dividend NT$7.70 a year, 1.31% yield, last ex-dividend Dec 29, 2026. Both are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "TPEx 6488 is a Taipei Exchange listing, not a US one. There is no SEC filing behind this card and no US ADR quoted alongside it."
+   ]
+  },
+  {
    "t": "TSLA",
    "company": "Tesla",
    "period": "Q3 FY26",

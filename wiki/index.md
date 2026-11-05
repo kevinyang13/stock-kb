@@ -21,7 +21,7 @@ Table of contents for this knowledge base. One line per page.
 - `quotes.py` — the local server: proxies the quote feeds for same-origin pages and serves the rest of the local site from a whitelist of extensions, resolved inside the repo. Run it and open http://localhost:8090 when a page needs live prices.
 - `holdings.html` / `holdings.json` — **local only, in `.gitignore`**: a scenario table for positions held, with editable price columns and a P/L total per scenario. Never committed; the repo is public and Pages serves it.
 - `bin/stamp.py` — versions the shared CSS and JS links in every page, so an edit under `assets/` cannot hide behind a browser's cached copy.
-- `map.html` / `datacenters.json` — the Data Centers tab: a Plotly map of 60 AI data center sites, sized by megawatt and coloured by stage, over US states shaded by the Nov 3, 2026 Senate result (or the 2024 presidential result). The data file carries one record per site with its source link; only locations a company, a filing or a named report puts in a specific city or county are pinned.
+- `map.html` / `datacenters.json` — the Data Centers tab: a Plotly map of 68 AI data center sites, sized by megawatt and coloured by stage, over US states shaded by the Nov 3, 2026 Senate result (or the 2024 presidential result). The data file carries one record per site with its source link; only locations a company, a filing or a named report puts in a specific city or county are pinned.
 - `prices.json` — the committed price snapshot the published site reads, because every quote feed refuses a cross-origin request from the Pages origin. Carries `generated`, `generatedLabel`, `source` and `quotes[{t, price, pct}]`; the writer is not built yet, so the file ships empty.
 
 ## Strategy
@@ -30,18 +30,19 @@ Table of contents for this knowledge base. One line per page.
 
 ## Themes
 
-- [[ai-data-center-buildout]] — the AI data center build-out: 18 public companies across four business models (pure-play neocloud, infrastructure host, hyperscaler, colocation REIT), their site counts by stage, power arrangements and the KPIs that move; 60 sites pinned on the Data Centers map.
+- [[ai-data-center-buildout]] — the AI data center build-out: 18 public companies across four business models (pure-play neocloud, infrastructure host, hyperscaler, colocation REIT), their site counts by stage, power arrangements and the KPIs that move; 68 sites pinned on the Data Centers map.
 
 ## Companies
 
 - [[earnings-surprise-chart]] — the actual-vs-estimate EPS dots on each Financials card: where the figures come from, and why they are not the EPS the income statement beside them is built from.
 - [[share-ownership-donut]] — the "Who owns the shares" chart on each Financials card: four slices of the whole share count, the five largest holders named on hover from their own 13F, and why the slice sizes and the holder names have to come from different sources.
-- [[favorites-financials]] — index of the 72 income statement charts on the Financials tab, which of them carry a reported revenue segment split (60 do) and the data caveats that apply to them.
+- [[favorites-financials]] — index of the 73 income statement charts on the Financials tab, which of them carry a reported revenue segment split (60 do) and the data caveats that apply to them.
 - [[apple-fq4-fy26]] — Apple fiscal Q4 2026: a record $114,477M September quarter (+12% Y/Y) at a 47.9% gross margin, but operating margin slipped as R&D grew 32%; Greater China was the fastest-growing region at +21%.
 - [[amd-q3-fy26]] — AMD Q3 2026: $13,377M revenue (+45% Y/Y) with Data Center up 97% to $8,546M, a 54% GAAP gross margin that three sources would each quote differently, a $1,097M customer-warrant charge below the operating line and a $555M income tax benefit.
 - [[super-micro-fq1-fy27]] — Super Micro fiscal Q1 2027: $19,946M of net sales (+298% Y/Y) on a 12.7% gross margin that fell 480bp in a quarter, operating expenses of just 2.4% of revenue, and figures the company itself labels preliminary and unaudited.
 - [[ouster-q3-fy26]] — Ouster Q3 2026: $59.3M revenue (+50% Y/Y) at a 43% gross margin and a $14.2M net loss narrowed from $21.7M; royalties went from $38K to $3.3M, and the release's five columns are not in the order they look.
 - [[qualcomm-fq4-fy26]] — Qualcomm fiscal Q4 2026: $10,322M revenue, **down 8% Y/Y**, with Handsets −26% and Automotive +89% past $2B for the first time; a $78M tax benefit, a year-ago quarter that was a GAAP loss, and a 13.7 trailing P/E that is a one-off tax benefit in the denominator.
+- [[globalwafers-q2-fy26]] — GlobalWafers Q2 2026 (TPEx 6488, converted from New Taiwan dollars): NT$15,214M revenue (−5% Y/Y) at a 20.6% gross margin, operating profit down 42% while net profit rose 125% on a Siltronic mark, and a Q3 presented the day before the card was built.
 - [[coherent-fq1-fy27]] — Coherent fiscal Q1 2027: $2,370.3M revenue (+50% Y/Y) at a 39.1% gross margin, Datacenter & Communications +79% to 82% of the company while Industrial fell 15%, and a $22.8M tax benefit; the release's three columns put last quarter between the two year-over-year ones.
 - [[datadog-q3-fy26]] — Datadog Q3 2026: $1,197M revenue (+35% Y/Y) at an 80% gross margin, an operating line that went from a $5.8M loss to $74.7M of income, and the first Datadog card to draw a revenue split — by geography, which was always filed.
 - [[redwire-q3-fy26]] — Redwire Q3 2026: $109.0M revenue (+5.4% Y/Y) and a record 32.3% gross margin built on cost of sales falling 15%, not on volume; Space passed Defense Tech again, and a $0.9M band the spec script silently drops.

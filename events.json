@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-02T16:13:31",
- "generatedLabel": "Nov 02, 2026",
+ "generated": "2026-11-04T17:41:25",
+ "generatedLabel": "Nov 04, 2026",
  "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
  "events": [
   {
@@ -177,6 +177,13 @@
   },
   {
    "date": "2026-11-02",
+   "type": "exdiv",
+   "ticker": "BITO",
+   "title": "BITO ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-11-02",
    "type": "earnings",
    "ticker": "PLTR",
    "title": "PLTR earnings",
@@ -265,6 +272,13 @@
    "type": "earnings",
    "ticker": "RDW",
    "title": "RDW earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-04",
+   "type": "earnings",
+   "ticker": "RIOT",
+   "title": "RIOT earnings",
    "fav": false
   },
   {
@@ -370,6 +384,13 @@
   {
    "date": "2026-11-10",
    "type": "earnings",
+   "ticker": "CAN",
+   "title": "CAN earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-10",
+   "type": "earnings",
    "ticker": "CRWV",
    "title": "CRWV earnings",
    "fav": false
@@ -425,6 +446,20 @@
   },
   {
    "date": "2026-11-12",
+   "type": "exdiv",
+   "ticker": "AAPL",
+   "title": "AAPL ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-11-12",
+   "type": "earnings",
+   "ticker": "CSCO",
+   "title": "CSCO earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-11-12",
    "type": "earnings",
    "ticker": "LUNR",
    "title": "LUNR earnings",
@@ -464,6 +499,13 @@
    "type": "exdiv",
    "ticker": "LLY",
    "title": "LLY ex-dividend",
+   "fav": false
+  },
+  {
+   "date": "2026-11-16",
+   "type": "exdiv",
+   "ticker": "CEG",
+   "title": "CEG ex-dividend",
    "fav": false
   },
   {
@@ -561,6 +603,13 @@
    "ticker": null,
    "title": "Early close 1:00 pm ET",
    "note": "Day after Thanksgiving; 1:15 pm for eligible options",
+   "fav": false
+  },
+  {
+   "date": "2026-11-30",
+   "type": "exdiv",
+   "ticker": "CCJ",
+   "title": "CCJ ex-dividend",
    "fav": false
   },
   {

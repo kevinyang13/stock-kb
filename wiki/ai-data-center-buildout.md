@@ -1,6 +1,6 @@
 # AI Data Center Build-out
 
-**Summary**: The public companies building and letting AI compute capacity, split by business model — pure-play neoclouds, infrastructure and HPC hosts, hyperscalers and colocation REITs — with each one's footprint, site counts by stage, power and cooling arrangements, and the KPIs that actually move. 60 sites are pinned on the [Data Centers map](../map.html), which shades US states by the November 3, 2026 Senate result.
+**Summary**: The public companies building and letting AI compute capacity, split by business model — pure-play neoclouds, infrastructure and HPC hosts, hyperscalers and colocation REITs — with each one's footprint, site counts by stage, power and cooling arrangements, and the KPIs that actually move. 68 sites are pinned on the [Data Centers map](../map.html), which shades US states by the November 3, 2026 Senate result.
 
 **Sources**: Company site lists, SEC filings and press releases as cited line by line below; the US state shading is the 2026 Senate map (Nov 3, 2026) and, as an alternative layer, the 2024 presidential certificates published by the National Archives (source: archives.gov/electoral-college/2024). Figures that exist only in third-party trackers are labelled as such.
 
@@ -46,12 +46,12 @@ the table under the map carries the source link for every row.
   than 60 Azure regions; two are pinned. Pinning the rest would bury the build-out this page
   is about, because most of that estate predates it.
 
-**Coverage, company by company.** Complete against the company's own site list: IREN (8 of 8),
+**Coverage, company by company.** Complete against the company's own site list: Nebius (15, from its own region and facility
+list), IREN (8 of 8),
 Core Scientific (9 pins covering all 10 listed facilities — Dalton's two entries share a city),
 TeraWulf (3 of 3), Galaxy (1 of 1). Partial: Applied Digital (3 of 5 campuses, two unlocated),
 Cipher (3 of 5 named sites), Hut 8 (4 pins plus one unlocated, against about 15 sites under
-management), Riot (its 2 AI campuses, not its mining estate), Nebius (7 of roughly 11 named
-locations). Deliberately illustrative: every hyperscaler, and the two REITs, which carry one
+management), Riot (its 2 AI campuses, not its mining estate). Deliberately illustrative: every hyperscaler, and the two REITs, which carry one
 pin each for roughly 280 and 300+ facilities. CoreWeave is a special case — it reports 51
 active data centers and publishes no site list, so what is pinned is 2 of its own plus the 4
 landlord campuses it leases, which appear under the landlord's ticker.
@@ -90,7 +90,7 @@ forecast of any company's permits.
 | Ticker | Company | Model | Pinned sites | Headline capacity claim |
 |---|---|---|---|---|
 | CRWV | CoreWeave | Neocloud | 2 own, many leased | 51 active data centers, >1.5 GW active, ~4.2 GW contracted |
-| NBIS | Nebius Group | Neocloud | 7 | target of >3 GW contracted by end-2026 |
+| NBIS | Nebius Group | Neocloud | 15 | target of >3 GW contracted by end-2026 |
 | IREN | IREN | Neocloud | 8 | ~2,750 MW announced in Texas alone |
 | APLD | Applied Digital | Host | 3 | 600 MW leased across two North Dakota campuses |
 | CORZ | Core Scientific | Host | 9 | 1,300+ MW of current power capacity |
@@ -123,11 +123,11 @@ forecast of any company's permits.
 
 | | |
 |---|---|
-| **Ticker and model** | NBIS. Pure-play neocloud with a European centre of gravity, and the only one here that both builds and leases at scale. |
-| **Footprint** | **US**: New Jersey (Vineland), Missouri (Kansas City colocation, plus a planned Independence campus). **Europe**: Finland (Mäntsälä, Lappeenranta), France (Béthune), Estonia, UK (London, Harlow, and capacity at a Vantage campus in Wales). **Israel**: leased space from Mega Or. |
-| **Sites by stage** | **Operational**: Vineland (phased, up to 300 MW), Kansas City, Mäntsälä (75 MW). **In progress**: Lappeenranta 310 MW (operations from 2027), Harlow. **Planned**: Independence MO, gigawatt-scale with a first 200 MW; Béthune 240 MW. |
-| **Power and infrastructure** | Mäntsälä recovers waste heat into the municipal district heating system — a genuinely different cooling economics from the Texas sites. Béthune draws on a French grid that is predominantly nuclear. Independence requires new generation, which is the gating item there, not the building. |
-| **KPIs to watch** | ARR and the contracted-power target of more than 3 GW by end-2026. Capex against revenue: [[nebius-q2-fy26]] records capex running at roughly eight times revenue, and a $190.4M net loss that is almost all depreciation and interest. That ratio, not the growth rate, is the thing that decides whether the build is financeable. |
+| **Ticker and model** | NBIS. Pure-play neocloud with a European centre of gravity, and the only one here that both builds campuses and rents colocation tranches at the same time. Its estate is organised as cloud regions, not as sites. |
+| **Footprint** | **US**: Missouri (Kansas City colocation, Independence AI factory), Minnesota (Woodbury), New Jersey (Vineland), Pennsylvania (Highridge, at Gordon/Pottsville), Alabama (Birmingham, BHM01). **Europe**: Finland (Mantsala, Lappeenranta), France (Saint-Denis colocation at Equinix, and a separately announced Bethune build), Iceland (Keflavik). **UK**: Woking, Harlow, Barry and Newport. |
+| **Sites by stage** | **Operational**: Mantsala, the flagship owned campus, expanding toward 310 MW from about 75 MW; Saint-Denis (~10–30 MW tranche, H200 and B300); Keflavik; Kansas City (~20 MW, H200/B200/RTX PRO); Woodbury; and the four UK sites, including NVIDIA B300 clusters. **In progress**: Independence, a 1.2 GW multi-building campus (DC1–DC4); Lappeenranta, 310 MW, operations from 2027; Vineland, phased to 300 MW. **Planned**: Highridge, 1.2 GW across DC1–DC6; Birmingham, 100 MW+; Bethune, 240 MW. |
+| **Power and infrastructure** | The Nordic sites are the differentiator: Mantsala recovers waste heat into municipal district heating, and Keflavik runs on geothermal and hydro. France sits on a predominantly nuclear grid. The two US gigawatt campuses are the opposite case — Independence needs new generation, which is the gating item there, and Highridge sits in PJM. |
+| **KPIs to watch** | ARR and the contracted-power target of more than 3 GW by end-2026. Capex against revenue: [[nebius-q2-fy26]] records capex running at roughly eight times revenue, and a $190.4M net loss that is almost all depreciation and interest. That ratio, not the growth rate, decides whether the build is financeable. Watch also the split between owned campuses and leased tranches — the leased ones scale faster and earn less. |
 
 ## IREN (IREN)
 
@@ -311,6 +311,10 @@ Their absence from the tables is a gap in the public market, not a gap in this p
   layer on the map, not an extension of this one.
 - **No Digital Realty site list.** Its platform figures are the company's own description and
   were not verified against a filing in this pass.
+- **Nebius's Independence capacity is quoted two ways.** The operator list gives the campus
+  1.2 GW; press coverage of the city approval described at least 800 MW with a first 200 MW.
+  The larger figure is the campus plan and the smaller one is what the utility has approved,
+  and the site note says so rather than averaging them.
 - **No Beacon Point pin.** Hut 8 has not disclosed the location.
 - **No Polaris Forge 3 or Delta Forge 2 pins**, for the same reason.
 - **No investment view.** Everything above is sourcing and structure. [[favorites-financials]]

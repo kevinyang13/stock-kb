@@ -2602,3 +2602,74 @@ figures and the page flags that rather than picking one.
 **Not done**: no Financials cards were added or changed. APLD, CORZ, CIFR, WULF, GLXY, EQIX and
 DLR have no card and no heatmap tile; adding them is an `add-ticker` run, not a wiki edit, and
 was not part of this request.
+
+## 2026-11-04 — GlobalWafers added (TPEx 6488), and Nebius's map footprint rebuilt
+
+Third entry for the day.
+
+### GlobalWafers, the first Taipei Exchange listing on the site
+
+| Step | Done | Note |
+|---|---|---|
+| Heatmap tile | yes | `sector: "Semiconductor"` set explicitly so AI Infra does not win by rank |
+| IBKR conid | **no** | the IBKR connector is not attached to this session |
+| Financials card | yes | income statement + debt chart + P/E and dividend |
+| Events calendar | **no date** | the vendor has no earnings calendar for TPEx |
+| Catalysts / Brief | n/a | not a favorite, by the user's choice |
+| Wiki | yes | [[globalwafers-q2-fy26]] |
+
+**`bin/sadata.py` gained a second non-US path.** `PATHS` was `{"7974": "quote/tyo/7974"}` and is
+now also `{"6488": "quote/tpex/6488"}`. TPEx, not TPE — `quote/tpe/6488` is a 404. Everything
+downstream that goes through `sadata` (the statement, `debtfetch`, `pefetch`) worked off that one
+line. `epsfetch` does not: it resolves a different vendor endpoint, `quote/<t>/info`, and reports
+`nothing at quote/6488/info`. So the card has no earnings chart, and no ownership donut either,
+because a Taipei Exchange share is not reported on Form 13F. Both gaps are stated on the card
+rather than worked around.
+
+**The card is deliberately one quarter behind.** GlobalWafers presented Q3 FY26 on November 3 —
+the day before — but Taiwan's deadline for the full consolidated report is November 14, so only
+deck figures exist: revenue about NT$14.9B, gross margin 20.0%, operating margin 9.8%, net margin
+10.1%, EPS NT$3.13. Building a statement by applying four rounded margin percentages to a rounded
+revenue figure would have produced numbers that are not any line in any filing — the Redwire
+mistake from this morning, made deliberately. The card carries the Q3 headline in its first note
+and says plainly that it is not the latest quarter.
+
+**Converted to USD at a dated rate, on the Nintendo precedent**, since the user chose that over
+TSM's keep-the-filed-currency approach. USD/TWD **32.931** from Yahoo Finance TWD=X on November 4,
+2026; open.er-api.com gave 32.824 the same day, a 0.3% spread, and both are recorded. The filed
+NT$ figures are in the notes and in the wiki page's statement table. The **year-ago** quarter is
+converted at the same rate, so the chart's comparison is constant-currency and no part of the
+−5% is exchange rate.
+
+**`debtfetch.py` wrote NT$ into a USD card.** It read the balance sheet through `sadata` and
+emitted `debt: 72207.0` with `"currency": "$"` — NT$72.2B labelled as dollars. Caught before
+rendering and converted at the same 32.931 to $2,192.7M against $722.0M of cash. The script has no
+currency awareness and nothing warns; any future non-USD ticker will need the same hand-check.
+
+**The quarter itself is a mark.** Operating profit fell 42% year over year while net profit rose
+125%, because non-operating income of NT$3,162.1M — more than twice operating profit — is mostly a
+revaluation of the Siltronic stake. The card's second note says so above the KPI row, the same
+treatment [[alphabet-q3-fy26]] and [[coinbase-q3-fy26]] get.
+
+Also worth recording for the next card: the proposed convertible bond of up to US$500M is to be
+subscribed **solely by Micron**, alongside a ten-year supply agreement — the customer financing
+the supplier's capacity, which is [[micron-fq4-fy26]] seen from the other side.
+
+Counts: 73 cards, 60 with a reported split, 13 without. 112 watchlist tiles against 109 IBKR
+conids — the gap was two (BITF, MFH) and is now three.
+
+### Nebius's sites on the Data Centers map: 7 pins to 15
+
+The user supplied Nebius's own region and facility list, which is considerably fuller than what
+the November 4 research pass had found. Replaced the NBIS block wholesale. New: Saint-Denis
+(Equinix colocation), Keflavik, Woodbury MN, the four UK sites (Woking, Harlow, Barry, Newport),
+Highridge PA (1.2 GW across DC1–DC6) and Birmingham AL. Bethune was kept with its own DCD citation
+even though it is not on the supplied list, and is marked as such.
+
+**One figure is quoted two ways and both are kept.** Independence, Missouri is 1.2 GW on the
+operator list; press coverage of the city approval described at least 800 MW with a first 200 MW.
+The larger number is the campus plan, the smaller is what the utility has approved. The site note
+carries both rather than averaging them.
+
+Map totals are now 68 sites — 36 operational, 22 under construction, 10 planned — against 60
+before.

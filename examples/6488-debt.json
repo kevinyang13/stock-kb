@@ -1,0 +1,54 @@
+{
+ "ticker": "6488",
+ "company": "GlobalWafers",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow. Filed in New Taiwan dollars and converted at USD/TWD 32.931 (Yahoo Finance TWD=X, Nov 4, 2026), the same rate the income statement uses.",
+ "periods": [
+  {
+   "label": "Q2 FY26",
+   "debt": 2192.7,
+   "fcf": -1.9,
+   "cash": 722.0,
+   "debt_parts": [
+    {
+     "label": "Short-term debt",
+     "value": 655.0
+    },
+    {
+     "label": "Current portion",
+     "value": 507.5
+    },
+    {
+     "label": "Long-term debt",
+     "value": 1007.8
+    },
+    {
+     "label": "Current leases",
+     "value": 4.2
+    },
+    {
+     "label": "Long-term leases",
+     "value": 18.2
+    }
+   ],
+   "cash_parts": [
+    {
+     "label": "Short-term investments",
+     "value": 144.8
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 64.9
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -66.9
+    }
+   ]
+  }
+ ]
+}
