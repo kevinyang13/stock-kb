@@ -21,7 +21,7 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 TIMEOUT = 25
 
 # Everything else resolves to /stocks/<ticker>/. Nintendo is not a US listing.
-PATHS = {"7974": "quote/tyo/7974"}
+PATHS = {"7974": "quote/tyo/7974", "6488": "quote/tpex/6488"}
 
 
 def hydrate(flat):

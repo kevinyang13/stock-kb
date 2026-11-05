@@ -60,10 +60,15 @@ landlord campuses it leases, which appear under the landlord's ticker.
 
 ### Why the states are coloured
 
-The default shading is the **2026 US Senate result** from the November 3, 2026 election: 33
-Class 2 seats plus the Ohio and Florida specials, with Alaska and Mississippi not yet called.
-A second layer shades by the **2024 presidential result** instead, which covers all 50 states
-and is the more stable reference.
+The default shading gives **every state a party**. Where a state voted on November 3, 2026 and
+the race has been called, it takes the **2026 US Senate result** — 33 Class 2 seats plus the
+Ohio and Florida specials. The states with no Senate race this cycle, and the two still
+uncalled (Alaska and Mississippi), fall back to the last statewide result there, the **2024
+presidential vote**. The hover says which of the two a state is coloured on, so a filled map
+never implies a race that did not happen.
+
+Two further layers are available: the 2026 Senate result *as called*, which leaves the
+no-race states grey and the uncalled two pale, and the 2024 presidential result on its own.
 
 This is not decoration. Data center siting is a state and local matter — interconnection
 queues, tax abatements, water permits and, increasingly, moratorium bills. Three of the four

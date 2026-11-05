@@ -77,7 +77,8 @@
       <option value="world">View: world</option>
     </select>
     <select id="shade" aria-label="State shading">
-      <option value="senate2026">Shade: 2026 Senate result</option>
+      <option value="filled">Shade: 2026 Senate, every state</option>
+      <option value="senate2026">Shade: 2026 Senate, as called</option>
       <option value="pres2024">Shade: 2024 presidential result</option>
       <option value="off">Shade: none</option>
     </select>
@@ -168,7 +169,11 @@ Site.nav();
     // --- state shading ------------------------------------------------------
     var key = shadeEl.value;
     if (!world && key !== "off") {
-      var block = doc.shading[key];
+      // "filled" gives every state a party: the 2026 Senate call where there
+      // was one, and the last statewide result -- the 2024 presidential vote --
+      // for the states with no race this cycle and the two not yet called.
+      var senate = doc.shading.senate2026, pres = doc.shading.pres2024;
+      var block = key === "filled" ? senate : doc.shading[key];
       var locs = [], z = [], txt = [];
       var Z = { none: 0, D: 1, R: 2, uncalled: 3 };
       var NAME = { D: "Democratic", R: "Republican",
@@ -176,8 +181,15 @@ Site.nav();
       Object.keys(block.states).forEach(function (st) {
         if (st === "DC") return;                 // DC has no state outline here
         var v = block.states[st];
+        var basis = block.label;
+        if (key === "filled" && (v === "none" || v === "uncalled")) {
+          basis = (v === "uncalled" ? "2026 Senate race not yet called" :
+                                      "no Senate race this cycle") +
+                  "<br>shown on the 2024 presidential result";
+          v = pres.states[st];
+        }
         locs.push(st); z.push(Z[v]);
-        txt.push("<b>" + st + "</b><br>" + block.label + "<br>" + NAME[v]);
+        txt.push("<b>" + st + "</b><br>" + basis + "<br>" + NAME[v]);
       });
       traces.push({
         type: "choropleth", locationmode: "USA-states",
@@ -250,6 +262,10 @@ Site.nav();
                    '"></i>Not yet called</span>');
         parts.push('<span class="k"><i class="sq" style="background:' + PARTY.none +
                    '"></i>No Senate race this cycle</span>');
+      }
+      if (key === "filled") {
+        parts.push('<span class="k">States with no 2026 Senate race, and the two ' +
+                   'not yet called, are shown on the 2024 presidential result</span>');
       }
     }
     document.getElementById("legend").innerHTML = parts.join("");
