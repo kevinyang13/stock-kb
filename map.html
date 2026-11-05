@@ -114,6 +114,7 @@ Site.nav();
   };
   var ORDER = ["operational", "construction", "planned"];
 
+  var NAMES = {};                       // ticker -> company name, for the filter
   var statusEl = document.getElementById("status");
   var scopeEl = document.getElementById("scope");
   var shadeEl = document.getElementById("shade");
@@ -156,11 +157,22 @@ Site.nav();
     return L.join("<br>");
   }
 
+  // Picking a company shows the sites it owns AND the ones it is the named
+  // tenant of. CoreWeave leases nearly everything it runs, so without the
+  // second half its filter would show four pins against 51 data centers.
   function picked() {
     var t = coEl.value;
+    if (t === "*") return doc.sites || [];
+    var name = (NAMES[t] || "").toLowerCase();
     return (doc.sites || []).filter(function (s) {
-      return t === "*" || s.t === t;
+      return s.t === t ||
+        (name && (s.tenant || "").toLowerCase().indexOf(name) !== -1);
     });
+  }
+
+  function isTenantRow(s) {
+    var t = coEl.value;
+    return t !== "*" && s.t !== t;
   }
 
   function draw() {
@@ -287,6 +299,10 @@ Site.nav();
     });
     bits.push("<b>" + Math.round(mw).toLocaleString("en-US") + " MW</b> across the " +
               known + " with a published figure");
+    var leased = sites.filter(isTenantRow).length;
+    if (leased) {
+      bits.push("<b>" + leased + "</b> of them another company's campus, leased in");
+    }
     if (pins < sites.length) {
       bits.push("<b>" + (sites.length - pins) + "</b> with no pin (location undisclosed)");
     }
@@ -304,7 +320,7 @@ Site.nav();
         ? '<a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.src) + "</a>"
         : esc(s.src || "");
       return "<tr>" +
-        "<td>" + esc(s.t) + "</td>" +
+        "<td>" + esc(s.t) + (isTenantRow(s) ? "<br><span class='dim'>landlord</span>" : "") + "</td>" +
         "<td>" + esc(s.company) + "<br><span class='dim'>" + esc(s.model) + "</span></td>" +
         "<td>" + esc(s.site) + "</td>" +
         "<td class='dim'>" + esc(where(s)) + "</td>" +
@@ -332,6 +348,7 @@ Site.nav();
 
       var seen = {};
       d.sites.forEach(function (s) { seen[s.t] = s.company; });
+      NAMES = seen;
       var opts = ['<option value="*">Company: all</option>'];
       Object.keys(seen).sort().forEach(function (t) {
         opts.push('<option value="' + esc(t) + '">' + esc(seen[t]) + "</option>");

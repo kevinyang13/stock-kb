@@ -1,6 +1,6 @@
 # AI Data Center Build-out
 
-**Summary**: The 19 public companies building and letting AI compute capacity, split by business model — pure-play neoclouds, infrastructure and HPC hosts, hyperscalers and colocation REITs — with each one's footprint, site counts by stage, power and cooling arrangements, and the KPIs that actually move. 113 sites are pinned on the [Data Centers map](../map.html), which shades US states by the November 3, 2026 Senate result.
+**Summary**: The 19 public companies building and letting AI compute capacity, split by business model — pure-play neoclouds, infrastructure and HPC hosts, hyperscalers and colocation REITs — with each one's footprint, site counts by stage, power and cooling arrangements, and the KPIs that actually move. 115 sites are pinned on the [Data Centers map](../map.html), which shades US states by the November 3, 2026 Senate result.
 
 **Sources**: Company site lists, SEC filings and press releases as cited line by line below; the US state shading is the 2026 Senate map (Nov 3, 2026) and, as an alternative layer, the 2024 presidential certificates published by the National Archives (source: archives.gov/electoral-college/2024). Figures that exist only in third-party trackers are labelled as such.
 
@@ -58,9 +58,12 @@ no cities, so one pin at its headquarters stands for the estate, as it does for 
 Pipeline-complete for Google: all 32 sites it flags as in development. Partial for
 Microsoft (7) and Amazon (8), which publish no status list — those are the named campuses
 only. Deliberately illustrative: the two REITs, which carry one pin each for roughly 280 and
-300+ facilities. CoreWeave is a special case — it reports 51
-active data centers and publishes no site list, so what is pinned is 2 of its own plus the 4
-landlord campuses it leases, which appear under the landlord's ticker.
+300+ facilities. CoreWeave is a special case and the map handles it
+explicitly: it leases every data center it runs and names none of them, so it gets two real
+pins (Kenilworth, Copenhagen), two more for Navi Mumbai and the undisclosed estate, and the
+four landlord campuses where it is the named tenant. **Selecting a company on the map also
+returns the sites it is the tenant of**, marked "landlord" in the table — without that,
+CoreWeave's filter showed four pins against 51 data centers.
 - **One site has no pin at all**: Hut 8's Beacon Point, its first gigawatt-scale campus, is not
   located in the November 4 release (source: Hut 8 8-K exhibit 99.1, Nov 4, 2026).
 
@@ -96,7 +99,7 @@ forecast of any company's permits.
 | Ticker | Company | Model | Pinned sites | Headline capacity claim |
 |---|---|---|---|---|
 | BRUN | Boost Run | Neocloud | 2 named + 1 platform | 6 US facilities operating, 5 in progress, >125 MW |
-| CRWV | CoreWeave | Neocloud | 2 own, many leased | 51 active data centers, >1.5 GW active, ~4.2 GW contracted |
+| CRWV | CoreWeave | Neocloud | 4 own + 4 leased in | 51 active data centers, >1.5 GW active, ~4.2 GW contracted |
 | NBIS | Nebius Group | Neocloud | 15 | target of >3 GW contracted by end-2026 |
 | IREN | IREN | Neocloud | 8 | ~2,750 MW announced in Texas alone |
 | APLD | Applied Digital | Host | 3 | 600 MW leased across two North Dakota campuses |
@@ -131,8 +134,8 @@ forecast of any company's permits.
 | | |
 |---|---|
 | **Ticker and model** | CRWV. Pure-play neocloud. It sells GPU hours; it leases most of the buildings those GPUs sit in, which is why its name appears as the *tenant* on four other companies' sites in this page. |
-| **Footprint** | 51 active data centers across North America and Europe as of June 30, 2026, eight of them added during 2026 (source: coreweave.com newsroom). Named international capacity: Copenhagen (atNorth DEN01), Navi Mumbai via AdaniConneX, and three Indonesian facilities. |
-| **Sites by stage** | **Operational**: 51 company-wide, individually undisclosed; Copenhagen's 22.5 MW is largely online. **In progress**: Ellendale ND (Applied Digital), Denton TX and Muskogee OK (Core Scientific), Helios TX (Galaxy) — all leased in, all under build. **Planned**: 240 MW at Navi Mumbai with an option to 480 MW, first capacity mid-2028; 360 MW across three Indonesian sites, all due 2028. |
+| **Footprint** | 51 active data centers across North America and Europe as of June 30, 2026, eight of them added during 2026 (source: coreweave.com newsroom). **CoreWeave names almost none of them.** Item 2 of its 10-K gives countries only — the United States, the United Kingdom, Spain, Sweden and Norway — and says that list is not exhaustive; the count lives in MD&A instead. Named sites: Kenilworth NJ (a JV, and the first data center it is developing itself), Copenhagen (atNorth DEN01), Navi Mumbai via AdaniConneX, and three unnamed Indonesian facilities. |
+| **Sites by stage** | **Operational**: 51 company-wide, individually undisclosed — 43 data centers and over 850 MW of active power at December 31, 2025, against about 3.1 GW contracted, rising to 51 and over 1.5 GW six months later. Copenhagen's 22.5 MW is largely online. **Own build**: Kenilworth, in development. **In progress**: Ellendale ND (Applied Digital), Denton TX and Muskogee OK (Core Scientific), Helios TX (Galaxy) — all leased in, all under build. **Planned**: 240 MW at Navi Mumbai with an option to 480 MW, first capacity mid-2028; 360 MW across three Indonesian sites, all due 2028. |
 | **Power and infrastructure** | Almost entirely landlord-supplied. Most of the leased US capacity is ERCOT (Texas) or MISO (North Dakota); the Copenhagen site is Nordic grid. CoreWeave also built its own AI backbone network linking the sites rather than relying on transit. |
 | **KPIs to watch** | Contracted power (4.2 GW) **against** active power (1.5 GW) — the gap is future revenue and future capex at the same time. Revenue backlog and its weighted life. Interest expense: [[coreweave-q2-fy26]] shows a $49M operating loss turning into a $626M net loss almost entirely on financing cost, which is the structural risk of leasing capacity with debt. |
 
@@ -320,9 +323,11 @@ Their absence from the tables is a gap in the public market, not a gap in this p
 
 ## What this page does not carry
 
-- **No per-site megawatts for CoreWeave's 51 data centers.** The company publishes the total
-  and not the list; third-party trackers disagree with each other on the individual sites, so
-  none of their figures are used here.
+- **No per-site list for CoreWeave's 51 data centers, because one does not exist.** This was
+  checked in the 10-K rather than assumed: Item 2 Properties says only "worldwide, including in
+  the United States, the United Kingdom, Spain, Sweden, and Norway" and gives no count, no
+  square footage and no megawatts. Third-party trackers fill the gap and disagree with each
+  other, so none of their figures are used here.
 - **No legacy hyperscaler estate.** Google's 37 operational locations, Meta's other US
   campuses, AWS's 39 launched regions and Microsoft's 60-plus are all real and almost all
   absent. They would be a second layer on the map, not an extension of this one.

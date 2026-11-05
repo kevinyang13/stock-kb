@@ -2769,3 +2769,38 @@ millions, and nothing on the map depends on them; and BRUN has **no heatmap tile
 card and no events entry** — it is on the map only. Adding it properly is an `add-ticker` run.
 
 Map total: 113 sites, 37 operational, 61 under construction, 15 planned.
+
+## 2026-11-04 — Why CoreWeave looked empty on the map, and what was done about it
+
+Sixth entry. The map showed CoreWeave with two pins against a company that reports 51 data
+centers, which looked like a research failure. It was checked against the 10-K instead of
+patched with tracker data, and it is a **disclosure gap, not a research gap**.
+
+**Item 2. Properties, CoreWeave 10-K for FY2025** (source: crwv-20251231.htm) gives the data
+center estate as: "Worldwide, including in the United States, the United Kingdom, Spain, Sweden,
+and Norway." No count, no square footage, no megawatts, and "including" means the list is not
+even exhaustive. The only site named anywhere in the filing is **Kenilworth, New Jersey**, a
+joint venture, described as where the company is "beginning to develop our own data centers."
+The numbers live in MD&A instead: 43 data centers and over 850 MW of active power at December
+31, 2025 against about 3.1 GW contracted, rising to 51 and over 1.5 GW by June 30, 2026.
+
+So there is no list to find. Three changes rather than inventing one:
+
+1. **Kenilworth is pinned**, sourced to the 10-K.
+2. **A headquarters pin at Livingston, New Jersey stands for the undisclosed estate**, carrying
+   the counts and the country list — the same treatment Boost Run, Equinix and Digital Realty get.
+3. **The company filter now matches the tenant field as well as the owner.** CoreWeave is the
+   named tenant at Applied Digital's Polaris Forge 1, Core Scientific's Denton and Muskogee, and
+   Galaxy's Helios; those pins belong to the landlord so the megawatts are not double-counted,
+   but filtering to CoreWeave now returns them, tagged "landlord" in the table. Its filter went
+   from 4 pins to 8, and the totals line says how many are someone else's campus.
+
+**A data bug fell out of that change.** Every one of the nine Core Scientific sites carried the
+blanket tenant string "CoreWeave at Denton and Muskogee" from the original pass, which was
+accurate prose and useless data — a tenant-aware filter would have credited CoreWeave with all
+nine. Denton and Muskogee now carry `tenant: "CoreWeave"` and the other seven carry nothing.
+
+Lesson for the dataset: **a field that is read by code cannot carry a sentence meant for a human.**
+The note field is for prose; `tenant` has to be the tenant.
+
+Map total: 115 sites.
