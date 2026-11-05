@@ -1,112 +1,124 @@
 {
- "generated": "2026-10-19T17:24:06-07:00",
- "generatedLabel": "Oct 19, 2026, 5:24 PM PT",
- "source": "stockanalysis.com",
- "note": "Only tickers with an identifiable catalyst are listed. Benzinga returned HTTP 403 to this run, so headlines come from stockanalysis.com. The NBIS entry was added by hand on Oct 26, 2026 when the ticker joined the watchlist; every other entry is from the Oct 19 run.",
+ "generated": "2026-11-05T05:40:06-08:00",
+ "generatedLabel": "Nov 5, 2026, 5:40 AM PT",
+ "source": "stockanalysis.com news feed, fetched locally by bin/newsfetch.py",
+ "note": "Swept locally on Nov 5, 2026 over a seven-day window, because the cloud catalyst routine still fails on its egress block. Headlines and outlets are as the feed carries them; the summaries are written from those stories. SMH and INTU had nothing in the window and are left out rather than padded.",
  "items": [
   {
-   "t": "NBIS",
-   "summary": "Fell 3.5% to $153.27, a third straight down close and 49% below its 52-week high, as Elon Musk's warning that most of the 200-plus AI neoclouds face failure hit the whole group. A $3.5B Citi financing facility announced Oct 22 had already put the sector's debt load in focus.",
-   "headlines": [
-    "Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death' - CNBC",
-    "Musk's warning hits neocloud stocks as debt concerns mount - Reuters",
-    "Nebius gets $3.5 billion Citi facility for data center growth - Reuters"
-   ]
-  },
-  {
    "t": "SNDK",
-   "summary": "Shares rebounded about 5.5% as investors returned to memory and chip names after an 18% crash the prior week.",
+   "summary": "Sank again on Thursday as the memory sell-off deepened, after Wednesday's plunge took Micron down 7% alongside Sandisk and SK Hynix. Qualcomm's results gave the group another reason for caution. This follows the Oct 30 fall on Kioxia's read that the AI-driven flash price surge is fading -- see the Financials card, which carries the full drawdown.",
    "headlines": [
-    "Micron, SanDisk stocks jump after 15% and 18% crashes: what sparked the comeback? - Invezz",
-    "Why Micron, SanDisk, and SK Hynix Stocks Are Rising in Premarket Today after Last Week's Sell-Off - TipRanks"
+    "Micron, SanDisk, and SK Hynix Stocks Sink as Chip Sell-Off Deepens. What's Behind the Decline on Nov. 5? - TipRanks",
+    "Why Micron, Sandisk, and SK hynix Stocks Extend Losses Overnight After Wednesday's Plunge - and What Wall Street Sees Next - TipRanks",
+    "Why Micron, SanDisk, and SK Hynix Stocks Are Falling Despite Strong AMD Earnings, November 4 - TipRanks"
    ]
   },
   {
-   "t": "TSLA",
-   "summary": "Stock rose 3.8% with investors positioning ahead of Q3 earnings due Oct 21 and renewed SpaceX merger speculation.",
+   "t": "NBIS",
+   "summary": "Fell about 3% on Wednesday alongside CoreWeave (-6.5%) and IREN (-5%) as sweeping Democratic wins in the midterms raised the prospect of tighter scrutiny of the AI build-out. Citi cut its price target to $265 from $324. Nebius reports Q3 on Nov 12.",
    "headlines": [
-    "SpaceX, Tesla earnings to test Musk's AI spending ambitions as merger talk grows - Reuters",
-    "Here's How Much Tesla Stock Is Expected to Move After Earnings - Investopedia"
+    "Why CoreWeave, IREN, and Nebius Stocks Are Plunging Today - and Why Jim Cramer Sees More Downside Ahead - TipRanks",
+    "CoreWeave, Nebius, and IREN Stocks Drop in Pre-Market, Nov. 4 - Here's Why - TipRanks",
+    "Nebius price target lowered to $265 from $324 at Citi - TheFly"
    ]
   },
   {
    "t": "MU",
-   "summary": "Rose 3.0% as semiconductor stocks rebounded from a broad selloff tied to doubts about AI spending.",
+   "summary": "Hit a three-month low on Nov 4 after falling 7% on Wednesday, and kept sliding pre-market on Thursday as the chip sell-off ran on. Separately, Micron suspended construction of a $4.5B memory plant in Taiwan following a prolonged labour dispute.",
    "headlines": [
-    "Micron stock is rebounding today: here's why - Invezz",
-    "Micron, SanDisk stocks jump after 15% and 18% crashes: what sparked the comeback? - Invezz"
-   ]
-  },
-  {
-   "t": "TSM",
-   "summary": "Up 1.8%, with coverage centred on record Q3 results and an upbeat outlook that held through the chip selloff.",
-   "headlines": [
-    "Opinion: The Most Important Number in Taiwan Semiconductor's Earnings Report Was 68% - The Motley Fool",
-    "The AI Sell-Off Continues-These 3 Stocks Keep Raising Guidance Anyway - MarketBeat"
-   ]
-  },
-  {
-   "t": "SMH",
-   "summary": "The semiconductor ETF gained 1.6% as chip stocks sprang back from a selloff that wiped out roughly $2 trillion in value.",
-   "headlines": [
-    "Micron and other chip stocks spring back to life after bruising selloff - MarketWatch",
-    "US chip stocks set to wipe out $2 trillion after latest selloff - Reuters"
-   ]
-  },
-  {
-   "t": "SMCI",
-   "summary": "Up 1.5% with no single driver named; the most recent company news is the appointment of a new chief financial officer.",
-   "headlines": [
-    "Super Micro appoints Mark Long as chief financial officer - Reuters",
-    "Super Micro Computer Stock Is 'Still Undervalued,' Says Rosenblatt. Here's Why - TipRanks"
-   ]
-  },
-  {
-   "t": "NVDA",
-   "summary": "Closed up 1.4% after Nvidia announced a record-breaking fault-tolerant quantum computing simulation.",
-   "headlines": [
-    "Nvidia Stock (NVDA) Rises on 'Record-Breaking' Quantum Computing Simulation - TipRanks",
-    "Nvidia wins fast-growing AI startup Modal for new central processors - Reuters"
-   ]
-  },
-  {
-   "t": "GOOG",
-   "summary": "Added 1.0% on renewed buying in large-cap tech and a positive analyst tone ahead of earnings.",
-   "headlines": [
-    "Why Alphabet is up 1.7% on Monday? - Invezz",
-    "Supreme Court rejects Google challenge to US patent agency review policy - Reuters"
-   ]
-  },
-  {
-   "t": "MSFT",
-   "summary": "Up 0.8% ahead of Oct 28 earnings, with a Morgan Stanley note flagging a high bar for the quarter.",
-   "headlines": [
-    "Microsoft Stock (MSFT) Has a High Bar to Jump Heading into Earnings, Says Morgan Stanley - TipRanks",
-    "Microsoft says AI agents are like insider threats as 'frontier models can't be trusted' - TechCrunch"
+    "Micron Stock Hits 3-Month Low. Is MU a Buy at These Levels? - TipRanks",
+    "Micron Stock News: $4.5B Taiwan Plant Put on Hold amid Labor Dispute - TipRanks",
+    "Micron, SanDisk, and SK Hynix Stocks Sink as Chip Sell-Off Deepens - TipRanks"
    ]
   },
   {
    "t": "QCOM",
-   "summary": "Up 0.8%; the standing catalyst is the split jury verdict in the Arm licensing dispute returned last week.",
+   "summary": "Price targets moved in both directions the morning after fiscal Q4 results: Susquehanna cut to $165 from $185 on Android stabilisation, JPMorgan to $200 from $215, while Evercore ISI raised to $165 from $159. The quarter itself is on the Financials card -- revenue down 8% year over year.",
    "headlines": [
-    "Arm says jury found in favor of company vs. Qualcomm on four claims - TheFly",
-    "Qualcomm says jury found Arm breached license agreement - TheFly"
+    "Qualcomm Stock Forecast - Why Analysts Cut Price Targets After Q4 Results - TipRanks",
+    "Qualcomm price target lowered to $165 from $185 at Susquehanna - TheFly",
+    "Qualcomm price target raised to $165 from $159 at Evercore ISI - TheFly"
    ]
   },
   {
-   "t": "INTU",
-   "summary": "Essentially flat (+0.1%); the live catalyst is the agreement to acquire revenue-management firm Sequence, announced Oct 15.",
+   "t": "SMCI",
+   "summary": "Rose nearly 8% on a large revenue beat, and the sell-side split on it: Raymond James raised its target to $65 from $48, Mizuho cut to $36 from $43.",
    "headlines": [
-    "Intuit Targets B2B Software Space With Sequence Acquisition - PYMNTS",
-    "Intuit signs agreement to acquire Sequence - TheFly"
+    "SMCI Stock Surges Nearly 8% After Super Micro's Massive Revenue Beat - TipRanks",
+    "Super Micro price target raised to $65 from $48 at Raymond James - TheFly",
+    "Super Micro price target lowered to $36 from $43 at Mizuho - TheFly"
+   ]
+  },
+  {
+   "t": "NVDA",
+   "summary": "Gave up a premarket rally and fell 2.24% after Democrats took the Senate. Separately, Bloomberg reported Chinese firms have ordered roughly 6 million Nvidia chips -- a backlog put at about $70B -- and expect to receive about 1% of it.",
+   "headlines": [
+    "Why Couldn't Nvidia Stock (NVDA) Hang on to Its Premarket Gains Today? - TipRanks",
+    "Nvidia (NVDA) Faces $70B China AI Chip Backlog as Supply Falls Short - TipRanks",
+    "Chinese firms order 6M Nvidia chips, expect 1% of order, Bloomberg reports - TheFly"
+   ]
+  },
+  {
+   "t": "TSLA",
+   "summary": "Fell on Wednesday with the midterm results, which raised the prospect of closer scrutiny of Elon Musk's businesses. Tesla also cut the Full Self-Driving speed-limit buffer from 50% to 10%, and faces legal trouble in South Korea over FSD claims.",
+   "headlines": [
+    "SpaceX vs. Tesla: One Elon Musk Stock Offers Only 6% Upside After the Sell-Off, the Other Has 84%+ - TipRanks",
+    "Tesla Stock (NASDAQ:TSLA) Slides as Company Faces Legal Trouble in South Korea - TipRanks",
+    "Tesla Cuts FSD Speed Limit Buffer from 50% to 10% - TipRanks"
+   ]
+  },
+  {
+   "t": "SPCX",
+   "summary": "Fell with Tesla on the midterm result, then drew buying: ARK Invest bought 348,406 shares across three ETFs on Wednesday, about $47.4M at the $135.92 close. Bloomberg reported Goldman Sachs and Apollo are in talks to sell down parts of a roughly $40B chip financing deal for SpaceX.",
+   "headlines": [
+    "SpaceX or Alphabet: Cathie Wood Buys $47.4M of One Stock, Sells $13.3M of the Other - TipRanks",
+    "Goldman, Apollo in talks to sell SpaceX's $40B AI deal, Bloomberg reports - TheFly",
+    "SpaceX vs. Tesla: One Elon Musk Stock Offers Only 6% Upside After the Sell-Off - TipRanks"
+   ]
+  },
+  {
+   "t": "META",
+   "summary": "Launched a $20 billion bond sale to fund its AI build-out, as big-tech debt issuance builds, and acquired AI coding startup Conductor.",
+   "headlines": [
+    "Meta Launches $20 Billion Bond Sale to Fund AI Expansion as Big Tech Debt Builds - TipRanks",
+    "Meta acquires AI coding startup Conductor, Axios reports - TheFly",
+    "M&A News: Meta Platforms (META) to Buy AI Coding Startup Conductor - TipRanks"
+   ]
+  },
+  {
+   "t": "MSFT",
+   "summary": "Reportedly walked away from a multibillion-dollar AI capacity deal with UK-based Nscale, which puts the pace of its AI spending back in question alongside reported delays across its data center programme.",
+   "headlines": [
+    "Microsoft Drops Nscale AI Deal - Is Its AI Spending Strategy Changing? - TipRanks",
+    "Microsoft Stock (NASDAQ:MSFT) Surges as AI Development May Pay Off - TipRanks",
+    "Ubisoft, others offer to acquire Xbox's Arkane Studios, Bloomberg reports - TheFly"
+   ]
+  },
+  {
+   "t": "GOOG",
+   "summary": "Waymo confirmed it will end its partnership with Uber in Austin and Atlanta in January 2028, and Google launched AI Checkout in Canada. ARK sold $13.3M of the stock on Wednesday while buying SpaceX.",
+   "headlines": [
+    "Alphabet's (GOOGL) Waymo Confirms Split with 'Crapshoot' Partner Uber (UBER) - TipRanks",
+    "Google (GOOGL) Launches 'AI Checkout' in Canada - TipRanks",
+    "Why Is Senator Bernie Sanders Accusing Google (GOOGL) of Extortion Over Student AI Tools? - TipRanks"
    ]
   },
   {
    "t": "IONQ",
-   "summary": "Fell 1.6% on dilution concerns from a $2 billion equity offering alongside an agreement to acquire cybersecurity firm Elisity.",
+   "summary": "Closed its $1.15B acquisition of Elisity and partnered with Connecticut's QuantumCT initiative, both days ahead of earnings.",
    "headlines": [
-    "IonQ (IONQ) Stock: $2B Raise and Elisity Deal Bring Major Dilution Risks - TipRanks",
-    "Quantum Stocks Sank Up to 9% in Tech Selloff. Can They Bounce Back This Week? - TipRanks"
+    "IonQ (IONQ) Expands Quantum Reach, Closes $1.15B Deal Ahead of Earnings - TipRanks",
+    "Quantum Leap: IonQ teams with QuantumCT, completes Elisity transaction - TheFly",
+    "IonQ completes acquisition of Elisity - TheFly"
+   ]
+  },
+  {
+   "t": "TSM",
+   "summary": "No company-specific catalyst in the window. The sector backdrop is the story: global semiconductor sales hit a record $517.7B in Q3 on AI infrastructure spending, even as memory names sold off.",
+   "headlines": [
+    "4 Semiconductor Stocks to Buy as Q3 Sales Soar on Robust AI Demand - Nasdaq",
+    "The Zacks Analyst Blog Highlights Analog Devices, Taiwan Semiconductor Manufacturing, Texas Instruments and NVIDIA - Nasdaq",
+    "Better AI Semiconductor Monopoly Stock: Taiwan Semiconductor vs. ASML - The Motley Fool"
    ]
   }
  ]

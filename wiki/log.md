@@ -2876,3 +2876,38 @@ Two things deliberately not done here:
 - **No change to the Morning Brief's holdings list.** `bin/morning-brief.sh` hard-codes INTU,
   MSFT and MC, and that file is tracked in a public repository: adding a ticker to it publishes
   the fact that it is held. That is the user's call to make, not a maintenance edit.
+
+## 2026-11-05 — Catalysts swept locally; `bin/newsfetch.py` added
+
+The staleness banner from the previous entry is gone because the tab is current again:
+`news.json` now reads **Nov 5, 2026, 5:40 AM PT**, 13 of the 15 favorites with a catalyst,
+against a file that had not moved since Oct 19.
+
+**The cloud routine is still blocked.** What changed is that there is now a local path:
+`bin/newsfetch.py` reads the vendor's own news feed — the `news.data` array in
+`stockanalysis.com/stocks/<t>/__data.json`, carrying title, outlet, timestamp and a text
+snippet — filters to a window (default seven days) and writes `out/news-raw.json`.
+
+**It deliberately does not write `news.json`.** The published file needs a written summary per
+ticker, and a summary is a judgement about what moved and why. Fetch and write are two steps so
+that the judgement is never automated into prose that looks fetched. Nothing invents a headline.
+
+Web search was tried first and abandoned: for a ticker like Micron it returned a mix of 2025 and
+undated aggregator pieces, and separating this week's story from last year's would have meant
+verifying every line. The vendor feed is dated at the item level, which is the whole difference.
+
+**What the window actually held:**
+
+- **Memory sold off hard.** Micron fell 7% on Wednesday to a three-month low and kept sliding
+  Thursday pre-market; Sandisk and SK Hynix fell with it; Qualcomm's results added caution. This
+  is the same cycle the Oct 30 Kioxia read started, now in its second leg.
+- **The midterms hit the neoclouds.** CoreWeave −6.5%, IREN −5%, Nebius −3% on Wednesday on the
+  prospect of closer scrutiny of the AI build-out, with Citi cutting Nebius to $265 from $324.
+  The same result pushed Tesla and SpaceX down on scrutiny of Musk's businesses — which is the
+  Data Centers map's state shading turning into a price move three days after it was added.
+- Micron also suspended a $4.5B Taiwan plant over a labour dispute; Meta launched a $20B bond
+  sale; Microsoft reportedly walked away from an Nscale deal; Super Micro rose about 8% on a
+  revenue beat into a split sell-side.
+
+SMH and INTU had nothing in the window and are **left out rather than padded**. An entry that
+exists to fill a grid is the same failure as a stale tab.
