@@ -2840,3 +2840,39 @@ match it, and today's full-file churn is that mismatch being resolved rather tha
 content.
 
 The `add-ticker` skill's step 3e was updated to say market cap as well.
+
+## 2026-11-05 — Catalysts now says when it is stale
+
+`news.json` was last written on **October 19, 2026**. For sixteen days the Catalysts tab has
+rendered that run looking exactly as it does when it is current: a grid of cards with ticker
+moves and headlines, the only clue a date in small text in the status corner. A tab that is
+stale and looks current is worse than one that is empty, because it reads as "nothing happened."
+
+What it was hiding, for two of the fifteen favorites: Sandisk fell 23.5% between the October 28
+close and November 2 on the Kioxia NAND-pricing read, and the Oct 19 card for it still says
+"shares rebounded about 5.5% as investors returned to memory and chip names after an 18% crash
+the prior week."
+
+`catalysts.html` now computes the age of `news.json` on load and, past **three days**, shows a
+full-width banner above everything: how old it is, the date it was swept, that nothing after
+that date is reflected, that the sweep has not run since, and where to look instead — Financials
+and Events, which are maintained by hand.
+
+This does not fix the sweep. The catalyst routine runs in the cloud and still fails on the
+egress block (`bin/README.md`), so the tab stays sixteen days old until it is regenerated. The
+banner only stops it from lying about that.
+
+**The analysis was not missing, it was on the wrong tab.** The Sandisk drawdown is written up in
+[[sandisk-fq1-fy27]] and carried in five notes on the SNDK Financials card — the three-session
+fall, the Kioxia read, the sector comparison, and the fact that the company's own guidance points
+the other way. None of it reached Catalysts, which is the tab a person checks to find out what
+moved.
+
+Two things deliberately not done here:
+
+- **No regeneration of `news.json`.** A hand-written catalyst entry on a public page is
+  indistinguishable from a fetched one, which is why the skill forbids it. It gets regenerated or
+  it stays stale and says so.
+- **No change to the Morning Brief's holdings list.** `bin/morning-brief.sh` hard-codes INTU,
+  MSFT and MC, and that file is tracked in a public repository: adding a ticker to it publishes
+  the fact that it is held. That is the user's call to make, not a maintenance edit.

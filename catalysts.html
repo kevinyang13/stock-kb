@@ -7,6 +7,17 @@
 <meta http-equiv="expires" content="0">
 <title>Stock Signal Desk · Catalysts</title>
 <link rel="stylesheet" href="assets/site.css?v=1793411929">
+<style>
+  /* A stale tab that looks current is worse than an empty one. Past the
+     threshold this says so at full width, above everything else. */
+  .stale-ban{
+    display:none;margin:8px 2px 4px;padding:10px 14px;border-radius:8px;
+    background:#5a1f1a;border:1px solid #b4433b;color:#f3e7e4;
+    font-family:var(--sans);font-size:12.5px;line-height:1.55;
+  }
+  .stale-ban.on{display:block}
+  .stale-ban b{color:#fff;letter-spacing:.06em;text-transform:uppercase;font-size:11px}
+</style>
 </head>
 <body>
 
@@ -24,6 +35,7 @@
 </header>
 
 <div class="wrap" id="news">
+  <div class="stale-ban" id="stale"></div>
   <div class="bar">
     <div class="status" id="news-status"></div>
   </div>
@@ -41,6 +53,29 @@ Site.nav();
   var statusEl = document.getElementById("news-status");
   var cards = document.getElementById("cards");
   var meta = {}, doc = null, quotes = {};
+
+  // The sweep that writes news.json is a cloud routine and it has failed
+  // before. When it does, this page keeps rendering its last successful run
+  // and looks exactly as it does when it is current -- which is the dangerous
+  // part. Past three days it says so, in words, at the top.
+  var STALE_DAYS = 3;
+
+  function staleness(doc) {
+    var el = document.getElementById("stale");
+    var when = doc.generated ? new Date(doc.generated) : null;
+    if (!when || isNaN(when)) return;
+    var days = Math.floor((Date.now() - when.getTime()) / 86400000);
+    if (days < STALE_DAYS) return;
+    el.className = "stale-ban on";
+    el.innerHTML =
+      "<b>Stale &middot; " + days + " days old</b><br>" +
+      "These catalysts were swept on " +
+      esc(doc.generatedLabel || when.toDateString()) +
+      " and nothing here reflects anything after that date. The sweep that " +
+      "refreshes this tab has not run since. Check the Financials and Events " +
+      "tabs, which are maintained by hand, before reading an empty Catalysts " +
+      "page as quiet news.";
+  }
 
   function card(n) {
     var q = quotes[n.t];
@@ -84,6 +119,7 @@ Site.nav();
     }
     statusEl.innerHTML = "<b>" + esc(doc.generatedLabel || doc.generated || "") + "</b>" +
       "<br>" + items.length + " with a catalyst &middot; source: " + esc(doc.source || "");
+    staleness(doc);
     render();
 
     // day moves for just these tickers, then redraw
