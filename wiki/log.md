@@ -2804,3 +2804,39 @@ Lesson for the dataset: **a field that is read by code cannot carry a sentence m
 The note field is for prose; `tenant` has to be the tenant.
 
 Map total: 115 sites.
+
+## 2026-11-04 — Market cap added to every Financials card
+
+Seventh entry. Each card now carries a seventh KPI tile, **Market cap**, between the quarter's
+four figures and the P/E and dividend tiles.
+
+`bin/pefetch.py` already pulled the price-based figures, so it gained one more field from the
+same quote payload rather than becoming a new script. Three details worth keeping:
+
+- **The vendor hands market cap over preformatted** — `"38.78B"`, not a number — so the script
+  accepts it only when it matches a figure with a magnitude suffix and prints it with a currency
+  symbol. Anything else writes no tile at all, on the principle that a market cap in the wrong
+  currency is worse than none.
+- **It is in the listing's own currency, which is not always the card's.** GlobalWafers reads
+  **NT$281.61B** beside an income statement converted to USD, and Nintendo reads **¥10.09T**; the
+  tile's subtitle names the currency in both cases. The dividend tile already had this problem
+  solved and the same `SYMBOLS` table does the work.
+- **The three market tiles are rebuilt in a fixed order** — market cap, P/E, dividend — after the
+  quarter's four, rather than patched in place, so a re-run cannot shuffle them.
+
+All 73 cards refreshed, none failed. That also **fixed the P/E date split** recorded in this
+morning's entry: five cards read Nov 4 and 67 read Oct 27, and all 73 now read Nov 4, 2026.
+
+Spot-checked against each other rather than trusted: NVDA $4.84T, AAPL $5.10T, MSFT $4.13T,
+GOOG $3.43T, AMZN $2.88T, TSM $1.78T, MU $899.74B, SK Hynix $757.59B, ARQQ $241.37M. SK Hynix
+looks large until you put it next to Micron, which is the comparison that makes it credible.
+
+**A convention I had been getting wrong all day.** `bin/pefetch.py` writes `financials.json` with
+`ensure_ascii=False`, and so does every other script in `bin/` — debtfetch, epsfetch, epsnotes,
+segfetch, segapply, segnotes, yoyfetch and `quotes.py`. The hand edits in earlier entries used
+`ensure_ascii=True`, which escaped every non-ASCII character and meant the next script run
+rewrote the whole file. **The repo's convention is `ensure_ascii=False`**; hand edits should
+match it, and today's full-file churn is that mismatch being resolved rather than a change of
+content.
+
+The `add-ticker` skill's step 3e was updated to say market cap as well.

@@ -131,15 +131,20 @@ figures on one card invite exactly the wrong comparison, which is why `epsnotes.
 warning and why `epsfetch.py` marks any pair it cannot show to share a basis as
 `basisUnverified` and withholds its surprise figure. Leave that machinery alone.
 
-### 3e. P/E and dividend
+### 3e. Market cap, P/E and dividend
 
 ```bash
 python3 bin/pefetch.py IREN
 ```
 
-These two KPIs are measured against today's price, not the filed quarter, so they are stale
+These three KPIs are measured against today's price, not the filed quarter, so they are stale
 the moment they are written and carry their own as-of note. A company with no positive
 earnings reads `n/a`, which is correct, not a failure.
+
+Market cap comes through preformatted (`38.78B`) **in the listing's own currency**, so the tile
+takes the quote's currency symbol rather than a dollar sign — GlobalWafers reads NT$281.61B
+next to a statement converted to USD, and the tile's subtitle says so. The script rebuilds all
+three tiles in a fixed order after the quarter's four, so a re-run cannot shuffle them.
 
 ### 3f. Who owns the shares
 

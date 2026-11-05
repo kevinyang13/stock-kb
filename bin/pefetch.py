@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Put the market figures -- P/E and dividend -- on each Financials card.
+"""Put the market figures -- market cap, P/E and dividend -- on each card.
 
     python3 bin/pefetch.py             # every card
     python3 bin/pefetch.py NVDA NBIS   # just these
@@ -10,9 +10,11 @@ today's share price, so they move every session and are stale the moment they
 are written. That is why one note carries the date for both, and why this is a
 separate script rather than something folded into the statement pipeline.
 
-Figures come from stockanalysis.com's quote data (`peRatio`, `forwardPE`,
-`dividend`, `exDividendDate`) -- the same source the heatmap's forward P/E
-column uses.
+Figures come from stockanalysis.com's quote data (`marketCap`, `peRatio`,
+`forwardPE`, `dividend`, `exDividendDate`) -- the same source the heatmap's
+forward P/E column uses. Market cap arrives preformatted ("38.78B") and in the
+listing's own currency, so it is given the currency symbol of the quote rather
+than a dollar sign: GlobalWafers is NT$, Nintendo is yen.
 
 A company with no positive earnings has no meaningful trailing P/E, and one
 with no positive forward estimate has no forward P/E. Those read "n/a" rather
@@ -37,6 +39,7 @@ PAUSE = 0.7
 TIMEOUT = 25
 LABEL = "P/E"
 DIV = "Dividend"
+MCAP = "Market cap"
 NOTE = "Market figures as of"
 OLD_NOTE = "P/E as of"       # what this script wrote before dividends joined
 
@@ -50,13 +53,13 @@ SYMBOLS = {"USD": "$", "JPY": "\u00a5", "KRW": "\u20a9", "EUR": "\u20ac",
 
 
 def quote_data(sym):
-    """(the quote block, the currency its dividend is quoted in)."""
+    """(the quote block, the dividend's currency, the listing's currency)."""
     url = f"https://stockanalysis.com/{path_for(sym)}/__data.json"
     req = urllib.request.Request(url, headers={"User-Agent": UA,
                                                "Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
         doc = json.loads(r.read().decode("utf-8", "replace"))
-    quote, code = None, None
+    quote, code, main = None, None, None
     for n in doc.get("nodes") or []:
         if isinstance(n, dict) and n.get("type") == "data":
             d = hydrate(n["data"])
@@ -67,9 +70,10 @@ def quote_data(sym):
             info = d.get("info")
             if isinstance(info, dict) and isinstance(info.get("curr"), dict):
                 code = info["curr"].get("dividend") or info["curr"].get("main")
+                main = info["curr"].get("main") or main
     if quote is None:
         raise LookupError(f"{sym}: no quote data")
-    return quote, code
+    return quote, code, main
 
 
 def ratio(v):
@@ -104,6 +108,19 @@ def dividend(q, code):
         return None, None
 
 
+def market_cap(q, main):
+    """"NT$281.61B" out of a preformatted "281.61B", or None.
+
+    The vendor gives this one as a string in the listing's own currency, so it
+    is only accepted when it looks like a figure with a magnitude suffix. A
+    market cap in the wrong currency is worse than no tile at all."""
+    raw = str(q.get("marketCap") or "").strip()
+    if not re.fullmatch(r"[\d.,]+[KMBT]?", raw):
+        return None
+    cur = SYMBOLS.get(main or "", (main + " ") if main else "$")
+    return f"{cur}{raw}"
+
+
 def main():
     args = {a.upper() for a in sys.argv[1:] if not a.startswith("--")}
     doc = json.loads((HERE / "financials.json").read_text())
@@ -115,7 +132,7 @@ def main():
         if args and t.upper() not in args:
             continue
         try:
-            q, code = quote_data(t)
+            q, code, main = quote_data(t)
         except (urllib.error.URLError, LookupError, ValueError, KeyError) as e:
             print(f"  ! {t}: {e}", file=sys.stderr)
             failed += 1
@@ -134,14 +151,16 @@ def main():
                     if rate and yld is not None
                     else {"k": DIV, "v": "None", "s": "no dividend paid"})
 
-        for t_ile in (tile, div_tile):
-            at = next((i for i, h in enumerate(hl) if h.get("k") == t_ile["k"]),
-                      None)
-            if at is None:
-                hl.append(t_ile)
-            else:
-                hl[at] = t_ile
-        item["highlights"] = hl
+        cap = market_cap(q, main)
+        cap_tile = ({"k": MCAP, "v": cap,
+                     "s": ("moves with the share price" if (main or "USD") == "USD"
+                           else f"in {main}, the listing's own currency")}
+                    if cap else None)
+
+        # the three market tiles always sit after the quarter's four, in this
+        # order; rebuilding rather than patching keeps a re-run from shuffling
+        base = [h for h in hl if h.get("k") not in (MCAP, LABEL, DIV)]
+        item["highlights"] = base + [x for x in (cap_tile, tile, div_tile) if x]
 
         bits = []
         if trail is None:
@@ -151,10 +170,12 @@ def main():
         div_s = (f"dividend {rate} a year, {yld:,.2f}% yield"
                  + (f", last ex-dividend {ex}" if ex else "")
                  if rate and yld is not None else "pays no dividend")
-        note = (f"{NOTE} {today}: P/E {fmt(trail)} trailing, {fmt(fwd)} forward"
+        note = (f"{NOTE} {today}: "
+                + (f"market cap {cap}, " if cap else "")
+                + f"P/E {fmt(trail)} trailing, {fmt(fwd)} forward"
                 + (f" ({'; '.join(bits)})" if bits else "")
-                + f"; {div_s}. Both are measured against the share price, so "
-                  "unlike the other figures on this card they move every "
+                + f"; {div_s}. All three are measured against the share price, "
+                  "so unlike the other figures on this card they move every "
                   "session and are not from the filing "
                   "(source: stockanalysis.com).")
         notes = item.get("notes") or []
@@ -166,7 +187,8 @@ def main():
             notes[nat] = note
         item["notes"] = notes
 
-        print(f"{t:6} trailing {fmt(trail):>7}  forward {fmt(fwd):>7}  "
+        print(f"{t:6} cap {(cap or 'n/a'):>10}  "
+              f"trailing {fmt(trail):>7}  forward {fmt(fwd):>7}  "
               f"dividend {(rate or 'none'):>7}"
               + (f" {yld:,.2f}%" if yld is not None else ""))
         ok += 1
