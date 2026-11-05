@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<title>Stock Signal Desk · Data Centers</title>
+<link rel="stylesheet" href="assets/site.css?v=1793411929">
+<style>
+  /* page-local: nothing else on the site draws a map */
+  #map{width:100%;height:560px;margin:2px 0}
+  @media (max-width:640px){#map{height:420px}}
+  .legend{
+    display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;
+    font-family:var(--sans);font-size:10.5px;color:var(--cream-dim);
+    padding:4px 2px 8px;letter-spacing:.04em;
+  }
+  .legend span.k{display:inline-flex;align-items:center;gap:6px}
+  .legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .legend i.sq{border-radius:2px;width:14px;height:10px}
+  .mapnote{
+    font-family:var(--sans);font-size:11px;line-height:1.5;color:var(--cream-dim);
+    max-width:none;margin:2px 2px 10px;
+  }
+  .mapnote b{color:var(--cream)}
+  /* body{overflow-x:hidden} would clip an eight-column table on a phone
+     rather than let it scroll, so the table gets its own scroller */
+  .tblscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:18px}
+  table.dc{
+    width:100%;min-width:860px;border-collapse:collapse;
+    font-family:var(--sans);font-size:11.5px;
+  }
+  table.dc th{
+    text-align:left;font-weight:400;letter-spacing:.1em;text-transform:uppercase;
+    font-size:9.5px;color:var(--gold);border-bottom:1px solid var(--teal-line);
+    padding:6px 8px;position:sticky;top:0;background:var(--teal);
+  }
+  table.dc td{
+    padding:6px 8px;border-bottom:1px solid rgba(20,87,79,.55);vertical-align:top;
+    color:var(--cream);
+  }
+  table.dc td.dim{color:var(--cream-dim)}
+  table.dc tr:hover td{background:rgba(50,107,100,.22)}
+  table.dc .st{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase}
+  table.dc .st.operational{color:#d3a24d}
+  table.dc .st.construction{color:#e8a06a}
+  table.dc .st.planned{color:#9fb8b3}
+  table.dc a{color:var(--cream-dim)}
+  table.dc a:hover{color:var(--gold)}
+  .totals{
+    font-family:var(--sans);font-size:11px;color:var(--cream-dim);
+    display:flex;flex-wrap:wrap;gap:4px 18px;padding:2px 2px 8px;
+  }
+  .totals b{color:var(--cream)}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <h1>STOCK SIGNAL DESK</h1>
+  <p>Data Centers — where the AI build-out is going up</p>
+  <nav class="tabs">
+    <a class="tab" href="heatmap.html">Heatmap</a>
+    <a class="tab" href="catalysts.html">Catalysts</a>
+    <a class="tab" href="brief.html">Morning Brief</a>
+    <a class="tab" href="events.html">Events</a>
+    <a class="tab" href="financials.html">Financials</a>
+    <a class="tab" href="map.html">Data Centers</a>
+  </nav>
+</header>
+
+<div class="wrap" id="dc">
+  <div class="bar">
+    <select id="scope" aria-label="Map scope">
+      <option value="usa">View: United States</option>
+      <option value="world">View: world</option>
+    </select>
+    <select id="shade" aria-label="State shading">
+      <option value="senate2026">Shade: 2026 Senate result</option>
+      <option value="pres2024">Shade: 2024 presidential result</option>
+      <option value="off">Shade: none</option>
+    </select>
+    <select id="co" aria-label="Company filter"></select>
+    <span class="spacer"></span>
+    <div class="status" id="status"></div>
+  </div>
+
+  <div class="legend" id="legend"></div>
+  <div id="map"></div>
+  <div class="totals" id="totals"></div>
+  <p class="mapnote" id="note"></p>
+  <div class="tblscroll"><table class="dc" id="tbl"></table></div>
+</div>
+
+<footer>Site figures are as filed or as reported &middot; not investment advice</footer>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="assets/site.js?v=1793411929"></script>
+<script>
+Site.nav();
+
+(function () {
+  var esc = Site.esc;
+
+  // The map's three palettes. Party colours are deliberately muted -- a full
+  // red/blue on a teal field fights the markers, which are the point.
+  var PARTY = { D: "#3f6fa8", R: "#b4433b", uncalled: "#7e8e9c", none: "#2f5450" };
+  var STATUS = {
+    operational: { c: "#d3a24d", label: "Operational" },
+    construction: { c: "#e8a06a", label: "Under construction" },
+    planned: { c: "#8fb0ab", label: "Planned / announced" }
+  };
+  var ORDER = ["operational", "construction", "planned"];
+
+  var statusEl = document.getElementById("status");
+  var scopeEl = document.getElementById("scope");
+  var shadeEl = document.getElementById("shade");
+  var coEl = document.getElementById("co");
+  var doc = null;
+
+  function fail(msg) {
+    statusEl.className = "status bad";
+    statusEl.innerHTML = "<b>" + esc(msg) + "</b>";
+  }
+
+  // Marker area tracks megawatts, so a 2 GW campus does not swamp a 30 MW one
+  // by a factor of 60. Sites with no published figure get the floor size.
+  function sizeOf(mw) {
+    // the same pixel sizes that read well on a desktop map turn the Texas
+    // cluster into one blob on a phone, so scale with the viewport
+    var k = window.innerWidth < 700 ? 0.58 : 1;
+    if (!mw) return 7 * k;
+    return Math.min(34, 7 + Math.sqrt(mw) * 0.72) * k;
+  }
+
+  function where(s) {
+    var bits = [s.city];
+    if (s.state) bits.push(s.state);
+    if (s.country && s.country !== "USA") bits.push(s.country);
+    return bits.filter(Boolean).join(", ");
+  }
+
+  function hover(s) {
+    var L = ["<b>" + esc(s.company) + "</b> &middot; " + esc(s.site),
+             esc(where(s))];
+    L.push(STATUS[s.status].label +
+      (s.mw ? " &middot; " + s.mw.toLocaleString("en-US") + " MW" +
+              (s.mwBasis ? " (" + esc(s.mwBasis) + ")" : "") : ""));
+    if (s.power) L.push(esc(s.power));
+    if (s.tenant) L.push("Tenant: " + esc(s.tenant));
+    return L.join("<br>");
+  }
+
+  function picked() {
+    var t = coEl.value;
+    return (doc.sites || []).filter(function (s) {
+      return t === "*" || s.t === t;
+    });
+  }
+
+  function draw() {
+    var sites = picked();
+    var pinned = sites.filter(function (s) { return s.lat !== null && s.lon !== null; });
+    var world = scopeEl.value === "world";
+    var traces = [];
+
+    // --- state shading ------------------------------------------------------
+    var key = shadeEl.value;
+    if (!world && key !== "off") {
+      var block = doc.shading[key];
+      var locs = [], z = [], txt = [];
+      var Z = { none: 0, D: 1, R: 2, uncalled: 3 };
+      var NAME = { D: "Democratic", R: "Republican",
+                   uncalled: "not yet called", none: "no race this cycle" };
+      Object.keys(block.states).forEach(function (st) {
+        if (st === "DC") return;                 // DC has no state outline here
+        var v = block.states[st];
+        locs.push(st); z.push(Z[v]);
+        txt.push("<b>" + st + "</b><br>" + block.label + "<br>" + NAME[v]);
+      });
+      traces.push({
+        type: "choropleth", locationmode: "USA-states",
+        locations: locs, z: z, text: txt,
+        zmin: 0, zmax: 3, showscale: false, hoverinfo: "text",
+        colorscale: [
+          [0.00, PARTY.none], [0.25, PARTY.none],
+          [0.25, PARTY.D],    [0.50, PARTY.D],
+          [0.50, PARTY.R],    [0.75, PARTY.R],
+          [0.75, PARTY.uncalled], [1.00, PARTY.uncalled]
+        ],
+        marker: { line: { color: "#073933", width: 0.7 } },
+        name: "", showlegend: false
+      });
+    }
+
+    // --- one marker trace per status, so the legend filters them -------------
+    ORDER.forEach(function (st) {
+      var rows = pinned.filter(function (s) { return s.status === st; });
+      if (!rows.length) return;
+      traces.push({
+        type: "scattergeo", mode: "markers", name: STATUS[st].label,
+        lat: rows.map(function (s) { return s.lat; }),
+        lon: rows.map(function (s) { return s.lon; }),
+        text: rows.map(hover),
+        hovertemplate: "%{text}<extra></extra>",
+        marker: {
+          size: rows.map(function (s) { return sizeOf(s.mw); }),
+          color: STATUS[st].c, opacity: 0.88,
+          line: { color: "#073933", width: 1.1 }
+        }
+      });
+    });
+
+    var geo = {
+      bgcolor: "rgba(0,0,0,0)",
+      landcolor: "#0e4e47", lakecolor: "#0a4640",
+      subunitcolor: "#2b6b63", countrycolor: "#2b6b63",
+      coastlinecolor: "#2b6b63", framecolor: "#14574f",
+      showland: true, showlakes: true, showcountries: true, showframe: false
+    };
+    if (world) { geo.scope = "world"; geo.projection = { type: "natural earth" }; }
+    else { geo.scope = "usa"; geo.projection = { type: "albers usa" }; }
+
+    Plotly.newPlot("map", traces, {
+      geo: geo, margin: { l: 0, r: 0, t: 0, b: 0 },
+      paper_bgcolor: "rgba(0,0,0,0)",
+      font: { family: "Helvetica Neue, Helvetica, Arial, sans-serif",
+              color: "#eae5df", size: 11 },
+      hoverlabel: { bgcolor: "#073933", bordercolor: "#d3a24d",
+                    font: { color: "#eae5df", size: 11.5 } },
+      legend: { orientation: "h", x: 0, y: 1.02, bgcolor: "rgba(0,0,0,0)" },
+      showlegend: true
+    }, { displayModeBar: false, responsive: true });
+
+    legend(world, key);
+    totals(sites, pinned.length);
+    table(sites);
+  }
+
+  function legend(world, key) {
+    var parts = ['<span class="k">Marker size tracks MW; click a status above to hide it</span>'];
+    if (!world && key !== "off") {
+      parts.push('<span class="k"><i class="sq" style="background:' + PARTY.D +
+                 '"></i>Democratic</span>');
+      parts.push('<span class="k"><i class="sq" style="background:' + PARTY.R +
+                 '"></i>Republican</span>');
+      if (key === "senate2026") {
+        parts.push('<span class="k"><i class="sq" style="background:' + PARTY.uncalled +
+                   '"></i>Not yet called</span>');
+        parts.push('<span class="k"><i class="sq" style="background:' + PARTY.none +
+                   '"></i>No Senate race this cycle</span>');
+      }
+    }
+    document.getElementById("legend").innerHTML = parts.join("");
+  }
+
+  function totals(sites, pins) {
+    var byStatus = {};
+    var mw = 0, known = 0;
+    sites.forEach(function (s) {
+      byStatus[s.status] = (byStatus[s.status] || 0) + 1;
+      if (s.mw) { mw += s.mw; known++; }
+    });
+    var bits = ["<b>" + sites.length + "</b> sites"];
+    ORDER.forEach(function (st) {
+      if (byStatus[st]) bits.push("<b>" + byStatus[st] + "</b> " + STATUS[st].label.toLowerCase());
+    });
+    bits.push("<b>" + Math.round(mw).toLocaleString("en-US") + " MW</b> across the " +
+              known + " with a published figure");
+    if (pins < sites.length) {
+      bits.push("<b>" + (sites.length - pins) + "</b> with no pin (location undisclosed)");
+    }
+    document.getElementById("totals").innerHTML = bits.join("");
+  }
+
+  function table(sites) {
+    var rank = { operational: 0, construction: 1, planned: 2 };
+    var rows = sites.slice().sort(function (a, b) {
+      return (a.company === b.company)
+        ? rank[a.status] - rank[b.status]
+        : a.company.localeCompare(b.company);
+    }).map(function (s) {
+      var src = s.url
+        ? '<a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.src) + "</a>"
+        : esc(s.src || "");
+      return "<tr>" +
+        "<td>" + esc(s.t) + "</td>" +
+        "<td>" + esc(s.company) + "<br><span class='dim'>" + esc(s.model) + "</span></td>" +
+        "<td>" + esc(s.site) + "</td>" +
+        "<td class='dim'>" + esc(where(s)) + "</td>" +
+        '<td><span class="st ' + s.status + '">' + STATUS[s.status].label + "</span></td>" +
+        "<td>" + (s.mw ? s.mw.toLocaleString("en-US") + "<br><span class='dim'>" +
+                  esc(s.mwBasis) + "</span>" : "<span class='dim'>n/d</span>") + "</td>" +
+        "<td class='dim'>" + esc(s.power || "") +
+          (s.tenant ? "<br>Tenant: " + esc(s.tenant) : "") +
+          (s.note ? "<br>" + esc(s.note) : "") + "</td>" +
+        "<td class='dim'>" + src + "</td>" +
+      "</tr>";
+    }).join("");
+    document.getElementById("tbl").innerHTML =
+      "<thead><tr><th>Ticker</th><th>Company</th><th>Site</th><th>Where</th>" +
+      "<th>Status</th><th>MW</th><th>Power, tenant, caveats</th><th>Source</th>" +
+      "</tr></thead><tbody>" + rows + "</tbody>";
+  }
+
+  fetch("datacenters.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (d) {
+      doc = d;
+      statusEl.innerHTML = "As of <b>" + esc(d.generatedLabel) + "</b>";
+      document.getElementById("note").innerHTML = esc(d.note);
+
+      var seen = {};
+      d.sites.forEach(function (s) { seen[s.t] = s.company; });
+      var opts = ['<option value="*">Company: all</option>'];
+      Object.keys(seen).sort().forEach(function (t) {
+        opts.push('<option value="' + esc(t) + '">' + esc(seen[t]) + "</option>");
+      });
+      coEl.innerHTML = opts.join("");
+
+      draw();
+      [scopeEl, shadeEl, coEl].forEach(function (el) {
+        el.addEventListener("change", draw);
+      });
+    })
+    .catch(function (e) { fail("datacenters.json did not load: " + e.message); });
+})();
+</script>
+</body>
+</html>

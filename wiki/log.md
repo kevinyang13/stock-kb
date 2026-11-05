@@ -2542,3 +2542,63 @@ recorded instead.
   while the other 67 cards read Oct 27, 2026. That inconsistency is deliberate: `pefetch` is part
   of the per-ticker refresh, and a site-wide sweep is a separate job. Each card states its own
   as-of date.
+
+## 2026-11-04 — New Data Centers tab, and an AI build-out page covering 18 companies
+
+Second entry for the day. The earnings refresh above is unrelated to this.
+
+**What was added**
+
+| Thing | File | What it is |
+|---|---|---|
+| Analysis page | `wiki/ai-data-center-buildout.md` | 18 public companies, four business models, per-company tables |
+| Map tab | `map.html` | Plotly geo map, sixth tab on the site |
+| Dataset | `datacenters.json` | 60 sites, one record each, every row carrying its source link |
+
+**The taxonomy is the point.** The page splits the names into pure-play neoclouds (CRWV, NBIS,
+IREN), infrastructure/HPC hosts (APLD, CORZ, CIFR, WULF, GLXY, HUT, RIOT), hyperscalers (MSFT,
+GOOG, META, AMZN, ORCL) and colocation REITs (EQIX, DLR), because the same megawatt is counted
+by two or three of them at once. CoreWeave's 4.2 GW of contracted power is largely Applied
+Digital's, Core Scientific's and Galaxy's concrete. Adding the group's announced capacity
+together double-counts.
+
+**A second concentration, which is not a ticker.** Fluidstack — private — is the named tenant at
+TeraWulf's Lake Mariner and Abernathy, Cipher's Barber Lake and Hut 8's River Bend, and Google
+credit-enhances a large part of those obligations. Four "diversified" tenant rosters resolve to
+one counterparty and one backstop.
+
+**State shading.** The map colours US states by the November 3, 2026 Senate result — 33 Class 2
+seats plus the Ohio and Florida specials, with Alaska and Mississippi not yet called, and the
+states with no race this cycle left in dim teal. A second layer shades by the 2024 presidential
+result from the National Archives certificates, which covers all 50 states. Both are labelled on
+the legend; neither is presented as a forecast of anyone's permits. The siting rationale is real
+though — Texas holds more pinned capacity than every other state combined, and ERCOT's
+large-load rules are set in Austin.
+
+**Sourcing rules applied, and the gaps they left**
+
+- Only locations a company, a filing or a named report puts in a specific city or county are
+  pinned. Site-level megawatts from aggregators were excluded wherever they conflicted with each
+  other, which was often: CoreWeave's Lancaster PA site alone appears at 250 MW and 300 MW in two
+  trackers, and neither is a company figure.
+- **No pin for Hut 8's Beacon Point.** Its first gigawatt-scale campus, 1,000 MW under
+  construction, $9.8bn of base-term value on Phase 2 — and the November 4 release does not say
+  where it is. The site is in the dataset with `lat: null` and the map reports it as "1 with no
+  pin (location undisclosed)" rather than guessing.
+- Same for Applied Digital's Polaris Forge 3 and Delta Forge 2, which are not in the dataset at
+  all because only their capacity is public.
+- **Core Scientific's status was checked, not assumed.** CoreWeave's 2025 all-stock bid is widely
+  reported as completed by at least one outlet; EDGAR shows CORZ still filing under its own CIK
+  (0001839341) with a Form 4 dated today and a live Nasdaq listing. The deal did not produce a
+  merged filer, and the page says so.
+- Hyperscaler entries are the named AI-era campuses only. Pinning all 60-plus Azure regions would
+  bury the thing the map is for; the page states that limit on its face.
+
+**Riot's Corsicana lease landed today** — the entire campus, 910 MW of critical IT, 15-year
+triple-net powered land lease, roughly $38bn of expected data center revenue. Riot previously
+described Corsicana as supporting 756 MW of critical IT. The two releases do not reconcile the
+figures and the page flags that rather than picking one.
+
+**Not done**: no Financials cards were added or changed. APLD, CORZ, CIFR, WULF, GLXY, EQIX and
+DLR have no card and no heatmap tile; adding them is an `add-ticker` run, not a wiki edit, and
+was not part of this request.
