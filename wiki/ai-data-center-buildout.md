@@ -41,8 +41,20 @@ the table under the map carries the source link for every row.
 - **Pins are city or county centroids, not parcels.** Several campuses are deliberately sited
   away from the named town.
 - **Hyperscaler entries are the named AI-era campuses only**, not every data center those
-  companies own. Microsoft alone operates in more than 60 regions; pinning all of them would
-  bury the build-out this page is about.
+  companies own. Google publishes **69 locations, 44 of them in the US**
+  (source: datacenters.google/locations); three are pinned here. Microsoft operates in more
+  than 60 Azure regions; two are pinned. Pinning the rest would bury the build-out this page
+  is about, because most of that estate predates it.
+
+**Coverage, company by company.** Complete against the company's own site list: IREN (8 of 8),
+Core Scientific (9 pins covering all 10 listed facilities — Dalton's two entries share a city),
+TeraWulf (3 of 3), Galaxy (1 of 1). Partial: Applied Digital (3 of 5 campuses, two unlocated),
+Cipher (3 of 5 named sites), Hut 8 (4 pins plus one unlocated, against about 15 sites under
+management), Riot (its 2 AI campuses, not its mining estate), Nebius (7 of roughly 11 named
+locations). Deliberately illustrative: every hyperscaler, and the two REITs, which carry one
+pin each for roughly 280 and 300+ facilities. CoreWeave is a special case — it reports 51
+active data centers and publishes no site list, so what is pinned is 2 of its own plus the 4
+landlord campuses it leases, which appear under the landlord's ticker.
 - **One site has no pin at all**: Hut 8's Beacon Point, its first gigawatt-scale campus, is not
   located in the November 4 release (source: Hut 8 8-K exhibit 99.1, Nov 4, 2026).
 
@@ -289,6 +301,9 @@ Their absence from the tables is a gap in the public market, not a gap in this p
 - **No per-site megawatts for CoreWeave's 51 data centers.** The company publishes the total
   and not the list; third-party trackers disagree with each other on the individual sites, so
   none of their figures are used here.
+- **No legacy hyperscaler estate.** Google's other 66 locations, Meta's other US campuses,
+  AWS's 38 regions and Microsoft's 60-plus are all real and all absent. They would be a second
+  layer on the map, not an extension of this one.
 - **No Digital Realty site list.** Its platform figures are the company's own description and
   were not verified against a filing in this pass.
 - **No Beacon Point pin.** Hut 8 has not disclosed the location.
