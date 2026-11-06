@@ -2982,3 +2982,9 @@ A `tpex`-style gotcha of its own: MDA files a 6-K, not a 10-Q, so it has no EDGA
 reports and `bin/edgar.py` exits with a traceback after listing the filings. The statements came
 from exhibit 99.1 of the 6-K instead. MDA's archive path also needs CIK 1857047; a wrong CIK
 still resolves `index.json` but 404s every file under it.
+
+**Events calendar refreshed the same evening.** `quotes.py --events` rewrote `events.json`:
+78 ticker events, 45 published dates dropped as more than 10 days old, 18 curated entries
+preserved. Today's six reporters are kept as past dates, which is the point of `KEEP_PAST_DAYS`
+— a past date is the day a company reported, a fact, while a future one may be a stale
+leftover. Two future dates are new: HIVE on Nov 9 and XNET on Nov 12.
