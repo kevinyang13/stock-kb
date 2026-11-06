@@ -1,0 +1,56 @@
+{
+ "company": "MDA Space",
+ "ticker": "MDA",
+ "period": "Q3 FY26",
+ "currency": "C$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 498.1,
+ "revenue_yoy": 22,
+ "segments": [
+  {
+   "name": "Satellite systems",
+   "value": 358.3,
+   "yoy": 26,
+   "note": "72% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Robotics & space operations",
+   "value": 79.9,
+   "yoy": 2,
+   "note": "16% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Geointelligence",
+   "value": 59.9,
+   "yoy": 25,
+   "note": "12% of revenue",
+   "color": "#c8a020"
+  }
+ ],
+ "cost_of_revenue": 372.2,
+ "gross_profit": 125.9,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 90.8,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 11.4
+  },
+  {
+   "name": "SG&A",
+   "value": 39.1
+  },
+  {
+   "name": "Intangible amortization & SBC",
+   "value": 40.3
+  }
+ ],
+ "operating_profit": 35.1,
+ "other": 7.9,
+ "tax": 12.1,
+ "net_profit": 30.9
+}

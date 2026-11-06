@@ -3,36 +3,32 @@
  "company": "Cloudflare",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 3529.3,
-   "fcf": 67.6,
-   "cash": 1663.8,
+   "label": "Q3 FY26",
+   "debt": 4707.5,
+   "fcf": 93.6,
+   "cash": 1969.5,
    "debt_parts": [
     {
-     "label": "Current portion",
-     "value": 1293.3
-    },
-    {
      "label": "Long-term debt",
-     "value": 1977.0
+     "value": 4441.9
     },
     {
      "label": "Current leases",
-     "value": 78.2
+     "value": 84.7
     },
     {
      "label": "Long-term leases",
-     "value": 180.8
+     "value": 180.9
     }
    ],
    "cash_parts": [
     {
      "label": "Short-term investments",
-     "value": 2499.0
+     "value": 3159.2
     },
     {
      "label": "Restricted cash (separate)",
@@ -42,11 +38,11 @@
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": 117.6
+     "value": 215.4
     },
     {
      "label": "Capital expenditure",
-     "value": -50.0
+     "value": -121.8
     }
    ]
   }

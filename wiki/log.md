@@ -2911,3 +2911,74 @@ verifying every line. The vendor feed is dated at the item level, which is the w
 
 SMH and INTU had nothing in the window and are **left out rather than padded**. An entry that
 exists to fill a grid is the same failure as a stale tab.
+
+## 2026-11-05 — Three cards rebuilt on the day they reported, and three vendor errors
+
+Four watchlist names reported on Nov 5, 2026: **IREN, IONQ, NET and MDA**. Three had a filed
+Sep-30 quarter available by the evening and were rebuilt end to end; the fourth did not.
+
+New pages: [[iren-fq1-fy27]], [[cloudflare-q3-fy26]], [[mda-space-q3-fy26]]. Each replaces a
+card that was a full quarter stale.
+
+**Every one of the three disagreed with stockanalysis, and in a different way.** The filings
+were followed in all three cases, per the rule in [[sankey-income-statement]]:
+
+| | vendor | filed | what the vendor did |
+|---|---|---|---|
+| NET operating loss | $56.9M | **$67.9M** | dropped the $11.0M restructuring line out of opex |
+| IREN operating loss | $192M | **$186M** | netted the $8M disposal gain differently |
+| MDA gross profit | C$143.7M | **C$125.9M** | moved the C$17.8M of D&A that sits *inside* cost of revenue down into opex |
+
+The MDA one is the worst of the three because it lands on a ratio rather than a subtotal: gross
+margin reads 25.3% filed against 28.8% as the vendor has it, and operating profit is identical
+either way, so nothing downstream would have flagged it. The NET one is the Meta failure mode
+again — a charge pushed below the operating line — three cards after it was first recorded.
+
+**IONQ reported and could not be built.** The vendor's newest quarterly column for it is still
+Jun 30 two hours after the release, so there is no Sep-30 statement to chart. It is the one
+favorite of the four and its card stays at Q2 FY26 until the data lands. Stated as a gap rather
+than filled from the press release.
+
+**IREN was the quarter the previous card predicted.** [[iren-fq4-fy26]] was derived — 10-K minus
+10-Q, because a June year-end means the June quarter is never filed alone — and said it would be
+superseded "in about a week by one that is filed rather than derived". The 10-Q was lodged the
+same day as the results. Revenue fell 5% while the business changed underneath it: AI Cloud
+$7M → $200M, Bitcoin Mining $233M → $28M, and capital expenditure of $4,824M against $228M of
+revenue.
+
+**NET gained a segment split**, the same way DDOG did the day before: its geographic
+disaggregation was always filed and simply had not been fetched. 61 of 73 charts now carry a
+split; the no-split list is down to eleven plus Visa.
+
+### A sankey.py defect found and worked around
+
+A segment `note` longer than the chart's 300px left margin does not clip or truncate — **the
+entire segment label block silently disappears from the rendered PNG**, while remaining present
+in the figure JSON. Found because IREN's first render came back with no segment labels at all.
+
+Isolated with three trial renders holding everything else constant:
+
+| note | y/y shown | dark pixels in the left margin |
+|---|---|---|
+| short | yes | 9,876 |
+| short | no | 9,311 |
+| **long** | yes | **0** |
+
+Worked around by keeping notes short and moving the detail to the card. Not fixed in the
+renderer — it belongs with the other open `bin/sankey.py` defects. The validator reports
+nothing here, because the figures conserve perfectly; only looking at the image catches it.
+
+### Order-of-operations note
+
+`bin/debtfetch.py` matches the balance-sheet column to the period the card already shows, so
+running it before updating `financials.json` returned the **previous** quarter's balance sheet
+for all three tickers — IREN's FQ4 debt of $7,839.5M against its FQ1 income statement. Caught
+before rendering. The card entry has to be written first; the skill's table has the order right
+and this is why.
+
+### Also
+
+A `tpex`-style gotcha of its own: MDA files a 6-K, not a 10-Q, so it has no EDGAR `R##.htm`
+reports and `bin/edgar.py` exits with a traceback after listing the filings. The statements came
+from exhibit 99.1 of the 6-K instead. MDA's archive path also needs CIK 1857047; a wrong CIK
+still resolves `index.json` but 404s every file under it.

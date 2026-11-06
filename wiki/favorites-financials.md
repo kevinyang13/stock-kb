@@ -81,15 +81,17 @@ company, not a gap in the data.
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
 `income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
-**60 of the 73 charts now carry a reported split**, and the 13 that do not each say on the card why.
-Visa is the only one of those 13 whose split exists but cannot be drawn: its categories are gross of
+**61 of the 73 charts now carry a reported split**, and the 12 that do not each say on the card why.
+Visa is the only one of those 12 whose split exists but cannot be drawn: its categories are gross of
 client incentives and sum to a total it never reports — see [[visa-q4-fy26]].
 
-Those 12 are 6488, ARQQ, ASTS, CLSK, CRWV, HUT, INFQ, NET, NU, SKHY, SMCI and XNDU. Most
+Those 11 are 6488, ARQQ, ASTS, CLSK, CRWV, HUT, INFQ, NU, SKHY, SMCI and XNDU. Most
 report one segment and disclose revenue by geography only. DDOG left this list on Nov 4, 2026:
 its geographic split was always filed and is now drawn -- see [[datadog-q3-fy26]]. GlobalWafers
 joined it the same day, publishing no quarterly breakdown at all -- see
-[[globalwafers-q2-fy26]]. Three of the remaining twelve are worth naming:
+[[globalwafers-q2-fy26]]. NET left it on Nov 5, 2026 for the same reason DDOG did -- its
+geographic disaggregation foots to the dollar and is now drawn -- see [[cloudflare-q3-fy26]].
+Three of the remaining eleven are worth naming:
 
 - **HUT** does report three segments — Compute $72.5M, Digital Infrastructure $33.0M, Power $5.5M —
   but in the Q2 FY26 quarter the card draws, intersegment eliminations are $36.0M against $74.9M of

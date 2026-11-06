@@ -3,37 +3,37 @@
  "company": "MDA Space",
  "currency": "C$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 378.3,
-   "fcf": -145.5,
-   "cash": 397.8,
+   "label": "Q3 FY26",
+   "debt": 959.4,
+   "fcf": 65.0,
+   "cash": 2153.8,
    "debt_parts": [
     {
      "label": "Long-term debt",
-     "value": 245.0
+     "value": 825.8
     },
     {
      "label": "Current leases",
-     "value": 19.1
+     "value": 18.8
     },
     {
      "label": "Long-term leases",
-     "value": 114.2
+     "value": 114.8
     }
    ],
    "cash_parts": [],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": -93.4
+     "value": 106.2
     },
     {
      "label": "Capital expenditure",
-     "value": -52.1
+     "value": -41.2
     }
    ]
   }

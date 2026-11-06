@@ -36,7 +36,7 @@ Table of contents for this knowledge base. One line per page.
 
 - [[earnings-surprise-chart]] — the actual-vs-estimate EPS dots on each Financials card: where the figures come from, and why they are not the EPS the income statement beside them is built from.
 - [[share-ownership-donut]] — the "Who owns the shares" chart on each Financials card: four slices of the whole share count, the five largest holders named on hover from their own 13F, and why the slice sizes and the holder names have to come from different sources.
-- [[favorites-financials]] — index of the 73 income statement charts on the Financials tab, which of them carry a reported revenue segment split (60 do) and the data caveats that apply to them.
+- [[favorites-financials]] — index of the 73 income statement charts on the Financials tab, which of them carry a reported revenue segment split (61 do) and the data caveats that apply to them.
 - [[apple-fq4-fy26]] — Apple fiscal Q4 2026: a record $114,477M September quarter (+12% Y/Y) at a 47.9% gross margin, but operating margin slipped as R&D grew 32%; Greater China was the fastest-growing region at +21%.
 - [[amd-q3-fy26]] — AMD Q3 2026: $13,377M revenue (+45% Y/Y) with Data Center up 97% to $8,546M, a 54% GAAP gross margin that three sources would each quote differently, a $1,097M customer-warrant charge below the operating line and a $555M income tax benefit.
 - [[super-micro-fq1-fy27]] — Super Micro fiscal Q1 2027: $19,946M of net sales (+298% Y/Y) on a 12.7% gross margin that fell 480bp in a quarter, operating expenses of just 2.4% of revenue, and figures the company itself labels preliminary and unaudited.
@@ -66,6 +66,9 @@ Table of contents for this knowledge base. One line per page.
 - [[coinbase-q3-fy26]] — Coinbase Q3 2026: $1,215.6M revenue (−35% Y/Y) at a 5% operating margin, and a 59% net margin that is almost entirely a $715M mark on its own crypto holdings.
 - [[eli-lilly-q3-fy26]] — Eli Lilly Q3 2026: $24,397M revenue (+39% Y/Y) and a 35% operating margin, Mounjaro and Zepbound together 66% of the company, and a $4,181M acquired IPR&D charge the vendor puts below the operating line and the 8-K puts above it.
 - [[robinhood-q3-fy26]] — Robinhood Q3 2026: record $1,424M of net revenues (+12% Y/Y) but net income down 14%, crypto revenue −55%, and why a brokerage's securities-loaned balance cannot be drawn as debt.
+- [[iren-fq1-fy27]] — IREN fiscal Q1 2027: $228M revenue (−5% Y/Y) and a $263M net loss, but AI Cloud went $7M → $200M in a year while Bitcoin Mining went $233M → $28M; capital expenditure was 21 times revenue. First filed quarter after the derived FQ4.
+- [[cloudflare-q3-fy26]] — Cloudflare Q3 2026: $782.5M revenue (+39% Y/Y) at a 71% gross margin with a $67.9M operating loss; the first Cloudflare card to carry a revenue split, and the $11.0M restructuring charge the vendor drops out of operating expenses.
+- [[mda-space-q3-fy26]] — MDA Space Q3 2026: C$498.1M revenue (+22% Y/Y), guidance raised and backlog down C$0.5B, Satellite systems 72% of the company; filed gross margin 25.3% against the vendor's 28.8%, the difference being where depreciation sits.
 
 ## Pages referenced but not yet written
 

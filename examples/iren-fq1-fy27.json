@@ -1,0 +1,51 @@
+{
+ "company": "IREN",
+ "ticker": "IREN",
+ "period": "FQ1 FY27",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 228.0,
+ "revenue_yoy": -5,
+ "segments": [
+  {
+   "name": "AI Cloud",
+   "value": 200.0,
+   "yoy": 2757,
+   "note": "88% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Bitcoin Mining",
+   "value": 28.0,
+   "yoy": -88,
+   "note": "12% of revenue",
+   "color": "#1b1b7a"
+  }
+ ],
+ "cost_of_revenue": 46.0,
+ "gross_profit": 182.0,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 7.0
+  },
+  {
+   "name": "SG&A",
+   "value": 217.0
+  },
+  {
+   "name": "D&A, impairment & other",
+   "value": 144.0
+  }
+ ],
+ "net_loss": 263.0,
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 77.0
+  }
+ ]
+}
