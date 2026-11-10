@@ -3115,3 +3115,18 @@ coverage table was recounted against the files rather than patched: the watchlis
 names, not the 101 the table claimed, of which 75 are charted, 25 are ETFs or funds, 6 are
 shells, 2 are excluded for negative gross profit, 1 is pre-revenue, and **3 — CCJ, LEU and HPE —
 are chartable and simply have no card yet**.
+
+Events calendar refreshed the same day: `python3 quotes.py --events` over all 112 symbols wrote
+**62 ticker events**, dropping 63 published dates as more than 10 days old and keeping the 18
+curated macro, Fed and holiday entries. The file now holds 80 events — 50 earnings, 12
+ex-dividend, 9 macro, 5 Fed, 4 market holidays.
+
+Today's six reporters are kept as **past** dates, which is `KEEP_PAST_DAYS` working: a past date
+is the day a company reported, a fact, while a future one may be a stale schedule. **VST is the
+exception worth recording** — the source still carries November 6 for it, and its 10-Q was filed
+November 9. The source gives one date per field with no flag saying whether it is the next one or
+the last one, so a wrong date like this cannot be detected from the feed alone; EDGAR settled it.
+
+SNDK, MU, META and TSLA have dropped off the calendar entirely: their last reported dates have
+aged past the 10-day window and no next date has been published. That is the rule working, not
+data loss. Ahead: CRWV Nov 10, NBIS Nov 12, NVDA Nov 17, INTU Nov 19.

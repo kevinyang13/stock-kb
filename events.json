@@ -1,15 +1,8 @@
 {
- "generated": "2026-11-05T16:49:47",
- "generatedLabel": "Nov 05, 2026",
+ "generated": "2026-11-09T19:17:28",
+ "generatedLabel": "Nov 09, 2026",
  "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
  "events": [
-  {
-   "date": "2026-10-26",
-   "type": "earnings",
-   "ticker": "VZ",
-   "title": "VZ earnings",
-   "fav": false
-  },
   {
    "date": "2026-10-27",
    "type": "fed",
@@ -19,88 +12,11 @@
    "fav": false
   },
   {
-   "date": "2026-10-27",
-   "type": "exdiv",
-   "ticker": "ASML",
-   "title": "ASML ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-10-27",
-   "type": "earnings",
-   "ticker": "BA",
-   "title": "BA earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-27",
-   "type": "exdiv",
-   "ticker": "GEV",
-   "title": "GEV ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-10-27",
-   "type": "earnings",
-   "ticker": "HOOD",
-   "title": "HOOD earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-27",
-   "type": "earnings",
-   "ticker": "V",
-   "title": "V earnings",
-   "fav": false
-  },
-  {
    "date": "2026-10-28",
    "type": "fed",
    "ticker": null,
    "title": "FOMC decision",
    "note": "Rate decision, no SEP",
-   "fav": false
-  },
-  {
-   "date": "2026-10-28",
-   "type": "earnings",
-   "ticker": "GEV",
-   "title": "GEV earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-28",
-   "type": "earnings",
-   "ticker": "GOOG",
-   "title": "GOOG earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-10-28",
-   "type": "earnings",
-   "ticker": "MSFT",
-   "title": "MSFT earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-10-28",
-   "type": "earnings",
-   "ticker": "NOW",
-   "title": "NOW earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-28",
-   "type": "earnings",
-   "ticker": "SKHY",
-   "title": "SKHY earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-28",
-   "type": "earnings",
-   "ticker": "VRT",
-   "title": "VRT earnings",
    "fav": false
   },
   {
@@ -118,48 +34,6 @@
    "title": "PCE (September)",
    "note": "8:30am ET — Personal Income and Outlays; Fed's preferred gauge",
    "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "earnings",
-   "ticker": "AMZN",
-   "title": "AMZN earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "earnings",
-   "ticker": "COIN",
-   "title": "COIN earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "earnings",
-   "ticker": "INTC",
-   "title": "INTC earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "earnings",
-   "ticker": "LLY",
-   "title": "LLY earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "earnings",
-   "ticker": "MSTR",
-   "title": "MSTR earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "earnings",
-   "ticker": "SNDK",
-   "title": "SNDK earnings",
-   "fav": true
   },
   {
    "date": "2026-10-30",
@@ -627,6 +501,13 @@
    "fav": false
   },
   {
+   "date": "2026-12-01",
+   "type": "earnings",
+   "ticker": "MRVL",
+   "title": "MRVL earnings",
+   "fav": false
+  },
+  {
    "date": "2026-12-02",
    "type": "earnings",
    "ticker": "SNOW",
@@ -661,6 +542,13 @@
    "ticker": null,
    "title": "FOMC decision + SEP",
    "note": "Rate decision with Summary of Economic Projections",
+   "fav": false
+  },
+  {
+   "date": "2026-12-09",
+   "type": "earnings",
+   "ticker": "AVGO",
+   "title": "AVGO earnings",
    "fav": false
   },
   {
