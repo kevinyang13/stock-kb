@@ -1,0 +1,59 @@
+{
+ "company": "AST SpaceMobile",
+ "ticker": "ASTS",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 42.3,
+ "revenue_yoy": 187,
+ "segments": [
+  {
+   "name": "Service",
+   "value": 21.8,
+   "yoy": 211,
+   "note": "51% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Product",
+   "value": 20.6,
+   "yoy": 166,
+   "note": "49% of revenue",
+   "color": "#1b1b7a"
+  }
+ ],
+ "cost_of_revenue": 25.3,
+ "gross_profit": 17.0,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 9.1
+  },
+  {
+   "name": "SG&A",
+   "value": 55.7
+  },
+  {
+   "name": "Engineering & D&A",
+   "value": 120.9
+  }
+ ],
+ "net_loss": 171.8,
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 3.1
+  }
+ ],
+ "prior": {
+  "Revenue": 14.7,
+  "Gross profit": 9.2,
+  "R&D": 5.5,
+  "SG&A": 29.8,
+  "Operating expenses": 88.9,
+  "Net loss": 163.8
+ }
+}

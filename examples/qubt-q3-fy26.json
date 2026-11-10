@@ -1,0 +1,43 @@
+{
+ "company": "Quantum Computing Inc",
+ "ticker": "QUBT",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 9.5,
+ "revenue_yoy": 2374,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 9.5,
+   "yoy": 2374,
+   "note": "company publishes no segment split",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 9.1,
+ "gross_profit": 0.4,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 8.3
+  },
+  {
+   "name": "SG&A",
+   "value": 20.7
+  }
+ ],
+ "net_loss": 15.1,
+ "other_income": 13.5,
+ "prior": {
+  "Revenue": 0.4,
+  "Gross profit": 0.1,
+  "R&D": 4.5,
+  "SG&A": 6.0,
+  "Operating expenses": 10.5,
+  "Net profit": 2.4
+ }
+}

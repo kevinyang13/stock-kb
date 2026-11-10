@@ -36,7 +36,7 @@ Table of contents for this knowledge base. One line per page.
 
 - [[earnings-surprise-chart]] — the actual-vs-estimate EPS dots on each Financials card: where the figures come from, and why they are not the EPS the income statement beside them is built from.
 - [[share-ownership-donut]] — the "Who owns the shares" chart on each Financials card: four slices of the whole share count, the five largest holders named on hover from their own 13F, and why the slice sizes and the holder names have to come from different sources.
-- [[favorites-financials]] — index of the 73 income statement charts on the Financials tab, which of them carry a reported revenue segment split (61 do) and the data caveats that apply to them.
+- [[favorites-financials]] — index of the 76 income statement charts on the Financials tab, which of them carry a reported revenue segment split (64 do) and the data caveats that apply to them.
 - [[apple-fq4-fy26]] — Apple fiscal Q4 2026: a record $114,477M September quarter (+12% Y/Y) at a 47.9% gross margin, but operating margin slipped as R&D grew 32%; Greater China was the fastest-growing region at +21%.
 - [[amd-q3-fy26]] — AMD Q3 2026: $13,377M revenue (+45% Y/Y) with Data Center up 97% to $8,546M, a 54% GAAP gross margin that three sources would each quote differently, a $1,097M customer-warrant charge below the operating line and a $555M income tax benefit.
 - [[super-micro-fq1-fy27]] — Super Micro fiscal Q1 2027: $19,946M of net sales (+298% Y/Y) on a 12.7% gross margin that fell 480bp in a quarter, operating expenses of just 2.4% of revenue, and figures the company itself labels preliminary and unaudited.
@@ -69,6 +69,11 @@ Table of contents for this knowledge base. One line per page.
 - [[iren-fq1-fy27]] — IREN fiscal Q1 2027: $228M revenue (−5% Y/Y) and a $263M net loss, but AI Cloud went $7M → $200M in a year while Bitcoin Mining went $233M → $28M; capital expenditure was 21 times revenue. First filed quarter after the derived FQ4.
 - [[cloudflare-q3-fy26]] — Cloudflare Q3 2026: $782.5M revenue (+39% Y/Y) at a 71% gross margin with a $67.9M operating loss; the first Cloudflare card to carry a revenue split, and the $11.0M restructuring charge the vendor drops out of operating expenses.
 - [[mda-space-q3-fy26]] — MDA Space Q3 2026: C$498.1M revenue (+22% Y/Y), guidance raised and backlog down C$0.5B, Satellite systems 72% of the company; filed gross margin 25.3% against the vendor's 28.8%, the difference being where depreciation sits.
+- [[rocket-lab-q3-fy26]] — Rocket Lab Q3 2026: $267.8M revenue (+73% Y/Y) at a 34% gross margin and a $79.7M net loss; Space Systems 80% of the company, Launch Services' gross margin down 23 points, and a year-ago net line flattered by a $41.1M tax benefit.
+- [[ast-spacemobile-q3-fy26]] — AST SpaceMobile Q3 2026: $42.3M revenue (+187% Y/Y) against $211.0M of operating expenses; no filed gross profit line, the first ASTS card to carry the product/service split, and $39.4M of the loss allocated to a noncontrolling interest.
+- [[constellation-energy-q3-fy26]] — Constellation Energy Q3 2026: $9,550M revenue (+45% Y/Y) and $1,835M of net income, but 64% of the revenue increase is non-contract revenue; first CEG card, no filed gross profit line, and a $12M asset-sale gain the vendor leaves out of the operating result.
+- [[vistra-q3-fy26]] — Vistra Q3 2026: $6,347M revenue (+28% Y/Y) and $1,140M of net income; the vendor reports $1,975M of operating income against the filing's $1,706M, the difference being a $269M impairment, and the segment table overstates revenue by 52% on intersegment sales.
+- [[quantum-computing-q3-fy26]] — Quantum Computing Inc Q3 2026: $9.5M revenue against $9.1M of cost of revenue — the first quarter with positive gross profit, so the first QUBT card; interest income is thirty times gross profit and the nine-month gross line is still negative.
 
 ## Pages referenced but not yet written
 

@@ -2988,3 +2988,130 @@ still resolves `index.json` but 404s every file under it.
 preserved. Today's six reporters are kept as past dates, which is the point of `KEEP_PAST_DAYS`
 — a past date is the day a company reported, a fact, while a future one may be a stale
 leftover. Two future dates are new: HIVE on Nov 9 and XNET on Nov 12.
+
+## 2026-11-09 — Five cards on the day seven companies reported, and three the chart cannot draw
+
+**Sources**: eight 10-Qs. ASTS (accession 0001193125-26-453759), CEG (0001868275-26-000119),
+HIVE (0001062993-26-005842), MARA (0001507605-26-000028), QUBT (0001628280-26-072119),
+RKLB (0001819994-26-000074) and VST (0001692819-26-000025), all filed November 9, 2026; and
+IONQ (0001193125-26-449829), filed November 5 and left open from the previous pass.
+
+The calendar predicted six names for today. EDGAR showed seven 10-Qs filed on the day — VST's
+calendar date said November 6 and its filing landed on the 9th. The filing date, not the
+calendar, decided what got worked on.
+
+### Five built
+
+| Ticker | Period | Revenue | Y/Y | Net | Note |
+|---|---|---|---|---|---|
+| RKLB | Q3 FY26 | $267.8M | +73% | ($79.7M) | segments foot to the dollar |
+| ASTS | Q3 FY26 | $42.3M | +187% | ($171.8M) | first ASTS split; gross profit derived |
+| CEG | Q3 FY26 | $9,550M | +45% | $1,835M | first CEG card |
+| VST | Q3 FY26 | $6,347M | +28% | $1,140M | first VST card |
+| QUBT | Q3 FY26 | $9.5M | +2374% | ($15.1M) | first QUBT card ever |
+
+### Two more vendor errors, in two more flavours
+
+The filing-beats-aggregator check has now caught something on five consecutive cards.
+
+- **VST**: stockanalysis reports $1,975M of operating income against the 10-Q's **$1,706M**. The
+  difference is exactly the **$269M impairment of long-lived assets**, left out of operating
+  expenses altogether. Identical failure mode to the Cloudflare restructuring charge and the Meta
+  case.
+- **CEG**: stockanalysis reports $2,480M against the 10-Q's **$2,492M**. The difference is a
+  **$12M gain on sales of assets** that the filing counts inside the operating result. Small in
+  dollars, same principle. The vendor also disagrees with the filing on prior-year operating
+  expenses by $13M.
+
+### Three quarters the chart refused
+
+Each is a real quarter with real figures; the Sankey's grammar cannot represent any of them, so
+no chart was drawn and each card now says on its face why it is a quarter behind.
+
+- **HIVE** — **filed gross profit is negative**: $84.9M of revenue against $109.5M of cost of
+  sales, because HIVE puts $54.9M of depreciation inside cost of sales. Same gate that keeps SPCE
+  and CAN off the tab. This also exposed a contradiction: **the existing HIVE Q1 FY27 card takes
+  depreciation OUT of cost of revenue**, producing a positive gross profit that the filing does
+  not report. That is the vendor error this repo criticises MDA's aggregator for, committed
+  in-house. Recorded, not fixed.
+- **MARA** — **total costs and operating expenses are negative**, minus $12.3M, because a
+  **$421.9M mark-to-market gain on digital assets sits inside operating costs**. Operating income
+  of $176.5M therefore exceeds revenue of $164.2M. Net income of $632.1M is almost entirely
+  marks: $421.9M above the operating line and $463.5M below it, on revenue that FELL 35%.
+- **IONQ** — a **$433.1M operating loss under $563.1M of net income**, from an $896.2M warrant
+  revaluation plus a $141.7M tax benefit. `mkspec` picks the profit layout from the sign of net,
+  and the profit layout assumes operating profit is positive; rendered, it draws the
+  operating-expense flow backwards, puts "Operating profit $-433.1M" in green, and floats the
+  non-operating label unattached. The honest shape has three sources funding two sinks —
+  gross profit $38.0M + non-operating $854.5M + tax benefit $141.7M = opex $471.1M + net $563.1M
+  — which is the loss layout's pool model with a profit where the loss goes. **Defect six for
+  `bin/sankey.py`**, and the one most worth fixing: IONQ is the only favorite in this group.
+
+### A new sankey.py defect, found and worked around
+
+**The loss layout draws the "Cost of revenue" and "Net loss" labels at their own nodes' x with a
+fixed vertical offset**, so each lands on top of its own bar once that bar is tall. RKLB was the
+first card to hit it — cost of revenue is 66% of the chart's tallest column and the label sat
+inside the bar, with the net-loss label clipped by its own node beside it. Plotly settles node
+height itself, so the clash cannot be predicted in the script.
+
+Rather than change placement for all 76 existing cards, `bin/sankey.py` now reads optional
+`cor_label` and `loss_label` nudges `{dx, dy, anchor}` from the spec, defaulting to exactly the
+old behaviour. Only `examples/rklb-q3-fy26.json` sets them. Every other card renders
+byte-identically. The underlying defect stands.
+
+### Derived gross profit, three times, each said out loud
+
+Three of the five cards have no filed gross profit line:
+
+- **CEG** and **VST** are utilities and report none. The charts treat purchased power and fuel
+  (CEG, $4,400M) and fuel, purchased power and delivery fees (VST, $2,530M) as cost of revenue.
+  The resulting 54% and 60% gross margins are constructions of the cards and **are not comparable
+  with the other cards on the tab**. Both say so.
+- **ASTS** reports no cost of revenue subtotal either, but discloses product and service cost of
+  revenues inside total operating expenses. Those two ($22.5M + $2.9M) plus the five named
+  expense lines reconcile to the filed $211.0M exactly, so the derivation is checkable.
+
+CEG needed one further compromise: the chart cannot draw a negative charge, so the $12M
+asset-sale gain is netted against the $225M of taxes other than income into a single $213M band.
+The operating result is the filed $2,492M either way, and the card says what the band is.
+
+### Read CEG's 45% carefully
+
+Revenue grew $2,980M year over year and **$1,907M of that — 64% — is revenue from outside
+contracts with customers**, which went from $867M to $2,774M and is now 29% of the company.
+Revenue from contracts with customers grew 19%. Capacity revenues separately went from $104M to
+$496M, which describes a PJM auction outcome rather than a trend.
+
+### VST's segment table is the wrong split
+
+Its reportable segments sum to **$9,632M against $6,347M of revenue**, because $3,285M of
+intersegment sales are eliminated below them — Retail buys power from the generation segments
+and both sides are counted. A split that overstates revenue by 52% is not a split. The
+disaggregation note foots without eliminations and is what the card draws. Worth recording
+because the segment table is the more obvious place to look and is wrong here.
+
+### Gaps, stated rather than filled
+
+- **No debt chart for VST** (vendor publishes no cash and equivalents at Sep 30, 2026) or
+  **QUBT** (vendor has no Sep 30 balance sheet column at all; nearest is a quarter away). Both
+  were reported and skipped by `bin/debtfetch.py` rather than written with a hole.
+- **No ownership donut for CEG, VST or QUBT.** The Form 13F data set is a 400MB quarterly
+  download deliberately not kept in the repo, and none was unpacked locally.
+- **No post-result earnings surprise on any of the five.** The vendor's surprise series still
+  ends at Jun '26 for all of them, so each Sep '26 point is the pre-announcement consensus.
+- **QUBT's nine-month gross profit is still negative** — $18.742M of revenue against $20.201M of
+  cost of revenue. One positive quarter does not make the year, and if Q4 looks like Q1 and Q2
+  the card comes back off the tab.
+
+### Counts
+
+The Financials tab holds **76** cards, up from 73. **64 of the 76 carry a reported segment
+split**, up from 61: ASTS joined (its product/service disaggregation was always on the face of
+the statement and had simply never been fetched — the third name after DDOG and NET to leave
+that list for exactly that reason), CEG and VST joined on their first cards, and QUBT is the one
+addition without a split, reporting a single reportable segment. `wiki/favorites-financials.md`'s
+coverage table was recounted against the files rather than patched: the watchlist is **112**
+names, not the 101 the table claimed, of which 75 are charted, 25 are ETFs or funds, 6 are
+shells, 2 are excluded for negative gross profit, 1 is pre-revenue, and **3 — CCJ, LEU and HPE —
+are chartable and simply have no card yet**.

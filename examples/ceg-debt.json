@@ -1,0 +1,33 @@
+{
+ "ticker": "CEG",
+ "company": "Constellation Energy",
+ "currency": "$",
+ "unit": "millions",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "periods": [
+  {
+   "label": "Q3 FY26",
+   "debt": 23387.0,
+   "fcf": 2486.0,
+   "cash": 603.0,
+   "debt_parts": [],
+   "cash_parts": [
+    {
+     "label": "Restricted cash (separate)",
+     "value": 406.0
+    }
+   ],
+   "fcf_parts": [
+    {
+     "label": "Operating cash flow",
+     "value": 3426.0
+    },
+    {
+     "label": "Capital expenditure",
+     "value": -940.0
+    }
+   ]
+  }
+ ]
+}

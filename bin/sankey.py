@@ -481,11 +481,23 @@ def build_loss(spec):
     label(X["gross"], 0.895, "Gross profit",
           [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     if cor_id is not None:
-        label(0.40, py(ys[cor_id]) - 0.115, "Cost of revenue",
-              [f"({m(cor)})"], color=COST)
-    label(X["gross"] - 0.015, py(ys[loss_id]), "Net loss",
+        # The label is drawn at the node's own x with a fixed offset below its
+        # centre, so it lands ON its own bar when cost of revenue is a large
+        # share of the chart's tallest column (RKLB Q3 FY26 was the first card
+        # to hit it). Plotly settles the node's final height itself, so the
+        # clash cannot be predicted here -- a card that hits it nudges the
+        # label out of the way explicitly instead.
+        cl = spec.get("cor_label") or {}
+        label(0.40 + cl.get("dx", 0.0),
+              py(ys[cor_id]) - 0.115 + cl.get("dy", 0.0), "Cost of revenue",
+              [f"({m(cor)})"], color=COST, xa=cl.get("anchor", "center"))
+    # same clash as the cost-of-revenue label above: a tall net-loss bar sits
+    # under its own label, and the node's settled height is plotly's to decide
+    ll = spec.get("loss_label") or {}
+    label(X["gross"] - 0.015 + ll.get("dx", 0.0), py(ys[loss_id]) + ll.get("dy", 0.0),
+          "Net loss",
           [f"({m(net_loss)})", f"{net_loss / rev * 100:.0f}% of revenue"],
-          color=COST, xa="right")
+          color=COST, xa=ll.get("anchor", "right"))
     if inc_id is not None:
         label(X["gross"] - 0.015, py(ys[inc_id]), "Non-operating income", [m(other_income)],
               color=PROFIT, xa="right")

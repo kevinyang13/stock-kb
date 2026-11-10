@@ -1,0 +1,80 @@
+{
+ "company": "Vistra",
+ "ticker": "VST",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 6347.0,
+ "revenue_yoy": 28,
+ "segments": [
+  {
+   "name": "Retail -- ERCOT",
+   "value": 3007.0,
+   "yoy": 11,
+   "note": "47% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Retail -- NE/Midwest",
+   "value": 1331.0,
+   "yoy": 26,
+   "note": "21% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Wholesale generation",
+   "value": 1226.0,
+   "yoy": 79,
+   "note": "19% of revenue",
+   "color": "#c8a020"
+  },
+  {
+   "name": "Capacity & other wholesale",
+   "value": 428.0,
+   "yoy": 25,
+   "note": "7% of revenue",
+   "color": "#f0a030"
+  },
+  {
+   "name": "Hedging & PTC, net",
+   "value": 355.0,
+   "yoy": 84,
+   "note": "6% of revenue",
+   "color": "#6cb6e8"
+  }
+ ],
+ "cost_of_revenue": 2530.0,
+ "gross_profit": 3817.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 2111.0,
+ "opex_items": [
+  {
+   "name": "Operating costs",
+   "value": 683.0
+  },
+  {
+   "name": "Depreciation & amortisation",
+   "value": 711.0
+  },
+  {
+   "name": "SG&A",
+   "value": 448.0
+  },
+  {
+   "name": "Impairment of long-lived assets",
+   "value": 269.0
+  }
+ ],
+ "operating_profit": 1706.0,
+ "other": -210.0,
+ "tax": 356.0,
+ "net_profit": 1140.0,
+ "prior": {
+  "Revenue": 4971.0,
+  "Gross profit": 2601.0,
+  "Operating profit": 1037.0,
+  "Net profit": 652.0
+ }
+}

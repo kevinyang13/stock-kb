@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-04T16:45:00-08:00",
- "generatedLabel": "Nov 4, 2026",
+ "generated": "2026-11-09T19:10:00-08:00",
+ "generatedLabel": "Nov 9, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -683,6 +683,7 @@
     }
    ],
    "notes": [
+    "THIS CARD IS A QUARTER BEHIND, DELIBERATELY. IonQ filed its Sep 30, 2026 10-Q on November 5, 2026: revenue $173.8M (+336%), a $433.1M operating loss, and NET INCOME of $563.1M produced almost entirely by an $896.2M gain on the revaluation of warrant liabilities plus a $141.7M tax benefit. The chart cannot draw that quarter. Its grammar has revenue funding the charges, and here the warrant mark funds them -- a positive net profit sitting under a negative operating profit renders the operating-expense flow backwards. The quarter is real and the figures above are the filed ones; the chart is not drawn rather than drawn wrong.",
     "Segments: Quantum hardware $46.5M (+230%), Platform, consulting & support $33.6M (+407%). Source: IonQ 10-Q, quarter ended Jun 30 2026, disaggregation note.",
     "Uses the loss layout: revenue plus the net loss fund every cost line.",
     "The net loss is roughly 23 times revenue. R&D alone is $158.1M, 197% of revenue.",
@@ -690,13 +691,73 @@
     "The tax line was a small benefit, so it is folded into the non-operating line rather than drawn as a cost.",
     "Debt and coverage, Q2 FY26: $54.5M of debt against $1.2B of cash and -$114.0M of free cash flow for the quarter. Net debt -$1.2B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.72 actual against -$0.59 expected, missed by $0.13 (-22%). Sep '26 consensus is -$0.79 from 1 analysts, due Nov 05, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $12.68B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated.",
+    "Market figures as of Nov 4, 2026: market cap $12.68B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "IONQ-debt",
    "eps": "IONQ-eps",
    "own": "IONQ-own"
+  },
+  {
+   "t": "QUBT",
+   "company": "Quantum Computing Inc",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 9, 2026",
+   "img": "assets/financials/QUBT-Q3-FY26.png",
+   "source": "Quantum Computing Inc 10-Q, quarter ended Sep 30, 2026, filed November 9, 2026 (SEC accession 0001628280-26-072119)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1758009/000162828026072119/",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$9.5M",
+     "s": "+2374% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "4.5%",
+     "s": "$0.4M"
+    },
+    {
+     "k": "Net loss",
+     "v": "($15.1M)",
+     "s": "(159%) of revenue"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($28.6M)",
+     "s": "3x revenue"
+    },
+    {
+     "k": "Market cap",
+     "v": "$1.55B",
+     "s": "moves with the share price"
+    },
+    {
+     "k": "P/E",
+     "v": "n/a · n/a",
+     "s": "trailing · forward"
+    },
+    {
+     "k": "Dividend",
+     "v": "None",
+     "s": "no dividend paid"
+    }
+   ],
+   "notes": [
+    "QUBT IS CHARTABLE FOR THE FIRST TIME. It was excluded from the Financials tab alongside SPCE and CAN because cost of revenue exceeded revenue, leaving no flow to draw. In this quarter gross profit turned positive -- $0.428M on $9.500M of revenue -- so the chart exists. It is a 4.5% margin, and the band is a hairline for that reason.",
+    "Revenue went from $0.384M to $9.500M in a year. On a base that small the percentage is close to meaningless; the dollar figures are the ones to read.",
+    "Nine months to Sep 30 2026 gross profit is still NEGATIVE: $18.742M of revenue against $20.201M of cost of revenue. One positive quarter does not make the year positive.",
+    "No segment split: Quantum Computing Inc reports a single reportable segment, so there is nothing to break revenue into. Source: QUBT 10-Q, segment reporting note.",
+    "The loss layout here needs a second source. Charges of $29.0M exceed gross profit plus the net loss, so $13.5M of non-operating income -- almost all of it interest on the cash raised -- is drawn as its own inflow rather than as a negative charge. Interest and other income was $13.0M, larger than the entire gross profit of the business by a factor of thirty.",
+    "No post-result earnings surprise: the vendor's surprise series has not ingested the Sep quarter.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.05 actual against -$0.05 expected, came in level with. Sep '26 consensus is -$0.08 from 2 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 9, 2026.",
+    "No debt chart on this card. The vendor's balance sheet has no Sep 30, 2026 column for QUBT -- the nearest is Jun 30, 2026, a quarter away -- so bin/debtfetch.py reported and skipped it rather than drawing last quarter's balance sheet beside this quarter's income statement.",
+    "No ownership donut, for the same reason as the other two cards added today: the Form 13F data set is a 400MB quarterly download that is deliberately not kept in this repo.",
+    "Market figures as of Nov 9, 2026: market cap $1.55B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+   ],
+   "eps": "QUBT-eps"
   },
   {
    "t": "MSFT",
@@ -1363,31 +1424,36 @@
   {
    "t": "ASTS",
    "company": "AST SpaceMobile",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/ASTS-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/asts/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 9, 2026",
+   "img": "assets/financials/ASTS-Q3-FY26.png",
+   "source": "AST SpaceMobile 10-Q, quarter ended Sep 30, 2026, filed November 9, 2026 (SEC accession 0001193125-26-453759)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1780312/000119312526453759/",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$32M",
-     "s": "+2627% Y/Y"
+     "v": "$42M",
+     "s": "+187% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "25%",
-     "s": "$8M"
+     "v": "40%",
+     "s": "$17M"
     },
     {
      "k": "Net loss",
-     "v": "($231M)",
-     "s": "(722%) margin"
+     "v": "($172M)",
+     "s": "(406%) of revenue"
+    },
+    {
+     "k": "Cash burn",
+     "v": "$188.8M",
+     "s": "of charges on $42M"
     },
     {
      "k": "Market cap",
-     "v": "$13.86B",
+     "v": "$14.36B",
      "s": "moves with the share price"
     },
     {
@@ -1402,14 +1468,14 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $8M + $231M balances against the charges on the right.",
-    "No segment split: AST SpaceMobile's 10-Q carries no revenue disaggregation -- one line, one segment.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $3.0B of debt against $2.3B of cash and -$694.8M of free cash flow for the quarter. Net debt $705.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.44 actual against -$0.28 expected, missed by $0.16 (-57%). Sep '26 consensus is -$0.41 from 7 analysts, due Nov 09, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $13.86B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
-    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $17.0M + $171.8M balances against the $188.8M of charges on the right.",
+    "Segments: Service $21.8M (+211%), Product $20.6M (+166%). This is the 10-Q's own product-and-service disaggregation and it foots to revenue to the dollar. The previous card carried no split at all -- it was filed, and simply had not been fetched.",
+    "ASTS reports NO gross profit line. Cost of revenue here is the $25.3M of product and service cost of revenues the statement discloses separately inside total operating expenses ($22.5M product, $2.9M service), so gross profit is derived, not filed. The five named expense lines plus that cost of revenue sum to the filed $211.0M of total operating expenses exactly.",
+    "The net loss shown is the $171.8M before the allocation to noncontrolling interests. $39.4M of it is allocated to the noncontrolling interest, leaving $132.4M attributable to common stockholders, which is what the filed diluted loss per share of $(0.44) on 300,131,014 shares is computed on.",
+    "Revenue nearly tripled and the loss still widened, from $163.8M to $171.8M. Engineering services costs alone were $95.8M, more than twice revenue.",
+    "No post-result earnings surprise: the vendor's surprise series has not ingested the Sep quarter, so the Sep '26 point on the earnings chart is the pre-announcement consensus, not the actual.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.44 actual against -$0.28 expected, missed by $0.16 (-57%). Sep '26 consensus is -$0.41 from 7 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 9, 2026.",
+    "Market figures as of Nov 9, 2026: market cap $14.36B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "ASTS-debt",
    "eps": "ASTS-eps",
@@ -2236,14 +2302,15 @@
     }
    ],
    "notes": [
+    "THIS CARD IS A QUARTER BEHIND. HIVE filed its Sep 30, 2026 10-Q on November 9, 2026 and its FILED GROSS PROFIT IS NEGATIVE: $84.9M of revenue against $109.5M of cost of sales, a gross loss of $24.7M, because HIVE puts $54.9M of depreciation inside cost of sales. A negative gross profit leaves no flow to draw, which is the same gate that keeps SPCE and CAN off this tab. Note also that this Q1 FY27 card takes depreciation OUT of cost of revenue, which disagrees with the filing's own gross profit line; that inconsistency is recorded and not yet fixed.",
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $143M balances against the charges on the right.",
     "Segments: Digital currency mining $72.1M (+77%), HPC hosting $7.1M (+47%). Source: HIVE Digital 10-Q, quarter ended Jun 30 2026, segmented information.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q1 FY27: $374.3M of debt against $208.0M of cash and -$26.9M of free cash flow for the quarter. Net debt $166.3M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.19 actual against -$0.21 expected, beat by $0.02 (+10%). Sep '26 consensus is -$0.16 from 6 analysts, due Nov 13, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $500.50M, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated.",
+    "Market figures as of Nov 4, 2026: market cap $500.50M, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "HIVE-debt",
    "eps": "HIVE-eps",
@@ -2579,14 +2646,15 @@
     }
    ],
    "notes": [
+    "THIS CARD IS A QUARTER BEHIND. MARA filed its Sep 30, 2026 10-Q on November 9, 2026 and the quarter cannot be drawn: TOTAL COSTS AND OPERATING EXPENSES ARE NEGATIVE, minus $12.3M, because a $421.9M mark-to-market GAIN on digital assets is booked inside operating costs. Operating income of $176.5M therefore exceeds revenue of $164.2M, and net income of $632.1M comes almost entirely from marks -- that $421.9M above the operating line and a further $463.5M below it -- on revenue that FELL 35% year over year. A chart showing revenue funding the charges would misstate the quarter.",
     "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $57M + $610M balances against the charges on the right.",
     "Segments: Block rewards $156.5M (-28%), Mining participant $12.8M (+16%), Other $4.6M (-7%), Transaction fees $1.0M (-66%). Source: MARA 10-Q, quarter ended Jun 30 2026, disaggregation note.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY26: $2.5B of debt against $421.3M of cash and -$245.4M of free cash flow for the quarter. Net debt $2.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.70 actual against -$0.56 expected, missed by $0.14 (-25%). Sep '26 consensus is -$0.04 from 3 analysts, due Nov 3, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $2.65B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated.",
+    "Market figures as of Nov 4, 2026: market cap $2.65B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "MARA-debt",
    "eps": "MARA-eps",
@@ -3538,31 +3606,36 @@
   {
    "t": "RKLB",
    "company": "Rocket Lab",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/RKLB-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/rklb/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 9, 2026",
+   "img": "assets/financials/RKLB-Q3-FY26.png",
+   "source": "Rocket Lab 10-Q, quarter ended Sep 30, 2026, filed November 9, 2026 (SEC accession 0001819994-26-000074)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000074/",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$234M",
-     "s": "+62% Y/Y"
+     "v": "$268M",
+     "s": "+73% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "36%",
-     "s": "$85M"
+     "v": "34%",
+     "s": "$90M"
     },
     {
      "k": "Net loss",
-     "v": "($49M)",
-     "s": "(21%) margin"
+     "v": "($80M)",
+     "s": "(30%) margin"
+    },
+    {
+     "k": "Space Systems",
+     "v": "80% of revenue",
+     "s": "+88% Y/Y"
     },
     {
      "k": "Market cap",
-     "v": "$31.34B",
+     "v": "$35.23B",
      "s": "moves with the share price"
     },
     {
@@ -3577,14 +3650,14 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $85M + $49M balances against the charges on the right.",
-    "Segments: Space Systems $189.5M (+94%), Launch Services $44.6M (-4%). Source: stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $133.7M of debt against $2.1B of cash and -$110.1M of free cash flow for the quarter. Net debt -$2.0B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.06 actual against -$0.07 expected, beat by $0.01 (+14%). Sep '26 consensus is -$0.05 from 2 analysts, due Nov 09, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $31.34B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
-    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $90.1M + $79.7M balances against the $169.8M of charges on the right.",
+    "Segments: Space Systems $214.8M (+88%), Launch Services $53.1M (+30%). The two foot to total revenue to the dollar. Source: Rocket Lab 10-Q, quarter ended Sep 30 2026, reportable segment note.",
+    "Every figure on this card is the filed one. The 10-Q reports cost of revenue and gross profit on its face, so nothing above the operating line is derived; the non-operating line is net plus tax minus operating profit, so the statement foots exactly.",
+    "The net loss widened to $79.7M from $18.3M a year ago, but the year-ago quarter carried a $41.1M tax BENEFIT. Operating loss is the honest comparison: $79.2M against $59.0M. A $27.3M loss on extinguishment of debt is also in this quarter and not the last.",
+    "Launch Services gross margin fell to 35% from 58% a year ago, while Space Systems rose to 33% from 29%. The segment that is growing is now the more profitable one, which is the reverse of a year ago.",
+    "No post-result earnings surprise: the vendor's surprise series has not ingested the Sep quarter, so the Sep '26 point on the earnings chart is the pre-announcement consensus, not the actual.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.06 actual against -$0.07 expected, beat by $0.01 (+14%). Sep '26 consensus is -$0.05 from 2 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 9, 2026.",
+    "Market figures as of Nov 9, 2026: market cap $35.23B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "RKLB-debt",
    "eps": "RKLB-eps",
@@ -4362,7 +4435,131 @@
     "No debt chart. The vendor's balance sheet maps Robinhood's $19,480M of securities loaned into short-term debt, which would draw $22.6B of 'debt' against $685M of quarterly operating profit. Securities loaned is collateralised stock lending matched by securities borrowed and user assets on the other side, not borrowing. Robinhood's actual long-term borrowings at Sep 30, 2026 were $2,660M against $5,829M of cash, plus $13,443M of cash segregated for users (source: 10-Q R2)."
    ],
    "eps": "HOOD-eps"
+  },
+  {
+   "t": "CEG",
+   "company": "Constellation Energy",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 9, 2026",
+   "img": "assets/financials/CEG-Q3-FY26.png",
+   "source": "Constellation Energy 10-Q, quarter ended Sep 30, 2026, filed November 9, 2026 (SEC accession 0001868275-26-000119)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000119/",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$9,550M",
+     "s": "+45% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "54%",
+     "s": "$5,150M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,835M",
+     "s": "19% margin"
+    },
+    {
+     "k": "Non-contract revenue",
+     "v": "$2,774M",
+     "s": "29% of revenue"
+    },
+    {
+     "k": "Market cap",
+     "v": "$97.82B",
+     "s": "moves with the share price"
+    },
+    {
+     "k": "P/E",
+     "v": "22.4 · 22.6",
+     "s": "trailing · forward"
+    },
+    {
+     "k": "Dividend",
+     "v": "0.62%",
+     "s": "$1.71 a year"
+    }
+   ],
+   "notes": [
+    "THIS CARD FOLLOWS THE FILING, NOT THE AGGREGATOR. stockanalysis reports $2,480M of operating income for this quarter; the 10-Q reports $2,492M. The difference is the $12M gain on sales of assets, which the filing counts inside the operating result and the vendor does not.",
+    "CEG reports NO gross profit line, as utilities generally do not. This chart treats PURCHASED POWER AND FUEL ($4,400M) as cost of revenue and leaves operating and maintenance, depreciation and taxes other than income in operating expenses. The 54% gross margin is therefore a construction of this card and is NOT comparable with the other cards on this tab.",
+    "The $213M 'Taxes other than income, net' band is the filed $225M of taxes other than income less the $12M gain on sales of assets. The two are netted because the chart cannot draw a negative charge; the operating result of $2,492M is the filed one either way.",
+    "Segments: Power and power-related $5,797M (+10%), Other revenues $3,257M (+168%), Capacity revenues $496M (+377%). The three foot to total revenue to the dollar. Source: CEG 10-Q, disaggregation of revenue note.",
+    "READ THE REVENUE GROWTH CAREFULLY. Of the $2,980M increase in revenue, $1,907M is 'other revenue sources' -- revenue outside contracts with customers, which rose from $867M to $2,774M and is now 29% of the company. Revenue from contracts with customers grew 19%, not 45%.",
+    "Capacity revenues rose from $104M to $496M. PJM capacity auction prices cleared far higher for the 2026/27 delivery year than for the year before, which is the kind of step change that does not repeat annually.",
+    "First card for CEG. The ticker has been on the heatmap since Oct 28, 2026 with no income statement chart behind it.",
+    "No post-result earnings surprise: the vendor's surprise series has not ingested the Sep quarter.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $2.55 actual against $2.36 expected, beat by $0.19 (+8%). Sep '26 consensus is $3.90 from 5 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 9, 2026.",
+    "No ownership donut. CEG is new to the Financials tab and the Form 13F data set the donut is built from is a 400MB quarterly download that is deliberately not kept in this repo.",
+    "Market figures as of Nov 9, 2026: market cap $97.82B, P/E 22.4 trailing, 22.6 forward; dividend $1.71 a year, 0.62% yield, last ex-dividend Nov 16, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+   ],
+   "debt": "CEG-debt",
+   "eps": "CEG-eps"
+  },
+  {
+   "t": "VST",
+   "company": "Vistra",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 9, 2026",
+   "img": "assets/financials/VST-Q3-FY26.png",
+   "source": "Vistra 10-Q, quarter ended Sep 30, 2026, filed November 9, 2026 (SEC accession 0001692819-26-000025)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000025/",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$6,347M",
+     "s": "+28% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "60%",
+     "s": "$3,817M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,140M",
+     "s": "18% margin"
+    },
+    {
+     "k": "Impairment",
+     "v": "($269M)",
+     "s": "4% of revenue"
+    },
+    {
+     "k": "Market cap",
+     "v": "$45.45B",
+     "s": "moves with the share price"
+    },
+    {
+     "k": "P/E",
+     "v": "18.1 · 14.2",
+     "s": "trailing · forward"
+    },
+    {
+     "k": "Dividend",
+     "v": "0.69%",
+     "s": "$0.92 a year"
+    }
+   ],
+   "notes": [
+    "THIS CARD FOLLOWS THE FILING, NOT THE AGGREGATOR. stockanalysis reports $1,975M of operating income for this quarter; the 10-Q reports $1,706M. The difference is exactly the $269M impairment of long-lived assets, which the vendor leaves out of operating expenses altogether. This is the same failure mode as the Cloudflare and Meta cases; the chart draws the impairment as its own band so the charge is visible rather than netted away.",
+    "VST reports NO gross profit line, as utilities generally do not. This chart treats FUEL, PURCHASED POWER COSTS AND DELIVERY FEES ($2,530M) as cost of revenue and leaves operating costs, depreciation, SG&A and the impairment in operating expenses. The 60% gross margin is therefore a construction of this card and is NOT comparable with the other cards on this tab.",
+    "Segments: Retail -- ERCOT $3,007M (+11%), Retail -- Northeast/Midwest $1,331M (+26%), Wholesale generation $1,226M (+79%), Capacity and other wholesale $428M (+25%), Hedging and PTC, net $355M (+84%). The five foot to total revenue to the dollar: the first four are the 10-Q's revenue-from-contracts disaggregation ($5,992M) and the fifth is its 'total other revenues' line ($355M).",
+    "The reportable-segment table is NOT the split used here. Its segments sum to $9,632M against $6,347M of revenue, because $3,285M of intersegment sales are eliminated below them. The disaggregation note foots without eliminations and is the honest split.",
+    "Net profit of $1,140M is attributable to Vistra. $48M of cumulative preferred dividends sit below it, leaving $1,092M to common, which is what the filed diluted EPS of $3.23 on 337,852,657 shares is computed on.",
+    "Depreciation and amortisation rose 55% to $711M while revenue rose 28%, and the quarter also carries the $269M impairment. Both are why the 27% operating margin is below the 60% gross margin by more than usual.",
+    "First card for VST. The ticker has been on the heatmap since Oct 28, 2026 with no income statement chart behind it.",
+    "No post-result earnings surprise: the vendor's surprise series has not ingested the Sep quarter.",
+    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $1.80 actual against $1.54 expected, beat by $0.26 (+17%). Sep '26 consensus is $2.94 from 4 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Sep '25 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 9, 2026.",
+    "No debt chart on this card. bin/debtfetch.py matches the balance-sheet column to the period the income statement draws, and the vendor publishes no cash and equivalents figure for VST at Sep 30, 2026, so there is nothing to match. It is reported and skipped rather than written with a hole in it.",
+    "No ownership donut. CEG, VST and QUBT are new to the Financials tab and the Form 13F data set they are built from is a 400MB quarterly download that is deliberately not kept in this repo. The donut is a quarter behind the income statement in any case.",
+    "Market figures as of Nov 9, 2026: market cap $45.45B, P/E 18.1 trailing, 14.2 forward; dividend $0.92 a year, 0.69% yield, last ex-dividend Dec 22, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+   ],
+   "eps": "VST-eps"
   }
  ],
- "marketAsOf": "Nov 5, 2026"
+ "marketAsOf": "Nov 9, 2026"
 }

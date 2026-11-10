@@ -1,0 +1,59 @@
+{
+ "ticker": "VST",
+ "company": "Vistra",
+ "currency": "$",
+ "basis": "EPS as the vendor scores it -- usually the street's adjusted figure, which is not the GAAP EPS the income statement is built from. The feed states no basis and has mixed GAAP actuals with adjusted consensus, so a pair that cannot be shown to share one is marked basisUnverified and carries no surprise figure.",
+ "source": "Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Nov 9, 2026.",
+ "reported": [
+  {
+   "label": "Sep '25",
+   "quarterEnd": "Sep 2025",
+   "reported": "Nov 6, 2025",
+   "actual": 1.75,
+   "estimate": 1.2,
+   "surprise": 0.55,
+   "surprisePct": 45.83,
+   "basisUnverified": true
+  },
+  {
+   "label": "Dec '25",
+   "quarterEnd": "Dec 2025",
+   "reported": "Feb 26, 2026",
+   "actual": 2.18,
+   "estimate": 2.51,
+   "surprise": -0.33,
+   "surprisePct": -13.15
+  },
+  {
+   "label": "Mar '26",
+   "quarterEnd": "Mar 2026",
+   "reported": "May 8, 2026",
+   "actual": 2.87,
+   "estimate": 2.21,
+   "surprise": 0.66,
+   "surprisePct": 29.86
+  },
+  {
+   "label": "Jun '26",
+   "quarterEnd": "Jun 2026",
+   "reported": "Aug 7, 2026",
+   "actual": 1.8,
+   "estimate": 1.54,
+   "surprise": 0.26,
+   "surprisePct": 16.88
+  }
+ ],
+ "ahead": [
+  {
+   "label": "Sep '26",
+   "quarterEnd": "Sep 2026",
+   "estimate": 2.94,
+   "high": 3.06,
+   "low": 2.73,
+   "analysts": 4,
+   "up": 2,
+   "down": 1,
+   "awaitingVendor": true
+  }
+ ]
+}

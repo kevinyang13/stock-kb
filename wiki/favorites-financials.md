@@ -10,17 +10,37 @@
 
 ## Coverage
 
-Of the 101 names on the watchlist:
+Of the 112 names on the watchlist, counted November 9, 2026:
 
 | | Count | Why |
 |---|---|---|
-| Charted | 65 | files an income statement |
+| Charted | 75 | files an income statement |
 | ETFs and funds | 25 | a fund holds securities; it has no revenue or margin |
 | Shells / no usable filing | 6 | CLBR, CCXI, BITF, BCII, MFH, XNET |
-| Excluded, negative gross profit | 3 | SPCE, QUBT, CAN — cost of revenue exceeds revenue, so there is no flow to draw |
+| Excluded, negative gross profit | 2 | SPCE, CAN — cost of revenue exceeds revenue, so there is no flow to draw |
 | Excluded, pre-revenue | 1 | HQ reports no revenue line at all |
+| Chartable, not yet charted | 3 | CCJ, LEU, HPE — all file real statements; no card has been built |
 
-Nintendo is charted too, though it is not on the watchlist.
+Nintendo is charted too, though it is not on the watchlist, which is why the tab holds **76**
+cards against 75 charted watchlist names.
+
+Three names moved on **November 9, 2026**, on the back of the quarters filed that day. **CEG**
+and **VST** were charted for the first time, having sat on the heatmap since October 28 with no
+card behind them. **QUBT left the negative-gross-profit list** — its September quarter is the
+first with cost of revenue below revenue, by $0.428M. See [[quantum-computing-q3-fy26]].
+
+**HIVE would now fail that gate**, had it no card already. Its filed September gross profit is a
+**$24.7M loss**, once the $54.9M of depreciation it puts inside cost of sales is counted. Its
+existing Q1 FY27 card takes that depreciation back OUT of cost of revenue, which disagrees with
+the filing's own gross profit line — a contradiction recorded here and not yet fixed.
+
+Two other September quarters were filed and are **not** charted, and the reason is the chart's
+grammar rather than the companies. **MARA**'s total operating expenses are negative — a $421.9M
+mark-to-market gain on bitcoin sits inside operating costs, so operating income exceeds revenue.
+**IONQ** has a $433.1M operating loss under $563.1M of net income, produced by an $896.2M warrant
+revaluation; the profit layout draws the operating-expense flow backwards when operating profit
+is negative. Both cards stay a quarter behind and say so on their face.
+
 
 ## The original fourteen
 
@@ -81,16 +101,21 @@ company, not a gap in the data.
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
 `income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
-**61 of the 73 charts now carry a reported split**, and the 12 that do not each say on the card why.
+**64 of the 76 charts now carry a reported split**, and the 12 that do not each say on the card why.
 Visa is the only one of those 12 whose split exists but cannot be drawn: its categories are gross of
 client incentives and sum to a total it never reports — see [[visa-q4-fy26]].
 
-Those 11 are 6488, ARQQ, ASTS, CLSK, CRWV, HUT, INFQ, NU, SKHY, SMCI and XNDU. Most
+Those 11 are 6488, ARQQ, CLSK, CRWV, HUT, INFQ, NU, QUBT, SKHY, SMCI and XNDU. Most
 report one segment and disclose revenue by geography only. DDOG left this list on Nov 4, 2026:
 its geographic split was always filed and is now drawn -- see [[datadog-q3-fy26]]. GlobalWafers
 joined it the same day, publishing no quarterly breakdown at all -- see
 [[globalwafers-q2-fy26]]. NET left it on Nov 5, 2026 for the same reason DDOG did -- its
 geographic disaggregation foots to the dollar and is now drawn -- see [[cloudflare-q3-fy26]].
+**ASTS left it on Nov 9, 2026**, the third name to leave for that same reason: its product and
+service disaggregation is on the face of the statement and had simply never been fetched -- see
+[[ast-spacemobile-q3-fy26]]. **QUBT joined it the same day**, on its first card, reporting a
+single reportable segment and disaggregating costs but not revenue -- see
+[[quantum-computing-q3-fy26]].
 Three of the remaining eleven are worth naming:
 
 - **HUT** does report three segments — Compute $72.5M, Digital Infrastructure $33.0M, Power $5.5M —

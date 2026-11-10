@@ -3,30 +3,30 @@
  "company": "AST SpaceMobile",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 2993.7,
-   "fcf": -694.8,
-   "cash": 2288.3,
+   "label": "Q3 FY26",
+   "debt": 4118.7,
+   "fcf": -464.2,
+   "cash": 2798.9,
    "debt_parts": [
     {
      "label": "Current portion",
-     "value": 8.5
+     "value": 8.8
     },
     {
      "label": "Long-term debt",
-     "value": 2963.4
+     "value": 4083.7
     },
     {
      "label": "Current leases",
-     "value": 3.7
+     "value": 3.4
     },
     {
      "label": "Long-term leases",
-     "value": 18.1
+     "value": 22.8
     }
    ],
    "cash_parts": [
@@ -38,11 +38,11 @@
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": -97.2
+     "value": -169.3
     },
     {
      "label": "Capital expenditure",
-     "value": -597.6
+     "value": -295.0
     }
    ]
   }
