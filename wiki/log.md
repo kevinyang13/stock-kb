@@ -3196,3 +3196,16 @@ $503.4M of liquidity. No post-result EPS surprise on any of the four: the vendor
 endpoint returned HTTP 403 on every attempt, so each Sep '26 point is still the
 pre-announcement consensus. No new ownership donuts; the Jun 30 13F is still the latest
 published.
+
+Events calendar refreshed after the Nov 10 reports (`python3 quotes.py --events`). 62 ticker
+events written, 64 published dates dropped as more than 10 days old, 18 curated entries kept;
+80 events in all — 50 earnings, 12 ex-dividend, 9 macro, 5 Fed, 4 market holidays. Today's six
+filers are kept as past dates under `KEEP_PAST_DAYS`, so the Events page's default window is
+not blank behind today.
+
+Only one real movement in the feed: **CCJ's Oct 30 date aged out and PL appeared with Dec 10**.
+**VST still reads Nov 6 while its 10-Q was filed Nov 9** — unchanged from yesterday, and the
+source gives one date per field with no flag saying whether it is the next report or the last,
+so a stale date cannot be told from a current one without EDGAR. Ahead: XNDU Nov 11, then NBIS,
+CSCO, LUNR, NU, SPCE and XNET on Nov 12, PPI Nov 13, NVDA and HD Nov 17, FOMC minutes Nov 18,
+INTU Nov 19.

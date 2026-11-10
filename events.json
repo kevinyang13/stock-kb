@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-09T19:17:28",
- "generatedLabel": "Nov 09, 2026",
+ "generated": "2026-11-10T14:19:32",
+ "generatedLabel": "Nov 10, 2026",
  "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
  "events": [
   {
@@ -33,13 +33,6 @@
    "ticker": null,
    "title": "PCE (September)",
    "note": "8:30am ET — Personal Income and Outlays; Fed's preferred gauge",
-   "fav": false
-  },
-  {
-   "date": "2026-10-30",
-   "type": "earnings",
-   "ticker": "CCJ",
-   "title": "CCJ earnings",
    "fav": false
   },
   {
@@ -549,6 +542,13 @@
    "type": "earnings",
    "ticker": "AVGO",
    "title": "AVGO earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-12-10",
+   "type": "earnings",
+   "ticker": "PL",
+   "title": "PL earnings",
    "fav": false
   },
   {
