@@ -1,0 +1,42 @@
+{
+ "company": "Rigetti Computing",
+ "ticker": "RGTI",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 2,
+ "revenue": 1.41,
+ "revenue_yoy": -28,
+ "segments": [
+  {
+   "name": "Collaborative research & services",
+   "value": 1.26,
+   "yoy": -33,
+   "note": "90% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Access to quantum systems",
+   "value": 0.15,
+   "yoy": 186,
+   "note": "10% of revenue",
+   "color": "#1b1b7a"
+  }
+ ],
+ "cost_of_revenue": 0.55,
+ "gross_profit": 0.86,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 25.5
+  },
+  {
+   "name": "SG&A",
+   "value": 8.55
+  }
+ ],
+ "net_loss": 3.14,
+ "other_income": 30.05
+}

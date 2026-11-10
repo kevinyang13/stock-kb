@@ -1,0 +1,42 @@
+{
+ "company": "Firefly Aerospace",
+ "ticker": "FLY",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 110.7,
+ "revenue_yoy": 260,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 110.7,
+   "yoy": 260,
+   "note": "split is in the 10-Q, not yet filed",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 85.4,
+ "gross_profit": 25.3,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 76.0
+  },
+  {
+   "name": "SG&A",
+   "value": 50.9
+  }
+ ],
+ "net_loss": 94.2,
+ "other_income": 7.4,
+ "cor_label": {
+  "dx": -0.04,
+  "anchor": "right"
+ },
+ "loss_label": {
+  "dx": -0.1
+ }
+}

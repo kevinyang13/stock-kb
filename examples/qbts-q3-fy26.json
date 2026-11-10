@@ -1,0 +1,39 @@
+{
+ "company": "D-Wave Quantum",
+ "ticker": "QBTS",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 4.5,
+ "revenue_yoy": 21,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 4.5,
+   "yoy": 21,
+   "note": "split is in the 10-Q, not yet filed",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 2.1,
+ "gross_profit": 2.4,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 31.5
+  },
+  {
+   "name": "General & administrative",
+   "value": 13.1
+  },
+  {
+   "name": "Sales & marketing",
+   "value": 11.2
+  }
+ ],
+ "net_loss": 48.2,
+ "other_income": 5.2
+}

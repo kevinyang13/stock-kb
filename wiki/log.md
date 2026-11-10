@@ -3130,3 +3130,69 @@ the last one, so a wrong date like this cannot be detected from the feed alone; 
 SNDK, MU, META and TSLA have dropped off the calendar entirely: their last reported dates have
 aged past the 10-day window and no next date has been published. That is the rule working, not
 data loss. Ahead: CRWV Nov 10, NBIS Nov 12, NVDA Nov 17, INTU Nov 19.
+
+## 2026-11-10 — Four cards on the day four more companies reported, and the same warrant trick three times
+
+Six watchlist names filed with the SEC on November 10, found by walking
+`data.sec.gov/submissions` for every ticker on the watchlist rather than trusting the events
+calendar: **CRWV, RGTI, QBTS, FLY, CAN and HQ**. (TSM's two 6-Ks the same day are its monthly
+revenue reports, not a quarter, and HIVE's 8-K follows the 10-Q it filed on the 9th.) The
+EDGAR daily-index route returned 403 and the per-ticker submissions endpoint was used instead.
+
+Four cards rebuilt from Q2 FY26 to **Q3 FY26**: [[coreweave-q3-fy26]], [[rigetti-q3-fy26]],
+[[d-wave-quantum-q3-fy26]] and [[firefly-aerospace-q3-fy26]]. Only Rigetti filed a full 10-Q;
+the other three filed by Form 8-K after the close, so their figures come from exhibit 99.1.
+All four are loss layout, all four validated with no warnings.
+
+**Three of the four tell the same misleading story at the net line.** Rigetti's net loss fell
+from $201.0M to $3.1M, D-Wave's from $140.0M to $48.2M, Firefly's from $133.4M to $94.2M — and
+all three operating losses got *worse*, by 62%, 93% and 63%. What shrank in each case is a
+prior-year non-cash warrant charge that is simply no longer there. Rigetti is the starkest:
+revenue also **fell 28%** and it sold no quantum computers at all, while a $25.3M warrant gain
+plus $4.8M of interest income covered 91% of a $33.2M operating loss. Recorded as a table in
+[[favorites-financials]] rather than three times over.
+
+**CoreWeave is the mirror image.** Operating income turned positive for the first time the card
+has shown — $207M on a 6% margin, against a $49M operating loss in Q2 — while the net loss
+widened to $709M. The gap is $846M of net interest expense, and Q4 interest is guided higher
+still at $1.05–1.15B. Revenue grew more than $1B sequentially to $3,661M; backlog is about
+$132.5B against roughly $104B three months ago.
+
+CoreWeave's **68% gross margin is derived and not comparable.** The company publishes no gross
+profit line at all; cost of revenue is one of four items inside total operating expenses.
+Technology and infrastructure — $2,025M, 55% of revenue — is the cost of running the fleet and
+sits outside cost of revenue. Counted above the line the margin is 12%. Same shape as IREN's
+"exclusive of D&A", and now stated on the card.
+
+**Both exclusion gates were re-tested and both held.** Canaan's gross loss narrowed to US$8.6M
+from US$29.3M but is still a gross loss; Horizon Quantum reported zero revenue for the quarter
+and the nine months. Neither crossed, unlike QUBT the day before.
+
+**Two cards lost their segment split, and the reason is timing, not disclosure.** QBTS and FLY
+both publish a split in their 10-Qs, and neither 10-Q was filed on the day. D-Wave's release
+gives changes rather than levels (+$1.5M professional services, +$0.8M QCaaS, −$1.5M systems),
+which cannot be turned into this quarter's split without the prior-year figures; Firefly's
+gives no breakdown. Both cards say so on their face and both should regain the split when the
+10-Qs land. The split count on the Financials tab goes from 64 of 76 to **62 of 76** — counted
+against the spec files, not by arithmetic, which also corrected the dividend-payer count from a
+stale 28 of 72 to 31 of 76.
+
+**Rigetti is drawn at two decimals**, the first card to be. At one decimal its $0.857M of gross
+profit rounds to $0.9M against $1.4M of revenue and the chart reads 64% margin against the
+filed 61% — the small-cap rounding trap in the `income-statement-chart` skill, hit for real.
+
+**Second card in two days to need the sankey label overrides.** Firefly's cost-of-revenue bar
+is 67% of the tallest column and both the "Cost of revenue" and "Net loss" labels landed on it;
+`cor_label` and `loss_label` offsets fixed it, defaults unchanged for every other card. Rocket
+Lab needed the same thing on the 9th. Two in two days says the offsets want computing from the
+settled node height rather than nudging per card — logged against [[sankey-income-statement]],
+not fixed.
+
+**Three gaps, all stated on the cards rather than filled.** No debt chart for CRWV, RGTI or
+FLY: `bin/debtfetch.py` found no September 30 balance-sheet column at the vendor, the nearest
+being June 30, because all three filed after the close. QBTS got one — it reported before the
+open — and its $279.4M of cash and $224.0M of marketable securities reconcile to the filing's
+$503.4M of liquidity. No post-result EPS surprise on any of the four: the vendor's earnings
+endpoint returned HTTP 403 on every attempt, so each Sep '26 point is still the
+pre-announcement consensus. No new ownership donuts; the Jun 30 13F is still the latest
+published.

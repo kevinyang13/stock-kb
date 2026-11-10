@@ -1,0 +1,44 @@
+{
+ "company": "CoreWeave",
+ "ticker": "CRWV",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 3661.0,
+ "revenue_yoy": 168,
+ "segments": [
+  {
+   "name": "Total revenue",
+   "value": 3661.0,
+   "yoy": 168,
+   "note": "geography only; no segment split",
+   "color": "#e8502a"
+  }
+ ],
+ "cost_of_revenue": 1183.0,
+ "gross_profit": 2478.0,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "Technology & infrastructure",
+   "value": 2025.0
+  },
+  {
+   "name": "General & administrative",
+   "value": 188.0
+  },
+  {
+   "name": "Sales & marketing",
+   "value": 58.0
+  }
+ ],
+ "net_loss": 709.0,
+ "below_line": [
+  {
+   "name": "Non-operating & tax, net",
+   "value": 916.0
+  }
+ ]
+}

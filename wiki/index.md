@@ -36,7 +36,7 @@ Table of contents for this knowledge base. One line per page.
 
 - [[earnings-surprise-chart]] — the actual-vs-estimate EPS dots on each Financials card: where the figures come from, and why they are not the EPS the income statement beside them is built from.
 - [[share-ownership-donut]] — the "Who owns the shares" chart on each Financials card: four slices of the whole share count, the five largest holders named on hover from their own 13F, and why the slice sizes and the holder names have to come from different sources.
-- [[favorites-financials]] — index of the 76 income statement charts on the Financials tab, which of them carry a reported revenue segment split (64 do) and the data caveats that apply to them.
+- [[favorites-financials]] — index of the 76 income statement charts on the Financials tab, which of them carry a reported revenue segment split (62 do) and the data caveats that apply to them.
 - [[apple-fq4-fy26]] — Apple fiscal Q4 2026: a record $114,477M September quarter (+12% Y/Y) at a 47.9% gross margin, but operating margin slipped as R&D grew 32%; Greater China was the fastest-growing region at +21%.
 - [[amd-q3-fy26]] — AMD Q3 2026: $13,377M revenue (+45% Y/Y) with Data Center up 97% to $8,546M, a 54% GAAP gross margin that three sources would each quote differently, a $1,097M customer-warrant charge below the operating line and a $555M income tax benefit.
 - [[super-micro-fq1-fy27]] — Super Micro fiscal Q1 2027: $19,946M of net sales (+298% Y/Y) on a 12.7% gross margin that fell 480bp in a quarter, operating expenses of just 2.4% of revenue, and figures the company itself labels preliminary and unaudited.
@@ -49,7 +49,7 @@ Table of contents for this knowledge base. One line per page.
 - [[hut-8-q3-fy26]] — Hut 8 Q3 2026: $71.1M revenue (−15% Y/Y) and $189.5M of net income that is a $413.8M digital-asset mark booked *inside* operating expenses — which is why its Financials card still shows Q2 and cannot be redrawn.
 - [[centrus-q3-fy26]] — Centrus Energy Q3 2026: $55.5M revenue (−26% Y/Y) and a $10.6M **gross loss**, the one gate no card can work around; $31.6M of net income is a warrant mark, and the DOE has signalled it will not fund $0.8B of the backlog.
 - [[palantir-q3-fy26]] — Palantir Q3 2026: $2,313M revenue (+96% Y/Y), U.S. commercial revenue passing U.S. government for the first time, and a net margin above operating margin on interest income and a 1.2% tax rate.
-- [[coreweave-q2-fy26]] — CoreWeave Q2 2026: $2,575M revenue (+112% Y/Y), 66% gross margin, a $49M operating loss and a $626M net loss driven by financing cost.
+- [[coreweave-q2-fy26]] — CoreWeave Q2 2026: $2,575M revenue (+112% Y/Y), 66% gross margin, a $49M operating loss and a $626M net loss driven by financing cost. Superseded on the Financials tab by [[coreweave-q3-fy26]].
 - [[nebius-q2-fy26]] — Nebius Group Q2 2026: $582.3M revenue (+454% Y/Y) at a 77% gross margin, a $190.4M net loss that is almost all depreciation and interest, and capex running at eight times revenue.
 - [[visa-q4-fy26]] — Visa fiscal Q4 2026: $12,139M of net revenue (+13% Y/Y) with no cost of revenue at all, a 60% operating margin, and $5,123M of client incentives netted out of revenue before the statement starts.
 - [[vertiv-q2-fy26]] — Vertiv Holdings Q2 2026: $3,274.3M of net sales (+24% Y/Y) at a 38% gross margin, growth that is almost entirely the Americas, and the last quarter filed before the Oct 28, 2026 Q3 release.
@@ -74,6 +74,10 @@ Table of contents for this knowledge base. One line per page.
 - [[constellation-energy-q3-fy26]] — Constellation Energy Q3 2026: $9,550M revenue (+45% Y/Y) and $1,835M of net income, but 64% of the revenue increase is non-contract revenue; first CEG card, no filed gross profit line, and a $12M asset-sale gain the vendor leaves out of the operating result.
 - [[vistra-q3-fy26]] — Vistra Q3 2026: $6,347M revenue (+28% Y/Y) and $1,140M of net income; the vendor reports $1,975M of operating income against the filing's $1,706M, the difference being a $269M impairment, and the segment table overstates revenue by 52% on intersegment sales.
 - [[quantum-computing-q3-fy26]] — Quantum Computing Inc Q3 2026: $9.5M revenue against $9.1M of cost of revenue — the first quarter with positive gross profit, so the first QUBT card; interest income is thirty times gross profit and the nine-month gross line is still negative.
+- [[coreweave-q3-fy26]] — CoreWeave Q3 2026: $3,661M revenue (+168% Y/Y) and the first positive operating quarter, $207M; the $709M net loss is financing, and the 68% gross margin is derived because technology & infrastructure — 55% of revenue — sits outside cost of revenue.
+- [[rigetti-q3-fy26]] — Rigetti Q3 2026: revenue **fell** 28% to $1.41M with no system sales at all, the operating loss widened to $33.2M, and the $3.1M net loss is a $25.3M warrant gain absorbing it; basic EPS $(0.01) against diluted $(0.08).
+- [[d-wave-quantum-q3-fy26]] — D-Wave Q3 2026: $4.5M revenue (+21% Y/Y) at a gross margin down 18 points to 52.9%, an operating loss that nearly doubled to $53.5M, and nine-month revenue down 52% against bookings up 611%.
+- [[firefly-aerospace-q3-fy26]] — Firefly Aerospace Q3 2026: $110.7M revenue (+260% Y/Y) at a 23% gross margin, an operating loss widened to $101.6M, and a record $1.7B backlog; the second card to need the sankey label overrides.
 
 ## Pages referenced but not yet written
 

@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-09T19:10:00-08:00",
- "generatedLabel": "Nov 9, 2026",
+ "generated": "2026-11-10T14:40:00-08:00",
+ "generatedLabel": "Nov 10, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -40,8 +40,8 @@
     },
     {
      "k": "P/E",
-     "v": "25.3 · 16.6",
-     "s": "trailing · forward"
+     "v": "25.3 \u00b7 16.6",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -52,7 +52,7 @@
    "notes": [
     "Segments: Data Center $89.0B, Edge Computing $7.2B",
     "Revenue more than doubled year over year and operating margin is 66%.",
-    "Operating expenses are $8.4B — under 9% of revenue — so almost all gross profit reaches operating profit.",
+    "Operating expenses are $8.4B \u2014 under 9% of revenue \u2014 so almost all gross profit reaches operating profit.",
     "$7.8B of interest and other income sits above the tax line, on top of the operating result.",
     "Debt and coverage, Q2 FY27: $38.9B of debt against $22.4B of cash and $21.4B of free cash flow for the quarter. Net debt $16.4B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $2.22 actual against $2.09 expected, beat by $0.13 (+6%). Oct '26 consensus is $2.49 from 13 analysts, due Nov 18, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
@@ -102,8 +102,8 @@
     },
     {
      "k": "P/E",
-     "v": "13.6 · 17.1",
-     "s": "trailing · forward"
+     "v": "13.6 \u00b7 17.1",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -172,8 +172,8 @@
     },
     {
      "k": "P/E",
-     "v": "15.0 · 20.9",
-     "s": "trailing · forward"
+     "v": "15.0 \u00b7 20.9",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -235,8 +235,8 @@
     },
     {
      "k": "P/E",
-     "v": "10.7 · 4.5",
-     "s": "trailing · forward"
+     "v": "10.7 \u00b7 4.5",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -247,7 +247,7 @@
    "notes": [
     "Segments: Core Data Center $18.0B, Cloud Memory $16.3B, Mobile & Client $13.1B, Automotive & Embedded $6.8B",
     "Core Data Center is the swing factor: $18.0B, up 1,041% Y/Y, now a third of revenue.",
-    "Cost of revenue is only $7.2B of $54.2B — an 87% gross margin, extraordinary for a memory maker.",
+    "Cost of revenue is only $7.2B of $54.2B \u2014 an 87% gross margin, extraordinary for a memory maker.",
     "The only chart here with a real segment split, taken from the 8-K's business unit table.",
     "Full fiscal year 2026: $133.19B revenue and $84.97B net income.",
     "Debt and coverage, FQ4 FY26: $5.2B of debt against $38.4B of cash and $32.9B of free cash flow for the quarter. Net debt -$33.2B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
@@ -297,8 +297,8 @@
     },
     {
      "k": "P/E",
-     "v": "8.3 · 4.2",
-     "s": "trailing · forward"
+     "v": "8.3 \u00b7 4.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -365,8 +365,8 @@
     },
     {
      "k": "P/E",
-     "v": "26.6 · 18.9",
-     "s": "trailing · forward"
+     "v": "26.6 \u00b7 18.9",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -426,8 +426,8 @@
     },
     {
      "k": "P/E",
-     "v": "28.6 · 28.3",
-     "s": "trailing · forward"
+     "v": "28.6 \u00b7 28.3",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -436,15 +436,15 @@
     }
    ],
    "notes": [
-    "THIS IS NOT THE LATEST QUARTER. GlobalWafers presented Q3 FY26 on November 3, 2026 · revenue about NT$14.9B (+2.6% Y/Y, -2.3% Q/Q), gross margin 20.0%, operating margin 9.8%, net margin 10.1%, EPS NT$3.13. Those are deck figures, not a full statement; Taiwan's filing deadline for the Q3 report is November 14, 2026, and this card is built on the last quarter that has one.",
-    "Net profit is NOT an operating result. $96.1M of non-operating income — more than twice operating profit — is mostly a mark on the company's Siltronic stake. Net margin 25% against an operating margin of 9%. The operating line is the one that describes the business.",
+    "THIS IS NOT THE LATEST QUARTER. GlobalWafers presented Q3 FY26 on November 3, 2026 \u00b7 revenue about NT$14.9B (+2.6% Y/Y, -2.3% Q/Q), gross margin 20.0%, operating margin 9.8%, net margin 10.1%, EPS NT$3.13. Those are deck figures, not a full statement; Taiwan's filing deadline for the Q3 report is November 14, 2026, and this card is built on the last quarter that has one.",
+    "Net profit is NOT an operating result. $96.1M of non-operating income \u2014 more than twice operating profit \u2014 is mostly a mark on the company's Siltronic stake. Net margin 25% against an operating margin of 9%. The operating line is the one that describes the business.",
     "Filed in New Taiwan dollars and converted at USD/TWD 32.931 (Yahoo Finance TWD=X, November 4, 2026; open.er-api.com gave 32.824 the same day, a 0.3% spread). In the filed currency: revenue NT$15,214.3M, gross NT$3,140.4M, operating NT$1,422.8M, net NT$3,779.1M.",
     "The -5% Y/Y is measured in New Taiwan dollars, which is the basis the company reports on. Year-ago hover figures are the June 2025 quarter converted at the SAME rate, so the chart's comparison is constant-currency and no part of the change is exchange rate.",
     "No segment split: GlobalWafers publishes no quarterly revenue breakdown. Its Q3 deck describes record output at Sherman, Texas, record 12-inch SOI at its Missouri site and record shipments in Japan, without figures.",
-    "In the source, R&D plus SG&A exceed total operating expenses by NT$0.6M — a rounding artefact in the vendor's own data. At one decimal in USD it disappears; the bands sum exactly.",
+    "In the source, R&D plus SG&A exceed total operating expenses by NT$0.6M \u2014 a rounding artefact in the vendor's own data. At one decimal in USD it disappears; the bands sum exactly.",
     "A mid-July 2026 fire at the Novara plant in Italy is what held Q3 revenue down; management said the quarter would otherwise have grown by double digits sequentially. That sits in the NEXT card, not this one.",
-    "Debt and coverage, Q2 FY26: $2,192.7M of debt against $722.0M of cash and -$1.9M of free cash flow for the quarter. Net debt $1,470.7M. Converted at the same USD/TWD 32.931 as the income statement — in the filed currency, NT$72.2B of debt against NT$23.8B of cash. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com). The $1.432B GDR placed alongside the November 3 Q3 presentation is NOT in these bars; GlobalWafers said it left the company in a net cash position of NT$26.3B.",
-    "No earnings chart and no ownership donut. Both pipelines resolve a US listing, and TPEx 6488 is not one: `epsfetch` found nothing at the vendor's quote endpoint, and a Taipei Exchange share is not reported on Form 13F. Neither is a failure to work around — the data does not exist for this listing.",
+    "Debt and coverage, Q2 FY26: $2,192.7M of debt against $722.0M of cash and -$1.9M of free cash flow for the quarter. Net debt $1,470.7M. Converted at the same USD/TWD 32.931 as the income statement \u2014 in the filed currency, NT$72.2B of debt against NT$23.8B of cash. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com). The $1.432B GDR placed alongside the November 3 Q3 presentation is NOT in these bars; GlobalWafers said it left the company in a net cash position of NT$26.3B.",
+    "No earnings chart and no ownership donut. Both pipelines resolve a US listing, and TPEx 6488 is not one: `epsfetch` found nothing at the vendor's quote endpoint, and a Taipei Exchange share is not reported on Form 13F. Neither is a failure to work around \u2014 the data does not exist for this listing.",
     "Market figures as of Nov 4, 2026: market cap NT$281.61B, P/E 28.6 trailing, 28.3 forward; dividend NT$7.70 a year, 1.31% yield, last ex-dividend Dec 29, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "TPEx 6488 is a Taipei Exchange listing, not a US one. There is no SEC filing behind this card and no US ADR quoted alongside it."
    ]
@@ -486,8 +486,8 @@
     },
     {
      "k": "P/E",
-     "v": "423.3 · 180.2",
-     "s": "trailing · forward"
+     "v": "423.3 \u00b7 180.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -547,8 +547,8 @@
     },
     {
      "k": "P/E",
-     "v": "21.7 · 15.0",
-     "s": "trailing · forward"
+     "v": "21.7 \u00b7 15.0",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -558,10 +558,10 @@
    ],
    "notes": [
     "Segments: Global Business Solutions $3,424M, Consumer $930M",
-    "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M — 61% of revenue.",
+    "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M \u2014 61% of revenue.",
     "Selling, marketing and G&A alone is $1,655M, 38% of revenue.",
     "Net profit is less than half of operating profit: $228M of net interest and other expense sits below the operating line, then $177M of tax.",
-    "Seasonality matters for Intuit — the fiscal fourth quarter is not its tax-season peak.",
+    "Seasonality matters for Intuit \u2014 the fiscal fourth quarter is not its tax-season peak.",
     "Debt and coverage, FQ4 FY26: $8.4B of debt against $4.7B of cash and $1.3B of free cash flow for the quarter. Net debt $3.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $2.17 actual against $2.12 expected, beat by $0.05 (+2%). Oct '26 consensus is $2.47 from 9 analysts, due Nov 19, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
     "Market figures as of Nov 4, 2026: market cap $95.31B, P/E 21.7 trailing, 15.0 forward; dividend $5.52 a year, 1.55% yield, last ex-dividend Oct 8, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
@@ -609,8 +609,8 @@
     },
     {
      "k": "P/E",
-     "v": "6.2 · 5.7",
-     "s": "trailing · forward"
+     "v": "6.2 \u00b7 5.7",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -673,8 +673,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -736,8 +736,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -796,8 +796,8 @@
     },
     {
      "k": "P/E",
-     "v": "29.0 · 26.8",
-     "s": "trailing · forward"
+     "v": "29.0 \u00b7 26.8",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -857,8 +857,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 45.0",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 45.0",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -868,8 +868,8 @@
    ],
    "notes": [
     "Segments: Super Intelligence $7,600M, Connectivity (Starlink) $5,250M, Space $1,770M",
-    "Net profit exceeds pretax income because the tax line is a $390M benefit, not an expense — the only statement here with that shape, and the reason the chart shows a green Tax benefit flowing into net profit.",
-    "R&D is $3,574M, 25% of revenue. Capex was roughly $19.6B in the quarter, mostly AI infrastructure — more than revenue, and not visible on an income statement.",
+    "Net profit exceeds pretax income because the tax line is a $390M benefit, not an expense \u2014 the only statement here with that shape, and the reason the chart shows a green Tax benefit flowing into net profit.",
+    "R&D is $3,574M, 25% of revenue. Capex was roughly $19.6B in the quarter, mostly AI infrastructure \u2014 more than revenue, and not visible on an income statement.",
     "The App Economy Insights reference chart for this quarter shows operating profit of $2.8B and R&D of $4.6B. The filed figures used here are $4,019M and $3,574M. The segment split matches between the two.",
     "Debt and coverage, Q3 FY26: $39.2B of debt against $51.3B of cash and -$10.0B of free cash flow for the quarter. Net debt -$12.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, two reported quarters and the one ahead. Sep '26: $0.35 actual against $0.10 expected, a gap the two figures cannot be compared across -- see below. Dec '26 consensus is $0.28 from 9 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Sep '26 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
@@ -918,8 +918,8 @@
     },
     {
      "k": "P/E",
-     "v": "21.5 · 19.1",
-     "s": "trailing · forward"
+     "v": "21.5 \u00b7 19.1",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -930,7 +930,7 @@
    "notes": [
     "Segments: Advertising $63,061M, Other (Family of Apps) $1,097M, Reality Labs $443M",
     "Reality Labs earned $443M and lost $4,129M at the operating line. Family of Apps made $17,117M, so Reality Labs consumes about a quarter of it.",
-    "R&D is $20,054M — 31% of revenue, and more than Meta's entire operating profit.",
+    "R&D is $20,054M \u2014 31% of revenue, and more than Meta's entire operating profit.",
     "Operating profit here is the filed $12,988M. stockanalysis.com shows $22,878M because it places a $9,890M operating charge below the line; this chart follows the 8-K, where revenue less all costs gives $12,988M.",
     "Debt and coverage, Q3 FY26: $114.8B of debt against $11.2B of cash and -$1.2B of free cash flow for the quarter. Net debt $103.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $7.40 actual against $6.52 expected, beat by $0.88 (+14%). Dec '26 consensus is $8.16 from 11 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
@@ -945,42 +945,42 @@
   {
    "t": "CRWV",
    "company": "CoreWeave",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/CRWV-Q2-FY26.png",
-   "source": "CoreWeave Q2 2026 results, investor relations",
-   "sourceUrl": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 10, 2026",
+   "img": "assets/financials/CRWV-Q3-FY26.png",
+   "source": "CoreWeave Q3 2026 results, Form 8-K exhibit 99.1, filed November 10, 2026 (SEC accession 0001769628-26-000461)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$2,575M",
-     "s": "+112% Y/Y"
+     "v": "$3,661M",
+     "s": "+168% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "66%",
-     "s": "$1,696M"
+     "v": "68%",
+     "s": "$2,478M, derived"
     },
     {
-     "k": "Operating loss",
-     "v": "($49M)",
-     "s": "(2%) margin"
+     "k": "Operating income",
+     "v": "$207M",
+     "s": "6% margin, positive"
     },
     {
      "k": "Net loss",
-     "v": "($626M)",
-     "s": "(24%) margin"
+     "v": "($709M)",
+     "s": "(19%) margin"
     },
     {
      "k": "Market cap",
-     "v": "$26.69B",
+     "v": "$26.32B",
      "s": "moves with the share price"
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -990,17 +990,20 @@
    ],
    "notes": [
     "No segment split: CoreWeave discloses revenue by geography only; no product or segment split.",
-    "Loss layout. Gross profit $1,696M + net loss $626M = $2,322M of charges, which balances exactly.",
-    "The operating loss is only $49M. The net loss is $626M — the gap is financing, with interest and other netting to $515M.",
-    "Technology & infrastructure alone is $1,507M, 59% of revenue.",
-    "Revenue backlog was roughly $104B at June 30; FY26 guidance is $12.4-13.2B revenue against $35-39B of capex.",
-    "Debt and coverage, Q2 FY26: $51.6B of debt against $5.5B of cash and -$5.7B of free cash flow for the quarter. Net debt $46.1B. Debt and cash are the Jun 30, 2026 balance sheet; free cash flow is that quarter's operating cash flow less capex (source: stockanalysis.com). The debt figure is the reported total, which includes $16.5B of lease obligations.",
+    "Loss layout. Gross profit $2,478M + net loss $709M = $3,187M of charges, which balances exactly.",
+    "CoreWeave reports no gross profit line. Cost of revenue of $1,183M is one of four lines inside total operating expenses of $3,454M, so the $2,478M gross profit and the 68% margin on this card are derived, not reported (source: Form 8-K exhibit 99.1, Nov 10, 2026).",
+    "That 68% margin is not comparable with the other cards. Technology & infrastructure -- $2,025M, 55% of revenue -- is the cost of running the fleet and sits outside cost of revenue. Counted above the line it would leave a 12% gross margin.",
+    "Operating income was POSITIVE this quarter, $207M on a 6% margin, against a $49M operating loss in Q2. The $709M net loss is financing: interest expense, net was $846M against $13M of other income, and tax took a further $83M.",
+    "Revenue grew more than $1B sequentially, from $2,575M in Q2 FY26 to $3,661M. Revenue backlog was approximately $132.5B at Sep 30, against roughly $104B at Jun 30.",
+    "Guidance was raised: FY26 revenue to $13.0-13.3B, FY26 adjusted operating income to $1.275-1.375B, and exit-2026 annualised run-rate revenue to $20-21B. FY26 capex is now $37-39B. Q4 interest expense is guided to $1.05-1.15B, more than this quarter's $846M.",
+    "Diluted EPS was $(1.27) on 559 million weighted-average shares. Figures are in millions as the company reports them.",
+    "Market figures as of Nov 10, 2026: market cap $26.32B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$1.32 actual against -$1.52 expected, beat by $0.20 (+13%). Sep '26 consensus is -$1.45 from 10 analysts, due Nov 10, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $26.69B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "No post-result earnings surprise: the Sep '26 point on the earnings chart is still the pre-announcement consensus, not the actual. The refresh was attempted today and the vendor's endpoint returned HTTP 403 for all four names that reported, so the series still ends at the Jun '26 quarter read on Oct 29, 2026.",
+    "No debt chart this quarter. bin/debtfetch.py matches the balance-sheet column to the period the card covers, and the vendor has no Sep 30, 2026 column yet -- the nearest is Jun 30, 92 days away. The company filed after the close today, so the vendor has not ingested it. Rather than show a Jun 30 balance sheet beside a Sep 30 income statement, the chart is left off until the column appears.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published, and so one quarter behind the income statement beside it. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
-   "debt": "CRWV-debt",
    "eps": "CRWV-eps",
    "own": "CRWV-own"
   },
@@ -1036,29 +1039,29 @@
     },
     {
      "k": "Market cap",
-     "v": "¥10.09T",
+     "v": "\u00a510.09T",
      "s": "in JPY, the listing's own currency"
     },
     {
      "k": "P/E",
-     "v": "21.4 · 28.8",
-     "s": "trailing · forward"
+     "v": "21.4 \u00b7 28.8",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
      "v": "1.85%",
-     "s": "¥162.00 a year"
+     "s": "\u00a5162.00 a year"
     }
    ],
    "notes": [
     "Segments: Dedicated video game platform $3,079M, IP related income etc. $222M",
     "Converted from yen at USD/JPY 156.87 as of Oct 23, 2026 (CNBC 156.86, IBKR IDEALPRO 156.8675). Nintendo files in yen; every figure here is derived, and the conversion moves with the rate.",
-    "In the filed currency: revenue ¥517.8B, gross ¥281.4B, operating ¥142.6B, net ¥147.4B.",
+    "In the filed currency: revenue \u00a5517.8B, gross \u00a5281.4B, operating \u00a5142.6B, net \u00a5147.4B.",
     "Revenue fell 10% but operating profit rose about 150%. Switch 2 shipped 3.82M units, down 34% against the launch quarter a year earlier, while the IP business more than doubled on the Super Mario Galaxy film.",
     "Net profit exceeds operating profit: $405M of non-operating income sits below the line, which for Nintendo is mostly FX and interest on its cash. Cost of sales also absorbed roughly $300M of IEEPA tariff refunds.",
     "Nintendo does not break R&D out of SG&A, so operating expenses appear as a single line.",
     "No debt and coverage chart: Nintendo publishes no quarterly cash flow statement, so there is no free cash flow figure for this quarter to set the balance sheet against.",
-    "Market figures as of Nov 4, 2026: market cap ¥10.09T, P/E 21.4 trailing, 28.8 forward; dividend ¥162.00 a year, 1.85% yield, last ex-dividend Sep 29, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+    "Market figures as of Nov 4, 2026: market cap \u00a510.09T, P/E 21.4 trailing, 28.8 forward; dividend \u00a5162.00 a year, 1.85% yield, last ex-dividend Sep 29, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ]
   },
   {
@@ -1098,8 +1101,8 @@
     },
     {
      "k": "P/E",
-     "v": "38.9 · 37.0",
-     "s": "trailing · forward"
+     "v": "38.9 \u00b7 37.0",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1161,8 +1164,8 @@
     },
     {
      "k": "P/E",
-     "v": "13.9 · 9.3",
-     "s": "trailing · forward"
+     "v": "13.9 \u00b7 9.3",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1220,8 +1223,8 @@
     },
     {
      "k": "P/E",
-     "v": "105.9 · 34.8",
-     "s": "trailing · forward"
+     "v": "105.9 \u00b7 34.8",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1285,8 +1288,8 @@
     },
     {
      "k": "P/E",
-     "v": "21.5 · 26.9",
-     "s": "trailing · forward"
+     "v": "21.5 \u00b7 26.9",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1343,8 +1346,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1373,22 +1376,22 @@
    "highlights": [
     {
      "k": "Revenue",
-     "v": "€11,662M",
+     "v": "\u20ac11,662M",
      "s": "+55% Y/Y"
     },
     {
      "k": "Gross margin",
      "v": "57%",
-     "s": "€6,700M"
+     "s": "\u20ac6,700M"
     },
     {
      "k": "Operating margin",
      "v": "44%",
-     "s": "€5,173M"
+     "s": "\u20ac5,173M"
     },
     {
      "k": "Net profit",
-     "v": "€4,960M",
+     "v": "\u20ac4,960M",
      "s": "43% margin"
     },
     {
@@ -1398,8 +1401,8 @@
     },
     {
      "k": "P/E",
-     "v": "38.1 · 23.4",
-     "s": "trailing · forward"
+     "v": "38.1 \u00b7 23.4",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1408,10 +1411,10 @@
     }
    ],
    "notes": [
-    "Segments: Systems €8,373M (+51%), Services and Field Option €3,289M (+68%). Source: stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws.",
+    "Segments: Systems \u20ac8,373M (+51%), Services and Field Option \u20ac3,289M (+68%). Source: stockanalysis.com revenue-by-segment data for the quarter, checked against the revenue the chart draws.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Reported in €. Margins compare with the other statements here; the absolute figures do not.",
-    "Debt and coverage, Q3 FY26: €2.0B of debt against €8.0B of cash and €11.4B of free cash flow for the quarter. Net debt -€6.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Reported in \u20ac. Margins compare with the other statements here; the absolute figures do not.",
+    "Debt and coverage, Q3 FY26: \u20ac2.0B of debt against \u20ac8.0B of cash and \u20ac11.4B of free cash flow for the quarter. Net debt -\u20ac6.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Sep '26: $14.89 actual against $12.47 expected, beat by $2.42 (+19%). Dec '26 consensus is $17.22 from 3 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
     "Market figures as of Nov 4, 2026: market cap $553.36B, P/E 38.1 trailing, 23.4 forward; dividend $7.91 a year, 0.53% yield, last ex-dividend Oct 27, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
@@ -1458,8 +1461,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1518,8 +1521,8 @@
     },
     {
      "k": "P/E",
-     "v": "41.5 · 18.7",
-     "s": "trailing · forward"
+     "v": "41.5 \u00b7 18.7",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1577,8 +1580,8 @@
     },
     {
      "k": "P/E",
-     "v": "19.1 · 244.2",
-     "s": "trailing · forward"
+     "v": "19.1 \u00b7 244.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1635,8 +1638,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1690,8 +1693,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1750,8 +1753,8 @@
     },
     {
      "k": "P/E",
-     "v": "40.2 · 20.7",
-     "s": "trailing · forward"
+     "v": "40.2 \u00b7 20.7",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1817,8 +1820,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 104.3",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 104.3",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1880,8 +1883,8 @@
     },
     {
      "k": "P/E",
-     "v": "21.1 · 15.5",
-     "s": "trailing · forward"
+     "v": "21.1 \u00b7 15.5",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1939,8 +1942,8 @@
     },
     {
      "k": "P/E",
-     "v": "31.1 · 20.1",
-     "s": "trailing · forward"
+     "v": "31.1 \u00b7 20.1",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -1998,8 +2001,8 @@
     },
     {
      "k": "P/E",
-     "v": "263.4 · 68.2",
-     "s": "trailing · forward"
+     "v": "263.4 \u00b7 68.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2065,8 +2068,8 @@
     },
     {
      "k": "P/E",
-     "v": "21.7 · 13.2",
-     "s": "trailing · forward"
+     "v": "21.7 \u00b7 13.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2090,37 +2093,42 @@
   {
    "t": "FLY",
    "company": "Firefly Aerospace",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/FLY-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/fly/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 10, 2026",
+   "img": "assets/financials/FLY-Q3-FY26.png",
+   "source": "Firefly Aerospace Q3 2026 results, Form 8-K exhibit 99.1, filed November 10, 2026 (SEC accession 0001860160-26-000030)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1860160/000186016026000030/",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$118M",
-     "s": "+657% Y/Y"
+     "v": "$110.7M",
+     "s": "+260% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "20%",
-     "s": "$24M"
+     "v": "23%",
+     "s": "$25.3M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($101.6M)",
+     "s": "(92%) margin"
     },
     {
      "k": "Net loss",
-     "v": "($92M)",
-     "s": "(78%) margin"
+     "v": "($94.2M)",
+     "s": "(85%) margin"
     },
     {
      "k": "Market cap",
-     "v": "$2.87B",
+     "v": "$3.96B",
      "s": "moves with the share price"
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2129,16 +2137,20 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $24M + $92M balances against the charges on the right.",
-    "Segments: Spacecraft solutions $108.3M (from $9.2M a year ago), Launch services $9.4M (+48%). Source: Firefly Aerospace 10-Q, quarter ended Jun 30 2026, disaggregation.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $53.4M of debt against $459.8M of cash and -$106.3M of free cash flow for the quarter. Net debt -$406.4M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "No segment split on this card, and the reason is timing rather than disclosure. These figures are from the Nov 10 Form 8-K; the 10-Q, which carries the revenue disaggregation, has not been filed. The Q2 FY26 card's split -- spacecraft solutions and launch services -- came from that quarter's 10-Q, and this card will carry the equivalent once the Q3 one lands.",
+    "Loss layout with non-operating income as a second source: gross profit $25.3M + net loss $94.2M + non-operating income $7.4M = $126.9M of charges.",
+    "Revenue almost quadrupled, to $110.7M from $30.8M. Gross margin was 23%, against 28% a year ago -- gross profit grew three-fold while revenue grew nearly four-fold.",
+    "The net loss of $94.2M is smaller than the year-ago $133.4M, but the year-ago quarter carried a $42.2M warrant charge and a $30.4M loss on extinguishing debt. The operating loss is the honest comparison, and it widened: $101.6M against $62.2M. R&D rose to $76.0M from $48.8M and SG&A to $50.9M from $21.9M.",
+    "The $7.4M non-operating line is a $4.0M warrant gain, $4.5M of interest income and $0.6M of other income, less $1.6M of interest expense. Tax was a $42K charge.",
+    "Record backlog of $1.7B at quarter end, up from $1.5B at the end of Q2.",
+    "EPS was $(0.56), basic and diluted, on 168,371,000 weighted-average shares. Unlike the year-ago quarter there is no preferred dividend accretion, so the net loss and the loss available to common are the same figure.",
+    "Market figures as of Nov 10, 2026: market cap $3.96B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.42 actual against -$0.50 expected, beat by $0.08 (+16%). Sep '26 consensus is -$0.60 from 2 analysts, due Nov 10, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $2.87B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "No post-result earnings surprise: the Sep '26 point on the earnings chart is still the pre-announcement consensus, not the actual. The refresh was attempted today and the vendor's endpoint returned HTTP 403 for all four names that reported, so the series still ends at the Jun '26 quarter read on Oct 29, 2026.",
+    "No debt chart this quarter. bin/debtfetch.py matches the balance-sheet column to the period the card covers, and the vendor has no Sep 30, 2026 column yet -- the nearest is Jun 30, 92 days away. The company filed after the close today, so the vendor has not ingested it. Rather than show a Jun 30 balance sheet beside a Sep 30 income statement, the chart is left off until the column appears.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published, and so one quarter behind the income statement beside it. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
-   "debt": "FLY-debt",
    "eps": "FLY-eps",
    "own": "FLY-own"
   },
@@ -2179,8 +2191,8 @@
     },
     {
      "k": "P/E",
-     "v": "38.0 · 37.1",
-     "s": "trailing · forward"
+     "v": "38.0 \u00b7 37.1",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2238,8 +2250,8 @@
     },
     {
      "k": "P/E",
-     "v": "24.9 · 23.1",
-     "s": "trailing · forward"
+     "v": "24.9 \u00b7 23.1",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2248,7 +2260,7 @@
     }
    ],
    "notes": [
-    "Segments: Hardlines $14.4B (+2%), Building Materials $14.4B (+1%), Décor $13.9B (+1%), Other $5.1B (+62%). Source: Home Depot 10-Q, quarter ended Aug 2 2026, net sales by segment.",
+    "Segments: Hardlines $14.4B (+2%), Building Materials $14.4B (+1%), D\u00e9cor $13.9B (+1%), Other $5.1B (+62%). Source: Home Depot 10-Q, quarter ended Aug 2 2026, net sales by segment.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
     "Debt and coverage, Q2 FY27: $63.2B of debt against $2.1B of cash and $4.5B of free cash flow for the quarter. Net debt $61.1B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $4.92 actual against $4.71 expected, beat by $0.21 (+4%). Oct '26 consensus is $3.86 from 11 analysts, due Nov 17, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
@@ -2292,8 +2304,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2348,8 +2360,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2409,8 +2421,8 @@
     },
     {
      "k": "P/E",
-     "v": "21.7 · 19.4",
-     "s": "trailing · forward"
+     "v": "21.7 \u00b7 19.4",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2463,8 +2475,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2523,8 +2535,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 41.9",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 41.9",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2581,8 +2593,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2636,8 +2648,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2697,8 +2709,8 @@
     },
     {
      "k": "P/E",
-     "v": "50.2 · 21.4",
-     "s": "trailing · forward"
+     "v": "50.2 \u00b7 21.4",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2762,8 +2774,8 @@
     },
     {
      "k": "P/E",
-     "v": "53.7 · 28.3",
-     "s": "trailing · forward"
+     "v": "53.7 \u00b7 28.3",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2816,8 +2828,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 11.6",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 11.6",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2877,8 +2889,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 165.7",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 165.7",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -2941,8 +2953,8 @@
     },
     {
      "k": "P/E",
-     "v": "19.2 · 18.5",
-     "s": "trailing · forward"
+     "v": "19.2 \u00b7 18.5",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3000,8 +3012,8 @@
     },
     {
      "k": "P/E",
-     "v": "78.3 · 24.0",
-     "s": "trailing · forward"
+     "v": "78.3 \u00b7 24.0",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3061,8 +3073,8 @@
     },
     {
      "k": "P/E",
-     "v": "16.3 · 12.3",
-     "s": "trailing · forward"
+     "v": "16.3 \u00b7 12.3",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3120,8 +3132,8 @@
     },
     {
      "k": "P/E",
-     "v": "19.4 · 14.5",
-     "s": "trailing · forward"
+     "v": "19.4 \u00b7 14.5",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3174,8 +3186,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3239,8 +3251,8 @@
     },
     {
      "k": "P/E",
-     "v": "14.5 · 14.7",
-     "s": "trailing · forward"
+     "v": "14.5 \u00b7 14.7",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3290,8 +3302,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3350,8 +3362,8 @@
     },
     {
      "k": "P/E",
-     "v": "121.0 · 76.2",
-     "s": "trailing · forward"
+     "v": "121.0 \u00b7 76.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3381,37 +3393,42 @@
   {
    "t": "QBTS",
    "company": "D-Wave Quantum",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/QBTS-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/qbts/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 10, 2026",
+   "img": "assets/financials/QBTS-Q3-FY26.png",
+   "source": "D-Wave Quantum Q3 2026 results, Form 8-K exhibit 99.1, filed November 10, 2026 (SEC accession 0001907982-26-000180)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1907982/000190798226000180/",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$3M",
-     "s": "-1% Y/Y"
+     "v": "$4.5M",
+     "s": "+21% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "67%",
-     "s": "$2M"
+     "v": "52.9%",
+     "s": "$2.4M, down from 71.4%"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($53.5M)",
+     "s": "nearly double last year"
     },
     {
      "k": "Net loss",
-     "v": "($48M)",
-     "s": "(1600%) margin"
+     "v": "($48.2M)",
+     "s": "(1071%) of revenue"
     },
     {
      "k": "Market cap",
-     "v": "$3.87B",
+     "v": "$3.90B",
      "s": "moves with the share price"
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3420,14 +3437,20 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $48M balances against the charges on the right.",
-    "Segments: QCaaS $1.9M (+50%), Professional services $0.9M (+18%), System sales $0.3M (-75%). Source: D-Wave 10-Q, quarter ended Jun 30 2026, disaggregation note.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $48.1M of debt against $296.6M of cash and -$32.9M of free cash flow for the quarter. Net debt -$248.5M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "No segment split on this card, and the reason is timing rather than disclosure. These figures are from the Nov 10 Form 8-K; the 10-Q has not been filed. The press release gives changes, not levels -- professional services +$1.5M, QCaaS +$0.8M, system sales -$1.5M -- and the prior-year levels needed to turn those into this quarter's split are not in it. The Q2 FY26 card did carry a split, taken from that quarter's 10-Q, and this one will once the Q3 10-Q lands.",
+    "Loss layout with non-operating income as a second source: gross profit $2.4M + net loss $48.2M + non-operating income $5.2M = $55.8M of operating expenses.",
+    "That $5.2M non-operating figure includes a $68K income tax BENEFIT alongside $4.9M of interest income, $0.9M of gains on marketable securities and $0.4M of net interest and other expense. The loss layout cannot draw a negative cost, so the benefit is folded into the non-operating source rather than shown as a tax charge.",
+    "Gross margin fell to 52.9% from 71.4% a year ago. The company attributes it to a revenue mix weighted to professional services, which carry a lower margin, plus $0.2M more stock-based compensation inside cost of revenue.",
+    "The net loss improved to $48.2M from $140.0M, but the $91.8M of that is almost entirely the absence of a warrant remeasurement -- the year-ago quarter carried a $121.9M non-cash charge, and the remaining public warrants were redeemed in November 2025. The operating loss nearly doubled over the same period, $27.7M to $53.5M.",
+    "Bookings were $1.9M in the quarter, down 19%, but $37.4M for the nine months, up 611%. Remaining performance obligations were $38.3M at Sep 30 against $2.9M a year earlier, with 59% expected to convert within 12 months. Cash and marketable securities were $503.4M.",
+    "D-Wave signed a definitive agreement with the US Department of Commerce for access to up to $100M of CHIPS and Science Act funding, released against milestones. None of it is in this quarter's figures.",
+    "EPS was $(0.13), basic and diluted, on 374,112,327 weighted-average shares.",
+    "Market figures as of Nov 10, 2026: market cap $3.90B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.13 actual against -$0.12 expected, missed by $0.01 (-8%). Sep '26 consensus is -$0.10 from 2 analysts, due Nov 10, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $3.87B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "No post-result earnings surprise: the Sep '26 point on the earnings chart is still the pre-announcement consensus, not the actual. The refresh was attempted today and the vendor's endpoint returned HTTP 403 for all four names that reported, so the series still ends at the Jun '26 quarter read on Oct 29, 2026.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published, and so one quarter behind the income statement beside it. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated.",
+    "Debt and coverage, Q3 FY26: $56.9M of debt against $279.4M of cash and -$43.0M of free cash flow for the quarter. Net debt -$222.5M. Debt and cash are the Sep 30, 2026 balance sheet; free cash flow is that quarter's operating cash flow less capex (source: stockanalysis.com). The $279.4M is cash and equivalents only; the filing's $503.4M of liquidity adds $224.0M of marketable investment securities, which the chart shows as a separate cash component."
    ],
    "debt": "QBTS-debt",
    "eps": "QBTS-eps",
@@ -3465,8 +3488,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3496,37 +3519,42 @@
   {
    "t": "RGTI",
    "company": "Rigetti Computing",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/RGTI-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/rgti/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "Nov 10, 2026",
+   "img": "assets/financials/RGTI-Q3-FY26.png",
+   "source": "Rigetti Computing 10-Q, quarter ended Sep 30, 2026, filed November 10, 2026 (SEC accession 0001104659-26-125161)",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1838359/000110465926125161/",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$5M",
-     "s": "+185% Y/Y"
+     "v": "$1.41M",
+     "s": "-28% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "40%",
-     "s": "$2M"
+     "v": "61%",
+     "s": "$0.86M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($33.19M)",
+     "s": "widened from $20.5M"
     },
     {
      "k": "Net loss",
-     "v": "($53M)",
-     "s": "(1060%) margin"
+     "v": "($3.14M)",
+     "s": "after a $25.3M warrant gain"
     },
     {
      "k": "Market cap",
-     "v": "$3.74B",
+     "v": "$4.02B",
      "s": "moves with the share price"
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3535,16 +3563,20 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $2M + $53M balances against the charges on the right.",
-    "Segments: Quantum computers & parts $4.1M, Research, services & access $1.0M (-42%). Source: Rigetti 10-Q, quarter ended Jun 30 2026, disaggregation note; the two service lines (research and professional services $952K, access to quantum systems $88K) are shown as one.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $7.7M of debt against $27.8M of cash and -$27.8M of free cash flow for the quarter. Net debt -$20.1M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Loss layout with non-operating income as a second source: gross profit $0.86M + net loss $3.14M + non-operating income $30.05M = $34.05M of operating expenses, which balances exactly.",
+    "Segments: collaborative research & professional services $1.265M (-33%), access to quantum computing systems $0.146M (+186%). The two foot to total revenue to the dollar. Source: Rigetti 10-Q, quarter ended Sep 30 2026, revenue disaggregation note.",
+    "Revenue FELL 28%, to $1.411M from $1.947M. Rigetti sold no quantum computers or components this quarter; the $7.144M of system sales in the nine-month column all landed in earlier quarters of 2026.",
+    "The net loss of $3.1M against $201.0M a year ago is not an operating improvement. A $25.3M non-cash gain on revaluing derivative warrant liabilities, plus $4.8M of interest income, covered almost the whole operating loss -- and the year-ago quarter carried a $182.0M warrant CHARGE. The operating loss is the honest comparison: it widened to $33.2M from $20.5M.",
+    "Basic EPS was $(0.01) and diluted $(0.08). The two differ because the warrant gain is reversed for the diluted calculation, which lifts the loss available to common stockholders to $28.4M. Basic weighted-average shares were 336,411,000.",
+    "No income tax expense or benefit this quarter, so the pretax loss and the net loss are the same figure.",
+    "Figures are shown in millions at two decimals: at one decimal the $0.857M gross profit rounds to $0.9M against $1.4M of revenue, which reads as a 64% margin rather than the filed 61%.",
+    "Market figures as of Nov 10, 2026: market cap $4.02B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.16 actual against -$0.06 expected, missed by $0.10 (-167%). Sep '26 consensus is -$0.07 from 3 analysts, due Nov 10, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $3.74B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "No post-result earnings surprise: the Sep '26 point on the earnings chart is still the pre-announcement consensus, not the actual. The refresh was attempted today and the vendor's endpoint returned HTTP 403 for all four names that reported, so the series still ends at the Jun '26 quarter read on Oct 29, 2026.",
+    "No debt chart this quarter. bin/debtfetch.py matches the balance-sheet column to the period the card covers, and the vendor has no Sep 30, 2026 column yet -- the nearest is Jun 30, 92 days away. The company filed after the close today, so the vendor has not ingested it. Rather than show a Jun 30 balance sheet beside a Sep 30 income statement, the chart is left off until the column appears.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published, and so one quarter behind the income statement beside it. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
-   "debt": "RGTI-debt",
    "eps": "RGTI-eps",
    "own": "RGTI-own"
   },
@@ -3580,8 +3612,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3640,8 +3672,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3675,22 +3707,22 @@
    "highlights": [
     {
      "k": "Revenue",
-     "v": "₩104.6T",
+     "v": "\u20a9104.6T",
      "s": "+328% Y/Y"
     },
     {
      "k": "Gross margin",
      "v": "86%",
-     "s": "₩89.7T"
+     "s": "\u20a989.7T"
     },
     {
      "k": "Operating margin",
      "v": "80%",
-     "s": "₩83.3T"
+     "s": "\u20a983.3T"
     },
     {
      "k": "Net profit",
-     "v": "₩39.8T",
+     "v": "\u20a939.8T",
      "s": "38% margin"
     },
     {
@@ -3700,8 +3732,8 @@
     },
     {
      "k": "P/E",
-     "v": "7.3 · 3.9",
-     "s": "trailing · forward"
+     "v": "7.3 \u00b7 3.9",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3712,11 +3744,11 @@
    "notes": [
     "Figures are in Korean won, as filed. SK hynix reports in Korea and files nothing with the SEC, so this card is built from the company's own 3Q26 results release rather than an EDGAR filing.",
     "No segment split: SK hynix does not break revenue out by segment in its quarterly release.",
-    "Revenue of ₩104.6T is up 328% year over year and operating profit up 632%, at an 80% operating margin -- the memory cycle, with HBM4 ramping (source: SK hynix 3Q26 release).",
-    "Net profit is less than half of operating profit. ₩32.6T of net non-operating expense sits between them: a ₩11.6T net foreign-exchange loss and a ₩22.9T valuation loss on investment assets. Neither describes the memory business, and the 38% net margin should be read against the 80% operating margin rather than on its own (source: SK hynix 3Q26 release).",
-    "The vendor publishes no R&D and SG&A split for this quarter, where it did for Q2 FY26, so the ₩6.3T of operating expenses is drawn as a single band rather than split (source: stockanalysis.com).",
+    "Revenue of \u20a9104.6T is up 328% year over year and operating profit up 632%, at an 80% operating margin -- the memory cycle, with HBM4 ramping (source: SK hynix 3Q26 release).",
+    "Net profit is less than half of operating profit. \u20a932.6T of net non-operating expense sits between them: a \u20a911.6T net foreign-exchange loss and a \u20a922.9T valuation loss on investment assets. Neither describes the memory business, and the 38% net margin should be read against the 80% operating margin rather than on its own (source: SK hynix 3Q26 release).",
+    "The vendor publishes no R&D and SG&A split for this quarter, where it did for Q2 FY26, so the \u20a96.3T of operating expenses is drawn as a single band rather than split (source: stockanalysis.com).",
     "SK hynix notes its 3Q26 results review was not finalised at the time of the release.",
-    "Debt and coverage, Q3 FY26: ₩15.8T of debt against ₩114.5T of cash and ₩42.1T of free cash flow for the quarter, so SK hynix is in a net cash position of ₩98.7T -- which matches the net cash figure in the company's own 3Q26 release. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com, cross-checked against the SK hynix 3Q26 release).",
+    "Debt and coverage, Q3 FY26: \u20a915.8T of debt against \u20a9114.5T of cash and \u20a942.1T of free cash flow for the quarter, so SK hynix is in a net cash position of \u20a998.7T -- which matches the net cash figure in the company's own 3Q26 release. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com, cross-checked against the SK hynix 3Q26 release).",
     "Earnings chart: reported EPS against the street's consensus, two reported quarters and the one ahead. Sep '26: $3.84 actual against $5.96 expected, missed by $2.12 (-36%). Dec '26 consensus is $8.19 from 6 analysts. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. The feed states no basis for either side of a pair, and it has handed back a GAAP actual against an adjusted consensus before, which turns the difference between them into an artefact rather than a result. Jun '26 cannot be shown to share a basis here, so that pair is drawn with a dotted join and no surprise figure is published for it. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 30, 2026.",
     "No ownership donut: SK hynix is a Korean listing with no price on or before the 13F period end, so no US manager's Form 13F names it and the slices cannot be built. This is inherent to the form, not a gap to fill.",
     "Market figures as of Nov 4, 2026: market cap $757.59B, P/E 7.3 trailing, 3.9 forward; dividend $0.03 a year, 0.02% yield, last ex-dividend Aug 31, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
@@ -3756,8 +3788,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · 115.3",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 115.3",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3816,8 +3848,8 @@
     },
     {
      "k": "P/E",
-     "v": "11.7 · 8.6",
-     "s": "trailing · forward"
+     "v": "11.7 \u00b7 8.6",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3870,8 +3902,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3930,8 +3962,8 @@
     },
     {
      "k": "P/E",
-     "v": "11.8 · 8.9",
-     "s": "trailing · forward"
+     "v": "11.8 \u00b7 8.9",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -3987,8 +4019,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4045,8 +4077,8 @@
     },
     {
      "k": "P/E",
-     "v": "861.4 · n/a",
-     "s": "trailing · forward"
+     "v": "861.4 \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4063,7 +4095,7 @@
     "Debt and coverage, Q2 FY26: $10.2B of debt against $8.0B of cash and -$3.4B of free cash flow for the quarter. Net debt $2.2B. Debt and cash are the Jun 30, 2026 balance sheet; free cash flow is that quarter's operating cash flow less capex (source: stockanalysis.com). Q2 capex of $5,657M reconciles with the 6-K's $8,130.3M first half.",
     "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.12 actual against -$0.67 expected, beat by $0.55 (+82%). Sep '26 consensus is -$0.43 from 5 analysts, due Nov 10, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
     "Market figures as of Nov 4, 2026: market cap $38.78B, P/E 861.4 trailing, n/a forward (no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
-    "Market figures as of Oct 26, 2026: trailing 933.1, forward n/a — no forward P/E: no positive forward estimate. Share price over earnings, so unlike the other figures on this card it moves every session and is not from the filing (source: stockanalysis.com).",
+    "Market figures as of Oct 26, 2026: trailing 933.1, forward n/a \u2014 no forward P/E: no positive forward estimate. Share price over earnings, so unlike the other figures on this card it moves every session and is not from the filing (source: stockanalysis.com).",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
     "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
    ],
@@ -4108,8 +4140,8 @@
     },
     {
      "k": "P/E",
-     "v": "35.4 · 29.1",
-     "s": "trailing · forward"
+     "v": "35.4 \u00b7 29.1",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4170,8 +4202,8 @@
     },
     {
      "k": "P/E",
-     "v": "38.4 · 22.2",
-     "s": "trailing · forward"
+     "v": "38.4 \u00b7 22.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4231,8 +4263,8 @@
     },
     {
      "k": "P/E",
-     "v": "21.8 · 35.9",
-     "s": "trailing · forward"
+     "v": "21.8 \u00b7 35.9",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4293,8 +4325,8 @@
     },
     {
      "k": "P/E",
-     "v": "n/a · n/a",
-     "s": "trailing · forward"
+     "v": "n/a \u00b7 n/a",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4357,8 +4389,8 @@
     },
     {
      "k": "P/E",
-     "v": "46.0 · 30.1",
-     "s": "trailing · forward"
+     "v": "46.0 \u00b7 30.1",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4415,8 +4447,8 @@
     },
     {
      "k": "P/E",
-     "v": "40.3 · 32.2",
-     "s": "trailing · forward"
+     "v": "40.3 \u00b7 32.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4473,8 +4505,8 @@
     },
     {
      "k": "P/E",
-     "v": "22.4 · 22.6",
-     "s": "trailing · forward"
+     "v": "22.4 \u00b7 22.6",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4535,8 +4567,8 @@
     },
     {
      "k": "P/E",
-     "v": "18.1 · 14.2",
-     "s": "trailing · forward"
+     "v": "18.1 \u00b7 14.2",
+     "s": "trailing \u00b7 forward"
     },
     {
      "k": "Dividend",
@@ -4561,5 +4593,5 @@
    "eps": "VST-eps"
   }
  ],
- "marketAsOf": "Nov 9, 2026"
+ "marketAsOf": "Nov 10, 2026"
 }

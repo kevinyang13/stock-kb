@@ -1,16 +1,16 @@
 # Watchlist Financials
 
-**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 72 statements, each the company's most recent reported quarter, plus Nintendo.
+**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 75 statements, each the company's most recent reported quarter, plus Nintendo, so 76 cards.
 
 **Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K, CoreWeave's results release and Nebius's 6-K exhibit 99.1 for those three.
 
-**Last updated**: 2026-10-26
+**Last updated**: 2026-11-10
 
 ---
 
 ## Coverage
 
-Of the 112 names on the watchlist, counted November 9, 2026:
+Of the 112 names on the watchlist, counted November 9, 2026 and re-checked November 10:
 
 | | Count | Why |
 |---|---|---|
@@ -33,6 +33,38 @@ first with cost of revenue below revenue, by $0.428M. See [[quantum-computing-q3
 **$24.7M loss**, once the $54.9M of depreciation it puts inside cost of sales is counted. Its
 existing Q1 FY27 card takes that depreciation back OUT of cost of revenue, which disagrees with
 the filing's own gross profit line — a contradiction recorded here and not yet fixed.
+
+**Both exclusion gates were re-tested on November 10, 2026**, when CAN and HQ filed their
+September quarters, and both names stay out. Canaan's gross loss narrowed to **US$8.6M** from
+US$29.3M in the June quarter, but a gross loss is a gross loss and there is no flow to draw.
+Horizon Quantum reported **zero revenue** for the quarter and for the nine months — its only
+revenue in either year was $38,462 in the 2025 nine-month column. Unlike QUBT the day before,
+neither crossed its gate.
+
+## Warrant accounting flattered three of the four November 10 cards
+
+CRWV, RGTI, QBTS and FLY all reported their September quarters on **November 10, 2026** and all
+four cards were rebuilt that day. Three of them share one shape, and it is worth stating once
+rather than three times:
+
+| | Operating loss, Y/Y | Net loss, Y/Y | What moved |
+|---|---|---|---|
+| RGTI | $20.5M → **$33.2M** worse | $201.0M → **$3.1M** better | warrant mark swung $207M |
+| QBTS | $27.7M → **$53.5M** worse | $140.0M → **$48.2M** better | $121.9M prior-year charge gone |
+| FLY | $62.2M → **$101.6M** worse | $133.4M → **$94.2M** better | $72.6M of prior-year charges gone |
+
+In each case the net line improved and the operating line got worse. The improvement is the
+absence of a prior-year non-cash charge, not progress in the business. **Read the operating
+line on these three cards.** Rigetti is the sharpest: its revenue also *fell* 28%.
+
+CoreWeave is the exception and the mirror image — its operating line turned positive for the
+first time while the net loss widened, because the gap between them is $846M of interest.
+
+All four are drawn with the **loss layout**, and three of the four needed non-operating income
+as a second source. That is the layout IonQ cannot use: its warrant gain was large enough to
+push net income positive under an operating loss, and the profit layout draws the operating
+expense flow backwards when operating profit is negative. The same accounting, one sign apart,
+is the difference between a card and no card.
 
 Two other September quarters were filed and are **not** charted, and the reason is the chart's
 grammar rather than the companies. **MARA**'s total operating expenses are negative — a $421.9M
@@ -95,17 +127,17 @@ writes them from stockanalysis.com's quote data and stamps the date on the card 
 
 A loss-maker has no meaningful trailing P/E and a company with no positive forward estimate has no
 forward one — both read `n/a` rather than a negative number, since a negative P/E is not a cheap
-stock, just a loss. 28 of the 72 pay a dividend; the rest read "None", which is a fact about the
+stock, just a loss. 31 of the 76 pay a dividend; the rest read "None", which is a fact about the
 company, not a gap in the data.
 
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
 `income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
-**64 of the 76 charts now carry a reported split**, and the 12 that do not each say on the card why.
+**62 of the 76 charts now carry a reported split**, and the 14 that do not each say on the card why.
 Visa is the only one of those 12 whose split exists but cannot be drawn: its categories are gross of
 client incentives and sum to a total it never reports — see [[visa-q4-fy26]].
 
-Those 11 are 6488, ARQQ, CLSK, CRWV, HUT, INFQ, NU, QUBT, SKHY, SMCI and XNDU. Most
+Those 13 are 6488, ARQQ, CLSK, CRWV, FLY, HUT, INFQ, NU, QBTS, QUBT, SKHY, SMCI and XNDU. Most
 report one segment and disclose revenue by geography only. DDOG left this list on Nov 4, 2026:
 its geographic split was always filed and is now drawn -- see [[datadog-q3-fy26]]. GlobalWafers
 joined it the same day, publishing no quarterly breakdown at all -- see
@@ -116,7 +148,16 @@ service disaggregation is on the face of the statement and had simply never been
 [[ast-spacemobile-q3-fy26]]. **QUBT joined it the same day**, on its first card, reporting a
 single reportable segment and disaggregating costs but not revenue -- see
 [[quantum-computing-q3-fy26]].
-Three of the remaining eleven are worth naming:
+
+**QBTS and FLY joined it on Nov 10, 2026, and should both leave again.** Neither company
+stopped disclosing anything. Both reported by Form 8-K after the close and neither 10-Q was
+filed that day, and the split each one publishes lives in the 10-Q rather than the release.
+D-Wave's release gives *changes* — professional services +$1.5M, QCaaS +$0.8M, system sales
+-$1.5M — which cannot be turned into levels without the prior-year figures, and Firefly's gives
+no breakdown at all. Both cards say so on their face. See [[d-wave-quantum-q3-fy26]] and
+[[firefly-aerospace-q3-fy26]].
+
+Three of the remaining thirteen are worth naming:
 
 - **HUT** does report three segments — Compute $72.5M, Digital Infrastructure $33.0M, Power $5.5M —
   but in the Q2 FY26 quarter the card draws, intersegment eliminations are $36.0M against $74.9M of
