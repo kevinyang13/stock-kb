@@ -3287,3 +3287,52 @@ quoting a spot inline. Both were true at capture and wrong one refresh later. Th
 scoped to the option book explicitly and the note no longer hardcodes a price it does not own.
 Worth recording as the general shape of it: the cost of making one number live is every
 sentence written while it was not.
+
+## 2026-11-11 — APP (AppLovin) added, and a single bar that is a fact rather than a gap
+
+Full `add-ticker` run for **APP**, as a regular tile rather than a favorite: tags `AI`,
+`Software`, `Media`, so the heatmap labels it **AI** (highest-ranked tag wins) and it carries
+Software and Media chips. Inserted after ADBE in `watchlist.json`, which is also the board's
+layout. Conid **481863646** (NASDAQ, APPLOVIN CORP-CLASS A) resolved with `search_contracts` and
+written to `ibkr-conids.json`; the live IBKR watchlist (id 100) was read, the one id inserted in
+the same position, and the whole 108-instrument list written back — `edit_watchlist` is full
+replace, and the read-back confirms 107 → 108 with nothing dropped.
+
+**The card is built from the 10-Q, not from the aggregator.** Every line on the chart was checked
+against accession 0001751008-26-000069 filed Nov 4, 2026: revenue $2,184,815K, cost of revenue
+$240,765K, the three operating expense lines, pretax $1,743,934K and net $1,438,902K all tie to
+the filing exactly, as do cash $3,173,731K and long-term debt $3,516,136K on the debt chart. The
+filing publishes **no gross profit line**, so gross profit is derived, and the card says so.
+
+The interesting part is the segment bar. AppLovin reports **one operating and one reportable
+segment**, so the chart draws a single "Advertising" bar — and the note has to say *why*, because
+a single bar is otherwise indistinguishable from a split that was never fetched. The second
+segment is not missing, it is sold: the Apps business went to Tripledot on June 30, 2025 for
+$715.6M, and everything it did now sits in discontinued operations. That also makes the +55%
+year-over-year growth honest — both columns are continuing operations.
+
+What a single-segment filer *does* disclose is its significant expense categories, and they turn
+out to be the better table anyway: **datacenter cost $194.6M**, 81% of cost of revenue, growing
+38% against revenue's 55%. That one line is the whole of the gross-margin expansion from 87.6% to
+89.0%.
+
+**Two pieces of the card could not be built, and neither was faked.** `bin/epsfetch.py` returned
+HTTP 403 for every ticker tried, not just this one — the Nasdaq endpoints were refusing this host
+— so there is no earnings chart. The ownership donut needs an unpacked 400MB SEC Form 13F data
+set that is deliberately not in the repository. Both absences are recorded on the wiki page rather
+than papered over.
+
+**Counts on [[favorites-financials]] were wrong before this and are now measured.** That page said
+62 of 76 charts carried a split, then called the remainder 14 in one sentence and 12 in the next,
+and listed 13 names while discussing a 14th (Visa) outside the list. Counted from the specs in
+`examples/`: **62 of 77 carry a multi-segment split, 15 do not**, and APP joins that 15 for the
+reason above.
+
+The high-margin layout defect showed up again: with a 66% net margin the Tax node is drawn inside
+the Net profit bar and the Interest & other band crosses the tax band. **Left alone deliberately**
+— the published NVDA, MU, SNDK, PLTR, V and TSM cards all render the same way, so APP matches the
+corpus, and the fix belongs in `bin/sankey.py`'s hardcoded node heights rather than in one card.
+
+`events.json` refreshed across all 113 tickers; APP's Nov 4 report date is kept as a past fact.
+`bin/stamp.py` was **not** run — nothing under `assets/` changed except a new PNG, which has a
+filename no browser has cached.

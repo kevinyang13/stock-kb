@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-10T14:19:32",
- "generatedLabel": "Nov 10, 2026",
+ "generated": "2026-11-11T14:29:15",
+ "generatedLabel": "Nov 11, 2026",
  "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
  "events": [
   {
@@ -98,6 +98,13 @@
    "ticker": "SMCI",
    "title": "SMCI earnings",
    "fav": true
+  },
+  {
+   "date": "2026-11-04",
+   "type": "earnings",
+   "ticker": "APP",
+   "title": "APP earnings",
+   "fav": false
   },
   {
    "date": "2026-11-04",
@@ -498,6 +505,13 @@
    "type": "earnings",
    "ticker": "MRVL",
    "title": "MRVL earnings",
+   "fav": false
+  },
+  {
+   "date": "2026-12-02",
+   "type": "earnings",
+   "ticker": "CRM",
+   "title": "CRM earnings",
    "fav": false
   },
   {

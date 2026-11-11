@@ -621,7 +621,7 @@
    "notes": [
     "These figures are PRELIMINARY. Super Micro's own release states that its closing procedures for the quarter are not complete, that the figures are unaudited and have not been reviewed by its auditor, and that final results may differ materially. No other card on this page carries that warning.",
     "Revenue nearly quadrupled, from $5,018M to $19,946M, and grew 79% from the $11,120M of the quarter before. Guidance is $19.5B to $21.5B for FQ2 and $72.0B to $82.0B for fiscal 2027.",
-    "No segment split: the release discloses no revenue breakdown at all, and the 10-Q for this quarter is not filed yet. The FY26 10-K disclosed net sales by geography only.",
+    "No segment split: Super Micro's FY26 10-K discloses net sales by geography only.",
     "Gross margin of 12.7% is the lowest of any card here, and it FELL from 17.5% in the quarter before even as revenue grew 79% sequentially. It is up from 9.3% a year ago. This is a systems assembler, not a chip designer.",
     "Operating expenses of $477M are 2.4% of revenue, so almost all of a thin gross margin survives to a $2,064M operating profit. Stock compensation alone is $100M of that $477M.",
     "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
@@ -3743,7 +3743,7 @@
    ],
    "notes": [
     "Figures are in Korean won, as filed. SK hynix reports in Korea and files nothing with the SEC, so this card is built from the company's own 3Q26 results release rather than an EDGAR filing.",
-    "No segment split: SK hynix does not break revenue out by segment in its quarterly release.",
+    "No segment split: SK Hynix reports a single semiconductor segment.",
     "Revenue of \u20a9104.6T is up 328% year over year and operating profit up 632%, at an 80% operating margin -- the memory cycle, with HBM4 ramping (source: SK hynix 3Q26 release).",
     "Net profit is less than half of operating profit. \u20a932.6T of net non-operating expense sits between them: a \u20a911.6T net foreign-exchange loss and a \u20a922.9T valuation loss on investment assets. Neither describes the memory business, and the 38% net margin should be read against the 80% operating margin rather than on its own (source: SK hynix 3Q26 release).",
     "The vendor publishes no R&D and SG&A split for this quarter, where it did for Q2 FY26, so the \u20a96.3T of operating expenses is drawn as a single band rather than split (source: stockanalysis.com).",
@@ -4591,7 +4591,66 @@
     "Market figures as of Nov 9, 2026: market cap $45.45B, P/E 18.1 trailing, 14.2 forward; dividend $0.92 a year, 0.69% yield, last ex-dividend Dec 22, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "eps": "VST-eps"
+  },
+  {
+   "t": "APP",
+   "company": "AppLovin",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "10-Q filed Nov 4, 2026",
+   "img": "assets/financials/APP-Q3-FY26.png",
+   "source": "AppLovin 10-Q, condensed consolidated statements of operations, quarter ended Sep 30, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000069/0001751008-26-000069-index.htm",
+   "highlights": [
+    {
+     "k": "Revenue",
+     "v": "$2,185M",
+     "s": "+56% Y/Y"
+    },
+    {
+     "k": "Gross margin",
+     "v": "89%",
+     "s": "$1,944M"
+    },
+    {
+     "k": "Operating margin",
+     "v": "78%",
+     "s": "$1,709M"
+    },
+    {
+     "k": "Net profit",
+     "v": "$1,439M",
+     "s": "66% margin"
+    },
+    {
+     "k": "Market cap",
+     "v": "$134.11B",
+     "s": "moves with the share price"
+    },
+    {
+     "k": "P/E",
+     "v": "27.1 \u00b7 20.6",
+     "s": "trailing \u00b7 forward"
+    },
+    {
+     "k": "Dividend",
+     "v": "None",
+     "s": "no dividend paid"
+    }
+   ],
+   "notes": [
+    "Segments: Advertising $2,185M \u2014 the whole of it. AppLovin reports one operating segment and one reportable segment (source: AppLovin 10-Q, quarter ended Sep 30 2026, segment note). This is a single bar because the company files a single segment, not because a split was unavailable.",
+    "The second segment is gone rather than missing. AppLovin completed the sale of its Apps business to Tripledot on June 30, 2025 for $715.6M \u2014 $430.6M cash and a 22% stake in Tripledot \u2014 and that business is reported in discontinued operations. It contributed $0 this quarter, and the year-ago comparatives on this chart are continuing operations only (source: 10-Q, discontinued operations note).",
+    "The filing reports no gross profit line. Cost of revenue is $240.8M as filed; gross profit is derived as revenue less cost of revenue, which is how every card here draws it.",
+    "Operating expenses are drawn as the filing's own three lines \u2014 research and development $101.8M, sales and marketing $68.8M, general and administrative $64.5M \u2014 rather than as one SG&A band.",
+    "R&D more than doubled year over year, $101.8M against $43.9M, and is now the largest operating expense. Sales and marketing is $68.8M on $2,185M of revenue \u2014 3% \u2014 which is what a model-driven ad network looks like next to a sales-led one.",
+    "The $35.0M between operating and pretax profit is a net: $86.0M of other income less $51.1M of interest expense. Interest expense has been flat near $51M a quarter for five quarters (source: 10-Q).",
+    "Operating margin of 78% and net margin of 66% are the highest on this page. Both are continuing-operations figures.",
+    "Debt and coverage, Q3 FY26: $3,516.1M of long-term debt against $3,173.7M of cash and $1,428.8M of free cash flow for the quarter. Net debt $342.4M. Debt and cash are balance sheet figures at the period end and are the filing's own ($3,516,136K and $3,173,731K); free cash flow is that quarter's flow and is the vendor's quarterly derivation, since the 10-Q's cash flow statement is cumulative for the nine months (source: stockanalysis.com).",
+    "Market figures as of Nov 11, 2026: market cap $134.11B, P/E 27.1 trailing, 20.6 forward; pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
+   ],
+   "debt": "APP-debt"
   }
  ],
- "marketAsOf": "Nov 10, 2026"
+ "marketAsOf": "Nov 11, 2026"
 }

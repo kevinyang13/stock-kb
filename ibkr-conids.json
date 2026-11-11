@@ -1,5 +1,5 @@
 {
- "note": "IBKR contract ids (conid) per heatmap ticker. Resolved via IBKR search_contracts, 2026-09-28; NBIS added 2026-10-26, V and VRT added 2026-10-27, CEG, VST, CCJ, LEU and GEV added 2026-10-28, all resolved the same way. Used as contract_id for get_price_snapshot / get_price_history / get_company_connections, and as contract_id_ex (stringified) for watchlists. IREN added 2026-10-28.",
+ "note": "IBKR contract ids (conid) per heatmap ticker. Resolved via IBKR search_contracts, 2026-09-28; NBIS added 2026-10-26, V and VRT added 2026-10-27, CEG, VST, CCJ, LEU and GEV added 2026-10-28, all resolved the same way. Used as contract_id for get_price_snapshot / get_price_history / get_company_connections, and as contract_id_ex (stringified) for watchlists. IREN added 2026-10-28. APP added 2026-11-11, resolved the same way.",
  "generated": "2026-09-28",
  "ibkrWatchlist": {
   "id": "100",
@@ -30,6 +30,11 @@
    "conid": 3691937,
    "ex": "NASDAQ",
    "desc": "AMAZON.COM INC"
+  },
+  "APP": {
+   "conid": 481863646,
+   "ex": "NASDAQ",
+   "desc": "APPLOVIN CORP-CLASS A"
   },
   "ARKQ": {
    "conid": 168647313,
@@ -106,10 +111,20 @@
    "ex": "NASDAQ",
    "desc": "CANAAN INC."
   },
+  "CCJ": {
+   "conid": 1447060,
+   "ex": "NYSE",
+   "desc": "CAMECO CORP"
+  },
   "CCXI": {
    "conid": 852646546,
    "ex": "NASDAQ",
    "desc": "CHURCHILL CAPITAL CORP-CL A"
+  },
+  "CEG": {
+   "conid": 538132976,
+   "ex": "NASDAQ",
+   "desc": "CONSTELLATION ENERGY"
   },
   "CLBR": {
    "conid": 865766229,
@@ -181,6 +196,11 @@
    "ex": "NYSE",
    "desc": "GENERAL ELECTRIC"
   },
+  "GEV": {
+   "conid": 691984365,
+   "ex": "NYSE",
+   "desc": "GE VERNOVA INC"
+  },
   "GOOG": {
    "conid": 208813720,
    "ex": "NASDAQ",
@@ -251,6 +271,16 @@
    "ex": "NYSE",
    "desc": "IONQ INC"
   },
+  "IREN": {
+   "conid": 526906130,
+   "ex": "NASDAQ",
+   "desc": "IREN LTD"
+  },
+  "LEU": {
+   "conid": 168391375,
+   "ex": "NYSE",
+   "desc": "CENTRUS ENERGY CORP-CLASS A"
+  },
   "LUNR": {
    "conid": 613910262,
    "ex": "NASDAQ",
@@ -301,6 +331,11 @@
    "conid": 869314618,
    "ex": "ARCA",
    "desc": "TEMA SPACE INNOVATORS ETF"
+  },
+  "NBIS": {
+   "conid": 88819736,
+   "ex": "NASDAQ",
+   "desc": "NEBIUS GROUP NV"
   },
   "NET": {
    "conid": 382633646,
@@ -472,6 +507,11 @@
    "ex": "ARCA",
    "desc": "GLOBAL X URANIUM ETF"
   },
+  "V": {
+   "conid": 49462172,
+   "ex": "NYSE",
+   "desc": "VISA INC-CLASS A SHARES"
+  },
   "VFTNX": {
    "conid": 48013375,
    "ex": "FUNDSERV",
@@ -482,6 +522,16 @@
    "conid": 790400443,
    "ex": "NYSE",
    "desc": "VOYAGER TECHNOLOGIES INC-A"
+  },
+  "VRT": {
+   "conid": 402783527,
+   "ex": "NYSE",
+   "desc": "VERTIV HOLDINGS CO-A"
+  },
+  "VST": {
+   "conid": 254457731,
+   "ex": "NYSE",
+   "desc": "VISTRA CORP"
   },
   "VZ": {
    "conid": 4901,
@@ -507,51 +557,6 @@
    "conid": 157874416,
    "ex": "NASDAQ",
    "desc": "XUNLEI LTD-ADR"
-  },
-  "NBIS": {
-   "conid": 88819736,
-   "ex": "NASDAQ",
-   "desc": "NEBIUS GROUP NV"
-  },
-  "V": {
-   "conid": 49462172,
-   "ex": "NYSE",
-   "desc": "VISA INC-CLASS A SHARES"
-  },
-  "VRT": {
-   "conid": 402783527,
-   "ex": "NYSE",
-   "desc": "VERTIV HOLDINGS CO-A"
-  },
-  "CEG": {
-   "conid": 538132976,
-   "ex": "NASDAQ",
-   "desc": "CONSTELLATION ENERGY"
-  },
-  "VST": {
-   "conid": 254457731,
-   "ex": "NYSE",
-   "desc": "VISTRA CORP"
-  },
-  "CCJ": {
-   "conid": 1447060,
-   "ex": "NYSE",
-   "desc": "CAMECO CORP"
-  },
-  "LEU": {
-   "conid": 168391375,
-   "ex": "NYSE",
-   "desc": "CENTRUS ENERGY CORP-CLASS A"
-  },
-  "GEV": {
-   "conid": 691984365,
-   "ex": "NYSE",
-   "desc": "GE VERNOVA INC"
-  },
-  "IREN": {
-   "conid": 526906130,
-   "ex": "NASDAQ",
-   "desc": "IREN LTD"
   }
  }
 }
