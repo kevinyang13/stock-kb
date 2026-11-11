@@ -3254,3 +3254,36 @@ tested.
 Noted while building, not fixed: `assets/site.css` references `var(--green)` and `var(--red)` in
 four rules but defines neither token, so those colours silently do nothing — Holdings' `.pos`
 class is one of the casualties. The new page declares both locally rather than inherit the bug.
+
+## 2026-11-11 — A Refresh button that refuses to refresh what it cannot reach
+
+The local Trading page grew a Refresh button, a Total P/L column, and one deliberate
+limitation stated on its face.
+
+**Total P/L if assigned** splits into two columns rather than one: `gain to strike`, the stock
+leg at `(strike − basis) × covered shares`, and the gold `TOTAL P/L` beside it, that plus the
+premium. Split because the two legs are not equally yours — the premium is kept whatever the
+stock does, the stock leg is realised only on assignment and is capped at the strike. Shares
+beyond the last whole contract are never called and are excluded, which the notes say rather
+than leaving the reader to work out why an odd lot vanished.
+
+**Refresh does two of the three things it looks like it should**, and says the third out loud.
+It re-reads both data files, so an edited basis or a regenerated option snapshot lands without
+a reload, and it re-prices the underlyings through `quotes.py`'s same-origin proxy, taking the
+extended-hours mark when there is one. It does **not** re-quote the options: that book comes
+from a connector no browser on this page can reach, and pretending otherwise would be the one
+failure that matters here — a button that silently leaves stale premiums under a fresh
+timestamp. So the page carries two clocks, never merged: one for the option book, one for the
+underlying, each with its own age and its own colour band. A single "last updated" would let
+the fresher number vouch for the older one.
+
+Falling back is a first-class path, not an error. Served from a plain `http.server` the proxy
+call 404s, the page keeps the captured spots, and the status line names the fix — serve with
+`quotes.py`, open port 8090. Page load tries once quietly; the button asks loudly.
+
+Making spot live immediately broke two strings that had been correct while everything was
+frozen: a banner that said *every* bid and ask on the page was a post-close book, and a note
+quoting a spot inline. Both were true at capture and wrong one refresh later. The banner is now
+scoped to the option book explicitly and the note no longer hardcodes a price it does not own.
+Worth recording as the general shape of it: the cost of making one number live is every
+sentence written while it was not.
