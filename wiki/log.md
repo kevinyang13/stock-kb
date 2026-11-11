@@ -3209,3 +3209,48 @@ source gives one date per field with no flag saying whether it is the next repor
 so a stale date cannot be told from a current one without EDGAR. Ahead: XNDU Nov 11, then NBIS,
 CSCO, LUNR, NU, SPCE and XNET on Nov 12, PPI Nov 13, NVDA and HD Nov 17, FOMC minutes Nov 18,
 INTU Nov 19.
+
+## 2026-11-10 — A local-only Trading tab, and the second page that must never be committed
+
+Added `trading.html` / `trading.json`, a covered-call screen over the positions already in
+`holdings.json`. Both files go straight into `.gitignore` beside `holdings.html` /
+`holdings.json`, and for a sharper reason than Holdings has: the page quotes every strike
+*relative to cost basis*, so publishing it would give the basis away by implication even with
+the number stripped out. Verified before writing anything: `git ls-files` counts zero holdings
+or trading files, `git check-ignore` resolves both new paths, and the tracked diff greps clean
+of basis, share counts and position values.
+
+The tab reaches the top nav the way Holdings already did, rather than by a second mechanism.
+`assets/site.js` grew a `LOCAL_TABS` list and `nav()` now loops it, so both private tabs are
+injected at runtime behind the same `isLocal()` guard and the published pages ship no link to
+either. That is the whole tracked change, plus the `.gitignore` lines and a `bin/stamp.py` run.
+
+The screen is two mechanical filters and nothing else — strike above cost basis, premium over a
+floor per contract — ranked by premium, one row per expiration so a name does not return three
+near-identical strikes. Premium is credited at the **bid**, not the mid, because the bid is what
+a market-sell actually pays; a toggle shows the mid purely so the width of the spread is visible.
+The page recomputes contracts, totals, yields and if-called return from `holdings.json` at render
+time instead of baking them into the data file, so editing a basis or a share count reflows the
+table and the two pages cannot drift apart.
+
+What the screen says about itself matters as much as what it ranks. Sorting by premium sorts by
+the risk being sold, so the top row is the one most likely to be assigned — stated on the page,
+not left implied. It carries no sizing, no conviction and no pick, which is the same line the
+Morning Brief holds for the same reason.
+
+Three things the data forced onto the page rather than out of it, all of them kept in the local
+file rather than described here. **Thin books**: some rows carry two-digit open interest and
+near-zero volume, with bid/ask spreads wide enough that the marks are not fills — flagged per row,
+with spreads over 15% in red and a zero-volume row called out. **A pending corporate action**: one
+underlying has contracts due to be re-struck inside the window the screen covers, so although the
+strike-above-basis test survives the adjustment (both sides scale together), the displayed strike,
+contract count and basis all change that morning; the page says so on the affected rows rather
+than quietly going stale. **An expiration that failed the floor**: a near-dated strike above basis
+showed a bid two orders of magnitude under its ask, which is no bid at all. It is recorded in a
+`rejected` list with the reason rather than dropped, because an absent row and an excluded row are
+different facts — a screen that silently omits its failures reads as though they were never
+tested.
+
+Noted while building, not fixed: `assets/site.css` references `var(--green)` and `var(--red)` in
+four rules but defines neither token, so those colours silently do nothing — Holdings' `.pos`
+class is one of the casualties. The new page declares both locally rather than inherit the bug.

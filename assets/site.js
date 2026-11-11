@@ -281,10 +281,16 @@ var Site = (function () {
     });
   }
 
-  // Holdings is a local-only page: holdings.html and holdings.json are both in
-  // .gitignore, because this repo is public and Pages serves it. So the tab is
-  // added at runtime on localhost rather than written into every page's markup,
-  // where it would ship a dead link to the live site.
+  // Holdings and Trading are local-only pages: holdings.html/.json and
+  // trading.html/.json are all in .gitignore, because this repo is public and
+  // Pages serves it. So their tabs are added at runtime on localhost rather
+  // than written into every page's markup, where they would ship dead links to
+  // the live site.
+  var LOCAL_TABS = [
+    { href: "holdings.html", text: "Holdings" },
+    { href: "trading.html", text: "Trading" },
+  ];
+
   function isLocal() {
     return location.hostname === "localhost" ||
            location.hostname === "127.0.0.1" ||
@@ -293,12 +299,15 @@ var Site = (function () {
 
   function nav() {
     var tabs = document.querySelector("nav.tabs");
-    if (tabs && isLocal() && !tabs.querySelector('a[href="holdings.html"]')) {
-      var a = document.createElement("a");
-      a.className = "tab";
-      a.href = "holdings.html";
-      a.textContent = "Holdings";
-      tabs.appendChild(a);
+    if (tabs && isLocal()) {
+      LOCAL_TABS.forEach(function (t) {
+        if (tabs.querySelector('a[href="' + t.href + '"]')) return;
+        var a = document.createElement("a");
+        a.className = "tab";
+        a.href = t.href;
+        a.textContent = t.text;
+        tabs.appendChild(a);
+      });
     }
 
     var here = location.pathname.split("/").pop() || "heatmap.html";
