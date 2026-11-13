@@ -4,7 +4,7 @@
 
 **Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K, CoreWeave's results release and Nebius's 6-K exhibit 99.1 for those three.
 
-**Last updated**: 2026-11-11
+**Last updated**: 2026-11-12
 
 ---
 
@@ -133,14 +133,15 @@ company, not a gap in the data.
 
 **Segment splits are now required for new charts** — see [[sankey-income-statement]] and the
 `income-statement-chart` skill. The backlog left by the bulk watchlist pass has been filled in:
-**62 of the 77 charts carry a multi-segment split**, and the 15 that do not each say on the card
-why. Visa is the only one of the 15 whose split exists but cannot be drawn: its categories are gross
+**63 of the 77 charts carry a multi-segment split**, and the 14 that do not each say on the card
+why. Visa is the only one of the 14 whose split exists but cannot be drawn: its categories are gross
 of client incentives and sum to a total it never reports — see [[visa-q4-fy26]].
 
-Those 15 are 6488, APP, ARQQ, CLSK, CRWV, FLY, HUT, INFQ, NU, QBTS, QUBT, SKHY, SMCI, V and XNDU.
-Counted from the specs in `examples/` on November 11, 2026; the previous counts on this page said 14
-in one sentence, 12 in the next and listed 13 names, and omitted Visa from the list it was being
-discussed in. Most
+Those 14 are 6488, APP, ARQQ, CLSK, CRWV, FLY, HUT, INFQ, QBTS, QUBT, SKHY, SMCI, V and XNDU.
+Counted from the specs in `examples/`, most recently November 12, 2026. NU left the list that day:
+its revenue splits into interest income and fee and commission income, which foot to the dollar in
+its own 6-K, and the single bar was an artefact of building the card from the aggregator's net
+revenue line rather than from the filing -- the same correction DDOG and NET got. Most
 report one segment and disclose revenue by geography only. DDOG left this list on Nov 4, 2026:
 its geographic split was always filed and is now drawn -- see [[datadog-q3-fy26]]. GlobalWafers
 joined it the same day, publishing no quarterly breakdown at all -- see

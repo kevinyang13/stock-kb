@@ -3,50 +3,42 @@
  "company": "Intuitive Machines",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: Q2 FY26, quarter ended Jun 30, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-06-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: Q3 FY26, quarter ended Sep 30, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-09-30. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "Q2 FY26",
-   "debt": 481.4,
-   "fcf": -81.2,
-   "cash": 367.4,
+   "label": "Q3 FY26",
+   "debt": 509.6,
+   "fcf": 33.5,
+   "cash": 463.8,
    "debt_parts": [
     {
-     "label": "Short-term debt",
-     "value": 2.3
-    },
-    {
-     "label": "Current portion",
-     "value": 23.2
-    },
-    {
      "label": "Long-term debt",
-     "value": 362.6
+     "value": 336.9
     },
     {
      "label": "Current leases",
-     "value": 25.1
+     "value": 25.0
     },
     {
      "label": "Long-term leases",
-     "value": 68.3
+     "value": 147.7
     }
    ],
    "cash_parts": [
     {
      "label": "Restricted cash (separate)",
-     "value": 11.7
+     "value": 13.2
     }
    ],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": -57.1
+     "value": 66.2
     },
     {
      "label": "Capital expenditure",
-     "value": -24.1
+     "value": -32.7
     }
    ]
   }

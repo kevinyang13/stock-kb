@@ -1,0 +1,59 @@
+{
+ "company": "Intuitive Machines",
+ "ticker": "LUNR",
+ "period": "Q3 FY26",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 1,
+ "revenue": 269.3,
+ "revenue_yoy": 414,
+ "segments": [
+  {
+   "name": "Product",
+   "value": 215.1,
+   "note": "80% of revenue; none a year ago",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Service",
+   "value": 54.1,
+   "yoy": 6,
+   "note": "20% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Grant",
+   "value": 0.1,
+   "yoy": -94,
+   "note": "0.03% of revenue",
+   "color": "#c8a020"
+  }
+ ],
+ "cost_of_revenue": 200.0,
+ "gross_profit": 69.3,
+ "width": 1700,
+ "height": 940,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 7.5
+  },
+  {
+   "name": "G&A",
+   "value": 82.9
+  },
+  {
+   "name": "Depreciation & amortization",
+   "value": 13.2
+  }
+ ],
+ "net_loss": 3.4,
+ "other_income": 30.9,
+ "cor_label": {
+  "dx": -0.04,
+  "anchor": "right"
+ },
+ "loss_label": {
+  "dx": -0.1
+ }
+}

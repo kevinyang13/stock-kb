@@ -3336,3 +3336,54 @@ corpus, and the fix belongs in `bin/sankey.py`'s hardcoded node heights rather t
 `events.json` refreshed across all 113 tickers; APP's Nov 4 report date is kept as a past fact.
 `bin/stamp.py` was **not** run — nothing under `assets/` changed except a new PNG, which has a
 filename no browser has cached.
+
+## 2026-11-12 — Four cards moved to Q3 on the day the results landed, three of them from the filing
+
+CSCO, LUNR, NBIS, NU, SPCE and XNET were on the calendar for today. SPCE and XNET have no card
+(negative gross profit; no usable filing). CSCO had filed only Form 4s by the time this ran, so it
+reports after the close and there is nothing to build from — left at FQ4 FY26. XNDU reported
+yesterday and was a quarter stale as well, so four cards moved: **LUNR, XNDU, NBIS and NU**, all to
+Q3 FY26.
+
+**Only LUNR and XNDU were in the aggregator.** NBIS and NU had results out — 6-Ks furnished this
+morning — and stockanalysis still showed Q2 for both. Those two were built line by line from the
+filings, which is what the skill asks for anyway. LUNR's figures were taken from its 8-K exhibit
+rather than the vendor too, because the vendor flattens the revenue split the release publishes.
+
+**Three of the four gained or kept a real segment split, and NU gained one it should always have
+had.** Its card said "no reported split adds up to the aggregator's net revenue line" — true of the
+aggregator, and false of the company: the 6-K splits revenue into interest income and gains net of
+losses ($5,003.3M) and fee and commission income ($817.0M), footing to $5,820.4M to the dollar.
+That is the third time this has happened (DDOG, NET, now NU) and the pattern is the same every
+time: the split was always filed, and the card was built from the wrong source. **63 of 77 charts
+now carry a multi-segment split, 14 do not.**
+
+**A renderer fix, finally, and a small one.** NBIS at a 78% gross margin was the first card whose
+gross profit bar grew tall enough to reach its own "78% margin" sub-line. The loss layout already
+has explicit per-card nudges for exactly this clash on the cost-of-revenue and net-loss labels, so
+this adds the third one — `gross_label` — and NBIS sets `dy: 0.065`. Every existing loss-layout
+card re-renders byte-identical; that was checked, not assumed. This is deliberately **not** the
+hardcoded-node-y defect that puts Tax inside Net profit on the high-margin profit-layout cards:
+that one still stands, and still affects NVDA, MU, SNDK, PLTR, V, TSM and APP.
+
+**Three things the filings say that the charts cannot.** LUNR's $3.4M net loss is a $30.0M warrant
+mark away from being ten times larger — the operating loss of $34.2M is the figure that describes
+the quarter. NBIS turned its first operating profit, $50.4M, and still lost $37.5M at the net line
+on $112.5M of interest and a $49.5M one-off induced conversion charge. NU's net income grew 39%
+against pretax income's 21%, and the whole gap is a tax rate that fell from 29.9% to 19.2%. Each is
+on its card and on its wiki page rather than left for the reader to find.
+
+**XNDU needed a netting to balance.** Its filing puts "Other operating (income) expense, net" as a
+$1.5M *credit* inside operating expenses, and a sankey cannot draw a negative band. Folded into
+D&A and labelled "D&A, net of credits", with both components stated on the card — the alternative
+was a statement that does not foot.
+
+**Three debt charts are now a quarter behind their cards, on purpose.** `bin/debtfetch.py` refused
+the Sep 30 column for NBIS, NU and XNDU because the vendor has published no balance sheet or no
+quarterly free cash flow for it. It skips rather than fills, which is right; each card now says so
+and quotes the filing's own cash and debt instead. LUNR's matched and was rebuilt — $509.6M against
+$463.8M of cash and its first positive free cash flow, $33.5M.
+
+**No earnings charts were refreshed.** `bin/epsfetch.py` returns HTTP 403 for every ticker tried,
+NVDA included, so the Nasdaq endpoints are refusing this host rather than failing on one name. The
+stale columns are flagged on each card with the reported figure stated in the note.

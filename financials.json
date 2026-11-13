@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-10T14:40:00-08:00",
- "generatedLabel": "Nov 10, 2026",
+ "generated": "2026-11-12T11:30:00-08:00",
+ "generatedLabel": "Nov 12, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -2564,31 +2564,36 @@
   {
    "t": "LUNR",
    "company": "Intuitive Machines",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/LUNR-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/lunr/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "8-K filed Nov 12, 2026",
+   "img": "assets/financials/LUNR-Q3-FY26.png",
+   "source": "Intuitive Machines 8-K exhibit 99.1, Q3 2026 results",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1844452/000162828026073106/lunr-20260930xexx991.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$206M",
-     "s": "+310% Y/Y"
+     "v": "$269M",
+     "s": "+414% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "17%",
-     "s": "$36M"
+     "v": "26%",
+     "s": "$69M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($34M)",
+     "s": "(13%) margin"
     },
     {
      "k": "Net loss",
-     "v": "($46M)",
-     "s": "(22%) margin"
+     "v": "($3.4M)",
+     "s": "(1%) margin"
     },
     {
      "k": "Market cap",
-     "v": "$2.27B",
+     "v": "$2.98B",
      "s": "moves with the share price"
     },
     {
@@ -2603,14 +2608,17 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $36M + $46M balances against the charges on the right.",
-    "Segments: Civil $76.3M (+64%), Commercial $66.3M (from $2.1M a year ago), National security $60.9M (from $1.7M a year ago), Grant revenue $2.8M. Source: Intuitive Machines 10-Q, quarter ended Jun 30 2026, by customer.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $481.4M of debt against $367.4M of cash and -$81.2M of free cash flow for the quarter. Net debt $114.0M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.16 actual against -$0.07 expected, missed by $0.09 (-129%). Sep '26 consensus is -$0.12 from 5 analysts, due Nov 12, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $2.27B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
-    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $69.3M + $3.4M plus $30.9M of non-operating income balances against the $103.6M of charges on the right.",
+    "Segments: Product $215.1M, Service $54.1M, Grant $0.1M. Product revenue was ZERO in the same quarter a year ago -- it is the whole of the +414% growth, and it is satellite production rather than lunar delivery. Source: Intuitive Machines 8-K exhibit 99.1, condensed consolidated statements of operations, revenues by type.",
+    "This split is by revenue TYPE. The previous card for this ticker split by customer (Civil / Commercial / National security), which comes from the 10-Q; the Q3 10-Q is not filed yet, so the release's own disaggregation is what is drawn.",
+    "The net loss is $3.4M on a $34.2M operating loss, and the gap is not the business: $30.9M of non-operating income, of which $30.0M is a change in the fair value of warrant liabilities. Strip the warrant mark and the loss is roughly ten times larger.",
+    "Net loss attributable to the Company is $4.0M, after $0.7M of income attributed to noncontrolling and redeemable noncontrolling interests. The chart draws the $3.4M consolidated figure so the statement foots; EPS of -$0.02 is computed on the attributable figure.",
+    "Cost of revenue is the filing's own total ($200.0M, stated excluding depreciation and amortization), so the 26% gross margin is not comparable with a card whose cost of revenue carries D&A. Depreciation and amortization is drawn as its own $13.2M band.",
+    "Record quarter on the company's own framing: record revenue, record 26% gross margin, record positive free cash flow of $33M ($66M from operations less $33M of capex) and record backlog of $1.9B, up $1.7B from year-end 2025.",
+    "Guidance: full-year 2026 revenue of $920M-$950M and positive adjusted EBITDA.",
+    "Debt and coverage, Q3 FY26: $509.6M of debt against $463.8M of cash and $33.5M of free cash flow for the quarter -- the first positive quarter of free cash flow on this card. Net debt $45.8M, down from $114.0M a quarter ago. Cash ties to the release's $463,810K; free cash flow is the vendor's quarterly figure and matches the company's own $33M (source: stockanalysis.com, Intuitive Machines 8-K exhibit 99.1).",
+    "The earnings chart predates this report and could not be refreshed: bin/epsfetch.py is returning HTTP 403 for every ticker, so its Sep '26 column still shows the -$0.12 consensus from 5 analysts rather than the reported figure. GAAP diluted EPS for the quarter was -$0.02.",
+    "Market figures as of Nov 12, 2026: market cap $2.98B, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "LUNR-debt",
    "eps": "LUNR-eps",
@@ -3039,41 +3047,41 @@
   {
    "t": "NU",
    "company": "Nu Holdings",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/NU-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/nu/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "6-K filed Nov 12, 2026",
+   "img": "assets/financials/NU-Q3-FY26.png",
+   "source": "Nu Holdings 6-K, unaudited interim condensed consolidated statements of income, quarter ended Sep 30, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1691493/000129281426005272/nufs3q26_6k.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$2,474M",
-     "s": "+52% Y/Y"
+     "v": "$5,820M",
+     "s": "+40% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "100%",
-     "s": "$2,474M"
+     "v": "42%",
+     "s": "$2,437M"
     },
     {
      "k": "Operating margin",
-     "v": "50%",
-     "s": "$1,241M"
+     "v": "23%",
+     "s": "$1,359M"
     },
     {
      "k": "Net profit",
-     "v": "$1,060M",
-     "s": "43% margin"
+     "v": "$1,092M",
+     "s": "19% margin"
     },
     {
      "k": "Market cap",
-     "v": "$57.92B",
+     "v": "$57.15B",
      "s": "moves with the share price"
     },
     {
      "k": "P/E",
-     "v": "16.3 \u00b7 12.3",
+     "v": "14.8 \u00b7 11.9",
      "s": "trailing \u00b7 forward"
     },
     {
@@ -3083,13 +3091,20 @@
     }
    ],
    "notes": [
-    "No segment split: Nu Holdings' chart is built on the aggregator's net revenue line, which no reported split adds up to.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $5.9B of debt against $10.5B of cash and -$2.9B of free cash flow for the quarter. Net debt -$4.6B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: $0.22 actual against $0.20 expected, beat by $0.02 (+10%). Sep '26 consensus is $0.23 from 4 analysts, due Nov 12, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $57.92B, P/E 16.3 trailing, 12.3 forward; pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
-    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "Segments: Interest income and gains net of losses on financial instruments $5,003M (+40%), Fee and commission income $817M (+37%). The two lines foot to total revenue to the dollar. Source: Nu Holdings 6-K, statements of income, note 6.",
+    "This card previously drew a single bar and said no reported split added up to the aggregator's net revenue line. Built from the filing instead, the split is there and foots exactly -- the same correction DDOG and NET got.",
+    "\"Cost of revenue\" here is a bank's, not a manufacturer's: $1,572M of interest and other financial expenses, $1,668M of expected credit loss and $143M of transactional expenses. The 42% gross margin is a net interest and fee margin after credit losses, and is not comparable with a gross margin on this page that measures the cost of delivering a product.",
+    "Expected credit loss is $1,668M, up 71% against revenue's 40%, and is now 29% of revenue against 23% a year ago. It is the fastest-growing line on the statement.",
+    "Operating expenses are the filing's own four lines, with other income netted into other expenses: general and administrative $591M, customer support and operations $223M, other expenses $160M less $22M of other income, and marketing $126M.",
+    "The \"Interest & other, net\" charge of $8M is the share of loss in associates. Everything else that a non-financial company would show below the operating line is inside cost of revenue here, because for a bank it is the cost of revenue.",
+    "The effective tax rate fell to 19.2% from 29.9% a year ago -- $259M of tax on $1,350M of pretax income against $334M on $1,116M. That is worth about $120M of the quarter's net income, so net income grew 39% while pretax grew 21%.",
+    "Diluted EPS $0.2235 against $0.1595, on 4,881M weighted-average diluted shares.",
+    "Figures follow the Nov 12, 2026 6-K rather than the aggregator, which had not yet ingested this quarter when the card was built. Nu reports in US dollars, so nothing here is converted.",
+    "The debt chart is a quarter behind this card: it still shows Q2 FY26 ($5.9B of debt, $10.5B of cash, -$2.9B of free cash flow). bin/debtfetch.py refused the Sep 30 column -- the vendor has not published a balance sheet for it -- and a hole is left rather than filled by hand. The 6-K's own figures at September 30, 2026 are $13,772.3M of cash and equivalents and $4,980.1M of borrowings and financing, against $47,486.8M of customer deposits, which are a bank's funding rather than its debt.",
+    "The earnings chart predates this report and could not be refreshed: bin/epsfetch.py is returning HTTP 403 for every ticker. Reported diluted EPS for the quarter was $0.2235.",
+    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice.",
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated.",
+    "Market figures as of Nov 12, 2026: market cap $57.15B, P/E 14.8 trailing, 11.9 forward; pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "NU-debt",
    "eps": "NU-eps",
@@ -3990,31 +4005,36 @@
   {
    "t": "XNDU",
    "company": "Xanadu Quantum",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "",
-   "img": "assets/financials/XNDU-Q2-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/xndu/financials/income-statement/?p=quarterly",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "6-K filed Nov 12, 2026",
+   "img": "assets/financials/XNDU-Q3-FY26.png",
+   "source": "Xanadu Quantum 6-K, consolidated statements of operations and comprehensive loss, quarter ended Sep 30, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2097163/000209716326000025/xndu-20260930.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$2M",
-     "s": "+43% Y/Y"
+     "v": "$1.3M",
+     "s": "+32% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "50%",
-     "s": "$1M"
+     "v": "92.8%",
+     "s": "$1.2M"
+    },
+    {
+     "k": "Operating loss",
+     "v": "($34.6M)",
+     "s": "26x revenue"
     },
     {
      "k": "Net loss",
-     "v": "($42M)",
-     "s": "(2100%) margin"
+     "v": "($32.2M)",
+     "s": "25x revenue"
     },
     {
      "k": "Market cap",
-     "v": "$794.95M",
+     "v": "$759.83M",
      "s": "moves with the share price"
     },
     {
@@ -4029,13 +4049,20 @@
     }
    ],
    "notes": [
-    "Loss-making, so this uses the loss layout: gross profit plus the net loss fund every charge. $1M + $42M balances against the charges on the right.",
+    "Loss-making, so this uses the loss layout: gross profit plus the net loss plus non-operating income fund every charge. $1.2M + $32.2M + $2.4M balances against the $35.8M of charges on the right.",
     "No segment split: Xanadu gives no revenue split in its interim results.",
-    "Cost of revenue is derived as revenue minus reported gross profit, and the non-operating line as net plus tax minus operating profit, so the statement foots exactly. Sources often report a cost of revenue that does not reconcile with their own gross profit.",
-    "Debt and coverage, Q2 FY26: $59.1M of debt against $312.8M of cash and -$29.7M of free cash flow for the quarter. Net debt -$253.7M. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Market figures as of Nov 4, 2026: market cap $794.95M, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
-    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "Revenue of $1.3M against $35.8M of operating expenses. The percentages beside the expense bands are of revenue, which is why they read in the hundreds and thousands -- R&D alone is 20x the quarter's revenue. This is a pre-commercial company with a revenue line, not a business with a cost problem.",
+    "R&D is $25.6M, up 67% from $15.3M, and is 71% of all operating expense.",
+    "The \"D&A, net of credits\" band is $1.7M of depreciation and amortization less $1.5M of other operating income, net, which the filing presents as a credit inside operating expenses (source: 6-K, consolidated statements of operations). Netting them is what keeps the chart balanced; a negative band cannot be drawn.",
+    "Cost of revenue is the filing's own $0.094M and is stated exclusive of the depreciation and amortization shown below it, so the 93% gross margin is not comparable with a card whose cost of revenue carries D&A.",
+    "Non-operating income of $2.4M is almost all net interest income on the cash raised in the March 2026 reverse recapitalization. Over the nine months the same line is a $7.0M net EXPENSE, because of a $7.8M loss on earn-out share liabilities and a $1.9M loss on derivatives booked earlier in the year.",
+    "Share count is not comparable year over year: 304.9M weighted-average shares this quarter against 55.8M a year ago, after the reverse recapitalization completed March 26, 2026. Loss per share of $0.11 against $0.36 is therefore a smaller loss per share on a much larger share count, not a smaller loss.",
+    "Stock-based compensation is $11.6M for the nine months against $2.8M a year ago. The filing does not break it out by quarter, so no quarterly figure is shown.",
+    "The debt chart is a quarter behind this card: it still shows Q2 FY26 ($59.1M of debt, $312.8M of cash, -$29.7M of free cash flow). bin/debtfetch.py refused the Sep 30 column because the vendor publishes no quarterly free cash flow for it yet, and a hole is left rather than filled by hand. The 6-K's own cash and equivalents at September 30, 2026 is $286.5M.",
+    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice.",
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated.",
+    "The chart's gross profit node says 92% margin while the KPI above says 92.8%: the chart computes the ratio from the rounded $1.2M and $1.3M it draws, which is what keeps the drawn figures and the drawn percentages consistent with each other. The filed figures are $1,211K of gross profit on $1,305K of revenue.",
+    "Market figures as of Nov 12, 2026: market cap $759.83M, P/E n/a trailing, n/a forward (no trailing P/E: the last twelve months are a loss; no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "XNDU-debt",
    "own": "XNDU-own"
@@ -4043,41 +4070,41 @@
   {
    "t": "NBIS",
    "company": "Nebius Group",
-   "period": "Q2 FY26",
-   "periodEnd": "quarter ended Jun 30, 2026",
-   "reported": "reported Aug 12, 2026",
-   "img": "assets/financials/NBIS-Q2-FY26.png",
-   "source": "Nebius Group 6-K exhibit 99.1, Aug 12, 2026",
-   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d1.htm",
+   "period": "Q3 FY26",
+   "periodEnd": "quarter ended Sep 30, 2026",
+   "reported": "6-K filed Nov 12, 2026",
+   "img": "assets/financials/NBIS-Q3-FY26.png",
+   "source": "Nebius Group 6-K exhibit 99.1, Q3 2026 results, Nov 12, 2026",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-1.htm",
    "highlights": [
     {
      "k": "Revenue",
-     "v": "$582.3M",
-     "s": "+454% Y/Y"
+     "v": "$980.8M",
+     "s": "+571% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "77%",
-     "s": "$448.7M"
+     "v": "78%",
+     "s": "$761.1M"
     },
     {
-     "k": "Operating margin",
-     "v": "-30%",
-     "s": "-$175.9M"
+     "k": "Operating profit",
+     "v": "$50.4M",
+     "s": "first positive quarter"
     },
     {
      "k": "Net loss",
-     "v": "$190.4M",
-     "s": "33% of revenue"
+     "v": "($37.5M)",
+     "s": "(4%) margin"
     },
     {
      "k": "Market cap",
-     "v": "$38.78B",
+     "v": "$35.26B",
      "s": "moves with the share price"
     },
     {
      "k": "P/E",
-     "v": "861.4 \u00b7 n/a",
+     "v": "783.1 \u00b7 n/a",
      "s": "trailing \u00b7 forward"
     },
     {
@@ -4087,17 +4114,22 @@
     }
    ],
    "notes": [
-    "Segments: Nebius AI cloud $574.9M (+514% Y/Y), TripleTen $10.0M (-19%), Avride $1.0M. $3.6M of intersegment eliminations is netted against AI cloud on the chart so the three bars foot to $582.3M of revenue.",
-    "Figures follow the Aug 12, 2026 6-K exhibit. stockanalysis.com shows operating income of -$1.3M for the same quarter because it moves roughly $174.6M out of product development and SG&A; the filing's loss from operations is -$175.9M. The filing is used here. What that $174.6M consists of is not established -- share-based compensation was $102.5M that quarter, under 60% of it.",
-    "Depreciation and amortization of $259.7M is 45% of revenue and the single largest charge - larger than the net loss itself.",
-    "\"Non-operating & tax, net\" of $14.5M is $119.1M of interest expense and $13.7M of tax against $24.1M interest income, $81.5M other income and $12.7M of equity-method income.",
+    "Loss-making at the net line, so this uses the loss layout: gross profit plus the net loss fund every charge. $761.1M + $37.5M balances against the $798.6M on the right.",
+    "Segments: Nebius AI cloud $973.8M (+643% Y/Y), TripleTen $9.0M (-44%), Avride $1.3M. $3.3M of intersegment eliminations is netted against AI cloud on the chart so the three bars foot to $980.8M of revenue, the same convention the previous card used. The filing reports eliminations as one group-level line and does not attribute them to a segment (source: 6-K, segments and geographic areas note).",
+    "Income from OPERATIONS turned positive for the first time: $50.4M against a $130.2M loss a year ago. The net line is still a loss because of what sits below it.",
+    "The $87.9M \"Non-operating & tax, net\" band is $112.5M of interest expense and a $49.5M induced conversion expense, less $30.2M of interest income, $21.5M of other income and a $25.2M tax BENEFIT. The induced conversion charge is a one-off; interest expense is not.",
+    "Depreciation and amortization of $354.7M is 36% of revenue and the single largest charge -- nearly ten times the net loss. A year ago it was 68% of revenue, so the fixed cost is being spread over far more revenue.",
+    "Figures follow the Nov 12, 2026 6-K exhibit rather than the aggregator, which had not yet ingested this quarter when the card was built.",
+    "Cost of revenues and the three expense lines exclude depreciation and amortization, which the filing presents separately and the chart draws as its own band. The 78% gross margin is therefore not comparable with a card whose cost of revenue carries D&A.",
+    "Capital expenditure was $7,300.4M in the quarter against $980.8M of revenue, and operating cash flow was -$273.0M. The build is running at more than seven times the revenue it currently serves.",
+    "Share-based compensation is $58.7M, 6% of operating costs and expenses.",
+    "Adjusted EBITDA, the company's own measure, was $465.8M against a $5.2M loss a year ago. It excludes the D&A and interest that turn the operating profit into a net loss.",
     "Toloka sits in discontinued operations after the 2025 investment transaction and is not part of this statement.",
-    "Debt and coverage, Q2 FY26: $10.2B of debt against $8.0B of cash and -$3.4B of free cash flow for the quarter. Net debt $2.2B. Debt and cash are the Jun 30, 2026 balance sheet; free cash flow is that quarter's operating cash flow less capex (source: stockanalysis.com). Q2 capex of $5,657M reconciles with the 6-K's $8,130.3M first half.",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jun '26: -$0.12 actual against -$0.67 expected, beat by $0.55 (+82%). Sep '26 consensus is -$0.43 from 5 analysts, due Nov 10, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $38.78B, P/E 861.4 trailing, n/a forward (no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
-    "Market figures as of Oct 26, 2026: trailing 933.1, forward n/a \u2014 no forward P/E: no positive forward estimate. Share price over earnings, so unlike the other figures on this card it moves every session and is not from the filing (source: stockanalysis.com).",
-    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The debt chart is a quarter behind this card: it still shows Q2 FY26 ($10.2B of debt, $8.0B of cash, -$3.4B of free cash flow). bin/debtfetch.py refused the Sep 30 column -- the vendor has not published a balance sheet for it -- and a hole is left rather than filled by hand. The 6-K's own figures at September 30, 2026 are $7,425.6M of cash and $14,190.8M of debt ($187.5M current, $14,003.3M non-current), against $7,963.7M of non-current deferred revenue, which is customer cash already received.",
+    "The earnings chart predates this report and could not be refreshed: bin/epsfetch.py is returning HTTP 403 for every ticker. Diluted loss per share from continuing operations was $0.13 against $0.50 a year ago, on 298.0M weighted-average shares against 241.1M.",
+    "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice.",
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated.",
+    "Market figures as of Nov 12, 2026: market cap $35.26B, P/E 783.1 trailing, n/a forward (no forward P/E: no positive forward estimate); pays no dividend. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "NBIS-debt",
    "eps": "NBIS-eps",
@@ -4652,5 +4684,5 @@
    "debt": "APP-debt"
   }
  ],
- "marketAsOf": "Nov 11, 2026"
+ "marketAsOf": "Nov 12, 2026"
 }

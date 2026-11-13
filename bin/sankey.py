@@ -478,7 +478,13 @@ def build_loss(spec):
     label(X["revenue"], 0.895, "Revenue",
           [m(rev), f"{pct(spec.get('revenue_yoy'))} Y/Y" if spec.get("revenue_yoy") is not None else ""],
           color="#111", va="bottom")
-    label(X["gross"], 0.895, "Gross profit",
+    # same clash again, one stage up: a gross margin in the high seventies makes
+    # the gross profit bar tall enough to reach its own sub-line (NBIS Q3 FY26 at
+    # 78% was the first card to hit it). Plotly settles the bar height, so the
+    # overlap cannot be predicted here -- a card that hits it lifts the label
+    # explicitly, and every card that does not is untouched.
+    gl = spec.get("gross_label") or {}
+    label(X["gross"] + gl.get("dx", 0.0), 0.895 + gl.get("dy", 0.0), "Gross profit",
           [m(gross), f"{gross / rev * 100:.0f}% margin"], color=PROFIT, va="bottom")
     if cor_id is not None:
         # The label is drawn at the node's own x with a fixed offset below its
