@@ -9,5 +9,9 @@ __pycache__/
 # it, so these must never be committed.
 holdings.json
 holdings.html
-trading.json
-trading.html
+trading-research.json
+trading-research.html
+chains.json
+journal.json
+journal.html
+wiki/trading-journal.md

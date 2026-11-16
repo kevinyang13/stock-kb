@@ -1,0 +1,152 @@
+{
+  "generated": "2026-11-14",
+  "generatedLabel": "Nov 14, 2026",
+  "spot": 100,
+  "sigma": 5,
+  "note": "Every strike and premium below is a round illustrative number on a $100 stock, chosen so the shapes are comparable. They are not quotes. One expected-move band is $5 here, so +/-1 sigma is 95-105 and +/-2 sigma is 90-110.",
+  "scale": [
+    {"v": -2, "name": "Hard down", "band": "below -2 sigma",
+     "say": "A break, not a dip. Gaps, guidance cuts, a failed catalyst.",
+     "prob": "about 2.5% of the time on a normal distribution"},
+    {"v": -1, "name": "Drift down", "band": "-2 to -1 sigma",
+     "say": "Lower, but orderly. It gives back part of a move.",
+     "prob": "about 13.5%"},
+    {"v": 0, "name": "Goes nowhere", "band": "inside +/-1 sigma",
+     "say": "Chops in the range. This is the single most common outcome.",
+     "prob": "about 68%"},
+    {"v": 1, "name": "Drift up", "band": "+1 to +2 sigma",
+     "say": "Higher, but it does not run away. A grind.",
+     "prob": "about 13.5%"},
+    {"v": 2, "name": "Hard up", "band": "above +2 sigma",
+     "say": "A re-rating. Beat and raise, a deal, a squeeze.",
+     "prob": "about 2.5%"}
+  ],
+  "strategies": [
+    {
+      "id": "long-call", "name": "Long Call", "tone": "#2fa36b",
+      "flow": "debit", "best": [2], "ok": [1],
+      "legs": [{"k": "call", "n": 1, "strike": 100, "px": 3.50}],
+      "trade": "Buy one call. You pay now for the right to buy 100 shares at the strike.",
+      "why": "The cheapest way to own a big up move. Your loss is capped at what you paid and your upside is not capped at all.",
+      "when": "You want +2 and you want it before expiry. A long call needs the move AND the clock; at +1 the premium can eat the whole gain.",
+      "watch": "Time decay runs against you every day, and it accelerates in the last weeks. Being right late is the same as being wrong."
+    },
+    {
+      "id": "long-put", "name": "Long Put", "tone": "#8b6cd8",
+      "flow": "debit", "best": [-2], "ok": [-1],
+      "legs": [{"k": "put", "n": 1, "strike": 100, "px": 3.40}],
+      "trade": "Buy one put. You pay now for the right to sell 100 shares at the strike.",
+      "why": "A short position with a known worst case. Shorting stock has unlimited loss; a put cannot cost more than the premium.",
+      "when": "You want -2. Puts also carry a volatility bid, so a sharp drop usually pays twice: direction and the IV spike.",
+      "watch": "You pay up for that IV. Buying puts after the panic has started means buying the insurance after the fire."
+    },
+    {
+      "id": "covered-call", "name": "Covered Call", "tone": "#3f9bd4",
+      "flow": "credit", "best": [0], "ok": [1, -1],
+      "legs": [
+        {"k": "stock", "n": 100, "px": 100},
+        {"k": "call", "n": -1, "strike": 105, "px": 2.00}
+      ],
+      "trade": "Own 100 shares, sell one call against them. You keep the premium; above the strike the shares get called away.",
+      "why": "It turns a flat stock into income. Premium is the only line on the page that pays you for nothing happening.",
+      "when": "You hold the shares, you expect 0, and you would be content selling at the strike. The ideal outcome is the stock finishing just below it.",
+      "watch": "It is not downside protection. The premium softens a drop by a few percent and nothing more. And it caps a +2 you would otherwise have had."
+    },
+    {
+      "id": "cash-secured-put", "name": "Cash Secured Put", "tone": "#e08a3c",
+      "flow": "credit", "best": [0], "ok": [1],
+      "legs": [{"k": "put", "n": -1, "strike": 95, "px": 2.20}],
+      "trade": "Sell one put and set aside the cash to buy 100 shares at the strike if it is assigned.",
+      "why": "You get paid to place a limit order. Either the stock stays up and you keep the premium, or you buy the stock you wanted at a discount to today.",
+      "when": "You expect 0 to +1 and you genuinely want to own the shares lower. If you would not want them at the strike, this is just a short put.",
+      "watch": "Assignment is the feature, not the accident, but it arrives exactly when the stock is falling. Size it as if it will be assigned, because sometimes it is."
+    },
+    {
+      "id": "protective-put", "name": "Protective Put", "tone": "#e85f9b",
+      "flow": "debit", "best": [1, 2], "ok": [0],
+      "legs": [
+        {"k": "stock", "n": 100, "px": 100},
+        {"k": "put", "n": 1, "strike": 95, "px": 1.80}
+      ],
+      "trade": "Own 100 shares and buy a put under them. The put is a floor you pay for.",
+      "why": "It keeps the whole upside of the stock and puts a hard bottom under the downside. This is the only structure here that does both.",
+      "when": "You want +1 or +2 but a -2 would genuinely hurt: earnings, a binary event, a position that has grown too large to stomach.",
+      "watch": "Insurance has a cost and it expires. Rolled quarterly it can quietly eat several percent a year, which is a real drag on a position you were right about."
+    },
+    {
+      "id": "bull-call-spread", "name": "Bull Call Spread", "tone": "#3fbd87",
+      "flow": "debit", "best": [1], "ok": [2],
+      "legs": [
+        {"k": "call", "n": 1, "strike": 100, "px": 3.50},
+        {"k": "call", "n": -1, "strike": 110, "px": 1.10}
+      ],
+      "trade": "Buy a call, sell a higher one. The call you sell pays for part of the one you buy.",
+      "why": "A long call for about a third less. You give up everything above the upper strike, which at +1 you were never going to reach anyway.",
+      "when": "You want +1 and you can name the target. Put the short strike at the target; that is what you are selling.",
+      "watch": "The cap is real. If it runs to +2 you watch the rest go by. The trade is cheaper because it is worth less."
+    },
+    {
+      "id": "bear-put-spread", "name": "Bear Put Spread", "tone": "#e8475f",
+      "flow": "debit", "best": [-1], "ok": [-2],
+      "legs": [
+        {"k": "put", "n": 1, "strike": 100, "px": 3.40},
+        {"k": "put", "n": -1, "strike": 90, "px": 1.00}
+      ],
+      "trade": "Buy a put, sell a lower one. Same idea as the bull call spread, pointed down.",
+      "why": "A cheaper way to be short. It also sells some of the elevated downside IV back to the market instead of paying all of it.",
+      "when": "You want -1 to a level you can name: a support shelf, a gap fill, a prior low. Sell that level.",
+      "watch": "Capped at the lower strike, so it is the wrong structure for a crash. If you want the tail, own the put outright."
+    },
+    {
+      "id": "iron-condor", "name": "Iron Condor", "tone": "#b8863a",
+      "flow": "credit", "best": [0], "ok": [],
+      "legs": [
+        {"k": "put", "n": -1, "strike": 95, "px": 2.20},
+        {"k": "put", "n": 1, "strike": 90, "px": 1.00},
+        {"k": "call", "n": -1, "strike": 105, "px": 2.00},
+        {"k": "call", "n": 1, "strike": 110, "px": 1.10}
+      ],
+      "trade": "Sell a put spread and a call spread at the same time. Four legs, one credit, a defined loss on each side.",
+      "why": "The purest bet on 0. It is paid by both tails for the stock staying in the middle, and the long wings cap what either tail can cost.",
+      "when": "You expect the range to hold and IV is rich. Sell the wings outside the expected move, so the band you need is the one that happens 68% of the time.",
+      "watch": "Small win, large loss, frequently. The credit is far smaller than the maximum loss, so a few breaks undo a lot of wins. This is a sizing problem, not a picking problem."
+    },
+    {
+      "id": "straddle", "name": "Long Straddle", "tone": "#3f7fd4",
+      "flow": "debit", "best": [-2, 2], "ok": [],
+      "legs": [
+        {"k": "call", "n": 1, "strike": 100, "px": 3.50},
+        {"k": "put", "n": 1, "strike": 100, "px": 3.40}
+      ],
+      "trade": "Buy the call and the put at the same strike. You own both directions.",
+      "why": "It takes direction out of the question. You are betting on size alone, which is a different and sometimes easier call to make.",
+      "when": "You are confident about -2 or +2 but have no idea which: a court ruling, a trial readout, a deal that either closes or does not.",
+      "watch": "You pay two premiums, so the move has to clear both. On a known event the price already has the move in it: a result that merely meets expectations collapses IV and both legs lose."
+    },
+    {
+      "id": "strangle", "name": "Long Strangle", "tone": "#e07f3c",
+      "flow": "debit", "best": [-2, 2], "ok": [],
+      "legs": [
+        {"k": "call", "n": 1, "strike": 105, "px": 2.00},
+        {"k": "put", "n": 1, "strike": 95, "px": 2.20}
+      ],
+      "trade": "Same as a straddle but with both strikes out of the money. Cheaper, and further to go.",
+      "why": "Roughly 40% less to put on than the straddle here. For a move you think will be genuinely violent, the cheaper structure gives more leverage per dollar.",
+      "when": "You want -2 or +2 specifically, not just a move. A strangle that only gets +1 loses, where a straddle at least recovers part.",
+      "watch": "The dead zone between the strikes is wider, and the full loss is on the table, not a near miss. Two ways to lose everything instead of one."
+    },
+    {
+      "id": "calendar-spread", "name": "Calendar Spread", "tone": "#2fa36b",
+      "flow": "debit", "best": [0], "ok": [],
+      "schematic": true,
+      "legs": [
+        {"k": "call", "n": -1, "strike": 100, "px": 2.10, "exp": "front"},
+        {"k": "call", "n": 1, "strike": 100, "px": 3.70, "exp": "back"}
+      ],
+      "trade": "Sell a near-dated option and buy the same strike further out. Same strike, two expiries.",
+      "why": "The front month decays faster than the back month. You collect that difference every day the stock sits still.",
+      "when": "You expect 0 right through the near expiry, and you want to be long volatility afterwards. It is the one structure here that profits from time and from IV rising.",
+      "watch": "Its curve is the only one on this page that is not terminal payoff arithmetic. The tent is the position's VALUE at the front expiry, which depends on what implied volatility does in the back month, and that is an estimate, not a settlement."
+    }
+  ]
+}

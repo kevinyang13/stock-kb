@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<title>Stock Signal Desk &middot; Strategies</title>
+<link rel="stylesheet" href="assets/site.css?v=1794674346">
+<style>
+  :root{--green:#5fb08a;--red:#e8537f;--amber:#d9913f}
+
+  .notadvice{font-family:var(--sans);font-size:11.5px;line-height:1.55;
+    color:var(--cream);border:1px solid var(--amber);border-left-width:3px;
+    border-radius:7px;padding:10px 12px;margin:0 0 14px;
+    background:rgba(217,145,63,.08)}
+  .notadvice b{color:var(--amber)}
+
+  /* --- the outlook scale ------------------------------------------------ */
+  .scale{border:1px solid var(--teal-line);border-radius:10px;
+    background:rgba(0,0,0,.10);padding:13px 14px 15px;margin:0 0 14px}
+  .scale h2{margin:0 0 3px;font-family:var(--sans);font-size:12px;
+    letter-spacing:.10em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .scale .lede{font-family:var(--sans);font-size:11.5px;color:var(--cream-dim);
+    line-height:1.6;margin:0 0 12px;max-width:74ch}
+  .band{display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+    border:1px solid var(--teal-line);border-radius:8px;overflow:hidden}
+  .band div{padding:9px 10px 10px;border-right:1px solid var(--teal-line);
+    font-family:var(--sans);background:rgba(0,0,0,.14)}
+  .band div:last-child{border-right:0}
+  .band .z0{background:rgba(211,162,77,.13)}
+  .band .v{font-size:17px;font-weight:700;line-height:1.1;
+    font-variant-numeric:tabular-nums;margin:0 0 3px}
+  .band .n{font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--cream);margin:0 0 5px}
+  .band .s{font-size:10.5px;color:var(--cream-dim);line-height:1.5}
+  .band .p{font-size:9.5px;color:var(--cream-dim);opacity:.8;margin-top:5px}
+  .vneg{color:var(--red)} .vpos{color:var(--green)} .vmid{color:var(--gold)}
+  /* Five columns of sixty pixels is one word per line. On a phone the scale
+     reads better as five rows, with the number and the name on one line. */
+  @media (max-width:699px){
+    .band{grid-template-columns:1fr}
+    .band div{border-right:0;border-bottom:1px solid var(--teal-line)}
+    .band div:last-child{border-bottom:0}
+    .band .v{display:inline-block;font-size:15px;margin:0 9px 0 0}
+    .band .n{display:inline-block;margin:0 0 5px}
+  }
+
+  /* --- filter ----------------------------------------------------------- */
+  .filter{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 13px}
+  .filter .lab{font-family:var(--sans);font-size:10px;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--cream-dim);margin-right:3px}
+  .fbtn{font-family:var(--sans);font-size:12.5px;font-weight:700;line-height:1;
+    color:var(--cream-dim);background:transparent;border:1px solid var(--teal-line);
+    border-radius:7px;padding:7px 12px;cursor:pointer;font-variant-numeric:tabular-nums}
+  .fbtn:hover{border-color:var(--gold);color:var(--gold)}
+  .fbtn.on{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+  .fbtn.all{font-weight:400;font-size:11.5px}
+  .fcount{font-family:var(--sans);font-size:10.5px;color:var(--cream-dim);margin-left:4px}
+
+  /* --- cards ------------------------------------------------------------ */
+  #out{display:grid;grid-template-columns:1fr;gap:12px;align-items:start}
+  @media (min-width:760px){ #out{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (min-width:1240px){ #out{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  #out > .st{min-width:0}
+
+  .st{border:1px solid var(--teal-line);border-radius:10px;overflow:hidden;
+    background:rgba(0,0,0,.10)}
+  .st.dim{opacity:.26}
+  .st > h2{margin:0;padding:10px 13px;background:var(--teal-deep);
+    border-bottom:1px solid var(--teal-line);display:flex;flex-wrap:wrap;
+    align-items:center;gap:6px 9px;
+    font-family:var(--sans);font-size:12.5px;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--gold);font-weight:700}
+  .st > h2 .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .flow{font-family:var(--sans);font-size:9px;letter-spacing:.1em;
+    text-transform:uppercase;font-weight:700;border-radius:4px;padding:3px 6px;
+    margin-left:auto}
+  .flow.debit{background:rgba(232,83,127,.17);color:var(--red);
+    border:1px solid rgba(232,83,127,.45)}
+  .flow.credit{background:rgba(95,176,138,.17);color:var(--green);
+    border:1px solid rgba(95,176,138,.45)}
+  .st .body{padding:12px 13px 14px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 11px}
+  .chip{font-family:var(--sans);font-size:10.5px;font-weight:700;line-height:1;
+    border-radius:5px;padding:5px 8px;border:1px solid var(--teal-line);
+    color:var(--cream-dim);font-variant-numeric:tabular-nums}
+  .chip.best{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+  .chip.ok{border-color:var(--gold);color:var(--gold)}
+  .chip .w{font-weight:400;letter-spacing:.04em;margin-left:4px;opacity:.85}
+
+  .chart{margin:0 0 10px}
+  .chart svg{display:block;width:100%;height:auto}
+  .schem{font-family:var(--sans);font-size:9.5px;color:var(--amber);
+    margin:4px 0 0;line-height:1.45}
+
+  .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;
+    margin:0 0 12px}
+  .fact{border:1px solid var(--teal-line);border-radius:7px;padding:7px 9px;
+    background:rgba(0,0,0,.16);min-width:0}
+  .fact .k{font-family:var(--sans);font-size:8px;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--cream-dim);margin:0 0 3px}
+  .fact .v{font-family:var(--sans);font-size:13px;font-weight:700;line-height:1.15;
+    color:var(--cream);font-variant-numeric:tabular-nums;overflow-wrap:break-word}
+  .fact.pos .v{color:var(--green)} .fact.neg .v{color:var(--red)}
+
+  .rows{margin:0}
+  .rows dt{font-family:var(--sans);font-size:9px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--gold);font-weight:700;margin:0 0 4px}
+  .rows dd{font-family:var(--sans);font-size:11.5px;color:var(--cream-dim);
+    line-height:1.6;margin:0 0 11px}
+  .rows dd:last-child{margin-bottom:0}
+  .rows dd b{color:var(--cream);font-weight:700}
+
+  .err{font-family:var(--sans);font-size:12px;color:var(--red);
+    border:1px solid var(--red);border-radius:7px;padding:11px 13px}
+  footer.foot{font-family:var(--sans);font-size:10.5px;color:var(--cream-dim);
+    padding:6px 8px 20px;line-height:1.6}
+  footer.foot code{font-family:SFMono-Regular,Menlo,Consolas,monospace;font-size:10px}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <h1>STOCK SIGNAL DESK</h1>
+  <p>Strategies &mdash; what each option structure is for</p>
+  <nav class="tabs">
+    <a class="tab" href="heatmap.html">Heatmap</a>
+    <a class="tab" href="catalysts.html">Catalysts</a>
+    <a class="tab" href="brief.html">Morning Brief</a>
+    <a class="tab" href="events.html">Events</a>
+    <a class="tab" href="financials.html">Financials</a>
+    <a class="tab" href="options.html">Strategies</a>
+    <a class="tab" href="simulator.html">Simulator</a>
+    <a class="tab" href="map.html">Data Centers</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <p class="notadvice">
+    <b>A reference, not a recommendation.</b> This page explains what each structure does and
+    which view it expresses. It says nothing about any particular stock, and nothing on it is
+    investment advice. Every strike and premium is a round illustrative figure on a $100 stock,
+    picked so the eleven shapes can be compared side by side &mdash; they are not quotes.
+  </p>
+
+  <section class="scale">
+    <h2>The &minus;2 to +2 scale</h2>
+    <p class="lede" id="lede"></p>
+    <div class="band" id="band"></div>
+  </section>
+
+  <div class="filter" id="filter"></div>
+  <div id="out"></div>
+
+</div>
+
+<footer class="foot">
+  Payoff curves are computed from each structure&rsquo;s legs in <code>options.json</code>,
+  not drawn by hand &mdash; the shape, the break-evens and the maximum gain and loss all come
+  out of the same arithmetic.
+  <br>Teaching material &middot; not investment advice.
+</footer>
+
+<script src="assets/site.js?v=1794674346"></script>
+<script>
+(function () {
+  "use strict";
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function money(v, d) {
+    var n = Math.abs(v);
+    return (v < 0 ? "−$" : "$") +
+      n.toLocaleString("en-US", { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 });
+  }
+  function sgn(v) { return (v > 0 ? "+" : "") + money(v).replace("+", ""); }
+  function vlabel(v) { return (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v); }
+
+  var DATA = null;
+
+  // ---- payoff -----------------------------------------------------------
+  // One contract is 100 shares, so every option leg is scaled by 100 and a
+  // stock leg carries its own share count. n is signed: +1 long, -1 short.
+  function pnl(s, S) {
+    if (s.schematic) return schematic(s, S);
+    var v = 0;
+    s.legs.forEach(function (l) {
+      if (l.k === "stock") { v += l.n * (S - l.px); return; }
+      var intr = l.k === "call" ? Math.max(0, S - l.strike) : Math.max(0, l.strike - S);
+      v += l.n * 100 * (intr - l.px);
+    });
+    return v;
+  }
+
+  // A calendar does not settle on one date, so it has no terminal payoff.
+  // What it has is a VALUE at the front expiry: the short leg settles at
+  // intrinsic, the long leg keeps whatever time value it still has, and the
+  // intrinsic cancels. So P/L per share is simply the back month's remaining
+  // time value minus the debit paid -- a tent that peaks at the strike and
+  // falls away to the full debit on either side. The peak height and the
+  // width of the tent are assumptions about implied volatility, which is why
+  // this one curve is labelled on the card as a shape rather than a figure.
+  function schematic(s, S) {
+    var K = s.legs[0].strike;
+    var debit = s.legs.reduce(function (a, l) { return a - l.n * l.px; }, 0);
+    var TV0 = 2.60, W = 12;
+    return (TV0 * Math.exp(-Math.pow((S - K) / W, 2)) + debit) * 100;
+  }
+
+  // Statistics are taken over a wide domain, not the drawn window, so that a
+  // short put's real worst case -- the stock going to zero -- is counted.
+  function stats(s) {
+    var spot = DATA.spot, lo = 0, hi = spot * 3, N = 1200;
+    var min = Infinity, max = -Infinity, be = [], prev = null;
+    for (var i = 0; i <= N; i++) {
+      var S = lo + (hi - lo) * i / N, v = pnl(s, S);
+      if (v < min) min = v;
+      if (v > max) max = v;
+      if (prev && ((prev.v < 0 && v >= 0) || (prev.v > 0 && v <= 0))) {
+        var t = (0 - prev.v) / (v - prev.v);
+        be.push(prev.S + (S - prev.S) * t);
+      }
+      prev = { S: S, v: v };
+    }
+    // Only the upside runs forever. A stock cannot go below zero, so the
+    // loss on long shares or a short put is large but bounded -- calling it
+    // unlimited would be wrong, and wrong in the direction that matters. So
+    // both "open" flags are read off the RIGHT-hand slope alone: rising means
+    // unlimited gain, falling means unlimited loss (a net short call).
+    var e = 0.5, slope = (pnl(s, hi) - pnl(s, hi - e)) / e;
+    return {
+      max: max, min: min, be: be,
+      maxOpen: slope > 1e-6,
+      minOpen: slope < -1e-6
+    };
+  }
+
+  // ---- the diagram ------------------------------------------------------
+  var W = 460, H = 210, PAD = { l: 42, r: 10, t: 12, b: 26 };
+
+  function chart(s, st) {
+    var spot = DATA.spot, sig = DATA.sigma;
+    var x0 = spot - sig * 4, x1 = spot + sig * 4;          // 80 .. 120
+    var pts = [], N = 320, ymin = 0, ymax = 0;
+    for (var i = 0; i <= N; i++) {
+      var S = x0 + (x1 - x0) * i / N, v = pnl(s, S);
+      pts.push([S, v]);
+      if (v < ymin) ymin = v;
+      if (v > ymax) ymax = v;
+    }
+    var padY = (ymax - ymin) * 0.14 || 50;
+    ymin -= padY; ymax += padY;
+
+    var iw = W - PAD.l - PAD.r, ih = H - PAD.t - PAD.b;
+    function X(S) { return PAD.l + (S - x0) / (x1 - x0) * iw; }
+    function Y(v) { return PAD.t + (ymax - v) / (ymax - ymin) * ih; }
+
+    var g = [], zeroY = Y(0);
+
+    // outlook zones behind everything, so a reader can see at a glance which
+    // band of the scale the green part of the curve sits over
+    var zones = [
+      [x0, spot - 2 * sig, -2], [spot - 2 * sig, spot - sig, -1],
+      [spot - sig, spot + sig, 0],
+      [spot + sig, spot + 2 * sig, 1], [spot + 2 * sig, x1, 2]
+    ];
+    zones.forEach(function (z) {
+      var on = (s.best || []).indexOf(z[2]) >= 0;
+      g.push('<rect x="' + X(z[0]).toFixed(1) + '" y="' + PAD.t +
+        '" width="' + (X(z[1]) - X(z[0])).toFixed(1) + '" height="' + ih +
+        '" fill="' + (on ? "rgba(211,162,77,.15)" : "rgba(255,255,255,.028)") + '"/>');
+      g.push('<text x="' + ((X(z[0]) + X(z[1])) / 2).toFixed(1) + '" y="' + (PAD.t + 11) +
+        '" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" ' +
+        'font-size="9" font-weight="700" fill="' +
+        (on ? "#d3a24d" : "rgba(234,229,223,.30)") + '">' + vlabel(z[2]) + "</text>");
+    });
+    zones.slice(1).forEach(function (z) {
+      g.push('<line x1="' + X(z[0]).toFixed(1) + '" y1="' + PAD.t + '" x2="' +
+        X(z[0]).toFixed(1) + '" y2="' + (PAD.t + ih) +
+        '" stroke="rgba(50,107,100,.55)" stroke-width="1"/>');
+    });
+
+    // the curve, as an area back along the zero line, clipped twice so the
+    // part above zero reads green and the part below reads red
+    var line = pts.map(function (p, i) {
+      return (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1);
+    }).join(" ");
+    var area = line + " L" + X(pts[pts.length - 1][0]).toFixed(1) + " " + zeroY.toFixed(1) +
+      " L" + X(pts[0][0]).toFixed(1) + " " + zeroY.toFixed(1) + " Z";
+    var uid = "c" + s.id;
+    g.push('<defs><clipPath id="' + uid + 'u"><rect x="0" y="' + PAD.t + '" width="' + W +
+      '" height="' + Math.max(0, zeroY - PAD.t).toFixed(1) + '"/></clipPath>' +
+      '<clipPath id="' + uid + 'd"><rect x="0" y="' + zeroY.toFixed(1) + '" width="' + W +
+      '" height="' + Math.max(0, PAD.t + ih - zeroY).toFixed(1) + '"/></clipPath></defs>');
+    g.push('<path d="' + area + '" fill="rgba(95,176,138,.30)" clip-path="url(#' + uid + 'u)"/>');
+    g.push('<path d="' + area + '" fill="rgba(232,83,127,.28)" clip-path="url(#' + uid + 'd)"/>');
+
+    // zero line, spot, strikes
+    g.push('<line x1="' + PAD.l + '" y1="' + zeroY.toFixed(1) + '" x2="' + (W - PAD.r) +
+      '" y2="' + zeroY.toFixed(1) +
+      '" stroke="#c8c2ba" stroke-width="1" stroke-dasharray="3 3"/>');
+    g.push('<line x1="' + X(spot).toFixed(1) + '" y1="' + PAD.t + '" x2="' +
+      X(spot).toFixed(1) + '" y2="' + (PAD.t + ih) +
+      '" stroke="rgba(211,162,77,.5)" stroke-width="1" stroke-dasharray="2 3"/>');
+    (s.legs || []).forEach(function (l) {
+      if (l.k === "stock" || l.strike == null) return;
+      g.push('<line x1="' + X(l.strike).toFixed(1) + '" y1="' + (PAD.t + ih - 7) + '" x2="' +
+        X(l.strike).toFixed(1) + '" y2="' + (PAD.t + ih) +
+        '" stroke="' + (l.n > 0 ? "#5fb08a" : "#e8537f") + '" stroke-width="2"/>');
+    });
+    g.push('<path d="' + line + '" fill="none" stroke="' + esc(s.tone) +
+      '" stroke-width="2.2" stroke-linejoin="round"/>');
+
+    // break-evens inside the drawn window
+    (st.be || []).forEach(function (b) {
+      if (b < x0 || b > x1) return;
+      g.push('<circle cx="' + X(b).toFixed(1) + '" cy="' + zeroY.toFixed(1) +
+        '" r="3.2" fill="#d3a24d"/>');
+    });
+
+    // axes: price along the bottom, P/L at the left
+    [x0, spot, x1].forEach(function (S) {
+      g.push('<text x="' + X(S).toFixed(1) + '" y="' + (H - 9) +
+        '" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" ' +
+        'font-size="9" fill="#c8c2ba">' + (S === spot ? "$" + S + " now" : "$" + S) + "</text>");
+    });
+    [[ymax, PAD.t + 8], [0, zeroY - 4]].forEach(function (p) {
+      g.push('<text x="' + (PAD.l - 5) + '" y="' + p[1].toFixed(1) +
+        '" text-anchor="end" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" ' +
+        'font-size="9" fill="#c8c2ba">' +
+        (p[0] === 0 ? "$0" : money(Math.round(p[0] / 50) * 50)) + "</text>");
+    });
+
+    return '<div class="chart"><svg viewBox="0 0 ' + W + " " + H + '" ' +
+      'role="img" aria-label="Payoff at expiry for ' + esc(s.name) + '">' +
+      g.join("") + "</svg>" +
+      (s.schematic
+        ? '<p class="schem">Shape, not settlement — this is the position’s value ' +
+          'at the front expiry, which depends on implied volatility in the back month. ' +
+          'Every other curve here is arithmetic.</p>'
+        : "") + "</div>";
+  }
+
+  // ---- cards ------------------------------------------------------------
+  function card(s) {
+    var st = stats(s), h = [];
+    var chips = (s.best || []).map(function (v) {
+      return '<span class="chip best">' + vlabel(v) + '<span class="w">best</span></span>';
+    }).concat((s.ok || []).map(function (v) {
+      return '<span class="chip ok">' + vlabel(v) + '<span class="w">works</span></span>';
+    }));
+
+    h.push('<section class="st" id="s-' + esc(s.id) + '" data-best="' +
+      (s.best || []).join(",") + '" data-ok="' + (s.ok || []).join(",") + '">');
+    h.push('<h2><span class="dot" style="background:' + esc(s.tone) + '"></span>' +
+      esc(s.name) + '<span class="flow ' + esc(s.flow) + '">' + esc(s.flow) + "</span></h2>");
+    h.push('<div class="body">');
+    h.push('<div class="chips">' + chips.join("") + "</div>");
+    h.push(chart(s, st));
+
+    h.push('<div class="facts">');
+    h.push(fact("Max gain", st.maxOpen ? "Unlimited" : sgn(st.max), st.maxOpen ? 1 : st.max));
+    h.push(fact("Max loss", st.minOpen ? "Unlimited" : sgn(st.min), st.minOpen ? -1 : st.min));
+    h.push(fact("Break-even", st.be.length
+      ? st.be.map(function (b) { return "$" + b.toFixed(2); }).join(" / ")
+      : "—"));
+    h.push("</div>");
+
+    h.push('<dl class="rows">');
+    h.push("<dt>The trade</dt><dd>" + esc(s.trade) + "</dd>");
+    h.push("<dt>Why use it</dt><dd>" + esc(s.why) + "</dd>");
+    h.push("<dt>When</dt><dd>" + esc(s.when) + "</dd>");
+    h.push("<dt>Watch out</dt><dd>" + esc(s.watch) + "</dd>");
+    h.push("</dl></div></section>");
+    return h.join("");
+  }
+  function fact(k, v, signed) {
+    var c = signed == null ? "" : signed > 0 ? " pos" : signed < 0 ? " neg" : "";
+    return '<div class="fact' + c + '"><p class="k">' + esc(k) + '</p><div class="v">' +
+      esc(v) + "</div></div>";
+  }
+
+  // ---- the scale and the filter -----------------------------------------
+  function scaleBlock(j) {
+    document.getElementById("lede").textContent =
+      "Every structure below is an answer to one question: how far, and which way, by when. " +
+      "The scale measures the move in expected moves — one band is what the options " +
+      "market itself is pricing, " + money(j.sigma) + " on this " + money(j.spot) +
+      " stock. 0 is inside the first band, where the stock spends most of its life. " +
+      "Picking a structure starts with picking a number.";
+    document.getElementById("band").innerHTML = j.scale.map(function (z) {
+      return '<div class="' + (z.v === 0 ? "z0" : "") + '">' +
+        '<p class="v ' + (z.v < 0 ? "vneg" : z.v > 0 ? "vpos" : "vmid") + '">' +
+        vlabel(z.v) + "</p>" +
+        '<p class="n">' + esc(z.name) + "</p>" +
+        '<p class="s">' + esc(z.say) + "</p>" +
+        '<p class="p">' + esc(z.band) + " &middot; " + esc(z.prob) + "</p></div>";
+    }).join("");
+  }
+
+  var active = null;
+  function filterBlock() {
+    var h = ['<span class="lab">Show me what works at</span>'];
+    [-2, -1, 0, 1, 2].forEach(function (v) {
+      h.push('<button class="fbtn" data-v="' + v + '">' + vlabel(v) + "</button>");
+    });
+    h.push('<button class="fbtn all on" data-v="all">All eleven</button>');
+    h.push('<span class="fcount" id="fcount"></span>');
+    var f = document.getElementById("filter");
+    f.innerHTML = h.join("");
+    f.addEventListener("click", function (e) {
+      var b = e.target.closest ? e.target.closest(".fbtn") : null;
+      if (!b) return;
+      var v = b.getAttribute("data-v");
+      active = v === "all" ? null : +v;
+      [].forEach.call(f.querySelectorAll(".fbtn"), function (x) {
+        x.classList.toggle("on", x === b);
+      });
+      apply();
+    });
+  }
+  function apply() {
+    var n = 0;
+    [].forEach.call(document.querySelectorAll("#out > .st"), function (el) {
+      if (active === null) { el.classList.remove("dim"); n++; return; }
+      var best = (el.getAttribute("data-best") || "").split(",").filter(Boolean).map(Number);
+      var ok = (el.getAttribute("data-ok") || "").split(",").filter(Boolean).map(Number);
+      var hit = best.indexOf(active) >= 0 || ok.indexOf(active) >= 0;
+      el.classList.toggle("dim", !hit);
+      if (hit) n++;
+    });
+    document.getElementById("fcount").textContent = active === null
+      ? ""
+      : n + (n === 1 ? " structure expresses " : " structures express ") + vlabel(active);
+  }
+
+  function boot() {
+    fetch("options.json", { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("options.json " + r.status);
+      return r.json();
+    }).then(function (j) {
+      DATA = j;
+      scaleBlock(j);
+      document.getElementById("out").innerHTML =
+        (j.strategies || []).map(card).join("") ||
+        '<p class="err">options.json has no strategies.</p>';
+      filterBlock();
+    }).catch(function (e) {
+      document.getElementById("out").innerHTML =
+        '<p class="err">Could not load options.json — ' + esc(e.message) +
+        ". Serve the folder over http (python3 -m http.server 8099); a file:// page " +
+        "cannot fetch it.</p>";
+    });
+  }
+
+  if (window.Site && Site.nav) Site.nav();
+  boot();
+})();
+</script>
+</body>
+</html>

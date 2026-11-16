@@ -3387,3 +3387,183 @@ $463.8M of cash and its first positive free cash flow, $33.5M.
 **No earnings charts were refreshed.** `bin/epsfetch.py` returns HTTP 403 for every ticker tried,
 NVDA included, so the Nasdaq endpoints are refusing this host rather than failing on one name. The
 stale columns are flagged on each card with the reported figure stated in the note.
+
+---
+
+## 2026-11-13 — trading journal page, local only
+
+**Source**: none. No new document was ingested into `raw/`.
+
+**What changed**: added `wiki/trading-journal.md`, a per-ticker record of actual trades
+with a P/L bridge for each position, starting with one ticker. The file is listed in
+`.gitignore` beside `holdings.json` and `trading.json`, so it is never committed and
+Pages never serves it.
+
+**Why it is not in `wiki/index.md`**: that file is tracked and public. Linking the
+journal from it would publish the page's name and its existence, so the journal is
+deliberately unindexed and says so at its own head. This is the one page that breaks
+the "always update the index" rule, for the same reason the holdings and trading tabs
+are not in the nav.
+
+**Verification**: `git check-ignore -v wiki/trading-journal.md` resolves to the
+`.gitignore` line, and `git status --short` after writing the page lists only
+`.gitignore` itself. No figure from the page enters any tracked file, this entry
+included.
+
+## 2026-11-13 — Journal: print to PDF
+
+Added a **Print / PDF** button to the local-only Journal page, with a print stylesheet
+beside it. Three things the screen page does are wrong on paper, so print undoes each:
+
+- **The palette inverts.** The site is light text on dark teal; printed with background
+  graphics off that is invisible, and with them on it is a solid block of ink. The print
+  block redefines the colour tokens at `:root` rather than restating every rule, and asks
+  for exact colour reproduction so the diagrams keep their red/green/gold meaning.
+- **The zoom level is meaningless.** A diagram's width on screen is whatever the reader
+  dragged it to, and CSS cannot override it — mermaid writes an inline px width that beats
+  a stylesheet. So each SVG is given an explicit width before printing that fits a sheet
+  on **both** axes, and the previous width is restored afterwards. Fitting width alone
+  runs a tall diagram off the bottom, the same trap the expanded view hit earlier.
+- **Four columns become one**, every card starts its own page, and the zoom toolbars, the
+  tab bar and the expanded-view overlay are all hidden.
+
+A card whose notes run long spills a few lines onto a second page. Sizing the diagram
+small enough to prevent that took the tall ones to about half scale, which is not readable
+on paper, so the spill was accepted instead.
+
+The printout carries its own **LOCAL ONLY** banner, visible only when printed: a PDF of
+this page holds the same real lots, strikes and cost basis the file does, and leaves the
+machine far more easily.
+
+**Scope**: `journal.html` only, which is gitignored. No tracked file changed, so there is
+nothing here for `wiki/index.md` to index and no figure from the page enters this entry.
+
+## 2026-11-14 — New Strategies tab: eleven option structures on one scale
+
+Added `options.html`, `options.json` and [[options-strategies]] from a strategy chart the
+user supplied (three images: an eleven-payoff grid, an expected-move band chart, and a worked
+example of the four questions each structure answers).
+
+**The scale is the point, not the catalogue.** The eleven structures are organised by the
+−2 to +2 expected-move scale rather than by name or by legs, so the page is read by picking
+the number first. A filter dims every card that does not express the selected outlook, and
+each payoff diagram shades the band of the scale the structure is actually paid for.
+
+**Curves are computed, not drawn.** Each diagram comes out of the legs in `options.json` —
+one function evaluated across the price range, with the break-evens found by interpolating
+sign changes and the extremes taken over a domain wide enough to include the stock going to
+zero. Nothing on the page is a hand-drawn shape.
+
+**One correction worth recording.** The first pass reported the covered call and the cash
+secured put as having unlimited loss, because it flagged any still-sloping edge of the
+domain. A stock cannot go below zero, so those losses are large but bounded; unlimited loss
+belongs only to a net short call. Both flags now read the right-hand slope alone. The page
+shows the covered call's true floor, the stock going to zero, instead of an alarming word.
+
+**The calendar spread is labelled on its face** as a shape rather than a settlement: with two
+expiries it has no terminal payoff, so what is drawn is the position's value at the front
+expiry, which depends on implied volatility in the back month. Its maximum loss, the debit
+paid, is exact. Ten of the eleven curves are arithmetic; saying so is what keeps the
+eleventh honest beside them.
+
+**Public, and deliberately so.** This page holds no positions — only generic mechanics on a
+round $100 stock — so by the rule the rest of the repo follows (positions local, knowledge
+public) it is tracked and indexed, unlike [[trading-journal]]. It carries a "reference, not a
+recommendation" banner and names no stock.
+
+Also added the Strategies tab to the nav of all nine pages that carry one.
+
+## 2026-11-14 — Trading renamed to Trading Research
+
+`trading.html` / `trading.json` are now `trading-research.html` / `trading-research.json`,
+and the tab reads **Trading Research**. The name says what the page is: a mechanical screen
+that filters and ranks, with no sizing, no conviction and no pick. "Trading" overstated it.
+
+Updated in one pass: both filenames, the page's own fetch of its data file, its title,
+strapline and self-referencing prose, the two `.gitignore` lines, the `LOCAL_TABS` entry in
+`assets/site.js` that injects the tab on localhost, and this wiki's index entry. Ran
+`bin/stamp.py` afterwards, because `assets/site.js` changed and the pages' no-cache meta tags
+cover only the HTML.
+
+**Still local only.** `git check-ignore` resolves both new names to their `.gitignore` lines,
+and `git status` lists neither. The rename did not widen what is published: the tab is still
+injected at runtime on localhost, so the live site carries no link to it.
+
+Earlier entries in this log name the old files. This log is append-only, so they stay as
+written — they were accurate on the day. This entry is the pointer forward.
+
+## 2026-11-14 — New Simulator tab
+
+Added `simulator.html` and [[options-simulator]]: a browser-side pricer that takes a symbol,
+a price, an expiry and a volatility, applies one of ten templates or hand-built legs, and
+draws P/L against that symbol's own price range. Nothing is stored and nothing is fetched but
+`options.json` and `watchlist.json`, so the page is public like the Strategies tab it extends.
+
+**Templates carry offsets, not strikes.** `options.json` draws every structure on a $100 stock
+whose expected move is $5, which makes each strike an offset in expected moves. The simulator
+computes this symbol's own expected move and places the strikes at the same offsets, so one
+template produces a $1,065 call on an $885 name at 70% vol and a $320 call on a $292 name at
+32%. One source of truth, two tabs.
+
+**Three defects found and fixed during the build**, each by checking the output against hand
+arithmetic rather than by reading the code:
+
+1. **Extremes missed the kink.** A payoff turns only at a strike, and a 1,500-point grid walks
+   straight past the point of a straddle: max loss came back $14 short of the debit actually
+   paid. Every strike is now sampled exactly on top of the grid, and a straddle's max loss is
+   its debit to the cent.
+2. **Collateral was wrong twice.** It treated every short put as needing the full strike in
+   cash, pricing an iron condor's requirement at $26,500 against a real $2,500; and it paired
+   long legs against short ones in the wrong direction, so a bull call spread read "undefined"
+   and a bear put spread $24,000. Both debit spreads need no collateral at all.
+3. **The off-chart note fired on the wrong structures**, because it compared an extreme
+   against the value at the window's edge rather than against the extreme the window actually
+   reaches. An iron condor was told its maximum gain lay off the right of a chart that draws
+   it in the middle.
+
+The collateral figure was then **removed rather than repaired**: on a defined-risk structure
+the broker's requirement is the maximum loss, which the page already computes exactly, so the
+card was restating a figure one column to its left. What replaced it is the one requirement
+the payoff does not imply — the cost of shares the structure needs you to hold.
+
+**What the page will not do.** No calendar or diagonal, because both need two expiries and
+this prices one; they are left out of the list rather than drawn wrong. No early assignment,
+which is warned about wherever a short leg is present. No live quotes: `prices.json` holds no
+snapshot, so the price is typed in, and premiums are Black–Scholes estimates until a real mid
+is pasted over them. The page says all of this on its own face.
+
+## 2026-11-14 — Simulator: fill from an IBKR snapshot
+
+Added a **Fill from IBKR** button to the Simulator, which sets the price, the expiry and the
+implied volatility for a symbol from `chains.json`, plus a strike ladder the templates then
+snap to.
+
+**It is a load, not a fetch, and the page says so.** The browser cannot reach IBKR: the
+connector is a tool Claude holds, not an endpoint a page can call, which is the same reason
+`/api/quotes` has always 404'd on the Holdings tab. So Claude pulls through the connector,
+writes `chains.json`, and the page reads it. The button reports the snapshot's age instead of
+implying a live quote, and it is shown only on localhost, because `chains.json` joins the
+other position-adjacent files in `.gitignore`.
+
+**Volatility had to be solved for.** `get_price_snapshot` returns bid, ask and last on an
+option and no greeks whatever, so there is no implied volatility to read. The page bisects
+Black–Scholes against the call mid and the put mid separately and averages them, reporting
+both. Bisection rather than Newton, because vega collapses on a deep or nearly expired option
+and Newton walks off the solution.
+
+**The two marks are from different moments, and it matters.** NBIS's options were quoted at
+Friday's close against a $115.88 stock; the stock snapshot is an after-hours $112.80.
+Put-call parity holds at the first and fails by more than $3 at the second, so the solver uses
+the close — the price the chain was actually priced against — and the file keeps both
+timestamps. Solved that way, NBIS's call and put both came back at **122%**, agreeing to the
+point, which is the check that the inputs are consistent. SNDK came back 101% against 124%,
+which is the weekend's wide quotes rather than a bug, and the page says so on the card.
+
+**A real ladder caught a defect in the templates.** The page had been rounding strikes to an
+increment guessed from the price: 5.00 anywhere between $250 and $1,000. GOOG lists 2.50
+apart, so every template had been placing legs on contracts that do not exist. A loaded chain
+now supplies its own increment and strike list, and the ladder is dropped the moment the
+symbol changes, so one name's strikes can never be applied to another's.
+
+The snapshot covers NBIS, GOOG and SNDK with their full expiry lists and the Nov 20 chain.
+Any other symbol disables the button and says plainly that it is not in the snapshot.

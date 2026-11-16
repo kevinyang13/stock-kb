@@ -282,13 +282,15 @@ var Site = (function () {
   }
 
   // Holdings and Trading are local-only pages: holdings.html/.json and
-  // trading.html/.json are all in .gitignore, because this repo is public and
+  // trading-research.html/.json are all in .gitignore, because this repo is
+  // public and
   // Pages serves it. So their tabs are added at runtime on localhost rather
   // than written into every page's markup, where they would ship dead links to
   // the live site.
   var LOCAL_TABS = [
     { href: "holdings.html", text: "Holdings" },
-    { href: "trading.html", text: "Trading" },
+    { href: "trading-research.html", text: "Trading Research" },
+    { href: "journal.html", text: "Journal" },
   ];
 
   function isLocal() {

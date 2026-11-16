@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<title>Stock Signal Desk &middot; Simulator</title>
+<link rel="stylesheet" href="assets/site.css?v=1794674346">
+<style>
+  :root{--green:#5fb08a;--red:#e8537f;--amber:#d9913f}
+
+  .notadvice{font-family:var(--sans);font-size:11.5px;line-height:1.55;
+    color:var(--cream);border:1px solid var(--amber);border-left-width:3px;
+    border-radius:7px;padding:10px 12px;margin:0 0 14px;
+    background:rgba(217,145,63,.08)}
+  .notadvice b{color:var(--amber)}
+
+  .cols{display:grid;grid-template-columns:1fr;gap:12px;align-items:start}
+  @media (min-width:980px){ .cols{grid-template-columns:minmax(0,370px) minmax(0,1fr)} }
+  .cols > *{min-width:0}
+
+  .panel{border:1px solid var(--teal-line);border-radius:10px;
+    background:rgba(0,0,0,.10);overflow:hidden}
+  .panel > h2{margin:0;padding:10px 13px;background:var(--teal-deep);
+    border-bottom:1px solid var(--teal-line);
+    font-family:var(--sans);font-size:11.5px;letter-spacing:.10em;
+    text-transform:uppercase;color:var(--gold);font-weight:700;
+    display:flex;align-items:center;gap:9px}
+  .panel .body{padding:12px 13px 14px}
+
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .f{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .f.wide{grid-column:1 / -1}
+  .f label{font-family:var(--sans);font-size:8.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--cream-dim)}
+  .f input,.f select{font-family:var(--sans);font-size:13px;color:var(--cream);
+    background:rgba(0,0,0,.28);border:1px solid var(--teal-line);border-radius:6px;
+    padding:7px 8px;min-width:0;width:100%;font-variant-numeric:tabular-nums}
+  .f input:focus,.f select:focus{outline:2px solid var(--gold);outline-offset:-1px}
+  .f .hint{font-family:var(--sans);font-size:9.5px;color:var(--cream-dim);opacity:.8}
+  .f.sym input{text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+
+  .btn{font-family:var(--sans);font-size:12px;line-height:1;color:var(--cream-dim);
+    background:transparent;border:1px solid var(--teal-line);border-radius:6px;
+    padding:7px 11px;cursor:pointer}
+  .btn:hover{border-color:var(--gold);color:var(--gold)}
+  .btn.go{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:700}
+  .btn.x{padding:4px 7px;font-size:12px;line-height:1}
+  .btnrow{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px;align-items:center}
+  .btn.ib{border-color:var(--gold);color:var(--gold)}
+  .btn.ib:disabled{opacity:.45;cursor:not-allowed;border-color:var(--teal-line);
+    color:var(--cream-dim)}
+  .ibst{font-family:var(--sans);font-size:10px;color:var(--cream-dim);line-height:1.45}
+  .ibst b{color:var(--gold);font-weight:700}
+  .ibwarn{font-family:var(--sans);font-size:10.5px;color:var(--amber);line-height:1.5;
+    margin:9px 0 0}
+
+  table.legs{width:100%;border-collapse:collapse;margin:0}
+  table.legs th{font-family:var(--sans);font-size:8px;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--cream-dim);text-align:left;font-weight:400;
+    padding:0 4px 5px;white-space:nowrap}
+  table.legs td{padding:2px 4px 2px 0;vertical-align:middle}
+  table.legs input,table.legs select{font-family:var(--sans);font-size:12px;
+    color:var(--cream);background:rgba(0,0,0,.28);border:1px solid var(--teal-line);
+    border-radius:5px;padding:5px 6px;width:100%;min-width:0;
+    font-variant-numeric:tabular-nums}
+  table.legs td.n{width:54px} table.legs td.k{width:92px}
+  table.legs td.s,table.legs td.p{width:76px} table.legs td.rm{width:28px}
+  .legwrap{overflow-x:auto}
+  .mkt{font-family:var(--sans);font-size:9.5px;color:var(--cream-dim);
+    margin:8px 0 0;line-height:1.5}
+
+  .kpis{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 13px}
+  .kpi{flex:1 1 130px;border:1px solid var(--teal-line);border-radius:8px;
+    padding:8px 10px;background:rgba(0,0,0,.16);min-width:0}
+  .kpi .k{font-family:var(--sans);font-size:8px;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--cream-dim);margin:0 0 4px}
+  .kpi .v{font-family:var(--sans);font-size:16px;font-weight:700;line-height:1.15;
+    color:var(--cream);font-variant-numeric:tabular-nums;overflow-wrap:break-word}
+  .kpi .s{font-family:var(--sans);font-size:9.5px;color:var(--cream-dim);margin-top:3px}
+  .kpi.pos .v{color:var(--green)} .kpi.neg .v{color:var(--red)}
+
+  .chart svg{display:block;width:100%;height:auto}
+  .lgd{font-family:var(--sans);font-size:10px;color:var(--cream-dim);
+    display:flex;flex-wrap:wrap;gap:4px 14px;margin:7px 0 0}
+  .lgd i{display:inline-block;width:16px;height:0;border-top-width:2px;
+    border-top-style:solid;vertical-align:middle;margin-right:5px}
+
+  table.pnl{width:100%;border-collapse:collapse;margin:13px 0 0;
+    font-family:var(--sans);font-size:11.5px;font-variant-numeric:tabular-nums}
+  table.pnl th,table.pnl td{padding:6px 7px;border-bottom:1px solid var(--teal-line);
+    text-align:right;white-space:nowrap}
+  table.pnl th:first-child,table.pnl td:first-child{text-align:left}
+  table.pnl th{font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--cream-dim);font-weight:400}
+  table.pnl td{color:var(--cream-dim)}
+  table.pnl td.z{color:var(--cream);font-weight:700}
+  table.pnl .pos{color:var(--green)} table.pnl .neg{color:var(--red)}
+  table.pnl tr.now td{border-bottom:0;font-size:11px;opacity:.85}
+
+  .warn{font-family:var(--sans);font-size:10.5px;color:var(--amber);
+    line-height:1.55;margin:11px 0 0}
+  .err{font-family:var(--sans);font-size:12px;color:var(--red);
+    border:1px solid var(--red);border-radius:7px;padding:11px 13px;margin:0 0 12px}
+  footer.foot{font-family:var(--sans);font-size:10.5px;color:var(--cream-dim);
+    padding:6px 8px 20px;line-height:1.6}
+  footer.foot code{font-family:SFMono-Regular,Menlo,Consolas,monospace;font-size:10px}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <h1>STOCK SIGNAL DESK</h1>
+  <p>Simulator &mdash; price a structure before you trade it</p>
+  <nav class="tabs">
+    <a class="tab" href="heatmap.html">Heatmap</a>
+    <a class="tab" href="catalysts.html">Catalysts</a>
+    <a class="tab" href="brief.html">Morning Brief</a>
+    <a class="tab" href="events.html">Events</a>
+    <a class="tab" href="financials.html">Financials</a>
+    <a class="tab" href="options.html">Strategies</a>
+    <a class="tab" href="simulator.html">Simulator</a>
+    <a class="tab" href="map.html">Data Centers</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <p class="notadvice">
+    <b>A calculator, not a recommendation.</b> It prices only what you type into it. Premiums
+    are Black&ndash;Scholes estimates from the volatility you enter, not quotes &mdash; a real
+    fill will differ, and on a wide spread it will differ a lot. Paste the actual mid into the
+    premium column to see the trade you can really get. Nothing here is investment advice.
+  </p>
+
+  <div class="cols">
+
+    <form class="panel" id="ctl" autocomplete="off">
+      <h2>Inputs</h2>
+      <div class="body">
+        <div class="grid2">
+          <div class="f sym">
+            <label for="sym">Symbol</label>
+            <input id="sym" list="syms" value="NBIS" maxlength="8">
+            <datalist id="syms"></datalist>
+          </div>
+          <div class="f">
+            <label for="spot">Price now</label>
+            <input id="spot" type="number" step="0.01" min="0.01" value="115.88">
+          </div>
+          <div class="f">
+            <label for="exp">Expiry</label>
+            <input id="exp" type="date">
+            <span class="hint" id="dte"></span>
+          </div>
+          <div class="f">
+            <label for="iv">Implied vol %</label>
+            <input id="iv" type="number" step="1" min="1" max="500" value="65">
+            <span class="hint" id="em"></span>
+          </div>
+          <div class="f wide">
+            <label for="tpl">Strategy</label>
+            <select id="tpl"></select>
+            <span class="hint">Picking one rewrites the legs below, with strikes placed on
+              the expected move and premiums priced from your volatility. Edit freely after.</span>
+          </div>
+        </div>
+
+        <div class="btnrow" id="ibrow" hidden>
+          <button type="button" class="btn ib" id="ibkr">⬇ Fill from IBKR</button>
+          <span class="ibst" id="ibst"></span>
+        </div>
+
+        <div class="btnrow">
+          <button type="button" class="btn go" id="apply">Apply strategy</button>
+          <button type="button" class="btn" id="addc">+ Call</button>
+          <button type="button" class="btn" id="addp">+ Put</button>
+          <button type="button" class="btn" id="adds">+ Stock</button>
+          <button type="button" class="btn" id="reprice">Re-price premiums</button>
+        </div>
+      </div>
+    </form>
+
+    <div>
+      <div class="panel" style="margin-bottom:12px">
+        <h2>Legs</h2>
+        <div class="body">
+          <div class="legwrap">
+            <table class="legs">
+              <thead><tr>
+                <th>Qty</th><th>Type</th><th>Strike</th><th>Premium</th>
+                <th>Model</th><th></th>
+              </tr></thead>
+              <tbody id="legs"></tbody>
+            </table>
+          </div>
+          <p class="mkt" id="mkt"></p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Result <span id="rtitle" style="color:var(--cream-dim);font-weight:400;
+          letter-spacing:.02em;text-transform:none;font-size:11px"></span></h2>
+        <div class="body">
+          <div id="out"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="foot">
+  Payoff and break-evens are arithmetic on the legs. The dashed curve and every premium marked
+  <em>model</em> come from Black&ndash;Scholes on the volatility entered above &mdash; European
+  exercise, no dividend, so an American put near expiry and anything through a dividend will be
+  off. Templates come from <code>options.json</code>, the same file behind the Strategies tab.
+  <br>Teaching material &middot; not investment advice.
+</footer>
+
+<script src="assets/site.js?v=1794674346"></script>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function money(v, d) {
+    d = d == null ? 0 : d;
+    var n = Math.abs(v);
+    return (v < 0 ? "−$" : "$") +
+      n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+  }
+  function sgn(v, d) { return (v > 0 ? "+" : "") + money(v, d).replace("+", ""); }
+
+  // ---- Black-Scholes ----------------------------------------------------
+  // Used for two things only: a premium estimate when you have no quote, and
+  // the dashed "before expiry" curve. Everything else on the page is payoff
+  // arithmetic that needs no model at all.
+  function N(x) {                       // Abramowitz & Stegun 7.1.26 on erf
+    var s = x < 0 ? -1 : 1, a = Math.abs(x) / Math.SQRT2;
+    var t = 1 / (1 + 0.3275911 * a);
+    var y = 1 - ((((1.061405429 * t - 1.453152027) * t + 1.421413741) * t
+      - 0.284496736) * t + 0.254829592) * t * Math.exp(-a * a);
+    return 0.5 * (1 + s * y);
+  }
+  function bs(kind, S, K, T, v, r) {
+    if (!(S > 0) || !(K > 0)) return 0;
+    if (T <= 0 || v <= 0) {             // at expiry the model IS the payoff
+      return Math.max(0, kind === "call" ? S - K : K - S);
+    }
+    var sq = v * Math.sqrt(T);
+    var d1 = (Math.log(S / K) + (r + v * v / 2) * T) / sq, d2 = d1 - sq;
+    var disc = Math.exp(-r * T);
+    return kind === "call"
+      ? S * N(d1) - K * disc * N(d2)
+      : K * disc * N(-d2) - S * N(-d1);
+  }
+
+  // ---- implied volatility ----------------------------------------------
+  // The connector returns bid, ask and last, and no volatility at all, so it
+  // has to be solved for. Bisection rather than Newton: vega collapses on a
+  // deep or nearly expired option and Newton walks off; bisection on a bracket
+  // this wide always lands.
+  function ivFrom(kind, price, S, K, T, r) {
+    if (!(price > 0) || !(S > 0) || !(K > 0) || !(T > 0)) return null;
+    var intr = Math.max(0, kind === "call" ? S - K : K - S);
+    if (price <= intr + 1e-6) return null;      // no time value, nothing to solve
+    var lo = 0.01, hi = 5;
+    if (bs(kind, S, K, T, hi, r) < price) return null;   // off the top of the bracket
+    for (var i = 0; i < 80; i++) {
+      var mid = (lo + hi) / 2;
+      if (bs(kind, S, K, T, mid, r) < price) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  // ---- the IBKR snapshot -------------------------------------------------
+  // The browser cannot reach IBKR: the connector is a tool Claude holds, not
+  // an endpoint this page can call. So the flow is Claude pulls, writes
+  // chains.json, and this reads it. That makes the button a LOAD, not a fetch,
+  // and the age of the snapshot is shown rather than hidden.
+  var CHAINS = null;
+
+  function isLocal() {
+    return location.hostname === "localhost" || location.hostname === "127.0.0.1" ||
+           location.protocol === "file:";
+  }
+  function ago(iso) {
+    var t = Date.parse(iso);
+    if (!t) return "";
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return m + " min old";
+    if (m < 2880) return Math.round(m / 60) + " h old";
+    return Math.round(m / 1440) + " days old";
+  }
+  function ibState() {
+    if (!CHAINS) return;
+    var sym = ($("sym").value || "").toUpperCase().trim();
+    var e = CHAINS.symbols[sym];
+    $("ibkr").disabled = !e;
+    $("ibst").innerHTML = e
+      ? "<b>" + esc(sym) + "</b> in snapshot \u2014 " + esc(ago(CHAINS.generated)) +
+        ", " + e.expirations.length + " expiries"
+      : (sym ? esc(sym) + " is not in the snapshot. Ask Claude to pull it from IBKR."
+             : "Type a symbol.");
+  }
+
+  function fillFromIbkr() {
+    var sym = ($("sym").value || "").toUpperCase().trim();
+    var e = CHAINS && CHAINS.symbols[sym];
+    if (!e) return;
+
+    // The option marks and the stock mark are usually from different moments,
+    // so volatility is solved against the price the OPTIONS were quoted at --
+    // the close -- not against an after-hours print the chain never saw.
+    var S = e.close || e.spot.last;
+    $("spot").value = S;
+
+    var keys = Object.keys(e.chains);
+    var exp = keys.length ? keys[0] : e.expirations[0];
+    $("exp").value = exp;
+
+    var ch = e.chains[exp], msg = [];
+    if (ch && ch.atm) {
+      var T = Math.max(dte(), 0) / 365, a = ch.atm;
+      var cm = mid(a.call), pm = mid(a.put);
+      var ivc = ivFrom("call", cm, S, a.strike, T, R);
+      var ivp = ivFrom("put", pm, S, a.strike, T, R);
+      var both = [ivc, ivp].filter(function (x) { return x; });
+      if (both.length) {
+        $("iv").value = Math.round(both.reduce(function (x, y) { return x + y; }, 0)
+                                   / both.length * 100);
+        msg.push("Vol solved from the $" + a.strike + " straddle" +
+          (both.length === 2
+            ? " \u2014 call " + Math.round(ivc * 100) + "%, put " + Math.round(ivp * 100) + "%"
+            : " \u2014 one side only"));
+      } else {
+        msg.push("Could not solve a volatility from these quotes; the field is unchanged");
+      }
+      var wc = width(a.call), wp = width(a.put);
+      if (wc > 0.2 || wp > 0.2) {
+        msg.push("Spreads are wide \u2014 " + Math.round(Math.max(wc, wp) * 100) +
+          "% of mid \u2014 so the mid is a poor estimate of a fill. These are " +
+          "last-session quotes, not a live book.");
+      }
+    }
+    if (e.warn) msg.push(e.warn);
+    LADDER = ch || null;
+    applyTpl();
+    $("out").insertAdjacentHTML("afterbegin", msg.length
+      ? '<p class="ibwarn">' + msg.map(esc).join(" ") + "</p>" : "");
+    save();
+  }
+  function mid(q) {
+    if (!q) return 0;
+    if (q.bid > 0 && q.ask > 0) return (q.bid + q.ask) / 2;
+    return q.last || 0;
+  }
+  function width(q) {
+    var m = mid(q);
+    return q && q.bid > 0 && q.ask > 0 && m ? (q.ask - q.bid) / m : 0;
+  }
+
+  // ---- state ------------------------------------------------------------
+  var TPL = [], legs = [], R = 0.04;
+
+  function inputs() {
+    var spot = parseFloat($("spot").value) || 0;
+    var iv = (parseFloat($("iv").value) || 0) / 100;
+    var days = dte();
+    var T = Math.max(days, 0) / 365;
+    return { sym: ($("sym").value || "").toUpperCase().trim() || "STOCK",
+             spot: spot, iv: iv, days: days, T: T,
+             em: spot * iv * Math.sqrt(T || 1 / 365) };
+  }
+  function dte() {
+    var v = $("exp").value;
+    if (!v) return 0;
+    var p = v.split("-");
+    var e = new Date(+p[0], +p[1] - 1, +p[2], 16, 0, 0);
+    return Math.round((e - new Date()) / 86400000);
+  }
+
+  // ---- payoff -----------------------------------------------------------
+  // n is signed: +1 long, -1 short. Option quantities are contracts of 100;
+  // a stock leg carries its own share count.
+  function at(S, I, T) {
+    var v = 0;
+    legs.forEach(function (l) {
+      var n = +l.n || 0, px = +l.px || 0;
+      if (!n) return;
+      if (l.k === "stock") { v += n * (S - px); return; }
+      var worth = T > 0 ? bs(l.k, S, +l.strike, T, I.iv, R)
+                        : Math.max(0, l.k === "call" ? S - l.strike : l.strike - S);
+      v += n * 100 * (worth - px);
+    });
+    return v;
+  }
+  function netCost() {                   // positive = debit paid
+    return legs.reduce(function (a, l) {
+      var n = +l.n || 0, px = +l.px || 0;
+      return a + (l.k === "stock" ? n * px : n * 100 * px);
+    }, 0);
+  }
+
+  // Long shares are the one requirement the payoff does not already state.
+  // For an option-only structure the broker's requirement IS its maximum
+  // loss -- an iron condor's is the wider wing less the credit, a cash
+  // secured put's is the strike less the credit -- so a separate collateral
+  // figure would just restate the Max loss card in different words.
+  function stockNeeded() {
+    return legs.reduce(function (a, l) {
+      return a + (l.k === "stock" && +l.n > 0 ? (+l.n) * (+l.px) : 0);
+    }, 0);
+  }
+
+  function stats(I) {
+    var lo = 0, hi = Math.max(I.spot * 3, 10), M = 1500;
+    var min = Infinity, max = -Infinity, be = [], prev = null;
+    // A payoff turns only at a strike, and a grid will walk straight past the
+    // point of a straddle. So every strike is sampled exactly, on top of the
+    // grid, or the apex comes back tens of dollars off.
+    var xs = [];
+    for (var i = 0; i <= M; i++) xs.push(lo + (hi - lo) * i / M);
+    legs.forEach(function (l) {
+      if (l.k !== "stock" && +l.strike > 0) xs.push(+l.strike);
+    });
+    xs.sort(function (a, b) { return a - b; });
+    for (var j = 0; j < xs.length; j++) {
+      var S = xs[j], v = at(S, I, 0);
+      if (v < min) min = v;
+      if (v > max) max = v;
+      if (prev && ((prev.v < 0 && v >= 0) || (prev.v > 0 && v <= 0))) {
+        be.push(prev.S + (S - prev.S) * ((0 - prev.v) / (v - prev.v)));
+      }
+      prev = { S: S, v: v };
+    }
+    // Only the upside runs forever: a stock cannot go below zero, so a long
+    // stock or short put loss is large but bounded. Both flags read the
+    // right-hand slope, where a falling edge means a net short call.
+    var e = Math.max(I.spot * 0.005, 0.01);
+    var slope = (at(hi, I, 0) - at(hi - e, I, 0)) / e;
+    return { max: max, min: min, be: be,
+             maxOpen: slope > 1e-6, minOpen: slope < -1e-6 };
+  }
+
+  // ---- chart ------------------------------------------------------------
+  var W = 640, H = 290, PAD = { l: 62, r: 14, t: 16, b: 34 };
+
+  function chart(I, st) {
+    var em = I.em || I.spot * 0.05;
+    var x0 = Math.max(0.01, I.spot - 3 * em), x1 = I.spot + 3 * em;
+    var exp = [], now = [], M = 360, ymin = 0, ymax = 0;
+    var wlo = Infinity, whi = -Infinity;      // the expiry curve's own extremes
+    for (var i = 0; i <= M; i++) {
+      var S = x0 + (x1 - x0) * i / M;
+      var a = at(S, I, 0), b = at(S, I, I.T);
+      exp.push([S, a]); now.push([S, b]);
+      ymin = Math.min(ymin, a, b); ymax = Math.max(ymax, a, b);
+      wlo = Math.min(wlo, a); whi = Math.max(whi, a);
+    }
+    var pad = (ymax - ymin) * 0.12 || 50;
+    ymin -= pad; ymax += pad;
+
+    var iw = W - PAD.l - PAD.r, ih = H - PAD.t - PAD.b;
+    function X(S) { return PAD.l + (S - x0) / (x1 - x0) * iw; }
+    function Y(v) { return PAD.t + (ymax - v) / (ymax - ymin) * ih; }
+    var g = [], z = Y(0);
+
+    // the -2..+2 bands, in this symbol's own expected move
+    [[-3, -2, -2], [-2, -1, -1], [-1, 1, 0], [1, 2, 1], [2, 3, 2]].forEach(function (b) {
+      var a = I.spot + b[0] * em, c = I.spot + b[1] * em;
+      g.push('<rect x="' + X(a).toFixed(1) + '" y="' + PAD.t + '" width="' +
+        Math.max(0, X(c) - X(a)).toFixed(1) + '" height="' + ih +
+        '" fill="rgba(255,255,255,.028)"/>');
+      g.push('<text x="' + ((X(a) + X(c)) / 2).toFixed(1) + '" y="' + (PAD.t + 11) +
+        '" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" ' +
+        'font-size="9" font-weight="700" fill="rgba(234,229,223,.32)">' +
+        (b[2] > 0 ? "+" : b[2] < 0 ? "−" : "") + Math.abs(b[2]) + "</text>");
+      if (b[0] > -3) g.push('<line x1="' + X(a).toFixed(1) + '" y1="' + PAD.t + '" x2="' +
+        X(a).toFixed(1) + '" y2="' + (PAD.t + ih) +
+        '" stroke="rgba(50,107,100,.5)" stroke-width="1"/>');
+    });
+
+    function path(pts) {
+      return pts.map(function (p, i) {
+        return (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1);
+      }).join(" ");
+    }
+    var lineE = path(exp);
+    var area = lineE + " L" + X(exp[M][0]).toFixed(1) + " " + z.toFixed(1) +
+      " L" + X(exp[0][0]).toFixed(1) + " " + z.toFixed(1) + " Z";
+    g.push('<defs><clipPath id="cu"><rect x="0" y="' + PAD.t + '" width="' + W +
+      '" height="' + Math.max(0, z - PAD.t).toFixed(1) + '"/></clipPath>' +
+      '<clipPath id="cd"><rect x="0" y="' + z.toFixed(1) + '" width="' + W +
+      '" height="' + Math.max(0, PAD.t + ih - z).toFixed(1) + '"/></clipPath></defs>');
+    g.push('<path d="' + area + '" fill="rgba(95,176,138,.30)" clip-path="url(#cu)"/>');
+    g.push('<path d="' + area + '" fill="rgba(232,83,127,.28)" clip-path="url(#cd)"/>');
+
+    g.push('<line x1="' + PAD.l + '" y1="' + z.toFixed(1) + '" x2="' + (W - PAD.r) +
+      '" y2="' + z.toFixed(1) + '" stroke="#c8c2ba" stroke-width="1" stroke-dasharray="3 3"/>');
+    g.push('<line x1="' + X(I.spot).toFixed(1) + '" y1="' + PAD.t + '" x2="' +
+      X(I.spot).toFixed(1) + '" y2="' + (PAD.t + ih) +
+      '" stroke="rgba(211,162,77,.55)" stroke-width="1" stroke-dasharray="2 3"/>');
+
+    legs.forEach(function (l) {
+      if (l.k === "stock" || !(+l.strike > 0)) return;
+      var x = X(+l.strike);
+      if (x < PAD.l || x > W - PAD.r) return;
+      g.push('<line x1="' + x.toFixed(1) + '" y1="' + (PAD.t + ih - 8) + '" x2="' +
+        x.toFixed(1) + '" y2="' + (PAD.t + ih) + '" stroke="' +
+        (+l.n > 0 ? "#5fb08a" : "#e8537f") + '" stroke-width="2.5"/>');
+    });
+
+    if (I.T > 0) g.push('<path d="' + path(now) + '" fill="none" stroke="#d3a24d" ' +
+      'stroke-width="1.6" stroke-dasharray="5 4" opacity=".9"/>');
+    g.push('<path d="' + lineE + '" fill="none" stroke="#5fb08a" stroke-width="2.3" ' +
+      'stroke-linejoin="round"/>');
+
+    st.be.forEach(function (b) {
+      if (b < x0 || b > x1) return;
+      g.push('<circle cx="' + X(b).toFixed(1) + '" cy="' + z.toFixed(1) +
+        '" r="3.4" fill="#d3a24d"/>');
+      g.push('<text x="' + X(b).toFixed(1) + '" y="' + (z - 8).toFixed(1) +
+        '" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" ' +
+        'font-size="9" fill="#d3a24d">' + b.toFixed(2) + "</text>");
+    });
+
+    [x0, I.spot, x1].forEach(function (S, i) {
+      g.push('<text x="' + X(S).toFixed(1) + '" y="' + (H - 11) +
+        '" text-anchor="' + (i === 0 ? "start" : i === 2 ? "end" : "middle") +
+        '" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="9.5" ' +
+        'fill="#c8c2ba">' + money(S, 2) + (i === 1 ? " now" : "") + "</text>");
+    });
+    [ymax, 0, ymin].forEach(function (v) {
+      g.push('<text x="' + (PAD.l - 6) + '" y="' + (Y(v) + (v === ymax ? 9 : 3)).toFixed(1) +
+        '" text-anchor="end" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" ' +
+        'font-size="9.5" fill="#c8c2ba">' + money(v) + "</text>");
+    });
+
+    return '<div class="chart"><svg viewBox="0 0 ' + W + " " + H + '" role="img" ' +
+      'aria-label="Profit and loss for the structure on ' + esc(I.sym) + '">' +
+      g.join("") + "</svg></div>" +
+      '<p class="lgd"><span><i style="border-color:#5fb08a"></i>At expiry</span>' +
+      (I.T > 0 ? '<span><i style="border-color:#d3a24d;border-top-style:dashed"></i>Today, ' +
+        I.days + " days out</span>" : "") +
+      '<span><i style="border-color:#d3a24d;border-top-style:dotted"></i>Break-even</span>' +
+      "<span>Bands are this symbol’s own expected move, " + money(I.em, 2) +
+      " per band</span>" +
+      // The window is three expected moves wide, so an extreme reached only
+      // outside it -- a covered call's real floor is the stock at $0 -- would
+      // otherwise be a KPI with nothing on the chart to match it.
+      (st.min < wlo - 1
+        ? "<span>Max loss sits outside this range, toward " + esc(I.sym) +
+          " at $0</span>"
+        : "") +
+      (!st.maxOpen && st.max > whi + 1
+        ? "<span>Max gain sits outside this range</span>" : "") + "</p>";
+  }
+
+  // ---- render -----------------------------------------------------------
+  function drawLegs() {
+    var I = inputs();
+    $("legs").innerHTML = legs.map(function (l, i) {
+      var isStock = l.k === "stock";
+      var model = isStock ? "—"
+        : money(bs(l.k, I.spot, +l.strike, I.T, I.iv, R), 2);
+      return '<tr data-i="' + i + '">' +
+        '<td class="n"><input type="number" step="1" data-f="n" value="' + (+l.n) + '"></td>' +
+        '<td class="k"><select data-f="k">' +
+          ['call', 'put', 'stock'].map(function (k) {
+            return '<option value="' + k + '"' + (k === l.k ? " selected" : "") + ">" +
+              (k === "stock" ? "Stock" : k === "call" ? "Call" : "Put") + "</option>";
+          }).join("") + "</select></td>" +
+        '<td class="s">' + (isStock ? "" :
+          '<input type="number" step="0.5" data-f="strike" value="' + (+l.strike) + '">') + "</td>" +
+        '<td class="p"><input type="number" step="0.01" data-f="px" value="' +
+          (+l.px) + '"></td>' +
+        '<td style="font-family:var(--sans);font-size:10.5px;color:var(--cream-dim);' +
+          'white-space:nowrap;font-variant-numeric:tabular-nums">' + model + "</td>" +
+        '<td class="rm"><button type="button" class="btn x" data-rm="' + i +
+          '" title="Remove this leg">&times;</button></td></tr>';
+    }).join("") || '<tr><td colspan="6" style="font-family:var(--sans);font-size:11.5px;' +
+      'color:var(--cream-dim);padding:8px 0">No legs. Pick a strategy, or add one.</td></tr>';
+
+    $("mkt").textContent = legs.length
+      ? "Model column is Black–Scholes at " + Math.round(I.iv * 100) + "% vol and " +
+        I.days + " days. Premium is what you are pricing against — overwrite it with a " +
+        "real mid when you have one."
+      : "";
+  }
+
+  function draw() {
+    var I = inputs();
+    $("dte").textContent = $("exp").value
+      ? (I.days >= 0 ? I.days + " days out" : "expiry is in the past")
+      : "pick a date";
+    $("em").textContent = I.spot && I.iv
+      ? "1 expected move ≈ " + money(I.em, 2)
+      : "";
+    $("rtitle").textContent = legs.length
+      ? I.sym + " at " + money(I.spot, 2) + ", " + I.days + "d, " +
+        Math.round(I.iv * 100) + "% vol"
+      : "";
+    drawLegs();
+
+    var out = $("out");
+    if (!legs.length) {
+      out.innerHTML = '<p class="err">Nothing to price yet — pick a strategy above.</p>';
+      return;
+    }
+    if (!(I.spot > 0)) {
+      out.innerHTML = '<p class="err">Enter a price above zero.</p>';
+      return;
+    }
+
+    var st = stats(I), cost = netCost(), h = [];
+    var stock = stockNeeded();
+
+    h.push('<div class="kpis">');
+    h.push(kpi(cost >= 0 ? "Net debit" : "Net credit", money(Math.abs(cost), 2),
+      cost >= 0 ? "paid to open" : "received to open"));
+    h.push(kpi("Max gain", st.maxOpen ? "Unlimited" : sgn(st.max),
+      st.maxOpen ? "no cap above" : "at expiry", st.maxOpen ? 1 : st.max));
+    h.push(kpi("Max loss", st.minOpen ? "Unlimited" : sgn(st.min),
+      st.minOpen ? "net short call" : "at expiry", st.minOpen ? -1 : st.min));
+    h.push(kpi("Break-even", st.be.length
+      ? st.be.map(function (b) { return money(b, 2); }).join("  /  ") : "—",
+      st.be.length === 1
+        ? ((st.be[0] / I.spot - 1) * 100).toFixed(1) + "% from here" : "at expiry"));
+    if (stock) h.push(kpi("Stock required", money(stock),
+      "shares you must already hold or buy"));
+    h.push("</div>");
+
+    h.push(chart(I, st));
+
+    // the same -2..+2 scale the Strategies tab uses, in dollars on this name
+    h.push('<table class="pnl"><thead><tr><th>Outlook</th><th>' + esc(I.sym) +
+      "</th><th>Move</th><th>P/L at expiry</th>" +
+      (I.T > 0 ? "<th>P/L today</th>" : "") + "</tr></thead><tbody>");
+    [-2, -1, 0, 1, 2].forEach(function (k) {
+      var S = I.spot + k * I.em, v = at(S, I, 0), n = at(S, I, I.T);
+      h.push("<tr" + (k === 0 ? ' class="now"' : "") + "><td" + (k === 0 ? ' class="z"' : "") +
+        ">" + (k > 0 ? "+" : k < 0 ? "−" : "") + Math.abs(k) +
+        (k === 0 ? " unchanged" : "") + "</td><td>" + money(S, 2) + "</td><td>" +
+        ((S / I.spot - 1) * 100).toFixed(1) + "%</td>" +
+        '<td class="' + cls(v) + '">' + sgn(v) + "</td>" +
+        (I.T > 0 ? '<td class="' + cls(n) + '">' + sgn(n) + "</td>" : "") + "</tr>");
+    });
+    h.push("</tbody></table>");
+
+    h.push('<p class="warn">On a defined-risk structure the margin a broker holds is ' +
+      "its maximum loss, so the Max loss card above is also the requirement. " +
+      (st.minOpen ? "This one is not defined-risk: a net short call has no cap, and a " +
+        "broker will hold a margin figure that moves with the price." : "") + "</p>");
+    if (I.days < 0) h.push('<p class="warn">The expiry is in the past, so the dashed ' +
+      "curve is gone and every premium is priced at intrinsic value only.</p>");
+    if (I.days > 0 && legs.some(function (l) { return l.k !== "stock" && +l.n < 0; }))
+      h.push('<p class="warn">A short leg can be assigned early, which this page does not ' +
+        "model — it prices European exercise. For an American short put, assignment " +
+        "becomes likely once it is deep in the money or a dividend is close.</p>");
+
+    out.innerHTML = h.join("");
+  }
+  function cls(v) { return v > 0 ? "pos" : v < 0 ? "neg" : ""; }
+  function kpi(k, v, s, signed) {
+    var c = signed == null ? "" : signed > 0 ? " pos" : signed < 0 ? " neg" : "";
+    return '<div class="kpi' + c + '"><p class="k">' + esc(k) + '</p><div class="v">' +
+      esc(v) + "</div>" + (s ? '<div class="s">' + esc(s) + "</div>" : "") + "</div>";
+  }
+
+  // ---- templates --------------------------------------------------------
+  // Strike placement comes from options.json, where every strategy is drawn on
+  // a $100 stock whose expected move is $5. So a strike there is an offset in
+  // expected moves, which transfers to any symbol: the covered call's $105 is
+  // "one expected move up", wherever that lands on this name.
+  var LADDER = null;
+  function round(x, spot) {
+    // A real ladder beats a guess: GOOG lists 2.50 apart where the guess below
+    // would have said 5.00, so a template put strikes on contracts that do not
+    // exist. When a chain is loaded its own increment and strikes win.
+    if (LADDER && LADDER.strikes && LADDER.strikes.length) {
+      var near = null, best = Infinity;
+      LADDER.strikes.forEach(function (k) {
+        var d = Math.abs(k - x);
+        if (d < best) { best = d; near = k; }
+      });
+      var span = LADDER.strikes[LADDER.strikes.length - 1] - LADDER.strikes[0];
+      // outside the strikes actually fetched, fall back to the increment
+      if (near != null && best <= Math.max(LADDER.increment, span * 0.02)) return near;
+      if (LADDER.increment > 0) return Math.round(x / LADDER.increment) * LADDER.increment;
+    }
+    var inc = spot < 25 ? 0.5 : spot < 100 ? 1 : spot < 250 ? 2.5 : spot < 1000 ? 5 : 10;
+    return Math.round(x / inc) * inc;
+  }
+  function applyTpl() {
+    var I = inputs(), t = TPL.filter(function (s) { return s.id === $("tpl").value; })[0];
+    if (!t) return;
+    legs = t.legs.map(function (l) {
+      if (l.k === "stock") return { k: "stock", n: l.n, px: I.spot, strike: 0 };
+      var K = round(I.spot + ((l.strike - 100) / 5) * I.em, I.spot);
+      if (!(K > 0)) K = round(I.spot, I.spot);
+      return { k: l.k, n: l.n, strike: K,
+               px: +bs(l.k, I.spot, K, I.T, I.iv, R).toFixed(2) };
+    });
+    draw(); save();
+  }
+  function reprice() {
+    var I = inputs();
+    legs.forEach(function (l) {
+      if (l.k === "stock") l.px = I.spot;
+      else l.px = +bs(l.k, I.spot, +l.strike, I.T, I.iv, R).toFixed(2);
+    });
+    draw(); save();
+  }
+
+  // ---- wiring -----------------------------------------------------------
+  function save() {
+    try {
+      localStorage.setItem("ssd.sim", JSON.stringify({
+        sym: $("sym").value, spot: $("spot").value, exp: $("exp").value,
+        iv: $("iv").value, tpl: $("tpl").value, legs: legs
+      }));
+    } catch (e) { /* private window, blocked storage: the page still works */ }
+  }
+  function load() {
+    try {
+      var s = JSON.parse(localStorage.getItem("ssd.sim") || "null");
+      if (!s) return false;
+      ["sym", "spot", "exp", "iv"].forEach(function (k) { if (s[k]) $(k).value = s[k]; });
+      if (s.tpl) $("tpl").value = s.tpl;
+      if (s.legs && s.legs.length) { legs = s.legs; return true; }
+    } catch (e) { /* fall through to the default structure */ }
+    return false;
+  }
+
+  $("ctl").addEventListener("submit", function (e) { e.preventDefault(); });
+  ["sym", "spot", "exp", "iv"].forEach(function (id) {
+    $(id).addEventListener("input", function () {
+      // Typing a new symbol invalidates the strike ladder that belonged to
+      // the old one, or a template would place AAPL strikes on NBIS.
+      if (id === "sym") { LADDER = null; ibState(); }
+      draw(); save();
+    });
+  });
+  $("ibkr").addEventListener("click", fillFromIbkr);
+  $("apply").addEventListener("click", applyTpl);
+  $("reprice").addEventListener("click", reprice);
+  [["addc", "call"], ["addp", "put"], ["adds", "stock"]].forEach(function (p) {
+    $(p[0]).addEventListener("click", function () {
+      var I = inputs(), K = round(I.spot, I.spot);
+      legs.push(p[1] === "stock"
+        ? { k: "stock", n: 100, px: I.spot, strike: 0 }
+        : { k: p[1], n: 1, strike: K,
+            px: +bs(p[1], I.spot, K, I.T, I.iv, R).toFixed(2) });
+      draw(); save();
+    });
+  });
+  $("legs").addEventListener("input", function (e) {
+    var tr = e.target.closest("tr"), f = e.target.getAttribute("data-f");
+    if (!tr || !f) return;
+    var l = legs[+tr.getAttribute("data-i")];
+    if (!l) return;
+    l[f] = f === "k" ? e.target.value : parseFloat(e.target.value);
+    if (f === "k" && l.k === "stock" && Math.abs(l.n) < 10) l.n = 100 * (l.n < 0 ? -1 : 1);
+    draw(); save();
+  });
+  $("legs").addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("[data-rm]") : null;
+    if (!b) return;
+    legs.splice(+b.getAttribute("data-rm"), 1);
+    draw(); save();
+  });
+
+  function boot() {
+    var d = new Date(Date.now() + 30 * 86400000);
+    $("exp").value = d.toISOString().slice(0, 10);
+
+    // chains.json is written by Claude from the IBKR connector and is in
+    // .gitignore, so it exists on this machine and not on the published site.
+    // The button is therefore offered only where the file can be there.
+    if (isLocal()) {
+      fetch("chains.json", { cache: "no-store" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (c) {
+          if (!c || !c.symbols) return;
+          CHAINS = c;
+          $("ibrow").hidden = false;
+          ibState();
+        }).catch(function () { /* no snapshot on this machine: button stays hidden */ });
+    }
+
+    fetch("watchlist.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (w) {
+        if (!w || !w.symbols) return;
+        $("syms").innerHTML = w.symbols.map(function (s) {
+          return '<option value="' + esc(s.t) + '">';
+        }).join("");
+      }).catch(function () { /* the field still takes any symbol typed */ });
+
+    fetch("options.json", { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("options.json " + r.status);
+      return r.json();
+    }).then(function (j) {
+      // A calendar has two expiries and this page prices one, so it is left
+      // out rather than shown wrong.
+      TPL = (j.strategies || []).filter(function (s) { return !s.schematic; });
+      $("tpl").innerHTML = TPL.map(function (s) {
+        return '<option value="' + esc(s.id) + '">' + esc(s.name) + " · " +
+          esc(s.flow) + "</option>";
+      }).join("") + '<option value="">Custom — build it yourself</option>';
+      if (!load()) { $("tpl").value = "covered-call"; applyTpl(); }
+      else draw();
+    }).catch(function (e) {
+      $("out").innerHTML = '<p class="err">Could not load options.json — ' +
+        esc(e.message) + ". Serve the folder over http (python3 -m http.server 8099).</p>";
+      draw();
+    });
+  }
+
+  if (window.Site && Site.nav) Site.nav();
+  boot();
+})();
+</script>
+</body>
+</html>
