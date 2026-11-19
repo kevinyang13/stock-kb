@@ -1,28 +1,30 @@
 # Watchlist Financials
 
-**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 76 statements, each the company's most recent reported quarter, plus Nintendo, so 77 cards.
+**Summary**: The Financials tab carries an income statement chart for every name in the watchlist that files one — 75 statements, each the company's most recent reported quarter, plus Nintendo and GlobalWafers, neither of which is on the watchlist, so 77 cards.
 
 **Sources**: stockanalysis.com quarterly income statement pages for most names; Micron's Form 8-K, CoreWeave's results release and Nebius's 6-K exhibit 99.1 for those three.
 
-**Last updated**: 2026-11-12
+**Last updated**: 2026-11-18
 
 ---
 
 ## Coverage
 
-Of the 113 names on the watchlist, counted November 9, 2026 and re-checked November 11:
+Of the 107 names on the watchlist, counted November 18, 2026:
 
 | | Count | Why |
 |---|---|---|
-| Charted | 76 | files an income statement |
-| ETFs and funds | 25 | a fund holds securities; it has no revenue or margin |
-| Shells / no usable filing | 6 | CLBR, CCXI, BITF, BCII, MFH, XNET |
+| Charted | 75 | files an income statement |
+| ETFs and funds | 24 | a fund holds securities; it has no revenue or margin |
+| Shells / no usable filing | 2 | CLBR, XNET |
 | Excluded, negative gross profit | 2 | SPCE, CAN — cost of revenue exceeds revenue, so there is no flow to draw |
 | Excluded, pre-revenue | 1 | HQ reports no revenue line at all |
 | Chartable, not yet charted | 3 | CCJ, LEU, HPE — all file real statements; no card has been built |
 
-Nintendo is charted too, though it is not on the watchlist, which is why the tab holds **77**
-cards against 76 charted watchlist names.
+Two charted names are not on the watchlist, which is why the tab holds **77** cards against 75
+charted watchlist names. Nintendo was never on it. **GlobalWafers (6488) was taken off the
+heatmap on November 18, 2026 and its card was left standing**, so that card is now reachable from
+the Financials tab with no tile behind it.
 
 Three names moved on **November 9, 2026**, on the back of the quarters filed that day. **CEG**
 and **VST** were charted for the first time, having sat on the heatmap since October 28 with no

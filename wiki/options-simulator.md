@@ -64,13 +64,18 @@ It fills three things:
 |---|---|
 | **Price** | the underlying's last close |
 | **Expiry** | the real expiration dates for that contract |
-| **Implied vol** | solved from the at-the-money straddle |
+| **Implied vol** | the broker's own midpoint IV, or solved from the at-the-money straddle |
 
-**Volatility has to be solved for**, because the connector returns bid, ask and last and no
-greeks at all. The page bisects Black–Scholes on the call mid and the put mid separately and
-averages them, then reports both so the disagreement is visible. On NBIS both sides solved to
-122% — the call and the put agreeing to the point is evidence the inputs are consistent. On
-SNDK they came out 101% and 124%, which is the weekend's wide quotes showing through.
+**Volatility is taken from the broker where the snapshot carries it, and solved where it does
+not.** `get_price_snapshot` does return `option_midpoint_iv` and `option_greeks` on an option
+contract — an earlier version of this page assumed it did not, and bisected Black–Scholes for
+every symbol. NVDA was pulled with those fields and carries a call IV of 116% and a put IV of
+115% straight from the desk, so nothing is solved for it. The three symbols pulled before that
+(NBIS, GOOG, SNDK) have no IV in the file and still go through the solver, which bisects on the
+call mid and the put mid separately and averages, reporting both so the disagreement is visible.
+On NBIS both sides solved to 122% — agreeing to the point, which is evidence the inputs are
+consistent. On SNDK they came out 101% and 124%, which is the weekend's wide quotes showing
+through, and the kind of gap a broker IV does not have.
 
 **It solves against the close, not the after-hours print.** The option marks and the stock
 mark carry different timestamps: NBIS's options were quoted at Friday's close with the stock
@@ -82,6 +87,11 @@ close is what the solver uses. Both timestamps are kept in the file.
 an increment guessed from the price, which put GOOG on 5.00 when it really lists 2.50 — the
 templates were placing legs on contracts that do not exist. A loaded chain supplies its own
 increment and its own strike list, and the ladder is cleared the moment the symbol changes.
+
+A real ladder is not always evenly spaced, which is the other thing a guess cannot know. NVDA's
+Nov 20 chain runs 1.00 apart from 131 to 150 and 2.50 apart from 152.5 up. A strangle on it
+places its legs at 175 and 138 — one strike out of each band — because the page snaps to the
+nearest listed strike before it falls back to an increment.
 
 ## Known limits
 

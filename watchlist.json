@@ -3,13 +3,6 @@
  "peAsOf": "Oct 28, 2026",
  "symbols": [
   {
-   "t": "VFTNX",
-   "tags": [
-    "Fund",
-    "Broad Market"
-   ]
-  },
-  {
    "t": "SPY",
    "tags": [
     "ETF",
@@ -127,14 +120,6 @@
    "t": "TSM",
    "fav": true,
    "pe": 20.25,
-   "tags": [
-    "Semiconductor",
-    "AI Infra"
-   ]
-  },
-  {
-   "t": "6488",
-   "sector": "Semiconductor",
    "tags": [
     "Semiconductor",
     "AI Infra"
@@ -565,12 +550,6 @@
    ]
   },
   {
-   "t": "CCXI",
-   "tags": [
-    "SPAC"
-   ]
-  },
-  {
    "t": "CSCO",
    "pe": 21.64,
    "tags": [
@@ -729,13 +708,6 @@
    ]
   },
   {
-   "t": "BITF",
-   "tags": [
-    "Crypto",
-    "Mining"
-   ]
-  },
-  {
    "t": "HUT",
    "tags": [
     "Crypto",
@@ -773,12 +745,6 @@
    "pe": 16.93
   },
   {
-   "t": "BCII",
-   "tags": [
-    "Crypto"
-   ]
-  },
-  {
    "t": "CAN",
    "tags": [
     "Crypto",
@@ -791,13 +757,6 @@
    "tags": [
     "Crypto",
     "Mining"
-   ]
-  },
-  {
-   "t": "MFH",
-   "tags": [
-    "Crypto",
-    "Fintech"
    ]
   },
   {

@@ -81,6 +81,11 @@
   .kpi .s{font-family:var(--sans);font-size:9.5px;color:var(--cream-dim);margin-top:3px}
   .kpi.pos .v{color:var(--green)} .kpi.neg .v{color:var(--red)}
 
+  /* The svg's viewBox is 640 wide. Left to fill the panel it upscales to ~1.8x
+     on a desktop, which blows the axis type up out of proportion to the rest
+     of the page. Capped near its natural width, and centred so the panel does
+     not look lopsided at full width. */
+  .chart{max-width:700px;margin:0 auto}
   .chart svg{display:block;width:100%;height:auto}
   .lgd{font-family:var(--sans);font-size:10px;color:var(--cream-dim);
     display:flex;flex-wrap:wrap;gap:4px 14px;margin:7px 0 0}
@@ -328,19 +333,33 @@
     var ch = e.chains[exp], msg = [];
     if (ch && ch.atm) {
       var T = Math.max(dte(), 0) / 365, a = ch.atm;
-      var cm = mid(a.call), pm = mid(a.put);
-      var ivc = ivFrom("call", cm, S, a.strike, T, R);
-      var ivp = ivFrom("put", pm, S, a.strike, T, R);
-      var both = [ivc, ivp].filter(function (x) { return x; });
-      if (both.length) {
-        $("iv").value = Math.round(both.reduce(function (x, y) { return x + y; }, 0)
-                                   / both.length * 100);
-        msg.push("Vol solved from the $" + a.strike + " straddle" +
-          (both.length === 2
-            ? " \u2014 call " + Math.round(ivc * 100) + "%, put " + Math.round(ivp * 100) + "%"
-            : " \u2014 one side only"));
+      // The connector returns the broker's own midpoint IV per leg when the pull
+      // was made on a live book. That beats solving: it is the number the desk
+      // is quoting from, and it does not inherit the parity error that comes of
+      // pricing options against a stock mark from a different moment. Only fall
+      // back to bisecting Black-Scholes when the snapshot carries no IV.
+      if (a.iv > 0) {
+        $("iv").value = Math.round(a.iv * 100);
+        msg.push("Vol is the broker's own midpoint IV on the $" + a.strike + " straddle" +
+          (a.call && a.call.iv && a.put && a.put.iv
+            ? " \u2014 call " + Math.round(a.call.iv * 100) + "%, put " +
+              Math.round(a.put.iv * 100) + "%"
+            : "") + ", not solved here.");
       } else {
-        msg.push("Could not solve a volatility from these quotes; the field is unchanged");
+        var cm = mid(a.call), pm = mid(a.put);
+        var ivc = ivFrom("call", cm, S, a.strike, T, R);
+        var ivp = ivFrom("put", pm, S, a.strike, T, R);
+        var both = [ivc, ivp].filter(function (x) { return x; });
+        if (both.length) {
+          $("iv").value = Math.round(both.reduce(function (x, y) { return x + y; }, 0)
+                                     / both.length * 100);
+          msg.push("Vol solved from the $" + a.strike + " straddle" +
+            (both.length === 2
+              ? " \u2014 call " + Math.round(ivc * 100) + "%, put " + Math.round(ivp * 100) + "%"
+              : " \u2014 one side only"));
+        } else {
+          msg.push("Could not solve a volatility from these quotes; the field is unchanged");
+        }
       }
       var wc = width(a.call), wp = width(a.put);
       if (wc > 0.2 || wp > 0.2) {

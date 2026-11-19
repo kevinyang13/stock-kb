@@ -1,599 +1,615 @@
 {
- "generated": "2026-11-11T14:29:15",
- "generatedLabel": "Nov 11, 2026",
- "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
- "events": [
-  {
-   "date": "2026-10-27",
-   "type": "fed",
-   "ticker": null,
-   "title": "FOMC meeting, day 1",
-   "note": "Oct 27-28 meeting",
-   "fav": false
-  },
-  {
-   "date": "2026-10-28",
-   "type": "fed",
-   "ticker": null,
-   "title": "FOMC decision",
-   "note": "Rate decision, no SEP",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "macro",
-   "ticker": null,
-   "title": "GDP Q3, advance estimate",
-   "note": "8:30am ET — BEA first read on Q3 growth",
-   "fav": false
-  },
-  {
-   "date": "2026-10-29",
-   "type": "macro",
-   "ticker": null,
-   "title": "PCE (September)",
-   "note": "8:30am ET — Personal Income and Outlays; Fed's preferred gauge",
-   "fav": false
-  },
-  {
-   "date": "2026-11-02",
-   "type": "earnings",
-   "ticker": "AAPL",
-   "title": "AAPL earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-02",
-   "type": "exdiv",
-   "ticker": "BITO",
-   "title": "BITO ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-02",
-   "type": "earnings",
-   "ticker": "PLTR",
-   "title": "PLTR earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-02",
-   "type": "earnings",
-   "ticker": "VOYG",
-   "title": "VOYG earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-03",
-   "type": "macro",
-   "ticker": null,
-   "title": "JOLTS (September)",
-   "note": "10:00am ET — job openings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-03",
-   "type": "earnings",
-   "ticker": "AMD",
-   "title": "AMD earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-03",
-   "type": "earnings",
-   "ticker": "OUST",
-   "title": "OUST earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-03",
-   "type": "earnings",
-   "ticker": "RIOT",
-   "title": "RIOT earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-03",
-   "type": "earnings",
-   "ticker": "SMCI",
-   "title": "SMCI earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-11-04",
-   "type": "earnings",
-   "ticker": "APP",
-   "title": "APP earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-04",
-   "type": "earnings",
-   "ticker": "COHR",
-   "title": "COHR earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-04",
-   "type": "earnings",
-   "ticker": "DDOG",
-   "title": "DDOG earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-04",
-   "type": "earnings",
-   "ticker": "HUT",
-   "title": "HUT earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-04",
-   "type": "earnings",
-   "ticker": "LEU",
-   "title": "LEU earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-04",
-   "type": "earnings",
-   "ticker": "QCOM",
-   "title": "QCOM earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-11-04",
-   "type": "earnings",
-   "ticker": "RDW",
-   "title": "RDW earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-04",
-   "type": "earnings",
-   "ticker": "RIOT",
-   "title": "RIOT earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-05",
-   "type": "earnings",
-   "ticker": "BITF",
-   "title": "BITF earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-05",
-   "type": "earnings",
-   "ticker": "BKSY",
-   "title": "BKSY earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-05",
-   "type": "earnings",
-   "ticker": "IONQ",
-   "title": "IONQ earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-11-05",
-   "type": "earnings",
-   "ticker": "IREN",
-   "title": "IREN earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-05",
-   "type": "earnings",
-   "ticker": "MDA",
-   "title": "MDA earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-05",
-   "type": "earnings",
-   "ticker": "NET",
-   "title": "NET earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-06",
-   "type": "macro",
-   "ticker": null,
-   "title": "Employment Situation (October)",
-   "note": "Jobs report, 8:30am ET",
-   "fav": false
-  },
-  {
-   "date": "2026-11-06",
-   "type": "earnings",
-   "ticker": "VST",
-   "title": "VST earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-09",
-   "type": "earnings",
-   "ticker": "ASTS",
-   "title": "ASTS earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-09",
-   "type": "earnings",
-   "ticker": "CEG",
-   "title": "CEG earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-09",
-   "type": "earnings",
-   "ticker": "HIVE",
-   "title": "HIVE earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-09",
-   "type": "earnings",
-   "ticker": "MARA",
-   "title": "MARA earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-09",
-   "type": "earnings",
-   "ticker": "QUBT",
-   "title": "QUBT earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-09",
-   "type": "earnings",
-   "ticker": "RKLB",
-   "title": "RKLB earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "macro",
-   "ticker": null,
-   "title": "CPI (October)",
-   "note": "Consumer prices, 8:30am ET",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "earnings",
-   "ticker": "CAN",
-   "title": "CAN earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "earnings",
-   "ticker": "CRWV",
-   "title": "CRWV earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "earnings",
-   "ticker": "FLY",
-   "title": "FLY earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "earnings",
-   "ticker": "HQ",
-   "title": "HQ earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "exdiv",
-   "ticker": "IBM",
-   "title": "IBM ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "earnings",
-   "ticker": "QBTS",
-   "title": "QBTS earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "earnings",
-   "ticker": "RGTI",
-   "title": "RGTI earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-10",
-   "type": "exdiv",
-   "ticker": "V",
-   "title": "V ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-11",
-   "type": "earnings",
-   "ticker": "XNDU",
-   "title": "XNDU earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-12",
-   "type": "exdiv",
-   "ticker": "AAPL",
-   "title": "AAPL ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-12",
-   "type": "earnings",
-   "ticker": "CSCO",
-   "title": "CSCO earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-12",
-   "type": "earnings",
-   "ticker": "LUNR",
-   "title": "LUNR earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-12",
-   "type": "earnings",
-   "ticker": "NBIS",
-   "title": "NBIS earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-11-12",
-   "type": "earnings",
-   "ticker": "NU",
-   "title": "NU earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-12",
-   "type": "earnings",
-   "ticker": "SPCE",
-   "title": "SPCE earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-12",
-   "type": "earnings",
-   "ticker": "XNET",
-   "title": "XNET earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-13",
-   "type": "macro",
-   "ticker": null,
-   "title": "PPI (October)",
-   "note": "Producer prices, 8:30am ET",
-   "fav": false
-  },
-  {
-   "date": "2026-11-13",
-   "type": "exdiv",
-   "ticker": "LLY",
-   "title": "LLY ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-16",
-   "type": "exdiv",
-   "ticker": "CEG",
-   "title": "CEG ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-11-16",
-   "type": "earnings",
-   "ticker": "INFQ",
-   "title": "INFQ earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-17",
-   "type": "macro",
-   "ticker": null,
-   "title": "Advance Retail Sales (October)",
-   "note": "8:30am ET — Census advance report",
-   "fav": false
-  },
-  {
-   "date": "2026-11-17",
-   "type": "earnings",
-   "ticker": "HD",
-   "title": "HD earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-17",
-   "type": "earnings",
-   "ticker": "NVDA",
-   "title": "NVDA earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-11-18",
-   "type": "fed",
-   "ticker": null,
-   "title": "FOMC minutes (Oct 27-28 meeting)",
-   "note": "2:00pm ET",
-   "fav": false
-  },
-  {
-   "date": "2026-11-19",
-   "type": "earnings",
-   "ticker": "INTU",
-   "title": "INTU earnings",
-   "fav": true
-  },
-  {
-   "date": "2026-11-19",
-   "type": "exdiv",
-   "ticker": "MSFT",
-   "title": "MSFT ex-dividend",
-   "fav": true
-  },
-  {
-   "date": "2026-11-23",
-   "type": "earnings",
-   "ticker": "HPE",
-   "title": "HPE earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-24",
-   "type": "earnings",
-   "ticker": "DELL",
-   "title": "DELL earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-11-25",
-   "type": "macro",
-   "ticker": null,
-   "title": "GDP Q3, second estimate",
-   "note": "8:30am ET",
-   "fav": false
-  },
-  {
-   "date": "2026-11-25",
-   "type": "macro",
-   "ticker": null,
-   "title": "PCE (October)",
-   "note": "8:30am ET — Personal Income and Outlays",
-   "fav": false
-  },
-  {
-   "date": "2026-11-26",
-   "type": "holiday",
-   "ticker": null,
-   "title": "Markets closed - Thanksgiving",
-   "note": "NYSE and Nasdaq closed all day",
-   "fav": false
-  },
-  {
-   "date": "2026-11-27",
-   "type": "holiday",
-   "ticker": null,
-   "title": "Early close 1:00 pm ET",
-   "note": "Day after Thanksgiving; 1:15 pm for eligible options",
-   "fav": false
-  },
-  {
-   "date": "2026-11-30",
-   "type": "exdiv",
-   "ticker": "CCJ",
-   "title": "CCJ ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-12-01",
-   "type": "earnings",
-   "ticker": "MRVL",
-   "title": "MRVL earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-12-02",
-   "type": "earnings",
-   "ticker": "CRM",
-   "title": "CRM earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-12-02",
-   "type": "earnings",
-   "ticker": "SNOW",
-   "title": "SNOW earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-12-03",
-   "type": "exdiv",
-   "ticker": "QCOM",
-   "title": "QCOM ex-dividend",
-   "fav": true
-  },
-  {
-   "date": "2026-12-07",
-   "type": "exdiv",
-   "ticker": "GOOG",
-   "title": "GOOG ex-dividend",
-   "fav": true
-  },
-  {
-   "date": "2026-12-08",
-   "type": "fed",
-   "ticker": null,
-   "title": "FOMC meeting, day 1",
-   "note": "Dec 8-9 meeting",
-   "fav": false
-  },
-  {
-   "date": "2026-12-09",
-   "type": "fed",
-   "ticker": null,
-   "title": "FOMC decision + SEP",
-   "note": "Rate decision with Summary of Economic Projections",
-   "fav": false
-  },
-  {
-   "date": "2026-12-09",
-   "type": "earnings",
-   "ticker": "AVGO",
-   "title": "AVGO earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-12-10",
-   "type": "earnings",
-   "ticker": "PL",
-   "title": "PL earnings",
-   "fav": false
-  },
-  {
-   "date": "2026-12-10",
-   "type": "exdiv",
-   "ticker": "TSM",
-   "title": "TSM ex-dividend",
-   "fav": true
-  },
-  {
-   "date": "2026-12-22",
-   "type": "exdiv",
-   "ticker": "VST",
-   "title": "VST ex-dividend",
-   "fav": false
-  },
-  {
-   "date": "2026-12-24",
-   "type": "holiday",
-   "ticker": null,
-   "title": "Early close 1:00 pm ET",
-   "note": "Christmas Eve; 1:15 pm for eligible options",
-   "fav": false
-  },
-  {
-   "date": "2026-12-25",
-   "type": "holiday",
-   "ticker": null,
-   "title": "Markets closed - Christmas Day",
-   "note": "NYSE and Nasdaq closed all day",
-   "fav": false
-  }
- ]
+  "generated": "2026-11-11T14:29:15",
+  "generatedLabel": "Nov 11, 2026",
+  "note": "Ticker dates are the one date the source publishes per symbol. A future date is the next scheduled report; a past date is the day the company last reported, kept for 10 days so the calendar is not blank behind today. A symbol whose published date is older than that has no confirmed next date and is omitted rather than estimated. Macro, Fed and market-holiday entries are curated by hand.",
+  "events": [
+    {
+      "date": "2026-10-27",
+      "type": "fed",
+      "ticker": null,
+      "title": "FOMC meeting, day 1",
+      "note": "Oct 27-28 meeting",
+      "fav": false
+    },
+    {
+      "date": "2026-10-28",
+      "type": "fed",
+      "ticker": null,
+      "title": "FOMC decision",
+      "note": "Rate decision, no SEP",
+      "fav": false
+    },
+    {
+      "date": "2026-10-29",
+      "type": "macro",
+      "ticker": null,
+      "title": "GDP Q3, advance estimate",
+      "note": "8:30am ET — BEA first read on Q3 growth",
+      "fav": false
+    },
+    {
+      "date": "2026-10-29",
+      "type": "macro",
+      "ticker": null,
+      "title": "PCE (September)",
+      "note": "8:30am ET — Personal Income and Outlays; Fed's preferred gauge",
+      "fav": false
+    },
+    {
+      "date": "2026-11-02",
+      "type": "earnings",
+      "ticker": "AAPL",
+      "title": "AAPL earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-02",
+      "type": "earnings",
+      "ticker": "PLTR",
+      "title": "PLTR earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-02",
+      "type": "earnings",
+      "ticker": "VOYG",
+      "title": "VOYG earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-02",
+      "type": "exdiv",
+      "ticker": "BITO",
+      "title": "BITO ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-11-03",
+      "type": "earnings",
+      "ticker": "AMD",
+      "title": "AMD earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-03",
+      "type": "earnings",
+      "ticker": "OUST",
+      "title": "OUST earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-03",
+      "type": "earnings",
+      "ticker": "RIOT",
+      "title": "RIOT earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-03",
+      "type": "earnings",
+      "ticker": "SMCI",
+      "title": "SMCI earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-11-03",
+      "type": "macro",
+      "ticker": null,
+      "title": "JOLTS (September)",
+      "note": "10:00am ET — job openings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "APP",
+      "title": "APP earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "COHR",
+      "title": "COHR earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "DDOG",
+      "title": "DDOG earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "HUT",
+      "title": "HUT earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "LEU",
+      "title": "LEU earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "QCOM",
+      "title": "QCOM earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "RDW",
+      "title": "RDW earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-04",
+      "type": "earnings",
+      "ticker": "RIOT",
+      "title": "RIOT earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-05",
+      "type": "earnings",
+      "ticker": "BITF",
+      "title": "BITF earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-05",
+      "type": "earnings",
+      "ticker": "BKSY",
+      "title": "BKSY earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-05",
+      "type": "earnings",
+      "ticker": "IONQ",
+      "title": "IONQ earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-11-05",
+      "type": "earnings",
+      "ticker": "IREN",
+      "title": "IREN earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-05",
+      "type": "earnings",
+      "ticker": "MDA",
+      "title": "MDA earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-05",
+      "type": "earnings",
+      "ticker": "NET",
+      "title": "NET earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-06",
+      "type": "earnings",
+      "ticker": "VST",
+      "title": "VST earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-06",
+      "type": "macro",
+      "ticker": null,
+      "title": "Employment Situation (October)",
+      "note": "Jobs report, 8:30am ET",
+      "fav": false
+    },
+    {
+      "date": "2026-11-09",
+      "type": "earnings",
+      "ticker": "ASTS",
+      "title": "ASTS earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-09",
+      "type": "earnings",
+      "ticker": "CEG",
+      "title": "CEG earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-09",
+      "type": "earnings",
+      "ticker": "HIVE",
+      "title": "HIVE earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-09",
+      "type": "earnings",
+      "ticker": "MARA",
+      "title": "MARA earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-09",
+      "type": "earnings",
+      "ticker": "QUBT",
+      "title": "QUBT earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-09",
+      "type": "earnings",
+      "ticker": "RKLB",
+      "title": "RKLB earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "earnings",
+      "ticker": "CAN",
+      "title": "CAN earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "earnings",
+      "ticker": "CRWV",
+      "title": "CRWV earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "earnings",
+      "ticker": "FLY",
+      "title": "FLY earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "earnings",
+      "ticker": "HQ",
+      "title": "HQ earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "earnings",
+      "ticker": "QBTS",
+      "title": "QBTS earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "earnings",
+      "ticker": "RGTI",
+      "title": "RGTI earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "exdiv",
+      "ticker": "IBM",
+      "title": "IBM ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "exdiv",
+      "ticker": "V",
+      "title": "V ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-11-10",
+      "type": "macro",
+      "ticker": null,
+      "title": "CPI (October)",
+      "note": "Consumer prices, 8:30am ET",
+      "fav": false
+    },
+    {
+      "date": "2026-11-11",
+      "type": "earnings",
+      "ticker": "XNDU",
+      "title": "XNDU earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-12",
+      "type": "earnings",
+      "ticker": "CSCO",
+      "title": "CSCO earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-12",
+      "type": "earnings",
+      "ticker": "LUNR",
+      "title": "LUNR earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-12",
+      "type": "earnings",
+      "ticker": "NBIS",
+      "title": "NBIS earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-11-12",
+      "type": "earnings",
+      "ticker": "NU",
+      "title": "NU earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-12",
+      "type": "earnings",
+      "ticker": "SPCE",
+      "title": "SPCE earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-12",
+      "type": "earnings",
+      "ticker": "XNET",
+      "title": "XNET earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-12",
+      "type": "exdiv",
+      "ticker": "AAPL",
+      "title": "AAPL ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-11-13",
+      "type": "exdiv",
+      "ticker": "LLY",
+      "title": "LLY ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-11-13",
+      "type": "macro",
+      "ticker": null,
+      "title": "PPI (October)",
+      "note": "Producer prices, 8:30am ET",
+      "fav": false
+    },
+    {
+      "date": "2026-11-16",
+      "type": "earnings",
+      "ticker": "INFQ",
+      "title": "INFQ earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-16",
+      "type": "exdiv",
+      "ticker": "CEG",
+      "title": "CEG ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-11-17",
+      "type": "earnings",
+      "ticker": "HD",
+      "title": "HD earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-17",
+      "type": "earnings",
+      "ticker": "NVDA",
+      "title": "NVDA earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-11-17",
+      "type": "macro",
+      "ticker": null,
+      "title": "Advance Retail Sales (October)",
+      "note": "8:30am ET — Census advance report",
+      "fav": false
+    },
+    {
+      "date": "2026-11-18",
+      "type": "corporate",
+      "ticker": "ANT",
+      "title": "ANT IPO prices",
+      "note": "Anthropic, PBC -- 801,351,354 Class A shares at an expected $70.00-$78.00, per the S-1/A filed Nov 10 2026 (CIK 0002130357). The pricing date itself is press reporting from unnamed sources, not a date in the filing. Press also puts the offering at 825M shares, which the filing does not; the gap is most likely the underwriters' option, which this entry has not verified.",
+      "fav": false
+    },
+    {
+      "date": "2026-11-18",
+      "type": "fed",
+      "ticker": null,
+      "title": "FOMC minutes (Oct 27-28 meeting)",
+      "note": "2:00pm ET",
+      "fav": false
+    },
+    {
+      "date": "2026-11-19",
+      "type": "corporate",
+      "ticker": "ANT",
+      "title": "ANT first day of trading",
+      "note": "Nasdaq Global Select Market under the symbol ANT, per the S-1/A cover. The date is expected, not confirmed: it comes from press reporting, not from the filing.",
+      "fav": false
+    },
+    {
+      "date": "2026-11-19",
+      "type": "earnings",
+      "ticker": "INTU",
+      "title": "INTU earnings",
+      "fav": true
+    },
+    {
+      "date": "2026-11-19",
+      "type": "exdiv",
+      "ticker": "MSFT",
+      "title": "MSFT ex-dividend",
+      "fav": true
+    },
+    {
+      "date": "2026-11-23",
+      "type": "earnings",
+      "ticker": "HPE",
+      "title": "HPE earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-24",
+      "type": "earnings",
+      "ticker": "DELL",
+      "title": "DELL earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-11-25",
+      "type": "macro",
+      "ticker": null,
+      "title": "GDP Q3, second estimate",
+      "note": "8:30am ET",
+      "fav": false
+    },
+    {
+      "date": "2026-11-25",
+      "type": "macro",
+      "ticker": null,
+      "title": "PCE (October)",
+      "note": "8:30am ET — Personal Income and Outlays",
+      "fav": false
+    },
+    {
+      "date": "2026-11-26",
+      "type": "holiday",
+      "ticker": null,
+      "title": "Markets closed - Thanksgiving",
+      "note": "NYSE and Nasdaq closed all day",
+      "fav": false
+    },
+    {
+      "date": "2026-11-27",
+      "type": "holiday",
+      "ticker": null,
+      "title": "Early close 1:00 pm ET",
+      "note": "Day after Thanksgiving; 1:15 pm for eligible options",
+      "fav": false
+    },
+    {
+      "date": "2026-11-30",
+      "type": "exdiv",
+      "ticker": "CCJ",
+      "title": "CCJ ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-12-01",
+      "type": "earnings",
+      "ticker": "MRVL",
+      "title": "MRVL earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-12-02",
+      "type": "earnings",
+      "ticker": "CRM",
+      "title": "CRM earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-12-02",
+      "type": "earnings",
+      "ticker": "SNOW",
+      "title": "SNOW earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-12-03",
+      "type": "exdiv",
+      "ticker": "QCOM",
+      "title": "QCOM ex-dividend",
+      "fav": true
+    },
+    {
+      "date": "2026-12-07",
+      "type": "exdiv",
+      "ticker": "GOOG",
+      "title": "GOOG ex-dividend",
+      "fav": true
+    },
+    {
+      "date": "2026-12-08",
+      "type": "fed",
+      "ticker": null,
+      "title": "FOMC meeting, day 1",
+      "note": "Dec 8-9 meeting",
+      "fav": false
+    },
+    {
+      "date": "2026-12-09",
+      "type": "earnings",
+      "ticker": "AVGO",
+      "title": "AVGO earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-12-09",
+      "type": "fed",
+      "ticker": null,
+      "title": "FOMC decision + SEP",
+      "note": "Rate decision with Summary of Economic Projections",
+      "fav": false
+    },
+    {
+      "date": "2026-12-10",
+      "type": "earnings",
+      "ticker": "PL",
+      "title": "PL earnings",
+      "fav": false
+    },
+    {
+      "date": "2026-12-10",
+      "type": "exdiv",
+      "ticker": "TSM",
+      "title": "TSM ex-dividend",
+      "fav": true
+    },
+    {
+      "date": "2026-12-22",
+      "type": "exdiv",
+      "ticker": "VST",
+      "title": "VST ex-dividend",
+      "fav": false
+    },
+    {
+      "date": "2026-12-24",
+      "type": "holiday",
+      "ticker": null,
+      "title": "Early close 1:00 pm ET",
+      "note": "Christmas Eve; 1:15 pm for eligible options",
+      "fav": false
+    },
+    {
+      "date": "2026-12-25",
+      "type": "holiday",
+      "ticker": null,
+      "title": "Markets closed - Christmas Day",
+      "note": "NYSE and Nasdaq closed all day",
+      "fav": false
+    }
+  ]
 }

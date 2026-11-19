@@ -3567,3 +3567,170 @@ symbol changes, so one name's strikes can never be applied to another's.
 
 The snapshot covers NBIS, GOOG and SNDK with their full expiry lists and the Nov 20 chain.
 Any other symbol disables the button and says plainly that it is not in the snapshot.
+
+---
+
+## 2026-11-16 — ANT on the calendar, and the first of the stale Financials cards
+
+**Sources**: Anthropic S-1/A filed Nov 10 2026 (CIK 0002130357); Cisco 8-K Exhibit 99.1,
+Nov 12 2026; IonQ 10-Q for the quarter ended Sep 30 2026.
+
+### Anthropic's IPO, as two calendar entries
+
+`events.json` gains `ANT IPO prices` (Nov 18) and `ANT first day of trading` (Nov 19), both
+type `corporate`, which `quotes.py --events` preserves rather than refetches.
+
+Everything factual on them comes from the S-1/A: the ticker ANT, the Nasdaq Global Select
+listing, 801,351,354 Class A shares and the $70.00–$78.00 range. **The dates do not.** No
+date appears in the filing; Nov 18 pricing and Nov 19 first trade are press reporting from
+unnamed sources, and both notes say so rather than letting the calendar imply a confirmed
+schedule. Press also puts the offering at 825M shares against the filing's 801.4M — most
+likely the underwriters' option, but that was not verified, so the note states the gap
+instead of resolving it.
+
+The lock-up is two-tier — 180 days for most holders, 365 days for the co-founders and
+holders above 0.5% fully diluted — but both run from the prospectus date, which does not
+exist until pricing. No lock-up entries were written for a clock that has not started.
+
+`corporate` turned out to be a type the site declared but had never used: it had a colour in
+`site.css` and a place in `quotes.py`'s `CURATED` tuple, but `events.html` neither counted it
+in the status line nor offered it in the filter. Both added.
+
+### Ten Financials cards are a quarter behind
+
+Comparing every earnings date in the last 30 days against the period its card shows found ten
+cards describing a quarter the company has since replaced: VOYG, RIOT, HUT, BKSY, IONQ, HIVE,
+MARA, CSCO, INFQ. Six more names reported with no card at all, four of them correctly refused
+by the chartable gate (BITF a shell, CAN and SPCE on negative gross profit, HQ pre-revenue).
+
+**Cisco FQ1 FY27 is rebuilt and published.** Revenue $18,517M (+24%), gross profit $11,791M,
+operating profit $5,629M, net $4,552M. Gross margin fell to 63.7% from 65.5% while revenue
+grew 24%, because the growth is Networking (+43%), which earns less than Services; operating
+income still rose 66% on a 3% cut in operating expenses.
+
+Three things worth recording, because each would have put a wrong figure on a public page:
+
+- **`bin/segfetch.py` returned the wrong quarter and reported success.** Its guard is that
+  the segments sum to the revenue the card already draws — but the card still drew the stale
+  quarter, so the prior split ($17,252M) validated against the prior revenue. Cisco is a
+  fiscal-quarter filer and the vendor endpoint buckets by calendar quarter, which is the
+  documented trap; what is new is that the sum guard cannot catch it while the card itself is
+  the thing being refreshed. The real split came from the 8-K and sums to $18,517M exactly.
+- **`bin/debtfetch.py` has the same ordering dependency.** It matches the balance sheet column
+  to the period the card shows, so run before the card is updated it returned July's $7,218M
+  of cash. Updating `financials.json` first and re-running gave October's $7,778M.
+- **`bin/epsfetch.py` is returning HTTP 403.** The earnings chart could not be refreshed past
+  Jul '26, so the `eps` key was removed from the card rather than left pointing at a series
+  that ends before the quarter the card describes. The card says so.
+
+### IonQ cannot be drawn by the current renderer
+
+IonQ Q3 FY26 is an operating loss of $433.1M that becomes net income of $563.1M, because an
+$896.2M non-cash gain on warrant fair value and a $141.7M tax benefit sit below the line.
+`bin/mkspec.py` picks its layout on the sign of net income, so this takes the profit layout —
+which assumes operating profit is positive. The result draws "Operating profit $-433.1M" in
+profit green and crosses three bands. The spec (`examples/ionq-q3-fy26.json`) foots and the
+validator passes; it is the geometry that is wrong, so the card was not published.
+
+The figures themselves are worth keeping: revenue $173.8M (+336%), but $83.5M of that is
+SkyWater, consolidated for the first time, so the organic IonQ Platform line grew 127% rather
+than 336%. Cost of revenue excludes depreciation and amortization, so the 22% gross margin is
+not comparable to the other cards — with D&A above the line it is a gross loss.
+
+INFQ reported on Nov 16 and is not yet in the vendor data, so it cannot be rebuilt at all
+today. MARA and HUT both report operating profit above gross profit, because bitcoin
+fair-value gains run through operating expenses as a credit; they need checking before they
+are drawn.
+
+## 2026-11-16 — NVDA added to the Simulator's IBKR snapshot
+
+Pulled NVDA through the IBKR connector and wrote it into `chains.json`, which the Simulator's
+**Fill from IBKR** button reads. The snapshot now carries four symbols: NBIS, GOOG, SNDK and NVDA.
+
+NVDA, conid 4815747, pulled during regular hours on Nov 16: stock $156.98 realtime, 26 expiration
+dates, and the full Nov 20 strike ladder, 115 through 200.
+
+**The connector does return implied volatility, and this log previously said it did not.** The
+Nov 14 entry recorded that `get_price_snapshot` gives only last and bid/ask on an option, so the
+page had to bisect Black–Scholes to recover a volatility. That was wrong: the call takes a
+`market_data_names` list, and `option_midpoint_iv` and `option_greeks` are both on it. NVDA's ATM
+$157.50 straddle came back with a call IV of 115.91%, a put IV of 114.67% and a full set of
+greeks, the deltas at +0.498 and −0.502 confirming the strike is where the chain says it is.
+
+So `fillFromIbkr()` now prefers a supplied IV and only falls back to the solver when the snapshot
+has none. The three symbols pulled on Nov 14 have no IV in the file and still go through the
+solver; NVDA does not. The broker's own number is better than a solved one for a second reason
+beyond convenience — it does not inherit the parity error that comes of pricing options against a
+stock mark captured at a different moment, which is the problem the Nov 14 entry had to work
+around for NBIS.
+
+**NVDA's ladder is not evenly spaced**: 1.00 apart from 131 to 150, 2.50 apart from 152.5 up. The
+page's nearest-listed-strike match handles it correctly — a strangle at ±1 expected move
+($18.90 on 115% vol, 4 days) placed its legs at 175 and 138, one out of each band. An increment
+guessed from the price would have got one of the two wrong whichever value it picked. The entry
+records 2.50 as the increment, being the spacing at the money, with a note saying the ladder is
+mixed.
+
+**Scope**: `chains.json` is gitignored and does not exist on the published site, so nothing here
+reaches Pages. `simulator.html` changed, which is tracked and live, along with
+`wiki/options-simulator.md`. No position data is involved — a strike ladder and a published quote
+are public market facts.
+
+---
+
+## 2026-11-16 — Six symbols off the heatmap
+
+`watchlist.json` goes from 113 to 107 symbols: **CCXI, 6488, BITF, BCII, MFH, VFTNX** removed.
+
+Five of the six are names the Financials gate already refuses — CCXI, BITF, BCII and MFH are
+the shells with no usable filing, VFTNX is a fund that files no income statement. 6488
+(GlobalWafers) is the exception and is the only one of the six that carries a real card.
+
+**Scope was the heatmap only.** Each symbol still exists elsewhere, deliberately left alone:
+
+- `financials.json` keeps the **GlobalWafers Q2 FY26 card**, with `examples/6488-q2-fy26.json`,
+  its charts and [[globalwafers-q2-fy26]]. The card is now reachable from the Financials tab
+  but has no heatmap tile behind it. `bin/sadata.py` also keeps its `PATHS` entry, since 6488
+  is a TPEx listing that does not resolve to `/stocks/<ticker>/`.
+- `events.json` keeps BITF's Nov 5 earnings row.
+- `brief.json` still names CCXI.
+- `ibkr-conids.json` keeps all six contract ids, and the live IBKR watchlist (id 100) still
+  carries them — it is edited by full replace, so it was not touched here.
+- [[favorites-financials]] still lists CCXI, BITF, BCII and MFH in its shells table and 6488
+  among the segment-split charts. Both remain true of the Financials tab, which is what that
+  page describes.
+
+No sector chip was emptied by the removal; `SPAC` still has a member.
+
+## 2026-11-18 — The coverage table, caught stale by the removal
+
+Removing six symbols from the heatmap left [[favorites-financials]] asserting a watchlist of
+**113** on a live public page. The whole coverage table moved, not just the total, because four
+of the six sat in the shells row and one in the funds row:
+
+| | was | now |
+|---|---|---|
+| Watchlist names | 113 | 107 |
+| Charted | 76 | 75 |
+| ETFs and funds | 25 | 24 |
+| Shells / no usable filing | 6 | 2 |
+
+The shells row drops to **CLBR, XNET** — CCXI, BITF, BCII and MFH are gone from the board
+entirely, so they are no longer names the tab is declining to chart. VFTNX comes out of the funds
+row, and 6488 out of the charted row. The table foots to 107.
+
+**The card count does not move.** The tab still holds **77**, because GlobalWafers' card was
+deliberately left standing when its tile came off. So the page now names two charted companies
+that are not on the watchlist — Nintendo, which never was, and 6488, which was until today — and
+says plainly that 6488's card has no tile behind it. Counts verified against `watchlist.json` and
+`financials.json` rather than by arithmetic: 107 symbols, 77 cards, 75 of them on the watchlist.
+
+### Not committed
+
+`charts/IONQ-Q3-FY26.json` and `examples/ionq-q3-fy26.json` stay in the working tree. The spec
+foots and the five-identity validator passes, but the renderer draws it wrong: `bin/mkspec.py`
+picks its layout on `net >= 0`, and IONQ's quarter is a **$433.1M operating loss carried to a
+$563.1M net profit** by an $854.5M non-operating gain. The profit layout then paints the
+operating node green with a "-249% margin" and crosses three bands. The card still reads Q2 FY26,
+and `assets/sankey.js` derives the chart path from the card's period, so the file is unreferenced
+— committing it would publish a broken chart to a public URL that nothing links to.

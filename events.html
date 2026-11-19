@@ -37,6 +37,7 @@
       <option value="earnings">Earnings</option>
       <option value="exdiv">Dividends</option>
       <option value="macro">Macro + Fed</option>
+      <option value="corporate">Corporate</option>
       <option value="fav">Favorites only</option>
     </select>
     <span class="spacer"></span>
@@ -228,7 +229,7 @@ Site.nav();
                      weekStart(today).getDate() + 6))
       : ymd(win[1]);
 
-    var counts = { earnings: 0, exdiv: 0, fed: 0, macro: 0, holiday: 0 };
+    var counts = { earnings: 0, exdiv: 0, fed: 0, macro: 0, holiday: 0, corporate: 0 };
     (evData.events || []).forEach(function (e) {
       if (e.date < fromKey || e.date > toKey) return;
       if (counts[e.type] !== undefined) counts[e.type]++;
@@ -238,6 +239,7 @@ Site.nav();
                   dayLabel(parseDay(toKey))) + "</b><br>" +
       counts.earnings + " earnings &middot; " + counts.exdiv + " ex-dividend &middot; " +
       (counts.fed + counts.macro + counts.holiday) + " macro/Fed &middot; " +
+      (counts.corporate ? counts.corporate + " corporate &middot; " : "") +
       "dates as of " + esc(evData.generatedLabel || "");
   }
   function loadEvents() {
