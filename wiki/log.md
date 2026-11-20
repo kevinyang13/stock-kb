@@ -3734,3 +3734,67 @@ $563.1M net profit** by an $854.5M non-operating gain. The profit layout then pa
 operating node green with a "-249% margin" and crosses three bands. The card still reads Q2 FY26,
 and `assets/sankey.js` derives the chart path from the card's period, so the file is unreferenced
 — committing it would publish a broken chart to a public URL that nothing links to.
+
+## 2026-11-19 — INTU moved to FQ1 FY27, and Mailchimp becomes a segment on its way out
+
+Intuit reported after the close today. The card moves from **FQ4 FY26 (Jul 31)** to **FQ1 FY27,
+quarter ended Oct 31 2026**, on the company's own results release rather than the aggregator —
+`source` and `sourceUrl` now point at the 8-K press release.
+
+| | FQ4 FY26 | FQ1 FY27 |
+|---|---|---|
+| Revenue | $4,354M +14% | **$4,354M +12%** |
+| Gross profit | $3,444M (79%) | **$3,304M (76%)** |
+| Operating profit | $768M (18%) | **$868M (20%)** |
+| Net profit | $363M | **$695M** |
+
+Revenue is the same figure to the million in both quarters. That is a coincidence, not a
+duplicated column — every other line differs and the two grew against different bases. It is
+called out on the card because it reads like a copy-paste error and is not one.
+
+### Following the release over the aggregator
+
+stockanalysis gives operating income **$879M** and gross profit **$3,444M**; Intuit's release
+gives **$868M** and a cost of revenue of **$1,050M**. Two separate disagreements:
+
+- the $11M gap in operating income is the **restructuring charge**, which the aggregator puts
+  below the operating line and the company puts above it
+- the $140M gap in gross profit is **$44M of amortization of acquired technology** plus the
+  cost-of-revenue split the aggregator collapses
+
+The card follows the filing both times, per the trap recorded in [[sankey-income-statement]].
+
+### Segments: three now, and one of them is being sold
+
+Mailchimp is broken out as its own reportable segment for the first time — it used to sit inside
+Global Business Solutions. The split is **GBS $3,083M (+15%), Consumer $958M (+7%), Mailchimp
+$313M (−1%)**, footing to revenue exactly.
+
+GBS is **derived**: the release states it only as "$3.1 billion", so $4,354M − $958M − $313M
+gives $3,083M, which the rounding supports. Consumer's own three lines — Credit Karma $708M,
+TurboTax $199M, ProTax $51M — sum to $958M to the dollar, which is the check that the derivation
+is reading the right level of the hierarchy.
+
+The same release announces the **sale of Mailchimp to Bending Spoons** for approximately $3.68B
+($3.31B cash, $368M in Bending Spoons stock), expected to close in early calendar 2027. So the
+segment appears on the card in the same quarter it is being disposed of, and 7% of revenue goes
+with it. Guidance excludes the sale.
+
+### What did not refresh
+
+- **Earnings chart is stale.** `bin/epsfetch.py` returned `HTTP Error 403: Forbidden` from the
+  Nasdaq consensus endpoint on two attempts, so the chart still shows Oct '26 as a forecast of
+  $2.47 for a quarter that has now reported. GAAP diluted EPS was $2.59 against $1.59 — but that
+  is not the chart's basis, which is the vendor's adjusted figure, so the two must not be read
+  against each other. Said so on the card.
+- **Ownership donut** still rests on the Jun 30 2026 13F, the latest the SEC has published. It is
+  not tied to the income statement quarter.
+- Debt and P/E both refreshed: debt $7,608M, cash $4,042M, FCF $987M, net debt $3,566M (was
+  $3.7B); market cap $82.85B, P/E 17.7 trailing / 12.7 forward, dividend 1.78%.
+
+### One note removed
+
+The old card opened with a short aside about the maintainer's own relationship to the company.
+This repo is public and GitHub Pages serves it, so a personal detail in a card note is published
+to anyone who opens the tab. It is gone. Nothing else on the card changed on privacy grounds,
+and the name-leak audit across the other tracked files is still open.

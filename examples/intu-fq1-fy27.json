@@ -1,0 +1,56 @@
+{
+ "company": "Intuit",
+ "ticker": "INTU",
+ "period": "FQ1 FY27",
+ "currency": "$",
+ "unit": "M",
+ "decimals": 0,
+ "revenue": 4354.0,
+ "revenue_yoy": 12,
+ "segments": [
+  {
+   "name": "Global Business Solutions",
+   "value": 3083.0,
+   "yoy": 15,
+   "note": "71% of revenue",
+   "color": "#e8502a"
+  },
+  {
+   "name": "Consumer",
+   "value": 958.0,
+   "yoy": 7,
+   "note": "22% of revenue",
+   "color": "#1b1b7a"
+  },
+  {
+   "name": "Mailchimp",
+   "value": 313.0,
+   "yoy": -1,
+   "note": "7% of revenue",
+   "color": "#c8a020"
+  }
+ ],
+ "cost_of_revenue": 1050.0,
+ "gross_profit": 3304.0,
+ "width": 1700,
+ "height": 940,
+ "opex_total": 2436.0,
+ "opex_items": [
+  {
+   "name": "R&D",
+   "value": 788.0
+  },
+  {
+   "name": "SG&A",
+   "value": 1516.0
+  },
+  {
+   "name": "Amortization & restructuring",
+   "value": 132.0
+  }
+ ],
+ "operating_profit": 868.0,
+ "other": 98.0,
+ "tax": 271.0,
+ "net_profit": 695.0
+}

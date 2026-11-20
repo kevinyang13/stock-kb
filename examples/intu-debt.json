@@ -3,46 +3,42 @@
  "company": "Intuit",
  "currency": "$",
  "unit": "millions",
- "window": "The quarter the Financials card covers: FQ4 FY26, quarter ended Jul 31, 2026.",
- "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-07-31. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
+ "window": "The quarter the Financials card covers: FQ1 FY27, quarter ended Oct 31, 2026.",
+ "source": "stockanalysis.com quarterly balance sheet and cash flow statement, column 2026-10-31. Debt and cash are balance sheet stocks at the period end; free cash flow is that quarter's flow.",
  "periods": [
   {
-   "label": "FQ4 FY26",
-   "debt": 8421.0,
-   "fcf": 1304.0,
-   "cash": 4705.0,
+   "label": "FQ1 FY27",
+   "debt": 7608.0,
+   "fcf": 987.0,
+   "cash": 4042.0,
    "debt_parts": [
     {
-     "label": "Current portion",
-     "value": 1249.0
+     "label": "Short-term debt",
+     "value": 500.0
     },
     {
      "label": "Long-term debt",
-     "value": 6420.0
-    },
-    {
-     "label": "Current leases",
-     "value": 85.0
+     "value": 6422.0
     },
     {
      "label": "Long-term leases",
-     "value": 667.0
+     "value": 686.0
     }
    ],
    "cash_parts": [
     {
      "label": "Short-term investments",
-     "value": 2495.0
+     "value": 1279.0
     }
    ],
    "fcf_parts": [
     {
      "label": "Operating cash flow",
-     "value": 1331.0
+     "value": 1062.0
     },
     {
      "label": "Capital expenditure",
-     "value": -27.0
+     "value": -75.0
     }
    ]
   }

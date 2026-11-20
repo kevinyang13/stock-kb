@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-12T11:30:00-08:00",
- "generatedLabel": "Nov 12, 2026",
+ "generated": "2026-11-19T20:15:00-08:00",
+ "generatedLabel": "Nov 19, 2026",
  "note": "Most recent reported quarter for every name in the watchlist that files an income statement. Profitable quarters flow revenue into profit and cost; loss-making quarters show the net loss funding the gap. ETFs, funds and pre-revenue shells are not included.",
  "items": [
   {
@@ -513,60 +513,63 @@
   {
    "t": "INTU",
    "company": "Intuit",
-   "period": "FQ4 FY26",
-   "periodEnd": "quarter ended Jul 31, 2026",
-   "reported": "",
-   "img": "assets/financials/INTU-FQ4-FY26.png",
-   "source": "stockanalysis.com quarterly income statement",
-   "sourceUrl": "https://stockanalysis.com/stocks/intu/financials/income-statement/?p=quarterly",
+   "period": "FQ1 FY27",
+   "periodEnd": "quarter ended Oct 31, 2026",
+   "reported": "Nov 19, 2026",
+   "img": "assets/financials/INTU-FQ1-FY27.png",
+   "source": "Intuit Q1 FY27 results release (company 8-K)",
+   "sourceUrl": "https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons",
    "highlights": [
     {
      "k": "Revenue",
      "v": "$4,354M",
-     "s": "+14% Y/Y"
+     "s": "+12% Y/Y"
     },
     {
      "k": "Gross margin",
-     "v": "79%",
-     "s": "$3,444M"
+     "v": "76%",
+     "s": "$3,304M"
     },
     {
      "k": "Operating margin",
-     "v": "18%",
-     "s": "$768M"
+     "v": "20%",
+     "s": "$868M"
     },
     {
      "k": "Net profit",
-     "v": "$363M",
-     "s": "8% margin"
+     "v": "$695M",
+     "s": "16% margin"
     },
     {
      "k": "Market cap",
-     "v": "$95.31B",
+     "v": "$82.85B",
      "s": "moves with the share price"
     },
     {
      "k": "P/E",
-     "v": "21.7 · 15.0",
+     "v": "17.7 · 12.7",
      "s": "trailing · forward"
     },
     {
      "k": "Dividend",
-     "v": "1.55%",
+     "v": "1.78%",
      "s": "$5.52 a year"
     }
    ],
    "notes": [
-    "Segments: Global Business Solutions $3,424M, Consumer $930M",
-    "Your employer. A 79% gross margin, but operating margin falls to 18% because operating expenses are $2,676M — 61% of revenue.",
-    "Selling, marketing and G&A alone is $1,655M, 38% of revenue.",
-    "Net profit is less than half of operating profit: $228M of net interest and other expense sits below the operating line, then $177M of tax.",
-    "Seasonality matters for Intuit — the fiscal fourth quarter is not its tax-season peak.",
-    "Debt and coverage, FQ4 FY26: $8.4B of debt against $4.7B of cash and $1.3B of free cash flow for the quarter. Net debt $3.7B. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
-    "Earnings chart: reported EPS against the street's consensus, four reported quarters and the one ahead. Jul '26: $2.17 actual against $2.12 expected, beat by $0.05 (+2%). Oct '26 consensus is $2.47 from 9 analysts, due Nov 19, 2026. This is the vendor's EPS, usually the street's adjusted figure rather than the GAAP one the income statement is built from, and for a foreign filer it is the ADR's earnings per share in US dollars. Source: Nasdaq earnings surprise and analyst forecast endpoints (Zacks consensus), read Oct 29, 2026.",
-    "Market figures as of Nov 4, 2026: market cap $95.31B, P/E 21.7 trailing, 15.0 forward; dividend $5.52 a year, 1.55% yield, last ex-dividend Oct 8, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com).",
+    "Segments: Global Business Solutions $3,083M (+15%), Consumer $958M (+7%), Mailchimp $313M (-1%). Mailchimp is broken out as its own reportable segment for the first time this quarter; it used to sit inside Global Business Solutions (source: Intuit Q1 FY27 results release).",
+    "Global Business Solutions is derived. The release states it only as \"$3.1 billion\"; $4,354M less Consumer $958M less Mailchimp $313M gives $3,083M, and the three then foot to revenue exactly (source: Intuit Q1 FY27 results release).",
+    "Inside Consumer: Credit Karma $708M, TurboTax $199M, ProTax $51M, which sum to the $958M segment total. FQ1 is Intuit's tax off-season, so TurboTax is small here and grew just 1% (source: Intuit Q1 FY27 results release).",
+    "Intuit also announced it is selling Mailchimp to Bending Spoons for approximately $3.68B -- $3.31B cash and $368M in Bending Spoons stock -- expected to close in early calendar 2027. All guidance excludes the sale, and the 7% of revenue Mailchimp contributes here goes with it (source: Intuit Q1 FY27 results release).",
+    "Sources disagree on two lines. stockanalysis.com reports operating income of $879M and gross profit of $3,444M; Intuit's own release gives operating income of $868M and cost of revenue of $1,050M, which includes $44M of amortization of acquired technology and leaves gross profit of $3,304M. The difference in operating income is the $11M restructuring charge, which the aggregator puts below the operating line. This card follows the company's release.",
+    "Revenue is $4,354M, the same figure as FQ4 FY26. That is a coincidence of rounding to the million, not a repeated column -- every other line differs, and the two quarters grew 12% and 14% against different year-ago bases.",
+    "Operating margin of 20% is up from 14% a year ago: revenue grew 12% while total costs and expenses grew 4%, to $3,486M.",
+    "Intuit no longer excludes stock-based compensation from its non-GAAP measures, a change made with FY27 guidance. The income statement charted here is GAAP and is unaffected (source: Intuit Q1 FY27 results release).",
+    "Debt and coverage, FQ1 FY27: $7,608M of debt against $4,042M of cash and $987M of free cash flow for the quarter. Net debt $3,566M, down from $3.7B at FQ4 FY26. Debt and cash are balance sheet figures at the period end; free cash flow is that quarter's flow (source: stockanalysis.com).",
+    "Earnings chart is STALE and still shows Oct '26 as a forecast. The Nasdaq consensus endpoint returned HTTP 403 on Nov 19, 2026, so the chart could not be refreshed with the quarter that just reported. For the record, GAAP diluted EPS was $2.59 against $1.59 a year ago, per Intuit's release; the chart's basis is the vendor's adjusted figure, which is not the same thing and is not comparable to it.",
     "Ownership donut: the institutional and insider percentages are stockanalysis's, which are a netted pair that leaves an honest residual. A raw sum of the 13F table would not be -- managers sharing investment discretion report the same shares twice, which puts NVIDIA's filed total at 103% of the company.",
-    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated."
+    "The split between index and active institutions, and the holders named on hover, come from the managers' own Form 13F for the quarter ended Jun 30, 2026 -- the latest the SEC has published. Index assignment is by manager, not by mandate: BlackRock files one 13F covering iShares and its active books together, so the index share is understated rather than overstated.",
+    "Market figures as of Nov 19, 2026: market cap $82.85B, P/E 17.7 trailing, 12.7 forward; dividend $5.52 a year, 1.78% yield, last ex-dividend Oct 8, 2026. All three are measured against the share price, so unlike the other figures on this card they move every session and are not from the filing (source: stockanalysis.com)."
    ],
    "debt": "INTU-debt",
    "eps": "INTU-eps",
@@ -4685,5 +4688,5 @@
    "debt": "APP-debt"
   }
  ],
- "marketAsOf": "Nov 16, 2026"
+ "marketAsOf": "Nov 19, 2026"
 }

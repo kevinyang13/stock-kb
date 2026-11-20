@@ -87,7 +87,7 @@ is negative. Both cards stay a quarter behind and say so on their face.
 | SNDK | FQ4 FY26 | Jul 3, 2026 | profit |
 | TSM | Q3 FY26 | Sep 30, 2026 | profit (NT$) |
 | TSLA | Q3 FY26 | Sep 30, 2026 | profit |
-| INTU | FQ4 FY26 | Jul 31, 2026 | profit |
+| INTU | FQ1 FY27 | Oct 31, 2026 | profit |
 | SMCI | FQ4 FY26 | Jun 30, 2026 | profit |
 | IONQ | Q2 FY26 | Jun 30, 2026 | loss |
 | MSFT | FQ4 FY26 | Jun 30, 2026 | profit |
@@ -179,7 +179,7 @@ FY26 10-K gives net sales by geography only, and CoreWeave the same.
 
 **Nine of the original twelve carry a reported segment split**: NVDA, MSFT, GOOG, MU, SNDK, TSM, TSLA, QCOM and INTU.
 
-Each split was validated against the revenue total before use. Four footed exactly (MSFT, GOOG, QCOM, SNDK); TSLA is out by $44M on $28.0B and TSM by NT$0.1B, both rounding. Two segment values are **derived rather than reported**: TSMC publishes platform mix only as rounded percentages, which the chart applies to revenue, and Intuit's Global Business Solutions is shown as the remainder so its two segments foot.
+Each split was validated against the revenue total before use. Four footed exactly (MSFT, GOOG, QCOM, SNDK); TSLA is out by $44M on $28.0B and TSM by NT$0.1B, both rounding. Two segment values are **derived rather than reported**: TSMC publishes platform mix only as rounded percentages, which the chart applies to revenue, and Intuit's Global Business Solutions is shown as the remainder so its segments foot. From FQ1 FY27 Intuit reports three segments, not two -- Mailchimp was split out of Global Business Solutions in the same release that announced its sale to Bending Spoons.
 
 Note that stockanalysis.com's `revenue-by-segment` page is **not** usable for this — its figures are annual even under `?p=quarterly`, and NVDA's two segments there sum to $303B against $96.2B of quarterly revenue. Segments came from each company's own release instead.
 
