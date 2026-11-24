@@ -3798,3 +3798,43 @@ The old card opened with a short aside about the maintainer's own relationship t
 This repo is public and GitHub Pages serves it, so a personal detail in a card note is published
 to anyone who opens the tab. It is gone. Nothing else on the card changed on privacy grounds,
 and the name-leak audit across the other tracked files is still open.
+
+## 2026-11-23 — Synthetic long added to the Strategies tab, and the count stopped being hand-written
+
+**Source**: no new source. The structure was requested; its legs were written onto the same
+illustrative $100 stock the other eleven use, so the shapes stay comparable.
+
+**The twelfth structure.** `options.json` gains `synthetic-long`: long the $100 call at $3.50,
+short the $100 put at $3.40, placed after the protective put since it belongs with the
+stock-equivalent structures rather than the spreads. `options.html` computes the rest from the
+legs, as it does for every other card — max gain unlimited, max loss −$10,010, break-even
+$100.10.
+
+**The $10 is the whole point.** Put–call parity says call − put = stock − strike, so the pair
+has the slope of 100 shares everywhere. The ten-dollar debit between the two premiums is the
+carry the market charges to defer paying for the stock, and it is why the break-even is
+$100.10 rather than $100.00. The card says so rather than presenting the structure as free
+leverage.
+
+**It carries the largest maximum loss on the page, and it is a debit structure.** −$10,010
+against the covered call's −$9,800. The short put is assigned at $100 with the stock at zero;
+no part of the structure reduces that. The flow label describes which way money moves on day
+one and says nothing about the size of the risk, which is now stated explicitly on
+[[options-strategies]].
+
+**The catalogue's size is no longer written down twice.** "eleven" was hard-coded in the page
+prose and again in the filter button. Both now read `(j.strategies || []).length` through a
+small `numword()`, so the next structure added needs no prose edit. The simulator already
+derived its template list from the same file and picked the new one up with no change —
+eleven templates now, the calendar still excluded as schematic.
+
+**Verified**: twelve cards render, no console errors, no horizontal overflow; the +1 filter
+counts six structures and includes the new one, the −2 filter dims it. In the Simulator the
+template places both legs at the same ATM strike and prices them from the entered volatility.
+
+**Note on the Simulator's debit/credit label.** The dropdown reads "SYNTHETIC LONG · DEBIT"
+from `options.json` while the computed net on a real symbol can be a credit — on a $156.98
+stock with the template's strike rounding to $157.50 and 25 days to run, the strike sits above
+the forward at 4%, so the put is worth more than the call. Both figures are right: the label describes the $100 illustration, the net
+describes the legs on screen. This structure makes the gap visible because its net is near
+zero; the same is true of every card.

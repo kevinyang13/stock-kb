@@ -1,14 +1,14 @@
 # Options Simulator
 
 **Summary**: A browser-side option pricer behind the Simulator tab. Takes a symbol, a price,
-an expiry and a volatility, applies any of ten strategy templates or a hand-built set of
+an expiry and a volatility, applies any of eleven strategy templates or a hand-built set of
 legs, and draws the P/L against that symbol's own price range.
 
 **Sources**: Strategy templates are read from `options.json`, the same file behind
 [[options-strategies]]. Symbol list from `watchlist.json`. No price feed: the price is typed
 in, because `prices.json` carries no snapshot.
 
-**Last updated**: 2026-11-14
+**Last updated**: 2026-11-23
 
 ---
 
@@ -104,6 +104,6 @@ nearest listed strike before it falls back to an increment.
 
 ## Related pages
 
-- [[options-strategies]] — the eleven structures and the −2 to +2 scale this page's bands come from
+- [[options-strategies]] — the twelve structures and the −2 to +2 scale this page's bands come from
 - [[options-wheel-strategy]]
 - [[index]]

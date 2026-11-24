@@ -28,8 +28,8 @@ Table of contents for this knowledge base. One line per page.
 ## Strategy
 
 - [[options-wheel-strategy]] — the cash-secured put / covered call wheel on MU, SMH, MSFT, GOOG and TSLA: the rules, what the $3,000-a-week target actually requires, and the six-point entry checklist.
-- [[options-strategies]] — the eleven option structures mapped onto the −2 to +2 expected-move scale: what each trade is, debit or credit, which outlook it expresses, and the computed payoff, break-even and extremes for each. Behind the Strategies tab.
-- [[options-simulator]] — the Simulator tab: a browser-side pricer that takes a symbol, price, expiry and volatility, applies any of ten templates from `options.json` or hand-built legs, and draws P/L at expiry and before it against that symbol's own expected move. Payoff is arithmetic; premiums and the dashed curve are Black–Scholes estimates. A localhost-only button fills price, expiry and volatility from `chains.json`, an IBKR snapshot Claude writes through the connector — **local only, in `.gitignore`**.
+- [[options-strategies]] — the twelve option structures mapped onto the −2 to +2 expected-move scale: what each trade is, debit or credit, which outlook it expresses, and the computed payoff, break-even and extremes for each. Behind the Strategies tab.
+- [[options-simulator]] — the Simulator tab: a browser-side pricer that takes a symbol, price, expiry and volatility, applies any of eleven templates from `options.json` or hand-built legs, and draws P/L at expiry and before it against that symbol's own expected move. Payoff is arithmetic; premiums and the dashed curve are Black–Scholes estimates. A localhost-only button fills price, expiry and volatility from `chains.json`, an IBKR snapshot Claude writes through the connector — **local only, in `.gitignore`**.
 
 ## Themes
 

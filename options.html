@@ -143,7 +143,8 @@
     <b>A reference, not a recommendation.</b> This page explains what each structure does and
     which view it expresses. It says nothing about any particular stock, and nothing on it is
     investment advice. Every strike and premium is a round illustrative figure on a $100 stock,
-    picked so the eleven shapes can be compared side by side &mdash; they are not quotes.
+    picked so the <span id="shapecount">twelve</span> shapes can be compared side by side
+    &mdash; they are not quotes.
   </p>
 
   <section class="scale">
@@ -403,13 +404,22 @@
     }).join("");
   }
 
+  // The catalogue's size is written in two places on the page, so both read it
+  // off the data rather than carrying a number that goes stale the next time a
+  // structure is added.
+  var NUMWORD = ["zero", "one", "two", "three", "four", "five", "six", "seven",
+    "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+    "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+  function numword(n) { return NUMWORD[n] || String(n); }
+
   var active = null;
-  function filterBlock() {
+  function filterBlock(j) {
     var h = ['<span class="lab">Show me what works at</span>'];
     [-2, -1, 0, 1, 2].forEach(function (v) {
       h.push('<button class="fbtn" data-v="' + v + '">' + vlabel(v) + "</button>");
     });
-    h.push('<button class="fbtn all on" data-v="all">All eleven</button>');
+    h.push('<button class="fbtn all on" data-v="all">All ' +
+      numword((j.strategies || []).length) + "</button>");
     h.push('<span class="fcount" id="fcount"></span>');
     var f = document.getElementById("filter");
     f.innerHTML = h.join("");
@@ -449,7 +459,9 @@
       document.getElementById("out").innerHTML =
         (j.strategies || []).map(card).join("") ||
         '<p class="err">options.json has no strategies.</p>';
-      filterBlock();
+      document.getElementById("shapecount").textContent =
+        numword((j.strategies || []).length);
+      filterBlock(j);
     }).catch(function (e) {
       document.getElementById("out").innerHTML =
         '<p class="err">Could not load options.json — ' + esc(e.message) +

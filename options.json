@@ -74,6 +74,18 @@
       "watch": "Insurance has a cost and it expires. Rolled quarterly it can quietly eat several percent a year, which is a real drag on a position you were right about."
     },
     {
+      "id": "synthetic-long", "name": "Synthetic Long", "tone": "#2fb3a3",
+      "flow": "debit", "best": [1, 2], "ok": [],
+      "legs": [
+        {"k": "call", "n": 1, "strike": 100, "px": 3.50},
+        {"k": "put", "n": -1, "strike": 100, "px": 3.40}
+      ],
+      "trade": "Buy a call and sell a put at the same strike. The two legs together move dollar for dollar with 100 shares.",
+      "why": "It is the stock position without the stock. The call costs $3.50 and the put pays $3.40 back, so the whole thing goes on for a $10 debit instead of $10,000 of stock. Same slope, same break-even, almost none of the cash.",
+      "when": "You want +1 or +2 and capital is the constraint rather than conviction. It is also how you read what the options are really charging: the gap between the synthetic and the stock is the carry, and nothing else.",
+      "watch": "The risk is the stock's, not an option's. The short put means a -2 costs the same as owning the shares and the broker holds margin against it accordingly. This structure is cheaper in cash, not in risk."
+    },
+    {
       "id": "bull-call-spread", "name": "Bull Call Spread", "tone": "#3fbd87",
       "flow": "debit", "best": [1], "ok": [2],
       "legs": [
